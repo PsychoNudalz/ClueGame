@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2014019947730034114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014019947730034112}
+  - component: {fileID: 2014019947730034115}
+  - component: {fileID: 2014019947730034113}
+  m_Layer: 0
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2014019947730034112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014019947730034114}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014019947730034115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014019947730034114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505ef810bdd6f0340afcbcc8a8280184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2014019947730034113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014019947730034114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5940b8b55a11fdb489ddd947a0a78b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardTile: {fileID: 3902579387060734912, guid: f63e865e4c6d6e840b6aca0ed8c63b72,
+    type: 3}
+  startTile: {fileID: 4187377573483213353, guid: 5655fea2cc7e0f64dac4abd8bd2a5df2,
+    type: 3}
+  roomEntryTile: {fileID: 7461110595613079712, guid: f6564b0369e62574b9d63c7d179eff8d,
+    type: 3}
+  roomFloorTile: {fileID: 8162462510297450775, guid: 9aee44ae7ca89d547a4bb1d7ca7a2f82,
+    type: 3}
+  shortcutTile: {fileID: 5630067260061347462, guid: be92b8cf3dcb8ed48a6bbdd17d0d44c4,
+    type: 3}
