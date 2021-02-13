@@ -71,7 +71,7 @@ MonoBehaviour:
     type: 3}
   shortcutTilePrefab: {fileID: 684856566528950706, guid: a87be9516e4d1a843b74f0344edb9e46,
     type: 3}
-  StudyPrefab: {fileID: 1846784876639294519, guid: 761fdd26e4ea0e144ad3a70bac2b94db,
+  StudyPrefab: {fileID: 9108526096123992175, guid: 7580426d84525454a8d43047ebd07112,
     type: 3}
   HallPrefab: {fileID: 0}
   LoungePrefab: {fileID: 0}

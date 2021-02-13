@@ -9,7 +9,7 @@ public class BoardBuilder : MonoBehaviour
     [SerializeField] Color missScarlettColour;
     [SerializeField] Color profPlumColour;
     [SerializeField] Color colMustardColour;
-    [SerializeField] Color missPeacockColour;
+    [SerializeField] Color mrsPeacockColour;
     [SerializeField] Color revGreenColour;
     [SerializeField] Color mrsWhiteColour;
     [Space]
@@ -39,7 +39,7 @@ public class BoardBuilder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boardArray = GetComponent<BoardArrayGenerator>().GetBoardArray();
+        boardArray = transform.parent.GetComponent<BoardArrayGenerator>().GetBoardArray();
         BuildBoard();
     }
 
@@ -92,10 +92,14 @@ public class BoardBuilder : MonoBehaviour
 
     private void CreateRoom(int x, int z, string roomName)
     {
+        GameObject room;
         switch (roomName)
         {
             case "Study":
-                GameObject room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Hall":
+                room = GameObject.Instantiate(HallPrefab, new Vector3(x, 0, z), transform.rotation, transform);
                 break;
             default:
                 break;
@@ -114,32 +118,41 @@ public class BoardBuilder : MonoBehaviour
     {
         
         Color tileColour;
+        string name = "";
         switch (player)
         {
             case "missScarlett":
                 tileColour = missScarlettColour;
+                name = "Miss\nScarlett";
                 break;
             case "profPlum":
                 tileColour = profPlumColour;
+                name = "Prof\nPlum";
                 break;
             case "colMustard":
                 tileColour = colMustardColour;
+                name = "Col\nMustard";
                 break;
-            case "missPeacock":
-                tileColour = missPeacockColour;
+            case "mrsPeacock":
+                tileColour = mrsPeacockColour;
+                name = "Mrs\nPeacock";
                 break;
             case "revGreen":
                 tileColour = revGreenColour;
+                name = "Rev\nGreen";
                 break;
             case "mrsWhite":
                 tileColour = mrsWhiteColour;
+                name = "Mrs\nWhite";
                 break;
             default:
                 tileColour = Color.white;
+                name = "";
                 break;
         }
         GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
         startingTile.GetComponent<Renderer>().material.SetColor("_MainColour", tileColour);
+        startingTile.GetComponent<StartSpace>().SetTileText(name);
     }
 
     private void CreateBoardTile(int x, int z)
