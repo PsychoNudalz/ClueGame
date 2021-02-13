@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShortCut
+  m_Name: (General)BoardTile
   m_Shader: {fileID: -6465566751694194690, guid: c14967f45b1e8ae408d25ab0aaf829c7,
     type: 3}
   m_ShaderKeywords: 
@@ -22,4 +22,4 @@ Material:
     m_TexEnvs: []
     m_Floats: []
     m_Colors:
-    - _MainColour: {r: 0, g: 1, b: 0.03419614, a: 0}
+    - _MainColour: {r: 1, g: 1, b: 1, a: 0}

@@ -5,11 +5,34 @@ using UnityEngine;
 
 public class BoardBuilder : MonoBehaviour
 {
-    [SerializeField] GameObject boardTile;
-    [SerializeField] GameObject startTile;
-    [SerializeField] GameObject roomEntryTile;
-    [SerializeField] GameObject roomFloorTile;
-    [SerializeField] GameObject shortcutTile;
+    [Header("Player Colours")]
+    [SerializeField] Color missScarlettColour;
+    [SerializeField] Color profPlumColour;
+    [SerializeField] Color colMustardColour;
+    [SerializeField] Color missPeacockColour;
+    [SerializeField] Color revGreenColour;
+    [SerializeField] Color mrsWhiteColour;
+    [Space]
+    [SerializeField] Color generalTileColour;
+    [Space]
+    [Header("Tile Prefabs")]
+    [SerializeField] GameObject generalTilePrefab;
+    [SerializeField] GameObject startingTilePrefab;
+    [SerializeField] GameObject roomEntryTilePrefab;
+    [SerializeField] GameObject shortcutTilePrefab;
+    [Space]
+    [Header("RoomPrefabs")]
+    [SerializeField] GameObject StudyPrefab;
+    [SerializeField] GameObject HallPrefab;
+    [SerializeField] GameObject LoungePrefab;
+    [SerializeField] GameObject LibraryPrefab;
+    [SerializeField] GameObject CentrePrefab;
+    [SerializeField] GameObject DiningRoomPrefab;
+    [SerializeField] GameObject BilliardRoomPrefab;
+    [SerializeField] GameObject ConservatoryPrefab;
+    [SerializeField] GameObject BallRoomPrefab;
+    [SerializeField] GameObject KitchenPrefab;
+
 
     private string[][] boardArray;
 
@@ -42,13 +65,13 @@ public class BoardBuilder : MonoBehaviour
                         CreateStartTile(x, z, square[1]);
                         break;
                     case "E":
-                        CreateRoomEntranceTile(x, z, square[1]);
+                        CreateRoomEntranceTile(x, z, square[1], square[2]);
                         break;
                     case "R":
-                        CreateRoomTile(x, z, square[1]);
+                        CreateRoom(x, z, square[1]);
                         break;
                     case "SC":
-                        CreateShortcutTile(x, z, square[1]);
+                        CreateShortcutTile(x, z, square[1], square[2]);
                         break;
                     default:
                         
@@ -59,59 +82,70 @@ public class BoardBuilder : MonoBehaviour
 
     }
 
-    private void CreateShortcutTile(int x, int z, string v)
+    private void CreateShortcutTile(int x, int z, string room, string rotation)
     {
-        GameObject startingTile = GameObject.Instantiate(shortcutTile, new Vector3(x, 0, z), transform.rotation, transform);
+        int arrowRotation = int.Parse(rotation);
+        GameObject shortcutTile = GameObject.Instantiate(this.shortcutTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
+        shortcutTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
         //todo set room
     }
 
-    private void CreateRoomTile(int x, int z, string v)
+    private void CreateRoom(int x, int z, string roomName)
     {
-        GameObject startingTile = GameObject.Instantiate(roomFloorTile, new Vector3(x, 0, z), transform.rotation, transform);
+        switch (roomName)
+        {
+            case "Study":
+                GameObject room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void CreateRoomEntranceTile(int x, int z, string Room, string rotation)
+    {
+        int arrowRotation = int.Parse(rotation);
+        GameObject roomEntryTile = GameObject.Instantiate(roomEntryTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
+        roomEntryTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
         //todo set room
     }
 
-    private void CreateRoomEntranceTile(int x, int z, string Room)
-    {
-        GameObject startingTile = GameObject.Instantiate(roomEntryTile, new Vector3(x, 0, z), transform.rotation, transform);
-        //todo set room
-    }
-
-    private void CreateStartTile(int x, int z, string Colour)
+    private void CreateStartTile(int x, int z, string player)
     {
         
         Color tileColour;
-        switch (Colour)
+        switch (player)
         {
-            case "Red":
-                tileColour = Color.red;
+            case "missScarlett":
+                tileColour = missScarlettColour;
                 break;
-            case "Yellow":
-                tileColour = Color.yellow;
+            case "profPlum":
+                tileColour = profPlumColour;
                 break;
-            case "Purple":
-                tileColour = Color.magenta;
+            case "colMustard":
+                tileColour = colMustardColour;
                 break;
-            case "White":
-                tileColour = Color.white;
+            case "missPeacock":
+                tileColour = missPeacockColour;
                 break;
-            case "Green":
-                tileColour = Color.green;
+            case "revGreen":
+                tileColour = revGreenColour;
                 break;
-            case "Blue":
-                tileColour = Color.blue;
+            case "mrsWhite":
+                tileColour = mrsWhiteColour;
                 break;
             default:
                 tileColour = Color.white;
                 break;
         }
-        GameObject startingTile = GameObject.Instantiate(startTile, new Vector3(x, 0, z), transform.rotation, transform);
+        GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
         startingTile.GetComponent<Renderer>().material.SetColor("_MainColour", tileColour);
     }
 
     private void CreateBoardTile(int x, int z)
     {
-        GameObject.Instantiate(boardTile, new Vector3(x, 0, z), transform.rotation, transform);
+        GameObject boardTile = GameObject.Instantiate(generalTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+        boardTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
     }
 
     // Update is called once per frame

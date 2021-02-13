@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2014019947730034115}
   - component: {fileID: 2014019947730034113}
   m_Layer: 0
-  m_Name: Board
+  m_Name: BoardGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,13 +56,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5940b8b55a11fdb489ddd947a0a78b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardTile: {fileID: 3902579387060734912, guid: f63e865e4c6d6e840b6aca0ed8c63b72,
+  missScarlettColour: {r: 1, g: 0, b: 0, a: 0}
+  profPlumColour: {r: 0.8176302, g: 0.0141509175, b: 1, a: 0}
+  colMustardColour: {r: 1, g: 0.9532509, b: 0, a: 0}
+  missPeacockColour: {r: 0, g: 0.6636367, b: 1, a: 0}
+  revGreenColour: {r: 0.24604638, g: 0.990566, b: 0.014017418, a: 0}
+  mrsWhiteColour: {r: 1, g: 1, b: 1, a: 0}
+  generalTileColour: {r: 0.8396226, g: 0.57458556, b: 0.13069598, a: 0}
+  generalTilePrefab: {fileID: 2391543612865690486, guid: 647da3b51149cc341b3dd9098efc0587,
     type: 3}
-  startTile: {fileID: 4187377573483213353, guid: 5655fea2cc7e0f64dac4abd8bd2a5df2,
+  startingTilePrefab: {fileID: 885622528824631767, guid: 23f1d99e39842f54dba85250aa563ab0,
     type: 3}
-  roomEntryTile: {fileID: 7461110595613079712, guid: f6564b0369e62574b9d63c7d179eff8d,
+  roomEntryTilePrefab: {fileID: 3594190789160518292, guid: 2b72d80421fee8842a34f311100b00d3,
     type: 3}
-  roomFloorTile: {fileID: 8162462510297450775, guid: 9aee44ae7ca89d547a4bb1d7ca7a2f82,
+  shortcutTilePrefab: {fileID: 684856566528950706, guid: a87be9516e4d1a843b74f0344edb9e46,
     type: 3}
-  shortcutTile: {fileID: 5630067260061347462, guid: be92b8cf3dcb8ed48a6bbdd17d0d44c4,
+  StudyPrefab: {fileID: 1846784876639294519, guid: 761fdd26e4ea0e144ad3a70bac2b94db,
     type: 3}
+  HallPrefab: {fileID: 0}
+  LoungePrefab: {fileID: 0}
+  LibraryPrefab: {fileID: 0}
+  CentrePrefab: {fileID: 0}
+  DiningRoomPrefab: {fileID: 0}
+  BilliardRoomPrefab: {fileID: 0}
+  ConservatoryPrefab: {fileID: 0}
+  BallRoomPrefab: {fileID: 0}
+  KitchenPrefab: {fileID: 0}
