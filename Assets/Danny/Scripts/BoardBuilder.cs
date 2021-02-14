@@ -86,7 +86,7 @@ public class BoardBuilder : MonoBehaviour
     {
         int arrowRotation = int.Parse(rotation);
         GameObject shortcutTile = GameObject.Instantiate(this.shortcutTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
-        shortcutTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        shortcutTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
         //todo set room
     }
 
@@ -101,6 +101,9 @@ public class BoardBuilder : MonoBehaviour
             case "Hall":
                 room = GameObject.Instantiate(HallPrefab, new Vector3(x, 0, z), transform.rotation, transform);
                 break;
+            case "Lounge":
+                room = GameObject.Instantiate(LoungePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
             default:
                 break;
         }
@@ -110,7 +113,7 @@ public class BoardBuilder : MonoBehaviour
     {
         int arrowRotation = int.Parse(rotation);
         GameObject roomEntryTile = GameObject.Instantiate(roomEntryTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
-        roomEntryTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        roomEntryTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
         //todo set room
     }
 
@@ -151,14 +154,14 @@ public class BoardBuilder : MonoBehaviour
                 break;
         }
         GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
-        startingTile.GetComponent<Renderer>().material.SetColor("_MainColour", tileColour);
-        startingTile.GetComponent<StartSpace>().SetTileText(name);
+        startingTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", tileColour);
+        startingTile.GetComponentInChildren<StartSpace>().SetTileText(name);
     }
 
     private void CreateBoardTile(int x, int z)
     {
         GameObject boardTile = GameObject.Instantiate(generalTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
-        boardTile.GetComponent<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        boardTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
     }
 
     // Update is called once per frame
