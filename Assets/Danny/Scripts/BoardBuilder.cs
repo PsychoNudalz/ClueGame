@@ -13,8 +13,11 @@ public class BoardBuilder : MonoBehaviour
     [SerializeField] Color revGreenColour;
     [SerializeField] Color mrsWhiteColour;
     [Space]
+    [Header("Tile Colour")]
     [SerializeField] Color generalTileColour;
     [Space]
+    [Header("Player Piece Prefab")]
+    [SerializeField] GameObject playerPiecePrefab;
     [Header("Tile Prefabs")]
     [SerializeField] GameObject generalTilePrefab;
     [SerializeField] GameObject startingTilePrefab;
@@ -104,6 +107,27 @@ public class BoardBuilder : MonoBehaviour
             case "Lounge":
                 room = GameObject.Instantiate(LoungePrefab, new Vector3(x, 0, z), transform.rotation, transform);
                 break;
+            case "Library":
+                room = GameObject.Instantiate(LibraryPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Centre":
+                room = GameObject.Instantiate(CentrePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Dining":
+                room = GameObject.Instantiate(DiningRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Billiard":
+                room = GameObject.Instantiate(BilliardRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Conservatory":
+                room = GameObject.Instantiate(ConservatoryPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Ballroom":
+                room = GameObject.Instantiate(BallRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
+            case "Kitchen":
+                room = GameObject.Instantiate(KitchenPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                break;
             default:
                 break;
         }
@@ -120,42 +144,44 @@ public class BoardBuilder : MonoBehaviour
     private void CreateStartTile(int x, int z, string player)
     {
         
-        Color tileColour;
+        Color playerColour;
         string name = "";
         switch (player)
         {
             case "missScarlett":
-                tileColour = missScarlettColour;
+                playerColour = missScarlettColour;
                 name = "Miss\nScarlett";
                 break;
             case "profPlum":
-                tileColour = profPlumColour;
+                playerColour = profPlumColour;
                 name = "Prof\nPlum";
                 break;
             case "colMustard":
-                tileColour = colMustardColour;
+                playerColour = colMustardColour;
                 name = "Col\nMustard";
                 break;
             case "mrsPeacock":
-                tileColour = mrsPeacockColour;
+                playerColour = mrsPeacockColour;
                 name = "Mrs\nPeacock";
                 break;
             case "revGreen":
-                tileColour = revGreenColour;
+                playerColour = revGreenColour;
                 name = "Rev\nGreen";
                 break;
             case "mrsWhite":
-                tileColour = mrsWhiteColour;
+                playerColour = mrsWhiteColour;
                 name = "Mrs\nWhite";
                 break;
             default:
-                tileColour = Color.white;
+                playerColour = Color.white;
                 name = "";
                 break;
         }
         GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
-        startingTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", tileColour);
+        startingTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
         startingTile.GetComponentInChildren<StartSpace>().SetTileText(name);
+        GameObject playerPiece = GameObject.Instantiate(playerPiecePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+        playerPiece.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
     }
 
     private void CreateBoardTile(int x, int z)

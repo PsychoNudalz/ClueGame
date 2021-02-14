@@ -335,6 +335,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1616683765, guid: 1ce8ceecd360c594eaa8c0df6398c6a9, type: 3}
+      propertyPath: ConservatoryPrefab
+      value: 
+      objectReference: {fileID: 6138698796423172493, guid: e043c78d9a7083c41bd3756a3f07ec4f,
+        type: 3}
     - target: {fileID: 2014019947730034112, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
       propertyPath: m_RootOrder
