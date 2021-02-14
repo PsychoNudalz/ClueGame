@@ -50,6 +50,8 @@ MonoBehaviour:
   revGreenColour: {r: 0.24604638, g: 0.990566, b: 0.014017418, a: 0}
   mrsWhiteColour: {r: 1, g: 1, b: 1, a: 0}
   generalTileColour: {r: 0.8396226, g: 0.57458556, b: 0.13069598, a: 0}
+  playerPiecePrefab: {fileID: 8727549470634356967, guid: c465d20a9d3a9ea4784349976e5b27be,
+    type: 3}
   generalTilePrefab: {fileID: 2391543612865690486, guid: 647da3b51149cc341b3dd9098efc0587,
     type: 3}
   startingTilePrefab: {fileID: 885622528824631767, guid: 23f1d99e39842f54dba85250aa563ab0,
@@ -64,13 +66,20 @@ MonoBehaviour:
     type: 3}
   LoungePrefab: {fileID: 7751743290751164969, guid: 0366da76b5b5fcc41b7a639e567bc633,
     type: 3}
-  LibraryPrefab: {fileID: 0}
-  CentrePrefab: {fileID: 0}
-  DiningRoomPrefab: {fileID: 0}
-  BilliardRoomPrefab: {fileID: 0}
-  ConservatoryPrefab: {fileID: 0}
-  BallRoomPrefab: {fileID: 0}
-  KitchenPrefab: {fileID: 0}
+  LibraryPrefab: {fileID: 7948075737647840206, guid: 51ab4e432599e294d861acd3257b63af,
+    type: 3}
+  CentrePrefab: {fileID: 4825691540860935484, guid: 47a8079b3046b0e48a3dedbb3a682f1a,
+    type: 3}
+  DiningRoomPrefab: {fileID: 1008897091373932257, guid: 7f575ee23e69a464cae137b9038190d2,
+    type: 3}
+  BilliardRoomPrefab: {fileID: 486522689387809924, guid: 9283960eeea5b1947a724e57d3b8d378,
+    type: 3}
+  ConservatoryPrefab: {fileID: 6138698796423172493, guid: e043c78d9a7083c41bd3756a3f07ec4f,
+    type: 3}
+  BallRoomPrefab: {fileID: 2391543612865690486, guid: 647da3b51149cc341b3dd9098efc0587,
+    type: 3}
+  KitchenPrefab: {fileID: 2391543612865690486, guid: 647da3b51149cc341b3dd9098efc0587,
+    type: 3}
 --- !u!1 &2014019947730034114
 GameObject:
   m_ObjectHideFlags: 0
