@@ -33,7 +33,7 @@ public class BoardBuilder : MonoBehaviour
     [SerializeField] GameObject DiningRoomPrefab;
     [SerializeField] GameObject BilliardRoomPrefab;
     [SerializeField] GameObject ConservatoryPrefab;
-    [SerializeField] GameObject BallRoomPrefab;
+    [SerializeField] GameObject BallroomPrefab;
     [SerializeField] GameObject KitchenPrefab;
 
 
@@ -123,7 +123,7 @@ public class BoardBuilder : MonoBehaviour
                 room = GameObject.Instantiate(ConservatoryPrefab, new Vector3(x, 0, z), transform.rotation, transform);
                 break;
             case "Ballroom":
-                room = GameObject.Instantiate(BallRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(BallroomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
                 break;
             case "Kitchen":
                 room = GameObject.Instantiate(KitchenPrefab, new Vector3(x, 0, z), transform.rotation, transform);

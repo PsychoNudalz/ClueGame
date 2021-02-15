@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3054603175075764462}
   - component: {fileID: 9104508605759558622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8549197093244355789}
-  m_Layer: 0
+  - component: {fileID: 60968820925103289}
+  m_Layer: 8
   m_Name: Hall
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +125,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &60968820925103289
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8549197093244355790}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &8549197091999830035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,10 +203,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7010305928374324607, guid: 011109a77ea40bc46a70136ff094b266,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4101379874817747203, guid: 011109a77ea40bc46a70136ff094b266,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 011109a77ea40bc46a70136ff094b266,
         type: 3}
       propertyPath: m_Name
       value: HallModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 011109a77ea40bc46a70136ff094b266,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 011109a77ea40bc46a70136ff094b266,
+        type: 3}
+      propertyPath: m_TagString
+      value: Board
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 011109a77ea40bc46a70136ff094b266, type: 3}

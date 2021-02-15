@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1452343785683984044}
   - component: {fileID: 4644771106395012714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,9 +101,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4954889601697137564}
-  m_Layer: 0
+  - component: {fileID: -8937559641504133835}
+  m_Layer: 8
   m_Name: Lounge
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +125,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &-8937559641504133835
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751743290751164969}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &9100988167887959199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,10 +203,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5635733742006826493, guid: a3bd9104770282840b0bcc6c268a8e54,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a3bd9104770282840b0bcc6c268a8e54,
         type: 3}
       propertyPath: m_Name
       value: LoungeModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3bd9104770282840b0bcc6c268a8e54,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3bd9104770282840b0bcc6c268a8e54,
+        type: 3}
+      propertyPath: m_TagString
+      value: Board
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688688794483330261, guid: a3bd9104770282840b0bcc6c268a8e54,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3bd9104770282840b0bcc6c268a8e54, type: 3}
