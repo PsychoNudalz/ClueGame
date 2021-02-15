@@ -19,4 +19,13 @@ public class BoardTileScript : MonoBehaviour
     {
         return gridPosition;
     }
+
+    public virtual void ClearTile()
+    {
+        print(this + " cleared");
+    }
+    public virtual void SelectTile()
+    {
+        print(this + " select");
+    }
 }
