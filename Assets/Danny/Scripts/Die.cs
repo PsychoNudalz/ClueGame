@@ -15,16 +15,13 @@ public class Die : MonoBehaviour
     private bool isThrown;
     private Vector3 initialPosition;
     private int dieValue = -1;
-    private Camera mainCamera;
-    private Vector3 initialCameraPosition;
+    private CameraCloseUp mainCamera;
     private Vector3 closeUpOffset;
     private bool setCloseUpCamera;
 
     private void Start()
     {
-        mainCamera = GameObject.FindObjectOfType<Camera>();
-        initialCameraPosition = mainCamera.transform.position;
-        setCloseUpCamera = false;
+        mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();
         closeUpOffset = transform.position - closeUpCameraPosition.position;
         dieSides = GetComponentsInChildren<DieSide>();
         dieRigidbody = GetComponent<Rigidbody>();
@@ -37,15 +34,9 @@ public class Die : MonoBehaviour
         
         if (setCloseUpCamera)
         {
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, transform.position - closeUpOffset, 3f * Time.deltaTime);
+            mainCamera.SetCloseUp(transform.position - closeUpOffset);
         }
-        else
-        {
-            if(mainCamera.transform.position != initialCameraPosition)
-            {
-                mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, initialCameraPosition, 5f * Time.deltaTime);
-            }
-        }
+        
         if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
         {
             hasLanded = true;
@@ -61,10 +52,13 @@ public class Die : MonoBehaviour
     private void RollAgain()
     {
         Reset();
+        Roll();
+        /*
         GetComponent<MeshRenderer>().enabled = true;
         isThrown = true;
         dieRigidbody.useGravity = true;
         dieRigidbody.AddTorque(Random.Range(100, 1000), Random.Range(100, 1000), Random.Range(100, 1000));
+        */
     }
 
     public void Roll()
@@ -102,7 +96,8 @@ public class Die : MonoBehaviour
         dieRigidbody.useGravity = false;
         isThrown = false;
         hasLanded = false;
-        setCloseUpCamera = false;
+        setCloseUpCamera = false; 
+        mainCamera.ClearCloseUp();
     }
 
     private void CheckValue()

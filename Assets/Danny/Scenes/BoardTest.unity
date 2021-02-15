@@ -277,14 +277,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!4 &1196590026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1522780737206449837, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7311889053843037846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1519905950
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1196590026}
     m_Modifications:
     - target: {fileID: 6660030710274158550, guid: 17968f3da35f8214f83455fcc1d85efd,
         type: 3}
@@ -406,6 +412,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DieTestUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6660030711270401611, guid: 17968f3da35f8214f83455fcc1d85efd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6660030711461480987, guid: 17968f3da35f8214f83455fcc1d85efd,
         type: 3}
       propertyPath: die
@@ -447,6 +458,7 @@ GameObject:
   - component: {fileID: 2020167694}
   - component: {fileID: 2020167693}
   - component: {fileID: 2020167696}
+  - component: {fileID: 2020167697}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -550,6 +562,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &2020167697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020167692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5591f0b3de9e9a549be20c6de31411e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7311889053843037846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 2014019947730034112, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2014019947730034112, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
@@ -621,6 +645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoardGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014019947730034114, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ce8ceecd360c594eaa8c0df6398c6a9, type: 3}
