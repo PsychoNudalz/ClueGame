@@ -7,15 +7,22 @@ using Random = UnityEngine.Random;
 
 public class Die : MonoBehaviour
 {
+    [SerializeField] private Transform closeUpCameraPosition;
+
     private DieSide[] dieSides;
     private Rigidbody dieRigidbody;
     private bool hasLanded;
     private bool isThrown;
     private Vector3 initialPosition;
     private int dieValue = -1;
+    private CameraCloseUp mainCamera;
+    private Vector3 closeUpOffset;
+    private bool setCloseUpCamera;
 
     private void Start()
     {
+        mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();
+        closeUpOffset = transform.position - closeUpCameraPosition.position;
         dieSides = GetComponentsInChildren<DieSide>();
         dieRigidbody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
@@ -24,15 +31,13 @@ public class Die : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (setCloseUpCamera)
         {
-            Roll();
+            mainCamera.SetCloseUp(transform.position - closeUpOffset);
         }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reset();
-        }
-        else if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
+        
+        if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
         {
             hasLanded = true;
             dieRigidbody.useGravity = false;
@@ -47,9 +52,13 @@ public class Die : MonoBehaviour
     private void RollAgain()
     {
         Reset();
+        Roll();
+        /*
+        GetComponent<MeshRenderer>().enabled = true;
         isThrown = true;
         dieRigidbody.useGravity = true;
         dieRigidbody.AddTorque(Random.Range(100, 1000), Random.Range(100, 1000), Random.Range(100, 1000));
+        */
     }
 
     public void Roll()
@@ -61,6 +70,8 @@ public class Die : MonoBehaviour
         
         if (!isThrown && !hasLanded)
         {
+            GetComponent<MeshRenderer>().enabled = true;
+            setCloseUpCamera = true;
             isThrown = true;
             dieRigidbody.useGravity = true;
             dieRigidbody.AddTorque(Random.Range(100, 500), Random.Range(100, 500), Random.Range(100, 500));
@@ -80,10 +91,13 @@ public class Die : MonoBehaviour
 
     public void Reset()
     {
+        GetComponent<MeshRenderer>().enabled = false;
         transform.position = initialPosition;
         dieRigidbody.useGravity = false;
         isThrown = false;
         hasLanded = false;
+        setCloseUpCamera = false; 
+        mainCamera.ClearCloseUp();
     }
 
     private void CheckValue()

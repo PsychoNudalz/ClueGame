@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &4681328887866373113
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459092123006013280}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!65 &2132258256956352855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459092123006013280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.476195, y: 0.47619504, z: 0.8958491}
+  m_Center: {x: -0.000000059604645, y: -0.000000052154057, z: 0.44891542}
 --- !u!1 &8727549470634356967
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,8 +127,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTokenModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e18b31e561a72f40be227d791610252,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: 3e18b31e561a72f40be227d791610252,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e18b31e561a72f40be227d791610252, type: 3}
+--- !u!1 &4459092123006013280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e18b31e561a72f40be227d791610252,
+    type: 3}
+  m_PrefabInstance: {fileID: 3539980459772031537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3939013624373466586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e18b31e561a72f40be227d791610252,

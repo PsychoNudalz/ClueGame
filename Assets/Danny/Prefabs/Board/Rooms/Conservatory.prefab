@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &7109794385555182134
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481055332152416643}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6138698796423172493
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,9 +25,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6138698796423172494}
-  m_Layer: 0
+  - component: {fileID: -2890142071434738373}
+  m_Layer: 8
   m_Name: Conservatory
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +49,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &-2890142071434738373
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138698796423172493}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7415501120588614912
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,9 +75,9 @@ GameObject:
   m_Component:
   - component: {fileID: 716619989253213613}
   - component: {fileID: 6758888349601302173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RoomLight
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,13 +219,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7614183283218840984, guid: b73464301849a184787fa62692e7af89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1979915294660174770, guid: b73464301849a184787fa62692e7af89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b73464301849a184787fa62692e7af89,
         type: 3}
       propertyPath: m_Name
       value: ConservatoryModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b73464301849a184787fa62692e7af89,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b73464301849a184787fa62692e7af89,
+        type: 3}
+      propertyPath: m_TagString
+      value: Board
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b73464301849a184787fa62692e7af89, type: 3}
+--- !u!1 &481055332152416643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b73464301849a184787fa62692e7af89,
+    type: 3}
+  m_PrefabInstance: {fileID: 751085839618778322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1001731964311487289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b73464301849a184787fa62692e7af89,
