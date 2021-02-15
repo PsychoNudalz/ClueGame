@@ -39,7 +39,6 @@ public class CameraCloseUp : MonoBehaviour
 
     public void ClearCloseUp()
     {
-        print("cleared");
         IsCloseUp = false;
     }
 }
