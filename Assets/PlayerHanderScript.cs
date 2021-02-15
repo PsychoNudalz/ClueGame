@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class PlayerHanderScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] PlayerControlScript playerControlScript;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
