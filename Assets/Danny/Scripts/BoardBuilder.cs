@@ -36,13 +36,16 @@ public class BoardBuilder : MonoBehaviour
     [SerializeField] GameObject BallroomPrefab;
     [SerializeField] GameObject KitchenPrefab;
 
-
-    private string[][] boardArray;
+    private BoardManager boardManager;
+    private string[][] boardStringArray;
+    private BoardTileScript[][] boardManagerArray;
 
     // Start is called before the first frame update
     void Start()
     {
-        boardArray = transform.parent.GetComponent<BoardArrayGenerator>().GetBoardArray();
+        boardManager = GetComponentInParent<BoardManager>();
+        boardStringArray = transform.parent.GetComponent<BoardArrayGenerator>().GetBoardArray();
+        boardManagerArray = new BoardTileScript[boardStringArray.Length][];
         BuildBoard();
     }
 
@@ -51,51 +54,56 @@ public class BoardBuilder : MonoBehaviour
         int x = -1;
         int z = -1;
 
-        for(int row = boardArray.Length -1; row >= 0; row--)
+        for(int row = boardStringArray.Length -1; row >= 0; row--)
         {
+            BoardTileScript[] rowArray = new BoardTileScript[boardStringArray[row].Length];
             z++;
             x = -1;
-            for(int col = 0; col < boardArray[row].Length; col++)
+            for(int col = 0; col < boardStringArray[row].Length; col++)
             {
                 x++;
-                string[] square = boardArray[row][col].Split(':');
+                string[] square = boardStringArray[row][col].Split(':');
                 switch (square[0])
                 {
                     case "X":
-                        CreateBoardTile(x, z);
+                        rowArray[col] = CreateBoardTile(x, z).GetComponent<BoardTileScript>();
                         break;
                     case "S":
-                        CreateStartTile(x, z, square[1]);
+                        rowArray[col] = CreateStartTile(x, z, square[1]).GetComponent<BoardTileScript>();
                         break;
                     case "E":
-                        CreateRoomEntranceTile(x, z, square[1], square[2]);
+                        rowArray[col] = CreateRoomEntranceTile(x, z, square[1], square[2]).GetComponent<BoardTileScript>();
                         break;
                     case "R":
                         CreateRoom(x, z, square[1]);
+                        rowArray[col] = null;
                         break;
                     case "SC":
                         CreateShortcutTile(x, z, square[1], square[2]);
+                        rowArray[col] = null;
                         break;
                     default:
-                        
+                        rowArray[col] = null;
                         break;
                 }
             }
+            boardManagerArray[row] = rowArray;
         }
-
+        boardManager.boardTileArray = boardManagerArray;
     }
 
-    private void CreateShortcutTile(int x, int z, string room, string rotation)
+    private GameObject CreateShortcutTile(int x, int z, string room, string rotation)
     {
         int arrowRotation = int.Parse(rotation);
         GameObject shortcutTile = GameObject.Instantiate(this.shortcutTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
         shortcutTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        return shortcutTile;
         //todo set room
     }
 
-    private void CreateRoom(int x, int z, string roomName)
+    private GameObject CreateRoom(int x, int z, string roomName)
     {
-        GameObject room;
+        GameObject room = null;
         switch (roomName)
         {
             case "Study":
@@ -131,17 +139,20 @@ public class BoardBuilder : MonoBehaviour
             default:
                 break;
         }
+        return room;
     }
 
-    private void CreateRoomEntranceTile(int x, int z, string Room, string rotation)
+    private GameObject CreateRoomEntranceTile(int x, int z, string Room, string rotation)
     {
         int arrowRotation = int.Parse(rotation);
         GameObject roomEntryTile = GameObject.Instantiate(roomEntryTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , transform);
         roomEntryTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        roomEntryTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
+        return roomEntryTile;
         //todo set room
     }
 
-    private void CreateStartTile(int x, int z, string player)
+    private GameObject CreateStartTile(int x, int z, string player)
     {
         
         Color playerColour;
@@ -180,14 +191,18 @@ public class BoardBuilder : MonoBehaviour
         GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
         startingTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
         startingTile.GetComponentInChildren<StartSpace>().SetTileText(name);
+        startingTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
         GameObject playerPiece = GameObject.Instantiate(playerPiecePrefab, new Vector3(x, 0, z), transform.rotation, transform);
         playerPiece.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
+        return startingTile;
     }
 
-    private void CreateBoardTile(int x, int z)
+    private GameObject CreateBoardTile(int x, int z)
     {
         GameObject boardTile = GameObject.Instantiate(generalTilePrefab, new Vector3(x, 0, z), transform.rotation, transform);
         boardTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
+        boardTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
+        return boardTile;
     }
 
     // Update is called once per frame

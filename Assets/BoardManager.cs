@@ -2,23 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSelectionScript : MonoBehaviour
+public class BoardManager : MonoBehaviour
 {
-    Camera mainCamera;
-    [SerializeField] LayerMask layerMask;
+    public BoardTileScript[][] boardTileArray { get => boardTileArray; set => boardTileArray = value; }
     // Start is called before the first frame update
     void Start()
     {
-        if (mainCamera == null)
-        {
-            mainCamera = FindObjectOfType<Camera>();
-        }
+        boardTileArray = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
 }

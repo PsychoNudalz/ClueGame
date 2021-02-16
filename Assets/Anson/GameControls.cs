@@ -19,10 +19,18 @@ public class @GameControls : IInputActionCollection, IDisposable
             ""id"": ""04e9545a-a40c-4da0-aba3-f9b388348a07"",
             ""actions"": [
                 {
-                    ""name"": ""MouseLocation"",
+                    ""name"": ""MouseMoving"",
                     ""type"": ""Value"",
                     ""id"": ""b31892a1-5373-41c8-a4bb-be628f601481"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ControllerMoving"",
+                    ""type"": ""Button"",
+                    ""id"": ""306aaa66-e88e-41b6-81f5-f7d5313226f0"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -35,62 +43,62 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""MouseMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""Keyboard"",
-                    ""id"": ""4331993f-5996-4c4a-b67a-216b04bc6be9"",
+                    ""id"": ""20bc06a6-6aa3-4794-bd69-56f877a9ebf5"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""ControllerMoving"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""9eb9af47-15d7-441e-8eca-44018584ab03"",
+                    ""id"": ""4689544b-5775-4c95-9e5b-ccda187febe6"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""ControllerMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""3e26627e-c8ff-4262-bfa6-ada3913345b2"",
+                    ""id"": ""6bbee908-9a6e-4822-a36c-80fd0a928b56"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""ControllerMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""b54b1735-f5de-48a7-a72a-ecea183f696b"",
+                    ""id"": ""ca43b758-be0a-421a-b4a5-fd7c57d39d79"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""ControllerMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""a712dd90-706a-4dd4-9a31-2212832297f9"",
+                    ""id"": ""4dbcc264-30a8-481e-bcc7-705b35c4c181"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouseLocation"",
+                    ""action"": ""ControllerMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -101,7 +109,8 @@ public class @GameControls : IInputActionCollection, IDisposable
 }");
         // Player Map
         m_PlayerMap = asset.FindActionMap("Player Map", throwIfNotFound: true);
-        m_PlayerMap_MouseLocation = m_PlayerMap.FindAction("MouseLocation", throwIfNotFound: true);
+        m_PlayerMap_MouseMoving = m_PlayerMap.FindAction("MouseMoving", throwIfNotFound: true);
+        m_PlayerMap_ControllerMoving = m_PlayerMap.FindAction("ControllerMoving", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -151,12 +160,14 @@ public class @GameControls : IInputActionCollection, IDisposable
     // Player Map
     private readonly InputActionMap m_PlayerMap;
     private IPlayerMapActions m_PlayerMapActionsCallbackInterface;
-    private readonly InputAction m_PlayerMap_MouseLocation;
+    private readonly InputAction m_PlayerMap_MouseMoving;
+    private readonly InputAction m_PlayerMap_ControllerMoving;
     public struct PlayerMapActions
     {
         private @GameControls m_Wrapper;
         public PlayerMapActions(@GameControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MouseLocation => m_Wrapper.m_PlayerMap_MouseLocation;
+        public InputAction @MouseMoving => m_Wrapper.m_PlayerMap_MouseMoving;
+        public InputAction @ControllerMoving => m_Wrapper.m_PlayerMap_ControllerMoving;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -166,22 +177,29 @@ public class @GameControls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerMapActionsCallbackInterface != null)
             {
-                @MouseLocation.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseLocation;
-                @MouseLocation.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseLocation;
-                @MouseLocation.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseLocation;
+                @MouseMoving.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseMoving;
+                @MouseMoving.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseMoving;
+                @MouseMoving.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMouseMoving;
+                @ControllerMoving.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
+                @ControllerMoving.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
+                @ControllerMoving.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
             }
             m_Wrapper.m_PlayerMapActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @MouseLocation.started += instance.OnMouseLocation;
-                @MouseLocation.performed += instance.OnMouseLocation;
-                @MouseLocation.canceled += instance.OnMouseLocation;
+                @MouseMoving.started += instance.OnMouseMoving;
+                @MouseMoving.performed += instance.OnMouseMoving;
+                @MouseMoving.canceled += instance.OnMouseMoving;
+                @ControllerMoving.started += instance.OnControllerMoving;
+                @ControllerMoving.performed += instance.OnControllerMoving;
+                @ControllerMoving.canceled += instance.OnControllerMoving;
             }
         }
     }
     public PlayerMapActions @PlayerMap => new PlayerMapActions(this);
     public interface IPlayerMapActions
     {
-        void OnMouseLocation(InputAction.CallbackContext context);
+        void OnMouseMoving(InputAction.CallbackContext context);
+        void OnControllerMoving(InputAction.CallbackContext context);
     }
 }
