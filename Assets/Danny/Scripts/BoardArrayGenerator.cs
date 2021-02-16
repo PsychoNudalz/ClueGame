@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class BoardArrayGenerator : MonoBehaviour
 {
-    private string[][] boardArray;
+    /*
+    private string[][] boardStringArray;
 
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class BoardArrayGenerator : MonoBehaviour
             boardList.Add(boardRows[i].Split(','));
         }
 
-        boardArray = boardList.ToArray();
+        boardStringArray = boardList.ToArray();
         /*
         //Print Array for testing
         for (int i = 0; i < boardArray.Length; i++)
@@ -32,11 +33,12 @@ public class BoardArrayGenerator : MonoBehaviour
                 print("row - " + i + " col - " + j + " - " + boardArray[i][j].ToString());
             }
         }
-        */
+        
     }
 
     public string[][] GetBoardArray()
     {
-        return boardArray;
+        return boardStringArray;
     }
+*/
 }

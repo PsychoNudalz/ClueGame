@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 0}
+  tileType: 1
 --- !u!54 &-6094796457881284939
 Rigidbody:
   m_ObjectHideFlags: 0
