@@ -21,19 +21,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504838925397572461}
-<<<<<<< Updated upstream
   - component: {fileID: -5010358431658329871}
   - component: {fileID: -6094796457881284939}
   - component: {fileID: 7668406260669525115}
-=======
-<<<<<<< Updated upstream
-  - component: {fileID: -5010358431658329871}
-  - component: {fileID: -6094796457881284939}
-  - component: {fileID: 7668406260669525115}
-=======
-  - component: {fileID: 8144503968394957094}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   m_Layer: 8
   m_Name: (Start)BoardTile
   m_TagString: Board
@@ -56,15 +46,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &-5010358431658329871
-=======
-<<<<<<< Updated upstream
---- !u!114 &-5010358431658329871
-=======
---- !u!114 &8144503968394957094
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,10 +59,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 0}
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
 --- !u!54 &-6094796457881284939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -110,11 +88,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.25729305, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 --- !u!1 &3330371278689957650
 GameObject:
   m_ObjectHideFlags: 0
