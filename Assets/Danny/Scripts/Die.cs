@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Die : MonoBehaviour
@@ -16,13 +15,11 @@ public class Die : MonoBehaviour
     private Vector3 initialPosition;
     private int dieValue = -1;
     private CameraCloseUp mainCamera;
-    private Vector3 closeUpOffset;
     private bool setCloseUpCamera;
 
     private void Start()
     {
         mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();
-        closeUpOffset = transform.position - closeUpCameraPosition.position;
         dieSides = GetComponentsInChildren<DieSide>();
         dieRigidbody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
@@ -34,7 +31,7 @@ public class Die : MonoBehaviour
         
         if (setCloseUpCamera)
         {
-            mainCamera.SetCloseUp(transform.position - closeUpOffset);
+            mainCamera.SetCloseUp(transform.position);
         }
         
         if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
@@ -53,12 +50,6 @@ public class Die : MonoBehaviour
     {
         Reset();
         Roll();
-        /*
-        GetComponent<MeshRenderer>().enabled = true;
-        isThrown = true;
-        dieRigidbody.useGravity = true;
-        dieRigidbody.AddTorque(Random.Range(100, 1000), Random.Range(100, 1000), Random.Range(100, 1000));
-        */
     }
 
     public void Roll()

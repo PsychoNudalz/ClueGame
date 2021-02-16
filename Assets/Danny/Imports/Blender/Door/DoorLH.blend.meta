@@ -20,6 +20,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DoorInner
+    second: {fileID: 2100000, guid: b96da7745f78c1246909bb01967c1718, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Handle
     second: {fileID: 2100000, guid: ec9d22807f8a3124da3ccdac541c49ec, type: 2}
   materials:

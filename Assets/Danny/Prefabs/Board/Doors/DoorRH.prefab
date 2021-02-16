@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6595434196440806380}
   - component: {fileID: 1317681396}
+  - component: {fileID: 3900631050624158171}
   m_Layer: 0
   m_Name: DoorRH
   m_TagString: Untagged
@@ -51,6 +52,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3900631050624158171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721297661864306370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f49d39aca6802649a7b476f959cf6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testKeysActive: 1
 --- !u!1001 &6206759645446866718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,6 +127,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7215098151973658936, guid: df2279ca1edb5964ca1056c6230181a3,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -126,6 +150,16 @@ PrefabInstance:
     - target: {fileID: -7215098151973658936, guid: df2279ca1edb5964ca1056c6230181a3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6267947682621925956, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1680831895200388014, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df2279ca1edb5964ca1056c6230181a3,

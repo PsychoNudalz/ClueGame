@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraCloseUp : MonoBehaviour
 {
+    [SerializeField] private Vector3 offset;
     private Vector3 initialCameraPosition;
     private Vector3 currentCameraTarget;
     private bool IsCloseUp;
@@ -33,7 +34,7 @@ public class CameraCloseUp : MonoBehaviour
 
     public void SetCloseUp(Vector3 target)
     {
-        currentCameraTarget = target;
+        currentCameraTarget = target + offset;
         IsCloseUp = true;
     }
 
