@@ -12,6 +12,26 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Rug
+    second: {fileID: 2100000, guid: badd315c23c9d144290d854f9202c48f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkirtingBoard
+    second: {fileID: 2100000, guid: 8c3dc86e728684847a6bd807b5214f88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StudyFloor
+    second: {fileID: 2100000, guid: 363543974a2495a44910ca6571f6184b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StudyWalls
+    second: {fileID: 2100000, guid: a9359abf037b5f547911f565fc8e1980, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 2964668db0199b04ab0565844c850657, type: 2}
   materials:
