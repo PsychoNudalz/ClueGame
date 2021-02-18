@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Board
       objectReference: {fileID: 0}
+    - target: {fileID: 4138292269389861473, guid: 0ab61315092314e4995f70531f52465a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 41386a6c4d4d18242962e9d57d4c176c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab61315092314e4995f70531f52465a, type: 3}
 --- !u!4 &6756694197672898401 stripped
