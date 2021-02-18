@@ -28,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StudyWalls
-    second: {fileID: 2100000, guid: a9359abf037b5f547911f565fc8e1980, type: 2}
+    second: {fileID: 2100000, guid: 41386a6c4d4d18242962e9d57d4c176c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
