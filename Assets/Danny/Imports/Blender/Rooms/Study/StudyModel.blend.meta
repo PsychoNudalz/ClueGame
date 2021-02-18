@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SkirtingBoard
-    second: {fileID: 2100000, guid: 8c3dc86e728684847a6bd807b5214f88, type: 2}
+    second: {fileID: 2100000, guid: 8865d94acc1945c4494e075e9de16a55, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
