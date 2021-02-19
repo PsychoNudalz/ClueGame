@@ -21,7 +21,7 @@ public class DoorScript : MonoBehaviour
     {
         if (testKeysActive)
         {
-            if (kb.digit0Key.wasPressedThisFrame)
+            if (kb.digit0Key.wasReleasedThisFrame)
             {
                 ToggleDoorOpenClose();
             }

@@ -494,6 +494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 2014019947730034114, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4112950841051223103, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
       propertyPath: m_LocalPosition.z

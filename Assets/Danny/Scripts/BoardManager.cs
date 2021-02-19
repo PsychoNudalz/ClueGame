@@ -64,7 +64,7 @@ public class BoardManager : MonoBehaviour
         /*
          * For Testing
          */
-        PrintArray();
+        //PrintArray();
     }
 
     public BoardTileScript GetTileFromGrid(int x, int y)

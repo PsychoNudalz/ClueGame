@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class RoomText : MonoBehaviour
 {
+    [SerializeField] bool lookAtCamera;
     private Camera mainCamera;
+    private Vector3 initialRotation;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,11 @@ public class RoomText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(mainCamera.transform);
+        if (lookAtCamera)
+        {
+            Vector3 cameraDirection = transform.position - mainCamera.transform.position;
+            Vector3 rotation = new Vector3();
+            transform.LookAt(mainCamera.transform);
+        }
     }
 }
