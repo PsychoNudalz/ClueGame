@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Room {Study, Hall, Lounge, Library, Centre, DiningRoom, BilliardRoom, Conservatory, Ballroom, Kitchen};
 public class BoardManager : MonoBehaviour
 {
     private BoardTileScript[][] boardTileArray;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraCloseUp : MonoBehaviour
 {
     [SerializeField] private Vector3 offset;

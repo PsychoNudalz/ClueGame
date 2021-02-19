@@ -7,38 +7,30 @@ public class DoorScript : MonoBehaviour
 {
     [SerializeField] bool testKeysActive;
     Animator doorAnimator;
+    bool isOpen;
     Keyboard kb;
 
     private void Start()
     {
         doorAnimator = GetComponent<Animator>();
         kb = InputSystem.GetDevice<Keyboard>();
+        isOpen = false;
     }
 
     private void Update()
     {
         if (testKeysActive)
         {
-            if (kb.spaceKey.wasPressedThisFrame)
+            if (kb.digit0Key.wasPressedThisFrame)
             {
-                ToggleDoorClose();
+                ToggleDoorOpenClose();
             }
-           
         }
     }
 
-    public void ToggleDoorClose()
+    public void ToggleDoorOpenClose()
     {
-        doorAnimator.SetBool("DoorOpen", !doorAnimator.GetBool("DoorOpen"));
-    }
-
-    public void OpenDoor()
-    {
-        doorAnimator.SetBool("DoorOpen", true);
-    }
-
-    public void CloseDoor()
-    {
-        doorAnimator.SetBool("DoorOpen", false);
+        isOpen = !isOpen;
+        doorAnimator.SetBool("DoorOpen", isOpen);
     }
 }
