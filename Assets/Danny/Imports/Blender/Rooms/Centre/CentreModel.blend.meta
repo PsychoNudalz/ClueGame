@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: CentreWalls
+    second: {fileID: 2100000, guid: 73413d39f17fd7a458bb2a2422559ee7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: dd207010f552a5b41976ce3d7b6f2c96, type: 2}
   - first:
