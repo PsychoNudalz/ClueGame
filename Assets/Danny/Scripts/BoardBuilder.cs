@@ -156,35 +156,43 @@ public class BoardBuilder : MonoBehaviour
         
         Color playerColour;
         string name = "";
+        CameraTarget playerCameraTarget;
         switch (player)
         {
             case "missScarlett":
                 playerColour = missScarlettColour;
                 name = "Miss\nScarlett";
+                playerCameraTarget = CameraTarget.MissScarlett;
                 break;
             case "profPlum":
                 playerColour = profPlumColour;
                 name = "Prof\nPlum";
+                playerCameraTarget = CameraTarget.ProfPlum;
                 break;
             case "colMustard":
                 playerColour = colMustardColour;
                 name = "Col\nMustard";
+                playerCameraTarget = CameraTarget.ColMustard;
                 break;
             case "mrsPeacock":
                 playerColour = mrsPeacockColour;
                 name = "Mrs\nPeacock";
+                playerCameraTarget = CameraTarget.MrsPeacock;
                 break;
             case "revGreen":
                 playerColour = revGreenColour;
                 name = "Rev\nGreen";
+                playerCameraTarget = CameraTarget.RevGreen;
                 break;
             case "mrsWhite":
                 playerColour = mrsWhiteColour;
                 name = "Mrs\nWhite";
+                playerCameraTarget = CameraTarget.MrsWhite;
                 break;
             default:
                 playerColour = Color.white;
                 name = "";
+                playerCameraTarget = CameraTarget.Initial;
                 break;
         }
         GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, parent.transform);
@@ -193,6 +201,7 @@ public class BoardBuilder : MonoBehaviour
         startingTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
         GameObject playerPiece = GameObject.Instantiate(playerPiecePrefab, new Vector3(x, 0, z), transform.rotation, players.transform);
         playerPiece.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
+        playerPiece.GetComponentInChildren<CloseUpPointScript>().SetCloseUpPointName(playerCameraTarget);
         return startingTile;
     }
 

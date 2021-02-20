@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Die : MonoBehaviour
 {
-    [SerializeField] private Transform closeUpCameraPosition;
+    //[SerializeField] private Transform closeUpCameraPosition;
 
     private DieSide[] dieSides;
     private Rigidbody dieRigidbody;
@@ -31,9 +31,9 @@ public class Die : MonoBehaviour
         
         if (setCloseUpCamera)
         {
-            mainCamera.SetCloseUp(transform.position);
+            mainCamera.SetCloseUp(CameraTarget.Centre);
         }
-        
+                
         if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
         {
             hasLanded = true;
@@ -87,7 +87,7 @@ public class Die : MonoBehaviour
         dieRigidbody.useGravity = false;
         isThrown = false;
         hasLanded = false;
-        setCloseUpCamera = false; 
+        setCloseUpCamera = false;
         mainCamera.ClearCloseUp();
     }
 
