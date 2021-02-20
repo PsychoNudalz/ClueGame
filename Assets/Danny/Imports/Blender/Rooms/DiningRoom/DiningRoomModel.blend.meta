@@ -7,13 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DiningRoomFloor
+    second: {fileID: 2100000, guid: 5ee5b3ed3e1ee774c89b48a7d4718a13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DiningRoomWalls
+    second: {fileID: 2100000, guid: 31a2c5b31d5804842b0c0845d4993c70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: dd207010f552a5b41976ce3d7b6f2c96, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Skirting
+    second: {fileID: 2100000, guid: 8865d94acc1945c4494e075e9de16a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 2964668db0199b04ab0565844c850657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window
+    second: {fileID: 2100000, guid: df99eec982abe1348814d58ec7b4a796, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
