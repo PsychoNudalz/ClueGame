@@ -7,13 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: ConservatoryFloor
+    second: {fileID: 2100000, guid: 01f455ac7a67b5b4389eb3030e336511, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ConservatoryWalls
+    second: {fileID: 2100000, guid: 1864e7ca26607df46b94e7349b22e3aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: dd207010f552a5b41976ce3d7b6f2c96, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Skirting
+    second: {fileID: 2100000, guid: 8865d94acc1945c4494e075e9de16a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Walls
     second: {fileID: 2100000, guid: 2964668db0199b04ab0565844c850657, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window
+    second: {fileID: 2100000, guid: df99eec982abe1348814d58ec7b4a796, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
