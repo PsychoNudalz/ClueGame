@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: KitchenWindow
+    second: {fileID: 2100000, guid: df99eec982abe1348814d58ec7b4a796, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Skirting
     second: {fileID: 2100000, guid: 8865d94acc1945c4494e075e9de16a55, type: 2}
   - first:
