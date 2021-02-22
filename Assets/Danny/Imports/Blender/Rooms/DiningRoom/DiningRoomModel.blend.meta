@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DiningRoomWindow
+    second: {fileID: 2100000, guid: df99eec982abe1348814d58ec7b4a796, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: dd207010f552a5b41976ce3d7b6f2c96, type: 2}
   - first:
