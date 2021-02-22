@@ -12,6 +12,21 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: a2fbf7f6dc6907f43b20a0c24b4ba007, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorFrame
+    second: {fileID: 2100000, guid: 588bdd3821051b144b5c2cde7a6089b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorInner
+    second: {fileID: 2100000, guid: b96da7745f78c1246909bb01967c1718, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Floor
     second: {fileID: 2100000, guid: dd207010f552a5b41976ce3d7b6f2c96, type: 2}
   - first:
@@ -37,8 +52,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: HallWalls
+    second: {fileID: 2100000, guid: ab31767f93aecad449fcb2f3598ff670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: HallWallsInside
     second: {fileID: 2100000, guid: ab31767f93aecad449fcb2f3598ff670, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HallWindows
+    second: {fileID: 2100000, guid: df99eec982abe1348814d58ec7b4a796, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
