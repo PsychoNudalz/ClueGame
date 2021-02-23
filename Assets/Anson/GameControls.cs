@@ -33,6 +33,30 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""TestButton1"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec3aa672-90ac-4480-bd17-ab2dfc4e8e5d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""TestButton2"",
+                    ""type"": ""Button"",
+                    ""id"": ""af807560-72d4-4ee9-99f9-f21e06cec307"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""TestButton3"",
+                    ""type"": ""Button"",
+                    ""id"": ""85065c9e-e088-4ce0-8f95-2f48d757e5f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -101,6 +125,39 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""action"": ""ControllerMoving"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4014ee00-24d6-46cf-9d61-7626bae82dc6"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestButton1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27c522df-493a-4d40-a94a-5429df55414c"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestButton2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ff81d2e3-f419-4879-ae7a-db4c9cefbacd"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestButton3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -111,6 +168,9 @@ public class @GameControls : IInputActionCollection, IDisposable
         m_PlayerMap = asset.FindActionMap("Player Map", throwIfNotFound: true);
         m_PlayerMap_MouseMoving = m_PlayerMap.FindAction("MouseMoving", throwIfNotFound: true);
         m_PlayerMap_ControllerMoving = m_PlayerMap.FindAction("ControllerMoving", throwIfNotFound: true);
+        m_PlayerMap_TestButton1 = m_PlayerMap.FindAction("TestButton1", throwIfNotFound: true);
+        m_PlayerMap_TestButton2 = m_PlayerMap.FindAction("TestButton2", throwIfNotFound: true);
+        m_PlayerMap_TestButton3 = m_PlayerMap.FindAction("TestButton3", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,12 +222,18 @@ public class @GameControls : IInputActionCollection, IDisposable
     private IPlayerMapActions m_PlayerMapActionsCallbackInterface;
     private readonly InputAction m_PlayerMap_MouseMoving;
     private readonly InputAction m_PlayerMap_ControllerMoving;
+    private readonly InputAction m_PlayerMap_TestButton1;
+    private readonly InputAction m_PlayerMap_TestButton2;
+    private readonly InputAction m_PlayerMap_TestButton3;
     public struct PlayerMapActions
     {
         private @GameControls m_Wrapper;
         public PlayerMapActions(@GameControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MouseMoving => m_Wrapper.m_PlayerMap_MouseMoving;
         public InputAction @ControllerMoving => m_Wrapper.m_PlayerMap_ControllerMoving;
+        public InputAction @TestButton1 => m_Wrapper.m_PlayerMap_TestButton1;
+        public InputAction @TestButton2 => m_Wrapper.m_PlayerMap_TestButton2;
+        public InputAction @TestButton3 => m_Wrapper.m_PlayerMap_TestButton3;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -183,6 +249,15 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @ControllerMoving.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
                 @ControllerMoving.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
                 @ControllerMoving.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
+                @TestButton1.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
+                @TestButton1.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
+                @TestButton1.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
+                @TestButton2.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton2;
+                @TestButton2.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton2;
+                @TestButton2.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton2;
+                @TestButton3.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
+                @TestButton3.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
+                @TestButton3.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
             }
             m_Wrapper.m_PlayerMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -193,6 +268,15 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @ControllerMoving.started += instance.OnControllerMoving;
                 @ControllerMoving.performed += instance.OnControllerMoving;
                 @ControllerMoving.canceled += instance.OnControllerMoving;
+                @TestButton1.started += instance.OnTestButton1;
+                @TestButton1.performed += instance.OnTestButton1;
+                @TestButton1.canceled += instance.OnTestButton1;
+                @TestButton2.started += instance.OnTestButton2;
+                @TestButton2.performed += instance.OnTestButton2;
+                @TestButton2.canceled += instance.OnTestButton2;
+                @TestButton3.started += instance.OnTestButton3;
+                @TestButton3.performed += instance.OnTestButton3;
+                @TestButton3.canceled += instance.OnTestButton3;
             }
         }
     }
@@ -201,5 +285,8 @@ public class @GameControls : IInputActionCollection, IDisposable
     {
         void OnMouseMoving(InputAction.CallbackContext context);
         void OnControllerMoving(InputAction.CallbackContext context);
+        void OnTestButton1(InputAction.CallbackContext context);
+        void OnTestButton2(InputAction.CallbackContext context);
+        void OnTestButton3(InputAction.CallbackContext context);
     }
 }
