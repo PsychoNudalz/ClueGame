@@ -20,6 +20,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "TestButton1",
+                    "type": "Button",
+                    "id": "ec3aa672-90ac-4480-bd17-ab2dfc4e8e5d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TestButton2",
+                    "type": "Button",
+                    "id": "af807560-72d4-4ee9-99f9-f21e06cec307",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TestButton3",
+                    "type": "Button",
+                    "id": "85065c9e-e088-4ce0-8f95-2f48d757e5f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -88,6 +112,39 @@
                     "action": "ControllerMoving",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "4014ee00-24d6-46cf-9d61-7626bae82dc6",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestButton1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27c522df-493a-4d40-a94a-5429df55414c",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestButton2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff81d2e3-f419-4879-ae7a-db4c9cefbacd",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TestButton3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

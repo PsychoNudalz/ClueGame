@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerSelectionScript : MonoBehaviour
 {
     [SerializeField] BoardTileScript currentTile;
+    [SerializeField] int moveAmount;
 
-
-
+    public int MoveAmount { get => moveAmount; set => moveAmount = value; }
 
     public void ClearCurrentTile()
     {
@@ -24,4 +24,6 @@ public class PlayerSelectionScript : MonoBehaviour
         currentTile.SelectTile();
 
     }
+
+
 }

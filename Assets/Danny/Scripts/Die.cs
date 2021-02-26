@@ -14,12 +14,9 @@ public class Die : MonoBehaviour
     private bool isThrown;
     private Vector3 initialPosition;
     private int dieValue = -1;
-    private CameraCloseUp mainCamera;
-    private bool setCloseUpCamera;
 
     private void Start()
     {
-        mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();
         dieSides = GetComponentsInChildren<DieSide>();
         dieRigidbody = GetComponent<Rigidbody>();
         initialPosition = transform.position;
@@ -28,17 +25,11 @@ public class Die : MonoBehaviour
 
     private void Update()
     {
-        
-        if (setCloseUpCamera)
-        {
-            mainCamera.SetCloseUp(CameraTarget.Centre);
-        }
-                
         if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
         {
             hasLanded = true;
             dieRigidbody.useGravity = false;
-            CheckValue();
+            CheckValueDie();
         }
         else if (dieRigidbody.IsSleeping() && dieValue == 0)
         {
@@ -48,26 +39,25 @@ public class Die : MonoBehaviour
 
     private void RollAgain()
     {
-        Reset();
-        Roll();
+        ResetDie();
+        RollDie();
     }
 
-    public void Roll()
+    public void RollDie()
     {
         if (hasLanded)
         {
-            Reset();
+            ResetDie();
         }
         
         if (!isThrown && !hasLanded)
         {
             GetComponent<MeshRenderer>().enabled = true;
-            setCloseUpCamera = true;
+            
             isThrown = true;
             dieRigidbody.useGravity = true;
-            dieRigidbody.AddTorque(Random.Range(100, 500), Random.Range(100, 500), Random.Range(100, 500));
+            dieRigidbody.AddTorque(Random.Range(500, 1000), Random.Range(500, 1000), Random.Range(500, 1000));
         }
-        
     }
 
     public bool IsReadyToRoll()
@@ -75,23 +65,21 @@ public class Die : MonoBehaviour
         return !isThrown || hasLanded;
     }
 
-    public bool CanReset()
+    public bool CanResetDie()
     {
         return hasLanded && isThrown;
     }
 
-    public void Reset()
+    public void ResetDie()
     {
         GetComponent<MeshRenderer>().enabled = false;
         transform.position = initialPosition;
         dieRigidbody.useGravity = false;
         isThrown = false;
         hasLanded = false;
-        setCloseUpCamera = false;
-        mainCamera.ClearCloseUp();
     }
 
-    private void CheckValue()
+    private void CheckValueDie()
     {
         dieValue = 0;
         foreach(DieSide side in dieSides)
@@ -103,7 +91,7 @@ public class Die : MonoBehaviour
         }
     }
 
-    public int GetValue()
+    public int GetValueDie()
     {
         if (hasLanded)
         {

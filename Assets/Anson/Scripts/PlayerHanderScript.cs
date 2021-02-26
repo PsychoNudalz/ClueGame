@@ -10,6 +10,8 @@ public class PlayerHanderScript : MonoBehaviour
     [SerializeField] PlayerCursorScript playerCursorScript;
     [SerializeField] PlayerSelectionScript playerSelectionScript;
 
+    public PlayerSelectionScript PlayerSelectionScript { get => playerSelectionScript; set => playerSelectionScript = value; }
+
     private void Awake()
     {
         playerControlScript = GetComponent<PlayerControlScript>();

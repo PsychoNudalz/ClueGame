@@ -5,28 +5,34 @@ using UnityEngine.UI;
 
 public class DisplayDieValue : MonoBehaviour
 {
-    [SerializeField]
-    Die die;
+    
     [SerializeField]
     Button rollButton;
     [SerializeField]
     Button resetButton;
-
+    Text diceDisplay;
+    Dice dice;
     int dieValue;
+
+    private void Start()
+    {
+        diceDisplay = GetComponent<Text>();
+        dice = FindObjectOfType<Dice>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        rollButton.interactable = die.IsReadyToRoll();
-        resetButton.interactable = die.CanReset();
-        dieValue = die.GetValue();
+        rollButton.interactable = dice.ReadyToRoll();
+        resetButton.interactable = dice.CanReset();
+        dieValue = dice.GetValue();
         if(dieValue != 0)
         {
-            GetComponent<Text>().text = "You rolled a " + dieValue + "!"; 
+            diceDisplay.text = "You rolled\na\n" + dieValue + "!"; 
         }
         else
         {
-            GetComponent<Text>().text = "";
+            diceDisplay.text = "";
         }
-        
-        }
+    }
 }
