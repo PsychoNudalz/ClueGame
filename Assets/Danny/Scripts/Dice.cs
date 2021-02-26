@@ -12,6 +12,11 @@ public class Dice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Initialise();
+    }
+
+    private void Initialise()
+    {
         dice = GetComponentsInChildren<Die>();
         diceValue = 0;
         mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();

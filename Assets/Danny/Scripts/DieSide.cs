@@ -7,13 +7,13 @@ public class DieSide : MonoBehaviour
 {
     [SerializeField]
     private int value;
-    private bool onGround;
+    private bool isOnGround;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Board"))
         {
-            onGround = true;
+            isOnGround = true;
         }
     }
 
@@ -21,16 +21,16 @@ public class DieSide : MonoBehaviour
     {
         if (other.CompareTag("Board"))
         {
-            onGround = false;
+            isOnGround = false;
         }
     }
 
     public bool IsOnGround()
     {
-        return onGround;
+        return isOnGround;
     }
 
-    internal int GetSideValue()
+    public int GetSideValue()
     {
         return value;
     }

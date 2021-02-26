@@ -17,6 +17,11 @@ public class Die : MonoBehaviour
 
     private void Start()
     {
+        Initialise();
+    }
+
+    private void Initialise()
+    {
         dieSides = GetComponentsInChildren<DieSide>();
         dieRigidbody = GetComponent<Rigidbody>();
         initialPosition = transform.position;

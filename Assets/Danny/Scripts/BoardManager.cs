@@ -49,12 +49,12 @@ public class BoardManager : MonoBehaviour
         return neighboursToReturn.ToArray();
     }
 
-    public void CreateBoardArray(BoardTileScript[] tiles, int height, int width)
+    public void CreateBoardArray(BoardTileScript[] tiles, int boardHeight, int boardWidth)
     {
-        boardTileArray = new BoardTileScript[height][];
-        for (int row = 0; row < height; row++)
+        boardTileArray = new BoardTileScript[boardHeight][];
+        for (int row = 0; row < boardHeight; row++)
         {
-            BoardTileScript[] rowArray = new BoardTileScript[width];
+            BoardTileScript[] rowArray = new BoardTileScript[boardWidth];
             boardTileArray[row] = rowArray;
         }
         foreach (BoardTileScript tile in tiles)
@@ -67,11 +67,11 @@ public class BoardManager : MonoBehaviour
         //PrintArray();
     }
 
-    public BoardTileScript GetTileFromGrid(int x, int y)
+    public BoardTileScript GetTileFromGrid(int XPos, int YPos)
     {
-        if (x < boardTileArray[0].Length && y < boardTileArray.Length && x >= 0 && y >= 0)
+        if (XPos < boardTileArray[0].Length && YPos < boardTileArray.Length && XPos >= 0 && YPos >= 0)
         {
-            return boardTileArray[y][x];
+            return boardTileArray[YPos][XPos];
         }
         else
         {
@@ -80,7 +80,7 @@ public class BoardManager : MonoBehaviour
     }
 
     /*Print Array for Testing*/
-    public void PrintArray()
+    private void PrintArray()
     {
         for (int row = 0; row < boardTileArray.Length; row++)
         {

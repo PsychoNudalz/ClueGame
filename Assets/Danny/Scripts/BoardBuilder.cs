@@ -47,12 +47,17 @@ public class BoardBuilder : MonoBehaviour
 
     void Awake()
     {
+        Initialise();
+    }
+
+    private void Initialise()
+    {
         GenerateBoardArrayFromCSV();
         boardHeight = boardStringArray.Length;
         boardWidth = boardStringArray[0].Length;
         BuildBoard();
         boardManager = GetComponentInParent<BoardManager>();
-        boardManager.CreateBoardArray(tiles.GetComponentsInChildren<BoardTileScript>(),boardHeight,boardWidth);
+        boardManager.CreateBoardArray(tiles.GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
     }
 
     private void GenerateBoardArrayFromCSV()
@@ -78,7 +83,7 @@ public class BoardBuilder : MonoBehaviour
         */
     }
 
-    void BuildBoard()
+    private void BuildBoard()
     {
 
         tiles = new GameObject("Tiles");
@@ -139,7 +144,6 @@ public class BoardBuilder : MonoBehaviour
         return shortcutTile;
         //todo set room
     }
-
 
     private GameObject CreateRoomEntranceTile(int x, int z, string Room, string rotation, GameObject parent)
     {
@@ -255,9 +259,4 @@ public class BoardBuilder : MonoBehaviour
         return room;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
