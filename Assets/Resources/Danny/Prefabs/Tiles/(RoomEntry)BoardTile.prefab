@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4227457102745212974}
-  - component: {fileID: -8699720200236354461}
+  - component: {fileID: -3092956053627142101}
   - component: {fileID: 2134038076996253298}
   - component: {fileID: -2765923392474606686}
   m_Layer: 8
@@ -113,7 +113,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8699720200236354461
+--- !u!114 &-3092956053627142101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3594190789160518292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d39a86aa4911d64b9c46f8d799846e1, type: 3}
+  m_Script: {fileID: 11500000, guid: da93191f6248acd41bcbf96c35515178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 0}
-  tileType: 2
+  tileType: 0
+  boardTileEffectHandler: {fileID: 0}
 --- !u!54 &2134038076996253298
 Rigidbody:
   m_ObjectHideFlags: 0
