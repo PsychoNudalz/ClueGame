@@ -634,9 +634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1990f0c4bb083784ea01c74bd8791191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHanderScript: {fileID: 0}
+  playerMasterController: {fileID: 0}
   boardManager: {fileID: 0}
-  die: {fileID: 0}
+  dice: {fileID: 0}
 --- !u!4 &391193239
 Transform:
   m_ObjectHideFlags: 0
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3dd574c7f30744dbe3dd104bfef2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 6
+  character: 0
   deck: []
 --- !u!114 &601172247
 MonoBehaviour:
@@ -1712,8 +1712,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976056716}
-        m_MethodName: RollDice
+      - m_Target: {fileID: 391193238}
+        m_MethodName: RollDie
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

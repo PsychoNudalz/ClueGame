@@ -8,6 +8,10 @@ public class BoardTileEffectHandlerScript : MonoBehaviour
     [SerializeField] Material tileMaterial;
     [SerializeField] GameObject selectEffectGroup;
 
+    private void Awake()
+    {
+        tileMaterial = tileRender.material;
+    }
 
     public void ToggleEffect_On()
     {

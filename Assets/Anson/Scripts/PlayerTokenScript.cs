@@ -2,21 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Character
-{
-    MissScarlett, ProfPlum, ColMustard, MrsPeacock, RevGreen, MrsWhite
-}
 
 public class PlayerTokenScript : MonoBehaviour
 {
-    private Character character;
-    private Color characterColour;
-    private string characterName;
+    [Header("Chracter Token Stuff")]
+    [SerializeField] private CharacterEnum character;
+    [SerializeField] private Color characterColour;
+    [SerializeField] private string characterName;
     private StartTileScript startTile;
+    [Header("Tile")]
+    [SerializeField] BoardTileScript currentTile;
 
-    public Character Character { get => character; }
+
+    //Getters and Setters
+    public CharacterEnum Character { get => character; }
     public Color CharacterColour { get => characterColour; set => characterColour = value; }
     public string CharacterName { get => characterName; set => characterName = value; }
+    public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -30,42 +32,45 @@ public class PlayerTokenScript : MonoBehaviour
         
     }
 
-    public void SetCharacter(Character setCharacter, StartTileScript tile)
+    public void SetCharacter(CharacterEnum setCharacter, StartTileScript tile)
     {
-        startTile = tile;
+        startTile= tile;
+        currentTile = tile;
         switch (setCharacter)
         {
-            case Character.MissScarlett:
+            case CharacterEnum.MissScarlett:
                 character = setCharacter;
                 characterColour = new Color(150, 0, 0);
                 characterName = "Miss Scarlett";
                 break;
-            case Character.ColMustard:
+            case CharacterEnum.ColMustard:
                 character = setCharacter;
                 characterColour = new Color(150, 150, 0);
                 characterName = "Col Mustard";
                 break;
-            case Character.ProfPlum:
+            case CharacterEnum.ProfPlum:
                 character = setCharacter;
                 characterColour = new Color(150, 0, 150);
                 characterName = "Prof Plum";
                 break;
-            case Character.RevGreen:
+            case CharacterEnum.RevGreen:
                 character = setCharacter;
                 characterColour = new Color(0, 150, 0);
                 characterName = "Rev Green";
                 break;
-            case Character.MrsPeacock:
+            case CharacterEnum.MrsPeacock:
                 character = setCharacter;
                 characterColour = new Color(0, 100, 150);
                 characterName = "Mrs Peacock";
                 break;
-            case Character.MrsWhite:
+            case CharacterEnum.MrsWhite:
                 character = setCharacter;
                 characterColour = new Color(150, 150, 150);
                 characterName = "Mrs White";
                 break;
         }
+        AssignToPlayerMaster();
+        
         /*
          * ----To do---- 
          * token colour from characterColour
@@ -76,5 +81,27 @@ public class PlayerTokenScript : MonoBehaviour
     public Color GetCharacterColour()
     {
         return characterColour;
+    }
+
+    public Vector2 GetGridPosition()
+    {
+        return currentTile.GridPosition;
+    }
+    /// <summary>
+    /// assigns token to the correct player
+    /// </summary>
+    /// <returns> returns true if it can assign to the player, false if it can't find a matching Player </returns>
+    bool AssignToPlayerMaster()
+    {
+        PlayerMasterController[] allPlayer = FindObjectsOfType<PlayerMasterController>();
+        foreach (PlayerMasterController p in allPlayer)
+        {
+            if (character.Equals(p.GetCharacter()))
+            {
+                p.PlayerTokenScript = this;
+                return true;
+            }
+        }
+        return false;
     }
 }

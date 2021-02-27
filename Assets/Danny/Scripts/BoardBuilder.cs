@@ -206,38 +206,38 @@ public class BoardBuilder : MonoBehaviour
     {
         string name;
         CameraTarget playerCameraTarget;
-        Character character = Character.MissScarlett;
+        CharacterEnum character = CharacterEnum.MissScarlett;
         switch (player)
         {
             case "missScarlett":
                 name = "Miss Scarlett";
                 playerCameraTarget = CameraTarget.MissScarlett;
-                character = Character.MissScarlett;
+                character = CharacterEnum.MissScarlett;
                 break;
             case "profPlum":
                 name = "Prof Plum";
                 playerCameraTarget = CameraTarget.ProfPlum;
-                character = Character.ProfPlum;
+                character = CharacterEnum.ProfPlum;
                 break;
             case "colMustard":
                 name = "Col Mustard";
                 playerCameraTarget = CameraTarget.ColMustard;
-                character = Character.ColMustard;
+                character = CharacterEnum.ColMustard;
                 break;
             case "mrsPeacock":
                 name = "Mrs Peacock";
                 playerCameraTarget = CameraTarget.MrsPeacock;
-                character = Character.MrsPeacock;
+                character = CharacterEnum.MrsPeacock;
                 break;
             case "revGreen":
                 name = "Rev Green";
                 playerCameraTarget = CameraTarget.RevGreen;
-                character = Character.RevGreen;
+                character = CharacterEnum.RevGreen;
                 break;
             case "mrsWhite":
                 name = "Mrs White";
                 playerCameraTarget = CameraTarget.MrsWhite;
-                character = Character.MrsWhite;
+                character = CharacterEnum.MrsWhite;
                 break;
             default:
                 name = "";

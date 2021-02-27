@@ -42,6 +42,30 @@ public class BoardTileScript : MonoBehaviour
         }
     }
 
+    public virtual void GlowTile(bool b)
+    {
+        try
+        {
+            if (boardTileEffectHandler == null)
+            {
+                Debug.LogError(this + " Missing boardTileEffect");
+                return;
+            }
+            if (b)
+            {
+                boardTileEffectHandler.ToggleEffect_On();
+            }
+            else
+            {
+                boardTileEffectHandler.ToggleEffect_Off();
+            }
+        }
+        catch (System.NullReferenceException _)
+        {
+            Debug.LogError(this + " Missing boardTileEffect");
+        }
+    }
+
     public void GetTileNeighbours()
     {
         GameObject.FindObjectOfType<BoardManager>().GetTileNeighbours(this.GetComponent<BoardTileScript>());

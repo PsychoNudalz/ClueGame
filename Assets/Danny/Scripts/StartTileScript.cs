@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class StartTileScript : BoardTileScript
 {
-    Character character;
+    CharacterEnum character;
     private Text tileText;
-    public Character Character { get => character; }
+    public CharacterEnum Character { get => character; }
     
     // Start is called before the first frame update
     void Awake()
@@ -23,7 +23,7 @@ public class StartTileScript : BoardTileScript
         tileText.text = "Start\n" + names[0] + "\n" + names[1];
     }
 
-    public void SetCharacter(Character characterSet, string name)
+    public void SetCharacter(CharacterEnum characterSet, string name)
     {
         character = characterSet;
         SetTileText(name);

@@ -7,6 +7,9 @@ public class BoardManager : MonoBehaviour
 {
     private BoardTileScript[][] boardTileArray;
 
+    [Header("Displaying Moveable Tiles")]
+    [SerializeField] List<BoardTileScript> movableTile;
+
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
         List<BoardTileScript> neighboursToReturn = new List<BoardTileScript>();
@@ -91,7 +94,7 @@ public class BoardManager : MonoBehaviour
                 {
                     BoardTileScript[] neighbours = GetTileNeighbours(tile);
                     print(tile + " neighbours = " + neighbours.Length);
-                    foreach(BoardTileScript neighbour in neighbours)
+                    foreach (BoardTileScript neighbour in neighbours)
                     {
                         print("\t" + tile + "==>> Neighbour ==>> " + neighbour);
                     }
@@ -99,5 +102,65 @@ public class BoardManager : MonoBehaviour
             }
         }
     }
+
+
+    public List<BoardTileScript> bfs(BoardTileScript currentTile, int range, List<BoardTileScript> queue = null)
+    {
+        if (queue == null)
+        {
+            queue = new List<BoardTileScript>();
+            queue.Add(currentTile);
+        }
+
+        int pointer = 0;
+        for (int j = 0; j < range; j++)
+        {
+            List<BoardTileScript> neighbours = new List<BoardTileScript>();
+            Debug.Log("In Loop: " + j);
+            for (int i = pointer; i < queue.Count; i++)
+            {
+                pointer++;
+                foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
+                {
+                    Debug.Log("Getting more neighbour");
+                    if (!queue.Contains(b)&&!neighbours.Contains(b))
+                    {
+                        neighbours.Add(b);
+                    }
+                }
+            }
+            queue.AddRange(neighbours);
+        }
+
+        return queue;
+    }
+
+    public void ShowMovable(BoardTileScript currentTile, int range)
+    {
+        ClearMovable();
+        print("Finding new tile");
+        movableTile = bfs(currentTile, range);
+        foreach (BoardTileScript b in movableTile)
+        {
+            b.GlowTile(true);
+        }
+    }
+
+    public void ClearMovable()
+    {
+        foreach (BoardTileScript b in movableTile)
+        {
+            b.GlowTile(false);
+        }
+
+        movableTile = new List<BoardTileScript>();
+        print("Clear");
+    }
+
+    bool CanMove(BoardTileScript currentTile)
+    {
+        return movableTile.Contains(currentTile);
+    }
+
 
 }
