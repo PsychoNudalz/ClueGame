@@ -256,18 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48660659}
   m_CullTransparentMesh: 0
---- !u!114 &65898096 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3420848728387965522, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 640464124}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7102fa00f724371409687bf4b0c7137e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &264723930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5828129469634561259, guid: 3b42f2ef3a3968e40a6b07c47b1a1481,
@@ -743,9 +731,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 601172244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b42072c06aa8fa64aa72998e5f161673, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b3dd574c7f30744dbe3dd104bfef2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: 6
+  deck: []
 --- !u!114 &601172247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +752,9 @@ MonoBehaviour:
   playerControlScript: {fileID: 0}
   playerCursorScript: {fileID: 0}
   playerSelectionScript: {fileID: 0}
+  playerTokenScript: {fileID: 0}
+  playerStatsScript: {fileID: 0}
+  boardManager: {fileID: 0}
 --- !u!4 &601172248
 Transform:
   m_ObjectHideFlags: 0
@@ -929,6 +922,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 2725832500960028206, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725832500960028242, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4112950841051223103, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1026,6 +1029,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976056716 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8771099554688035178, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 640464124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c6d0a062a7ed144b0f2ddd404d5943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1324842843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,8 +1712,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 65898096}
-        m_MethodName: Roll
+      - m_Target: {fileID: 976056716}
+        m_MethodName: RollDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1795,7 +1810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52e8bf94e48a3043a3853e2ef89e7fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  die: {fileID: 65898096}
   rollButton: {fileID: 2355224037213893090}
   resetButton: {fileID: 2355224039040677696}
 --- !u!114 &2355224038182720560
@@ -1982,8 +1996,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 65898096}
-        m_MethodName: Reset
+      - m_Target: {fileID: 976056716}
+        m_MethodName: ResetDice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
