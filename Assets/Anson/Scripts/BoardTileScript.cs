@@ -3,25 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TileType { General, Start, RoomEntry, Shortcut };
+public enum TileTypeEnum { General, Start, RoomEntry, Shortcut };
 
 public class BoardTileScript : MonoBehaviour
 {
     [SerializeField] Vector2 gridPosition;
-    [SerializeField] TileType tileType;
+    private TileTypeEnum tileType;
     [SerializeField] BoardTileEffectHandlerScript boardTileEffectHandler;
 
     public Vector2 GridPosition { get => gridPosition; set => gridPosition = value; }
+    public TileTypeEnum TileType { get => tileType; set => tileType = value; }
 
     // Start is called before the first frame update
     void Start()
     {
         boardTileEffectHandler = GetComponent<BoardTileEffectHandlerScript>();
-    }
-
-    public TileType GetTileType()
-    {
-        return tileType;
     }
 
     public virtual void ClearTile()
@@ -74,6 +70,6 @@ public class BoardTileScript : MonoBehaviour
     override
     public string ToString()
     {
-        return tileType + " Tile located at X:" + gridPosition.x + " Y:" + gridPosition.y;
+        return $"{TileType} Tile located at ({GridPosition.x} : {GridPosition.y})";
     }
 }

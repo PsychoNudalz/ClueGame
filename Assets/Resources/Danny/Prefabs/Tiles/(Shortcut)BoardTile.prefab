@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3078657d8a853ab4ca35dc3800a8d07e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridPosition: {x: 0, y: 0}
+  tileType: 3
+  boardTileEffectHandler: {fileID: 0}
 --- !u!54 &-5585085788072051721
 Rigidbody:
   m_ObjectHideFlags: 0

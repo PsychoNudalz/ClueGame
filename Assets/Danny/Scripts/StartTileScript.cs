@@ -34,4 +34,9 @@ public class StartTileScript : BoardTileScript
         throw new NotImplementedException("Set colour not implemented");
     }
 
+    override
+    public string ToString()
+    {
+        return $"{TileType} Tile ({character}) located at ({GridPosition.x} : {GridPosition.y})";
+    }
 }

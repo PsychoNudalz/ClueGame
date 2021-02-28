@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
-    private BoardTileScript[][] boardTileArray;
+    private BoardTileScript[][] boardTiles;
+    private PlayerTokenScript[] players;
+    private RoomScript[] rooms;
+    private StartTileScript[] startTiles;
+    private ShortcutBoardTileScript[] shortcuts;
+    private RoomEntryBoardTileScript[] roomEntries;
 
     [Header("Displaying Moveable Tiles")]
     [SerializeField] List<BoardTileScript> movableTile;
+
+    public PlayerTokenScript[] Players { get => players; }
+    public RoomScript[] Rooms { get => rooms; }
+    public StartTileScript[] StartTiles { get => startTiles; }
+    public ShortcutBoardTileScript[] Shortcuts { get => shortcuts; }
+    public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
 
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
@@ -54,15 +65,15 @@ public class BoardManager : MonoBehaviour
 
     public void CreateBoardArray(BoardTileScript[] tiles, int boardHeight, int boardWidth)
     {
-        boardTileArray = new BoardTileScript[boardHeight][];
+        boardTiles = new BoardTileScript[boardHeight][];
         for (int row = 0; row < boardHeight; row++)
         {
             BoardTileScript[] rowArray = new BoardTileScript[boardWidth];
-            boardTileArray[row] = rowArray;
+            boardTiles[row] = rowArray;
         }
         foreach (BoardTileScript tile in tiles)
         {
-            boardTileArray[(int)tile.GridPosition.y][(int)tile.GridPosition.x] = tile;
+            boardTiles[(int)tile.GridPosition.y][(int)tile.GridPosition.x] = tile;
         }
         /*
          * For Testing
@@ -72,9 +83,9 @@ public class BoardManager : MonoBehaviour
 
     public BoardTileScript GetTileFromGrid(int XPos, int YPos)
     {
-        if (XPos < boardTileArray[0].Length && YPos < boardTileArray.Length && XPos >= 0 && YPos >= 0)
+        if (XPos < boardTiles[0].Length && YPos < boardTiles.Length && XPos >= 0 && YPos >= 0)
         {
-            return boardTileArray[YPos][XPos];
+            return boardTiles[YPos][XPos];
         }
         else
         {
@@ -85,9 +96,9 @@ public class BoardManager : MonoBehaviour
     /*Print Array for Testing*/
     private void PrintArray()
     {
-        for (int row = 0; row < boardTileArray.Length; row++)
+        for (int row = 0; row < boardTiles.Length; row++)
         {
-            for (int col = 0; col < boardTileArray[row].Length; col++)
+            for (int col = 0; col < boardTiles[row].Length; col++)
             {
                 BoardTileScript tile = GetTileFromGrid(col, row);
                 if (tile != null)
@@ -162,5 +173,12 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
-
+    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles)
+    {
+        this.players = players;
+        this.rooms = rooms;
+        this.roomEntries = roomEntries;
+        this.shortcuts = shortcuts;
+        this.startTiles = startTiles;
+    }
 }

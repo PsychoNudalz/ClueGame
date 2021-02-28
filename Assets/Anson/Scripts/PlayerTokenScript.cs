@@ -73,8 +73,8 @@ public class PlayerTokenScript : MonoBehaviour
         
         /*
          * ----To do---- 
-         * token colour from characterColour
-            startTile.SetTileColour(CharacterColour);
+         * -token colour from characterColour
+         * -startTile.SetTileColour(CharacterColour);
          */
     }
 

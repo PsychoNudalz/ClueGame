@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 0}
-  tileType: 0
+  tileType: 1
   boardTileEffectHandler: {fileID: 0}
 --- !u!54 &-6094796457881284939
 Rigidbody:

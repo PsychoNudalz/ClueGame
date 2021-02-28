@@ -15,4 +15,10 @@ public class ShortcutBoardTileScript : BoardTileScript
         shortcutFrom = from;
         shortcutTo = to;
     }
+
+    override
+    public string ToString()
+    {
+        return $"{TileType} Tile ({shortcutFrom} ==> {shortcutTo}) located at ({GridPosition.x} : {GridPosition.y})";
+    }
 }
