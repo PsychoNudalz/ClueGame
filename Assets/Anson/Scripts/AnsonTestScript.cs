@@ -8,10 +8,20 @@ public class AnsonTestScript : MonoBehaviour
     [SerializeField] PlayerMasterController playerMasterController;
     [SerializeField] BoardManager boardManager;
     [SerializeField] Dice dice;
+    bool diceRolled = false;
 
     private void Awake()
     {
         AssignAllComponents();
+    }
+    private void FixedUpdate()
+    {
+        if (dice.GetValue() > 0 && diceRolled)
+        {
+            diceRolled = false;
+            playerMasterController.DisplayBoardMovableTiles(5);
+
+        }
     }
 
     public void RollDie(InputAction.CallbackContext callbackContext)
@@ -24,11 +34,10 @@ public class AnsonTestScript : MonoBehaviour
     public void RollDie()
     {
         //Need to be replaced with results of die
-        //dice.RollDice();
+        dice.RollDice();
         //playerMasterController.PlayerSelectionScript.MoveAmount = dice.GetValue();
         print(this + " rolled: " + playerMasterController.PlayerSelectionScript.MoveAmount);
-        playerMasterController.DisplayBoardMovableTiles(5);
-
+        diceRolled = true;
     }
 
     public void AssignAllComponents(InputAction.CallbackContext callbackContext)
