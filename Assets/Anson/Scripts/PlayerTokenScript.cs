@@ -10,6 +10,17 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] private Color characterColour;
     [SerializeField] private string characterName;
     private StartTileScript startTile;
+
+    [Header("Movement")]
+    [SerializeField] Animator animator;
+    [SerializeField] AnimationCurve movementGraph;
+    [SerializeField] float timeToMove = 2;
+    [SerializeField] float timeToDistance = .25f;
+    [SerializeField] float startMoveTime;
+    [SerializeField] bool isMove = false;
+    [SerializeField] BoardTileScript targetTile;
+
+
     [Header("Tile")]
     [SerializeField] BoardTileScript currentTile;
 
@@ -23,18 +34,21 @@ public class PlayerTokenScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isMove)
+        {
+            UpdateTokenMovement();
+        }
     }
 
     public void SetCharacter(CharacterEnum setCharacter, StartTileScript tile)
     {
-        startTile= tile;
+        startTile = tile;
         currentTile = tile;
         switch (setCharacter)
         {
@@ -70,7 +84,7 @@ public class PlayerTokenScript : MonoBehaviour
                 break;
         }
         AssignToPlayerMaster();
-        
+
         /*
          * ----To do---- 
          * -token colour from characterColour
@@ -103,5 +117,36 @@ public class PlayerTokenScript : MonoBehaviour
             }
         }
         return false;
+    }
+
+
+    public void MoveToken(BoardTileScript newTile)
+    {
+
+        targetTile = newTile;
+        isMove = true;
+        startMoveTime = Time.time;
+        timeToMove = (targetTile.GridPosition - currentTile.GridPosition).magnitude * timeToDistance;
+        animator.SetTrigger("Lift");
+    }
+
+    void UpdateTokenMovement()
+    {
+        if (Time.time > (startMoveTime + timeToMove))
+        {
+            currentTile = targetTile;
+            transform.position = currentTile.transform.position;
+            isMove = false;
+            animator.SetTrigger("Place");
+
+        }
+        else
+        {
+            float currentPoint = movementGraph.Evaluate((Time.time- startMoveTime) / timeToMove);
+            print(currentPoint);
+            transform.position = (currentPoint *(targetTile.transform.position - currentTile.transform.position))+ currentTile.transform.position;
+        }
+
+
     }
 }

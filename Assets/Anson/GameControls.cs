@@ -35,6 +35,14 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
+                    ""name"": ""MoveToken"",
+                    ""type"": ""Button"",
+                    ""id"": ""96101e2e-4a9d-4778-8e5c-b6c5b8735948"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""TestButton1"",
                     ""type"": ""Button"",
                     ""id"": ""ec3aa672-90ac-4480-bd17-ab2dfc4e8e5d"",
@@ -158,6 +166,17 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""action"": ""TestButton3"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bdaf691d-b39f-4161-9cd4-e0f59ad6fcc8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveToken"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -168,6 +187,7 @@ public class @GameControls : IInputActionCollection, IDisposable
         m_PlayerMap = asset.FindActionMap("Player Map", throwIfNotFound: true);
         m_PlayerMap_MouseMoving = m_PlayerMap.FindAction("MouseMoving", throwIfNotFound: true);
         m_PlayerMap_ControllerMoving = m_PlayerMap.FindAction("ControllerMoving", throwIfNotFound: true);
+        m_PlayerMap_MoveToken = m_PlayerMap.FindAction("MoveToken", throwIfNotFound: true);
         m_PlayerMap_TestButton1 = m_PlayerMap.FindAction("TestButton1", throwIfNotFound: true);
         m_PlayerMap_TestButton2 = m_PlayerMap.FindAction("TestButton2", throwIfNotFound: true);
         m_PlayerMap_TestButton3 = m_PlayerMap.FindAction("TestButton3", throwIfNotFound: true);
@@ -222,6 +242,7 @@ public class @GameControls : IInputActionCollection, IDisposable
     private IPlayerMapActions m_PlayerMapActionsCallbackInterface;
     private readonly InputAction m_PlayerMap_MouseMoving;
     private readonly InputAction m_PlayerMap_ControllerMoving;
+    private readonly InputAction m_PlayerMap_MoveToken;
     private readonly InputAction m_PlayerMap_TestButton1;
     private readonly InputAction m_PlayerMap_TestButton2;
     private readonly InputAction m_PlayerMap_TestButton3;
@@ -231,6 +252,7 @@ public class @GameControls : IInputActionCollection, IDisposable
         public PlayerMapActions(@GameControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MouseMoving => m_Wrapper.m_PlayerMap_MouseMoving;
         public InputAction @ControllerMoving => m_Wrapper.m_PlayerMap_ControllerMoving;
+        public InputAction @MoveToken => m_Wrapper.m_PlayerMap_MoveToken;
         public InputAction @TestButton1 => m_Wrapper.m_PlayerMap_TestButton1;
         public InputAction @TestButton2 => m_Wrapper.m_PlayerMap_TestButton2;
         public InputAction @TestButton3 => m_Wrapper.m_PlayerMap_TestButton3;
@@ -249,6 +271,9 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @ControllerMoving.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
                 @ControllerMoving.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
                 @ControllerMoving.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnControllerMoving;
+                @MoveToken.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMoveToken;
+                @MoveToken.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMoveToken;
+                @MoveToken.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnMoveToken;
                 @TestButton1.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
                 @TestButton1.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
                 @TestButton1.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton1;
@@ -268,6 +293,9 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @ControllerMoving.started += instance.OnControllerMoving;
                 @ControllerMoving.performed += instance.OnControllerMoving;
                 @ControllerMoving.canceled += instance.OnControllerMoving;
+                @MoveToken.started += instance.OnMoveToken;
+                @MoveToken.performed += instance.OnMoveToken;
+                @MoveToken.canceled += instance.OnMoveToken;
                 @TestButton1.started += instance.OnTestButton1;
                 @TestButton1.performed += instance.OnTestButton1;
                 @TestButton1.canceled += instance.OnTestButton1;
@@ -285,6 +313,7 @@ public class @GameControls : IInputActionCollection, IDisposable
     {
         void OnMouseMoving(InputAction.CallbackContext context);
         void OnControllerMoving(InputAction.CallbackContext context);
+        void OnMoveToken(InputAction.CallbackContext context);
         void OnTestButton1(InputAction.CallbackContext context);
         void OnTestButton2(InputAction.CallbackContext context);
         void OnTestButton3(InputAction.CallbackContext context);

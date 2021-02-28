@@ -168,7 +168,7 @@ public class BoardManager : MonoBehaviour
         print("Clear");
     }
 
-    bool CanMove(BoardTileScript currentTile)
+    public bool CanMove(BoardTileScript currentTile)
     {
         return movableTile.Contains(currentTile);
     }
