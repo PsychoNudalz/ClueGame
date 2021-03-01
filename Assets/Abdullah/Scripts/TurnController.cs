@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TurnController : MonoBehaviour
 {
-    List<PlayerHanderScript> currentPlayers;
-    List<PlayerHanderScript> initialisePlayers;
+    List<PlayerMasterController> currentPlayers;
+    List<PlayerMasterController> initialisePlayers;
     public int currentPlayerIndex;
+
+
 
     void Awake()
     {
@@ -14,35 +16,29 @@ public class TurnController : MonoBehaviour
         currentPlayerIndex = 0;
     }
 
-    void GetNextPlayer() 
-    { 
-    
-    }
-
-    void SetNextPlayer() 
+    PlayerMasterController GetNextPlayer() 
     {
-    
+        return currentPlayers[currentPlayerIndex + 1];
     }
 
-    void GetCurrentPlayer() 
+    void SetCurrentPlayerToNext() 
     {
-    
+        currentPlayerIndex = currentPlayerIndex + 1;
     }
 
-    void SetCurrentPlayer() 
+    PlayerMasterController GetCurrentPlayer() 
     {
-    
+        return currentPlayers[currentPlayerIndex];
     }
-
 
     void RemovePlayer() 
     {
-    
+        currentPlayers.RemoveAt(currentPlayerIndex);
     }
 
     void GetSuggestion() 
     {
-    
+        
     }
 
     void ShowCard() 
