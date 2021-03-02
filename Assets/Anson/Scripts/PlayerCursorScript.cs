@@ -9,7 +9,7 @@ public class PlayerCursorScript : MonoBehaviour
 
     public PlayerSelectionScript ConnectedPlayerSelection { get => connectedPlayerSelection; set => connectedPlayerSelection = value; }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (tagList.Contains(other.tag))
         {
@@ -19,5 +19,16 @@ public class PlayerCursorScript : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (tagList.Contains(other.tag))
+        {
+            connectedPlayerSelection.ClearCurrentTile();
+
+        }
+    }
+
+
 
 }

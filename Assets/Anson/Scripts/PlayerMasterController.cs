@@ -27,11 +27,20 @@ public class PlayerMasterController : MonoBehaviour
     {
         playerControlScript = GetComponent<PlayerControlScript>();
         playerControlScript.Cursor = cursor;
-        playerCursorScript = cursor.GetComponent<PlayerCursorScript>();
-        playerSelectionScript = GetComponent<PlayerSelectionScript>();
-        playerCursorScript.ConnectedPlayerSelection = playerSelectionScript;
+        playerControlScript.PlayerMasterController = this;
+
+
         playerTokenScript = GetComponent<PlayerTokenScript>();
+
+        playerSelectionScript = GetComponent<PlayerSelectionScript>();
+        playerSelectionScript.PlayerMasterController = this;
+        playerSelectionScript.PlayerTokenScript = playerTokenScript;
+
+        playerCursorScript = cursor.GetComponent<PlayerCursorScript>();
+        playerCursorScript.ConnectedPlayerSelection = playerSelectionScript;
+
         playerStatsScript = GetComponent<PlayerStatsScript>();
+
         boardManager = FindObjectOfType<BoardManager>();
 
     }
@@ -90,5 +99,16 @@ public class PlayerMasterController : MonoBehaviour
         }
         boardManager.ShowMovable(GetTile(),range);
 
+    }
+
+    public bool CanMove(BoardTileScript t)
+    {
+        return boardManager.CanMove(t);
+    }
+
+    public void MovePlayer()
+    {
+        print("Moving Player");
+        playerSelectionScript.MovePlayer();
     }
 }

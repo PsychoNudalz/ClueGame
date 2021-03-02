@@ -22,6 +22,14 @@
                     "interactions": ""
                 },
                 {
+                    "name": "MoveToken",
+                    "type": "Button",
+                    "id": "96101e2e-4a9d-4778-8e5c-b6c5b8735948",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "TestButton1",
                     "type": "Button",
                     "id": "ec3aa672-90ac-4480-bd17-ab2dfc4e8e5d",
@@ -143,6 +151,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "TestButton3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bdaf691d-b39f-4161-9cd4-e0f59ad6fcc8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveToken",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -346,13 +346,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372782607}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 10, y: 20, z: -7}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 12.58, y: 25, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &372782611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +617,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 85065c9e-e088-4ce0-8f95-2f48d757e5f6
     m_ActionName: Player Map/TestButton3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 96101e2e-4a9d-4778-8e5c-b6c5b8735948
+    m_ActionName: Player Map/MoveToken[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Map
@@ -702,7 +706,7 @@ GameObject:
   - component: {fileID: 601172250}
   - component: {fileID: 601172249}
   m_Layer: 0
-  m_Name: PlayerHandler
+  m_Name: PlayerController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,6 +726,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTile: {fileID: 0}
   moveAmount: 0
+  playerMasterController: {fileID: 0}
+  playerTokenScript: {fileID: 0}
 --- !u!114 &601172246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,6 +833,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 85065c9e-e088-4ce0-8f95-2f48d757e5f6
     m_ActionName: Player Map/TestButton3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 601172250}
+        m_MethodName: MovePlayerToken
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 96101e2e-4a9d-4778-8e5c-b6c5b8735948
+    m_ActionName: Player Map/MoveToken[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player Map
@@ -855,6 +876,7 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   refereshRate: 0.5
   timeNow_refereshRate: 0
+  playerMasterController: {fileID: 0}
 --- !u!1001 &640464124
 PrefabInstance:
   m_ObjectHideFlags: 0
