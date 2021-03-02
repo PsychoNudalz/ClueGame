@@ -19,7 +19,7 @@ public class AnsonTestScript : MonoBehaviour
         if (dice.GetValue() > 0 && diceRolled)
         {
             diceRolled = false;
-            playerMasterController.DisplayBoardMovableTiles(5);
+            playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
 
         }
     }
