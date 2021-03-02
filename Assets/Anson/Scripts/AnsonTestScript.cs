@@ -20,8 +20,9 @@ public class AnsonTestScript : MonoBehaviour
         {
             diceRolled = false;
             playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
-
+            dice.ResetDice();
         }
+
     }
 
     public void RollDie(InputAction.CallbackContext callbackContext)
