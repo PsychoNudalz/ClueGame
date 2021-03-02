@@ -5,8 +5,8 @@ using UnityEngine;
 public class TurnController : MonoBehaviour
 {
     PlayerMasterController addPlayer;
-    List<PlayerMasterController> currentPlayers;
-    List<PlayerMasterController> initialisePlayers;
+   [SerializeField] List<PlayerMasterController> currentPlayers;
+   [SerializeField] List<PlayerMasterController> initialisePlayers;
     public int currentPlayerIndex;
     int numberOfPlayers;
 
@@ -24,16 +24,17 @@ public class TurnController : MonoBehaviour
     }
     void InitialisePlayers() 
     {
-
+        currentPlayers = new List<PlayerMasterController>();
         initialisePlayers = new List<PlayerMasterController>(FindObjectsOfType<PlayerMasterController>());
         for (int i = 0; i < 6; i++) 
         {
             for (int j = 0; j < initialisePlayers.Count; j++)
             {
 
-                if (initialisePlayers[j].GetCharacter().Equals(i))
+                if ((int)initialisePlayers[j].GetCharacter() == i)
                 {
                     currentPlayers.Add(initialisePlayers[j]);
+                    print(initialisePlayers[j].GetCharacter().ToString());
                 }
 
             }

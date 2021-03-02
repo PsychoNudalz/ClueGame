@@ -18,7 +18,7 @@ public class RoundController : MonoBehaviour
     }
     void ShowCard() 
     {
-        player.ShowCard();
+      
     }
 
     void MakeSuggestion()
