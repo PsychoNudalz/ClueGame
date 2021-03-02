@@ -54,37 +54,38 @@ public class PlayerTokenScript : MonoBehaviour
         {
             case CharacterEnum.MissScarlett:
                 character = setCharacter;
-                characterColour = new Color(150, 0, 0);
+                characterColour = new Color(255, 0, 0);
                 characterName = "Miss Scarlett";
                 break;
             case CharacterEnum.ColMustard:
                 character = setCharacter;
-                characterColour = new Color(150, 150, 0);
+                characterColour = new Color(255, 255, 0);
                 characterName = "Col Mustard";
                 break;
             case CharacterEnum.ProfPlum:
                 character = setCharacter;
-                characterColour = new Color(150, 0, 150);
+                characterColour = new Color(255, 0, 255);
                 characterName = "Prof Plum";
                 break;
             case CharacterEnum.RevGreen:
                 character = setCharacter;
-                characterColour = new Color(0, 150, 0);
+                characterColour = new Color(0, 255, 0);
                 characterName = "Rev Green";
                 break;
             case CharacterEnum.MrsPeacock:
                 character = setCharacter;
-                characterColour = new Color(0, 100, 150);
+                characterColour = new Color(0, 150, 255);
                 characterName = "Mrs Peacock";
                 break;
             case CharacterEnum.MrsWhite:
                 character = setCharacter;
-                characterColour = new Color(150, 150, 150);
+                characterColour = new Color(255, 255, 255);
                 characterName = "Mrs White";
                 break;
         }
         AssignToPlayerMaster();
 
+        GetComponentInChildren<Renderer>().material.SetColor("_MainColour",characterColour);
         /*
          * ----To do---- 
          * -token colour from characterColour
