@@ -6,19 +6,34 @@ public class RoundController : MonoBehaviour
 {
     TurnController player;
     Dice dice;
-    PlayerControlScript move;
+    PlayerMasterController playerController;
     void RollDice() 
     {
         dice.RollDice();
     }
 
-    void MovePlayer() {
-       
+    void MovePlayer() 
+    {
+        playerController.MovePlayer();
+    }
+    void ShowCard() 
+    {
+        player.ShowCard();
     }
 
-    void MakeSuggestion() { }
+    void MakeSuggestion()
+    {
+    
+    }
 
-    void MakeAccusation() { }
+    void MakeAccusation() 
+    {
+        
+    }
 
-    void EndTurn() { }
+    void EndTurn()
+    {
+       
+        player.SetCurrentPlayerToNext();
+    }
 }
