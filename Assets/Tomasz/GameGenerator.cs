@@ -5,12 +5,12 @@ public class GameGenerator : MonoBehaviour
 {
     static Random rnd = new Random();
 
-    public List<WeaponCard> weapons;
-    public List<RoomCard> rooms;
-    public List<CharacterCard> characters;
+    private List<WeaponCard> weapons;
+    private List<RoomCard> rooms;
+    private List<CharacterCard> characters;
 
     public List<Card> answers;
-
+    public List<Card> playableCards;
 
 
 
@@ -37,11 +37,22 @@ public class GameGenerator : MonoBehaviour
 
         answers.Add(rooms[randomRoom]);
         rooms.RemoveAt(randomRoom);
+
+
+        playableCards.AddRange(weapons);
+        playableCards.AddRange(rooms);
+        playableCards.AddRange(characters);
+
+        playableCards = playableCards.OrderBy(a => System.Guid.NewGuid()).ToList();
     }
 
+    public List<Card> getAnswers() {
+        return answers;
+    }
 
-
-
+    public List<Card> getPlaybleCards() {
+        return playableCards;
+    }
 
   
 }
