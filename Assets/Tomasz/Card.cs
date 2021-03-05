@@ -1,22 +1,6 @@
 ﻿using System;
-[Serializable]
-public class Card 
+using UnityEngine;
+public class Card : MonoBehaviour
 {
-
-    public enum CardType { weapon, room, character }
-
-    public CardType cT;
-    public string n;
-
-    public Card(CardType cardType, string name)
-    {
-        cT = cardType;
-        n = name;
-    }
-    public CardType getCardType() {
-        return cT;
-    }
-    public string getName() {
-        return n;
-    } 
+    readonly Enum name;
 }
