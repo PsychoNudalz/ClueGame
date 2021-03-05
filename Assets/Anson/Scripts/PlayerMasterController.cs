@@ -43,6 +43,12 @@ public class PlayerMasterController : MonoBehaviour
 
         boardManager = FindObjectOfType<BoardManager>();
 
+
+        //test
+
+        PlayerMasterController playerMasterController = FindObjectOfType<PlayerMasterController>();
+        print((int )playerMasterController.GetCharacter());
+
     }
     void MoveWithMouse(InputAction.CallbackContext inputAction)
     {

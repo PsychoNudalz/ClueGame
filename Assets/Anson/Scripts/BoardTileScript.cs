@@ -10,6 +10,7 @@ public class BoardTileScript : MonoBehaviour
     [SerializeField] Vector2 gridPosition;
     private TileTypeEnum tileType;
     [SerializeField] BoardTileEffectHandlerScript boardTileEffectHandler;
+    [SerializeField] GameObject playerToken;
 
     public Vector2 GridPosition { get => gridPosition; set => gridPosition = value; }
     public TileTypeEnum TileType { get => tileType; set => tileType = value; }
@@ -61,6 +62,19 @@ public class BoardTileScript : MonoBehaviour
             Debug.LogError(this + " Missing boardTileEffect");
         }
     }
+
+    public virtual void SetToken(GameObject token)
+    {
+        playerToken = token;
+    }
+    /// <summary>
+    /// check if tile is empty
+    /// </summary>
+    /// <returns>return if tile is empty</returns>
+    public virtual bool IsEmpty()
+    {
+        return playerToken == null;
+    } 
 
     public void GetTileNeighbours()
     {

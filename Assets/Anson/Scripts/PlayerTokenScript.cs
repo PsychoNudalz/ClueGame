@@ -125,6 +125,8 @@ public class PlayerTokenScript : MonoBehaviour
     {
 
         targetTile = newTile;
+        currentTile.SetToken(null);
+        targetTile.SetToken(gameObject);
         isMove = true;
         startMoveTime = Time.time;
         timeToMove = (targetTile.GridPosition - currentTile.GridPosition).magnitude * timeToDistance;
@@ -144,10 +146,8 @@ public class PlayerTokenScript : MonoBehaviour
         else
         {
             float currentPoint = movementGraph.Evaluate((Time.time- startMoveTime) / timeToMove);
-            print(currentPoint);
+            //print(currentPoint);
             transform.position = (currentPoint *(targetTile.transform.position - currentTile.transform.position))+ currentTile.transform.position;
         }
-
-
     }
 }

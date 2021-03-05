@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6595434196440806380}
   - component: {fileID: 1317681396}
   - component: {fileID: 3900631050624158171}
-  m_Layer: 0
+  - component: {fileID: 5697873330893440089}
+  - component: {fileID: 3248644046308438151}
+  m_Layer: 10
   m_Name: DoorRH
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,6 +67,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testKeysActive: 1
+--- !u!65 &5697873330893440089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721297661864306370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.5, z: 0.05}
+  m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!54 &3248644046308438151
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8721297661864306370}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6206759645446866718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,15 +188,30 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4985303727796871626, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1680831895200388014, guid: df2279ca1edb5964ca1056c6230181a3,
         type: 3}
       propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1058373244159081579, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: df2279ca1edb5964ca1056c6230181a3,
         type: 3}
       propertyPath: m_Name
       value: DoorRH
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: df2279ca1edb5964ca1056c6230181a3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df2279ca1edb5964ca1056c6230181a3, type: 3}

@@ -28,6 +28,34 @@ public class DoorScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        { 
+            OpenDoor();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            CloseDoor();
+        }
+    }
+
+    private void OpenDoor()
+    {
+        isOpen = true;
+        doorAnimator.SetBool("DoorOpen", isOpen);
+    }
+
+    private void CloseDoor()
+    {
+        isOpen = false;
+        doorAnimator.SetBool("DoorOpen", isOpen);
+    }
+
     public void ToggleDoorOpenClose()
     {
         isOpen = !isOpen;
