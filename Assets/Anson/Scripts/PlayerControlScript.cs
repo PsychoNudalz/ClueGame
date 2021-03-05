@@ -19,7 +19,12 @@ public class PlayerControlScript : MonoBehaviour
     [SerializeField] float refereshRate;
     [SerializeField] float timeNow_refereshRate;
 
+    [Header("Other Player Components")]
+    [SerializeField] PlayerMasterController playerMasterController;
+
+
     public GameObject Cursor { get => cursor; set => cursor = value; }
+    public PlayerMasterController PlayerMasterController { get => playerMasterController; set => playerMasterController = value; }
 
     private void Awake()
     {
@@ -51,6 +56,15 @@ public class PlayerControlScript : MonoBehaviour
     {
         isMouse = false;
         isController = true;
+    }
+
+
+    public void MovePlayerToken(InputAction.CallbackContext inputAction)
+    {
+        if (inputAction.performed)
+        {
+            playerMasterController.MovePlayer();
+        }
     }
 
     void CastUpdateWithMouse()

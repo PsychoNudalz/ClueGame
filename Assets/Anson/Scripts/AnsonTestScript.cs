@@ -5,34 +5,62 @@ using UnityEngine.InputSystem;
 
 public class AnsonTestScript : MonoBehaviour
 {
-    [SerializeField] PlayerHanderScript playerHanderScript;
+    [SerializeField] PlayerMasterController playerMasterController;
     [SerializeField] BoardManager boardManager;
-    [SerializeField] Die die;
+    [SerializeField] Dice dice;
+    bool diceRolled = false;
+
+    private void Awake()
+    {
+        AssignAllComponents();
+    }
+    private void FixedUpdate()
+    {
+        if (dice.GetValue() > 0 && diceRolled)
+        {
+            diceRolled = false;
+            playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
+            dice.ResetDice();
+        }
+
+    }
 
     public void RollDie(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.performed)
         {
-            //Need to be replaced with results of die
-            playerHanderScript.PlayerSelectionScript.MoveAmount = Random.Range(1, 6) + Random.Range(1, 6);
-            print(this + " rolled: " + playerHanderScript.PlayerSelectionScript.MoveAmount);
+            RollDie();
         }
+    }
+    public void RollDie()
+    {
+        //Need to be replaced with results of die
+        dice.RollDice();
+        //playerMasterController.PlayerSelectionScript.MoveAmount = dice.GetValue();
+        print(this + " rolled: " + playerMasterController.PlayerSelectionScript.MoveAmount);
+        diceRolled = true;
     }
 
     public void AssignAllComponents(InputAction.CallbackContext callbackContext)
     {
-        if (playerHanderScript == null)
+        AssignAllComponents();
+    }
+
+
+    public void AssignAllComponents()
+    {
+        if (playerMasterController == null)
         {
 
-        playerHanderScript = FindObjectOfType<PlayerHanderScript>();
+            playerMasterController = FindObjectOfType<PlayerMasterController>();
         }
         if (boardManager == null)
         {
             boardManager = FindObjectOfType<BoardManager>();
         }
-        if (die == null)
+        if (dice == null)
         {
-            die = FindObjectOfType<Die>();
+            dice = FindObjectOfType<Dice>();
         }
     }
 }

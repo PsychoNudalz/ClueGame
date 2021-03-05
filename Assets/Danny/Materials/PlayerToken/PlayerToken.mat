@@ -22,4 +22,4 @@ Material:
     m_TexEnvs: []
     m_Floats: []
     m_Colors:
-    - _MainColour: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColour: {r: 0, g: 0.7303271, b: 1, a: 1}

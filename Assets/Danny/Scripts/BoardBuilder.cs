@@ -5,43 +5,35 @@ using UnityEngine;
 
 public class BoardBuilder : MonoBehaviour
 {
-    [Header("Player Colours")]
-    [SerializeField] Color missScarlettColour;
-    [SerializeField] Color profPlumColour;
-    [SerializeField] Color colMustardColour;
-    [SerializeField] Color mrsPeacockColour;
-    [SerializeField] Color revGreenColour;
-    [SerializeField] Color mrsWhiteColour;
-    [Space]
-    [Header("Tile Colour")]
-    [SerializeField] Color generalTileColour;
-    [Space]
-    [Header("Player Piece Prefab")]
-    [SerializeField] GameObject playerPiecePrefab;
-    [Header("Tile Prefabs")]
-    [SerializeField] GameObject generalTilePrefab;
-    [SerializeField] GameObject startingTilePrefab;
-    [SerializeField] GameObject roomEntryTilePrefab;
-    [SerializeField] GameObject shortcutTilePrefab;
-    [Space]
-    [Header("RoomPrefabs")]
-    [SerializeField] GameObject StudyPrefab;
-    [SerializeField] GameObject HallPrefab;
-    [SerializeField] GameObject LoungePrefab;
-    [SerializeField] GameObject LibraryPrefab;
-    [SerializeField] GameObject CentrePrefab;
-    [SerializeField] GameObject DiningRoomPrefab;
-    [SerializeField] GameObject BilliardRoomPrefab;
-    [SerializeField] GameObject ConservatoryPrefab;
-    [SerializeField] GameObject BallroomPrefab;
-    [SerializeField] GameObject KitchenPrefab;
+    private TextAsset boardCSV;
+    //Prefabs
+    //Player Token
+    private GameObject playerPiecePrefab;
+    //Board Tiles
+    private GameObject generalTilePrefab;
+    private GameObject startingTilePrefab;
+    private GameObject roomEntryTilePrefab;
+    private GameObject shortcutTilePrefab;
+    //Rooms
+    private GameObject BallroomPrefab;
+    private GameObject BilliardRoomPrefab;
+    private GameObject CentrePrefab;
+    private GameObject ConservatoryPrefab;
+    private GameObject DiningRoomPrefab;
+    private GameObject HallPrefab;
+    private GameObject KitchenPrefab;
+    private GameObject LibraryPrefab;
+    private GameObject LoungePrefab;
+    private GameObject StudyPrefab;
 
     private BoardManager boardManager;
     private string[][] boardStringArray;
     private GameObject players;
+    private GameObject startTiles;
+    private GameObject roomEntryTiles;
     private GameObject rooms;
-    private GameObject tiles;
-    private GameObject shortcuts;
+    private GameObject generalTiles;
+    private GameObject shortcutTiles;
     int boardWidth;
     int boardHeight;
 
@@ -52,17 +44,49 @@ public class BoardBuilder : MonoBehaviour
 
     private void Initialise()
     {
+        LoadResources();
         GenerateBoardArrayFromCSV();
         boardHeight = boardStringArray.Length;
         boardWidth = boardStringArray[0].Length;
         BuildBoard();
         boardManager = GetComponentInParent<BoardManager>();
-        boardManager.CreateBoardArray(tiles.GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
+        boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
+        //Transfer script arrays to board manager.
+        boardManager.SetObjectArrays(players.GetComponentsInChildren<PlayerTokenScript>(),
+                                     rooms.GetComponentsInChildren<RoomScript>(),
+                                     roomEntryTiles.GetComponentsInChildren<RoomEntryBoardTileScript>(),
+                                     shortcutTiles.GetComponentsInChildren<ShortcutBoardTileScript>(),
+                                     startTiles.GetComponentsInChildren<StartTileScript>());
+    }
+
+    private void LoadResources()
+    {
+        //Load board csv file
+        boardCSV = Resources.Load("Danny/BoardLayout") as TextAsset;
+        //Load prefabs from resources
+        //Player token
+        playerPiecePrefab = Resources.Load("Danny/Prefabs/PlayerToken/PlayerToken") as GameObject;
+        //Tiles
+        generalTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(General)BoardTile") as GameObject;
+        startingTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(Start)BoardTile") as GameObject;
+        roomEntryTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(RoomEntry)BoardTile") as GameObject;
+        shortcutTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(Shortcut)BoardTile") as GameObject;
+        //Rooms
+        BallroomPrefab = Resources.Load("Danny/Prefabs/Rooms/Ballroom") as GameObject;
+        BilliardRoomPrefab = Resources.Load("Danny/Prefabs/Rooms/BilliardRoom") as GameObject;
+        CentrePrefab = Resources.Load("Danny/Prefabs/Rooms/Centre") as GameObject;
+        ConservatoryPrefab = Resources.Load("Danny/Prefabs/Rooms/Conservatory") as GameObject;
+        DiningRoomPrefab = Resources.Load("Danny/Prefabs/Rooms/DiningRoom") as GameObject;
+        HallPrefab = Resources.Load("Danny/Prefabs/Rooms/Hall") as GameObject;
+        KitchenPrefab = Resources.Load("Danny/Prefabs/Rooms/Kitchen") as GameObject;
+        LibraryPrefab = Resources.Load("Danny/Prefabs/Rooms/Library") as GameObject;
+        LoungePrefab = Resources.Load("Danny/Prefabs/Rooms/Lounge") as GameObject;
+        StudyPrefab = Resources.Load("Danny/Prefabs/Rooms/Study") as GameObject;
     }
 
     private void GenerateBoardArrayFromCSV()
     {
-        TextAsset boardCSV = Resources.Load("BoardLayout") as TextAsset;
+        //Create string array from .csv file
         string[] boardRows = boardCSV.text.TrimEnd().Split('\n');
         List<string[]> boardList = new List<string[]>();
         for (int i = 0; i < boardRows.Length; i++)
@@ -85,26 +109,29 @@ public class BoardBuilder : MonoBehaviour
 
     private void BuildBoard()
     {
-
-        tiles = new GameObject("Tiles");
-        tiles.transform.parent = this.transform;
+        //Create gameobjects to organize board objects
         players = new GameObject("Player Tokens");
         players.transform.parent = this.transform;
         rooms = new GameObject("Rooms");
         rooms.transform.parent = this.transform;
-        shortcuts = new GameObject("Shortcuts");
-        shortcuts.transform.parent = this.transform;
+        roomEntryTiles = new GameObject("Room Entry Tiles");
+        roomEntryTiles.transform.parent = this.transform;
+        shortcutTiles = new GameObject("Shortcut Tiles");
+        shortcutTiles.transform.parent = this.transform;
+        startTiles = new GameObject("Start Tiles");
+        startTiles.transform.parent = this.transform;
+        generalTiles = new GameObject("General Tiles");
+        generalTiles.transform.parent = this.transform;
         
 
-        int x = -1;
+        // Create board from string array
+        int x;
         int z = -1;
         
-
-
         for (int row = boardStringArray.Length -1; row >= 0; row--)
         {
             GameObject rowObject = new GameObject("Row - " + (boardStringArray.Length - row - 1));
-            rowObject.transform.parent = tiles.transform;
+            rowObject.transform.parent = generalTiles.transform;
             z++;
             x = -1;
             for(int col = 0; col < boardStringArray[row].Length; col++)
@@ -114,16 +141,16 @@ public class BoardBuilder : MonoBehaviour
                 switch (square[0])
                 {
                     case "X":
-                        CreateBoardTile(x, z, rowObject).GetComponent<BoardTileScript>();
+                        CreateBoardTile(x, z, rowObject);
                         break;
                     case "S":
-                        CreateStartTile(x, z, square[1], rowObject).GetComponent<BoardTileScript>();
+                        CreateStartTile(x, z, square[1], rowObject);
                         break;
                     case "E":
-                        CreateRoomEntranceTile(x, z, square[1], square[2], rowObject).GetComponent<BoardTileScript>();
+                        CreateRoomEntranceTile(x, z, square[1], square[2], rowObject);
                         break;
                     case "SC":
-                        CreateShortcutTile(x, z, square[1], square[2]).GetComponent<BoardTileScript>();
+                        CreateShortcutTile(x, z, square[1], square[2]);
                         break;
                     case "R":
                         CreateRoom(x, z, square[1]);
@@ -132,131 +159,166 @@ public class BoardBuilder : MonoBehaviour
                         break;
                 }
             }
+
+            //Delete row if empty
+            if (rowObject.transform.childCount.Equals(0))
+            {
+                GameObject.Destroy(rowObject);
+            }
         }
     }
 
-    private GameObject CreateShortcutTile(int x, int z, string room, string rotation)
+    private void CreateShortcutTile(int x, int z, string shortcutRooms, string rotation)
     {
+        //Create shortcut tile
         int arrowRotation = int.Parse(rotation);
-        GameObject shortcutTile = GameObject.Instantiate(this.shortcutTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , shortcuts.transform);
-        shortcutTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
-        shortcutTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
-        return shortcutTile;
-        //todo set room
+        GameObject shortcutTile = GameObject.Instantiate(this.shortcutTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , shortcutTiles.transform);
+
+        //Set coordinates and tile type
+        ShortcutBoardTileScript tileScript = shortcutTile.GetComponent<ShortcutBoardTileScript>();
+        tileScript.GridPosition = new Vector2(x, z);
+        tileScript.TileType = TileTypeEnum.Shortcut;
+
+        //Set shortcut rooms
+        string[] rooms = shortcutRooms.Split('/');
+        Room shortcutFrom = RoomScript.GetRoomFromString(rooms[0]);
+        Room shortcutTo = RoomScript.GetRoomFromString(rooms[1]);
+        tileScript.SetShortcutRooms(shortcutFrom, shortcutTo);
+
+        //Name tile object
+        shortcutTile.name = $"Shortcut {rooms[0]} ==> {rooms[1]} ( {x} : {z} )";
     }
 
-    private GameObject CreateRoomEntranceTile(int x, int z, string Room, string rotation, GameObject parent)
+    private void CreateRoomEntranceTile(int x, int z, string room, string rotation, GameObject parent)
     {
+        //Create room entry tile 
         int arrowRotation = int.Parse(rotation);
-        GameObject roomEntryTile = GameObject.Instantiate(roomEntryTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , parent.transform);
-        roomEntryTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
-        roomEntryTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
-        return roomEntryTile;
-        //todo set room
+        GameObject roomEntryTile = GameObject.Instantiate(roomEntryTilePrefab, new Vector3(x, 0, z), Quaternion.Euler(0,arrowRotation,0) , roomEntryTiles.transform);
+        RoomEntryBoardTileScript tileScript = roomEntryTile.GetComponent<RoomEntryBoardTileScript>();
+
+        //Set room, tile type and vector
+        tileScript.GridPosition = new Vector2(x, z);
+        tileScript.Room = RoomScript.GetRoomFromString(room);
+        tileScript.TileType = TileTypeEnum.RoomEntry;
+
+        //Name tile object
+        roomEntryTile.name = $"Room Entry Tile - {room} - ( {x} : {z} )";
     }
 
-    private GameObject CreateStartTile(int x, int z, string player, GameObject parent)
+    private void CreateStartTile(int x, int z, string characterName, GameObject parent)
     {
-        
-        Color playerColour;
-        string name = "";
+        //Get camera and character enum from string
         CameraTarget playerCameraTarget;
-        switch (player)
+        CharacterEnum character;
+        switch (characterName)
         {
-            case "missScarlett":
-                playerColour = missScarlettColour;
-                name = "Miss\nScarlett";
+            case "Miss Scarlett":
                 playerCameraTarget = CameraTarget.MissScarlett;
+                character = CharacterEnum.MissScarlett;
                 break;
-            case "profPlum":
-                playerColour = profPlumColour;
-                name = "Prof\nPlum";
+            case "Prof Plum":
                 playerCameraTarget = CameraTarget.ProfPlum;
+                character = CharacterEnum.ProfPlum;
                 break;
-            case "colMustard":
-                playerColour = colMustardColour;
-                name = "Col\nMustard";
+            case "Col Mustard":
                 playerCameraTarget = CameraTarget.ColMustard;
+                character = CharacterEnum.ColMustard;
                 break;
-            case "mrsPeacock":
-                playerColour = mrsPeacockColour;
-                name = "Mrs\nPeacock";
+            case "Mrs Peacock":
                 playerCameraTarget = CameraTarget.MrsPeacock;
+                character = CharacterEnum.MrsPeacock;
                 break;
-            case "revGreen":
-                playerColour = revGreenColour;
-                name = "Rev\nGreen";
+            case "Rev Green":
                 playerCameraTarget = CameraTarget.RevGreen;
+                character = CharacterEnum.RevGreen;
                 break;
-            case "mrsWhite":
-                playerColour = mrsWhiteColour;
-                name = "Mrs\nWhite";
+            case "Mrs White":
                 playerCameraTarget = CameraTarget.MrsWhite;
+                character = CharacterEnum.MrsWhite;
                 break;
             default:
-                playerColour = Color.white;
-                name = "";
+                character = CharacterEnum.Initial;
                 playerCameraTarget = CameraTarget.Initial;
                 break;
         }
-        GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, parent.transform);
-        startingTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
-        startingTile.GetComponentInChildren<StartSpace>().SetTileText(name);
-        startingTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
-        GameObject playerPiece = GameObject.Instantiate(playerPiecePrefab, new Vector3(x, 0, z), transform.rotation, players.transform);
-        playerPiece.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", playerColour);
-        playerPiece.GetComponentInChildren<CloseUpPointScript>().SetCloseUpPointName(playerCameraTarget);
-        return startingTile;
+        
+        //Create start tile and player token
+        GameObject startingTile = GameObject.Instantiate(startingTilePrefab, new Vector3(x, 0, z), transform.rotation, startTiles.transform);
+        GameObject playerToken = GameObject.Instantiate(playerPiecePrefab, new Vector3(x, 0, z), transform.rotation, players.transform);
+        //Name start tile and player token
+        startingTile.name = $"{characterName} - Start Tile ( {x} : {z} )";
+        playerToken.name = $"{characterName} - Player Token";
+        
+        //Set tile character, type and coordinates
+        StartTileScript tilescript = startingTile.GetComponent<StartTileScript>();
+        tilescript.SetCharacter(character, characterName);
+        tilescript.GridPosition = new Vector2(x, z);
+        tilescript.TileType = TileTypeEnum.Start;
+        
+        //Set player token character, start tile and close up point
+        playerToken.GetComponentInChildren<PlayerTokenScript>().SetCharacter(character,tilescript);
+        playerToken.GetComponentInChildren<CloseUpPointScript>().SetCloseUpPointName(playerCameraTarget);
+        
     }
 
-    private GameObject CreateBoardTile(int x, int z, GameObject parent)
+    private void CreateBoardTile(int x, int z, GameObject parent)
     {
+        //Create board tile, set name, type and coordinates
         GameObject boardTile = GameObject.Instantiate(generalTilePrefab, new Vector3(x, 0, z), transform.rotation, parent.transform);
-        boardTile.GetComponentInChildren<Renderer>().material.SetColor("_MainColour", generalTileColour);
-        boardTile.GetComponent<BoardTileScript>().GridPosition = new Vector2(x, z);
-        return boardTile;
+        boardTile.name = $"Board Tile - ( {x} : {z} )";
+        BoardTileScript tileScript = boardTile.GetComponent<BoardTileScript>();
+        tileScript.GridPosition = new Vector2(x, z);
+        tileScript.TileType = TileTypeEnum.General;
     }
     
-    private GameObject CreateRoom(int x, int z, string roomName)
+    private void CreateRoom(int x, int z, string roomName)
     {
-        GameObject room = null;
+        //Create room from roomName string and set enum
+        GameObject room;
         switch (roomName)
         {
             case "Study":
-                room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Study;
                 break;
             case "Hall":
-                room = GameObject.Instantiate(HallPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(HallPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Hall;
                 break;
             case "Lounge":
-                room = GameObject.Instantiate(LoungePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(LoungePrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Lounge;
                 break;
             case "Library":
-                room = GameObject.Instantiate(LibraryPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(LibraryPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Library;
                 break;
             case "Centre":
-                room = GameObject.Instantiate(CentrePrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(CentrePrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Centre;
                 break;
-            case "Dining":
-                room = GameObject.Instantiate(DiningRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+            case "Dining Room":
+                room = GameObject.Instantiate(DiningRoomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.DiningRoom;
                 break;
-            case "Billiard":
-                room = GameObject.Instantiate(BilliardRoomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+            case "Billiard Room":
+                room = GameObject.Instantiate(BilliardRoomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.BilliardRoom;
                 break;
             case "Conservatory":
-                room = GameObject.Instantiate(ConservatoryPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(ConservatoryPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Conservatory;
                 break;
             case "Ballroom":
-                room = GameObject.Instantiate(BallroomPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(BallroomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Ballroom;
                 break;
             case "Kitchen":
-                room = GameObject.Instantiate(KitchenPrefab, new Vector3(x, 0, z), transform.rotation, transform);
+                room = GameObject.Instantiate(KitchenPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
+                room.GetComponent<RoomScript>().Room = Room.Kitchen;
                 break;
             default:
                 break;
         }
-        room.transform.parent = rooms.transform;
-        return room;
     }
-
 }
