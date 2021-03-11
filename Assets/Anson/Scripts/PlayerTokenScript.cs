@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,17 +20,21 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] float startMoveTime;
     [SerializeField] bool isMove = false;
     [SerializeField] BoardTileScript targetTile;
-
-
+    
     [Header("Tile")]
     [SerializeField] BoardTileScript currentTile;
 
+    private RoomEntryPoint currentEntryPoint;
+    private bool isInRoom;
+    private RoomEntryBoardTileScript currentExitPoint;
+    private BoardTileScript roomExitTileTarget;
 
     //Getters and Setters
     public CharacterEnum Character { get => character; }
     public Color CharacterColour { get => characterColour; set => characterColour = value; }
     public string CharacterName { get => characterName; set => characterName = value; }
     public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
+    public bool IsInRoom { get => isInRoom; set => isInRoom = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +48,39 @@ public class PlayerTokenScript : MonoBehaviour
         if (isMove)
         {
             UpdateTokenMovement();
+        }
+        else
+        {
+
+            if (currentEntryPoint != null)
+            {
+                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) <= 0.3f)
+                {
+                    currentEntryPoint.RoomScript.AddPlayer(this);
+                    currentEntryPoint = null;
+                    currentTile.GetComponent<BoardTileScript>().PlayerToken = null;
+                    currentTile = null;
+                }
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, currentEntryPoint.transform.position, 0.75f * Time.deltaTime);
+                }
+            }
+            if (currentExitPoint != null)
+            {
+                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) <= 0.3f)
+                {
+
+                    currentTile = currentExitPoint;
+                    currentExitPoint = null;
+                    MoveToken(roomExitTileTarget);
+                    roomExitTileTarget = null;
+                }
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, currentExitPoint.transform.position, 0.75f * Time.deltaTime);
+                }
+            }
         }
     }
 
@@ -93,6 +131,8 @@ public class PlayerTokenScript : MonoBehaviour
          */
     }
 
+    
+
     public Color GetCharacterColour()
     {
         return characterColour;
@@ -141,7 +181,7 @@ public class PlayerTokenScript : MonoBehaviour
             transform.position = currentTile.transform.position;
             isMove = false;
             animator.SetTrigger("Place");
-
+            isInRoom = false;
         }
         else
         {
@@ -149,5 +189,16 @@ public class PlayerTokenScript : MonoBehaviour
             //print(currentPoint);
             transform.position = (currentPoint *(targetTile.transform.position - currentTile.transform.position))+ currentTile.transform.position;
         }
+    }
+
+    public void EnterRoom(RoomEntryPoint entryPoint)
+    {
+        currentEntryPoint = entryPoint;
+    }
+
+    internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
+    {
+        roomExitTileTarget = targetTile;
+        currentExitPoint = roomEntryBoardTileScript;
     }
 }

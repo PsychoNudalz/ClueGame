@@ -14,6 +14,7 @@ public class BoardTileScript : MonoBehaviour
 
     public Vector2 GridPosition { get => gridPosition; set => gridPosition = value; }
     public TileTypeEnum TileType { get => tileType; set => tileType = value; }
+    public GameObject PlayerToken { get => playerToken; set => playerToken = value; }
 
     // Start is called before the first frame update
     void Start()
