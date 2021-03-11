@@ -27,7 +27,7 @@ public class DoorScript : MonoBehaviour
             }
         }
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -43,14 +43,14 @@ public class DoorScript : MonoBehaviour
             CloseDoor();
         }
     }
-
-    private void OpenDoor()
+    */
+    public void OpenDoor()
     {
         isOpen = true;
         doorAnimator.SetBool("DoorOpen", isOpen);
     }
 
-    private void CloseDoor()
+    public void CloseDoor()
     {
         isOpen = false;
         doorAnimator.SetBool("DoorOpen", isOpen);

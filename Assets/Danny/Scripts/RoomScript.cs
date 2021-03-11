@@ -99,7 +99,7 @@ public class RoomScript : MonoBehaviour
         PlayerTokenScript playerToRemove = null;
         foreach(RoomPlayerSlot slot in playerSlots)
         {
-            if (slot.GetCharacterInSlot().Equals(player))
+            if (slot.GetCharacterInSlot() != null && slot.GetCharacterInSlot().Equals(player))
             {
                 playerToRemove = slot.RemovePlayerFromSlot();
                 break;
@@ -109,7 +109,7 @@ public class RoomScript : MonoBehaviour
         if(playerToRemove != null)
         {
             RoomEntryBoardTileScript exitPoint =  FindClosestEntryTile(targetTile);
-            exitPoint.exitRoom(playerToRemove, targetTile);
+            StartCoroutine(exitPoint.ExitRoom(playerToRemove, targetTile));
         }
         else
         {

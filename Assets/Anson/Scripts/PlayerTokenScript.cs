@@ -54,7 +54,7 @@ public class PlayerTokenScript : MonoBehaviour
 
             if (currentEntryPoint != null)
             {
-                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) <= 0.3f)
+                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) <= 0.01f)
                 {
                     currentEntryPoint.RoomScript.AddPlayer(this);
                     currentEntryPoint = null;
@@ -63,12 +63,12 @@ public class PlayerTokenScript : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = Vector3.Lerp(transform.position, currentEntryPoint.transform.position, 0.75f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, currentEntryPoint.transform.position, 0.99f * Time.deltaTime);
                 }
             }
             if (currentExitPoint != null)
             {
-                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) <= 0.3f)
+                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) <= 0.01f)
                 {
 
                     currentTile = currentExitPoint;
@@ -78,7 +78,7 @@ public class PlayerTokenScript : MonoBehaviour
                 }
                 else
                 {
-                    transform.position = Vector3.Lerp(transform.position, currentExitPoint.transform.position, 0.75f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, currentExitPoint.transform.position, 0.99f * Time.deltaTime);
                 }
             }
         }
@@ -88,6 +88,11 @@ public class PlayerTokenScript : MonoBehaviour
     {
         startTile = tile;
         currentTile = tile;
+        SetCharacter(setCharacter);
+    }
+
+    public void SetCharacter(CharacterEnum setCharacter)
+    {
         switch (setCharacter)
         {
             case CharacterEnum.MissScarlett:
@@ -123,15 +128,9 @@ public class PlayerTokenScript : MonoBehaviour
         }
         AssignToPlayerMaster();
 
-        GetComponentInChildren<Renderer>().material.SetColor("_MainColour",characterColour);
-        /*
-         * ----To do---- 
-         * -token colour from characterColour
-         * -startTile.SetTileColour(CharacterColour);
-         */
+        GetComponentInChildren<Renderer>().material.SetColor("_MainColour", characterColour);
+        
     }
-
-    
 
     public Color GetCharacterColour()
     {

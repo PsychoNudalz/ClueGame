@@ -8,12 +8,37 @@ public class RoomEntryBoardTileScript : BoardTileScript
     [SerializeField] private Room room;
     private RoomEntryPoint entryPoint;
     private RoomScript roomScript;
+    DoorScript door;
 
     public Room Room { get => room; set => room = value; }
     public RoomScript RoomScript { get => roomScript; set => roomScript = value; }
     public RoomEntryPoint EntryPoint { get => entryPoint; set => entryPoint = value; }
 
     private void Start()
+    {
+        GetRoomScript();
+        GetDoor();
+        GetEntryPoint();
+        entryPoint.RoomScript = roomScript;
+    }
+
+    private void GetDoor()
+    {
+        DoorScript closest = null;
+        float minDist = Mathf.Infinity;
+        foreach (DoorScript door in GameObject.FindObjectsOfType<DoorScript>())
+        {
+            float dist = Vector3.Distance(door.transform.position, transform.position);
+            if (dist < minDist)
+            {
+                closest = door;
+                minDist = dist;
+            }
+        }
+        door = closest;
+    }
+
+    private void GetRoomScript()
     {
         foreach (RoomScript tempRoomScript in GameObject.FindObjectsOfType<RoomScript>())
         {
@@ -23,12 +48,9 @@ public class RoomEntryBoardTileScript : BoardTileScript
                 break;
             }
         }
-
-        entryPoint = GetEntryPoint();
-        entryPoint.RoomScript = roomScript;
     }
 
-    public RoomEntryPoint GetEntryPoint()
+    public void GetEntryPoint()
     {
         RoomEntryPoint closest = null;
         float minDist = Mathf.Infinity;
@@ -41,7 +63,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
                 minDist = dist;
             }
         }
-        return closest;
+        entryPoint = closest;
     }
 
     private void OnTriggerStay(Collider other)
@@ -51,11 +73,20 @@ public class RoomEntryBoardTileScript : BoardTileScript
             PlayerTokenScript player = other.GetComponent<PlayerTokenScript>();
             if (!player.IsInRoom)
             {
-                //print("Entering " + room);
-                player.CurrentTile = this;
-                player.EnterRoom(entryPoint);
+                StartCoroutine(EnterRoom(player));
             }
         }
+    }
+
+    IEnumerator EnterRoom(PlayerTokenScript player)
+    {
+        door.OpenDoor();
+        yield return new WaitForSeconds(0.8f);
+        player.CurrentTile = this;
+        player.EnterRoom(entryPoint);
+        yield return new WaitForSeconds(2f);
+        door.CloseDoor();
+
     }
 
     override
@@ -64,10 +95,20 @@ public class RoomEntryBoardTileScript : BoardTileScript
         return $"{TileType} Tile ({room}) located at ({GridPosition.x} : {GridPosition.y})";
     }
 
-    internal void exitRoom(PlayerTokenScript playerToRemove, BoardTileScript targetTile)
+    internal void exitRoom()
     {
-        print(playerToRemove.Character + " exiting via " + this.transform);
+        
+    }
+
+    public IEnumerator ExitRoom(PlayerTokenScript playerToRemove, BoardTileScript targetTile)
+    {
+        //print(playerToRemove.Character + " exiting via " + this.transform);
         playerToRemove.transform.position = entryPoint.transform.position;
+        door.OpenDoor();
+        yield return new WaitForSeconds(1f);
         playerToRemove.ExitRoom(this, targetTile);
+        yield return new WaitForSeconds(1.5f);
+        door.CloseDoor();
+
     }
 }
