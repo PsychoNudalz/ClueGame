@@ -217,18 +217,30 @@ public class PlayerTokenScript : MonoBehaviour
     {
         if (CanTakeShortcut())
         {
-            currentTile = currentRoom.ShortcutTile;
-            transform.position = currentTile.transform.position;
+            
             foreach(ShortcutBoardTileScript tile in boardManager.Shortcuts)
             {
-                if (tile.ShortcutFrom.Equals(currentRoom.Room)){
-                    MoveToken(tile);
-                    return true;
+                if (tile.ShortcutTo.Equals(currentRoom.Room)){
+                    StartCoroutine(ShortcutMovement(tile));
                 }
             }
         }
         return false;
     }
 
-    
+    IEnumerator ShortcutMovement(ShortcutBoardTileScript shortcutEnd)
+    {
+        //currentTile = currentRoom.ShortcutTile;
+        transform.position = currentRoom.ShortcutTile.transform.position;
+        animator.SetTrigger("StartShortcut");
+        
+        yield return new WaitForSeconds(2f);
+        currentRoom = null;
+        transform.position = shortcutEnd.transform.position;
+        animator.SetTrigger("EndShortcut");
+        yield return new WaitForSeconds(1.2f);
+        currentTile = shortcutEnd;
+        ShortcutBoardTileScript currentShortcut = currentTile.GetComponent<ShortcutBoardTileScript>();
+        currentShortcut.RoomScript.AddPlayer(this);
+    }
 }

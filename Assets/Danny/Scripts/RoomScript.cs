@@ -106,7 +106,7 @@ public class RoomScript : MonoBehaviour
                 playerTokenScript.transform.position = slot.transform.position;
                 slot.AddPlayerToSlot(playerTokenScript);
                 playerTokenScript.CurrentRoom = this;
-                print(playerTokenScript.Character + " added in " + slot.transform.ToString() + " in the " + room);
+                //print(playerTokenScript.Character + " added in " + slot.transform.ToString() + " in the " + room);
                 break;
             }
         }
