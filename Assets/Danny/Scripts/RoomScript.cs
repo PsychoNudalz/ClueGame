@@ -22,11 +22,13 @@ public class RoomScript : MonoBehaviour
     [SerializeField] Room room;
     private RoomEntryBoardTileScript[] entryTiles;
     private RoomPlayerSlot[] playerSlots;
+    private RoomWeaponSlot[] weaponSlots;
     private ShortcutBoardTileScript shortcutTile;
 
     public Room Room { get => room; set => room = value; }
     public RoomPlayerSlot[] PlayerSlots { get => playerSlots;}
     public ShortcutBoardTileScript ShortcutTile { get => shortcutTile;}
+    public RoomWeaponSlot[] WeaponSlots { get => weaponSlots;}
 
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class RoomScript : MonoBehaviour
     {
         GetEntryTiles();
         playerSlots = GetComponentsInChildren<RoomPlayerSlot>();
+        weaponSlots = GetComponentsInChildren<RoomWeaponSlot>();
         GetShortcut();
 
     }
@@ -132,6 +135,41 @@ public class RoomScript : MonoBehaviour
         else
         {
             Debug.LogError(player.Character + " not found in " + Room);
+        }
+    }
+
+    internal void AddWeapon(WeaponTokenScript weaponTokenScript)
+    {
+        if(weaponTokenScript.CurrentRoom != null)
+        {
+            weaponTokenScript.CurrentRoom.RemoveWeaponFromRoom(weaponTokenScript);
+            weaponTokenScript.CurrentRoom = null;
+        }
+        foreach (RoomWeaponSlot slot in weaponSlots)
+        {
+            if (!slot.SlotOccupied())
+            {
+                
+                weaponTokenScript.transform.position = slot.transform.position;
+                slot.AddWeaponToSlot(weaponTokenScript);
+                weaponTokenScript.CurrentRoom = this;
+                print(weaponTokenScript.WeaponType + " added in " + slot.transform.ToString() + " in the " + room);
+                break;
+            }
+        }
+    }
+
+    internal void RemoveWeaponFromRoom(WeaponTokenScript weapon)
+    {
+        WeaponTokenScript weaponToRemove = null;
+        foreach (RoomWeaponSlot slot in weaponSlots)
+        {
+            if (slot.GetWeaponInSlot() != null && slot.GetWeaponInSlot().Equals(weapon))
+            {
+                weaponToRemove = slot.RemoveWeaponFromSlot();
+                break;
+            }
+
         }
     }
 

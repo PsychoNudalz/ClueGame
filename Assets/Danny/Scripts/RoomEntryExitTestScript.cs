@@ -94,7 +94,7 @@ public class RoomEntryExitTestScript : MonoBehaviour
 
     private void SetPlayersInRoomText()
     {
-        string text = "";
+        string text = "Characters in room\n";
         for(int i = 0; i < room.PlayerSlots.Length; i++)
         {
             PlayerTokenScript player = room.PlayerSlots[i].GetCharacterInSlot();
