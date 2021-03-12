@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Room {
+    None,
     Ballroom,
     BilliardRoom,
     Centre,
@@ -19,16 +20,33 @@ public enum Room {
 public class RoomScript : MonoBehaviour
 {
     [SerializeField] Room room;
+    private RoomEntryBoardTileScript[] entryTiles;
+    private RoomPlayerSlot[] playerSlots;
+    private ShortcutBoardTileScript shortcutTile;
 
     public Room Room { get => room; set => room = value; }
-    private RoomEntryBoardTileScript[] entryTiles;
-    public RoomPlayerSlot[] playerSlots;
+    public RoomPlayerSlot[] PlayerSlots { get => playerSlots;}
+    public ShortcutBoardTileScript ShortcutTile { get => shortcutTile;}
+
 
     // Start is called before the first frame update
     void Start()
     {
         GetEntryTiles();
         playerSlots = GetComponentsInChildren<RoomPlayerSlot>();
+        GetShortcut();
+
+    }
+
+    private void GetShortcut()
+    {
+        foreach (ShortcutBoardTileScript shortcutTile in GameObject.FindObjectsOfType<ShortcutBoardTileScript>())
+        {
+            if (shortcutTile.ShortcutFrom.Equals(room))
+            {
+                this.shortcutTile = shortcutTile;
+            }
+        }
     }
 
     private void GetEntryTiles()
@@ -87,7 +105,7 @@ public class RoomScript : MonoBehaviour
             {
                 playerTokenScript.transform.position = slot.transform.position;
                 slot.AddPlayerToSlot(playerTokenScript);
-                playerTokenScript.IsInRoom = true;
+                playerTokenScript.CurrentRoom = this;
                 print(playerTokenScript.Character + " added in " + slot.transform.ToString() + " in the " + room);
                 break;
             }
@@ -131,5 +149,10 @@ public class RoomScript : MonoBehaviour
             }
         }
         return closest;
+    }
+
+    public bool HasShortcut()
+    {
+        return (shortcutTile != null);
     }
 }

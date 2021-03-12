@@ -44,60 +44,60 @@ public class RoomEntryExitTestScript : MonoBehaviour
     {
         foreach(Button button in missScarlettEntry)
         {
-            button.interactable = !players[0].IsInRoom;
+            button.interactable = !players[0].IsInRoom();
         }
         foreach (Button button in missScarlettExit)
         {
-            button.interactable = players[0].IsInRoom;
+            button.interactable = players[0].IsInRoom();
         }
         foreach (Button button in profPlumEntry)
         {
-            button.interactable = !players[1].IsInRoom;
+            button.interactable = !players[1].IsInRoom();
         }
         foreach (Button button in profPlumExit)
         {
-            button.interactable = players[1].IsInRoom;
+            button.interactable = players[1].IsInRoom();
         }
         foreach (Button button in colMustardEntry)
         {
-            button.interactable = !players[2].IsInRoom;
+            button.interactable = !players[2].IsInRoom();
         }
         foreach (Button button in colMustardExit)
         {
-            button.interactable = players[2].IsInRoom;
+            button.interactable = players[2].IsInRoom();
         }
         foreach (Button button in mrsPeacockEntry)
         {
-            button.interactable = !players[3].IsInRoom;
+            button.interactable = !players[3].IsInRoom();
         }
         foreach (Button button in mrsPeacockExit)
         {
-            button.interactable = players[3].IsInRoom;
+            button.interactable = players[3].IsInRoom();
         }
         foreach (Button button in revGreenEntry)
         {
-            button.interactable = !players[4].IsInRoom;
+            button.interactable = !players[4].IsInRoom();
         }
         foreach (Button button in revGreenExit)
         {
-            button.interactable = players[4].IsInRoom;
+            button.interactable = players[4].IsInRoom();
         }
         foreach (Button button in mrsWhiteEntry)
         {
-            button.interactable = !players[5].IsInRoom;
+            button.interactable = !players[5].IsInRoom();
         }
         foreach (Button button in mrsWhiteExit)
         {
-            button.interactable = players[5].IsInRoom;
+            button.interactable = players[5].IsInRoom();
         }
     }
 
     private void SetPlayersInRoomText()
     {
         string text = "";
-        for(int i = 0; i < room.playerSlots.Length; i++)
+        for(int i = 0; i < room.PlayerSlots.Length; i++)
         {
-            PlayerTokenScript player = room.playerSlots[i].GetCharacterInSlot();
+            PlayerTokenScript player = room.PlayerSlots[i].GetCharacterInSlot();
 
             if(player != null)
             {

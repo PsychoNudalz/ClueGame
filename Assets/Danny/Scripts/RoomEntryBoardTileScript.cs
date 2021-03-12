@@ -71,7 +71,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
         if(other.gameObject.tag.Equals("Player") && other.transform.position == transform.position)
         {
             PlayerTokenScript player = other.GetComponent<PlayerTokenScript>();
-            if (!player.IsInRoom)
+            if (!player.IsInRoom())
             {
                 StartCoroutine(EnterRoom(player));
             }

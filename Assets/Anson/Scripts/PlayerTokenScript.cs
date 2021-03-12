@@ -25,21 +25,23 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] BoardTileScript currentTile;
 
     private RoomEntryPoint currentEntryPoint;
-    private bool isInRoom;
+    private RoomScript currentRoom;
     private RoomEntryBoardTileScript currentExitPoint;
     private BoardTileScript roomExitTileTarget;
+    private BoardManager boardManager;
 
     //Getters and Setters
     public CharacterEnum Character { get => character; }
     public Color CharacterColour { get => characterColour; set => characterColour = value; }
     public string CharacterName { get => characterName; set => characterName = value; }
     public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
-    public bool IsInRoom { get => isInRoom; set => isInRoom = value; }
+    public RoomScript CurrentRoom { get => currentRoom; set => currentRoom = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        boardManager = FindObjectOfType<BoardManager>();
     }
 
     // Update is called once per frame
@@ -82,6 +84,11 @@ public class PlayerTokenScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    public bool IsInRoom()
+    {
+        return currentRoom != null;
     }
 
     public void SetCharacter(CharacterEnum setCharacter, StartTileScript tile)
@@ -180,7 +187,7 @@ public class PlayerTokenScript : MonoBehaviour
             transform.position = currentTile.transform.position;
             isMove = false;
             animator.SetTrigger("Place");
-            isInRoom = false;
+            currentRoom = null;
         }
         else
         {
@@ -200,4 +207,28 @@ public class PlayerTokenScript : MonoBehaviour
         roomExitTileTarget = targetTile;
         currentExitPoint = roomEntryBoardTileScript;
     }
+
+    public bool CanTakeShortcut()
+    {
+        return (currentRoom != null && currentRoom.HasShortcut());
+    }
+
+    public bool TakeShortcut()
+    {
+        if (CanTakeShortcut())
+        {
+            currentTile = currentRoom.ShortcutTile;
+            transform.position = currentTile.transform.position;
+            foreach(ShortcutBoardTileScript tile in boardManager.Shortcuts)
+            {
+                if (tile.ShortcutFrom.Equals(currentRoom.Room)){
+                    MoveToken(tile);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    
 }
