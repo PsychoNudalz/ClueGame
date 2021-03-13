@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BoardBuilder : MonoBehaviour
 {
@@ -25,6 +26,14 @@ public class BoardBuilder : MonoBehaviour
     private GameObject LibraryPrefab;
     private GameObject LoungePrefab;
     private GameObject StudyPrefab;
+    //Weapon Tokens
+    private GameObject daggerPrefab;
+    private GameObject candleStickPrefab;
+    private GameObject revolverPrefab;
+    private GameObject ropePrefab;
+    private GameObject leadPipePrefab;
+    private GameObject spannerPrefab;
+
 
     private BoardManager boardManager;
     private string[][] boardStringArray;
@@ -34,6 +43,7 @@ public class BoardBuilder : MonoBehaviour
     private GameObject rooms;
     private GameObject generalTiles;
     private GameObject shortcutTiles;
+    private GameObject weaponTokens;
     int boardWidth;
     int boardHeight;
 
@@ -42,6 +52,10 @@ public class BoardBuilder : MonoBehaviour
         Initialise();
     }
 
+    private void Start()
+    {
+        
+    }
     private void Initialise()
     {
         LoadResources();
@@ -51,12 +65,15 @@ public class BoardBuilder : MonoBehaviour
         BuildBoard();
         boardManager = GetComponentInParent<BoardManager>();
         boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
+        CreateWeapons();
         //Transfer script arrays to board manager.
         boardManager.SetObjectArrays(players.GetComponentsInChildren<PlayerTokenScript>(),
                                      rooms.GetComponentsInChildren<RoomScript>(),
                                      roomEntryTiles.GetComponentsInChildren<RoomEntryBoardTileScript>(),
                                      shortcutTiles.GetComponentsInChildren<ShortcutBoardTileScript>(),
-                                     startTiles.GetComponentsInChildren<StartTileScript>());
+                                     startTiles.GetComponentsInChildren<StartTileScript>(),
+                                     weaponTokens.GetComponentsInChildren<WeaponTokenScript>());
+        boardManager.PlaceWeapons();
     }
 
     private void LoadResources()
@@ -82,6 +99,20 @@ public class BoardBuilder : MonoBehaviour
         LibraryPrefab = Resources.Load("Danny/Prefabs/Rooms/Library") as GameObject;
         LoungePrefab = Resources.Load("Danny/Prefabs/Rooms/Lounge") as GameObject;
         StudyPrefab = Resources.Load("Danny/Prefabs/Rooms/Study") as GameObject;
+
+        
+    }
+
+    private void CreateWeapons()
+    {
+        foreach (WeaponEnum weapon in Enum.GetValues(typeof(WeaponEnum))){
+            
+            GameObject prefab = Resources.Load("Danny/Prefabs/WeaponTokens/" + weapon.ToString()) as GameObject;
+            GameObject weaponToken = GameObject.Instantiate(prefab);
+            weaponToken.transform.parent = weaponTokens.transform;
+            weaponToken.name = String.Format("Weapon Token ({0})", weapon.ToString());
+
+        }
     }
 
     private void GenerateBoardArrayFromCSV()
@@ -122,6 +153,8 @@ public class BoardBuilder : MonoBehaviour
         startTiles.transform.parent = this.transform;
         generalTiles = new GameObject("General Tiles");
         generalTiles.transform.parent = this.transform;
+        weaponTokens = new GameObject("WeaponTokens");
+        weaponTokens.transform.parent = this.transform;
         
 
         // Create board from string array
@@ -166,6 +199,7 @@ public class BoardBuilder : MonoBehaviour
                 GameObject.Destroy(rowObject);
             }
         }
+        
     }
 
     private void CreateShortcutTile(int x, int z, string shortcutRooms, string rotation)

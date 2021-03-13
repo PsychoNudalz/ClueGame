@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class BoardManager : MonoBehaviour
     private StartTileScript[] startTiles;
     private ShortcutBoardTileScript[] shortcuts;
     private RoomEntryBoardTileScript[] roomEntries;
+    private WeaponTokenScript[] weaponTokens;
 
     [Header("Displaying Moveable Tiles")]
     [SerializeField] List<BoardTileScript> movableTile;
@@ -20,6 +22,7 @@ public class BoardManager : MonoBehaviour
     public StartTileScript[] StartTiles { get => startTiles; }
     public ShortcutBoardTileScript[] Shortcuts { get => shortcuts; }
     public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
+    public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
 
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
@@ -90,6 +93,29 @@ public class BoardManager : MonoBehaviour
         else
         {
             return null;
+        }
+    }
+
+    internal void PlaceWeapons()
+    {
+        StartCoroutine(PlaceWeaponsDelay());
+    }
+
+    IEnumerator PlaceWeaponsDelay()
+    {
+        yield return new WaitForSeconds(0.01f);
+        //print("Placing Weapons");
+        foreach(WeaponTokenScript weapon in weaponTokens)
+        {
+            while(weapon.CurrentRoom == null)
+            {
+                int rand = Random.Range(0, rooms.Length);
+                RoomScript roomToTry = rooms[rand];
+                if(roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
+                {
+                        roomToTry.AddWeapon(weapon);
+                }
+            }
         }
     }
 
@@ -173,12 +199,13 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
-    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles)
+    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles, WeaponTokenScript[] weaponTokens)
     {
         this.players = players;
         this.rooms = rooms;
         this.roomEntries = roomEntries;
         this.shortcuts = shortcuts;
         this.startTiles = startTiles;
+        this.weaponTokens = weaponTokens;
     }
 }
