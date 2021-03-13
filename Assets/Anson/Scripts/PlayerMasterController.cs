@@ -10,7 +10,6 @@ public class PlayerMasterController : MonoBehaviour
 
     [Space]
     [Header("Player Components")]
-    [SerializeField] PlayerControlScript playerControlScript;
     [SerializeField] PlayerCursorScript playerCursorScript;
     [SerializeField] PlayerSelectionScript playerSelectionScript;
     [SerializeField] PlayerTokenScript playerTokenScript;
@@ -25,10 +24,6 @@ public class PlayerMasterController : MonoBehaviour
 
     private void Awake()
     {
-        playerControlScript = GetComponent<PlayerControlScript>();
-        playerControlScript.Cursor = cursor;
-        playerControlScript.PlayerMasterController = this;
-
 
         playerTokenScript = GetComponent<PlayerTokenScript>();
 
@@ -49,10 +44,6 @@ public class PlayerMasterController : MonoBehaviour
         PlayerMasterController playerMasterController = FindObjectOfType<PlayerMasterController>();
         print((int )playerMasterController.GetCharacter());
 
-    }
-    void MoveWithMouse(InputAction.CallbackContext inputAction)
-    {
-        playerControlScript.MoveWithMouse(inputAction);
     }
 
     /// <summary>

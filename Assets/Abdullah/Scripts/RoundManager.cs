@@ -2,17 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoundController : MonoBehaviour
+public class RoundManager : MonoBehaviour
 {
     TurnController player;
     Dice dice;
+    TurnController turnController;
     PlayerMasterController playerController;
+
+    private void Awake()
+    {
+        turnController = FindObjectOfType<TurnController>();
+        playerController = turnController.GetCurrentPlayer();
+    }
+
     void RollDice() 
     {
         dice.RollDice();
     }
 
-    void MovePlayer() 
+    public void MovePlayer() 
     {
         playerController.MovePlayer();
     }

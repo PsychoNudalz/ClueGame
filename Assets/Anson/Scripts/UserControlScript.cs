@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerControlScript : MonoBehaviour
+public class UserControlScript : MonoBehaviour
 {
     [Header("Cursor Control")]
     Mouse mouse;
@@ -20,17 +20,21 @@ public class PlayerControlScript : MonoBehaviour
     [SerializeField] float timeNow_refereshRate;
 
     [Header("Other Player Components")]
-    [SerializeField] PlayerMasterController playerMasterController;
+    [SerializeField] RoundManager roundManager;
 
 
     public GameObject Cursor { get => cursor; set => cursor = value; }
-    public PlayerMasterController PlayerMasterController { get => playerMasterController; set => playerMasterController = value; }
+    public RoundManager RoundManager { get => roundManager; set => roundManager = value; }
 
     private void Awake()
     {
         if (camera == null)
         {
             camera = FindObjectOfType<Camera>();
+        }
+        if (!roundManager)
+        {
+            roundManager = FindObjectOfType<RoundManager>();
         }
         //mouse = GetComponent<Mouse>();
     }
@@ -63,7 +67,7 @@ public class PlayerControlScript : MonoBehaviour
     {
         if (inputAction.performed)
         {
-            playerMasterController.MovePlayer();
+            RoundManager.MovePlayer();
         }
     }
 
