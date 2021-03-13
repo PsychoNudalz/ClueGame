@@ -8,7 +8,6 @@ public class WeaponSlotTestScript : MonoBehaviour
 {
     WeaponTokenScript[] weapons;
     RoomScript room;
-
     [SerializeField] Text weaponsInRoom;
     [SerializeField] Button[] daggerButtons;
 
@@ -16,6 +15,8 @@ public class WeaponSlotTestScript : MonoBehaviour
     {
         room = FindObjectOfType<RoomScript>();
         weapons = FindObjectsOfType<WeaponTokenScript>();
+        
+
     }
 
     private void Update()
@@ -61,7 +62,7 @@ public class WeaponSlotTestScript : MonoBehaviour
             if (weaponToken.WeaponType.ToString().Equals(weapon))
             {
                 room.RemoveWeaponFromRoom(weaponToken);
-                weaponToken.transform.position = new Vector3(-1, 0, -1);
+                weaponToken.MoveToken(new Vector3(-2,0,2));
                 break;
             }
         }

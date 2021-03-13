@@ -1447,6 +1447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dagger
       objectReference: {fileID: 0}
+    - target: {fileID: 578521044760141047, guid: 873d93ca89447d3488fb5125c8c8522f,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 873d93ca89447d3488fb5125c8c8522f, type: 3}
 --- !u!4 &178530330 stripped
@@ -13103,6 +13108,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1071921794}
     m_Modifications:
+    - target: {fileID: 7694644694816852017, guid: 4c5617d42c7cf524f831912e5694dfa5,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8976653028907364934, guid: 4c5617d42c7cf524f831912e5694dfa5,
         type: 3}
       propertyPath: m_RootOrder
@@ -13232,6 +13242,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6937932159779915420, guid: 81a5c5c786746a04d8926480a9701bf3,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a5c5c786746a04d8926480a9701bf3, type: 3}
 --- !u!1001 &1358389107357669260
@@ -13296,6 +13311,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7640101682308758313, guid: 171226c5bb7e573479e7aa0d8d6dee1d,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 7780756310701121039, guid: 171226c5bb7e573479e7aa0d8d6dee1d,
         type: 3}
       propertyPath: m_Name
@@ -13314,6 +13334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rope
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181851793008343805, guid: d5b8ce39b5014864ebb2a7f727a60598,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4664155867458754379, guid: d5b8ce39b5014864ebb2a7f727a60598,
         type: 3}
@@ -13438,6 +13463,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Revolver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822087011056926201, guid: ab8b105bc964f4c41a2f4b83af2f50dd,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab8b105bc964f4c41a2f4b83af2f50dd, type: 3}

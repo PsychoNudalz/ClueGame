@@ -103,11 +103,20 @@ public class BoardManager : MonoBehaviour
 
     IEnumerator PlaceWeaponsDelay()
     {
-        yield return new WaitForSeconds(1f);
-        print("placing Weapons");
-        print(weaponTokens.Length);
-        throw new NotImplementedException();
-
+        yield return new WaitForSeconds(0.01f);
+        //print("Placing Weapons");
+        foreach(WeaponTokenScript weapon in weaponTokens)
+        {
+            while(weapon.CurrentRoom == null)
+            {
+                int rand = Random.Range(0, rooms.Length);
+                RoomScript roomToTry = rooms[rand];
+                if(roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
+                {
+                        roomToTry.AddWeapon(weapon);
+                }
+            }
+        }
     }
 
     /*Print Array for Testing*/

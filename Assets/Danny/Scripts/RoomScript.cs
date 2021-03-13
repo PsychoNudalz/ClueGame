@@ -149,11 +149,11 @@ public class RoomScript : MonoBehaviour
         {
             if (!slot.SlotOccupied())
             {
-                
-                weaponTokenScript.transform.position = slot.transform.position;
+                //print(weaponTokenScript.WeaponType + " added in " + slot.transform.ToString() + " in the " + room);
+                //weaponTokenScript.transform.position = slot.transform.position;
                 slot.AddWeaponToSlot(weaponTokenScript);
                 weaponTokenScript.CurrentRoom = this;
-                print(weaponTokenScript.WeaponType + " added in " + slot.transform.ToString() + " in the " + room);
+                weaponTokenScript.MoveToken(slot.transform.position);
                 break;
             }
         }
@@ -171,6 +171,19 @@ public class RoomScript : MonoBehaviour
             }
 
         }
+    }
+
+    public bool WeaponSlotsEmpty()
+    {
+        bool result = true;
+        foreach(RoomWeaponSlot slot in weaponSlots)
+        {
+            if (slot.SlotOccupied())
+            {
+                result = false;
+            }
+        }
+        return result;
     }
 
     private RoomEntryBoardTileScript FindClosestEntryTile(BoardTileScript targetTile)
