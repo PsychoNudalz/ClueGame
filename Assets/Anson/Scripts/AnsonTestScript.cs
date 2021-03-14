@@ -19,7 +19,14 @@ public class AnsonTestScript : MonoBehaviour
         if (dice.GetValue() > 0 && diceRolled)
         {
             diceRolled = false;
-            playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
+            if (!boardManager.ShowMovable(playerMasterController.GetTile(), dice.GetValue()))
+            {
+                if (!boardManager.ShowMovable(playerMasterController.GetCurrentRoom(), dice.GetValue()))
+                {
+                    Debug.LogError("Failed to show boardManager movable");
+                }
+            }
+            //playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
             dice.ResetDice();
         }
 
@@ -37,7 +44,6 @@ public class AnsonTestScript : MonoBehaviour
         //Need to be replaced with results of die
         dice.RollDice();
         //playerMasterController.PlayerSelectionScript.MoveAmount = dice.GetValue();
-        print(this + " rolled: " + playerMasterController.PlayerSelectionScript.MoveAmount);
         diceRolled = true;
     }
 

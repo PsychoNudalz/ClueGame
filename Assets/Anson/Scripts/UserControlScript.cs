@@ -21,6 +21,7 @@ public class UserControlScript : MonoBehaviour
 
     [Header("Other Player Components")]
     [SerializeField] RoundManager roundManager;
+    [SerializeField] UserSelectionScript userSelectionScript;
 
 
     public GameObject Cursor { get => cursor; set => cursor = value; }
@@ -36,12 +37,16 @@ public class UserControlScript : MonoBehaviour
         {
             roundManager = FindObjectOfType<RoundManager>();
         }
+        if (!userSelectionScript)
+        {
+            userSelectionScript = GetComponentInChildren<UserSelectionScript>();
+        }
         //mouse = GetComponent<Mouse>();
     }
 
     private void FixedUpdate()
     {
-        if (isMouse && Time.time- timeNow_refereshRate > refereshRate)
+        if (isMouse && Time.time - timeNow_refereshRate > refereshRate)
         {
             timeNow_refereshRate = Time.deltaTime;
             CastUpdateWithMouse();
@@ -67,7 +72,11 @@ public class UserControlScript : MonoBehaviour
     {
         if (inputAction.performed)
         {
-            RoundManager.MovePlayer();
+            BoardTileScript newTile = userSelectionScript.GetCurrentTile();
+            if (newTile != null)
+            {
+                RoundManager.MovePlayer(newTile);
+            }
         }
     }
 
@@ -86,6 +95,10 @@ public class UserControlScript : MonoBehaviour
 
     void UpdateCursor()
     {
+        if (!cursor)
+        {
+            Debug.LogError("SDFGHJK");
+        }
         cursor.transform.position = Vector3.Lerp(cursor.transform.position, targetPos, 40 * Time.deltaTime);
     }
 }

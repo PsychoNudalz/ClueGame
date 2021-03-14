@@ -179,6 +179,14 @@ public class PlayerTokenScript : MonoBehaviour
         animator.SetTrigger("Lift");
     }
 
+    public void MoveToken(Vector3 v)
+    {
+        isMove = true;
+        startMoveTime = Time.time;
+        timeToMove = (v - transform.position).magnitude * timeToDistance;
+        animator.SetTrigger("Lift");
+    }
+
     void UpdateTokenMovement()
     {
         if (Time.time > (startMoveTime + timeToMove))

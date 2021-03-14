@@ -105,15 +105,15 @@ public class BoardManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         //print("Placing Weapons");
-        foreach(WeaponTokenScript weapon in weaponTokens)
+        foreach (WeaponTokenScript weapon in weaponTokens)
         {
-            while(weapon.CurrentRoom == null)
+            while (weapon.CurrentRoom == null)
             {
                 int rand = Random.Range(0, rooms.Length);
                 RoomScript roomToTry = rooms[rand];
-                if(roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
+                if (roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
                 {
-                        roomToTry.AddWeapon(weapon);
+                    roomToTry.AddWeapon(weapon);
                 }
             }
         }
@@ -160,7 +160,7 @@ public class BoardManager : MonoBehaviour
                 foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
                 {
                     Debug.Log("Getting more neighbour");
-                    if (!queue.Contains(b)&&!neighbours.Contains(b))
+                    if (!queue.Contains(b) && !neighbours.Contains(b))
                     {
                         neighbours.Add(b);
                     }
@@ -172,16 +172,44 @@ public class BoardManager : MonoBehaviour
         return queue;
     }
 
-    public void ShowMovable(BoardTileScript currentTile, int range)
+    public bool ShowMovable(BoardTileScript currentTile, int range)
     {
-        ClearMovable();
+        if (currentTile == null)
+        {
+            return false;
+        }
         print("Finding new tile");
-        movableTile = bfs(currentTile, range);
+        movableTile.AddRange(bfs(currentTile, range));
+
         foreach (BoardTileScript b in movableTile)
         {
             b.GlowTile(true);
         }
+        return true;
     }
+    public bool ShowMovable(BoardTileScript[] boardTileScripts, int range)
+    {
+        ClearMovable();
+        print("Show movable in room");
+        foreach (BoardTileScript b in boardTileScripts)
+        {
+            ShowMovable(b, range);
+            print("movableTiles: " + movableTile.Count);
+
+        }
+        print("finished room");
+        return true;
+    }
+    public bool ShowMovable(RoomScript roomScript, int range)
+    {
+        if (roomScript == null)
+        {
+            return false;
+        }
+        ShowMovable(roomScript.GetEntryTiles(), range);
+        return true;
+    }
+
 
     public void ClearMovable()
     {

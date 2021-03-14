@@ -16,6 +16,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
 
     private void Start()
     {
+        base.Init();
         GetRoomScript();
         GetDoor();
         GetEntryPoint();

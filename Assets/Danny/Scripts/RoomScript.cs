@@ -52,7 +52,7 @@ public class RoomScript : MonoBehaviour
         }
     }
 
-    private void GetEntryTiles()
+    public RoomEntryBoardTileScript[] GetEntryTiles()
     {
         List<RoomEntryBoardTileScript> entryTileList = new List<RoomEntryBoardTileScript>();
         foreach (RoomEntryBoardTileScript entryTile in GameObject.FindObjectsOfType<RoomEntryBoardTileScript>())
@@ -63,6 +63,7 @@ public class RoomScript : MonoBehaviour
             }
         }
         entryTiles = entryTileList.ToArray();
+        return entryTiles;
     }
 
     // Update is called once per frame

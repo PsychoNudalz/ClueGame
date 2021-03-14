@@ -8,11 +8,13 @@ public class RoundManager : MonoBehaviour
     Dice dice;
     TurnController turnController;
     PlayerMasterController playerController;
+    BoardManager boardManager;
 
     private void Awake()
     {
         turnController = FindObjectOfType<TurnController>();
         playerController = turnController.GetCurrentPlayer();
+        boardManager = FindObjectOfType<BoardManager>();
     }
 
     void RollDice() 
@@ -20,9 +22,11 @@ public class RoundManager : MonoBehaviour
         dice.RollDice();
     }
 
-    public void MovePlayer() 
+    public void MovePlayer(BoardTileScript b) 
     {
-        playerController.MovePlayer();
+        playerController.MovePlayer(b);
+        boardManager.ClearMovable();
+        
     }
     void ShowCard() 
     {
