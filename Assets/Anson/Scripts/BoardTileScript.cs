@@ -32,7 +32,7 @@ public class BoardTileScript : MonoBehaviour
 
     public virtual void ClearTile()
     {
-        print(this + " cleared");
+        //print(this + " cleared");
         if (boardTileEffectHandler != null)
         {
             boardTileEffectHandler.DeselectTile();
@@ -41,7 +41,7 @@ public class BoardTileScript : MonoBehaviour
 
     public virtual void SelectTile()
     {
-        print(this + " select");
+        //print(this + " select");
         if (boardTileEffectHandler != null)
         {
             boardTileEffectHandler.SelectTile();

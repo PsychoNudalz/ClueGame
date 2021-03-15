@@ -170,7 +170,10 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void MoveToken(BoardTileScript newTile)
     {
-
+        if (currentRoom != null)
+        {
+            currentRoom.RemovePlayerFromRoom(this, newTile);
+        }
         targetTile = newTile;
         currentTile.SetToken(null);
         targetTile.SetToken(gameObject);

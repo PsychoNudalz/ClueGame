@@ -24,7 +24,17 @@ public class RoundManager : MonoBehaviour
 
     public void MovePlayer(BoardTileScript b) 
     {
+        if (playerController == null)
+        {
+            playerController = turnController.GetCurrentPlayer();
+
+        }
         playerController.MovePlayer(b);
+        if (boardManager == null)
+        {
+            boardManager = FindObjectOfType<BoardManager>();
+
+        }
         boardManager.ClearMovable();
         
     }
