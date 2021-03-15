@@ -95,6 +95,7 @@ public class PlayerTokenScript : MonoBehaviour
     {
         startTile = tile;
         currentTile = tile;
+        //TODO Set start tile colour.
         SetCharacter(setCharacter);
     }
 

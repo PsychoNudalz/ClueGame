@@ -29,6 +29,7 @@ public class RoomScript : MonoBehaviour
     public RoomPlayerSlot[] PlayerSlots { get => playerSlots;}
     public ShortcutBoardTileScript ShortcutTile { get => shortcutTile;}
     public RoomWeaponSlot[] WeaponSlots { get => weaponSlots;}
+    public RoomEntryBoardTileScript[] EntryTiles { get => entryTiles;}
 
 
     // Start is called before the first frame update
