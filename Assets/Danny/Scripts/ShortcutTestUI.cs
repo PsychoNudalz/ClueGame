@@ -38,7 +38,7 @@ public class ShortcutTestUI : MonoBehaviour
         foreach(RoomEntryBoardTileScript entryTile in boardManager.RoomEntries)
         {
             if (entryTile.Room.ToString().Equals(roomToEnter)){
-                player.transform.position = entryTile.transform.position;
+                player.MovePlayer(entryTile);
                 //print(entryTile);
                 break;
             }

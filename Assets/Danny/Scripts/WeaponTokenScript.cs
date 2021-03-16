@@ -8,7 +8,7 @@ public enum WeaponEnum {Dagger, CandleStick, Revolver, Rope, LeadPipe, Spanner}
 public class WeaponTokenScript : MonoBehaviour
 {
     [SerializeField] private WeaponEnum weaponType;
-    [SerializeField] private float moveSpeed = 50f;
+    private float moveSpeed = 50f;
     private RoomScript currentRoom;
     private Animator animator;
 

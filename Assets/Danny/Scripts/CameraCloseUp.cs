@@ -12,7 +12,7 @@ public enum CameraTarget
 
 public class CameraCloseUp : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    private float moveSpeed = 5f;
     [SerializeField] private bool testKeys;
     Keyboard kb;
     private Vector3 initialCameraPosition;
@@ -63,13 +63,25 @@ public class CameraCloseUp : MonoBehaviour
         return initialCameraPosition;
     }
 
+
     public void SetCloseUp(CameraTarget target)
     {
         currentCameraTarget = target;
     }
 
+    public void ClearCloseUp(float delay)
+    {
+        StartCoroutine(ClearCloseUpDelay(delay));
+    }
+
     public void ClearCloseUp()
     {
+        currentCameraTarget = CameraTarget.Initial;
+    }
+
+    IEnumerator ClearCloseUpDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
         currentCameraTarget = CameraTarget.Initial;
     }
 
@@ -145,6 +157,28 @@ public class CameraCloseUp : MonoBehaviour
         else if (kb.numpadPeriodKey.isPressed)
         {
             SetCloseUp(CameraTarget.Initial);
+        }
+    }
+
+    internal void SetRoomCloseUp(Room room)
+    {
+        foreach (CameraTarget target in Enum.GetValues(typeof(CameraTarget)))
+        {
+            if (target.ToString().Equals(room.ToString()))
+            {
+                SetCloseUp(target);
+            }
+        }
+    }
+
+    public void SetCharacterCloseUp(CharacterEnum character)
+    {
+        foreach (CameraTarget target in Enum.GetValues(typeof(CameraTarget)))
+        {
+            if (target.ToString().Equals(character.ToString()))
+            {
+                SetCloseUp(target);
+            }
         }
     }
 }

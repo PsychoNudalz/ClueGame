@@ -30,9 +30,9 @@ public class RoomEntryExitTestScript : MonoBehaviour
     {
         room = GameObject.FindObjectOfType<RoomScript>();
         playerTokens = FindObjectsOfType<PlayerTokenScript>();
-        for (int i = 0; i < playerTokens.Length; i++)
+        foreach(PlayerTokenScript playerToken in playerTokens)
         {
-            players[i] = playerTokens[0].GetController();
+            playerToken.SetCharacter(playerToken.Character);
         }
     }
 
@@ -124,7 +124,8 @@ public class RoomEntryExitTestScript : MonoBehaviour
                 break;
             }
         }
-        player.transform.position = entries[0].transform.position;
+        player.SetPosition(entries[0].transform.position);
+        entries[0].EnterRoom(player);
     }
 
     public void EnterRoom2(string character)
@@ -138,7 +139,8 @@ public class RoomEntryExitTestScript : MonoBehaviour
                 break;
             }
         }
-        player.transform.position = entries[1].transform.position;
+        player.SetPosition(entries[1].transform.position);
+        entries[1].EnterRoom(player);
     }
 
     public void ExitRoom1(string character)

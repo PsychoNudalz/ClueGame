@@ -68,7 +68,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
         }
         entryPoint = closest;
     }
-
+    /*
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag.Equals("Player") && other.transform.position == transform.position)
@@ -87,9 +87,14 @@ public class RoomEntryBoardTileScript : BoardTileScript
                 
             }
         }
+    }*/
+
+    internal void EnterRoom(PlayerMasterController player)
+    {
+        StartCoroutine(EnterRoomAnimation(player));
     }
 
-    IEnumerator EnterRoom(PlayerMasterController player)
+    IEnumerator EnterRoomAnimation(PlayerMasterController player)
     {
         door.OpenDoor();
         yield return new WaitForSeconds(0.8f);

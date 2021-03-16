@@ -30,6 +30,7 @@ public class PlayerTokenScript : MonoBehaviour
     private RoomEntryBoardTileScript currentExitPoint;
     private BoardTileScript roomExitTileTarget;
     private BoardManager boardManager;
+    CameraCloseUp cameraCloseUp;
 
     //Getters and Setters
     public CharacterEnum Character { get => character; }
@@ -43,6 +44,7 @@ public class PlayerTokenScript : MonoBehaviour
     void Start()
     {
         boardManager = FindObjectOfType<BoardManager>();
+        cameraCloseUp = FindObjectOfType<CameraCloseUp>();
     }
 
     // Update is called once per frame
@@ -74,9 +76,9 @@ public class PlayerTokenScript : MonoBehaviour
                 if (Vector3.Distance(transform.position, currentExitPoint.transform.position) == 0f)
                 {
                     currentTile = currentExitPoint;
+                    MoveToken(roomExitTileTarget);
                     currentExitPoint = null;
                     roomExitTileTarget = null;
-                    MoveToken(roomExitTileTarget);
                 }
                 else
                 {
@@ -176,7 +178,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void MoveToken(BoardTileScript newTile)
     {
-
+        cameraCloseUp.SetCharacterCloseUp(Character);
         currentEntryPoint = null;
         currentExitPoint = null;
         targetTile = newTile;
@@ -190,6 +192,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void MoveToken(Vector3 v)
     {
+
         isMove = true;
         startMoveTime = Time.time;
         timeToMove = (v - transform.position).magnitude * timeToDistance;
@@ -205,6 +208,16 @@ public class PlayerTokenScript : MonoBehaviour
             isMove = false;
             animator.SetTrigger("Place");
             currentRoom = null;
+
+            RoomEntryBoardTileScript roomEntryScript = currentTile.GetComponent<RoomEntryBoardTileScript>();
+            if(roomEntryScript != null)
+            {
+                roomEntryScript.EnterRoom(this.controller);
+            }
+            else
+            {
+                cameraCloseUp.ClearCloseUp(1f);
+            }
         }
         else
         {
@@ -216,11 +229,13 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void EnterRoom(RoomEntryPoint entryPoint)
     {
+        cameraCloseUp.SetRoomCloseUp(entryPoint.RoomScript.Room);
         currentEntryPoint = entryPoint;
     }
 
     internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
     {
+        cameraCloseUp.SetCharacterCloseUp(character);
         roomExitTileTarget = targetTile;
         currentExitPoint = roomEntryBoardTileScript;
     }
@@ -238,6 +253,7 @@ public class PlayerTokenScript : MonoBehaviour
             foreach(ShortcutBoardTileScript tile in boardManager.Shortcuts)
             {
                 if (tile.ShortcutTo.Equals(currentRoom.Room)){
+                    boardManager.ClearMovable();
                     StartCoroutine(ShortcutMovement(tile));
                 }
             }
@@ -247,17 +263,24 @@ public class PlayerTokenScript : MonoBehaviour
 
     IEnumerator ShortcutMovement(ShortcutBoardTileScript shortcutEnd)
     {
-        //currentTile = currentRoom.ShortcutTile;
-        transform.position = currentRoom.ShortcutTile.transform.position;
-        animator.SetTrigger("StartShortcut");
         
-        yield return new WaitForSeconds(2f);
-        currentRoom = null;
+        cameraCloseUp.SetRoomCloseUp(currentRoom.Room);
+        transform.position = currentRoom.ShortcutTile.transform.position;
+        currentRoom.RemovePlayerFromRoomViaShortcut(controller);
+        animator.SetTrigger("StartShortcut");
+
+        yield return new WaitForSeconds(1f);
+        cameraCloseUp.SetRoomCloseUp(shortcutEnd.ShortcutFrom);
+        yield return new WaitForSeconds(1.5f);
+
         transform.position = shortcutEnd.transform.position;
         animator.SetTrigger("EndShortcut");
         yield return new WaitForSeconds(1.2f);
         currentTile = shortcutEnd;
         ShortcutBoardTileScript currentShortcut = currentTile.GetComponent<ShortcutBoardTileScript>();
-        currentShortcut.RoomScript.AddPlayer(this.transform.GetComponent<PlayerMasterController>());
+        currentShortcut.RoomScript.AddPlayer(controller);
+        currentTile = null;
+        targetTile = null;
+        
     }
 }
