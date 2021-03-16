@@ -102,24 +102,24 @@ public class RoomScript : MonoBehaviour
         }
     }
 
-    internal void AddPlayer(PlayerTokenScript playerTokenScript)
+    internal void AddPlayer(PlayerMasterController PlayerController)
     {
         foreach(RoomPlayerSlot slot in playerSlots)
         {
             if (!slot.SlotOccupied())
             {
-                playerTokenScript.transform.position = slot.transform.position;
-                slot.AddPlayerToSlot(playerTokenScript);
-                playerTokenScript.CurrentRoom = this;
+                PlayerController.SetPosition(slot.transform.position);
+                slot.AddPlayerToSlot(PlayerController);
+                PlayerController.SetCurrentRoom(this);
                 //print(playerTokenScript.Character + " added in " + slot.transform.ToString() + " in the " + room);
                 break;
             }
         }
     }
 
-    internal void RemovePlayerFromRoom(PlayerTokenScript player, BoardTileScript targetTile)
+    internal void RemovePlayerFromRoom(PlayerMasterController player, BoardTileScript targetTile)
     {
-        PlayerTokenScript playerToRemove = null;
+        PlayerMasterController playerToRemove = null;
         foreach(RoomPlayerSlot slot in playerSlots)
         {
             if (slot.GetCharacterInSlot() != null && slot.GetCharacterInSlot().Equals(player))
@@ -132,11 +132,11 @@ public class RoomScript : MonoBehaviour
         if(playerToRemove != null)
         {
             RoomEntryBoardTileScript exitPoint =  FindClosestEntryTile(targetTile);
-            StartCoroutine(exitPoint.ExitRoom(playerToRemove, targetTile));
+            exitPoint.ExitRoom(playerToRemove, targetTile);
         }
         else
         {
-            Debug.LogError(player.Character + " not found in " + Room);
+            Debug.LogError(player.GetCharacter() + " not found in " + Room);
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -35,6 +36,11 @@ public class PlayerMasterController : MonoBehaviour
 
     }
 
+    internal bool CanTakeShortcut()
+    {
+        return playerTokenScript.CanTakeShortcut();
+    }
+
     /// <summary>
     /// Set the player's character
     /// </summary>
@@ -58,6 +64,16 @@ public class PlayerMasterController : MonoBehaviour
     public BoardTileScript GetTile()
     {
         return playerTokenScript.CurrentTile;
+    }
+
+    internal void TakeShortcut()
+    {
+        playerTokenScript.TakeShortcut();
+    }
+
+    internal bool IsInRoom()
+    {
+        return playerTokenScript.IsInRoom();
     }
 
 
@@ -98,14 +114,39 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.MoveToken(b);
     }
 
+    internal void EnterRoom(RoomEntryPoint entryPoint)
+    {
+        playerTokenScript.EnterRoom(entryPoint);
+    }
+
+    internal void SetCurrentTile(BoardTileScript tileToSet)
+    {
+        playerTokenScript.CurrentTile = tileToSet;
+    }
+
     public RoomScript GetCurrentRoom()
     {
         return playerTokenScript.CurrentRoom;
+    }
+
+    public void SetCurrentRoom(RoomScript room)
+    {
+        playerTokenScript.CurrentRoom = room;
     }
 
     public void MovePlayer(Vector3 v)
     {
         print("Moving Player");
         playerTokenScript.MoveToken(v);
+    }
+
+    internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
+    {
+        playerTokenScript.ExitRoom(roomEntryBoardTileScript, targetTile);
+    }
+
+    internal void SetPosition(Vector3 newPosition)
+    {
+        playerTokenScript.transform.position = newPosition; 
     }
 }
