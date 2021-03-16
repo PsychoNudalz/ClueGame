@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RoomPlayerSlot : MonoBehaviour
 {
-    PlayerTokenScript playerInSlot;
+    PlayerMasterController playerInSlot;
 
-    public void AddPlayerToSlot(PlayerTokenScript player)
+    public void AddPlayerToSlot(PlayerMasterController player)
     {
         if (!SlotOccupied())
         {
@@ -14,9 +14,9 @@ public class RoomPlayerSlot : MonoBehaviour
         }
     }
 
-    public PlayerTokenScript RemovePlayerFromSlot()
+    public PlayerMasterController RemovePlayerFromSlot()
     {
-        PlayerTokenScript playerToReturn = playerInSlot;
+        PlayerMasterController playerToReturn = playerInSlot;
         playerInSlot = null;
         return playerToReturn;
     }
@@ -26,7 +26,7 @@ public class RoomPlayerSlot : MonoBehaviour
         return (playerInSlot != null);
     }
 
-    public PlayerTokenScript GetCharacterInSlot()
+    public PlayerMasterController GetCharacterInSlot()
     {
         return playerInSlot;
     }
