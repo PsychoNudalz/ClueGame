@@ -9,6 +9,7 @@ public class TurnController : MonoBehaviour
    [SerializeField] List<PlayerMasterController> initialisePlayers;
     public int currentPlayerIndex;
     int numberOfPlayers;
+   
 
     
     void Awake()
@@ -18,6 +19,7 @@ public class TurnController : MonoBehaviour
 
     void StartGame() 
     {
+
         InitialisePlayers();
         //pointer to first player
         currentPlayerIndex = 0;
@@ -42,9 +44,12 @@ public class TurnController : MonoBehaviour
 
     }
 
+   
+    
+
     public void SetNumberofPlayers(int a) 
     {
-        //set number of players playing the game
+        //set number of players playing the game, rest will be AI
         numberOfPlayers = a;
     }
 
@@ -83,7 +88,7 @@ public class TurnController : MonoBehaviour
         currentPlayers.RemoveAt(currentPlayerIndex);
     }
 
-    void GetSuggestion() 
+    public void GetSuggestion() 
     {
         
     }
@@ -93,17 +98,17 @@ public class TurnController : MonoBehaviour
         
     }
 
-    void ShowCard() 
+    public void ShowCard() 
     {
     
     }
 
-    void CallNextTurn() 
+    public void CallNextTurn() 
     {
         
     }
 
-    void Win() 
+    public void Win() 
     {
         
     }
