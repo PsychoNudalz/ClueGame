@@ -11,19 +11,28 @@ public class BoardTileScript : MonoBehaviour
     private TileTypeEnum tileType;
     [SerializeField] BoardTileEffectHandlerScript boardTileEffectHandler;
     [SerializeField] GameObject playerToken;
+    [SerializeField] BoardManager boardManager;
 
     public Vector2 GridPosition { get => gridPosition; set => gridPosition = value; }
     public TileTypeEnum TileType { get => tileType; set => tileType = value; }
+    public GameObject PlayerToken { get => playerToken; set => playerToken = value; }
+    public BoardManager BoardManager { get => boardManager; set => boardManager = value; }
 
     // Start is called before the first frame update
     void Start()
     {
+        Init();
+    }
+
+    protected void Init()
+    {
         boardTileEffectHandler = GetComponent<BoardTileEffectHandlerScript>();
+        boardManager = FindObjectOfType<BoardManager>();
     }
 
     public virtual void ClearTile()
     {
-        print(this + " cleared");
+        //print(this + " cleared");
         if (boardTileEffectHandler != null)
         {
             boardTileEffectHandler.DeselectTile();
@@ -32,7 +41,7 @@ public class BoardTileScript : MonoBehaviour
 
     public virtual void SelectTile()
     {
-        print(this + " select");
+        //print(this + " select");
         if (boardTileEffectHandler != null)
         {
             boardTileEffectHandler.SelectTile();
@@ -79,6 +88,16 @@ public class BoardTileScript : MonoBehaviour
     public void GetTileNeighbours()
     {
         GameObject.FindObjectOfType<BoardManager>().GetTileNeighbours(this.GetComponent<BoardTileScript>());
+    }
+
+    public bool CanMove()
+    {
+        if (boardManager)
+        {
+        return boardManager.CanMove(this);
+
+        }
+        return false;
     }
 
     override

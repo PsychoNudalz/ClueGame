@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] private Color characterColour;
     [SerializeField] private string characterName;
     private StartTileScript startTile;
+    private PlayerMasterController controller;
 
     [Header("Movement")]
     [SerializeField] Animator animator;
@@ -19,22 +21,28 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] float startMoveTime;
     [SerializeField] bool isMove = false;
     [SerializeField] BoardTileScript targetTile;
-
-
+    
     [Header("Tile")]
     [SerializeField] BoardTileScript currentTile;
 
+    private RoomEntryPoint currentEntryPoint;
+    private RoomScript currentRoom;
+    private RoomEntryBoardTileScript currentExitPoint;
+    private BoardTileScript roomExitTileTarget;
+    private BoardManager boardManager;
 
     //Getters and Setters
     public CharacterEnum Character { get => character; }
     public Color CharacterColour { get => characterColour; set => characterColour = value; }
     public string CharacterName { get => characterName; set => characterName = value; }
     public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
+    public RoomScript CurrentRoom { get => currentRoom; set => currentRoom = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        boardManager = FindObjectOfType<BoardManager>();
     }
 
     // Update is called once per frame
@@ -44,12 +52,60 @@ public class PlayerTokenScript : MonoBehaviour
         {
             UpdateTokenMovement();
         }
+        else
+        {
+
+            if (currentEntryPoint != null)
+            {
+                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) == 0f)
+                {
+                    currentEntryPoint.RoomScript.AddPlayer(controller);
+                    currentEntryPoint = null;
+                    currentTile.GetComponent<BoardTileScript>().PlayerToken = null;
+                    currentTile = null;
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, currentEntryPoint.transform.position, Time.deltaTime);
+                }
+            }
+            if (currentExitPoint != null)
+            {
+                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) == 0f)
+                {
+                    currentTile = currentExitPoint;
+                    currentExitPoint = null;
+                    roomExitTileTarget = null;
+                    MoveToken(roomExitTileTarget);
+                }
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, currentExitPoint.transform.position, Time.deltaTime);
+                }
+            }
+        }
+    }
+
+    internal PlayerMasterController GetController()
+    {
+        return controller;
+    }
+
+    public bool IsInRoom()
+    {
+        return currentRoom != null;
     }
 
     public void SetCharacter(CharacterEnum setCharacter, StartTileScript tile)
     {
         startTile = tile;
         currentTile = tile;
+        //TODO Set start tile colour.
+        SetCharacter(setCharacter);
+    }
+
+    public void SetCharacter(CharacterEnum setCharacter)
+    {
         switch (setCharacter)
         {
             case CharacterEnum.MissScarlett:
@@ -85,12 +141,8 @@ public class PlayerTokenScript : MonoBehaviour
         }
         AssignToPlayerMaster();
 
-        GetComponentInChildren<Renderer>().material.SetColor("_MainColour",characterColour);
-        /*
-         * ----To do---- 
-         * -token colour from characterColour
-         * -startTile.SetTileColour(CharacterColour);
-         */
+        GetComponentInChildren<Renderer>().material.SetColor("_MainColour", characterColour);
+        
     }
 
     public Color GetCharacterColour()
@@ -114,6 +166,7 @@ public class PlayerTokenScript : MonoBehaviour
             if (character.Equals(p.GetCharacter()))
             {
                 p.PlayerTokenScript = this;
+                controller = p;
                 return true;
             }
         }
@@ -124,12 +177,22 @@ public class PlayerTokenScript : MonoBehaviour
     public void MoveToken(BoardTileScript newTile)
     {
 
+        currentEntryPoint = null;
+        currentExitPoint = null;
         targetTile = newTile;
-        currentTile.SetToken(null);
+        
         targetTile.SetToken(gameObject);
         isMove = true;
         startMoveTime = Time.time;
         timeToMove = (targetTile.GridPosition - currentTile.GridPosition).magnitude * timeToDistance;
+        animator.SetTrigger("Lift");
+    }
+
+    public void MoveToken(Vector3 v)
+    {
+        isMove = true;
+        startMoveTime = Time.time;
+        timeToMove = (v - transform.position).magnitude * timeToDistance;
         animator.SetTrigger("Lift");
     }
 
@@ -141,7 +204,7 @@ public class PlayerTokenScript : MonoBehaviour
             transform.position = currentTile.transform.position;
             isMove = false;
             animator.SetTrigger("Place");
-
+            currentRoom = null;
         }
         else
         {
@@ -149,5 +212,52 @@ public class PlayerTokenScript : MonoBehaviour
             //print(currentPoint);
             transform.position = (currentPoint *(targetTile.transform.position - currentTile.transform.position))+ currentTile.transform.position;
         }
+    }
+
+    public void EnterRoom(RoomEntryPoint entryPoint)
+    {
+        currentEntryPoint = entryPoint;
+    }
+
+    internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
+    {
+        roomExitTileTarget = targetTile;
+        currentExitPoint = roomEntryBoardTileScript;
+    }
+
+    public bool CanTakeShortcut()
+    {
+        return (currentRoom != null && currentRoom.HasShortcut());
+    }
+
+    public bool TakeShortcut()
+    {
+        if (CanTakeShortcut())
+        {
+            
+            foreach(ShortcutBoardTileScript tile in boardManager.Shortcuts)
+            {
+                if (tile.ShortcutTo.Equals(currentRoom.Room)){
+                    StartCoroutine(ShortcutMovement(tile));
+                }
+            }
+        }
+        return false;
+    }
+
+    IEnumerator ShortcutMovement(ShortcutBoardTileScript shortcutEnd)
+    {
+        //currentTile = currentRoom.ShortcutTile;
+        transform.position = currentRoom.ShortcutTile.transform.position;
+        animator.SetTrigger("StartShortcut");
+        
+        yield return new WaitForSeconds(2f);
+        currentRoom = null;
+        transform.position = shortcutEnd.transform.position;
+        animator.SetTrigger("EndShortcut");
+        yield return new WaitForSeconds(1.2f);
+        currentTile = shortcutEnd;
+        ShortcutBoardTileScript currentShortcut = currentTile.GetComponent<ShortcutBoardTileScript>();
+        currentShortcut.RoomScript.AddPlayer(this.transform.GetComponent<PlayerMasterController>());
     }
 }

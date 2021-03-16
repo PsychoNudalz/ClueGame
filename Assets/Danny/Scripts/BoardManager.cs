@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class BoardManager : MonoBehaviour
     private StartTileScript[] startTiles;
     private ShortcutBoardTileScript[] shortcuts;
     private RoomEntryBoardTileScript[] roomEntries;
+    private WeaponTokenScript[] weaponTokens;
 
     [Header("Displaying Moveable Tiles")]
     [SerializeField] List<BoardTileScript> movableTile;
@@ -20,6 +22,7 @@ public class BoardManager : MonoBehaviour
     public StartTileScript[] StartTiles { get => startTiles; }
     public ShortcutBoardTileScript[] Shortcuts { get => shortcuts; }
     public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
+    public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
 
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
@@ -93,6 +96,29 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    internal void PlaceWeapons()
+    {
+        StartCoroutine(PlaceWeaponsDelay());
+    }
+
+    IEnumerator PlaceWeaponsDelay()
+    {
+        yield return new WaitForSeconds(0.01f);
+        //print("Placing Weapons");
+        foreach (WeaponTokenScript weapon in weaponTokens)
+        {
+            while (weapon.CurrentRoom == null)
+            {
+                int rand = Random.Range(0, rooms.Length);
+                RoomScript roomToTry = rooms[rand];
+                if (roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
+                {
+                    roomToTry.AddWeapon(weapon);
+                }
+            }
+        }
+    }
+
     /*Print Array for Testing*/
     private void PrintArray()
     {
@@ -134,7 +160,7 @@ public class BoardManager : MonoBehaviour
                 foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
                 {
                     Debug.Log("Getting more neighbour");
-                    if (!queue.Contains(b)&&!neighbours.Contains(b))
+                    if (!queue.Contains(b) && !neighbours.Contains(b))
                     {
                         neighbours.Add(b);
                     }
@@ -146,16 +172,44 @@ public class BoardManager : MonoBehaviour
         return queue;
     }
 
-    public void ShowMovable(BoardTileScript currentTile, int range)
+    public bool ShowMovable(BoardTileScript currentTile, int range)
     {
-        ClearMovable();
+        if (currentTile == null)
+        {
+            return false;
+        }
         print("Finding new tile");
-        movableTile = bfs(currentTile, range);
+        movableTile.AddRange(bfs(currentTile, range));
+
         foreach (BoardTileScript b in movableTile)
         {
             b.GlowTile(true);
         }
+        return true;
     }
+    public bool ShowMovable(BoardTileScript[] boardTileScripts, int range)
+    {
+        ClearMovable();
+        print("Show movable in room");
+        foreach (BoardTileScript b in boardTileScripts)
+        {
+            ShowMovable(b, range);
+            print("movableTiles: " + movableTile.Count);
+
+        }
+        print("finished room");
+        return true;
+    }
+    public bool ShowMovable(RoomScript roomScript, int range)
+    {
+        if (roomScript == null)
+        {
+            return false;
+        }
+        ShowMovable(roomScript.GetEntryTiles(), range);
+        return true;
+    }
+
 
     public void ClearMovable()
     {
@@ -173,12 +227,13 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
-    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles)
+    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles, WeaponTokenScript[] weaponTokens)
     {
         this.players = players;
         this.rooms = rooms;
         this.roomEntries = roomEntries;
         this.shortcuts = shortcuts;
         this.startTiles = startTiles;
+        this.weaponTokens = weaponTokens;
     }
 }

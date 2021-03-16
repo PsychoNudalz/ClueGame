@@ -1,74 +1,68 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class RoundManager : MonoBehaviour
 {
-    BoardManager boardManagerScript;
-    TurnController turnControllerScript;
-    PlayerMasterController currentPlayer;
+    TurnController player;
     Dice dice;
-    enum RoundMode { None, Move, Suggestion, Accusation };
+    TurnController turnController;
+    PlayerMasterController playerController;
+    BoardManager boardManager;
 
-
-
-    public void SetMode() {
-        print("Mode Set");
+    private void Awake()
+    {
+        turnController = FindObjectOfType<TurnController>();
+        playerController = turnController.GetCurrentPlayer();
+        boardManager = FindObjectOfType<BoardManager>();
     }
 
-    public void RollDice() {
-       dice.RollDice();
+    void RollDice() 
+    {
+        dice.RollDice();
     }
 
-    private void Update()
+    public void MovePlayer(BoardTileScript b) 
+    {
+        if (playerController == null)
+        {
+            playerController = turnController.GetCurrentPlayer();
+
+        }
+        if (playerController.PlayerTokenScript.IsInRoom())
+        {
+            playerController.GetCurrentRoom().RemovePlayerFromRoom(playerController, b);
+        }
+        else
+        {
+            playerController.MovePlayer(b);
+        }
+        if (boardManager == null)
+        {
+            boardManager = FindObjectOfType<BoardManager>();
+
+        }
+        boardManager.ClearMovable();
+        
+    }
+    void ShowCard() 
+    {
+      
+    }
+
+    void MakeSuggestion()
+    {
+    
+    }
+
+    void MakeAccusation() 
     {
         
     }
 
-    void ShowMovableTiles() {
-        
-    }
-
-    
-    void SetCurrentPlayer(){
-        turnControllerScript.SetCurrentPlayerToNext();
-    }
-
-    void GetCurrentPlayer() {
-        turnControllerScript.GetCurrentPlayer();
-    }
-
-    void StartSuggestion() { 
+    void EndTurn()
+    {
        
-    }
-
-    void MakeSuggestion() { 
-    
-    }
-
-    void FindPlyaerWithCard() { 
-    
-    }
-
-    void PickCardToShow() { 
-    
-    }
-
-    void AiPickCardToShow() {
-    
-    }
-
-    bool CheckAccustation() {
-        return true;
-    }
-
-    void EndRound() { 
-    
-    }
-
-    void ResetRound(){
-
-    }
-
-    void CanPlayerTakeShortCute() { 
-    
+        player.SetCurrentPlayerToNext();
     }
 }

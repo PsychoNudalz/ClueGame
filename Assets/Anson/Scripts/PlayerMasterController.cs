@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,13 +7,9 @@ using UnityEngine.InputSystem;
 public class PlayerMasterController : MonoBehaviour
 {
 
-    [SerializeField] GameObject cursor;
 
     [Space]
     [Header("Player Components")]
-    [SerializeField] PlayerControlScript playerControlScript;
-    [SerializeField] PlayerCursorScript playerCursorScript;
-    [SerializeField] PlayerSelectionScript playerSelectionScript;
     [SerializeField] PlayerTokenScript playerTokenScript;
     [SerializeField] PlayerStatsScript playerStatsScript;
 
@@ -20,24 +17,12 @@ public class PlayerMasterController : MonoBehaviour
     [Header("Other Components")]
     [SerializeField] BoardManager boardManager;
 
-    public PlayerSelectionScript PlayerSelectionScript { get => playerSelectionScript; set => playerSelectionScript = value; }
     public PlayerTokenScript PlayerTokenScript { get => playerTokenScript; set => playerTokenScript = value; }
 
     private void Awake()
     {
-        playerControlScript = GetComponent<PlayerControlScript>();
-        playerControlScript.Cursor = cursor;
-        playerControlScript.PlayerMasterController = this;
-
 
         playerTokenScript = GetComponent<PlayerTokenScript>();
-
-        playerSelectionScript = GetComponent<PlayerSelectionScript>();
-        playerSelectionScript.PlayerMasterController = this;
-        playerSelectionScript.PlayerTokenScript = playerTokenScript;
-
-        playerCursorScript = cursor.GetComponent<PlayerCursorScript>();
-        playerCursorScript.ConnectedPlayerSelection = playerSelectionScript;
 
         playerStatsScript = GetComponent<PlayerStatsScript>();
 
@@ -50,9 +35,10 @@ public class PlayerMasterController : MonoBehaviour
         print((int )playerMasterController.GetCharacter());
 
     }
-    void MoveWithMouse(InputAction.CallbackContext inputAction)
+
+    internal bool CanTakeShortcut()
     {
-        playerControlScript.MoveWithMouse(inputAction);
+        return playerTokenScript.CanTakeShortcut();
     }
 
     /// <summary>
@@ -80,6 +66,16 @@ public class PlayerMasterController : MonoBehaviour
         return playerTokenScript.CurrentTile;
     }
 
+    internal void TakeShortcut()
+    {
+        playerTokenScript.TakeShortcut();
+    }
+
+    internal bool IsInRoom()
+    {
+        return playerTokenScript.IsInRoom();
+    }
+
 
     /// <summary>
     /// Add a list of card to the player's deck
@@ -94,7 +90,7 @@ public class PlayerMasterController : MonoBehaviour
 
     public void StartTurn()
     {
-        DisplayBoardMovableTiles(5);
+        //DisplayBoardMovableTiles(5);
     }
 
     public void DisplayBoardMovableTiles(int range)
@@ -112,9 +108,45 @@ public class PlayerMasterController : MonoBehaviour
         return boardManager.CanMove(t);
     }
 
-    public void MovePlayer()
+    public void MovePlayer(BoardTileScript b)
     {
         print("Moving Player");
-        playerSelectionScript.MovePlayer();
+        playerTokenScript.MoveToken(b);
+    }
+
+    internal void EnterRoom(RoomEntryPoint entryPoint)
+    {
+        playerTokenScript.EnterRoom(entryPoint);
+    }
+
+    internal void SetCurrentTile(BoardTileScript tileToSet)
+    {
+        playerTokenScript.CurrentTile = tileToSet;
+    }
+
+    public RoomScript GetCurrentRoom()
+    {
+        return playerTokenScript.CurrentRoom;
+    }
+
+    public void SetCurrentRoom(RoomScript room)
+    {
+        playerTokenScript.CurrentRoom = room;
+    }
+
+    public void MovePlayer(Vector3 v)
+    {
+        print("Moving Player");
+        playerTokenScript.MoveToken(v);
+    }
+
+    internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
+    {
+        playerTokenScript.ExitRoom(roomEntryBoardTileScript, targetTile);
+    }
+
+    internal void SetPosition(Vector3 newPosition)
+    {
+        playerTokenScript.transform.position = newPosition; 
     }
 }
