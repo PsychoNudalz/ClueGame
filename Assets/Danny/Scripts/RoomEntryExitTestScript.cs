@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class RoomEntryExitTestScript : MonoBehaviour
 {
-    [SerializeField] PlayerTokenScript[] players;
+    [SerializeField] PlayerMasterController[] players;
     RoomScript room;
     [SerializeField] RoomEntryBoardTileScript[] entries;
     [SerializeField] BoardTileScript[] targetTiles;
@@ -28,9 +28,9 @@ public class RoomEntryExitTestScript : MonoBehaviour
     private void Start()
     {
         room = GameObject.FindObjectOfType<RoomScript>();
-        foreach(PlayerTokenScript player in players)
+        foreach (PlayerMasterController player in players)
         {
-            player.SetCharacter(player.Character);
+            player.SetCharacter(player.GetCharacter());
         }
     }
 
@@ -97,11 +97,11 @@ public class RoomEntryExitTestScript : MonoBehaviour
         string text = "Characters in room\n";
         for(int i = 0; i < room.PlayerSlots.Length; i++)
         {
-            PlayerTokenScript player = room.PlayerSlots[i].GetCharacterInSlot();
+            PlayerMasterController player = room.PlayerSlots[i].GetCharacterInSlot();
 
             if(player != null)
             {
-                text += String.Format("Slot {0} : {1}\n", i + 1, player.CharacterName); 
+                text += String.Format("Slot {0} : {1}\n", i + 1, player.GetCharacter()); 
             }
             else
             {
@@ -113,12 +113,12 @@ public class RoomEntryExitTestScript : MonoBehaviour
 
     public void EnterRoom1(string character)
     {
-        PlayerTokenScript player = null;
-        foreach(PlayerTokenScript playerTokenScript in GameObject.FindObjectsOfType<PlayerTokenScript>())
+        PlayerMasterController player = null;
+        foreach(PlayerMasterController playerController in GameObject.FindObjectsOfType<PlayerMasterController>())
         {
-            if (playerTokenScript.Character.ToString().Equals(character))
+            if (playerController.GetCharacter().ToString().Equals(character))
             {
-                player = playerTokenScript;
+                player = playerController;
                 break;
             }
         }
@@ -127,12 +127,12 @@ public class RoomEntryExitTestScript : MonoBehaviour
 
     public void EnterRoom2(string character)
     {
-        PlayerTokenScript player = null;
-        foreach (PlayerTokenScript playerTokenScript in GameObject.FindObjectsOfType<PlayerTokenScript>())
+        PlayerMasterController player = null;
+        foreach (PlayerMasterController playerController in GameObject.FindObjectsOfType<PlayerMasterController>())
         {
-            if (playerTokenScript.Character.ToString().Equals(character))
+            if (playerController.GetCharacter().ToString().Equals(character))
             {
-                player = playerTokenScript;
+                player = playerController;
                 break;
             }
         }
@@ -141,12 +141,12 @@ public class RoomEntryExitTestScript : MonoBehaviour
 
     public void ExitRoom1(string character)
     {
-        PlayerTokenScript player = null;
-        foreach (PlayerTokenScript playerTokenScript in GameObject.FindObjectsOfType<PlayerTokenScript>())
+        PlayerMasterController player = null;
+        foreach (PlayerMasterController playerController in GameObject.FindObjectsOfType<PlayerMasterController>())
         {
-            if (playerTokenScript.Character.ToString().Equals(character))
+            if (playerController.GetCharacter().ToString().Equals(character))
             {
-                player = playerTokenScript;
+                player = playerController;
                 break;
             }
         }
@@ -155,10 +155,10 @@ public class RoomEntryExitTestScript : MonoBehaviour
 
     public void ExitRoom2(string character)
     {
-        PlayerTokenScript player = null;
-        foreach (PlayerTokenScript playerTokenScript in GameObject.FindObjectsOfType<PlayerTokenScript>())
+        PlayerMasterController player = null;
+        foreach (PlayerMasterController playerTokenScript in GameObject.FindObjectsOfType<PlayerMasterController>())
         {
-            if (playerTokenScript.Character.ToString().Equals(character))
+            if (playerTokenScript.GetCharacter().ToString().Equals(character))
             {
                 player = playerTokenScript;
                 break;

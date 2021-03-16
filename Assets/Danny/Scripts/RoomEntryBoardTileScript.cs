@@ -13,6 +13,8 @@ public class RoomEntryBoardTileScript : BoardTileScript
     public Room Room { get => room; set => room = value; }
     public RoomScript RoomScript { get => roomScript; set => roomScript = value; }
     public RoomEntryPoint EntryPoint { get => entryPoint; set => entryPoint = value; }
+    BoardTileScript exitTarget;
+
 
     private void Start()
     {
@@ -71,19 +73,27 @@ public class RoomEntryBoardTileScript : BoardTileScript
     {
         if(other.gameObject.tag.Equals("Player") && other.transform.position == transform.position)
         {
-            PlayerTokenScript player = other.GetComponent<PlayerTokenScript>();
-            if (!player.IsInRoom())
+            PlayerTokenScript playerToken = other.GetComponent<PlayerTokenScript>();
+            PlayerMasterController playerController = playerToken.GetController();
+            if (!playerController.IsInRoom())
             {
-                StartCoroutine(EnterRoom(player));
+                StartCoroutine(EnterRoom(playerController));
+            }
+            else
+            {
+                playerController.SetCurrentTile(this);
+                playerController.MovePlayer(exitTarget);
+                exitTarget = null;
+                
             }
         }
     }
 
-    IEnumerator EnterRoom(PlayerTokenScript player)
+    IEnumerator EnterRoom(PlayerMasterController player)
     {
         door.OpenDoor();
         yield return new WaitForSeconds(0.8f);
-        player.CurrentTile = this;
+        player.SetCurrentTile(this);
         player.EnterRoom(entryPoint);
         yield return new WaitForSeconds(2f);
         door.CloseDoor();
@@ -96,20 +106,24 @@ public class RoomEntryBoardTileScript : BoardTileScript
         return $"{TileType} Tile ({room}) located at ({GridPosition.x} : {GridPosition.y})";
     }
 
-    internal void exitRoom()
+    internal void ExitRoom(PlayerMasterController playerToRemove, BoardTileScript targetTile)
     {
-        
+        StartCoroutine(ExitRoomDelay(playerToRemove, targetTile));
     }
 
-    public IEnumerator ExitRoom(PlayerTokenScript playerToRemove, BoardTileScript targetTile)
+    public IEnumerator ExitRoomDelay(PlayerMasterController playerToRemove, BoardTileScript targetTile)
     {
         //print(playerToRemove.Character + " exiting via " + this.transform);
-        playerToRemove.transform.position = entryPoint.transform.position;
+        //playerToRemove.CurrentRoom = null;
+        playerToRemove.SetPosition(entryPoint.transform.position);
+        playerToRemove.SetCurrentTile(this);
         door.OpenDoor();
         yield return new WaitForSeconds(1f);
         playerToRemove.ExitRoom(this, targetTile);
         yield return new WaitForSeconds(1.5f);
         door.CloseDoor();
-
+        exitTarget = targetTile;
+        yield return new WaitForSeconds(2f);
+        playerToRemove.SetCurrentRoom(null);
     }
 }

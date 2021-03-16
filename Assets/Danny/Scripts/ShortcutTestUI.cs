@@ -8,7 +8,7 @@ public class ShortcutTestUI : MonoBehaviour
     [SerializeField] private Transform entryButtonTransform;
     [SerializeField] private Button exitButton;
     [SerializeField] private Button shortcutButton;
-    private PlayerTokenScript player;
+    private PlayerMasterController player;
     private BoardManager boardManager;
     private Button[] entryButtons;
     private BoardTileScript exitTile;
@@ -16,7 +16,7 @@ public class ShortcutTestUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = FindObjectOfType<PlayerTokenScript>();
+        player = FindObjectOfType<PlayerMasterController>();
         boardManager = FindObjectOfType<BoardManager>();
         entryButtons = entryButtonTransform.GetComponentsInChildren<Button>();
         exitTile = boardManager.GetTileFromGrid(11, 9);
@@ -52,6 +52,6 @@ public class ShortcutTestUI : MonoBehaviour
 
     public void ExitRoom()
     {
-        player.CurrentRoom.RemovePlayerFromRoom(player, exitTile);
+        player.GetCurrentRoom().RemovePlayerFromRoom(player, exitTile);
     }
 }

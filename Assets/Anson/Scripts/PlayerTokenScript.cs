@@ -11,6 +11,7 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] private Color characterColour;
     [SerializeField] private string characterName;
     private StartTileScript startTile;
+    private PlayerMasterController controller;
 
     [Header("Movement")]
     [SerializeField] Animator animator;
@@ -56,34 +57,38 @@ public class PlayerTokenScript : MonoBehaviour
 
             if (currentEntryPoint != null)
             {
-                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) <= 0.01f)
+                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) == 0f)
                 {
-                    currentEntryPoint.RoomScript.AddPlayer(this);
+                    currentEntryPoint.RoomScript.AddPlayer(controller);
                     currentEntryPoint = null;
                     currentTile.GetComponent<BoardTileScript>().PlayerToken = null;
                     currentTile = null;
                 }
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, currentEntryPoint.transform.position, 0.99f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, currentEntryPoint.transform.position, Time.deltaTime);
                 }
             }
             if (currentExitPoint != null)
             {
-                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) <= 0.01f)
+                if (Vector3.Distance(transform.position, currentExitPoint.transform.position) == 0f)
                 {
-
                     currentTile = currentExitPoint;
                     currentExitPoint = null;
-                    MoveToken(roomExitTileTarget);
                     roomExitTileTarget = null;
+                    MoveToken(roomExitTileTarget);
                 }
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position, currentExitPoint.transform.position, 0.99f * Time.deltaTime);
+                    transform.position = Vector3.MoveTowards(transform.position, currentExitPoint.transform.position, Time.deltaTime);
                 }
             }
         }
+    }
+
+    internal PlayerMasterController GetController()
+    {
+        return controller;
     }
 
     public bool IsInRoom()
@@ -161,6 +166,7 @@ public class PlayerTokenScript : MonoBehaviour
             if (character.Equals(p.GetCharacter()))
             {
                 p.PlayerTokenScript = this;
+                controller = p;
                 return true;
             }
         }
@@ -170,12 +176,11 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void MoveToken(BoardTileScript newTile)
     {
-        if (currentRoom != null)
-        {
-            currentRoom.RemovePlayerFromRoom(this, newTile);
-        }
+
+        currentEntryPoint = null;
+        currentExitPoint = null;
         targetTile = newTile;
-        currentTile.SetToken(null);
+        
         targetTile.SetToken(gameObject);
         isMove = true;
         startMoveTime = Time.time;
@@ -253,6 +258,6 @@ public class PlayerTokenScript : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         currentTile = shortcutEnd;
         ShortcutBoardTileScript currentShortcut = currentTile.GetComponent<ShortcutBoardTileScript>();
-        currentShortcut.RoomScript.AddPlayer(this);
+        currentShortcut.RoomScript.AddPlayer(this.transform.GetComponent<PlayerMasterController>());
     }
 }

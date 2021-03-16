@@ -29,7 +29,14 @@ public class RoundManager : MonoBehaviour
             playerController = turnController.GetCurrentPlayer();
 
         }
-        playerController.MovePlayer(b);
+        if (playerController.PlayerTokenScript.IsInRoom())
+        {
+            playerController.GetCurrentRoom().RemovePlayerFromRoom(playerController, b);
+        }
+        else
+        {
+            playerController.MovePlayer(b);
+        }
         if (boardManager == null)
         {
             boardManager = FindObjectOfType<BoardManager>();
