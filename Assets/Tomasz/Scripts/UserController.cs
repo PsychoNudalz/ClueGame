@@ -2,17 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class UserController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //private GameManager gM;
+    //private RoundManager rM;
+    public CharacterName SelectedChar;
+    public WeaponName SelectedWeapon;
+    public RoomName SelectedName;
+
+    public void RollDice()
     {
-        
+        Debug.Log("Rolling Dice");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void MoveCursor() { }
+
+    public void SelectTile() { }
+
+    public void MakeSuggestion() { }
+
+    public void SetCharacter() { }
+
+    public void SetWeapon() { }
+
+    public void SetRoom() { }
+
+    public void PassSelected() { }
+
+    public void MakeAccusation() { }
+
+    public void EndTurn() { }
 }

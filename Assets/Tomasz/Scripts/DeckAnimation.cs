@@ -12,13 +12,13 @@ public class DeckAnimation : MonoBehaviour
     {
         deckAnimator = GetComponent<Animator>();
     }
-    public void goUp()
+    public void GoUp()
     {
         isUp = true;
         deckAnimator.SetBool("isUp", isUp);
     }
 
-    public void goDown()
+    public void GoDown()
     {
         
         
