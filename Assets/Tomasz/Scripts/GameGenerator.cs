@@ -50,11 +50,20 @@ public class GameGenerator : MonoBehaviour
         playableCards = playableCards.OrderBy(a => System.Guid.NewGuid()).ToList();
     }
 
+    /// <summary>
+    /// Returns a list of 3 answer cards in order character, weapon, room;
+    /// </summary>
+    /// <returns>List of answer cards</returns>
     public List<Card> GetAnswers()
     {
         return answers;
     }
 
+    /// <summary>
+    /// **WIP** Returns a list of lists where each list consists of cards for each player
+    /// </summary>
+    /// <param name="numberOfPlayers"></param>
+    /// <returns></returns>
     public List<Card> GetPlaybleCardsByPlayers(int numberOfPlayers)
     {
 
@@ -63,7 +72,10 @@ public class GameGenerator : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// Returns a list of lists where each list consists of 3 random playable cards (for 6 players)
+    /// </summary>
+    /// <returns></returns>
     public List<List<Card>> GetSixSetsOfCards()
     {
         setOfcards = new List<List<Card>>();

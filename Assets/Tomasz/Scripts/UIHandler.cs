@@ -13,45 +13,41 @@ public class UIHandler : MonoBehaviour
     public GameGenerator gameGen;
     public List<CardSlot> cardSlots;
     public Animator shownCard;
-    public TextMeshProUGUI txt;
-    public Image img;
+    private TextMeshProUGUI txt;
+    private Image img;
+    public UserController userController;
+    bool areControlsFrozen = false;
     private void Start()
     {
+        userController = FindObjectOfType<UserController>();
         gameGen = FindObjectOfType<GameGenerator>();
         gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
-        deck = gameGen.GetSixSetsOfCards()[0];
-
-
+        //deck = gameGen.GetSixSetsOfCards()[0];
+        deck = gameGen.GetPlaybleCardsByPlayers(1);
         int i = 0;
         foreach (CardSlot cs in cardSlots)
         {
-
             if (i < deck.Count())
             {
 
                 cs.SetCard(deck[i]);
                 cs.SetVisible();
             }
-
             i++;
         }
         SetNamesColours();
-
     }
     public void SetNamesColours()
     {
         foreach (CardSlot cs in cardSlots)
         {
-
             img = cs.GetComponent<Image>();
             txt = cs.GetComponentInChildren<TextMeshProUGUI>();
             if (cs.isVisible)
             {
-
                 txt.text = cs.card.name;
-
                 switch (cs.card.GetType().ToString())
                 {
                     case "WeaponCard":
@@ -69,27 +65,23 @@ public class UIHandler : MonoBehaviour
                             img.color = Color.blue;
                             break;
                         }
-
                 }
-
             }
             else
             {
-
                 img.enabled = false;
                 txt.text = "";
             }
-
         }
     }
 
-    bool areControlsFrozen = false;
+    
     public void RollDiceButton()
     {
         if (!areControlsFrozen)
         {
             areControlsFrozen = true;
-            Debug.Log("Roll Dice Here");
+            userController.RollDice();
             areControlsFrozen = false;
         }
 
@@ -102,23 +94,17 @@ public class UIHandler : MonoBehaviour
         if (!areControlsFrozen)
         {
             areControlsFrozen = true;
-            Debug.Log("Make Suggestion Here");
-
-
-            shownCard.SetBool("show", true);
-
+            DisplayMenuSuggestion();
             areControlsFrozen = false;
         }
     }
 
-    private void CancelSuggestion() {
+    private void CancelSuggestionButton() {
         
         if (!areControlsFrozen)
         {
             areControlsFrozen = true;
-
-            shownCard.SetBool("show", false);
-
+            Debug.Log("Cancel suggestion");
             areControlsFrozen = false;
         }
     }
