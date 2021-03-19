@@ -1,6 +1,10 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class Card : MonoBehaviour
 {
-    new Enum name;
+    new public Enum names;
+
+
 }
