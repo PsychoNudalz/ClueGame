@@ -34,18 +34,7 @@ public class ShortcutBoardTileScript : BoardTileScript
             }
         }
     }
-    /*
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag.Equals("Player") && other.transform.position == transform.position)
-        {
-            PlayerTokenScript player = other.GetComponent<PlayerTokenScript>();
-            if (!player.IsInRoom())
-            {
-                roomScript.AddPlayer(player);
-            }
-        }
-    }*/
+    
 
     override
     public string ToString()

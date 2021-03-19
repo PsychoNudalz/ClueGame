@@ -67,12 +67,6 @@ public class RoomScript : MonoBehaviour
         return entryTiles;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public static Room GetRoomFromString(string roomString)
     {
         switch (roomString)
@@ -133,10 +127,29 @@ public class RoomScript : MonoBehaviour
         {
             RoomEntryBoardTileScript exitPoint =  FindClosestEntryTile(targetTile);
             exitPoint.ExitRoom(playerToRemove, targetTile);
+            playerToRemove.SetCurrentRoom(null);
         }
         else
         {
             Debug.LogError(player.GetCharacter() + " not found in " + Room);
+        }
+    }
+
+    internal void RemovePlayerFromRoomViaShortcut(PlayerMasterController player)
+    {
+        PlayerMasterController playerToRemove = null;
+        foreach (RoomPlayerSlot slot in playerSlots)
+        {
+            if (slot.GetCharacterInSlot() != null && slot.GetCharacterInSlot().Equals(player))
+            {
+                playerToRemove = slot.RemovePlayerFromSlot();
+                break;
+            }
+
+        }
+        if(playerToRemove != null)
+        {
+            playerToRemove.SetCurrentRoom(null);
         }
     }
 
@@ -152,7 +165,6 @@ public class RoomScript : MonoBehaviour
             if (!slot.SlotOccupied())
             {
                 //print(weaponTokenScript.WeaponType + " added in " + slot.transform.ToString() + " in the " + room);
-                //weaponTokenScript.transform.position = slot.transform.position;
                 slot.AddWeaponToSlot(weaponTokenScript);
                 weaponTokenScript.CurrentRoom = this;
                 weaponTokenScript.MoveToken(slot.transform.position);
@@ -161,7 +173,7 @@ public class RoomScript : MonoBehaviour
         }
     }
 
-    internal void RemoveWeaponFromRoom(WeaponTokenScript weapon)
+    internal WeaponTokenScript RemoveWeaponFromRoom(WeaponTokenScript weapon)
     {
         WeaponTokenScript weaponToRemove = null;
         foreach (RoomWeaponSlot slot in weaponSlots)
@@ -171,8 +183,8 @@ public class RoomScript : MonoBehaviour
                 weaponToRemove = slot.RemoveWeaponFromSlot();
                 break;
             }
-
         }
+        return weaponToRemove;
     }
 
     public bool WeaponSlotsEmpty()

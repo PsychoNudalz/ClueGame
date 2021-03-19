@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class AnsonTestScript : MonoBehaviour
+public class PlayerMovementTestScript : MonoBehaviour
 {
     [SerializeField] PlayerMasterController playerMasterController;
     [SerializeField] BoardManager boardManager;
     [SerializeField] Dice dice;
+    [SerializeField] Button shortcutButton;
+    [SerializeField] Button rollButton;
+    [SerializeField] Button resetButton;
+
     bool diceRolled = false;
 
     private void Awake()
@@ -30,21 +34,29 @@ public class AnsonTestScript : MonoBehaviour
             //playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
             dice.ResetDice();
         }
+        rollButton.interactable = dice.ReadyToRoll();
+        resetButton.interactable = dice.CanReset();
+        shortcutButton.interactable = playerMasterController.CanTakeShortcut();
     }
 
-    public void RollDie(InputAction.CallbackContext callbackContext)
+    public void RollDice(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.performed)
         {
-            RollDie();
+            RollDice();
         }
     }
-    public void RollDie()
+    public void RollDice()
     {
         //Need to be replaced with results of die
         dice.RollDice();
         //playerMasterController.PlayerSelectionScript.MoveAmount = dice.GetValue();
         diceRolled = true;
+    }
+
+    public void ResetDice()
+    {
+        dice.ResetDice();
     }
 
     public void AssignAllComponents(InputAction.CallbackContext callbackContext)
@@ -68,6 +80,11 @@ public class AnsonTestScript : MonoBehaviour
         {
             dice = FindObjectOfType<Dice>();
         }
+    }
+
+    public void TakeShortcut()
+    {
+        playerMasterController.TakeShortcut();
     }
 
 }
