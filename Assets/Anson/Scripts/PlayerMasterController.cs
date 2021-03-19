@@ -22,7 +22,7 @@ public class PlayerMasterController : MonoBehaviour
     private void Awake()
     {
 
-        playerTokenScript = GetComponent<PlayerTokenScript>();
+        //playerTokenScript = GetComponent<PlayerTokenScript>();
 
         playerStatsScript = GetComponent<PlayerStatsScript>();
 
@@ -31,8 +31,8 @@ public class PlayerMasterController : MonoBehaviour
 
         //test
 
-        PlayerMasterController playerMasterController = FindObjectOfType<PlayerMasterController>();
-        print((int )playerMasterController.GetCharacter());
+        //PlayerMasterController playerMasterController = FindObjectOfType<PlayerMasterController>();
+        //print((int )playerMasterController.GetCharacter());
 
     }
 
