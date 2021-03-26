@@ -2,8 +2,16 @@ fileFormatVersion: 2
 guid: cb80272e765216443a0b6f47c32c236d
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Plastic
+    second: {fileID: 2100000, guid: 1e49085807add2943a905495b09eb925, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -12,8 +20,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: b0b3cb3e64a6f674d97d31db57d72c51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp Black
+    second: {fileID: 2100000, guid: 5c3f875b9b3bd854faa53b276f24b1d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: edf74f84c8f30154288b4b9d9ab1177c, type: 2}
+    second: {fileID: 2100000, guid: 5c838f2ed8d63d34388747d09aab6577, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
