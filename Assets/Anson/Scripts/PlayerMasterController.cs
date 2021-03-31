@@ -149,4 +149,19 @@ public class PlayerMasterController : MonoBehaviour
     {
         playerTokenScript.transform.position = newPosition; 
     }
+    /// <summary>
+    /// check if the player is eleminated
+    /// </summary>
+    /// <returns>is the player eliminated</returns>
+    public bool IsEliminated()
+    {
+        return playerStatsScript.IsEliminated;
+    }
+    /// <summary>
+    /// eliminate player
+    /// </summary>
+    public void eliminatePlayer()
+    {
+        playerStatsScript.IsEliminated = true;
+    }
 }
