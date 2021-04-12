@@ -45,6 +45,7 @@ public class AnsonTestScript : MonoBehaviour
         dice.RollDice();
         //playerMasterController.PlayerSelectionScript.MoveAmount = dice.GetValue();
         diceRolled = true;
+        StartCoroutine(DelayResetDice(5f));
     }
 
     public void AssignAllComponents(InputAction.CallbackContext callbackContext)
@@ -68,6 +69,12 @@ public class AnsonTestScript : MonoBehaviour
         {
             dice = FindObjectOfType<Dice>();
         }
+    }
+
+    IEnumerator DelayResetDice(float t)
+    {
+        yield return new WaitForSeconds(t);
+        dice.ResetDice();
     }
 
 }

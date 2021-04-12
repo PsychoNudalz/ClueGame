@@ -206,7 +206,8 @@ public class BoardManager : MonoBehaviour
         {
             return false;
         }
-        ShowMovable(roomScript.GetEntryTiles(), range);
+
+        ShowMovable(roomScript.GetEntryTiles(), range-1);
         return true;
     }
 
