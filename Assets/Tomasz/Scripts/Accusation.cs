@@ -6,9 +6,9 @@ public class Accusation : MonoBehaviour
 {
 
     
-    public Card currentWeapon;
-    public Card currentRoom;
-    public Card currentCharacter;
+    public WeaponCard currentWeapon;
+    public RoomCard currentRoom;
+    public CharacterCard currentCharacter;
 
     public void Accuse() {
         if (currentCharacter != null & currentRoom != null & currentWeapon != null)
@@ -16,14 +16,14 @@ public class Accusation : MonoBehaviour
             Debug.Log("Accuse " + currentWeapon.name + " "+ currentRoom.name + " " + currentCharacter.name);
         }
     }
-    public void SetWeapon(Card c) {
+    public void SetWeapon(WeaponCard c) {
         currentWeapon = c;
     }
-    public void SetCharacter(Card c)
+    public void SetCharacter(CharacterCard c)
     {
         currentCharacter = c;
     }
-    public void SetRoom(Card c)
+    public void SetRoom(RoomCard c)
     {
         currentRoom = c;
     }
