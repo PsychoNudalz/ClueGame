@@ -7,4 +7,5 @@ using UnityEngine;
 //public enum WeaponName { Dagger, Candlestick , Revolver , Rope , LeadPiping , Spanner }
 public class WeaponCard : Card
 {
+    public WeaponEnum weaponEnum;
 }
