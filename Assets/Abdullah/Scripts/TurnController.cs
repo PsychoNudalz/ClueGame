@@ -110,6 +110,7 @@ public class TurnController : MonoBehaviour
 
     public void Win() 
     {
-        
+        //
+        print("You Win!");
     }
 }
