@@ -87,6 +87,21 @@ public class GameGenerator : MonoBehaviour
         }
         return setOfcards;
     }
-
+    /// <summary>
+    /// chekc if the cards passed matches the answer
+    /// </summary>
+    /// <param name="accusation"></param>
+    /// <returns></returns>
+    public bool IsMatchAnswer(List<Card> accusation)
+    {
+        foreach(Card a in answers)
+        {
+            if (!accusation.Contains(a))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }

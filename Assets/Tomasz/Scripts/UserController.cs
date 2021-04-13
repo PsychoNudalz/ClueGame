@@ -8,7 +8,7 @@ public class UserController : MonoBehaviour
     private RoundManager rM;
     public CharacterName SelectedChar;
     public WeaponName SelectedWeapon;
-    public RoomName SelectedName;
+    public RoomEnum SelectedName;
 
     private void Awake()
     {

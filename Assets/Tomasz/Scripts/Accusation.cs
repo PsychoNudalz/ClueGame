@@ -6,24 +6,31 @@ public class Accusation : MonoBehaviour
 {
 
     
-    public WeaponCard currentWeapon;
-    public RoomCard currentRoom;
-    public CharacterCard currentCharacter;
+    public Card currentWeapon;
+    public Card currentRoom;
+    public Card currentCharacter;
+    [SerializeField] RoundManager roundManager;
 
     public void Accuse() {
         if (currentCharacter != null & currentRoom != null & currentWeapon != null)
         {
             Debug.Log("Accuse " + currentWeapon.name + " "+ currentRoom.name + " " + currentCharacter.name);
+            if (!roundManager)
+            {
+                roundManager = FindObjectOfType<RoundManager>();
+            }
+            Card[] acc = { currentCharacter, currentWeapon, currentRoom };
+            roundManager.MakeAccusation(new List<Card>(acc));
         }
     }
-    public void SetWeapon(WeaponCard c) {
+    public void SetWeapon(Card c) {
         currentWeapon = c;
     }
-    public void SetCharacter(CharacterCard c)
+    public void SetCharacter(Card c)
     {
         currentCharacter = c;
     }
-    public void SetRoom(RoomCard c)
+    public void SetRoom(Card c)
     {
         currentRoom = c;
     }
