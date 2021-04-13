@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/// <summary>
+/// For handling the player/ character's token
+/// </summary>
 public class PlayerTokenScript : MonoBehaviour
 {
     [Header("Chracter Token Stuff")]
@@ -56,7 +58,7 @@ public class PlayerTokenScript : MonoBehaviour
         }
         else
         {
-
+            //Anson: code for getting the smooth animation for the player to enter the room (it is a bit spaghetti)
             if (currentEntryPoint != null)
             {
                 if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) == 0f)
@@ -98,6 +100,11 @@ public class PlayerTokenScript : MonoBehaviour
         return currentRoom != null;
     }
 
+    /// <summary>
+    /// Setting the character this token will be and the tile it will start from
+    /// </summary>
+    /// <param name="setCharacter">Enum of the character</param>
+    /// <param name="tile">thile for which it starts from</param>
     public void SetCharacter(CharacterEnum setCharacter, StartTileScript tile)
     {
         startTile = tile;
@@ -105,39 +112,42 @@ public class PlayerTokenScript : MonoBehaviour
         //TODO Set start tile colour.
         SetCharacter(setCharacter);
     }
-
+    /// <summary>
+    /// Setting the character this token will be 
+    /// </summary>
+    /// <param name="setCharacter">Enum of the character</param>
     public void SetCharacter(CharacterEnum setCharacter)
     {
         switch (setCharacter)
         {
             case CharacterEnum.MissScarlett:
                 character = setCharacter;
-                characterColour = new Color(255, 0, 0);
+                characterColour = new Color(2, 0, 0);
                 characterName = "Miss Scarlett";
                 break;
             case CharacterEnum.ColMustard:
                 character = setCharacter;
-                characterColour = new Color(255, 255, 0);
+                characterColour = new Color(2, 2, 0);
                 characterName = "Col Mustard";
                 break;
             case CharacterEnum.ProfPlum:
                 character = setCharacter;
-                characterColour = new Color(255, 0, 255);
+                characterColour = new Color(2, 0, 2);
                 characterName = "Prof Plum";
                 break;
             case CharacterEnum.RevGreen:
                 character = setCharacter;
-                characterColour = new Color(0, 255, 0);
+                characterColour = new Color(0, 2, 0);
                 characterName = "Rev Green";
                 break;
             case CharacterEnum.MrsPeacock:
                 character = setCharacter;
-                characterColour = new Color(0, 150, 255);
+                characterColour = new Color(0, 2, 2);
                 characterName = "Mrs Peacock";
                 break;
             case CharacterEnum.MrsWhite:
                 character = setCharacter;
-                characterColour = new Color(255, 255, 255);
+                characterColour = new Color(2, 2, 2);
                 characterName = "Mrs White";
                 break;
         }
@@ -146,7 +156,10 @@ public class PlayerTokenScript : MonoBehaviour
         GetComponentInChildren<Renderer>().material.SetColor("_MainColour", characterColour);
         
     }
-
+    /// <summary>
+    /// Setting the colour of the character
+    /// </summary>
+    /// <returns></returns>
     public Color GetCharacterColour()
     {
         return characterColour;

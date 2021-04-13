@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum TileTypeEnum { General, Start, RoomEntry, Shortcut };
-
+/// <summary>
+/// Super class for all tiles
+/// </summary>
 public class BoardTileScript : MonoBehaviour
 {
     [SerializeField] Vector2 gridPosition;
@@ -24,12 +26,20 @@ public class BoardTileScript : MonoBehaviour
         Init();
     }
 
+    /// <summary>
+    /// initialise and finding the needed componenets for the tile
+    /// includes boardTileEffectHandler, boardManager
+    /// 
+    /// </summary>
     protected void Init()
     {
         boardTileEffectHandler = GetComponent<BoardTileEffectHandlerScript>();
         boardManager = FindObjectOfType<BoardManager>();
     }
 
+    /// <summary>
+    /// disable the select effect on the tile
+    /// </summary>
     public virtual void ClearTile()
     {
         //print(this + " cleared");
@@ -38,7 +48,9 @@ public class BoardTileScript : MonoBehaviour
             boardTileEffectHandler.DeselectTile();
         }
     }
-
+    /// <summary>
+    /// enable the select effect on the tile
+    /// </summary>
     public virtual void SelectTile()
     {
         //print(this + " select");
@@ -48,6 +60,11 @@ public class BoardTileScript : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// setting the glow on the tile
+    /// </summary>
+    /// <param name="b">if the tile should glow</param>
     public virtual void GlowTile(bool b)
     {
         try
@@ -71,7 +88,10 @@ public class BoardTileScript : MonoBehaviour
             Debug.LogError(this + " Missing boardTileEffect");
         }
     }
-
+    /// <summary>
+    /// setting the player token that is currently on this tile
+    /// </summary>
+    /// <param name="token"> player token on this tile</param>
     public virtual void SetToken(GameObject token)
     {
         playerToken = token;
@@ -85,11 +105,18 @@ public class BoardTileScript : MonoBehaviour
         return playerToken == null;
     } 
 
+    /// <summary>
+    /// Get neighbouring tiles
+    /// </summary>
     public void GetTileNeighbours()
     {
         GameObject.FindObjectOfType<BoardManager>().GetTileNeighbours(this.GetComponent<BoardTileScript>());
     }
 
+    /// <summary>
+    /// check if the player can move to this tile
+    /// </summary>
+    /// <returns>if the player can move to this tile</returns>
     public bool CanMove()
     {
         if (boardManager)
