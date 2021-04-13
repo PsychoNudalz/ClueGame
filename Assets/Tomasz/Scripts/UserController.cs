@@ -6,9 +6,9 @@ public class UserController : MonoBehaviour
 {
     //private GameManager gM;
     private RoundManager rM;
-    public CharacterName SelectedChar;
-    public WeaponName SelectedWeapon;
-    public RoomEnum SelectedName;
+    public CharacterEnum SelectedChar;
+    public WeaponEnum SelectedWeapon;
+    public Room SelectedName;
 
     private void Awake()
     {

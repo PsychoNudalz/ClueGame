@@ -8,7 +8,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] TurnController turnController;
     [SerializeField] PlayerMasterController playerController;
     [SerializeField] BoardManager boardManager;
-    [SerializeField] GameGenerator gameGenerator;
+    [SerializeField] CardManager gameGenerator;
     bool diceRolled = false;
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
@@ -22,7 +22,7 @@ public class RoundManager : MonoBehaviour
         playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
         dice = boardManager.GetComponentInChildren<Dice>();
-        gameGenerator = FindObjectOfType<GameGenerator>();
+        gameGenerator = FindObjectOfType<CardManager>();
     }
 
     private void FixedUpdate()

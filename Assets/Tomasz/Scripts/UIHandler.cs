@@ -10,7 +10,7 @@ public class UIHandler : MonoBehaviour
 {
 
     public List<Card> deck;
-    public GameGenerator gameGen;
+    public CardManager gameGen;
     public List<CardSlot> cardSlots;
     public Animator shownCard;
     private TextMeshProUGUI txt;
@@ -20,7 +20,7 @@ public class UIHandler : MonoBehaviour
     private void Start()
     {
         userController = FindObjectOfType<UserController>();
-        gameGen = FindObjectOfType<GameGenerator>();
+        gameGen = FindObjectOfType<CardManager>();
         gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();

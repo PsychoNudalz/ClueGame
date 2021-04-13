@@ -153,6 +153,8 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.CurrentTile = tileToSet;
     }
 
+
+    
     public RoomScript GetCurrentRoom()
     {
         return playerTokenScript.CurrentRoom;
