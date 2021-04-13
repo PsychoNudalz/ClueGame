@@ -14,7 +14,7 @@ public class RoundManager : MonoBehaviour
 
     private void Awake()
     {
-       
+        dice = FindObjectOfType<Dice>();
         turnController = FindObjectOfType<TurnController>();
         playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
