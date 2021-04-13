@@ -25,17 +25,7 @@ public class RoundManager : MonoBehaviour
     private void FixedUpdate()
     {
         DiceBehaviour();
-        if (!secondRollavailable && canRoll)
-        {
-            dice.RollDice();
-            secondRollavailable = true;
-        }
-        if (secondRollavailable)
-        {
-            dice.RollDice();
-            secondRollavailable = false;
-            canRoll = true;
-        }
+
     }
 
     void DiceBehaviour()
@@ -64,7 +54,17 @@ public class RoundManager : MonoBehaviour
     public void RollDice()
     {
         diceRolled = true;
-        dice.RollDice();
+        if (!secondRollavailable && canRoll)
+        {
+            dice.RollDice();
+            secondRollavailable = true;
+        }
+        if (secondRollavailable)
+        {
+            dice.RollDice();
+            secondRollavailable = false;
+            canRoll = true;
+        }
         StartCoroutine(DelayResetDice(5f));
     }
 
