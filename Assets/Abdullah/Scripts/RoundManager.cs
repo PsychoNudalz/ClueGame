@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class RoundManager : MonoBehaviour
 {
-    TurnController player;
-    Dice dice;
-    TurnController turnController;
-    PlayerMasterController playerController;
-    BoardManager boardManager;
+    [SerializeField] Dice dice;
+    [SerializeField] TurnController turnController;
+    [SerializeField] PlayerMasterController playerController;
+    [SerializeField] BoardManager boardManager;
+    bool diceRolled = false;
     bool secondRollavailable = false;
     bool canRoll = true;
+
 
     private void Awake()
     {
@@ -18,10 +19,41 @@ public class RoundManager : MonoBehaviour
         turnController = FindObjectOfType<TurnController>();
         playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
+        dice = boardManager.GetComponentInChildren<Dice>();
     }
 
-    void RollDice() 
+    private void FixedUpdate()
     {
+        DiceBehaviour();
+
+    }
+
+    void DiceBehaviour()
+    {
+        PlayerMasterController playerMasterController = turnController.GetCurrentPlayer();
+        if (dice.GetValue() > 0 && diceRolled)
+        {
+            diceRolled = false;
+            if (!boardManager.ShowMovable(playerMasterController.GetTile(), dice.GetValue()))
+            {
+                if (!boardManager.ShowMovable(playerMasterController.GetCurrentRoom(), dice.GetValue()))
+                {
+                    Debug.LogError("Failed to show boardManager movable");
+                }
+            }
+            //playerMasterController.DisplayBoardMovableTiles(dice.GetValue());
+            dice.ResetDice();
+        }
+    }
+    IEnumerator DelayResetDice(float t)
+    {
+        yield return new WaitForSeconds(t);
+        dice.ResetDice();
+    }
+
+    public void RollDice()
+    {
+        diceRolled = true;
         if (!secondRollavailable && canRoll)
         {
             dice.RollDice();
@@ -33,15 +65,12 @@ public class RoundManager : MonoBehaviour
             secondRollavailable = false;
             canRoll = true;
         }
+        StartCoroutine(DelayResetDice(5f));
     }
 
-    public void MovePlayer(BoardTileScript b) 
+    public void MovePlayer(BoardTileScript b)
     {
-        if (playerController == null)
-        {
-            playerController = turnController.GetCurrentPlayer();
-
-        }
+        playerController = turnController.GetCurrentPlayer();
         if (playerController.PlayerTokenScript.IsInRoom())
         {
             playerController.GetCurrentRoom().RemovePlayerFromRoom(playerController, b);
@@ -56,9 +85,9 @@ public class RoundManager : MonoBehaviour
 
         }
         boardManager.ClearMovable();
-        
+
     }
-    void ShowCard() 
+    public void ShowCard()
     {
         /*
         if getnextPlayer has card show Card
@@ -70,7 +99,7 @@ public class RoundManager : MonoBehaviour
          */
     }
 
-    void MakeSuggestion()
+    public void MakeSuggestion()
     {
     /*
       Player enters a room
@@ -81,7 +110,7 @@ public class RoundManager : MonoBehaviour
 
     }
 
-    void MakeAccusation() 
+    public void MakeAccusation()
     {
        /*Get player 3 chosen cards
         Check the players card against the 3 cards set at the start of the game
@@ -91,10 +120,12 @@ public class RoundManager : MonoBehaviour
        */
     }
 
-    void EndTurn()
+    public void EndTurn()
     {
-        player.SetCurrentPlayerToNext();
+        turnController.SetCurrentPlayerToNext();
         canRoll = true;
         secondRollavailable = false;
     }
+
+
 }

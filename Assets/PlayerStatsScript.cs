@@ -6,8 +6,10 @@ public class PlayerStatsScript : MonoBehaviour
 {
     [SerializeField] CharacterEnum character = CharacterEnum.Initial;
     [SerializeField] List<Card> deck = new List<Card>();
+    [SerializeField] bool isEliminated = false;
 
     public CharacterEnum Character { get => character;}
+    public bool IsEliminated { get => isEliminated; set => isEliminated = value; }
 
     /// <summary>
     /// Set the player's character

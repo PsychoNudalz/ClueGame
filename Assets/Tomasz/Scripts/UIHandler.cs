@@ -24,8 +24,8 @@ public class UIHandler : MonoBehaviour
         gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
-        //deck = gameGen.GetSixSetsOfCards()[0];
-        deck = gameGen.GetPlaybleCardsByPlayers(1);
+        deck = gameGen.GetSixSetsOfCards()[0];
+        //deck = gameGen.GetPlaybleCardsByPlayers(1);
         int i = 0;
         foreach (CardSlot cs in cardSlots)
         {
@@ -155,6 +155,12 @@ public class UIHandler : MonoBehaviour
     }
     public void SelectCardsToShow(List<Card> toShow) { 
     
+    }
+
+    public void EndTurn()
+    {
+        print("Pressed End turn");
+        userController.EndTurn();
     }
 }
 

@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Master controller for the player (character)
+/// it acts as a wrapper for the player to communicate with other controllers or managers and vis versa 
+/// to avoid super spaghetii code
+/// </summary>
 public class PlayerMasterController : MonoBehaviour
 {
 
@@ -36,6 +41,10 @@ public class PlayerMasterController : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// check if the player can take a short cut 
+    /// </summary>
+    /// <returns></returns>
     internal bool CanTakeShortcut()
     {
         return playerTokenScript.CanTakeShortcut();
@@ -93,6 +102,11 @@ public class PlayerMasterController : MonoBehaviour
         //DisplayBoardMovableTiles(5);
     }
 
+
+    /// <summary>
+    /// calls the boardManager to display all the tiles that it can move to according to the range of it's movement
+    /// </summary>
+    /// <param name="range">how far can the player move (normally the dice roll)</param>
     public void DisplayBoardMovableTiles(int range)
     {
         if (boardManager == null)
@@ -102,23 +116,38 @@ public class PlayerMasterController : MonoBehaviour
         boardManager.ShowMovable(GetTile(),range);
 
     }
-
+    /// <summary>
+    /// check if the player can move to a certain tile
+    /// </summary>
+    /// <param name="t">tile to be move towards</param>
+    /// <returns>if the player can move</returns>
     public bool CanMove(BoardTileScript t)
     {
         return boardManager.CanMove(t);
     }
 
+    /// <summary>
+    /// moving the player to a certain tile
+    /// </summary>
+    /// <param name="b">if the player can move to that tile</param>
     public void MovePlayer(BoardTileScript b)
     {
         print("Moving Player");
         playerTokenScript.MoveToken(b);
     }
 
+    /// <summary>
+    /// for entering in to a room
+    /// </summary>
+    /// <param name="entryPoint">tile for the room entry</param>
     internal void EnterRoom(RoomEntryPoint entryPoint)
     {
         playerTokenScript.EnterRoom(entryPoint);
     }
-
+    /// <summary>
+    /// setting the tile that the player is currently on
+    /// </summary>
+    /// <param name="tileToSet">tile that the player is currently on</param>
     internal void SetCurrentTile(BoardTileScript tileToSet)
     {
         playerTokenScript.CurrentTile = tileToSet;
@@ -134,6 +163,10 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.CurrentRoom = room;
     }
 
+    /// <summary>
+    /// moving the player to a certain position instead of tile
+    /// </summary>
+    /// <param name="v">vector3 position</param>
     public void MovePlayer(Vector3 v)
     {
         print("Moving Player");
@@ -148,5 +181,20 @@ public class PlayerMasterController : MonoBehaviour
     internal void SetPosition(Vector3 newPosition)
     {
         playerTokenScript.transform.position = newPosition; 
+    }
+    /// <summary>
+    /// check if the player is eleminated
+    /// </summary>
+    /// <returns>is the player eliminated</returns>
+    public bool IsEliminated()
+    {
+        return playerStatsScript.IsEliminated;
+    }
+    /// <summary>
+    /// eliminate player
+    /// </summary>
+    public void eliminatePlayer()
+    {
+        playerStatsScript.IsEliminated = true;
     }
 }
