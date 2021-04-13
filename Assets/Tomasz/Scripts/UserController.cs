@@ -5,14 +5,21 @@ using UnityEngine;
 public class UserController : MonoBehaviour
 {
     //private GameManager gM;
-    //private RoundManager rM;
+    private RoundManager rM;
     public CharacterName SelectedChar;
     public WeaponName SelectedWeapon;
     public RoomName SelectedName;
 
+    private void Awake()
+    {
+        if (!rM)
+        {
+            rM = FindObjectOfType<RoundManager>();
+        }
+    }
     public void RollDice()
     {
-        Debug.Log("Rolling Dice");
+        rM.RollDice();
     }
 
     public void MoveCursor() { }
@@ -31,5 +38,7 @@ public class UserController : MonoBehaviour
 
     public void MakeAccusation() { }
 
-    public void EndTurn() { }
+    public void EndTurn() {
+        rM.EndTurn();
+    }
 }

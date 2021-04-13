@@ -156,6 +156,12 @@ public class UIHandler : MonoBehaviour
     public void SelectCardsToShow(List<Card> toShow) { 
     
     }
+
+    public void EndTurn()
+    {
+        print("Pressed End turn");
+        userController.EndTurn();
+    }
 }
 
 

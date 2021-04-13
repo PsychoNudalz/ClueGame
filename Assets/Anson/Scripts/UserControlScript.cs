@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// this is for handling the cursor controls
+/// </summary>
 public class UserControlScript : MonoBehaviour
 {
     [Header("Cursor Control")]
@@ -101,4 +104,5 @@ public class UserControlScript : MonoBehaviour
         }
         cursor.transform.position = Vector3.Lerp(cursor.transform.position, targetPos, 40 * Time.deltaTime);
     }
+
 }

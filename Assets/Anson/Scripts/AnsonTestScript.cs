@@ -9,6 +9,7 @@ public class AnsonTestScript : MonoBehaviour
     [SerializeField] PlayerMasterController playerMasterController;
     [SerializeField] BoardManager boardManager;
     [SerializeField] Dice dice;
+    [SerializeField] TurnController turnController;
     bool diceRolled = false;
 
     private void Awake()
@@ -20,6 +21,7 @@ public class AnsonTestScript : MonoBehaviour
         if (dice.GetValue() > 0 && diceRolled)
         {
             diceRolled = false;
+            playerMasterController = turnController.GetCurrentPlayer();
             if (!boardManager.ShowMovable(playerMasterController.GetTile(), dice.GetValue()))
             {
                 if (!boardManager.ShowMovable(playerMasterController.GetCurrentRoom(), dice.GetValue()))
@@ -68,6 +70,10 @@ public class AnsonTestScript : MonoBehaviour
         if (dice == null)
         {
             dice = FindObjectOfType<Dice>();
+        }
+        if (!turnController)
+        {
+            turnController = FindObjectOfType<TurnController>();
         }
     }
 

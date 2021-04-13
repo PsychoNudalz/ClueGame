@@ -159,7 +159,7 @@ public class BoardManager : MonoBehaviour
                 pointer++;
                 foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
                 {
-                    Debug.Log("Getting more neighbour");
+                    //Debug.Log("Getting more neighbour");
                     if (!queue.Contains(b) && !neighbours.Contains(b))
                     {
                         neighbours.Add(b);

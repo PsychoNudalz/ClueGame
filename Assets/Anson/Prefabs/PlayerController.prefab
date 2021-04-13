@@ -44,9 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc5b6771ec368548992bdcf14b79319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursor: {fileID: 0}
   playerTokenScript: {fileID: 0}
-  playerStatsScript: {fileID: 0}
+  playerStatsScript: {fileID: 7051557086710446567}
   boardManager: {fileID: 0}
 --- !u!114 &7051557086710446567
 MonoBehaviour:
@@ -62,3 +61,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: 2
   deck: []
+  isEliminated: 0
