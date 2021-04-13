@@ -19,8 +19,10 @@ public class CardSlot : MonoBehaviour
     {
         card = c;
     }
-    public void SetVisible() {
+    public void SetVisible()
+    {
         isVisible = true;
+
     }
 
 
