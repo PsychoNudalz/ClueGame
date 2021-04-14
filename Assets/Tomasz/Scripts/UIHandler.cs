@@ -29,7 +29,7 @@ public class UIHandler : MonoBehaviour
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
 
         //Anson: this gets you the deck for the current player, call this when you need to update the UI
-        deck = userController.GetCurrentPlayer().GetCards();
+        deck = userController.GetCurrentPlayer().GetDeck();
 
         int i = 0;
         foreach (CardSlot cs in cardSlots)

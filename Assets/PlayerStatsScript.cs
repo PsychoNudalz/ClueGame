@@ -56,4 +56,31 @@ public class PlayerStatsScript : MonoBehaviour
         return flag;
     }
 
+
+    public Card FindCard(Card c)
+    {
+        if (deck.Contains(c))
+        {
+            Card temp = deck[deck.IndexOf(c)];
+            return temp;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public Card FindCard(List<Card> cards)
+    {
+        int i =0;
+        Card returnCard = null;
+        while (i < cards.Count && returnCard == null)
+        {
+            returnCard = FindCard(cards[i]);
+            i++;
+        }
+
+        return returnCard;
+    }
+
 }
