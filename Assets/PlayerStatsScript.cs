@@ -10,6 +10,7 @@ public class PlayerStatsScript : MonoBehaviour
 
     public CharacterEnum Character { get => character;}
     public bool IsEliminated { get => isEliminated; set => isEliminated = value; }
+    public List<Card> Deck { get => deck; set => deck = value; }
 
     /// <summary>
     /// Set the player's character
@@ -54,4 +55,5 @@ public class PlayerStatsScript : MonoBehaviour
         }
         return flag;
     }
+
 }

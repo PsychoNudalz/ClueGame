@@ -104,12 +104,12 @@ public class RoundManager : MonoBehaviour
 
     public void MakeSuggestion()
     {
-    /*
-      Player enters a room
-      Player makes a weapon and player suggestion
-      if other player has card -> show card
-      if no players have the card -> player can choose to make accusation or end turn
-     */
+        /*
+          Player enters a room
+          Player makes a weapon and player suggestion
+          if other player has card -> show card
+          if no players have the card -> player can choose to make accusation or end turn
+         */
 
     }
 
@@ -121,7 +121,8 @@ public class RoundManager : MonoBehaviour
         if they dont match -> player asked to make a second accusation
         if second accusation doesnt not match -> remove player from queue
         */
-        if(gameGenerator.IsMatchAnswer(cards)){
+        if (gameGenerator.IsMatchAnswer(cards))
+        {
             //code for wining
             print("PLAYER WIN");
         }
@@ -133,7 +134,7 @@ public class RoundManager : MonoBehaviour
             }
             else
             {
-                playerController.eliminatePlayer();
+                playerController.EliminatePlayer();
             }
         }
 
@@ -154,5 +155,14 @@ public class RoundManager : MonoBehaviour
     public void StartTurn()
     {
         playerController = turnController.GetCurrentPlayer();
+    }
+
+    /// <summary>
+    /// Gets the player controller for the current player
+    /// </summary>
+    /// <returns>player controller for the current player</returns>
+    public PlayerMasterController GetCurrentPlayer()
+    {
+        return turnController.GetCurrentPlayer();
     }
 }

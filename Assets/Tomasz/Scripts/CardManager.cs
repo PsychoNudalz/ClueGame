@@ -48,6 +48,7 @@ public class CardManager : MonoBehaviour
         playableCards.AddRange(characters);
 
         playableCards = playableCards.OrderBy(a => System.Guid.NewGuid()).ToList();
+        DealCardsToPlayers();
     }
 
     /// <summary>
@@ -88,7 +89,7 @@ public class CardManager : MonoBehaviour
         return setOfcards;
     }
     /// <summary>
-    /// chekc if the cards passed matches the answer
+    /// check if the cards passed matches the answer
     /// </summary>
     /// <param name="accusation"></param>
     /// <returns></returns>
@@ -103,5 +104,19 @@ public class CardManager : MonoBehaviour
         }
         return true;
     }
+
+    /// <summary>
+    /// shuffles and deal the cards to players
+    /// </summary>
+    public void DealCardsToPlayers()
+    {
+        setOfcards = GetSixSetsOfCards();
+        List<PlayerMasterController> players = FindObjectOfType<TurnController>().CurrentPlayers;
+        for (int i = 0; i < setOfcards.Count && i < players.Count; i++)
+        {
+            players[i].AddCard(setOfcards[i]);
+        }
+    }
+
 
 }

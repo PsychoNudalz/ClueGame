@@ -96,6 +96,11 @@ public class PlayerMasterController : MonoBehaviour
         return playerStatsScript.AddCard(cs);
     }
 
+    public List<Card> GetCards()
+    {
+        return playerStatsScript.Deck;
+    }
+
 
     public void StartTurn()
     {
@@ -195,7 +200,7 @@ public class PlayerMasterController : MonoBehaviour
     /// <summary>
     /// eliminate player
     /// </summary>
-    public void eliminatePlayer()
+    public void EliminatePlayer()
     {
         playerStatsScript.IsEliminated = true;
     }
