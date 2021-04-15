@@ -194,6 +194,8 @@ public class PlayerTokenScript : MonoBehaviour
         cameraCloseUp.SetCharacterCloseUp(Character);
         currentEntryPoint = null;
         currentExitPoint = null;
+        currentTile.SetToken(null);
+
         targetTile = newTile;
         
         targetTile.SetToken(gameObject);

@@ -65,6 +65,11 @@ public class PlayerMasterController : MonoBehaviour
         return playerStatsScript.Character;
     }
 
+    public override string ToString()
+    {
+        return playerStatsScript.Character.ToString()+" ("+name+")";
+    }
+
     public Vector2 GetGridPosition()
     {
         return playerTokenScript.GetGridPosition();
@@ -101,12 +106,21 @@ public class PlayerMasterController : MonoBehaviour
         return playerStatsScript.Deck;
     }
 
-    public Tuple<PlayerMasterController,Card> FindCard(List<Card> cards)
+
+    /// <summary>
+    /// check if the player has a card in his deck from the given list of cards
+    /// it will return the cards and the PlayerMasterController that has the card
+    /// it will return null if none found
+    /// 
+    /// </summary>
+    /// <param name="cards"> cards to be found</param>
+    /// <returns> The current player controller and a list of cards that matched the cards to be found</returns>
+    public Tuple<PlayerMasterController,List<Card>> FindCard(List<Card> cards)
     {
-        Card card = playerStatsScript.FindCard(cards);
-        if (card != null)
+        List<Card> foundCards = playerStatsScript.FindCard(cards);
+        if (foundCards.Count != 0)
         {
-            return new Tuple<PlayerMasterController, Card>( this,card);
+            return new Tuple<PlayerMasterController, List<Card>>( this,foundCards);
         }
         else
         {

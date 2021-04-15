@@ -160,7 +160,7 @@ public class BoardManager : MonoBehaviour
                 foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
                 {
                     //Debug.Log("Getting more neighbour");
-                    if (!queue.Contains(b) && !neighbours.Contains(b))
+                    if (!queue.Contains(b) && !neighbours.Contains(b) && b.IsEmpty())
                     {
                         neighbours.Add(b);
                     }
@@ -168,7 +168,7 @@ public class BoardManager : MonoBehaviour
             }
             queue.AddRange(neighbours);
         }
-
+        queue.Remove(currentTile);
         return queue;
     }
 
@@ -178,6 +178,8 @@ public class BoardManager : MonoBehaviour
         {
             return false;
         }
+        ClearMovable();
+
         print("Finding new tile");
         movableTile.AddRange(bfs(currentTile, range));
 

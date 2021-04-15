@@ -56,7 +56,12 @@ public class PlayerStatsScript : MonoBehaviour
         return flag;
     }
 
-
+    /// <summary>
+    /// find if the player has a certain card
+    /// return a list of cards found
+    /// </summary>
+    /// <param name="c"></param>
+    /// <returns></returns>
     public Card FindCard(Card c)
     {
         if (deck.Contains(c))
@@ -70,17 +75,23 @@ public class PlayerStatsScript : MonoBehaviour
         }
     }
 
-    public Card FindCard(List<Card> cards)
+    public List<Card> FindCard(List<Card> cards)
     {
         int i =0;
         Card returnCard = null;
-        while (i < cards.Count && returnCard == null)
+        List<Card> foundCards = new List<Card>();
+
+        while (i < cards.Count)
         {
             returnCard = FindCard(cards[i]);
+            if (returnCard != null)
+            {
+                foundCards.Add(returnCard);
+            }
             i++;
         }
 
-        return returnCard;
+        return foundCards;
     }
 
 }
