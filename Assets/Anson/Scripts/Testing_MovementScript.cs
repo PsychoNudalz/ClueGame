@@ -18,6 +18,7 @@ public class Testing_MovementScript : TestUIScript
 
     public void GiveRoll(int r)
     {
+        boardManager.ClearMovable();
         playerMasterController = turnController.GetCurrentPlayer();
 
         if (!boardManager.ShowMovable(playerMasterController.GetTile(), r))
