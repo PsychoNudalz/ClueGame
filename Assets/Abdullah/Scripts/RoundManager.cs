@@ -9,6 +9,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] PlayerMasterController playerController;
     [SerializeField] BoardManager boardManager;
     [SerializeField] CardManager gameGenerator;
+    [SerializeField] CameraCloseUp cameraCloseUp;
     bool diceRolled = false;
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
@@ -23,6 +24,7 @@ public class RoundManager : MonoBehaviour
         boardManager = FindObjectOfType<BoardManager>();
         dice = boardManager.GetComponentInChildren<Dice>();
         gameGenerator = FindObjectOfType<CardManager>();
+        cameraCloseUp = FindObjectOfType<CameraCloseUp>();
     }
 
     private void FixedUpdate()
@@ -145,6 +147,9 @@ public class RoundManager : MonoBehaviour
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
         secondRollavailable = false;
+
+        //Anson: reset camera
+        cameraCloseUp.ClearCloseUp();
 
         //Anson: start the turn to update the current player
         StartTurn();

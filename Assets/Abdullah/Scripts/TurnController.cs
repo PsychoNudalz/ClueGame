@@ -56,6 +56,8 @@ public class TurnController : MonoBehaviour
 
     public PlayerMasterController GetNextPlayer() 
     {
+        //Anson: this is causing index out of range error, changed it to mod to fix it
+        /*
         if (currentPlayerIndex == currentPlayers.Count) 
         {
             return currentPlayers[currentPlayerIndex = 0];
@@ -64,10 +66,15 @@ public class TurnController : MonoBehaviour
         {
             return currentPlayers[currentPlayerIndex + 1];
         }
+        */
+     
+        return currentPlayers[(currentPlayerIndex + 1) % currentPlayers.Count];
     }
 
     public void SetCurrentPlayerToNext() 
     {
+        //Anson: this is causing index out of range error, changed it to mod to fix it
+        /*
         if (currentPlayerIndex == currentPlayers.Count)
         {
             currentPlayerIndex = 0;
@@ -76,10 +83,15 @@ public class TurnController : MonoBehaviour
         {
             currentPlayerIndex++;
         }
+        */
+        currentPlayerIndex++;
+        currentPlayerIndex =  currentPlayerIndex % currentPlayers.Count;
     }
 
     public PlayerMasterController GetCurrentPlayer() 
     {
+        //Anson: this is causing index out of range error, changed it to mod to fix it
+
         return currentPlayers[currentPlayerIndex];
     }
 
