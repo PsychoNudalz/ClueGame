@@ -14,6 +14,7 @@ public class RoundManager : MonoBehaviour
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
     bool canRoll = true;
+    
 
 
     private void Awake()
@@ -104,14 +105,25 @@ public class RoundManager : MonoBehaviour
          */
     }
 
-    public void MakeSuggestion()
-    {
-        /*
+    public void MakeSuggestion(List<Card> sug)
+    { /*
           Player enters a room
           Player makes a weapon and player suggestion
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
+        for (int i = 0; i < turnController.GetRestOfPlayersInOrder().Count;) {
+            if (turnController.GetRestOfPlayersInOrder()[i].FindCard(sug) != null) {
+                print("return player with card");
+            }
+            else
+            {
+                i++;
+            }
+
+        }
+        
+      
 
     }
 

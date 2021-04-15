@@ -44,7 +44,29 @@ public class TurnController : MonoBehaviour
 
     }
 
-   
+    public List<PlayerMasterController> GetRestOfPlayersInOrder() {
+        List<PlayerMasterController> restOfPlayers = new List<PlayerMasterController>();
+        List<PlayerMasterController> rOPinOrder = new List<PlayerMasterController>();
+        restOfPlayers = currentPlayers;
+        int orderIndex = currentPlayerIndex;
+        restOfPlayers.RemoveAt(currentPlayerIndex);
+        for (int i = 0; i < restOfPlayers.Count;i++) {
+            if (rOPinOrder.Count < restOfPlayers.Count)
+            {
+                if ((orderIndex + i) > restOfPlayers.Count)
+                {
+                    orderIndex = 0;
+                    i = 0;
+                }
+                rOPinOrder.Add(restOfPlayers[orderIndex + i]);
+            }
+            else {
+                break;
+            }
+        }
+
+        return rOPinOrder;
+    }
     
 
     public void SetNumberofPlayers(int a) 
@@ -56,8 +78,6 @@ public class TurnController : MonoBehaviour
 
     public PlayerMasterController GetNextPlayer() 
     {
-        //Anson: this is causing index out of range error, changed it to mod to fix it
-        /*
         if (currentPlayerIndex == currentPlayers.Count) 
         {
             return currentPlayers[currentPlayerIndex = 0];
@@ -66,15 +86,10 @@ public class TurnController : MonoBehaviour
         {
             return currentPlayers[currentPlayerIndex + 1];
         }
-        */
-     
-        return currentPlayers[(currentPlayerIndex + 1) % currentPlayers.Count];
     }
 
     public void SetCurrentPlayerToNext() 
     {
-        //Anson: this is causing index out of range error, changed it to mod to fix it
-        /*
         if (currentPlayerIndex == currentPlayers.Count)
         {
             currentPlayerIndex = 0;
@@ -83,15 +98,10 @@ public class TurnController : MonoBehaviour
         {
             currentPlayerIndex++;
         }
-        */
-        currentPlayerIndex++;
-        currentPlayerIndex =  currentPlayerIndex % currentPlayers.Count;
     }
 
     public PlayerMasterController GetCurrentPlayer() 
     {
-        //Anson: this is causing index out of range error, changed it to mod to fix it
-
         return currentPlayers[currentPlayerIndex];
     }
 
