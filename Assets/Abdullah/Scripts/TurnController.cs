@@ -9,9 +9,9 @@ public class TurnController : MonoBehaviour
    [SerializeField] List<PlayerMasterController> initialisePlayers;
     public int currentPlayerIndex;
     int numberOfPlayers;
-   
 
-    
+    public List<PlayerMasterController> CurrentPlayers { get => currentPlayers; set => currentPlayers = value; }
+
     void Awake()
     {
         StartGame();

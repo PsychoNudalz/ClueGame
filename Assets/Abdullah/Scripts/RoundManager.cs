@@ -8,8 +8,10 @@ public class RoundManager : MonoBehaviour
     [SerializeField] TurnController turnController;
     [SerializeField] PlayerMasterController playerController;
     [SerializeField] BoardManager boardManager;
+    [SerializeField] CardManager gameGenerator;
     bool diceRolled = false;
     bool secondRollavailable = false;
+    bool secondAccusationavailable = false;
     bool canRoll = true;
 
 
@@ -20,6 +22,7 @@ public class RoundManager : MonoBehaviour
         playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
         dice = boardManager.GetComponentInChildren<Dice>();
+        gameGenerator = FindObjectOfType<CardManager>();
     }
 
     private void FixedUpdate()
@@ -101,23 +104,40 @@ public class RoundManager : MonoBehaviour
 
     public void MakeSuggestion()
     {
-    /*
-      Player enters a room
-      Player makes a weapon and player suggestion
-      if other player has card -> show card
-      if no players have the card -> player can choose to make accusation or end turn
-     */
+        /*
+          Player enters a room
+          Player makes a weapon and player suggestion
+          if other player has card -> show card
+          if no players have the card -> player can choose to make accusation or end turn
+         */
 
     }
 
-    public void MakeAccusation()
+    public void MakeAccusation(List<Card> cards)
     {
-       /*Get player 3 chosen cards
-        Check the players card against the 3 cards set at the start of the game
-       if they match -> player wins
-       if they dont match -> player asked to make a second accusation
-       if second accusation doesnt not match -> remove player from queue
-       */
+        /*Get player 3 chosen cards
+         Check the players card against the 3 cards set at the start of the game
+        if they match -> player wins
+        if they dont match -> player asked to make a second accusation
+        if second accusation doesnt not match -> remove player from queue
+        */
+        if (gameGenerator.IsMatchAnswer(cards))
+        {
+            //code for wining
+            print("PLAYER WIN");
+        }
+        else
+        {
+            if (secondAccusationavailable)
+            {
+                secondAccusationavailable = false;
+            }
+            else
+            {
+                playerController.EliminatePlayer();
+            }
+        }
+
     }
 
     public void EndTurn()
@@ -125,7 +145,24 @@ public class RoundManager : MonoBehaviour
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
         secondRollavailable = false;
+
+        //Anson: start the turn to update the current player
+        StartTurn();
+    }
+    /// <summary>
+    /// Method for starting the turn
+    /// </summary>
+    public void StartTurn()
+    {
+        playerController = turnController.GetCurrentPlayer();
     }
 
-
+    /// <summary>
+    /// Gets the player controller for the current player
+    /// </summary>
+    /// <returns>player controller for the current player</returns>
+    public PlayerMasterController GetCurrentPlayer()
+    {
+        return turnController.GetCurrentPlayer();
+    }
 }

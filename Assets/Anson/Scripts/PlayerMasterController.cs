@@ -96,6 +96,24 @@ public class PlayerMasterController : MonoBehaviour
         return playerStatsScript.AddCard(cs);
     }
 
+    public List<Card> GetDeck()
+    {
+        return playerStatsScript.Deck;
+    }
+
+    public Tuple<PlayerMasterController,Card> FindCard(List<Card> cards)
+    {
+        Card card = playerStatsScript.FindCard(cards);
+        if (card != null)
+        {
+            return new Tuple<PlayerMasterController, Card>( this,card);
+        }
+        else
+        {
+            return null;
+        }
+    }
+
 
     public void StartTurn()
     {
@@ -153,6 +171,8 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.CurrentTile = tileToSet;
     }
 
+
+    
     public RoomScript GetCurrentRoom()
     {
         return playerTokenScript.CurrentRoom;
@@ -193,7 +213,7 @@ public class PlayerMasterController : MonoBehaviour
     /// <summary>
     /// eliminate player
     /// </summary>
-    public void eliminatePlayer()
+    public void EliminatePlayer()
     {
         playerStatsScript.IsEliminated = true;
     }
