@@ -6,5 +6,5 @@ using UnityEngine;
 //public enum RoomEnum { Study, Hall, Lounge, Library, DiningRoom, BillardRoom, BallRoom, Kitchen, Conservatory }
 public class RoomCard : Card
 {
-    
+    public Room room;
 }

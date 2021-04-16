@@ -10,6 +10,7 @@ public class PlayerStatsScript : MonoBehaviour
 
     public CharacterEnum Character { get => character;}
     public bool IsEliminated { get => isEliminated; set => isEliminated = value; }
+    public List<Card> Deck { get => deck; set => deck = value; }
 
     /// <summary>
     /// Set the player's character
@@ -54,4 +55,43 @@ public class PlayerStatsScript : MonoBehaviour
         }
         return flag;
     }
+
+    /// <summary>
+    /// find if the player has a certain card
+    /// return a list of cards found
+    /// </summary>
+    /// <param name="c"></param>
+    /// <returns></returns>
+    public Card FindCard(Card c)
+    {
+        if (deck.Contains(c))
+        {
+            Card temp = deck[deck.IndexOf(c)];
+            return temp;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    public List<Card> FindCard(List<Card> cards)
+    {
+        int i =0;
+        Card returnCard = null;
+        List<Card> foundCards = new List<Card>();
+
+        while (i < cards.Count)
+        {
+            returnCard = FindCard(cards[i]);
+            if (returnCard != null)
+            {
+                foundCards.Add(returnCard);
+            }
+            i++;
+        }
+
+        return foundCards;
+    }
+
 }

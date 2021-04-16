@@ -65,7 +65,7 @@ public class PlayerTokenScript : MonoBehaviour
                 {
                     currentEntryPoint.RoomScript.AddPlayer(controller);
                     currentEntryPoint = null;
-                    currentTile.GetComponent<BoardTileScript>().PlayerToken = null;
+                    //currentTile.GetComponent<BoardTileScript>().PlayerToken = null;
                     currentTile = null;
                 }
                 else
@@ -194,6 +194,8 @@ public class PlayerTokenScript : MonoBehaviour
         cameraCloseUp.SetCharacterCloseUp(Character);
         currentEntryPoint = null;
         currentExitPoint = null;
+        currentTile.SetToken(null);
+
         targetTile = newTile;
         
         targetTile.SetToken(gameObject);
@@ -242,6 +244,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void EnterRoom(RoomEntryPoint entryPoint)
     {
+        currentTile.SetToken(null);
         cameraCloseUp.SetRoomCloseUp(entryPoint.RoomScript.Room);
         currentEntryPoint = entryPoint;
     }

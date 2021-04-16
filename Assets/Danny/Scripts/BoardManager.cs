@@ -140,7 +140,13 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// perform bfs search for the tiles
+    /// </summary>
+    /// <param name="currentTile"></param>
+    /// <param name="range"></param>
+    /// <param name="queue"></param>
+    /// <returns></returns>
     public List<BoardTileScript> bfs(BoardTileScript currentTile, int range, List<BoardTileScript> queue = null)
     {
         if (queue == null)
@@ -160,24 +166,42 @@ public class BoardManager : MonoBehaviour
                 foreach (BoardTileScript b in GetTileNeighbours(queue[i]))
                 {
                     //Debug.Log("Getting more neighbour");
-                    if (!queue.Contains(b) && !neighbours.Contains(b))
+                    if (!queue.Contains(b) && !neighbours.Contains(b) && b.IsEmpty())
                     {
                         neighbours.Add(b);
+                    }
+                    else
+                    {
+                        print(b.GridPosition + " ignored: " + !queue.Contains(b) + ", " + !neighbours.Contains(b) + ", " + b.IsEmpty());
                     }
                 }
             }
             queue.AddRange(neighbours);
         }
+        if (currentTile is  RoomEntryBoardTileScript)
+        {
 
+        }
+        else
+        {
+            queue.Remove(currentTile);
+        }
         return queue;
     }
 
+    /// <summary>
+    /// mark and showwhich tile the player can move to
+    /// </summary>
+    /// <param name="currentTile"></param>
+    /// <param name="range"></param>
+    /// <returns></returns>
     public bool ShowMovable(BoardTileScript currentTile, int range)
     {
         if (currentTile == null)
         {
             return false;
         }
+
         print("Finding new tile");
         movableTile.AddRange(bfs(currentTile, range));
 
@@ -207,7 +231,7 @@ public class BoardManager : MonoBehaviour
             return false;
         }
 
-        ShowMovable(roomScript.GetEntryTiles(), range-1);
+        ShowMovable(roomScript.GetEntryTiles(), range - 1);
         return true;
     }
 

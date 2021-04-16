@@ -10,6 +10,7 @@ public class AnsonTestScript : MonoBehaviour
     [SerializeField] BoardManager boardManager;
     [SerializeField] Dice dice;
     [SerializeField] TurnController turnController;
+    [SerializeField] CardManager cardManager;
     bool diceRolled = false;
 
     private void Awake()
@@ -50,6 +51,25 @@ public class AnsonTestScript : MonoBehaviour
         StartCoroutine(DelayResetDice(5f));
     }
 
+
+    public void FindCards(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.performed)
+        {
+            List<Card> cardsToFind = cardManager.playableCards.GetRange(0, 3);
+            var temp = turnController.GetCurrentPlayer().FindCard(cardsToFind);
+            if (temp == null)
+            {
+                print("Player: " + turnController.GetCurrentPlayer() + " does not have: \n" + cardsToFind.ToString());
+            }
+            else
+            {
+                print("Player: " + temp.Item1 + " does have: \n" + temp.Item2.ToString());
+            }
+        }
+    }
+
+
     public void AssignAllComponents(InputAction.CallbackContext callbackContext)
     {
         AssignAllComponents();
@@ -74,6 +94,10 @@ public class AnsonTestScript : MonoBehaviour
         if (!turnController)
         {
             turnController = FindObjectOfType<TurnController>();
+        }
+        if (!cardManager)
+        {
+            cardManager = FindObjectOfType<CardManager>();
         }
     }
 

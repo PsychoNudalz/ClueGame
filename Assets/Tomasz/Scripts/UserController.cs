@@ -41,4 +41,13 @@ public class UserController : MonoBehaviour
     public void EndTurn() {
         rM.EndTurn();
     }
+
+    /// <summary>
+    /// Gets the player controller for the current player
+    /// </summary>
+    /// <returns>player controller for the current player</returns>
+    public PlayerMasterController GetCurrentPlayer()
+    {
+        return rM.GetCurrentPlayer();
+    }
 }
