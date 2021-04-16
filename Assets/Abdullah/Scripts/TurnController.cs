@@ -49,7 +49,7 @@ public class TurnController : MonoBehaviour
         List<PlayerMasterController> rOPinOrder = new List<PlayerMasterController>();
         restOfPlayers = currentPlayers;
         int orderIndex = currentPlayerIndex;
-        restOfPlayers.RemoveAt(currentPlayerIndex);
+        restOfPlayers.RemoveAt(currentPlayerIndex % restOfPlayers.Count);
         for (int i = 0; i < restOfPlayers.Count;i++) {
             if (rOPinOrder.Count < restOfPlayers.Count)
             {
@@ -84,7 +84,7 @@ public class TurnController : MonoBehaviour
         }
         else
         {
-            return currentPlayers[currentPlayerIndex + 1];
+            return currentPlayers[(currentPlayerIndex + 1) % currentPlayers.Count];
         }
     }
 
@@ -97,6 +97,7 @@ public class TurnController : MonoBehaviour
         else
         {
             currentPlayerIndex++;
+            currentPlayerIndex = currentPlayerIndex % currentPlayers.Count;
         }
     }
 

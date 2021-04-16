@@ -8,11 +8,11 @@ public class Suggestion : MonoBehaviour
     public RoomCard sugRoom;
     public CharacterCard sugCharacter;
     [SerializeField] RoundManager roundManagerScript;
-    [SerializeField] TurnController turnControlerScript;
+
 
     public void Suggest() {
         if (sugRoom != null & sugWeapon != null & sugCharacter != null) {
-            Debug.Log("I suggest that the crime was committed in the" + sugRoom +", by" + sugCharacter +" with the" + sugWeapon);
+            Debug.Log("I suggest that the crime was committed in the " + sugRoom +", by " + sugCharacter +" with the " + sugWeapon);
             if (!roundManagerScript) {
                 roundManagerScript = FindObjectOfType<RoundManager>();
             }
@@ -20,19 +20,21 @@ public class Suggestion : MonoBehaviour
             roundManagerScript.MakeSuggestion(new List<Card>(sug));
         }
     }
-
+    
     public void SetSugWeapon(WeaponCard weaponCard) {
         sugWeapon = weaponCard;
+        Debug.Log("Weapon Suggested: "+ sugWeapon);
     }
     public void SetSugRoom(RoomCard roomCard)
     {
-       string roomToString = turnControlerScript.GetCurrentPlayer().GetCurrentRoom().ToString();
         sugRoom = roomCard;
+        Debug.Log("Room Suggested: " + sugRoom);
     }
 
     public void SetSugCharacter(CharacterCard characterCard)
     {
         sugCharacter = characterCard;
+        Debug.Log("Character Suggested: " + sugCharacter);
     }
 
 }

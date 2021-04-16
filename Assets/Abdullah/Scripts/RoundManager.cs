@@ -112,18 +112,22 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
+        bool playerWithCardFound= false;
         for (int i = 0; i < turnController.GetRestOfPlayersInOrder().Count;) {
-            if (turnController.GetRestOfPlayersInOrder()[i].FindCard(sug) != null) {
-                print("return player with card");
+            if (turnController.GetRestOfPlayersInOrder()[i%turnController.GetRestOfPlayersInOrder().Count].FindCard(sug) != null) {
+                Debug.Log(turnController.GetRestOfPlayersInOrder()[i%turnController.GetRestOfPlayersInOrder().Count].FindCard(sug).ToString());
+                playerWithCardFound = true;
             }
             else
             {
                 i++;
+                i = i % turnController.GetRestOfPlayersInOrder().Count;
             }
-
         }
-        
-      
+        if (!playerWithCardFound) {
+            print("No Player With Card Found");
+            playerWithCardFound = false;
+        }
 
     }
 
