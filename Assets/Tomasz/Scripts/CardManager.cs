@@ -16,6 +16,8 @@ public class CardManager : MonoBehaviour
     public List<List<Card>> setOfcards;
     public List<Card> test;
     public PlayerMasterController p;
+
+
     private void Awake()
     {
         Initialise();

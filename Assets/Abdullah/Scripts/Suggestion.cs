@@ -10,20 +10,33 @@ public class Suggestion : MonoBehaviour
     [SerializeField] RoundManager roundManagerScript;
 
 
-    public void Suggest() {
-        if (sugRoom != null & sugWeapon != null & sugCharacter != null) {
-            Debug.Log("I suggest that the crime was committed in the " + sugRoom +", by " + sugCharacter +" with the " + sugWeapon);
-            if (!roundManagerScript) {
+    private void Awake()
+    {
+        if (roundManagerScript == null)
+        {
+            roundManagerScript = FindObjectOfType<RoundManager>();
+
+        }
+    }
+
+    public void Suggest()
+    {
+        if (sugRoom != null & sugWeapon != null & sugCharacter != null)
+        {
+            Debug.Log("I suggest that the crime was committed in the " + sugRoom + ", by " + sugCharacter + " with the " + sugWeapon);
+            if (!roundManagerScript)
+            {
                 roundManagerScript = FindObjectOfType<RoundManager>();
             }
-            Card[] sug = { sugCharacter, sugWeapon, sugRoom};
+            Card[] sug = { sugCharacter, sugWeapon, sugRoom };
             roundManagerScript.MakeSuggestion(new List<Card>(sug));
         }
     }
-    
-    public void SetSugWeapon(WeaponCard weaponCard) {
+
+    public void SetSugWeapon(WeaponCard weaponCard)
+    {
         sugWeapon = weaponCard;
-        Debug.Log("Weapon Suggested: "+ sugWeapon);
+        Debug.Log("Weapon Suggested: " + sugWeapon);
     }
     public void SetSugRoom(RoomCard roomCard)
     {

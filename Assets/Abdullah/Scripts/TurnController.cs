@@ -45,9 +45,9 @@ public class TurnController : MonoBehaviour
     }
 
     public List<PlayerMasterController> GetRestOfPlayersInOrder() {
-        List<PlayerMasterController> restOfPlayers = new List<PlayerMasterController>();
+        List<PlayerMasterController> restOfPlayers = new List<PlayerMasterController>(currentPlayers);
         List<PlayerMasterController> rOPinOrder = new List<PlayerMasterController>();
-        restOfPlayers = currentPlayers;
+        //restOfPlayers = currentPlayers;
         int orderIndex = currentPlayerIndex;
         restOfPlayers.RemoveAt(currentPlayerIndex % restOfPlayers.Count);
         for (int i = 0; i < restOfPlayers.Count;i++) {

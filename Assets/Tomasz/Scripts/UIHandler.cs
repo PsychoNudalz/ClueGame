@@ -21,7 +21,7 @@ public class UIHandler : MonoBehaviour
     {
         userController = FindObjectOfType<UserController>();
         gameGen = FindObjectOfType<CardManager>();
-        gameGen.Initialise();
+        //gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
 
