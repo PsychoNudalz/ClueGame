@@ -12,6 +12,8 @@ public class BoardManager : MonoBehaviour
     private StartTileScript[] startTiles;
     private ShortcutBoardTileScript[] shortcuts;
     private RoomEntryBoardTileScript[] roomEntries;
+    private FreeRollBoardTileScript[] freeRollTiles;
+    private FreeAccusationTileScript[] freeAccusationTiles;
     private WeaponTokenScript[] weaponTokens;
 
     [Header("Displaying Moveable Tiles")]
@@ -23,6 +25,7 @@ public class BoardManager : MonoBehaviour
     public ShortcutBoardTileScript[] Shortcuts { get => shortcuts; }
     public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
     public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
+    public FreeRollBoardTileScript[] FreeRollTiles { get => freeRollTiles; set => freeRollTiles = value; }
 
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
@@ -252,7 +255,14 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
-    public void SetObjectArrays(PlayerTokenScript[] players, RoomScript[] rooms, RoomEntryBoardTileScript[] roomEntries, ShortcutBoardTileScript[] shortcuts, StartTileScript[] startTiles, WeaponTokenScript[] weaponTokens)
+    public void SetObjectArrays(PlayerTokenScript[] players, 
+                                RoomScript[] rooms, 
+                                RoomEntryBoardTileScript[] roomEntries, 
+                                ShortcutBoardTileScript[] shortcuts, 
+                                StartTileScript[] startTiles, 
+                                WeaponTokenScript[] weaponTokens, 
+                                FreeRollBoardTileScript[] freeRollTiles, 
+                                FreeAccusationTileScript[] freeAccusationTiles)
     {
         this.players = players;
         this.rooms = rooms;
@@ -260,5 +270,7 @@ public class BoardManager : MonoBehaviour
         this.shortcuts = shortcuts;
         this.startTiles = startTiles;
         this.weaponTokens = weaponTokens;
+        this.freeRollTiles = freeRollTiles;
+        this.freeAccusationTiles = freeAccusationTiles;
     }
 }

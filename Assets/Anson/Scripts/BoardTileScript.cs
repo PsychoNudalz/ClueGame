@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TileTypeEnum { General, Start, RoomEntry, Shortcut };
+public enum TileTypeEnum { General, Start, RoomEntry, Shortcut, FreeRoll, FreeAccusation };
 /// <summary>
 /// Super class for all tiles
 /// </summary>
