@@ -17,6 +17,7 @@ public class UIHandler : MonoBehaviour
     private Image img;
     public UserController userController;
     bool areControlsFrozen = false;
+    public GameObject msp;
     private void Start()
     {
         userController = FindObjectOfType<UserController>();
@@ -24,6 +25,11 @@ public class UIHandler : MonoBehaviour
         gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
+        msp = GameObject.Find("MakeSuggestionPanel");
+        msp.SetActive(false);
+
+
+
 
         //deck = gameGen.GetSixSetsOfCards()[0];
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
@@ -80,7 +86,7 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    
+
     public void RollDiceButton()
     {
         if (!areControlsFrozen)
@@ -104,8 +110,9 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    private void CancelSuggestionButton() {
-        
+    private void CancelSuggestionButton()
+    {
+
         if (!areControlsFrozen)
         {
             areControlsFrozen = true;
@@ -128,23 +135,37 @@ public class UIHandler : MonoBehaviour
     }
 
 
-    
 
 
-    public void DisplayMenuMove() { 
-    
+
+    public void DisplayMenuMove()
+    {
+
     }
     public void DisplayMenuSuggestion()
     {
-
+        if (userController.GetCurrentPlayer().GetCurrentRoom() != null)
+        {
+            msp.SetActive(true);
+            GameObject name = GameObject.FindWithTag("rName");
+            string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
+            txt = txt.Split('(')[0];
+            name.GetComponent<TextMeshProUGUI>().text = txt;
+            msp.GetComponent<Suggestion>().SetRoom(GameObject.Find(txt).GetComponent<RoomCard>()); ;
+        }
+        else
+        {
+            Debug.Log("not in a room");
+        }
     }
     public void DisplayMenuAccusation()
     {
 
     }
 
-    public void SelectCards_Character() { 
-    
+    public void SelectCards_Character()
+    {
+
     }
 
 
@@ -158,8 +179,9 @@ public class UIHandler : MonoBehaviour
     {
 
     }
-    public void SelectCardsToShow(List<Card> toShow) { 
-    
+    public void SelectCardsToShow(List<Card> toShow)
+    {
+
     }
 
     public void EndTurn()
