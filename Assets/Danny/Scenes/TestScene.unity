@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -121,110 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &456381868
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2522916529391348104, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2856964020925678217, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_Name
-      value: TVStand
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_Looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: 87b1b3c6e3c44344faaeb4c72a4138ef, type: 2}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_AudioOutputMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_DirectAudioMutes.Array.data[0]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946624015463673411, guid: f2ce04a184e427d4fac94adb30fcab17,
-        type: 3}
-      propertyPath: m_EnabledAudioTracks.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2ce04a184e427d4fac94adb30fcab17, type: 3}
 --- !u!1 &1702557159
 GameObject:
   m_ObjectHideFlags: 0

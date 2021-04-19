@@ -16,9 +16,11 @@ public class CardManager : MonoBehaviour
     public List<List<Card>> setOfcards;
     public List<Card> test;
     public PlayerMasterController p;
-    private void Start()
-    {
 
+
+    private void Awake()
+    {
+        Initialise();
     }
 
     public void Initialise()

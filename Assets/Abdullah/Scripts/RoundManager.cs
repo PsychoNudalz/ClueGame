@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,7 @@ public class RoundManager : MonoBehaviour
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
     bool canRoll = true;
+    
 
 
     private void Awake()
@@ -22,7 +24,12 @@ public class RoundManager : MonoBehaviour
         turnController = FindObjectOfType<TurnController>();
         playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
+        try
+        {
+
         dice = boardManager.GetComponentInChildren<Dice>();
+        }catch(System.Exception e) { 
+        }
         gameGenerator = FindObjectOfType<CardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
     }
@@ -35,6 +42,10 @@ public class RoundManager : MonoBehaviour
 
     void DiceBehaviour()
     {
+        if (dice == null)
+        {
+            return;
+        }
         PlayerMasterController playerMasterController = turnController.GetCurrentPlayer();
         if (dice.GetValue() > 0 && diceRolled)
         {
@@ -104,14 +115,31 @@ public class RoundManager : MonoBehaviour
          */
     }
 
-    public void MakeSuggestion()
-    {
-        /*
+    public void MakeSuggestion(List<Card> sug)
+    { /*
           Player enters a room
           Player makes a weapon and player suggestion
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
+        bool playerWithCardFound= false;
+        List<PlayerMasterController> RestOfPlayers = turnController.GetRestOfPlayersInOrder();
+        for (int i = 0; i < RestOfPlayers.Count;i++) {
+            if (RestOfPlayers[i].FindCard(sug) != null) {
+                Tuple<PlayerMasterController, List<Card>> foundPlayer = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
+                Debug.Log(foundPlayer.Item1.ToString()+" Has cards:");
+                foreach(Card c in foundPlayer.Item2)
+                {
+                    Debug.Log(c.gameObject.name);
+                }
+                playerWithCardFound = true;
+            }
+            
+        }
+        if (!playerWithCardFound) {
+            print("No Player With Card Found");
+            playerWithCardFound = false;
+        }
 
     }
 
