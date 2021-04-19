@@ -6,9 +6,10 @@ public class Accusation : MonoBehaviour
 {
 
     
-    public Card currentWeapon;
-    public Card currentRoom;
-    public Card currentCharacter;
+    public WeaponCard currentWeapon;
+    public RoomCard currentRoom;
+    public CharacterCard currentCharacter;
+
     [SerializeField] RoundManager roundManager;
 
     public void Accuse() {
@@ -23,15 +24,23 @@ public class Accusation : MonoBehaviour
             roundManager.MakeAccusation(new List<Card>(acc));
         }
     }
-    public void SetWeapon(Card c) {
+    public void SetWeapon(WeaponCard c) {
         currentWeapon = c;
     }
-    public void SetCharacter(Card c)
+    public void SetCharacter(CharacterCard c)
     {
         currentCharacter = c;
     }
-    public void SetRoom(Card c)
+    public void SetRoom(RoomCard c)
     {
         currentRoom = c;
+    }
+    public void Cancel1()
+    {
+        
+        currentRoom = null;
+        currentCharacter = null;
+        currentWeapon = null;
+       
     }
 }

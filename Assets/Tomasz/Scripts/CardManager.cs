@@ -59,35 +59,10 @@ public class CardManager : MonoBehaviour
     {
         return answers;
     }
-
-    /// <summary>
-    /// **WIP** Returns a list of lists where each list consists of cards for each player
-    /// </summary>
-    /// <param name="numberOfPlayers"></param>
-    /// <returns></returns>
-    public List<Card> GetPlaybleCardsByPlayers(int numberOfPlayers)
-    {
+    
 
 
-        return playableCards;
-    }
 
-
-    /// <summary>
-    /// Returns a list of lists where each list consists of 3 random playable cards (for 6 players)
-    /// </summary>
-    /// <returns></returns>
-    public List<List<Card>> GetSixSetsOfCards()
-    {
-        setOfcards = new List<List<Card>>();
-
-        for (int i = 0; i < 6; i++)
-        {
-            test = playableCards.GetRange(i * 3, 3).ToList();
-            setOfcards.Add(test);
-        }
-        return setOfcards;
-    }
     /// <summary>
     /// check if the cards passed matches the answer
     /// </summary>
@@ -95,7 +70,7 @@ public class CardManager : MonoBehaviour
     /// <returns></returns>
     public bool IsMatchAnswer(List<Card> accusation)
     {
-        foreach(Card a in answers)
+        foreach (Card a in answers)
         {
             if (!accusation.Contains(a))
             {
@@ -110,12 +85,27 @@ public class CardManager : MonoBehaviour
     /// </summary>
     public void DealCardsToPlayers()
     {
-        setOfcards = GetSixSetsOfCards();
+        int curPlayer = 0;
+        List<Card> cardToAdd = new List<Card>();
+        List<Card> remainingCards = new List<Card>(playableCards);
         List<PlayerMasterController> players = FindObjectOfType<TurnController>().CurrentPlayers;
+        while (remainingCards.Count > 0)
+        {
+
+            cardToAdd.Add(remainingCards[0]);
+            players[curPlayer % 6].AddCard(cardToAdd);
+            cardToAdd.RemoveAt(0);
+            remainingCards.RemoveAt(0);
+            curPlayer++;
+        }
+
+
+        /*
         for (int i = 0; i < setOfcards.Count && i < players.Count; i++)
         {
             players[i].AddCard(setOfcards[i]);
         }
+        */
     }
 
 

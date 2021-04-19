@@ -151,7 +151,7 @@ public class UIHandler : MonoBehaviour
             string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
             txt = txt.Split('(')[0];
             name.GetComponent<TextMeshProUGUI>().text = txt;
-            msp.GetComponent<Suggestion>().SetRoom(GameObject.Find(txt).GetComponent<RoomCard>()); ;
+            //msp.GetComponent<Suggestion>().SetRoom(GameObject.Find(txt).GetComponent<RoomCard>()); ;
         }
         else
         {
