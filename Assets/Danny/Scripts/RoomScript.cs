@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum Room {
     None,
@@ -39,7 +40,6 @@ public class RoomScript : MonoBehaviour
         playerSlots = GetComponentsInChildren<RoomPlayerSlot>();
         weaponSlots = GetComponentsInChildren<RoomWeaponSlot>();
         GetShortcut();
-
     }
 
     private void GetShortcut()
@@ -92,7 +92,7 @@ public class RoomScript : MonoBehaviour
             case "Lounge":
                 return Room.Lounge;
             default:
-                return Room.Centre;
+                throw new Exception("Room enum not found");
         }
     }
 
@@ -221,4 +221,39 @@ public class RoomScript : MonoBehaviour
         return (shortcutTile != null);
     }
 
+    public void MoveWeaponToRoom(WeaponEnum weaponEnum)
+    {
+        WeaponTokenScript[] weapons = FindObjectsOfType<WeaponTokenScript>();
+        WeaponTokenScript weaponToMove = null;
+        foreach(WeaponTokenScript weapon in weapons)
+        {
+            if (weapon.WeaponType.Equals(weaponEnum))
+            {
+                weaponToMove = weapon;
+                break;
+            }
+        }
+        if(weaponToMove != null && weaponToMove.CurrentRoom.room != room)
+        {
+            AddWeapon(weaponToMove);
+        }
+    }
+
+    public void MovePlayerToRoom(CharacterEnum characterEnum)
+    {
+        PlayerMasterController[] players = FindObjectsOfType<PlayerMasterController>();
+        PlayerMasterController playerToMove = null;
+        foreach(PlayerMasterController player in players)
+        {
+            if (player.GetCharacter().Equals(characterEnum))
+            {
+                playerToMove = player;
+                break;
+            }
+        }
+        if (playerToMove != null)
+        {
+            AddPlayer(playerToMove);
+        }
+    }
 }
