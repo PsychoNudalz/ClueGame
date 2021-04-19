@@ -35,7 +35,7 @@ public class Accusation : MonoBehaviour
     {
         currentRoom = c;
     }
-    public void Cancel1()
+    public void Cancel()
     {
         
         currentRoom = null;

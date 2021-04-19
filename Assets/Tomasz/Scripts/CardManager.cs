@@ -61,7 +61,7 @@ public class CardManager : MonoBehaviour
     {
         return answers;
     }
-    
+
 
 
 

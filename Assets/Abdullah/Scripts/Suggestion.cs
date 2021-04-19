@@ -49,5 +49,12 @@ public class Suggestion : MonoBehaviour
         sugCharacter = characterCard;
         Debug.Log("Character Suggested: " + sugCharacter);
     }
+    public void Cancel()
+    {
 
+        sugRoom = null;
+        sugCharacter = null;
+        sugWeapon = null;
+
+    }
 }

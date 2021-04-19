@@ -144,6 +144,7 @@ public class UIHandler : MonoBehaviour
     }
     public void DisplayMenuSuggestion()
     {
+        
         if (userController.GetCurrentPlayer().GetCurrentRoom() != null)
         {
             msp.SetActive(true);
