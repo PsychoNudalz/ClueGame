@@ -135,6 +135,23 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    internal void RemovePlayerFromRoom(PlayerMasterController player)
+    {
+        PlayerMasterController playerToRemove = null;
+        foreach (RoomPlayerSlot slot in playerSlots)
+        {
+            if (slot.GetCharacterInSlot() != null && slot.GetCharacterInSlot().Equals(player))
+            {
+                playerToRemove = slot.RemovePlayerFromSlot();
+                break;
+            }
+            else
+            {
+                Debug.LogError(player.GetCharacter() + " not found in " + Room);
+            }
+        }
+    }
+
     internal void RemovePlayerFromRoomViaShortcut(PlayerMasterController player)
     {
         PlayerMasterController playerToRemove = null;
@@ -253,6 +270,10 @@ public class RoomScript : MonoBehaviour
         }
         if (playerToMove != null)
         {
+            if (playerToMove.IsInRoom())
+            {
+                playerToMove.GetCurrentRoom().RemovePlayerFromRoom(playerToMove);
+            }
             AddPlayer(playerToMove);
         }
     }
