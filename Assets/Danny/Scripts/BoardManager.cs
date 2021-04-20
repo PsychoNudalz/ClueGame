@@ -6,6 +6,9 @@ using Random = UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
+    /*
+     * Arrays to store each type of game element
+     */
     private BoardTileScript[][] boardTiles;
     private PlayerTokenScript[] players;
     private RoomScript[] rooms;
@@ -13,7 +16,7 @@ public class BoardManager : MonoBehaviour
     private ShortcutBoardTileScript[] shortcuts;
     private RoomEntryBoardTileScript[] roomEntries;
     private FreeRollBoardTileScript[] freeRollTiles;
-    private FreeAccusationTileScript[] freeAccusationTiles;
+    private FreeSuggestionTileScript[] freeSuggestionTiles;
     private WeaponTokenScript[] weaponTokens;
 
     [Header("Displaying Moveable Tiles")]
@@ -27,7 +30,11 @@ public class BoardManager : MonoBehaviour
     public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
     public FreeRollBoardTileScript[] FreeRollTiles { get => freeRollTiles; set => freeRollTiles = value; }
     public List<BoardTileScript> MovableTile { get => movableTile;}
+    public FreeSuggestionTileScript[] FreeSuggestionTiles { get => freeSuggestionTiles; set => freeSuggestionTiles = value; }
 
+    /*
+     * Return array of all neighbours of given tile
+     */
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
         List<BoardTileScript> neighboursToReturn = new List<BoardTileScript>();
@@ -70,6 +77,9 @@ public class BoardManager : MonoBehaviour
         return neighboursToReturn.ToArray();
     }
 
+    /*
+     * Create 2d array of all board tiles
+     */
     public void CreateBoardArray(BoardTileScript[] tiles, int boardHeight, int boardWidth)
     {
         boardTiles = new BoardTileScript[boardHeight][];
@@ -88,6 +98,9 @@ public class BoardManager : MonoBehaviour
         //PrintArray();
     }
 
+    /*
+     * Return a tile from the array using a grid reference. null if no tile exists at location.
+     */
     public BoardTileScript GetTileFromGrid(int XPos, int YPos)
     {
         if (XPos < boardTiles[0].Length && YPos < boardTiles.Length && XPos >= 0 && YPos >= 0)
@@ -100,11 +113,17 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    /*
+     * Start coroutine to place all the weapons after a delay.
+     */
     internal void PlaceWeapons()
     {
         StartCoroutine(PlaceWeaponsDelay());
     }
 
+    /*
+     * Coroutine to randomly place weapon tokens in rooms with no more than 1 per room
+     */
     IEnumerator PlaceWeaponsDelay()
     {
         yield return new WaitForSeconds(0.01f);
@@ -123,7 +142,9 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    /*Print Array for Testing*/
+    /*
+     * Print Array for Testing
+     */
     private void PrintArray()
     {
         for (int row = 0; row < boardTiles.Length; row++)
@@ -256,6 +277,9 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
+    /*
+     * Set all object arrays once board is built
+     */
     public void SetObjectArrays(PlayerTokenScript[] players, 
                                 RoomScript[] rooms, 
                                 RoomEntryBoardTileScript[] roomEntries, 
@@ -263,7 +287,7 @@ public class BoardManager : MonoBehaviour
                                 StartTileScript[] startTiles, 
                                 WeaponTokenScript[] weaponTokens, 
                                 FreeRollBoardTileScript[] freeRollTiles, 
-                                FreeAccusationTileScript[] freeAccusationTiles)
+                                FreeSuggestionTileScript[] freeSuggestionTiles)
     {
         this.players = players;
         this.rooms = rooms;
@@ -272,6 +296,6 @@ public class BoardManager : MonoBehaviour
         this.startTiles = startTiles;
         this.weaponTokens = weaponTokens;
         this.freeRollTiles = freeRollTiles;
-        this.freeAccusationTiles = freeAccusationTiles;
+        this.freeSuggestionTiles = freeSuggestionTiles;
     }
 }

@@ -9,7 +9,7 @@ public class BoardBuilder : MonoBehaviour
 
     //Number of bonus tiles to add
     [SerializeField] int numberOfFreeRollTiles = 3;
-    [SerializeField] int numberOfFreeAccusationTiles = 3;
+    [SerializeField] int numberOfFreeSuggestionTiles = 3;
 
     //.csv file containing board layout
     private TextAsset boardCSV;
@@ -24,7 +24,7 @@ public class BoardBuilder : MonoBehaviour
     private GameObject roomEntryTilePrefab;
     private GameObject shortcutTilePrefab;
     private GameObject freeRollTilePrefab;
-    private GameObject freeAccusationTilePrefab;
+    private GameObject freeSuggestionTilePrefab;
 
 
     //Rooms
@@ -50,7 +50,7 @@ public class BoardBuilder : MonoBehaviour
     private GameObject shortcutTiles;
     private GameObject weaponTokens;
     private GameObject freeRollTiles;
-    private GameObject freeAccusationTiles;
+    private GameObject freeSuggestionTiles;
     int boardWidth;
     int boardHeight;
 
@@ -81,7 +81,7 @@ public class BoardBuilder : MonoBehaviour
                                      startTiles.GetComponentsInChildren<StartTileScript>(),
                                      weaponTokens.GetComponentsInChildren<WeaponTokenScript>(),
                                      freeRollTiles.GetComponentsInChildren<FreeRollBoardTileScript>(),
-                                     freeAccusationTiles.GetComponentsInChildren<FreeAccusationTileScript>());
+                                     freeSuggestionTiles.GetComponentsInChildren<FreeSuggestionTileScript>());
         boardManager.PlaceWeapons();
     }
 
@@ -103,7 +103,7 @@ public class BoardBuilder : MonoBehaviour
         roomEntryTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(RoomEntry)BoardTile") as GameObject;
         shortcutTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(Shortcut)BoardTile") as GameObject;
         freeRollTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(FreeRoll)BoardTile") as GameObject;
-        freeAccusationTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(FreeAccusation)BoardTile") as GameObject;
+        freeSuggestionTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(FreeSuggestion)BoardTile") as GameObject;
 
         //Rooms
         BallroomPrefab = Resources.Load("Danny/Prefabs/Rooms/Ballroom") as GameObject;
@@ -166,8 +166,8 @@ public class BoardBuilder : MonoBehaviour
         weaponTokens.transform.parent = this.transform;
         freeRollTiles = new GameObject("Free Roll Tiles");
         freeRollTiles.transform.parent = this.transform;
-        freeAccusationTiles = new GameObject("Free Accusation Tiles");
-        freeAccusationTiles.transform.parent = this.transform;
+        freeSuggestionTiles = new GameObject("Free Accusation Tiles");
+        freeSuggestionTiles.transform.parent = this.transform;
 
 
         // Create board from string array
@@ -220,7 +220,7 @@ public class BoardBuilder : MonoBehaviour
     private void PlaceBonusTiles()
     {
         CreateFreeRollTiles();
-        CreateFreeAccusationTiles();
+        CreateFreeSuggestionTiles();
     }
 
     /*
@@ -410,10 +410,10 @@ public class BoardBuilder : MonoBehaviour
     /*
      * Randomly replace required number of general tiles with FreeAccusation Tiles
      */
-    private void CreateFreeAccusationTiles()
+    private void CreateFreeSuggestionTiles()
     {
         int tilesPlaced = 0;
-        while (tilesPlaced < numberOfFreeAccusationTiles)
+        while (tilesPlaced < numberOfFreeSuggestionTiles)
         {
             boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
             BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
@@ -424,11 +424,11 @@ public class BoardBuilder : MonoBehaviour
                 {
                     float x = tile.GridPosition.x;
                     float z = tile.GridPosition.y;
-                    GameObject newTile = GameObject.Instantiate(freeAccusationTilePrefab, new Vector3(x, 0, z), transform.rotation, freeAccusationTiles.transform);
-                    newTile.name = $"Free Accusation Board Tile - ( {x} : {z} )";
+                    GameObject newTile = GameObject.Instantiate(freeSuggestionTilePrefab, new Vector3(x, 0, z), transform.rotation, freeSuggestionTiles.transform);
+                    newTile.name = $"Free Suggestion Board Tile - ( {x} : {z} )";
                     BoardTileScript tileScript = newTile.GetComponent<BoardTileScript>();
                     tileScript.GridPosition = new Vector2(x, z);
-                    tileScript.TileType = TileTypeEnum.FreeAccusation;
+                    tileScript.TileType = TileTypeEnum.FreeSuggestion;
                     tilesPlaced++;
                     GameObject.Destroy(tile.gameObject);
 
@@ -470,22 +470,19 @@ public class BoardBuilder : MonoBehaviour
     }
 
     /*
-     * Check for nearby bonus tiles
+     * Check for nearby bonus / start tiles in order to space out around the board
      */
     private bool CheckNearbyTiles(BoardTileScript tile)
     {
-        
         List<BoardTileScript> nearbyTiles = boardManager.bfs(tile,6);
         //Debug.Log(nearbyTiles.Count);
         foreach (BoardTileScript nearbyTile in nearbyTiles)
         {
-            
-            if (nearbyTile.TileType.Equals(TileTypeEnum.FreeAccusation) || nearbyTile.TileType.Equals(TileTypeEnum.FreeRoll) || nearbyTile.TileType.Equals(TileTypeEnum.Start))
+            if (nearbyTile.TileType.Equals(TileTypeEnum.FreeSuggestion) || nearbyTile.TileType.Equals(TileTypeEnum.FreeRoll) || nearbyTile.TileType.Equals(TileTypeEnum.Start))
             {
                 return false;
             }
         }
-            
         return true;
     }
 }

@@ -558,6 +558,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1616683765, guid: 1ce8ceecd360c594eaa8c0df6398c6a9, type: 3}
+      propertyPath: numberOfFreeRollTiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616683765, guid: 1ce8ceecd360c594eaa8c0df6398c6a9, type: 3}
+      propertyPath: numberOfFreeAccusationTiles
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2014019947730034112, guid: 1ce8ceecd360c594eaa8c0df6398c6a9,
         type: 3}
       propertyPath: m_RootOrder

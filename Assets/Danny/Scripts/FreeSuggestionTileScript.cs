@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreeAccusationTileScript : BoardTileScript
+public class FreeSuggestionTileScript : BoardTileScript
 {
     
 }
