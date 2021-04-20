@@ -14,7 +14,7 @@ public class UserControlScript : MonoBehaviour
     [SerializeField] float yOffset = .2f;
     [SerializeField] bool isMouse = true;
     [SerializeField] bool isController = false;
-    [SerializeField] Camera camera;
+    [SerializeField] Camera cameraObject;
     [SerializeField] LayerMask layerMask;
 
     [Header("Optimisation")]
@@ -32,9 +32,9 @@ public class UserControlScript : MonoBehaviour
 
     private void Awake()
     {
-        if (camera == null)
+        if (cameraObject == null)
         {
-            camera = FindObjectOfType<Camera>();
+            cameraObject = FindObjectOfType<Camera>();
         }
         if (!roundManager)
         {
@@ -86,13 +86,13 @@ public class UserControlScript : MonoBehaviour
     void CastUpdateWithMouse()
     {
         RaycastHit hit;
-        if (Physics.Raycast(camera.transform.position, camera.ScreenToWorldPoint(new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, yOffset)) - camera.transform.position, out hit, 500f, layerMask))
+        if (Physics.Raycast(cameraObject.transform.position, cameraObject.ScreenToWorldPoint(new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, yOffset)) - cameraObject.transform.position, out hit, 500f, layerMask))
         {
             //print(Mouse.current.position.ReadValue());
             targetPos = hit.point + new Vector3(0, yOffset);
 
         }
-        Debug.DrawRay(camera.transform.position, (camera.ScreenToWorldPoint(new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, yOffset)) - camera.transform.position) * 500f, Color.green);
+        Debug.DrawRay(cameraObject.transform.position, (cameraObject.ScreenToWorldPoint(new Vector3(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y, yOffset)) - cameraObject.transform.position) * 500f, Color.green);
 
     }
 

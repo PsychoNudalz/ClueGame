@@ -34,7 +34,7 @@ public class RoundManager : MonoBehaviour
 
             dice = boardManager.GetComponentInChildren<Dice>();
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
         }
         gameGenerator = FindObjectOfType<CardManager>();

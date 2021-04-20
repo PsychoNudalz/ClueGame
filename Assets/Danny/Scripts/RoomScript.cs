@@ -137,7 +137,7 @@ public class RoomScript : MonoBehaviour
 
     internal void RemovePlayerFromRoom(PlayerMasterController player)
     {
-        PlayerMasterController playerToRemove = null;
+        PlayerMasterController playerToRemove;
         foreach (RoomPlayerSlot slot in playerSlots)
         {
             if (slot.GetCharacterInSlot() != null && slot.GetCharacterInSlot().Equals(player))

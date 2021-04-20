@@ -83,7 +83,7 @@ public class BoardTileScript : MonoBehaviour
                 boardTileEffectHandler.ToggleEffect_Off();
             }
         }
-        catch (System.NullReferenceException _)
+        catch (System.NullReferenceException)
         {
             Debug.LogError(this + " Missing boardTileEffect");
         }

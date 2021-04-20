@@ -31,7 +31,8 @@ public class StartTileScript : BoardTileScript
 
     public void SetTileColour(Color colourToSet)
     {
-        throw new NotImplementedException("Set colour not implemented");
+        print("Setting colour");
+        GetComponentInChildren<Renderer>().material.SetColor("Color_2AE3A7FF", colourToSet);
     }
 
     override

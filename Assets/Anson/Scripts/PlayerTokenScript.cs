@@ -111,6 +111,7 @@ public class PlayerTokenScript : MonoBehaviour
         currentTile = tile;
         //TODO Set start tile colour.
         SetCharacter(setCharacter);
+        tile.SetTileColour(characterColour);
     }
     /// <summary>
     /// Setting the character this token will be 
