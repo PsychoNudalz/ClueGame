@@ -38,6 +38,11 @@ public class RoundManager : MonoBehaviour
         uIHandler = FindObjectOfType<UIHandler>();
     }
 
+    private void Start()
+    {
+        StartTurn();
+    }
+
     private void FixedUpdate()
     {
         DiceBehaviour();
@@ -204,6 +209,7 @@ public class RoundManager : MonoBehaviour
     public void StartTurn()
     {
         playerController = turnController.GetCurrentPlayer();
+        uIHandler.DisplayDeck(playerController.GetDeck());
     }
 
     /// <summary>
