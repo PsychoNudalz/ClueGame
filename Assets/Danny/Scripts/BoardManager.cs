@@ -175,7 +175,7 @@ public class BoardManager : MonoBehaviour
                     }
                     else
                     {
-                        print(b.GridPosition + " ignored: " + !queue.Contains(b) + ", " + !neighbours.Contains(b) + ", " + b.IsEmpty());
+                        //print(b.GridPosition + " ignored: " + !queue.Contains(b) + ", " + !neighbours.Contains(b) + ", " + b.IsEmpty());
                     }
                 }
             }

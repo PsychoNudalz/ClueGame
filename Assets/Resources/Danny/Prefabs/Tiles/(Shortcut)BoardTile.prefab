@@ -128,7 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridPosition: {x: 0, y: 0}
-  boardTileEffectHandler: {fileID: 0}
+  boardTileEffectHandler: {fileID: 4235074921428007545}
+  playerToken: {fileID: 0}
+  boardManager: {fileID: 0}
 --- !u!54 &-5585085788072051721
 Rigidbody:
   m_ObjectHideFlags: 0

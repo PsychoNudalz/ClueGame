@@ -122,7 +122,7 @@ public class UIHandler : MonoBehaviour
     }
 
 
-    public void ShowCard(Card c)
+    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         if (!areControlsFrozen)
         {

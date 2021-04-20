@@ -11,11 +11,12 @@ public class RoundManager : MonoBehaviour
     [SerializeField] BoardManager boardManager;
     [SerializeField] CardManager gameGenerator;
     [SerializeField] CameraCloseUp cameraCloseUp;
+    [SerializeField] UIHandler uIHandler;
     bool diceRolled = false;
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
     bool canRoll = true;
-    
+
 
 
     private void Awake()
@@ -27,11 +28,14 @@ public class RoundManager : MonoBehaviour
         try
         {
 
-        dice = boardManager.GetComponentInChildren<Dice>();
-        }catch(System.Exception e) { 
+            dice = boardManager.GetComponentInChildren<Dice>();
+        }
+        catch (System.Exception e)
+        {
         }
         gameGenerator = FindObjectOfType<CardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
+        uIHandler = FindObjectOfType<UIHandler>();
     }
 
     private void FixedUpdate()
@@ -103,7 +107,7 @@ public class RoundManager : MonoBehaviour
         boardManager.ClearMovable();
 
     }
-    public void ShowCard()
+    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         /*
         if getnextPlayer has card show Card
@@ -113,6 +117,9 @@ public class RoundManager : MonoBehaviour
         else if getnextPlayer + 4 has 1 card show card
         else return no card found
          */
+
+        uIHandler.ShowCard(playerMasterController, c);
+
     }
 
     public void MakeSuggestion(List<Card> sug)
@@ -122,23 +129,32 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
-        bool playerWithCardFound= false;
+        bool playerWithCardFound = false;
         List<PlayerMasterController> RestOfPlayers = turnController.GetRestOfPlayersInOrder();
-        for (int i = 0; i < RestOfPlayers.Count;i++) {
-            if (RestOfPlayers[i].FindCard(sug) != null) {
-                Tuple<PlayerMasterController, List<Card>> foundPlayer = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
-                Debug.Log(foundPlayer.Item1.ToString()+" Has cards:");
-                foreach(Card c in foundPlayer.Item2)
+        Tuple<PlayerMasterController, List<Card>> foundPlayer = null;
+        for (int i = 0; i < RestOfPlayers.Count && !playerWithCardFound; i++)
+        {
+            foundPlayer = RestOfPlayers[i].FindCard(sug);
+            if (foundPlayer != null)
+            {
+                // = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
+                Debug.Log(foundPlayer.Item1.ToString() + " Has cards:");
+                foreach (Card c in foundPlayer.Item2)
                 {
                     Debug.Log(c.gameObject.name);
                 }
                 playerWithCardFound = true;
             }
-            
+
         }
-        if (!playerWithCardFound) {
+        if (!playerWithCardFound)
+        {
             print("No Player With Card Found");
             playerWithCardFound = false;
+        }
+        else
+        {
+            ShowCard(foundPlayer.Item1, foundPlayer.Item2);
         }
 
     }
