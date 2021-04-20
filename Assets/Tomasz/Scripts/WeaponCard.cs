@@ -17,11 +17,7 @@ public class WeaponCard : Card
         {
             return false;
         }
-        if (!(obj is Card))
-        {
-            return false;
-        }
-        else if (obj is WeaponEnum)
+        if (obj is WeaponEnum)
         {
             return weaponEnum == ((WeaponEnum)obj);
         }

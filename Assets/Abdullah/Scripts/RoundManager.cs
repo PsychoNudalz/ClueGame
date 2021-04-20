@@ -13,8 +13,6 @@ public class RoundManager : MonoBehaviour
     [SerializeField] CameraCloseUp cameraCloseUp;
     [SerializeField] UIHandler uIHandler;
     bool diceRolled = false;
-    bool secondRollavailable = false;
-    bool secondAccusationavailable = false;
     bool canRoll = true;
     bool canSug = true;
     bool canAcc = true;
@@ -86,13 +84,12 @@ public class RoundManager : MonoBehaviour
     /// Pass true to forcfully roll it
     /// </summary>
     /// <param name="force"> if roll forced</param>
-    public void RollDice(bool force =false)
+    public void RollDice(bool force = false)
     {
         diceRolled = true;
-        if (!secondRollavailable && (canRoll||force))
+        if (canRoll || force)
         {
             dice.RollDice();
-            secondRollavailable = true;
             canRoll = false;
         }
         StartCoroutine(DelayResetDice(5f));
@@ -198,30 +195,28 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            if (secondAccusationavailable)
-            {
-                secondAccusationavailable = false;
-            }
-            else
-            {
-                playerController.EliminatePlayer();
-                EndTurn();
-            }
+            print(playerController + " Wrong answer");
+            playerController.EliminatePlayer();
+            EndTurn();
         }
 
     }
-
-    public void EndTurn()
+    /// <summary>
+    /// Ending the turn.  Returns the next player
+    /// </summary>
+    /// <returns></returns>
+    public PlayerMasterController EndTurn()
     {
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
-        secondRollavailable = false;
 
         //Anson: reset camera
         cameraCloseUp.ClearCloseUp();
 
         //Anson: start the turn to update the current player
         StartTurn();
+
+        return GetCurrentPlayer();
     }
     /// <summary>
     /// Method for starting the turn

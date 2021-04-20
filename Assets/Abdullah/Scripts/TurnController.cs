@@ -40,7 +40,7 @@ public class TurnController : MonoBehaviour
                 if ((int)initialisePlayers[j].GetCharacter() == i)
                 {
                     currentPlayers.Add(initialisePlayers[j]);
-                    print(initialisePlayers[j].GetCharacter().ToString());
+                    //print(initialisePlayers[j].GetCharacter().ToString());
                 }
 
             }

@@ -72,10 +72,15 @@ public class CardManager : MonoBehaviour
     /// <returns></returns>
     public bool IsMatchAnswer(List<Card> accusation)
     {
+        foreach(Card c in accusation)
+        {
+            print(c.GetCardType());
+        }
         foreach (Card a in answers)
         {
             if (!accusation.Contains(a))
             {
+                print("Accusation does not have: " + a);
                 return false;
             }
         }

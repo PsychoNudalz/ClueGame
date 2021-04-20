@@ -17,11 +17,15 @@ public class UIHandler : MonoBehaviour
     private Image img;
     public UserController userController;
     bool areControlsFrozen = false;
+    [Header("UI elements")]
+    [SerializeField] TextMeshProUGUI currentPlayerName;
 
 
     [Header("Suggestion Panels")]
     public GameObject makeSuggestionPanel;
     [SerializeField] TextMeshProUGUI suggestionRoomNameText;
+    [Header("Accusation Panels")]
+    public GameObject makeAccusationPanel;
     //public GameObject suggestionPanel;
     private void Start()
     {
@@ -39,10 +43,7 @@ public class UIHandler : MonoBehaviour
             suggestionRoomNameText = GameObject.FindGameObjectWithTag("rName").GetComponent<TextMeshProUGUI>();
         }
         makeSuggestionPanel.SetActive(false);
-
-
-
-
+        currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
 
         //deck = gameGen.GetSixSetsOfCards()[0];
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
@@ -164,7 +165,7 @@ public class UIHandler : MonoBehaviour
     {
         if (forced)
         {
-
+            // if landed on suggestion block, allow selection of room
         }
         else
         {
@@ -186,6 +187,7 @@ public class UIHandler : MonoBehaviour
         }
     }
 
+
     public void ConfirmSuggestion()
     {
         if (userController.MakeSuggestion())
@@ -194,27 +196,30 @@ public class UIHandler : MonoBehaviour
         }
     }
 
+    public void MakeAccusationButton()
+    {
+        if (!areControlsFrozen && userController.RM.CanAcc)
+        {
+            areControlsFrozen = true;
+            DisplayMenuAccusation();
+            areControlsFrozen = false;
+        }
+    }
+
     public void DisplayMenuAccusation()
     {
-
+        makeAccusationPanel.SetActive(true);
     }
 
-    public void SelectCards_Character()
+    public void ConfirmAccusation()
     {
+        if (userController.MakeAccusation())
+        {
+            makeAccusationPanel.SetActive(false);
 
+        }
     }
 
-
-    public void SelectCards_Weapon()
-    {
-
-    }
-
-
-    public void SelectCards_Room()
-    {
-
-    }
     public void SelectCardsToShow(List<Card> toShow)
     {
 
@@ -223,7 +228,8 @@ public class UIHandler : MonoBehaviour
     public void EndTurn()
     {
         print("Pressed End turn");
-        userController.EndTurn();
+        string nextPlayer =  userController.EndTurn().GetCharacter().ToString();
+        currentPlayerName.text ="Turn:"+ nextPlayer;
     }
 }
 

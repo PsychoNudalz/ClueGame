@@ -6,9 +6,11 @@ public class UserController : MonoBehaviour
 {
     //private GameManager gM;
     private RoundManager rM;
+    CardManager cardManager;
 
     [SerializeField] Suggestion suggestion;
     [SerializeField] Accusation accusation;
+
 
     public RoundManager RM { get => rM; }
     public Suggestion Suggestion { get => suggestion; }
@@ -27,8 +29,12 @@ public class UserController : MonoBehaviour
         {
             accusation = FindObjectOfType<Accusation>();
         }
+        if (cardManager == null)
+        {
+            cardManager = FindObjectOfType<CardManager>();
+        }
         //print(FindObjectOfType<Suggestion>());
-    
+
     }
 
     public void RollDice()
@@ -57,19 +63,42 @@ public class UserController : MonoBehaviour
         }
     }
 
-    public void SetCharacter() { }
+    public void SetCharacter(CharacterEnum c)
+    {
+        suggestion.SetSugCharacter(cardManager.FindCard(c) as CharacterCard);
+        accusation.SetCharacter(cardManager.FindCard(c) as CharacterCard);
+    }
 
-    public void SetWeapon() { }
+    public void SetWeapon(WeaponEnum c) {
+        suggestion.SetSugWeapon(cardManager.FindCard(c) as WeaponCard);
+        accusation.SetWeapon(cardManager.FindCard(c) as WeaponCard);
+    }
 
-    public void SetRoom() { }
+    public void SetRoom(Room c) {
+        suggestion.SetSugRoom(cardManager.FindCard(c) as RoomCard);
+        accusation.SetRoom(cardManager.FindCard(c) as RoomCard);
+    }
 
     public void PassSelected() { }
 
-    public void MakeAccusation() { }
-
-    public void EndTurn()
+    public bool MakeAccusation()
     {
-        rM.EndTurn();
+        List<Card> acc = accusation.Accuse();
+        if (acc == null)
+        {
+            return false;
+        }
+        else
+        {
+            rM.MakeAccusation(acc);
+            return true;
+
+        }
+    }
+
+    public PlayerMasterController EndTurn()
+    {
+        return rM.EndTurn();
     }
 
     /// <summary>

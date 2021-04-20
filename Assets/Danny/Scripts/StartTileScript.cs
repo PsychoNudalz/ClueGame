@@ -31,7 +31,7 @@ public class StartTileScript : BoardTileScript
 
     public void SetTileColour(Color colourToSet)
     {
-        print("Setting colour");
+        //print("Setting colour");
         GetComponentInChildren<Renderer>().material.SetColor("Color_2AE3A7FF", colourToSet);
     }
 

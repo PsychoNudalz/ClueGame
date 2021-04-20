@@ -184,7 +184,7 @@ public class BoardManager : MonoBehaviour
         for (int j = 0; j < range; j++)
         {
             List<BoardTileScript> neighbours = new List<BoardTileScript>();
-            Debug.Log("In Loop: " + j);
+            //Debug.Log("In Loop: " + j);
             for (int i = pointer; i < queue.Count; i++)
             {
                 pointer++;

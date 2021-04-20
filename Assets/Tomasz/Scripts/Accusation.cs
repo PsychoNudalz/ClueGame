@@ -12,16 +12,17 @@ public class Accusation : MonoBehaviour
 
     [SerializeField] RoundManager roundManager;
 
-    public void Accuse() {
+    public List<Card> Accuse() {
         if (currentCharacter != null & currentRoom != null & currentWeapon != null)
         {
             Debug.Log("Accuse " + currentWeapon.name + " "+ currentRoom.name + " " + currentCharacter.name);
-            if (!roundManager)
-            {
-                roundManager = FindObjectOfType<RoundManager>();
-            }
+
             Card[] acc = { currentCharacter, currentWeapon, currentRoom };
-            roundManager.MakeAccusation(new List<Card>(acc));
+            return (new List<Card>(acc));
+        }
+        else
+        {
+            return null;
         }
     }
     public void SetWeapon(WeaponCard c) {

@@ -15,15 +15,13 @@ public class CharacterCard : Card
         {
             return false;
         }
-        if (!(obj is Card))
+       
+         if (obj is CharacterEnum)
         {
-            return false;
-        }
-        else if (obj is CharacterEnum)
-        {
+            //print("Comparing: " + characterEnum + ", " + ((CharacterEnum)obj));
             return characterEnum == ((CharacterEnum)obj);
         }
-        if (obj is CharacterCard)
+        else if (obj is CharacterCard)
         {
             return this.Equals((obj as CharacterCard).characterEnum);
 
