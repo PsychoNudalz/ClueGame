@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class TurnController : MonoBehaviour
 {
-    PlayerMasterController addPlayer;
    [SerializeField] List<PlayerMasterController> currentPlayers;
    [SerializeField] List<PlayerMasterController> initialisePlayers;
     public int currentPlayerIndex;
-    int numberOfPlayers;
 
     public List<PlayerMasterController> CurrentPlayers { get => currentPlayers; set => currentPlayers = value; }
 
     void Awake()
     {
+        //run the StartGame() method in order to 
         StartGame();
     }
 
@@ -24,8 +23,13 @@ public class TurnController : MonoBehaviour
         //pointer to first player
         currentPlayerIndex = 0;
     }
+
+    /// <summary>
+    /// Initialises the list with all the players from the gameobject, adding them in order
+    /// </summary>
     void InitialisePlayers() 
     {
+        
         currentPlayers = new List<PlayerMasterController>();
         initialisePlayers = new List<PlayerMasterController>(FindObjectsOfType<PlayerMasterController>());
         for (int i = 0; i < 6; i++) 
@@ -45,16 +49,21 @@ public class TurnController : MonoBehaviour
     }
 
     public List<PlayerMasterController> GetRestOfPlayersInOrder() {
+        //copy current players into a pseudo list
         List<PlayerMasterController> restOfPlayers = new List<PlayerMasterController>(currentPlayers);
+        //create a new list that will have the players in order, exluding the current player
         List<PlayerMasterController> rOPinOrder = new List<PlayerMasterController>();
-        //restOfPlayers = currentPlayers;
+        //create a new index that has the same value as the currentplayerindex
         int orderIndex = currentPlayerIndex;
+        // remove the current player from the pseudo list
         restOfPlayers.RemoveAt(currentPlayerIndex % restOfPlayers.Count);
+        // Iterate through the pseudo currentPlayers list, remove the current player from the pseduo list, and start adding the players in order into a new list where index 0 is the next player
         for (int i = 0; i < restOfPlayers.Count;i++) {
             if (rOPinOrder.Count < restOfPlayers.Count)
             {
                 if ((orderIndex + i) > restOfPlayers.Count)
                 {
+                    //if the index reached the end of the list, set index to 0
                     orderIndex = 0;
                     i = 0;
                 }
@@ -64,38 +73,36 @@ public class TurnController : MonoBehaviour
                 break;
             }
         }
-
+        // return the rest of the players in order, excluding the current player
         return rOPinOrder;
     }
     
 
-    public void SetNumberofPlayers(int a) 
-    {
-        //set number of players playing the game, rest will be AI
-        numberOfPlayers = a;
-    }
-
-
     public PlayerMasterController GetNextPlayer() 
     {
+        //if index is at the end of list, get the start of the list
         if (currentPlayerIndex == currentPlayers.Count) 
         {
             return currentPlayers[currentPlayerIndex = 0];
         }
         else
         {
+            //get the next player
             return currentPlayers[(currentPlayerIndex + 1) % currentPlayers.Count];
         }
     }
+
 
     public void SetCurrentPlayerToNext() 
     {
         if (currentPlayerIndex == currentPlayers.Count)
         {
+            //change index to 0 if the last player ends turn
             currentPlayerIndex = 0;
         }
         else
         {
+            //incriment the player index to advance to the next player
             currentPlayerIndex++;
             currentPlayerIndex = currentPlayerIndex % currentPlayers.Count;
         }
@@ -103,37 +110,19 @@ public class TurnController : MonoBehaviour
 
     public PlayerMasterController GetCurrentPlayer() 
     {
+        //return current player
         return currentPlayers[currentPlayerIndex];
     }
 
     public void RemovePlayer() 
     {
+        //remove current player
         currentPlayers.RemoveAt(currentPlayerIndex);
-    }
-
-    public void GetSuggestion() 
-    {
-        
-    }
-
-    public void Accusation() 
-    { 
-        
-    }
-
-    public void ShowCard() 
-    {
-    
-    }
-
-    public void CallNextTurn() 
-    {
-        
     }
 
     public void Win() 
     {
-        //
+        //TODO: wining
         print("You Win!");
     }
 }
