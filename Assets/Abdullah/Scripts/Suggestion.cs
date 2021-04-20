@@ -23,6 +23,11 @@ public class Suggestion : MonoBehaviour
     {
         if (sugRoom != null & sugWeapon != null & sugCharacter != null)
         {
+            RoomScript roomScript = FindObjectOfType<RoomScript>();
+
+            roomScript.MovePlayerToRoom((CharacterEnum)System.Enum.Parse(typeof(CharacterEnum), sugCharacter.gameObject.name));
+            roomScript.MoveWeaponToRoom((WeaponEnum)System.Enum.Parse(typeof(WeaponEnum), sugWeapon.gameObject.name));
+
             Debug.Log("I suggest that the crime was committed in the " + sugRoom + ", by " + sugCharacter + " with the " + sugWeapon);
             if (!roundManagerScript)
             {
