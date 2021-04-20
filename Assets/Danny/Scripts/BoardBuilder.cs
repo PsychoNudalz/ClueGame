@@ -6,10 +6,18 @@ using Random = UnityEngine.Random;
 
 public class BoardBuilder : MonoBehaviour
 {
+
+    //Number of bonus tiles to add
+    [SerializeField] int numberOfFreeRollTiles = 3;
+    [SerializeField] int numberOfFreeAccusationTiles = 3;
+
+    //.csv file containing board layout
     private TextAsset boardCSV;
+    
     //Prefabs
     //Player Token
     private GameObject playerPiecePrefab;
+
     //Board Tiles
     private GameObject generalTilePrefab;
     private GameObject startingTilePrefab;
@@ -31,6 +39,7 @@ public class BoardBuilder : MonoBehaviour
     private GameObject LoungePrefab;
     private GameObject StudyPrefab;
     
+    //Gameobjects to organise board when created
     private BoardManager boardManager;
     private string[][] boardStringArray;
     private GameObject players;
@@ -45,27 +54,25 @@ public class BoardBuilder : MonoBehaviour
     int boardWidth;
     int boardHeight;
 
-
-
     void Awake()
     {
         Initialise();
     }
 
-    private void Start()
-    {
-        
-    }
+    /*
+     * Method to create the board, initialise and place all items and pass references to board manager
+     */
     private void Initialise()
     {
+        boardManager = GetComponentInParent<BoardManager>();
         LoadResources();
         GenerateBoardArrayFromCSV();
         boardHeight = boardStringArray.Length;
         boardWidth = boardStringArray[0].Length;
         BuildBoard();
-        boardManager = GetComponentInParent<BoardManager>();
-        boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
         CreateWeapons();
+        PlaceBonusTiles();
+        boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
         //Transfer script arrays to board manager.
         boardManager.SetObjectArrays(players.GetComponentsInChildren<PlayerTokenScript>(),
                                      rooms.GetComponentsInChildren<RoomScript>(),
@@ -78,13 +85,18 @@ public class BoardBuilder : MonoBehaviour
         boardManager.PlaceWeapons();
     }
 
+    /*
+     * Load all prefabs from resources folder
+     */
     private void LoadResources()
     {
         //Load board csv file
         boardCSV = Resources.Load("Danny/BoardLayout") as TextAsset;
+
         //Load prefabs from resources
         //Player token
         playerPiecePrefab = Resources.Load("Danny/Prefabs/PlayerToken/PlayerToken") as GameObject;
+
         //Tiles
         generalTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(General)BoardTile") as GameObject;
         startingTilePrefab = Resources.Load("Danny/Prefabs/Tiles/(Start)BoardTile") as GameObject;
@@ -104,22 +116,11 @@ public class BoardBuilder : MonoBehaviour
         LibraryPrefab = Resources.Load("Danny/Prefabs/Rooms/Library") as GameObject;
         LoungePrefab = Resources.Load("Danny/Prefabs/Rooms/Lounge") as GameObject;
         StudyPrefab = Resources.Load("Danny/Prefabs/Rooms/Study") as GameObject;
-
-        
     }
 
-    private void CreateWeapons()
-    {
-        foreach (WeaponEnum weapon in Enum.GetValues(typeof(WeaponEnum))){
-            
-            GameObject prefab = Resources.Load("Danny/Prefabs/WeaponTokens/" + weapon.ToString()) as GameObject;
-            GameObject weaponToken = GameObject.Instantiate(prefab);
-            weaponToken.transform.parent = weaponTokens.transform;
-            weaponToken.name = String.Format("Weapon Token ({0})", weapon.ToString());
-
-        }
-    }
-
+    /*
+     * Create a 2d array from the .csv file to build the board from
+     */
     private void GenerateBoardArrayFromCSV()
     {
         //Create string array from .csv file
@@ -143,9 +144,12 @@ public class BoardBuilder : MonoBehaviour
         */
     }
 
+    /*
+     * Build the board using various helper methods
+     */
     private void BuildBoard()
     {
-        //Create gameobjects to organize board objects
+        //Initialize gameobjects to organize board objects
         players = new GameObject("Player Tokens");
         players.transform.parent = this.transform;
         rooms = new GameObject("Rooms");
@@ -169,14 +173,14 @@ public class BoardBuilder : MonoBehaviour
         // Create board from string array
         int x;
         int z = -1;
-        
-        for (int row = boardStringArray.Length -1; row >= 0; row--)
+
+        for (int row = boardStringArray.Length - 1; row >= 0; row--)
         {
             GameObject rowObject = new GameObject("Row - " + (boardStringArray.Length - row - 1));
             rowObject.transform.parent = generalTiles.transform;
             z++;
             x = -1;
-            for(int col = 0; col < boardStringArray[row].Length; col++)
+            for (int col = 0; col < boardStringArray[row].Length; col++)
             {
                 x++;
                 string[] square = boardStringArray[row][col].Split(':');
@@ -208,54 +212,20 @@ public class BoardBuilder : MonoBehaviour
                 GameObject.Destroy(rowObject);
             }
         }
-        CreateFreeRollTiles(3);
-        CreateFreeAccusationTiles(3);
     }
 
-    private void CreateFreeAccusationTiles(int numberOfTiles)
+    /*
+     * Randomly place Free roll / accusation tiles.
+     */
+    private void PlaceBonusTiles()
     {
-        int tilesPlaced = 0;
-        while (tilesPlaced < numberOfTiles)
-        {
-            BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
-            BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
-            if (tile.TileType.Equals(TileTypeEnum.General))
-            {
-                float x = tile.GridPosition.x;
-                float z = tile.GridPosition.y;
-                GameObject newTile = GameObject.Instantiate(freeAccusationTilePrefab, new Vector3(x, 0, z), transform.rotation, freeAccusationTiles.transform);
-                newTile.name = $"Free Accusation Board Tile - ( {x} : {z} )";
-                BoardTileScript tileScript = newTile.GetComponent<BoardTileScript>();
-                tileScript.GridPosition = new Vector2(x, z);
-                tileScript.TileType = TileTypeEnum.FreeAccusation;
-                tilesPlaced++;
-                GameObject.Destroy(tile.gameObject);
-            }
-        }
+        CreateFreeRollTiles();
+        CreateFreeAccusationTiles();
     }
 
-    private void CreateFreeRollTiles(int numberOfTiles)
-    {
-        int tilesPlaced = 0;
-        while(tilesPlaced < numberOfTiles)
-        {
-            BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
-            BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
-            if (tile.TileType.Equals(TileTypeEnum.General))
-            {
-                float x = tile.GridPosition.x;
-                float z = tile.GridPosition.y;
-                GameObject newTile = GameObject.Instantiate(freeRollTilePrefab, new Vector3(x, 0, z), transform.rotation, freeRollTiles.transform);
-                newTile.name = $"Free Roll Board Tile - ( {x} : {z} )";
-                BoardTileScript tileScript = newTile.GetComponent<BoardTileScript>();
-                tileScript.GridPosition = new Vector2(x, z);
-                tileScript.TileType = TileTypeEnum.FreeRoll;
-                tilesPlaced++;
-                GameObject.Destroy(tile.gameObject);
-            }
-        }
-    }
-
+    /*
+     * Instantiate a shortcut tile and set its parameters
+     */
     private void CreateShortcutTile(int x, int z, string shortcutRooms, string rotation)
     {
         //Create shortcut tile
@@ -277,6 +247,9 @@ public class BoardBuilder : MonoBehaviour
         shortcutTile.name = $"Shortcut {rooms[0]} ==> {rooms[1]} ( {x} : {z} )";
     }
 
+    /*
+    * Instantiate a roomEntrance tile and set its parameters
+    */
     private void CreateRoomEntranceTile(int x, int z, string room, string rotation, GameObject parent)
     {
         //Create room entry tile 
@@ -293,6 +266,9 @@ public class BoardBuilder : MonoBehaviour
         roomEntryTile.name = $"Room Entry Tile - {room} - ( {x} : {z} )";
     }
 
+    /*
+    * Instantiate a start tile and set its parameters
+    */
     private void CreateStartTile(int x, int z, string characterName, GameObject parent)
     {
         //Get camera and character enum from string
@@ -349,6 +325,9 @@ public class BoardBuilder : MonoBehaviour
         
     }
 
+    /*
+    * Instantiate a General tile and set its parameters
+    */
     private void CreateBoardTile(int x, int z, GameObject parent)
     {
         //Create board tile, set name, type and coordinates
@@ -358,7 +337,10 @@ public class BoardBuilder : MonoBehaviour
         tileScript.GridPosition = new Vector2(x, z);
         tileScript.TileType = TileTypeEnum.General;
     }
-    
+
+    /*
+    * Instantiate a Room and set its parameters
+    */
     private void CreateRoom(int x, int z, string roomName)
     {
         //Create room from roomName string and set enum
@@ -408,5 +390,102 @@ public class BoardBuilder : MonoBehaviour
             default:
                 break;
         }
+    }
+    
+    /*
+     * Instantiate all weapon tokens
+     */
+    private void CreateWeapons()
+    {
+        foreach (WeaponEnum weapon in Enum.GetValues(typeof(WeaponEnum))){
+            
+            GameObject prefab = Resources.Load("Danny/Prefabs/WeaponTokens/" + weapon.ToString()) as GameObject;
+            GameObject weaponToken = GameObject.Instantiate(prefab);
+            weaponToken.transform.parent = weaponTokens.transform;
+            weaponToken.name = String.Format("Weapon Token ({0})", weapon.ToString());
+
+        }
+    }
+
+    /*
+     * Randomly replace required number of general tiles with FreeAccusation Tiles
+     */
+    private void CreateFreeAccusationTiles()
+    {
+        int tilesPlaced = 0;
+        while (tilesPlaced < numberOfFreeAccusationTiles)
+        {
+            boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
+            BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
+            BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
+            if (tile.TileType.Equals(TileTypeEnum.General))
+            {
+                if (CheckNearbyTiles(tile))
+                {
+                    float x = tile.GridPosition.x;
+                    float z = tile.GridPosition.y;
+                    GameObject newTile = GameObject.Instantiate(freeAccusationTilePrefab, new Vector3(x, 0, z), transform.rotation, freeAccusationTiles.transform);
+                    newTile.name = $"Free Accusation Board Tile - ( {x} : {z} )";
+                    BoardTileScript tileScript = newTile.GetComponent<BoardTileScript>();
+                    tileScript.GridPosition = new Vector2(x, z);
+                    tileScript.TileType = TileTypeEnum.FreeAccusation;
+                    tilesPlaced++;
+                    GameObject.Destroy(tile.gameObject);
+
+                }
+                
+            }
+        }
+    }
+
+    /*
+     * Randomly replace required number of general tiles with FreeRoll Tiles
+     */
+    private void CreateFreeRollTiles()
+    {
+        int tilesPlaced = 0;
+        while(tilesPlaced < numberOfFreeRollTiles)
+        {
+            boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
+            BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
+            BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
+            if (tile.TileType.Equals(TileTypeEnum.General))
+            {
+                if (CheckNearbyTiles(tile))
+                {
+                    float x = tile.GridPosition.x;
+                    float z = tile.GridPosition.y;
+                    GameObject newTile = GameObject.Instantiate(freeRollTilePrefab, new Vector3(x, 0, z), transform.rotation, freeRollTiles.transform);
+                    newTile.name = $"Free Roll Board Tile - ( {x} : {z} )";
+                    BoardTileScript tileScript = newTile.GetComponent<BoardTileScript>();
+                    tileScript.GridPosition = new Vector2(x, z);
+                    tileScript.TileType = TileTypeEnum.FreeRoll;
+                    tilesPlaced++;
+                    GameObject.Destroy(tile.gameObject);
+
+                }
+                
+            }
+        }
+    }
+
+    /*
+     * Check for nearby bonus tiles
+     */
+    private bool CheckNearbyTiles(BoardTileScript tile)
+    {
+        
+        List<BoardTileScript> nearbyTiles = boardManager.bfs(tile,6);
+        //Debug.Log(nearbyTiles.Count);
+        foreach (BoardTileScript nearbyTile in nearbyTiles)
+        {
+            
+            if (nearbyTile.TileType.Equals(TileTypeEnum.FreeAccusation) || nearbyTile.TileType.Equals(TileTypeEnum.FreeRoll) || nearbyTile.TileType.Equals(TileTypeEnum.Start))
+            {
+                return false;
+            }
+        }
+            
+        return true;
     }
 }

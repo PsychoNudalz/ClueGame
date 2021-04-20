@@ -35,6 +35,10 @@ public class UIHandler : MonoBehaviour
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
 
         //Anson: this gets you the deck for the current player, call this when you need to update the UI
+    }
+
+    public void DisplayDeck(List<Card> cards)
+    {
         deck = userController.GetCurrentPlayer().GetDeck();
 
         int i = 0;
@@ -50,6 +54,7 @@ public class UIHandler : MonoBehaviour
         }
         SetNamesColours();
     }
+
     public void SetNamesColours()
     {
         foreach (CardSlot cs in cardSlots)
@@ -122,7 +127,7 @@ public class UIHandler : MonoBehaviour
     }
 
 
-    public void ShowCard(Card c)
+    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         if (!areControlsFrozen)
         {

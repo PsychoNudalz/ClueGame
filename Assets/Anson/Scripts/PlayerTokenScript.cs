@@ -299,4 +299,26 @@ public class PlayerTokenScript : MonoBehaviour
         targetTile = null;
         
     }
+
+    public static CharacterEnum GetCharacterEnumFromString(string character)
+    {
+        switch (character)
+        {
+            case "Miss Scarlett":
+                return CharacterEnum.MissScarlett;
+            case "Prof Plum":
+                return CharacterEnum.ProfPlum;
+            case "Col Mustard":
+                return CharacterEnum.ColMustard;
+            case "Mrs Peacock":
+                return CharacterEnum.MrsPeacock;
+            case "Rev Green":
+                return CharacterEnum.RevGreen;
+            case "Mrs White":
+                return CharacterEnum.MrsWhite;
+            default:
+                throw new Exception("Character enum not found");
+
+        }
+    }
 }

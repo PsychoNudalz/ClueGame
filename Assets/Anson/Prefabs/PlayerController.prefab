@@ -59,6 +59,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3dd574c7f30744dbe3dd104bfef2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 2
+  character: 0
   deck: []
   isEliminated: 0

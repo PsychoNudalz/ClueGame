@@ -51,4 +51,25 @@ public class WeaponTokenScript : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isMoving = true;
     }
+
+    public static WeaponEnum GetWeaponEnumFromString(String weapon)
+    {
+        switch (weapon)
+        {
+            case "Dagger":
+                return WeaponEnum.Dagger;
+            case "Candle Stick":
+                return WeaponEnum.CandleStick;
+            case "Revolver":
+                return WeaponEnum.Revolver;
+            case "Rope":
+                return WeaponEnum.Rope;
+            case "Lead Pipe":
+                return WeaponEnum.LeadPipe;
+            case "Spanner":
+                return WeaponEnum.Spanner;
+            default:
+                throw new Exception("Weapon enum not found");
+        }
+    }
 }
