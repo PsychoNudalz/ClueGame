@@ -95,16 +95,26 @@ public class TurnController : MonoBehaviour
 
     public void SetCurrentPlayerToNext() 
     {
-        if (currentPlayerIndex == currentPlayers.Count)
+        int loopFlag = 0;
+        do
         {
-            //change index to 0 if the last player ends turn
-            currentPlayerIndex = 0;
-        }
-        else
+            loopFlag++;
+            if (currentPlayerIndex == currentPlayers.Count)
+            {
+                //change index to 0 if the last player ends turn
+                currentPlayerIndex = 0;
+            }
+            else
+            {
+                //incriment the player index to advance to the next player
+                currentPlayerIndex++;
+                currentPlayerIndex = currentPlayerIndex % currentPlayers.Count;
+            }
+        } while (currentPlayers[currentPlayerIndex].IsEliminated()&&loopFlag<=currentPlayers.Count+1);
+        if(loopFlag >=currentPlayers.Count)
         {
-            //incriment the player index to advance to the next player
-            currentPlayerIndex++;
-            currentPlayerIndex = currentPlayerIndex % currentPlayers.Count;
+            Debug.LogWarning("Loop detected, game over");
+
         }
     }
 
