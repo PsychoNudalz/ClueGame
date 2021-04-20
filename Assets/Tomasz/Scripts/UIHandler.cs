@@ -19,6 +19,7 @@ public class UIHandler : MonoBehaviour
     bool areControlsFrozen = false;
     [Header("UI elements")]
     [SerializeField] TextMeshProUGUI currentPlayerName;
+    [SerializeField] GameObject ViewBlocker;
 
 
     [Header("Suggestion Panels")]
@@ -44,6 +45,8 @@ public class UIHandler : MonoBehaviour
         }
         makeSuggestionPanel.SetActive(false);
         currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
+
+        DisplayViewBlocker(false);
 
         //deck = gameGen.GetSixSetsOfCards()[0];
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
@@ -230,6 +233,11 @@ public class UIHandler : MonoBehaviour
         print("Pressed End turn");
         string nextPlayer =  userController.EndTurn().GetCharacter().ToString();
         currentPlayerName.text ="Turn:"+ nextPlayer;
+    }
+
+    public void DisplayViewBlocker(bool b)
+    {
+        ViewBlocker.SetActive(b);
     }
 }
 

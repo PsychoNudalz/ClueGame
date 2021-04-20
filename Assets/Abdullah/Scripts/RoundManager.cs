@@ -188,6 +188,7 @@ public class RoundManager : MonoBehaviour
         if they dont match -> player asked to make a second accusation
         if second accusation doesnt not match -> remove player from queue
         */
+        canAcc = false;
         if (gameGenerator.IsMatchAnswer(cards))
         {
             //code for wining
@@ -209,6 +210,9 @@ public class RoundManager : MonoBehaviour
     {
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
+
+        //Anson: Block View
+        uIHandler.DisplayViewBlocker(true);
 
         //Anson: reset camera
         cameraCloseUp.ClearCloseUp();
