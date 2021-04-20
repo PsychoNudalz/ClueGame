@@ -70,9 +70,9 @@ public class BoardBuilder : MonoBehaviour
         boardHeight = boardStringArray.Length;
         boardWidth = boardStringArray[0].Length;
         BuildBoard();
-        boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
         CreateWeapons();
         PlaceBonusTiles();
+        boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
         //Transfer script arrays to board manager.
         boardManager.SetObjectArrays(players.GetComponentsInChildren<PlayerTokenScript>(),
                                      rooms.GetComponentsInChildren<RoomScript>(),
