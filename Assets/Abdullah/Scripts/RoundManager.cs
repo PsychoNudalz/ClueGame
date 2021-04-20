@@ -122,7 +122,10 @@ public class RoundManager : MonoBehaviour
         else if getnextPlayer + 4 has 1 card show card
         else return no card found
          */
-
+        if (uIHandler == null)
+        {
+            return;
+        }
         uIHandler.ShowCard(playerMasterController, c);
 
     }
