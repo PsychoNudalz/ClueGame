@@ -11,14 +11,15 @@ public class RoundManager : MonoBehaviour
     [SerializeField] BoardManager boardManager;
     [SerializeField] CardManager gameGenerator;
     [SerializeField] CameraCloseUp cameraCloseUp;
-    [SerializeField] UIHandler uIHandler;
     bool diceRolled = false;
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
     bool canRoll = true;
+    
 
-
-
+    /// <summary>
+    /// find all objects in the scene
+    /// </summary>
     private void Awake()
     {
         dice = FindObjectOfType<Dice>();
@@ -28,20 +29,13 @@ public class RoundManager : MonoBehaviour
         try
         {
 
-            dice = boardManager.GetComponentInChildren<Dice>();
-        }
-        catch (System.Exception e)
-        {
+        dice = boardManager.GetComponentInChildren<Dice>();
+        }catch(System.Exception e) { 
         }
         gameGenerator = FindObjectOfType<CardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
-        uIHandler = FindObjectOfType<UIHandler>();
     }
 
-    private void Start()
-    {
-        StartTurn();
-    }
 
     private void FixedUpdate()
     {
@@ -76,6 +70,9 @@ public class RoundManager : MonoBehaviour
         dice.ResetDice();
     }
 
+    /// <summary>
+    /// Call to roll the dice, with a bool to check if you can roll again in your turn
+    /// </summary>
     public void RollDice()
     {
         diceRolled = true;
@@ -92,6 +89,8 @@ public class RoundManager : MonoBehaviour
         }
         StartCoroutine(DelayResetDice(5f));
     }
+
+
 
     public void MovePlayer(BoardTileScript b)
     {
@@ -112,23 +111,8 @@ public class RoundManager : MonoBehaviour
         boardManager.ClearMovable();
 
     }
-    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
-    {
-        /*
-        if getnextPlayer has card show Card
-        else if getnextPlayer + 1 has 1 card show card
-        else if getnextPlayer + 2 has 1 card show card
-        else if getnextPlayer + 3 has 1 card show card
-        else if getnextPlayer + 4 has 1 card show card
-        else return no card found
-         */
-        if (uIHandler == null)
-        {
-            return;
-        }
-        uIHandler.ShowCard(playerMasterController, c);
 
-    }
+
 
     public void MakeSuggestion(List<Card> sug)
     { /*
@@ -137,32 +121,24 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
-        bool playerWithCardFound = false;
+        bool playerWithCardFound= false;
         List<PlayerMasterController> RestOfPlayers = turnController.GetRestOfPlayersInOrder();
-        Tuple<PlayerMasterController, List<Card>> foundPlayer = null;
-        for (int i = 0; i < RestOfPlayers.Count && !playerWithCardFound; i++)
-        {
-            foundPlayer = RestOfPlayers[i].FindCard(sug);
-            if (foundPlayer != null)
-            {
-                // = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
-                Debug.Log(foundPlayer.Item1.ToString() + " Has cards:");
-                foreach (Card c in foundPlayer.Item2)
+        //Iterate through the players in order and check if a player has a card
+        for (int i = 0; i < RestOfPlayers.Count;i++) {
+            if (RestOfPlayers[i].FindCard(sug) != null) {
+                Tuple<PlayerMasterController, List<Card>> foundPlayer = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
+                Debug.Log(foundPlayer.Item1.ToString()+" Has cards:");
+                foreach(Card c in foundPlayer.Item2)
                 {
                     Debug.Log(c.gameObject.name);
                 }
                 playerWithCardFound = true;
             }
-
+            
         }
-        if (!playerWithCardFound)
-        {
+        if (!playerWithCardFound) {
             print("No Player With Card Found");
             playerWithCardFound = false;
-        }
-        else
-        {
-            ShowCard(foundPlayer.Item1, foundPlayer.Item2);
         }
 
     }
@@ -173,29 +149,17 @@ public class RoundManager : MonoBehaviour
          Check the players card against the 3 cards set at the start of the game
         if they match -> player wins
         if they dont match -> player asked to make a second accusation
-        if second accusation doesnt not match -> remove player from queue
         */
         if (gameGenerator.IsMatchAnswer(cards))
         {
             //code for wining
             print("PLAYER WIN");
         }
-        else
-        {
-            if (secondAccusationavailable)
-            {
-                secondAccusationavailable = false;
-            }
-            else
-            {
-                playerController.EliminatePlayer();
-            }
-        }
-
     }
 
     public void EndTurn()
     {
+        // go to next player, set booleans for the second roll to be ready
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
         secondRollavailable = false;
@@ -212,7 +176,6 @@ public class RoundManager : MonoBehaviour
     public void StartTurn()
     {
         playerController = turnController.GetCurrentPlayer();
-        uIHandler.DisplayDeck(playerController.GetDeck());
     }
 
     /// <summary>
