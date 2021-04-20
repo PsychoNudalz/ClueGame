@@ -153,7 +153,7 @@ public class RoundManager : MonoBehaviour
         if (gameGenerator.IsMatchAnswer(cards))
         {
             //code for wining
-            print("PLAYER WIN");
+            turnController.Win();
         }
     }
 
