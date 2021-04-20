@@ -16,8 +16,12 @@ public class RoundManager : MonoBehaviour
     bool secondRollavailable = false;
     bool secondAccusationavailable = false;
     bool canRoll = true;
+    bool canSug = true;
+    bool canAcc = true;
 
-
+    public bool CanRoll { get => canRoll;}
+    public bool CanSug { get => canSug;}
+    public bool CanAcc { get => canAcc;}
 
     private void Awake()
     {
@@ -83,12 +87,13 @@ public class RoundManager : MonoBehaviour
         {
             dice.RollDice();
             secondRollavailable = true;
+            canRoll = false;
         }
         if (secondRollavailable)
         {
             dice.RollDice();
             secondRollavailable = false;
-            canRoll = true;
+            canRoll = false;
         }
         StartCoroutine(DelayResetDice(5f));
     }
@@ -213,6 +218,9 @@ public class RoundManager : MonoBehaviour
     {
         playerController = turnController.GetCurrentPlayer();
         uIHandler.DisplayDeck(playerController.GetDeck());
+        canRoll = true;
+        canSug = true;
+        canAcc = true;
     }
 
     /// <summary>

@@ -10,6 +10,8 @@ public class UserController : MonoBehaviour
     public WeaponEnum SelectedWeapon;
     public Room SelectedName;
 
+    public RoundManager RM { get => rM; }
+
     private void Awake()
     {
         if (!rM)

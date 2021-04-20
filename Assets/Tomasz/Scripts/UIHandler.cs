@@ -94,7 +94,7 @@ public class UIHandler : MonoBehaviour
 
     public void RollDiceButton()
     {
-        if (!areControlsFrozen)
+        if (!areControlsFrozen&&userController.RM.CanRoll)
         {
             areControlsFrozen = true;
             userController.RollDice();
@@ -107,7 +107,7 @@ public class UIHandler : MonoBehaviour
 
     public void MakeSuggestionButton()
     {
-        if (!areControlsFrozen)
+        if (!areControlsFrozen && userController.RM.CanSug)
         {
             areControlsFrozen = true;
             DisplayMenuSuggestion();
