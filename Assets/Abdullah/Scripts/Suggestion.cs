@@ -7,40 +7,55 @@ public class Suggestion : MonoBehaviour
     public WeaponCard sugWeapon;
     public RoomCard sugRoom;
     public CharacterCard sugCharacter;
-    [SerializeField] RoundManager roundManagerScript;
+    //[SerializeField] RoundManager roundManagerScript;
 
 
     private void Awake()
     {
         //Find Round Manager game object
-        if (roundManagerScript == null)
-        {
-            roundManagerScript = FindObjectOfType<RoundManager>();
 
-        }
     }
 
-    public void Suggest()
+    public List<Card> Suggest()
     {
         // if all elements of the suggestion are made, return a message for the suggestion
+        //Cancel();
+        
         if (sugRoom != null & sugWeapon != null & sugCharacter != null)
         {
-            RoomScript roomScript = FindObjectOfType<RoomScript>();
+            //Anson: found bug, this is the wrong room, no wonder it is constantly going to louge
+            //RoomScript roomScript = FindObjectOfType<RoomScript>();
 
-            roomScript.MovePlayerToRoom((CharacterEnum)System.Enum.Parse(typeof(CharacterEnum), sugCharacter.gameObject.name));
-            roomScript.MoveWeaponToRoom((WeaponEnum)System.Enum.Parse(typeof(WeaponEnum), sugWeapon.gameObject.name));
+            //Anson: incoming spageghtti to get all room script to Find the corrisponding room
+            RoomScript roomScript = null;
+
+            //Anson: to find the room based on the room card
+            RoomScript[] allRooms = FindObjectsOfType<RoomScript>();
+            for (int i = 0; i < allRooms.Length && roomScript == null; i++)
+            {
+                if (allRooms[i].Room.Equals((Room)sugRoom.GetCardType()))
+                {
+                    roomScript = allRooms[i];
+                }
+            }
+
+
+            roomScript.MovePlayerToRoom((CharacterEnum)sugCharacter.GetCardType());
+            roomScript.MoveWeaponToRoom((WeaponEnum)sugWeapon.GetCardType());
 
             Debug.Log("I suggest that the crime was committed in the " + sugRoom + ", by " + sugCharacter + " with the " + sugWeapon);
-            //check for round manager
-            if (!roundManagerScript)
-            {
-                roundManagerScript = FindObjectOfType<RoundManager>();
-            }
+
             //set List to have the sugestions in place
             Card[] sug = { sugCharacter, sugWeapon, sugRoom };
             //call suggestion method from round manager passing in the cards
-            roundManagerScript.MakeSuggestion(new List<Card>(sug));
+            return (new List<Card>(sug));
         }
+        else
+        {
+            return null;
+        }
+
+        //Cancel();
     }
 
     public void SetSugWeapon(WeaponCard weaponCard)

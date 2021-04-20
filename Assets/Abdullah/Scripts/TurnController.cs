@@ -59,19 +59,24 @@ public class TurnController : MonoBehaviour
         restOfPlayers.RemoveAt(currentPlayerIndex % restOfPlayers.Count);
         // Iterate through the pseudo currentPlayers list, remove the current player from the pseduo list, and start adding the players in order into a new list where index 0 is the next player
         for (int i = 0; i < restOfPlayers.Count;i++) {
-            if (rOPinOrder.Count < restOfPlayers.Count)
+            //Anson: changed this painful sphageghtii
+            /*
+        if (rOPinOrder.Count < restOfPlayers.Count)
+        {
+            if ((orderIndex + i) > restOfPlayers.Count)
             {
-                if ((orderIndex + i) > restOfPlayers.Count)
-                {
-                    //if the index reached the end of the list, set index to 0
-                    orderIndex = 0;
-                    i = 0;
-                }
-                rOPinOrder.Add(restOfPlayers[(orderIndex + i)%restOfPlayers.Count]);
+                //if the index reached the end of the list, set index to 0
+                orderIndex = 0;
+                i = 0;
             }
-            else {
-                break;
-            }
+            rOPinOrder.Add(restOfPlayers[(orderIndex + i)%restOfPlayers.Count]);
+        }
+        else {
+            break;
+        }*/
+
+            rOPinOrder.Add(restOfPlayers[(orderIndex + i) % restOfPlayers.Count]);
+
         }
         // return the rest of the players in order, excluding the current player
         return rOPinOrder;

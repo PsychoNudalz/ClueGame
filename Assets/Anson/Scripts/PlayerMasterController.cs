@@ -207,6 +207,11 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.MoveToken(v);
     }
 
+    public void ClearTokenTile()
+    {
+        playerTokenScript.ClearTokenTile();
+    }
+
     internal void ExitRoom(RoomEntryBoardTileScript roomEntryBoardTileScript, BoardTileScript targetTile)
     {
         playerTokenScript.ExitRoom(roomEntryBoardTileScript, targetTile);

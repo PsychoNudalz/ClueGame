@@ -28,7 +28,7 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] BoardTileScript currentTile;
 
     private RoomEntryPoint currentEntryPoint;
-    private RoomScript currentRoom;
+    [SerializeField] RoomScript currentRoom;
     private RoomEntryBoardTileScript currentExitPoint;
     private BoardTileScript roomExitTileTarget;
     private BoardManager boardManager;
@@ -208,6 +208,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void MoveToken(Vector3 v)
     {
+        //currentTile.SetToken(null);
 
         isMove = true;
         startMoveTime = Time.time;
@@ -321,5 +322,14 @@ public class PlayerTokenScript : MonoBehaviour
                 throw new Exception("Character enum not found");
 
         }
+    }
+
+    public void ClearTokenTile()
+    {
+        if (currentTile!= null)
+        {
+        currentTile.SetToken(null);
+        }
+        currentTile = null;
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 /// <summary>
 /// this is for handling the cursor controls
 /// </summary>
-public class UserControlScript : MonoBehaviour
+public class UserInputControlScript : MonoBehaviour
 {
     [Header("Cursor Control")]
     Mouse mouse;
@@ -23,12 +23,12 @@ public class UserControlScript : MonoBehaviour
     [SerializeField] float timeNow_refereshRate;
 
     [Header("Other Player Components")]
-    [SerializeField] RoundManager roundManager;
+    [SerializeField] UserController userController;
     [SerializeField] UserSelectionScript userSelectionScript;
 
 
     public GameObject Cursor { get => cursor; set => cursor = value; }
-    public RoundManager RoundManager { get => roundManager; set => roundManager = value; }
+    public UserController UserController { get => userController; set => userController = value; }
 
     private void Awake()
     {
@@ -36,9 +36,9 @@ public class UserControlScript : MonoBehaviour
         {
             cameraObject = FindObjectOfType<Camera>();
         }
-        if (!roundManager)
+        if (!userController)
         {
-            roundManager = FindObjectOfType<RoundManager>();
+            userController = GetComponentInParent<UserController>();
         }
         if (!userSelectionScript)
         {
@@ -78,7 +78,7 @@ public class UserControlScript : MonoBehaviour
             BoardTileScript newTile = userSelectionScript.GetCurrentTile();
             if (newTile != null)
             {
-                RoundManager.MovePlayer(newTile);
+                UserController.SelectTile(newTile);
             }
         }
     }

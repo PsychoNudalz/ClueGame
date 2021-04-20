@@ -10,23 +10,36 @@ public class UIHandler : MonoBehaviour
 {
 
     public List<Card> deck;
-    public CardManager gameGen;
+    public CardManager cardManager;
     public List<CardSlot> cardSlots;
     public Animator shownCard;
     private TextMeshProUGUI txt;
     private Image img;
     public UserController userController;
     bool areControlsFrozen = false;
-    public GameObject msp;
+
+
+    [Header("Suggestion Panels")]
+    public GameObject makeSuggestionPanel;
+    [SerializeField] TextMeshProUGUI suggestionRoomNameText;
+    //public GameObject suggestionPanel;
     private void Start()
     {
         userController = FindObjectOfType<UserController>();
-        gameGen = FindObjectOfType<CardManager>();
+        cardManager = FindObjectOfType<CardManager>();
         //gameGen.Initialise();
         cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
-        msp = GameObject.Find("MakeSuggestionPanel");
-        msp.SetActive(false);
+        if (!makeSuggestionPanel)
+        {
+            makeSuggestionPanel = GameObject.Find("MakeSuggestionPanel");
+        }
+        if (suggestionRoomNameText == null)
+        {
+            suggestionRoomNameText = GameObject.FindGameObjectWithTag("rName").GetComponent<TextMeshProUGUI>();
+        }
+        makeSuggestionPanel.SetActive(false);
+
 
 
 
@@ -94,7 +107,7 @@ public class UIHandler : MonoBehaviour
 
     public void RollDiceButton()
     {
-        if (!areControlsFrozen&&userController.RM.CanRoll)
+        if (!areControlsFrozen && userController.RM.CanRoll)
         {
             areControlsFrozen = true;
             userController.RollDice();
@@ -105,9 +118,9 @@ public class UIHandler : MonoBehaviour
 
 
 
-    public void MakeSuggestionButton()
+    public void MakeSuggestionButton(bool forced = false)
     {
-        if (!areControlsFrozen && userController.RM.CanSug)
+        if (!areControlsFrozen && (userController.RM.CanSug || forced))
         {
             areControlsFrozen = true;
             DisplayMenuSuggestion();
@@ -147,23 +160,40 @@ public class UIHandler : MonoBehaviour
     {
 
     }
-    public void DisplayMenuSuggestion()
+    public void DisplayMenuSuggestion(bool forced = false)
     {
-        
-        if (userController.GetCurrentPlayer().GetCurrentRoom() != null)
+        if (forced)
         {
-            msp.SetActive(true);
-            GameObject name = GameObject.FindWithTag("rName");
-            string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
-            txt = txt.Split('(')[0];
-            name.GetComponent<TextMeshProUGUI>().text = txt;
-            msp.GetComponent<Suggestion>().SetSugRoom(GameObject.Find(txt).GetComponent<RoomCard>()); ;
+
         }
         else
         {
-            Debug.Log("not in a room");
+
+            if (userController.GetCurrentPlayer().GetCurrentRoom() != null)
+            {
+                makeSuggestionPanel.SetActive(true);
+                string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
+                txt = txt.Split('(')[0];
+                suggestionRoomNameText.text = txt;
+                //makeSuggestionPanel.GetComponent<Suggestion>().SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
+                //Anson: hmmmmm yes, spaghetti
+                userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
+            }
+            else
+            {
+                Debug.Log("not in a room");
+            }
         }
     }
+
+    public void ConfirmSuggestion()
+    {
+        if (userController.MakeSuggestion())
+        {
+            makeSuggestionPanel.SetActive(false);
+        }
+    }
+
     public void DisplayMenuAccusation()
     {
 

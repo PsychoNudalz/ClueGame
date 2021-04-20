@@ -6,11 +6,12 @@ public class UserController : MonoBehaviour
 {
     //private GameManager gM;
     private RoundManager rM;
-    public CharacterEnum SelectedChar;
-    public WeaponEnum SelectedWeapon;
-    public Room SelectedName;
+
+    [SerializeField] Suggestion suggestion;
+    [SerializeField] Accusation accusation;
 
     public RoundManager RM { get => rM; }
+    public Suggestion Suggestion { get => suggestion; }
 
     private void Awake()
     {
@@ -18,17 +19,43 @@ public class UserController : MonoBehaviour
         {
             rM = FindObjectOfType<RoundManager>();
         }
+        if (suggestion == null)
+        {
+            suggestion = FindObjectOfType<Suggestion>();
+        }
+        if (accusation == null)
+        {
+            accusation = FindObjectOfType<Accusation>();
+        }
+        //print(FindObjectOfType<Suggestion>());
+    
     }
+
     public void RollDice()
     {
         rM.RollDice();
     }
 
-    public void MoveCursor() { }
+    //public void MoveCursor() { }
 
-    public void SelectTile() { }
+    public void SelectTile(BoardTileScript tile)
+    {
+        rM.MovePlayer(tile);
+    }
 
-    public void MakeSuggestion() { }
+    public bool MakeSuggestion()
+    {
+        List<Card> sug = suggestion.Suggest();
+        if (sug == null)
+        {
+            return false;
+        }
+        else
+        {
+            rM.MakeSuggestion(sug);
+            return true;
+        }
+    }
 
     public void SetCharacter() { }
 
@@ -40,7 +67,8 @@ public class UserController : MonoBehaviour
 
     public void MakeAccusation() { }
 
-    public void EndTurn() {
+    public void EndTurn()
+    {
         rM.EndTurn();
     }
 

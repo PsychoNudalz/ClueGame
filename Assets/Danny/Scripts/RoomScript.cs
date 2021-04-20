@@ -274,6 +274,7 @@ public class RoomScript : MonoBehaviour
             {
                 playerToMove.GetCurrentRoom().RemovePlayerFromRoom(playerToMove);
             }
+            playerToMove.ClearTokenTile();
             AddPlayer(playerToMove);
         }
     }

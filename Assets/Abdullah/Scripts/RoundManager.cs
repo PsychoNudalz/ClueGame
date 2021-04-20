@@ -80,23 +80,24 @@ public class RoundManager : MonoBehaviour
         dice.ResetDice();
     }
 
-    public void RollDice()
+
+    /// <summary>
+    /// Rolls dice, will not roll if the player has rolled aready.
+    /// Pass true to forcfully roll it
+    /// </summary>
+    /// <param name="force"> if roll forced</param>
+    public void RollDice(bool force =false)
     {
         diceRolled = true;
-        if (!secondRollavailable && canRoll)
+        if (!secondRollavailable && (canRoll||force))
         {
             dice.RollDice();
             secondRollavailable = true;
             canRoll = false;
         }
-        if (secondRollavailable)
-        {
-            dice.RollDice();
-            secondRollavailable = false;
-            canRoll = false;
-        }
         StartCoroutine(DelayResetDice(5f));
     }
+
 
     public void MovePlayer(BoardTileScript b)
     {
@@ -115,6 +116,14 @@ public class RoundManager : MonoBehaviour
 
         }
         boardManager.ClearMovable();
+        if (b is FreeRollBoardTileScript)
+        {
+            StartCoroutine(DelayRoll(1.5f));
+        }
+        if (b is FreeSuggestionTileScript)
+        {
+            StartCoroutine(DelaySug(1.5f));
+        }
 
     }
     public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
@@ -142,11 +151,13 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
+        canSug = false;
         bool playerWithCardFound = false;
         List<PlayerMasterController> RestOfPlayers = turnController.GetRestOfPlayersInOrder();
         Tuple<PlayerMasterController, List<Card>> foundPlayer = null;
         for (int i = 0; i < RestOfPlayers.Count && !playerWithCardFound; i++)
         {
+            print("Finding: " + RestOfPlayers[i]);
             foundPlayer = RestOfPlayers[i].FindCard(sug);
             if (foundPlayer != null)
             {
@@ -194,6 +205,7 @@ public class RoundManager : MonoBehaviour
             else
             {
                 playerController.EliminatePlayer();
+                EndTurn();
             }
         }
 
@@ -230,5 +242,21 @@ public class RoundManager : MonoBehaviour
     public PlayerMasterController GetCurrentPlayer()
     {
         return turnController.GetCurrentPlayer();
+    }
+
+
+    IEnumerator DelayRoll(float timeDelay)
+    {
+        yield return new WaitForSeconds(timeDelay);
+        RollDice(true);
+    }
+
+    IEnumerator DelaySug(float timeDelay)
+    {
+        yield return new WaitForSeconds(timeDelay);
+        if (uIHandler != null)
+        {
+            uIHandler.MakeSuggestionButton(true);
+        }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    static Random rnd = new Random();
 
     private List<WeaponCard> weapons;
     private List<RoomCard> rooms;
@@ -31,9 +31,9 @@ public class CardManager : MonoBehaviour
         characters = new List<CharacterCard>(FindObjectsOfType<CharacterCard>());
 
         //Remove one of each type of card and place in a list called answers
-        int randomRoom = Random.Range(0, rooms.Count);
-        int randomWeapon = Random.Range(0, weapons.Count);
-        int randomCharacter = Random.Range(0, characters.Count);
+        int randomRoom = UnityEngine.Random.Range(0, rooms.Count);
+        int randomWeapon = UnityEngine.Random.Range(0, weapons.Count);
+        int randomCharacter = UnityEngine.Random.Range(0, characters.Count);
 
         answers.Add(characters[randomCharacter]);
         characters.RemoveAt(randomCharacter);
@@ -110,5 +110,51 @@ public class CardManager : MonoBehaviour
         */
     }
 
+
+    public Card FindCard(WeaponEnum e)
+    {
+        List<Card> allCards = new List<Card>(playableCards);
+        allCards.AddRange(answers);
+        foreach(Card c in allCards)
+        {
+            if (c.Equals(e))
+            {
+                return c;
+            }
+        }
+        Debug.LogError("Could not Find card Enum e: " + e.ToString());
+
+        return null;
+    }
+    public Card FindCard(Room e)
+    {
+        List<Card> allCards = new List<Card>(playableCards);
+        allCards.AddRange(answers);
+        //print(allCards.Count);
+
+        foreach (Card c in allCards)
+        {
+            if (c.Equals(e))
+            {
+                return c;
+            }
+        }
+        Debug.LogError("Could not Find card Enum e: " + e.ToString());
+        return null;
+    }
+    public Card FindCard(CharacterEnum e)
+    {
+        List<Card> allCards = new List<Card>(playableCards);
+        allCards.AddRange(answers);
+        foreach (Card c in allCards)
+        {
+            if (c.Equals(e))
+            {
+                return c;
+            }
+        }
+        Debug.LogError("Could not Find card Enum e: " + e.ToString());
+        return null;
+    }
 
 }
