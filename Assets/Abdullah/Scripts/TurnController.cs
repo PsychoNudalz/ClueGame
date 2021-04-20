@@ -67,7 +67,7 @@ public class TurnController : MonoBehaviour
                     orderIndex = 0;
                     i = 0;
                 }
-                rOPinOrder.Add(restOfPlayers[orderIndex + i]);
+                rOPinOrder.Add(restOfPlayers[(orderIndex + i)%restOfPlayers.Count]);
             }
             else {
                 break;
