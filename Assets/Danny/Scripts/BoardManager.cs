@@ -26,6 +26,7 @@ public class BoardManager : MonoBehaviour
     public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
     public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
     public FreeRollBoardTileScript[] FreeRollTiles { get => freeRollTiles; set => freeRollTiles = value; }
+    public List<BoardTileScript> MovableTile { get => movableTile;}
 
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {

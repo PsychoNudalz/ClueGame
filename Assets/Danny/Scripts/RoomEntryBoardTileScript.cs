@@ -53,7 +53,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
         }
     }
 
-    public void GetEntryPoint()
+    private void GetEntryPoint()
     {
         RoomEntryPoint closest = null;
         float minDist = Mathf.Infinity;
@@ -68,27 +68,7 @@ public class RoomEntryBoardTileScript : BoardTileScript
         }
         entryPoint = closest;
     }
-    /*
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.gameObject.tag.Equals("Player") && other.transform.position == transform.position)
-        {
-            PlayerTokenScript playerToken = other.GetComponent<PlayerTokenScript>();
-            PlayerMasterController playerController = playerToken.GetController();
-            if (!playerController.IsInRoom())
-            {
-                StartCoroutine(EnterRoom(playerController));
-            }
-            else
-            {
-                playerController.SetCurrentTile(this);
-                playerController.MovePlayer(exitTarget);
-                exitTarget = null;
-                
-            }
-        }
-    }*/
-
+    
     internal void EnterRoom(PlayerMasterController player)
     {
         StartCoroutine(EnterRoomAnimation(player));
