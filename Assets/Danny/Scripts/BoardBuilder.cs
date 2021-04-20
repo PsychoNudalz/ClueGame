@@ -415,11 +415,13 @@ public class BoardBuilder : MonoBehaviour
         int tilesPlaced = 0;
         while (tilesPlaced < numberOfFreeAccusationTiles)
         {
+            boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
             BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
             BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
             if (tile.TileType.Equals(TileTypeEnum.General))
             {
-                
+                if (CheckNearbyTiles(tile))
+                {
                     float x = tile.GridPosition.x;
                     float z = tile.GridPosition.y;
                     GameObject newTile = GameObject.Instantiate(freeAccusationTilePrefab, new Vector3(x, 0, z), transform.rotation, freeAccusationTiles.transform);
@@ -429,6 +431,8 @@ public class BoardBuilder : MonoBehaviour
                     tileScript.TileType = TileTypeEnum.FreeAccusation;
                     tilesPlaced++;
                     GameObject.Destroy(tile.gameObject);
+
+                }
                 
             }
         }
@@ -442,11 +446,13 @@ public class BoardBuilder : MonoBehaviour
         int tilesPlaced = 0;
         while(tilesPlaced < numberOfFreeRollTiles)
         {
+            boardManager.CreateBoardArray(GetComponentsInChildren<BoardTileScript>(), boardHeight, boardWidth);
             BoardTileScript[] boardTiles = FindObjectsOfType<BoardTileScript>();
             BoardTileScript tile = boardTiles[Random.Range(0, boardTiles.Length)];
             if (tile.TileType.Equals(TileTypeEnum.General))
             {
-                
+                if (CheckNearbyTiles(tile))
+                {
                     float x = tile.GridPosition.x;
                     float z = tile.GridPosition.y;
                     GameObject newTile = GameObject.Instantiate(freeRollTilePrefab, new Vector3(x, 0, z), transform.rotation, freeRollTiles.transform);
@@ -456,6 +462,8 @@ public class BoardBuilder : MonoBehaviour
                     tileScript.TileType = TileTypeEnum.FreeRoll;
                     tilesPlaced++;
                     GameObject.Destroy(tile.gameObject);
+
+                }
                 
             }
         }
@@ -468,11 +476,11 @@ public class BoardBuilder : MonoBehaviour
     {
         
         List<BoardTileScript> nearbyTiles = boardManager.bfs(tile,6);
-        Debug.Log(nearbyTiles.Count);
+        //Debug.Log(nearbyTiles.Count);
         foreach (BoardTileScript nearbyTile in nearbyTiles)
         {
             
-            if (nearbyTile.TileType.Equals(TileTypeEnum.FreeAccusation) || nearbyTile.TileType.Equals(TileTypeEnum.FreeRoll))
+            if (nearbyTile.TileType.Equals(TileTypeEnum.FreeAccusation) || nearbyTile.TileType.Equals(TileTypeEnum.FreeRoll) || nearbyTile.TileType.Equals(TileTypeEnum.Start))
             {
                 return false;
             }
