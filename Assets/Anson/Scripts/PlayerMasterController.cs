@@ -45,7 +45,7 @@ public class PlayerMasterController : MonoBehaviour
     /// check if the player can take a short cut 
     /// </summary>
     /// <returns></returns>
-    internal bool CanTakeShortcut()
+    public bool CanTakeShortcut()
     {
         return playerTokenScript.CanTakeShortcut();
     }

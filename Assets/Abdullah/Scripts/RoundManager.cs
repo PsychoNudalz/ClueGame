@@ -211,7 +211,7 @@ public class RoundManager : MonoBehaviour
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
 
-        
+
 
         //Anson: reset camera
         cameraCloseUp.ClearCloseUp();
@@ -230,7 +230,16 @@ public class RoundManager : MonoBehaviour
     public void StartTurn()
     {
         playerController = turnController.GetCurrentPlayer();
-        uIHandler.DisplayDeck(playerController.GetDeck());
+        if (playerController.isAI)
+        {
+            uIHandler.InitialiseTurn(false);
+        }
+        else
+        {
+            uIHandler.InitialiseTurn(true);
+            uIHandler.DisplayDeck(playerController.GetDeck());
+        }
+        uIHandler.DisplayShortcutButton(playerController.CanTakeShortcut());
         canRoll = true;
         canSug = true;
         canAcc = true;

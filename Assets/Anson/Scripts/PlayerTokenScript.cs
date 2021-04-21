@@ -273,6 +273,7 @@ public class PlayerTokenScript : MonoBehaviour
                 if (tile.ShortcutTo.Equals(currentRoom.Room)){
                     boardManager.ClearMovable();
                     StartCoroutine(ShortcutMovement(tile));
+                    return true;
                 }
             }
         }

@@ -18,9 +18,12 @@ public class UIHandler : MonoBehaviour
     public UserController userController;
     bool areControlsFrozen = false;
     [Header("UI elements")]
+    [SerializeField] GameObject allButtons;
+    [SerializeField] GameObject deckGO;
     [SerializeField] TextMeshProUGUI currentPlayerName;
     [SerializeField] GameObject viewBlocker;
     [SerializeField] TextMeshProUGUI viewBlockerPlayerName;
+    [SerializeField] GameObject shortcutButton;
 
 
     [Header("Suggestion Panels")]
@@ -57,7 +60,7 @@ public class UIHandler : MonoBehaviour
 
     public void DisplayDeck(List<Card> cards)
     {
-        deck = userController.GetCurrentPlayer().GetDeck();
+        deck = cards;
 
         int i = 0;
         foreach (CardSlot cs in cardSlots)
@@ -235,6 +238,21 @@ public class UIHandler : MonoBehaviour
         string nextPlayer =  userController.EndTurn().GetCharacter().ToString();
         currentPlayerName.text ="Turn:"+ nextPlayer;
     }
+
+    public void InitialiseTurn(bool displayFullUI)
+    {
+        if (displayFullUI)
+        {
+            allButtons.SetActive(true);
+            deckGO.SetActive(true);
+        }
+        else
+        {
+            allButtons.SetActive(false);
+            deckGO.SetActive(false);
+        }
+    }
+
     /// <summary>
     /// To display the View Blocker
     /// can include the name of the player that needs it's attention
@@ -252,6 +270,19 @@ public class UIHandler : MonoBehaviour
         {
             viewBlockerPlayerName.text = s;
         }
+    }
+
+
+
+    public void DisplayShortcutButton(bool b)
+    {
+        shortcutButton.SetActive(b);
+    }
+
+
+    public void TakeShortcutButton()
+    {
+        userController.TakeShortcut();
     }
 }
 

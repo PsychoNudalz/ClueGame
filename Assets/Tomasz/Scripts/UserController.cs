@@ -42,6 +42,11 @@ public class UserController : MonoBehaviour
         rM.RollDice();
     }
 
+    public void TakeShortcut()
+    {
+        GetCurrentPlayer().TakeShortcut();
+    }
+
     //public void MoveCursor() { }
 
     public void SelectTile(BoardTileScript tile)
