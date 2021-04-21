@@ -211,14 +211,16 @@ public class RoundManager : MonoBehaviour
         turnController.SetCurrentPlayerToNext();
         canRoll = true;
 
-        //Anson: Block View
-        uIHandler.DisplayViewBlocker(true);
+        
 
         //Anson: reset camera
         cameraCloseUp.ClearCloseUp();
 
         //Anson: start the turn to update the current player
         StartTurn();
+
+        //Anson: Block View
+        uIHandler.DisplayViewBlocker(true, GetCurrentPlayer().GetCharacter().ToString()); ;
 
         return GetCurrentPlayer();
     }
@@ -243,6 +245,11 @@ public class RoundManager : MonoBehaviour
         return turnController.GetCurrentPlayer();
     }
 
+
+    public List<BoardTileScript> GetBoardMovableTiles()
+    {
+        return boardManager.MovableTile;
+    }
 
     IEnumerator DelayRoll(float timeDelay)
     {

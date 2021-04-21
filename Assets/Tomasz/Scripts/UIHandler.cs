@@ -19,7 +19,8 @@ public class UIHandler : MonoBehaviour
     bool areControlsFrozen = false;
     [Header("UI elements")]
     [SerializeField] TextMeshProUGUI currentPlayerName;
-    [SerializeField] GameObject ViewBlocker;
+    [SerializeField] GameObject viewBlocker;
+    [SerializeField] TextMeshProUGUI viewBlockerPlayerName;
 
 
     [Header("Suggestion Panels")]
@@ -234,10 +235,23 @@ public class UIHandler : MonoBehaviour
         string nextPlayer =  userController.EndTurn().GetCharacter().ToString();
         currentPlayerName.text ="Turn:"+ nextPlayer;
     }
-
-    public void DisplayViewBlocker(bool b)
+    /// <summary>
+    /// To display the View Blocker
+    /// can include the name of the player that needs it's attention
+    /// </summary>
+    /// <param name="b">enable or disable the view blocker</param>
+    /// <param name="s"> name of the player that needs it's attention</param>
+    public void DisplayViewBlocker(bool b, string s = "")
     {
-        ViewBlocker.SetActive(b);
+        viewBlocker.SetActive(b);
+        if (s.Equals(""))
+        {
+            viewBlockerPlayerName.text = "Next";
+        }
+        else
+        {
+            viewBlockerPlayerName.text = s;
+        }
     }
 }
 

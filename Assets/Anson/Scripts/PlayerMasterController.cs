@@ -11,7 +11,7 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class PlayerMasterController : MonoBehaviour
 {
-
+    public bool isAI = false;
 
     [Space]
     [Header("Player Components")]
