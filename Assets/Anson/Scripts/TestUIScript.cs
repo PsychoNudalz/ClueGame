@@ -13,6 +13,7 @@ public class TestUIScript : MonoBehaviour
     [SerializeField] protected TurnController turnController;
     [SerializeField] protected RoundManager roundManager;
     [SerializeField] protected CardManager cardManager;
+    [SerializeField] protected UserController userController;
 
 
     [Header("Outputs")]
@@ -69,6 +70,10 @@ public class TestUIScript : MonoBehaviour
         if (!roundManager)
         {
             roundManager = FindObjectOfType<RoundManager>();
+        }
+        if (!userController) 
+        {
+            userController = FindObjectOfType<UserController>();
         }
     }
 

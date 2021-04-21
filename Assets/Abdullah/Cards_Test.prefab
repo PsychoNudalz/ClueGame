@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452002153e898a49a13b1589099040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterEnum: 0
+  characterEnum: 1
 --- !u!1 &378357419753065977
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dc530f1398a14480ba3aa1501fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 0
+  weaponEnum: 5
 --- !u!222 &4258786555913290328
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 1
 --- !u!1 &524731987146463306
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452002153e898a49a13b1589099040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterEnum: 0
+  characterEnum: 3
 --- !u!1 &1045028758092762741
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 2
 --- !u!1 &1112792362067734977
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452002153e898a49a13b1589099040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterEnum: 0
+  characterEnum: 4
 --- !u!1 &1537885012679813388
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452002153e898a49a13b1589099040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterEnum: 0
+  characterEnum: 2
 --- !u!1 &3442547537878804643
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 10
 --- !u!1 &4703997082665080133
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 9
 --- !u!1 &4989841267031347038
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 8
 --- !u!1 &6294220045115143814
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dc530f1398a14480ba3aa1501fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 0
+  weaponEnum: 3
 --- !u!222 &768554647311287926
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 5
 --- !u!1 &6622828569156148192
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 4
 --- !u!1 &6872057286737995732
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 6
 --- !u!1 &7046958019862658217
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dc530f1398a14480ba3aa1501fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 0
+  weaponEnum: 1
 --- !u!222 &6783911131541073402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e29a4475095cf4199956d82d09e410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 0
+  room: 7
 --- !u!1 &8313092138604373799
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452002153e898a49a13b1589099040e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterEnum: 0
+  characterEnum: 5
 --- !u!1 &8522947529066578583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dc530f1398a14480ba3aa1501fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 0
+  weaponEnum: 4
 --- !u!222 &4882788952863282744
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432dc530f1398a14480ba3aa1501fcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponEnum: 0
+  weaponEnum: 2
 --- !u!222 &6514669158381657192
 CanvasRenderer:
   m_ObjectHideFlags: 0
