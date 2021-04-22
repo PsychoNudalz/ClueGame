@@ -9,6 +9,16 @@ using UnityEngine;
 public class WeaponCard : Card
 {
     public WeaponEnum weaponEnum;
+    private Sprite cardImage;
+
+    public Sprite CardImage { get => cardImage;}
+
+    private void Start()
+    {
+        String path = "Danny/CardImages/Weapons/" + weaponEnum.ToString();
+        //print("Loading Image - " + path);
+        cardImage = Resources.Load<Sprite>(path);
+    }
 
     public override bool Equals(object obj)
     {

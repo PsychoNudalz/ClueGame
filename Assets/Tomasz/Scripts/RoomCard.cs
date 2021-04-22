@@ -9,6 +9,17 @@ public class RoomCard : Card
 {
     public Room room;
 
+    private Sprite cardImage;
+
+    public Sprite CardImage { get => cardImage; }
+
+    private void Start()
+    {
+        String path = "Danny/CardImages/Rooms/" + room.ToString();
+        //print("Loading Image - " + path);
+        cardImage = Resources.Load<Sprite>(path);
+    }
+
     public override bool Equals(object obj)
     {
         //print("Comparing room");
