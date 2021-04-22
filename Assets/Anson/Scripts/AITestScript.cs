@@ -6,9 +6,15 @@ using UnityEngine.InputSystem;
 public class AITestScript : TestUIScript
 {
     [SerializeField] AIControllerScript aIController;
+    [SerializeField] bool isSpeedUp;
     private void Awake()
     {
         AssignAllComponents();
+        Time.timeScale = 1;
+        if (isSpeedUp)
+        {
+            Time.timeScale = 10f;
+        }
     }
     public void EndTurn(InputAction.CallbackContext callbackContext)
     {

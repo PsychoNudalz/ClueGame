@@ -14,7 +14,8 @@ public enum AIMode
     Wait_Dice,
     Decide_Movement,
     Wait_PlayerMove,
-    Decide_Suggest
+    Decide_Suggest,
+    Decide_Accuse
 }
 
 public class AIControllerScript : MonoBehaviour
@@ -31,6 +32,7 @@ public class AIControllerScript : MonoBehaviour
     [SerializeField] float maxTurnTime = 10f;
     float lastDecisionTime;
     float startTurnTime = 0;
+    [SerializeField] List<Card> toGuessList;
     [Header("Other Components")]
     [SerializeField] UserController userController;
     [SerializeField] BoardManager boardManager;
@@ -153,10 +155,17 @@ public class AIControllerScript : MonoBehaviour
                 }
                 break;
             case (AIMode.Suggestion):
+                Debug.Log("Suggest");
                 Decide_Suggestion();
                 break;
+
+            case (AIMode.Accusation):
+                Debug.LogWarning(currentCharacter.ToString() + " Accuse");
+
+                Decide_Accusation();
+                break;
             default:
-                if (Time.time - startTurnTime > maxTurnTime)
+                if (Time.time - startTurnTime > maxTurnTime*5f)
                 {
                     Debug.Log("Max time spent");
 
@@ -169,17 +178,23 @@ public class AIControllerScript : MonoBehaviour
 
     public void AIThink()
     {
-        if (currentAIMode.Equals(AIMode.Thinking) && previousAIMode.Equals(AIMode.Wait_PlayerMove)&&currentPlayerController.IsInRoom() && roundManager.CanSug)
+        if (currentAIMode.Equals(AIMode.Thinking) && currentPlayerController.IsInRoom() && roundManager.CanSug)
         {
             SetAIMode(AIMode.Suggestion);
-        }else if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
+        }
+        else if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
         {
             SetAIMode(AIMode.Move);
+        }
+        else if (currentAIMode.Equals(AIMode.Thinking) && !roundManager.CanRoll && !roundManager.CanSug && roundManager.CanAcc && CanAccuse())
+        {
+            SetAIMode(AIMode.Accusation);
         }
         else
         {
             SetAIMode(AIMode.EndTurn);
         }
+        print("AI thought to: " + currentAIMode);
     }
 
     public void SetAIMode(AIMode a)
@@ -230,15 +245,15 @@ public class AIControllerScript : MonoBehaviour
 
         //Deciding which tile to go
         BoardTileScript selectedTile = null;
-         if (possibleFreeRoll != null)
-        {
-            selectedTile = possibleFreeRoll;
-            print("AI going to possible FreeRoll:" + selectedTile.ToString());
-        }
-        else if (possibleEntry != null)
+        if (possibleEntry != null)
         {
             selectedTile = possibleEntry;
             print("AI going to possible Entry:" + selectedTile.ToString());
+        }
+        else if (possibleFreeRoll != null)
+        {
+            selectedTile = possibleFreeRoll;
+            print("AI going to possible FreeRoll:" + selectedTile.ToString());
         }
         else
         {
@@ -257,7 +272,7 @@ public class AIControllerScript : MonoBehaviour
         }
         */
         SetAIMode(AIMode.Wait_PlayerMove);
-        if (currentPlayerController.IsInRoom()||selectedTile is RoomEntryBoardTileScript || selectedTile is FreeRollBoardTileScript)
+        if (currentPlayerController.IsInRoom() || selectedTile is RoomEntryBoardTileScript || selectedTile is FreeRollBoardTileScript)
         {
             DelayDecision(pauseTime);
         }
@@ -267,18 +282,103 @@ public class AIControllerScript : MonoBehaviour
     void Decide_Suggestion()
     {
         SetAIMode(AIMode.Decide_Suggest);
-        userController.SetCharacter((CharacterEnum)Random.Range(0, 5));
+        LoadToGuessList(currentPlayerController.GetToGuessCards());
+        userController.SetCharacter(Decide_Character());
         userController.SetRoom(currentPlayerController.GetCurrentRoom().Room);
-        userController.SetWeapon((WeaponEnum)Random.Range(0, 5));
+        userController.SetWeapon(Decide_Weapon());
         userController.MakeSuggestion();
         DelayDecision(pauseTime);
         SetAIMode(AIMode.Thinking);
     }
 
+    void LoadToGuessList(List<Card> c)
+    {
+        toGuessList = new List<Card>(c);
+
+    }
+
+    CharacterEnum Decide_Character()
+    {
+        //return CharacterEnum.Initial;
+        int offset = Random.Range(0, 21);
+        Card temp;
+        for (int i = 0; i < toGuessList.Count; i++)
+        {
+            temp = toGuessList[(i + offset) % toGuessList.Count];
+            if (temp is CharacterCard)
+            {
+                return (CharacterEnum)temp.GetCardType();
+            }
+        }
+        return (CharacterEnum)(Random.Range(0, 6) % 6);
+    }
+
+    WeaponEnum Decide_Weapon()
+    {
+        //return CharacterEnum.Initial;
+        int offset = Random.Range(0, 21);
+        Card temp;
+        for (int i = 0; i < toGuessList.Count; i++)
+        {
+            temp = toGuessList[(i + offset) % toGuessList.Count];
+            if (temp is WeaponCard)
+            {
+                return (WeaponEnum)temp.GetCardType();
+            }
+        }
+        return (WeaponEnum)(Random.Range(0, 6) % 6);
+    }
+    Room Decide_Room()
+    {
+        //return CharacterEnum.Initial;
+        int offset = Random.Range(0, 21);
+        Card temp;
+        for (int i = 0; i < toGuessList.Count; i++)
+        {
+            temp = toGuessList[(i + offset) % toGuessList.Count];
+            if (temp is RoomCard)
+            {
+                return (Room)temp.GetCardType();
+            }
+        }
+        return (Room)(Random.Range(0, 9) % 9);
+    }
+
+    void Decide_Accusation()
+    {
+        SetAIMode(AIMode.Decide_Accuse);
+        LoadToGuessList(currentPlayerController.GetToGuessCards());
+        userController.SetCharacter(Decide_Character());
+        userController.SetRoom(Decide_Room());
+        userController.SetWeapon(Decide_Weapon());
+        userController.MakeAccusation();
+        DelayDecision(pauseTime);
+        SetAIMode(AIMode.Thinking);
+    }
+
+    bool CanAccuse()
+    {
+        LoadToGuessList(currentPlayerController.GetToGuessCards());
+
+        if (toGuessList.Count > 6)
+        {
+            return false;
+        }
+
+        float chance = Random.Range(0, 100f);
+        print("AI chance Accuse: " + chance);
+        if (chance / 100f > ((toGuessList.Count - 3f )/ 6f))
+        {
+            return true;
+        }
+        return false;
+    }
+
+
 
     void DelayDecision(float t)
     {
-        print("AI: delaying decision by:" + t.ToString()+"sec.");
+        print("AI: delaying decision by:" + t.ToString() + "sec.");
         lastDecisionTime += t;
 
     }

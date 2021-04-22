@@ -2213,6 +2213,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4574749519101661218}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2372990318555663462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2274960391920557124, guid: 8f1e54b61108c934c9ca4e18e21eee8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4574749519101661218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1460931074555901655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3114946546966882037, guid: 8f1e54b61108c934c9ca4e18e21eee8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4574749519101661218}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4574749519953138196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2354,6 +2366,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AllPlayerControllers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808207774206398928, guid: 8f10ffb79909d0a43a8dcc1827036088,
+        type: 3}
+      propertyPath: isAI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808207774481530707, guid: 8f10ffb79909d0a43a8dcc1827036088,
+        type: 3}
+      propertyPath: isAI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808207774492810923, guid: 8f10ffb79909d0a43a8dcc1827036088,
+        type: 3}
+      propertyPath: isAI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808207775282191673, guid: 8f10ffb79909d0a43a8dcc1827036088,
+        type: 3}
+      propertyPath: isAI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808207775510419054, guid: 8f10ffb79909d0a43a8dcc1827036088,
+        type: 3}
+      propertyPath: isAI
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f10ffb79909d0a43a8dcc1827036088, type: 3}

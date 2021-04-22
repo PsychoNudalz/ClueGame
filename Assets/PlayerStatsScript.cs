@@ -7,10 +7,13 @@ public class PlayerStatsScript : MonoBehaviour
     [SerializeField] CharacterEnum character = CharacterEnum.Initial;
     [SerializeField] List<Card> deck = new List<Card>();
     [SerializeField] bool isEliminated = false;
+    [SerializeField] List<Card> toGuessList = new List<Card>();
+
 
     public CharacterEnum Character { get => character;}
     public bool IsEliminated { get => isEliminated; set => isEliminated = value; }
     public List<Card> Deck { get => deck; set => deck = value; }
+    public List<Card> ToGuessList { get => toGuessList;}
 
     /// <summary>
     /// Set the player's character
@@ -94,4 +97,26 @@ public class PlayerStatsScript : MonoBehaviour
         return foundCards;
     }
 
+
+    public void InititaliseToGuessList()
+    {
+        toGuessList = new List<Card>(FindObjectOfType<CardManager>().GetAllCards());
+        foreach(Card c in deck)
+        {
+            toGuessList.Remove(c);
+        }
+    }
+
+    public bool RemoveToGessCard(Card c)
+    {
+        if (toGuessList.Contains(c))
+        {
+            toGuessList.Remove(c);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

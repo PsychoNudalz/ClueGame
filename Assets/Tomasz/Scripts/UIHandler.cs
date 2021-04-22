@@ -52,7 +52,7 @@ public class UIHandler : MonoBehaviour
         }
         
         makeSuggestionPanel.SetActive(false);
-        currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
+        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum( userController.GetCurrentPlayer().GetCharacter());
 
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
@@ -298,6 +298,11 @@ public class UIHandler : MonoBehaviour
         yield return new WaitForSeconds(timeUntilDisappear);
         outputTextGO.gameObject.SetActive(false);
 
+    }
+
+    public void DisplayGameOver()
+    {
+        DisplayOutputText("GAME OVER", 100000f);
     }
 }
 

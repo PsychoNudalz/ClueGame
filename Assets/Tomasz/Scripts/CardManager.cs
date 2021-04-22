@@ -162,4 +162,12 @@ public class CardManager : MonoBehaviour
         return null;
     }
 
+
+    public List<Card> GetAllCards()
+    {
+        List<Card> allCards = new List<Card>(playableCards);
+        allCards.AddRange(answers);
+        return allCards;
+    }
+
 }

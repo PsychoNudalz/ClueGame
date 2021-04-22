@@ -98,7 +98,7 @@ public class TurnController : MonoBehaviour
     }
 
 
-    public void SetCurrentPlayerToNext() 
+    public bool SetCurrentPlayerToNext() 
     {
         int loopFlag = 0;
         do
@@ -118,9 +118,11 @@ public class TurnController : MonoBehaviour
         } while (currentPlayers[currentPlayerIndex].IsEliminated()&&loopFlag<=currentPlayers.Count+1);
         if(loopFlag >=currentPlayers.Count)
         {
-            Debug.LogWarning("Loop detected, game over");
-
+            Debug.LogError("Loop detected, game over");
+            return false;
         }
+
+        return true;
     }
 
     public PlayerMasterController GetCurrentPlayer() 
