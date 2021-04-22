@@ -32,6 +32,10 @@ public class CardSlot : MonoBehaviour
 
     private void SetCardDetails()
     {
+        if (!card)
+        {
+            return;
+        }
         img.sprite = card.GetCardImage();
         txt.text = card.GetCardType().ToString();
     }

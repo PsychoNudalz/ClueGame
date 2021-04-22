@@ -74,10 +74,14 @@ public class UIHandler : MonoBehaviour
 
                 cs.SetCard(deck[i]);
                 cs.SetVisible();
+                i++;
             }
-            i++;
+            else
+            {
+                cs.SetVisible(false);
+            }
         }
-        
+
     }
 
     public void RollDiceButton()
@@ -152,7 +156,7 @@ public class UIHandler : MonoBehaviour
                 suggestionRoomNameText.text = txt;
                 //makeSuggestionPanel.GetComponent<Suggestion>().SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
                 //Anson: hmmmmm yes, spaghetti
-                userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
+                userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard); ;
             }
             else
             {
@@ -261,13 +265,13 @@ public class UIHandler : MonoBehaviour
 
     public void DisplayOutputText(string s, float timeUntilDisappear)
     {
-        if (outputTextCoroutine!= null)
+        if (outputTextCoroutine != null)
         {
             StopCoroutine(outputTextCoroutine);
         }
         outputTextCoroutine = StartCoroutine(DisplayOutputTextRoutine(s, timeUntilDisappear));
     }
-     IEnumerator DisplayOutputTextRoutine(string s, float timeUntilDisappear)
+    IEnumerator DisplayOutputTextRoutine(string s, float timeUntilDisappear)
     {
         outputTextGO.gameObject.SetActive(true);
         outputText.text = s;
