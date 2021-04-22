@@ -52,10 +52,10 @@ public class UIHandler : MonoBehaviour
         }
         if (suggestionRoomNameText == null)
         {
-            suggestionRoomNameText = GameObject.FindGameObjectWithTag("rName").GetComponent<TextMeshProUGUI>();
+            //suggestionRoomNameText = GameObject.FindGameObjectWithTag("rName").GetComponent<TextMeshProUGUI>();
         }
         makeSuggestionPanel.SetActive(false);
-        currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
+        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum( userController.GetCurrentPlayer().GetCharacter());
 
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
@@ -174,7 +174,7 @@ public class UIHandler : MonoBehaviour
                 makeSuggestionPanel.SetActive(true);
                 string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
                 txt = txt.Split('(')[0];
-                suggestionRoomNameText.text = txt;
+                //suggestionRoomNameText.text = txt;
                 //makeSuggestionPanel.GetComponent<Suggestion>().SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
                 //Anson: hmmmmm yes, spaghetti
                 userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard); ;

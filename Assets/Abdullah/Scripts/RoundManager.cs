@@ -270,7 +270,7 @@ public class RoundManager : MonoBehaviour
         {
             aIController.SetActive(false);
             //Anson: Block View
-            uIHandler.DisplayViewBlocker(true, GetCurrentPlayer().GetCharacter().ToString()); ;
+            uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(GetCurrentPlayer().GetCharacter())); ;
 
             uIHandler.InitialiseTurn(true);
             uIHandler.DisplayDeck(playerController.GetDeck());
