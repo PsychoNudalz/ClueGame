@@ -39,9 +39,11 @@ public class Suggestion : MonoBehaviour
                 }
             }
 
-
+            if (roomScript != null)
+            {
             roomScript.MovePlayerToRoom((CharacterEnum)sugCharacter.GetCardType());
             roomScript.MoveWeaponToRoom((WeaponEnum)sugWeapon.GetCardType());
+            }
 
             Debug.Log("I suggest that the crime was committed in the " + sugRoom + ", by " + sugCharacter + " with the " + sugWeapon);
 
