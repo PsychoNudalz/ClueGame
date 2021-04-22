@@ -119,6 +119,7 @@ public class TurnController : MonoBehaviour
         if(loopFlag >=currentPlayers.Count)
         {
             Debug.LogError("Loop detected, game over");
+            FindObjectOfType<UIHandler>().DisplayGameOverScreen(true);
             return false;
         }
 
