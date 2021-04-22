@@ -124,7 +124,7 @@ public class RoundManager : MonoBehaviour
         {
             StartCoroutine(DelaySug(1.5f));
         }
-        uIHandler.DisplayOutputText(b.ToString(), 5f);
+        //uIHandler.DisplayOutputText(b.ToString(), 5f);
 
     }
     public Card ShowCard(PlayerMasterController playerMasterController, List<Card> c)
@@ -161,7 +161,7 @@ public class RoundManager : MonoBehaviour
           if no players have the card -> player can choose to make accusation or end turn
          */
 
-        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
+        //uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
 
         canSug = false;
         bool playerWithCardFound = false;
@@ -216,10 +216,12 @@ public class RoundManager : MonoBehaviour
         {
             //code for wining
             print("PLAYER WIN");
+            uIHandler.DisplayWinScreen(true);
         }
         else
         {
             print(playerController + " Wrong answer");
+            uIHandler.DisplayPlayerEliminated(true, EnumToString.GetStringFromEnum(GetCurrentPlayer().GetCharacter()));
             playerController.EliminatePlayer();
             EndTurn();
         }
@@ -231,6 +233,7 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
+        
         if (turnController.SetCurrentPlayerToNext())
         {
 
@@ -251,7 +254,7 @@ public class RoundManager : MonoBehaviour
         else
         {
             isOver = true;
-            uIHandler.DisplayGameOver();
+            uIHandler.DisplayGameOverScreen(true);
             return null;
         }
     }
