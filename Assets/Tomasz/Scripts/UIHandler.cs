@@ -77,45 +77,8 @@ public class UIHandler : MonoBehaviour
             }
             i++;
         }
-        SetNamesColours();
+        
     }
-
-    public void SetNamesColours()
-    {
-        foreach (CardSlot cs in cardSlots)
-        {
-            img = cs.img;
-            txt = cs.txt;
-            if (cs.isVisible)
-            {
-                txt.text = cs.card.name;
-                switch (cs.card.GetType().ToString())
-                {
-                    case "WeaponCard":
-                        {
-                            img.color = Color.green;
-                            break;
-                        }
-                    case "RoomCard":
-                        {
-                            img.color = Color.gray;
-                            break;
-                        }
-                    case "CharacterCard":
-                        {
-                            img.color = Color.blue;
-                            break;
-                        }
-                }
-            }
-            else
-            {
-                img.enabled = false;
-                txt.text = "";
-            }
-        }
-    }
-
 
     public void RollDiceButton()
     {
