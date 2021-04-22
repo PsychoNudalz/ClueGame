@@ -9,9 +9,7 @@ public class CharacterCard : Card
     public CharacterEnum characterEnum;
     private Sprite cardImage;
 
-    public Sprite CardImage { get => cardImage; }
-
-    private void Start()
+    private void Awake()
     {
         String path = "Danny/CardImages/Characters/" + characterEnum.ToString();
         //print("Loading Image - " + path);
@@ -49,5 +47,10 @@ public class CharacterCard : Card
     public override int GetHashCode()
     {
         return base.GetHashCode();
+    }
+
+    public override Sprite GetCardImage()
+    {
+        return cardImage;
     }
 }

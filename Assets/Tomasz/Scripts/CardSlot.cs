@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,19 +11,35 @@ public class CardSlot : MonoBehaviour
     public Image img;
     public TextMeshProUGUI txt;
     public bool isVisible = false;
+
     private void Start()
     {
-        img = GetComponent<Image>();
-        txt = GetComponentInChildren<TextMeshProUGUI>();
+        Initialise();
+        SetCardDetails();
     }
+
+    private void Initialise()
+    {
+        img.sprite = null;
+        txt.text = "";
+    }
+
     public void SetCard(Card c)
     {
         card = c;
+        SetCardDetails();
     }
-    public void SetVisible()
-    {
-        isVisible = true;
 
+    private void SetCardDetails()
+    {
+        img.sprite = card.GetCardImage();
+        txt.text = card.GetCardType().ToString();
+    }
+
+    public void SetVisible(bool isVisible = true)
+    {
+        this.isVisible = isVisible;
+        gameObject.SetActive(isVisible);
     }
 
 

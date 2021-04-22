@@ -11,9 +11,7 @@ public class WeaponCard : Card
     public WeaponEnum weaponEnum;
     private Sprite cardImage;
 
-    public Sprite CardImage { get => cardImage;}
-
-    private void Start()
+    private void Awake()
     {
         String path = "Danny/CardImages/Weapons/" + weaponEnum.ToString();
         //print("Loading Image - " + path);
@@ -49,5 +47,10 @@ public class WeaponCard : Card
     public override int GetHashCode()
     {
         return base.GetHashCode();
+    }
+
+    public override Sprite GetCardImage()
+    {
+        return cardImage;
     }
 }
