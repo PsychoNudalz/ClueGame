@@ -42,6 +42,11 @@ public class PlayerMasterController : MonoBehaviour
 
     private void Start()
     {
+
+    }
+
+    public void StartBehaviour()
+    {
         playerStatsScript.InititaliseToGuessList();
 
     }

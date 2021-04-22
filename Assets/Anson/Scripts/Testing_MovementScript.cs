@@ -7,6 +7,7 @@ public class Testing_MovementScript : TestUIScript
 
     private void Awake()
     {
+        //FindObjectsOfType<GameManagerScript>().
         Application.targetFrameRate = 120;
         AssignAllComponents();
     }
@@ -36,7 +37,13 @@ public class Testing_MovementScript : TestUIScript
 
     public override void UpdateBehaviour()
     {
+        try
+        {
         playerMasterController = turnController.GetCurrentPlayer();
+        }catch (System.ArgumentOutOfRangeException e)
+        {
+            return;
+        }
 
         UpdateStatusText(string.Concat("Turn:"+playerMasterController+ToString()+"\n"+
             "Current Tile:"+playerMasterController.GetTile()+"\n"+

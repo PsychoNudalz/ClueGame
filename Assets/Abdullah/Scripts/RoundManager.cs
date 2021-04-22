@@ -27,25 +27,17 @@ public class RoundManager : MonoBehaviour
     {
         dice = FindObjectOfType<Dice>();
         turnController = FindObjectOfType<TurnController>();
-        playerController = turnController.GetCurrentPlayer();
         boardManager = FindObjectOfType<BoardManager>();
-        try
-        {
-
-            dice = boardManager.GetComponentInChildren<Dice>();
-        }
-        catch (System.Exception)
-        {
-        }
         gameGenerator = FindObjectOfType<CardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
         uIHandler = FindObjectOfType<UIHandler>();
         aIController = FindObjectOfType<AIControllerScript>();
     }
 
+
     private void Start()
     {
-        StartTurn();
+        //StartTurn();
     }
 
     private void FixedUpdate()
@@ -60,7 +52,15 @@ public class RoundManager : MonoBehaviour
         {
             return;
         }
-        PlayerMasterController playerMasterController = turnController.GetCurrentPlayer();
+        PlayerMasterController playerMasterController = null;
+        try
+        {
+            playerMasterController = turnController.GetCurrentPlayer();
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            return;
+        }
         if (dice.GetValue() > 0 && diceRolled)
         {
             diceRolled = false;
@@ -234,19 +234,19 @@ public class RoundManager : MonoBehaviour
         if (turnController.SetCurrentPlayerToNext())
         {
 
-        
-        canRoll = true;
+
+            canRoll = true;
 
 
 
-        //Anson: reset camera
-        cameraCloseUp.ClearCloseUp();
+            //Anson: reset camera
+            cameraCloseUp.ClearCloseUp();
 
-        //Anson: start the turn to update the current player
-        StartTurn();
+            //Anson: start the turn to update the current player
+            StartTurn();
 
 
-        return GetCurrentPlayer();
+            return GetCurrentPlayer();
         }
         else
         {
@@ -260,6 +260,7 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     public void StartTurn()
     {
+        boardManager.ClearMovable();
         playerController = turnController.GetCurrentPlayer();
         if (playerController.isAI)
         {

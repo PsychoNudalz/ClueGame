@@ -20,7 +20,7 @@ public class CardManager : MonoBehaviour
 
     private void Awake()
     {
-        Initialise();
+        //Initialise();
     }
 
     public void Initialise()

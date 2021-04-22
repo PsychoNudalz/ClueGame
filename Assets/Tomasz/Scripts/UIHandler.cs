@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -46,6 +47,15 @@ public class UIHandler : MonoBehaviour
     private RoundManager roundManager;
     private void Start()
     {
+
+        //deck = gameGen.GetSixSetsOfCards()[0];
+        //deck = gameGen.GetPlaybleCardsByPlayers(1);
+
+        //Anson: this gets you the deck for the current player, call this when you need to update the UI
+    }
+
+    public void StartBehaviour()
+    {
         userController = FindObjectOfType<UserController>();
         cardManager = FindObjectOfType<CardManager>();
         //gameGen.Initialise();
@@ -55,26 +65,29 @@ public class UIHandler : MonoBehaviour
         {
             makeSuggestionPanel = GameObject.Find("MakeSuggestionPanel");
         }
-        
+
         makeSuggestionPanel.SetActive(false);
-        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum( userController.GetCurrentPlayer().GetCharacter());
+        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter());
 
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
 
         roundManager = FindObjectOfType<RoundManager>();
-        //deck = gameGen.GetSixSetsOfCards()[0];
-        //deck = gameGen.GetPlaybleCardsByPlayers(1);
-
-        //Anson: this gets you the deck for the current player, call this when you need to update the UI
     }
 
     private void FixedUpdate()
     {
+        try{
+
         rollButton.interactable = roundManager.CanRoll;
         shortcutButton.interactable = userController.GetCurrentPlayer().CanTakeShortcut();
         accuseButton.interactable = roundManager.CanAcc;
         suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom()) ;
+        }
+        catch (NullReferenceException e)
+        {
+
+        }
     }
 
     public void DisplayDeck(List<Card> cards)

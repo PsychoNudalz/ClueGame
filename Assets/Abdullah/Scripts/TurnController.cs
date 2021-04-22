@@ -13,10 +13,10 @@ public class TurnController : MonoBehaviour
     void Awake()
     {
         //run the StartGame() method in order to 
-        StartGame();
+        //StartGame();
     }
 
-    void StartGame() 
+    public void StartGame() 
     {
 
         InitialisePlayers();
