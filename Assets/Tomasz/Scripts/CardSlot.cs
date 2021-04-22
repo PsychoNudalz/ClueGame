@@ -37,7 +37,7 @@ public class CardSlot : MonoBehaviour
             return;
         }
         img.sprite = card.GetCardImage();
-        txt.text = card.GetCardType().ToString();
+        txt.text = EnumToString.GetStringFromEnum(card.GetCardType());
     }
 
     public void SetVisible(bool isVisible = true)
