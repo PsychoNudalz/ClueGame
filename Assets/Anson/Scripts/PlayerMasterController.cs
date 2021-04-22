@@ -236,4 +236,11 @@ public class PlayerMasterController : MonoBehaviour
     {
         playerStatsScript.IsEliminated = true;
     }
+
+
+    public bool IsMoving()
+    {
+        return playerTokenScript.IsMove;
+    }
+
 }

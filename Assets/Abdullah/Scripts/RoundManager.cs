@@ -12,6 +12,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField] CardManager gameGenerator;
     [SerializeField] CameraCloseUp cameraCloseUp;
     [SerializeField] UIHandler uIHandler;
+    [SerializeField] AIControllerScript aIController;
     bool diceRolled = false;
     bool canRoll = true;
     bool canSug = true;
@@ -38,6 +39,7 @@ public class RoundManager : MonoBehaviour
         gameGenerator = FindObjectOfType<CardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
         uIHandler = FindObjectOfType<UIHandler>();
+        aIController = FindObjectOfType<AIControllerScript>();
     }
 
     private void Start()
@@ -121,6 +123,7 @@ public class RoundManager : MonoBehaviour
         {
             StartCoroutine(DelaySug(1.5f));
         }
+        uIHandler.DisplayOutputText(b.ToString(), 5f);
 
     }
     public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
@@ -148,6 +151,9 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
+        
+        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter()," suggested:\n",sug[0],"\n", sug[1], "\n", sug[2]), 5f);
+
         canSug = false;
         bool playerWithCardFound = false;
         List<PlayerMasterController> RestOfPlayers = turnController.GetRestOfPlayersInOrder();
@@ -160,10 +166,14 @@ public class RoundManager : MonoBehaviour
             {
                 // = RestOfPlayers[i % RestOfPlayers.Count].FindCard(sug);
                 Debug.Log(foundPlayer.Item1.ToString() + " Has cards:");
+                string temp = "";
                 foreach (Card c in foundPlayer.Item2)
                 {
                     Debug.Log(c.gameObject.name);
+                    temp +=" "+ c.ToString()+",";
                 }
+
+                //uIHandler.DisplayOutputText(foundPlayer.Item1.ToString() + " Has cards:" + temp, 5f);
                 playerWithCardFound = true;
             }
 
@@ -219,8 +229,6 @@ public class RoundManager : MonoBehaviour
         //Anson: start the turn to update the current player
         StartTurn();
 
-        //Anson: Block View
-        uIHandler.DisplayViewBlocker(true, GetCurrentPlayer().GetCharacter().ToString()); ;
 
         return GetCurrentPlayer();
     }
@@ -233,9 +241,14 @@ public class RoundManager : MonoBehaviour
         if (playerController.isAI)
         {
             uIHandler.InitialiseTurn(false);
+            aIController.SetActive(true, playerController);
         }
         else
         {
+            aIController.SetActive(false);
+            //Anson: Block View
+            uIHandler.DisplayViewBlocker(true, GetCurrentPlayer().GetCharacter().ToString()); ;
+            
             uIHandler.InitialiseTurn(true);
             uIHandler.DisplayDeck(playerController.GetDeck());
         }

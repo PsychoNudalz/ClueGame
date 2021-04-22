@@ -13,7 +13,7 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] private Color characterColour;
     [SerializeField] private string characterName;
     private StartTileScript startTile;
-    private PlayerMasterController controller;
+    [SerializeField] PlayerMasterController controller;
 
     [Header("Movement")]
     [SerializeField] Animator animator;
@@ -40,6 +40,7 @@ public class PlayerTokenScript : MonoBehaviour
     public string CharacterName { get => characterName; set => characterName = value; }
     public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
     public RoomScript CurrentRoom { get => currentRoom; set => currentRoom = value; }
+    public bool IsMove { get => isMove;}
 
 
     // Start is called before the first frame update

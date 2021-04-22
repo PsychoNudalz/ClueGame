@@ -269,7 +269,7 @@ public class BoardManager : MonoBehaviour
         }
 
         movableTile = new List<BoardTileScript>();
-        print("Clear");
+        //print("Clear");
     }
 
     public bool CanMove(BoardTileScript currentTile)
@@ -297,5 +297,41 @@ public class BoardManager : MonoBehaviour
         this.weaponTokens = weaponTokens;
         this.freeRollTiles = freeRollTiles;
         this.freeSuggestionTiles = freeSuggestionTiles;
+    }
+
+    /// <summary>
+    /// Gets an entry tile from Movable list
+    /// return null if none found
+    /// </summary>
+    /// <returns></returns>
+    public RoomEntryBoardTileScript GetEntryTileInMovable()
+    {
+        int offset = Random.Range(0, roomEntries.Length-1);
+        for(int i = 0; i < roomEntries.Length;i++)
+        {
+            if (movableTile.Contains(roomEntries[(offset+i)%roomEntries.Length]))
+            {
+                return roomEntries[(offset + i) % roomEntries.Length];
+    }
+        }
+        return null;
+    }
+
+
+    /// <summary>
+    /// Gets an free roll tile from Movable list
+    /// return null if none found
+    /// </summary>
+    /// <returns></returns>
+    public FreeRollBoardTileScript GetFreeRollTileInMovable()
+    {
+        foreach (FreeRollBoardTileScript e in freeRollTiles)
+        {
+            if (movableTile.Contains(e))
+            {
+                return e;
+            }
+        }
+        return null;
     }
 }

@@ -21,6 +21,9 @@ public class UIHandler : MonoBehaviour
     [SerializeField] GameObject allButtons;
     [SerializeField] GameObject deckGO;
     [SerializeField] TextMeshProUGUI currentPlayerName;
+    [SerializeField] TextMeshProUGUI outputText;
+    [SerializeField] GameObject outputTextGO;
+    Coroutine outputTextCoroutine;
     [SerializeField] GameObject viewBlocker;
     [SerializeField] TextMeshProUGUI viewBlockerPlayerName;
     [SerializeField] GameObject shortcutButton;
@@ -51,6 +54,7 @@ public class UIHandler : MonoBehaviour
         currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
 
         DisplayViewBlocker(false);
+        outputTextGO.SetActive(false);
 
         //deck = gameGen.GetSixSetsOfCards()[0];
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
@@ -235,8 +239,13 @@ public class UIHandler : MonoBehaviour
     public void EndTurn()
     {
         print("Pressed End turn");
-        string nextPlayer =  userController.EndTurn().GetCharacter().ToString();
-        currentPlayerName.text ="Turn:"+ nextPlayer;
+        DisplayViewBlocker(false);
+        userController.EndTurn();
+    }
+
+    public void UpdateCurrentTurnText(string nextPlayer)
+    {
+        currentPlayerName.text = "Turn:" + nextPlayer;
     }
 
     public void InitialiseTurn(bool displayFullUI)
@@ -251,6 +260,7 @@ public class UIHandler : MonoBehaviour
             allButtons.SetActive(false);
             deckGO.SetActive(false);
         }
+        UpdateCurrentTurnText(userController.GetCurrentPlayer().GetCharacter().ToString());
     }
 
     /// <summary>
@@ -283,6 +293,24 @@ public class UIHandler : MonoBehaviour
     public void TakeShortcutButton()
     {
         userController.TakeShortcut();
+    }
+
+
+    public void DisplayOutputText(string s, float timeUntilDisappear)
+    {
+        if (outputTextCoroutine!= null)
+        {
+            StopCoroutine(outputTextCoroutine);
+        }
+        outputTextCoroutine = StartCoroutine(DisplayOutputTextRoutine(s, timeUntilDisappear));
+    }
+     IEnumerator DisplayOutputTextRoutine(string s, float timeUntilDisappear)
+    {
+        outputTextGO.gameObject.SetActive(true);
+        outputText.text = s;
+        yield return new WaitForSeconds(timeUntilDisappear);
+        outputTextGO.gameObject.SetActive(false);
+
     }
 }
 
