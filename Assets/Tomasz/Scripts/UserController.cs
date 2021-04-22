@@ -45,6 +45,7 @@ public class UserController : MonoBehaviour
     public void TakeShortcut()
     {
         GetCurrentPlayer().TakeShortcut();
+        rM.CanRoll = false;
     }
 
     //public void MoveCursor() { }

@@ -19,7 +19,7 @@ public class RoundManager : MonoBehaviour
     bool canAcc = true;
     bool isOver = false;
 
-    public bool CanRoll { get => canRoll; }
+    public bool CanRoll { get => canRoll; set => canRoll = value; }
     public bool CanSug { get => canSug; }
     public bool CanAcc { get => canAcc; }
 
@@ -275,7 +275,7 @@ public class RoundManager : MonoBehaviour
             uIHandler.InitialiseTurn(true);
             uIHandler.DisplayDeck(playerController.GetDeck());
         }
-        uIHandler.DisplayShortcutButton(playerController.CanTakeShortcut());
+        //uIHandler.DisplayShortcutButton(playerController.CanTakeShortcut());
         canRoll = true;
         canSug = true;
         canAcc = true;

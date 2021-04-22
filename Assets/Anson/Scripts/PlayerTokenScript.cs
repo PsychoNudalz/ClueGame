@@ -32,6 +32,7 @@ public class PlayerTokenScript : MonoBehaviour
     private RoomEntryBoardTileScript currentExitPoint;
     private BoardTileScript roomExitTileTarget;
     private BoardManager boardManager;
+    private RoundManager roundManager;
     CameraCloseUp cameraCloseUp;
 
     //Getters and Setters
@@ -48,6 +49,7 @@ public class PlayerTokenScript : MonoBehaviour
     {
         boardManager = FindObjectOfType<BoardManager>();
         cameraCloseUp = FindObjectOfType<CameraCloseUp>();
+        roundManager = FindObjectOfType<RoundManager>();
     }
 
     // Update is called once per frame
@@ -261,7 +263,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public bool CanTakeShortcut()
     {
-        return (currentRoom != null && currentRoom.HasShortcut());
+        return (currentRoom != null && currentRoom.HasShortcut() && roundManager.CanRoll);
     }
 
     public bool TakeShortcut()

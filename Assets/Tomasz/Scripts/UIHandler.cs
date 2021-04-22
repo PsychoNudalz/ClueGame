@@ -26,7 +26,11 @@ public class UIHandler : MonoBehaviour
     Coroutine outputTextCoroutine;
     [SerializeField] GameObject viewBlocker;
     [SerializeField] TextMeshProUGUI viewBlockerPlayerName;
-    [SerializeField] GameObject shortcutButton;
+    [SerializeField] Button shortcutButton;
+    [SerializeField] Button rollButton;
+    [SerializeField] Button accuseButton;
+    [SerializeField] Button suggestButton;
+    
 
 
     [Header("Suggestion Panels")]
@@ -39,6 +43,7 @@ public class UIHandler : MonoBehaviour
     [Header("Accusation Panels")]
     public GameObject makeAccusationPanel;
     //public GameObject suggestionPanel;
+    private RoundManager roundManager;
     private void Start()
     {
         userController = FindObjectOfType<UserController>();
@@ -57,10 +62,19 @@ public class UIHandler : MonoBehaviour
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
 
+        roundManager = FindObjectOfType<RoundManager>();
         //deck = gameGen.GetSixSetsOfCards()[0];
         //deck = gameGen.GetPlaybleCardsByPlayers(1);
 
         //Anson: this gets you the deck for the current player, call this when you need to update the UI
+    }
+
+    private void FixedUpdate()
+    {
+        rollButton.interactable = roundManager.CanRoll;
+        shortcutButton.interactable = userController.GetCurrentPlayer().CanTakeShortcut();
+        accuseButton.interactable = roundManager.CanAcc;
+        suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom()) ;
     }
 
     public void DisplayDeck(List<Card> cards)
@@ -270,11 +284,11 @@ public class UIHandler : MonoBehaviour
     }
 
 
-
+    /*
     public void DisplayShortcutButton(bool b)
     {
-        shortcutButton.SetActive(b);
-    }
+        shortcutButton.gameObject.SetActive(b);
+    }*/
 
 
     public void TakeShortcutButton()
