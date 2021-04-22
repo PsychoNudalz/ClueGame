@@ -17,6 +17,7 @@ public class RoundManager : MonoBehaviour
     bool canRoll = true;
     bool canSug = true;
     bool canAcc = true;
+    bool isOver = false;
 
     public bool CanRoll { get => canRoll; }
     public bool CanSug { get => canSug; }
@@ -126,7 +127,7 @@ public class RoundManager : MonoBehaviour
         uIHandler.DisplayOutputText(b.ToString(), 5f);
 
     }
-    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
+    public Card ShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         /*
         if getnextPlayer has card show Card
@@ -138,14 +139,17 @@ public class RoundManager : MonoBehaviour
          */
         if (uIHandler == null)
         {
-            return;
+            return null;
         }
 
+
+        //Anson: Currently show random cards
+        Card selectedCard = c[(UnityEngine.Random.Range(0, c.Count) % c.Count)];
         if (!playerController.isAI)
         {
-            //Anson: Currently show random cards
-            uIHandler.ShowCard(playerMasterController, c[(UnityEngine.Random.Range(0, c.Count) % c.Count)]);
+            uIHandler.ShowCard(playerMasterController, selectedCard);
         }
+        return selectedCard;
 
     }
 
@@ -190,7 +194,11 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            ShowCard(foundPlayer.Item1, foundPlayer.Item2);
+            Card card = ShowCard(foundPlayer.Item1, foundPlayer.Item2);
+            if (card != null)
+            {
+                GetCurrentPlayer().RemoveToGessCard(card);
+            }
         }
 
     }
@@ -223,7 +231,10 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
-        turnController.SetCurrentPlayerToNext();
+        if (turnController.SetCurrentPlayerToNext())
+        {
+
+        
         canRoll = true;
 
 
@@ -236,6 +247,13 @@ public class RoundManager : MonoBehaviour
 
 
         return GetCurrentPlayer();
+        }
+        else
+        {
+            isOver = true;
+            uIHandler.DisplayGameOver();
+            return null;
+        }
     }
     /// <summary>
     /// Method for starting the turn

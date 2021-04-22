@@ -147,7 +147,7 @@ public class RoomScript : MonoBehaviour
             }
             else
             {
-                Debug.LogError(player.GetCharacter() + " not found in " + Room);
+                Debug.LogWarning(player.GetCharacter() + " not found in " + Room);
             }
         }
     }

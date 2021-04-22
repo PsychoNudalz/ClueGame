@@ -33,11 +33,16 @@ public class PlayerMasterController : MonoBehaviour
 
         boardManager = FindObjectOfType<BoardManager>();
 
-
         //test
 
         //PlayerMasterController playerMasterController = FindObjectOfType<PlayerMasterController>();
         //print((int )playerMasterController.GetCharacter());
+
+    }
+
+    private void Start()
+    {
+        playerStatsScript.InititaliseToGuessList();
 
     }
 
@@ -241,6 +246,17 @@ public class PlayerMasterController : MonoBehaviour
     public bool IsMoving()
     {
         return playerTokenScript.IsMove;
+    }
+
+    public bool RemoveToGessCard(Card c)
+    {
+        return playerStatsScript.RemoveToGessCard(c);
+    }
+
+    public List<Card> GetToGuessCards()
+    {
+        return playerStatsScript.ToGuessList;
+
     }
 
 }

@@ -302,6 +302,11 @@ public class UIHandler : MonoBehaviour
         outputTextGO.gameObject.SetActive(false);
 
     }
+
+    public void DisplayGameOver()
+    {
+        DisplayOutputText("GAME OVER", 100000f);
+    }
 }
 
 
