@@ -84,8 +84,8 @@ public class UIHandler : MonoBehaviour
     {
         foreach (CardSlot cs in cardSlots)
         {
-            img = cs.GetComponent<Image>();
-            txt = cs.GetComponentInChildren<TextMeshProUGUI>();
+            img = cs.img;
+            txt = cs.txt;
             if (cs.isVisible)
             {
                 txt.text = cs.card.name;
