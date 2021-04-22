@@ -12,7 +12,7 @@ public class UIHandler : MonoBehaviour
     public List<Card> deck;
     public CardManager cardManager;
     public List<CardSlot> cardSlots;
-    public Animator shownCard;
+    public Animator showCardAnimator;
     private TextMeshProUGUI txt;
     private Image img;
     public UserController userController;
@@ -32,6 +32,10 @@ public class UIHandler : MonoBehaviour
     [Header("Suggestion Panels")]
     public GameObject makeSuggestionPanel;
     [SerializeField] TextMeshProUGUI suggestionRoomNameText;
+    [Header("Show Card Panel")]
+    [SerializeField] GameObject showCardGO;
+    [SerializeField] TextMeshProUGUI showCardText;
+    [SerializeField] CardSlot showCard;
     [Header("Accusation Panels")]
     public GameObject makeAccusationPanel;
     //public GameObject suggestionPanel;
@@ -40,7 +44,7 @@ public class UIHandler : MonoBehaviour
         userController = FindObjectOfType<UserController>();
         cardManager = FindObjectOfType<CardManager>();
         //gameGen.Initialise();
-        cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
+        //cardSlots = new List<CardSlot>(GetComponentsInChildren<CardSlot>());
         cardSlots = cardSlots.OrderBy(p => p.name).ToList();
         if (!makeSuggestionPanel)
         {
@@ -66,6 +70,7 @@ public class UIHandler : MonoBehaviour
     {
         deck = cards;
 
+        /*
         int i = 0;
         foreach (CardSlot cs in cardSlots)
         {
@@ -80,6 +85,18 @@ public class UIHandler : MonoBehaviour
             {
                 cs.SetVisible(false);
             }
+        }
+        */
+        foreach (CardSlot cs in cardSlots)
+        {
+            cs.SetVisible(false);
+        }
+        for (int i = 0; i < deck.Count() && i < cardSlots.Count(); i++)
+        {
+            print(i+","+ cardSlots[i]+","+ deck[i]);
+            cardSlots[i].SetCard(deck[i]);
+            cardSlots[i].SetVisible();
+
         }
 
     }
@@ -119,13 +136,17 @@ public class UIHandler : MonoBehaviour
     }
 
 
-    public void ShowCard(PlayerMasterController playerMasterController, List<Card> c)
+    public void ShowCard(PlayerMasterController playerMasterController, Card c)
     {
         if (!areControlsFrozen)
         {
             areControlsFrozen = true;
             Debug.Log("Showing a card");
-            shownCard.SetBool("show", true);
+            showCardGO.SetActive(true);
+            showCardAnimator.SetBool("show", true);
+            showCardText.text = "Player:" + playerMasterController.GetCharacter().ToString() + "\n has this card";
+            showCard.SetCard(c);
+
             areControlsFrozen = false;
         }
 
@@ -217,6 +238,8 @@ public class UIHandler : MonoBehaviour
 
     public void InitialiseTurn(bool displayFullUI)
     {
+        showCardGO.SetActive(false);
+        showCardAnimator.SetBool("show", false);
         if (displayFullUI)
         {
             allButtons.SetActive(true);

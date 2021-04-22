@@ -140,7 +140,12 @@ public class RoundManager : MonoBehaviour
         {
             return;
         }
-        uIHandler.ShowCard(playerMasterController, c);
+
+        if (!playerController.isAI)
+        {
+            //Anson: Currently show random cards
+            uIHandler.ShowCard(playerMasterController, c[(UnityEngine.Random.Range(0, c.Count) % c.Count)]);
+        }
 
     }
 
@@ -151,8 +156,8 @@ public class RoundManager : MonoBehaviour
           if other player has card -> show card
           if no players have the card -> player can choose to make accusation or end turn
          */
-        
-        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter()," suggested:\n",sug[0],"\n", sug[1], "\n", sug[2]), 5f);
+
+        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
 
         canSug = false;
         bool playerWithCardFound = false;
@@ -170,7 +175,7 @@ public class RoundManager : MonoBehaviour
                 foreach (Card c in foundPlayer.Item2)
                 {
                     Debug.Log(c.gameObject.name);
-                    temp +=" "+ c.ToString()+",";
+                    temp += " " + c.ToString() + ",";
                 }
 
                 //uIHandler.DisplayOutputText(foundPlayer.Item1.ToString() + " Has cards:" + temp, 5f);
@@ -248,7 +253,7 @@ public class RoundManager : MonoBehaviour
             aIController.SetActive(false);
             //Anson: Block View
             uIHandler.DisplayViewBlocker(true, GetCurrentPlayer().GetCharacter().ToString()); ;
-            
+
             uIHandler.InitialiseTurn(true);
             uIHandler.DisplayDeck(playerController.GetDeck());
         }
