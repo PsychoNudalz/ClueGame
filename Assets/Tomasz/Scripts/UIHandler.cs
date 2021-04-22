@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -26,6 +27,10 @@ public class UIHandler : MonoBehaviour
     Coroutine outputTextCoroutine;
     [SerializeField] GameObject viewBlocker;
     [SerializeField] TextMeshProUGUI viewBlockerPlayerName;
+    [SerializeField] GameObject playerEliminatedScreen;
+    [SerializeField] TextMeshProUGUI playerEliminatedText;
+    [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject gameOverScreen;
     [SerializeField] Button shortcutButton;
     [SerializeField] Button rollButton;
     [SerializeField] Button accuseButton;
@@ -57,7 +62,7 @@ public class UIHandler : MonoBehaviour
         }
 
         makeSuggestionPanel.SetActive(false);
-        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter());
+        currentPlayerName.text = EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()) + "'s turn";
 
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
@@ -155,7 +160,7 @@ public class UIHandler : MonoBehaviour
             Debug.Log("Showing a card");
             showCardGO.SetActive(true);
             showCardAnimator.SetBool("show", true);
-            showCardText.text = "Player:" + playerMasterController.GetCharacter().ToString() + "\n has this card";
+            showCardText.text = EnumToString.GetStringFromEnum(playerMasterController.GetCharacter()) + "\n has this card";
             showCard.SetCard(c);
 
             areControlsFrozen = false;
@@ -163,14 +168,6 @@ public class UIHandler : MonoBehaviour
 
     }
 
-
-
-
-
-    public void DisplayMenuMove()
-    {
-
-    }
     public void DisplayMenuSuggestion(bool forced = false)
     {
         if (forced)
@@ -235,6 +232,17 @@ public class UIHandler : MonoBehaviour
 
     }
 
+    internal void DisplayWinScreen(bool b)
+    {
+        winScreen.SetActive(b);
+    }
+
+    internal void DisplayGameOverScreen(bool b)
+    {
+        gameOverScreen.SetActive(b);
+        DisplayGameOver();
+    }
+
     public void EndTurn()
     {
         print("Pressed End turn");
@@ -244,7 +252,7 @@ public class UIHandler : MonoBehaviour
 
     public void UpdateCurrentTurnText(string nextPlayer)
     {
-        currentPlayerName.text = "Turn:" + nextPlayer;
+        currentPlayerName.text = nextPlayer + "'s turn";
     }
 
     public void InitialiseTurn(bool displayFullUI)
@@ -261,7 +269,7 @@ public class UIHandler : MonoBehaviour
             allButtons.SetActive(false);
             deckGO.SetActive(false);
         }
-        UpdateCurrentTurnText(userController.GetCurrentPlayer().GetCharacter().ToString());
+        UpdateCurrentTurnText(EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()));
     }
 
     /// <summary>
@@ -283,13 +291,18 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-
-    /*
-    public void DisplayShortcutButton(bool b)
+    public void DisplayPlayerEliminated(bool b, string s = "")
     {
-        shortcutButton.gameObject.SetActive(b);
-    }*/
-
+        playerEliminatedScreen.SetActive(b);
+        if (s.Equals(""))
+        {
+            playerEliminatedText.text = "Current player has made an incorrect accusation and has been eliminated!";
+        }
+        else
+        {
+            playerEliminatedText.text = s + " has made an incorrect accusation and has been eliminated!";
+        }
+    }
 
     public void TakeShortcutButton()
     {
@@ -316,7 +329,7 @@ public class UIHandler : MonoBehaviour
 
     public void DisplayGameOver()
     {
-        DisplayOutputText("GAME OVER", 100000f);
+        //DisplayOutputText("GAME OVER", 100000f);
     }
 
 
