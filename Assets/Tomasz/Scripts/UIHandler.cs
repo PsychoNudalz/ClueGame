@@ -30,7 +30,7 @@ public class UIHandler : MonoBehaviour
     [SerializeField] Button rollButton;
     [SerializeField] Button accuseButton;
     [SerializeField] Button suggestButton;
-    
+
 
 
     [Header("Suggestion Panels")]
@@ -55,9 +55,9 @@ public class UIHandler : MonoBehaviour
         {
             makeSuggestionPanel = GameObject.Find("MakeSuggestionPanel");
         }
-        
+
         makeSuggestionPanel.SetActive(false);
-        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum( userController.GetCurrentPlayer().GetCharacter());
+        currentPlayerName.text = "Turn:" + EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter());
 
         DisplayViewBlocker(false);
         outputTextGO.SetActive(false);
@@ -74,7 +74,7 @@ public class UIHandler : MonoBehaviour
         rollButton.interactable = roundManager.CanRoll;
         shortcutButton.interactable = userController.GetCurrentPlayer().CanTakeShortcut();
         accuseButton.interactable = roundManager.CanAcc;
-        suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom()) ;
+        suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom());
     }
 
     public void DisplayDeck(List<Card> cards)
@@ -104,7 +104,7 @@ public class UIHandler : MonoBehaviour
         }
         for (int i = 0; i < deck.Count() && i < cardSlots.Count(); i++)
         {
-            print(i+","+ cardSlots[i]+","+ deck[i]);
+            print(i + "," + cardSlots[i] + "," + deck[i]);
             cardSlots[i].SetCard(deck[i]);
             cardSlots[i].SetVisible();
 
@@ -318,6 +318,8 @@ public class UIHandler : MonoBehaviour
     {
         DisplayOutputText("GAME OVER", 100000f);
     }
+
+
 }
 
 

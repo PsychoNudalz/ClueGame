@@ -194,6 +194,8 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
+            uIHandler.DisplayViewBlocker(true, foundPlayer.Item1.GetCharacter().ToString());
+            uIHandler.SelectCardsToShow(foundPlayer.Item2);
             Card card = ShowCard(foundPlayer.Item1, foundPlayer.Item2);
             if (card != null)
             {
@@ -234,19 +236,19 @@ public class RoundManager : MonoBehaviour
         if (turnController.SetCurrentPlayerToNext())
         {
 
-        
-        canRoll = true;
+
+            canRoll = true;
 
 
 
-        //Anson: reset camera
-        cameraCloseUp.ClearCloseUp();
+            //Anson: reset camera
+            cameraCloseUp.ClearCloseUp();
 
-        //Anson: start the turn to update the current player
-        StartTurn();
+            //Anson: start the turn to update the current player
+            StartTurn();
 
 
-        return GetCurrentPlayer();
+            return GetCurrentPlayer();
         }
         else
         {
