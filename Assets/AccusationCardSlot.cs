@@ -10,16 +10,20 @@ public class AccusationCardSlot : MonoBehaviour
     public Image img;
     public TextMeshProUGUI txt;
     public bool isVisible = false;
+    private Sprite initialImage;
+    private string initialText;
 
     private void Start()
     {
-        
+        initialImage = img.sprite;
+        initialText = txt.text;
     }
 
-    private void Initialise()
+    public void ResetSlot()
     {
-        img.sprite = null;
-        txt.text = "";
+        img.sprite = initialImage;
+        txt.text = initialText;
+        card = null;
     }
 
     public void SetCard(Card c)

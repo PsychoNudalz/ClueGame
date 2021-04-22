@@ -31,7 +31,7 @@ public class UIHandler : MonoBehaviour
 
     [Header("Suggestion Panels")]
     public GameObject makeSuggestionPanel;
-    [SerializeField] TextMeshProUGUI suggestionRoomNameText;
+    [SerializeField] Button SuggestionRoomButton;
     [Header("Show Card Panel")]
     [SerializeField] GameObject showCardGO;
     [SerializeField] TextMeshProUGUI showCardText;
@@ -50,10 +50,7 @@ public class UIHandler : MonoBehaviour
         {
             makeSuggestionPanel = GameObject.Find("MakeSuggestionPanel");
         }
-        if (suggestionRoomNameText == null)
-        {
-            suggestionRoomNameText = GameObject.FindGameObjectWithTag("rName").GetComponent<TextMeshProUGUI>();
-        }
+        
         makeSuggestionPanel.SetActive(false);
         currentPlayerName.text = "Turn:" + userController.GetCurrentPlayer().GetCharacter().ToString();
 
@@ -119,7 +116,7 @@ public class UIHandler : MonoBehaviour
         if (!areControlsFrozen && (userController.RM.CanSug || forced))
         {
             areControlsFrozen = true;
-            DisplayMenuSuggestion();
+            DisplayMenuSuggestion(forced);
             areControlsFrozen = false;
         }
     }
@@ -164,7 +161,8 @@ public class UIHandler : MonoBehaviour
     {
         if (forced)
         {
-            // if landed on suggestion block, allow selection of room
+            makeSuggestionPanel.SetActive(true);
+            SuggestionRoomButton.interactable = true;
         }
         else
         {
@@ -172,9 +170,8 @@ public class UIHandler : MonoBehaviour
             if (userController.GetCurrentPlayer().GetCurrentRoom() != null)
             {
                 makeSuggestionPanel.SetActive(true);
-                string txt = userController.GetCurrentPlayer().GetCurrentRoom().ToString();
-                txt = txt.Split('(')[0];
-                suggestionRoomNameText.text = txt;
+                SuggestionRoomButton.interactable = false;
+                SuggestionRoomButton.GetComponentInChildren<AccusationCardSlot>().SetCard(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard);
                 //makeSuggestionPanel.GetComponent<Suggestion>().SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
                 //Anson: hmmmmm yes, spaghetti
                 userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard); ;
