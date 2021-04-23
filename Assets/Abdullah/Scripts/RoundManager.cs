@@ -127,23 +127,16 @@ public class RoundManager : MonoBehaviour
         //uIHandler.DisplayOutputText(b.ToString(), 5f);
 
     }
-    public Card ShowCard(PlayerMasterController playerMasterController, List<Card> c)
+    public Card AIShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         /*
-        if getnextPlayer has card show Card
-        else if getnextPlayer + 1 has 1 card show card
-        else if getnextPlayer + 2 has 1 card show card
-        else if getnextPlayer + 3 has 1 card show card
-        else if getnextPlayer + 4 has 1 card show card
-        else return no card found
+        AI Chooses a random card
          */
         if (uIHandler == null)
         {
             return null;
         }
 
-
-        //Anson: Currently show random cards
         Card selectedCard = c[(UnityEngine.Random.Range(0, c.Count) % c.Count)];
         if (!playerController.isAI)
         {
@@ -161,7 +154,7 @@ public class RoundManager : MonoBehaviour
           if no players have the card -> player can choose to make accusation or end turn
          */
 
-        //uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
+        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
 
         canSug = false;
         bool playerWithCardFound = false;
@@ -194,10 +187,33 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            Card card = ShowCard(foundPlayer.Item1, foundPlayer.Item2);
-            if (card != null)
+
+            //If a real player has those cards let them choose
+
+            if (!foundPlayer.Item1.isAI)
+
             {
-                GetCurrentPlayer().RemoveToGessCard(card);
+
+                uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(foundPlayer.Item1.GetCharacter()) + " \n TO CHOOSE A CARD");
+
+                uIHandler.DisplayChoicePanel(foundPlayer.Item1, foundPlayer.Item2);
+
+            }
+
+            else
+
+            {
+
+                Card card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
+
+                if (card != null)
+
+                {
+
+                    GetCurrentPlayer().RemoveToGessCard(card);
+
+                }
+
             }
         }
 
@@ -233,21 +249,17 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
-        
         if (turnController.SetCurrentPlayerToNext())
         {
-
-
             canRoll = true;
 
-
-
             //Anson: reset camera
+
             cameraCloseUp.ClearCloseUp();
 
             //Anson: start the turn to update the current player
-            StartTurn();
 
+            StartTurn();
 
             return GetCurrentPlayer();
         }

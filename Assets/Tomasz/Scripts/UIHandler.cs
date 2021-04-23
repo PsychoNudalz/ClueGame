@@ -17,6 +17,7 @@ public class UIHandler : MonoBehaviour
     private TextMeshProUGUI txt;
     private Image img;
     public UserController userController;
+    private PlayerMasterController choosingPlayer;
     bool areControlsFrozen = false;
     [Header("UI elements")]
     [SerializeField] GameObject allButtons;
@@ -36,12 +37,16 @@ public class UIHandler : MonoBehaviour
     [SerializeField] Button rollButton;
     [SerializeField] Button accuseButton;
     [SerializeField] Button suggestButton;
-    
+
 
 
     [Header("Suggestion Panels")]
     public GameObject makeSuggestionPanel;
     [SerializeField] Button SuggestionRoomButton;
+    [Header("Choose Card Panel")]
+    [SerializeField] GameObject choosePanel;
+    [SerializeField] List<CardSlot> chooseSlots;
+    [SerializeField] TextMeshProUGUI chooseCardText;
     [Header("Show Card Panel")]
     [SerializeField] GameObject showCardGO;
     [SerializeField] TextMeshProUGUI showCardText;
@@ -122,7 +127,7 @@ public class UIHandler : MonoBehaviour
         }
         for (int i = 0; i < deck.Count() && i < cardSlots.Count(); i++)
         {
-            print(i+","+ cardSlots[i]+","+ deck[i]);
+            print(i + "," + cardSlots[i] + "," + deck[i]);
             cardSlots[i].SetCard(deck[i]);
             cardSlots[i].SetVisible();
 
@@ -179,6 +184,13 @@ public class UIHandler : MonoBehaviour
             areControlsFrozen = false;
         }
 
+    }
+    public void ShowSelectedCard(int cardNum)
+    {
+        Card c = chooseSlots[cardNum].card;
+        choosePanel.SetActive(false);
+        DisplayViewBlocker(true, EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
+        ShowCard(choosingPlayer, c);
     }
 
     public void DisplayMenuSuggestion(bool forced = false)
@@ -240,9 +252,23 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    public void SelectCardsToShow(List<Card> toShow)
+    public void DisplayChoicePanel(PlayerMasterController player, List<Card> toChoose)
     {
+        choosingPlayer = player;
+        choosePanel.SetActive(true);
+        chooseCardText.SetText("SELECT A CARD TO SHOW:\n" + EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
+        chooseSlots = chooseSlots.OrderBy(p => p.name).ToList();
+        foreach (CardSlot cs in chooseSlots)
+        {
+            cs.SetVisible(false);
 
+        }
+        for (int i = 0; i < toChoose.Count() && i < chooseSlots.Count(); i++)
+        {
+
+            chooseSlots[i].SetCard(toChoose[i]);
+            chooseSlots[i].SetVisible();
+        }
     }
 
     internal void DisplayWinScreen(bool b)
@@ -356,6 +382,8 @@ public class UIHandler : MonoBehaviour
     {
         //DisplayOutputText("GAME OVER", 100000f);
     }
+
+
 }
 
 
