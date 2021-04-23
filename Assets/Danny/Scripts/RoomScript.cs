@@ -5,17 +5,18 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public enum Room {
-    None,
+    
     Ballroom,
     BilliardRoom,
-    Centre,
     Conservatory,
     DiningRoom,
     Hall,
     Kitchen,
-    Study,
     Library,
-    Lounge
+    Lounge,
+    Study,
+    None,
+    Centre
 }
     
 public class RoomScript : MonoBehaviour

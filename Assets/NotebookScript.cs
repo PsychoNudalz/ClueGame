@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public class NotebookScript : MonoBehaviour
 {
     [SerializeField] private GameObject characterPanel;
+    [SerializeField] private GameObject RoomPanel;
     [SerializeField] private RoundManager roundManager;
+    NotebookButton[] characterButtons;
+    NotebookButton[] roomButtons;
 
     private void OnEnable()
     {
@@ -19,14 +22,17 @@ public class NotebookScript : MonoBehaviour
         initializeNotebook();
     }
 
-    private void initializeNotebook()
+    public void initializeNotebook()
     {
         CreateCharacterButtons();
+        CreateRoomButtons();
     }
 
     public void RefreshNotebook()
     {
-        RefreshCharacters();
+        PlayerMasterController currentPlayer = roundManager.GetCurrentPlayer();
+        RefreshCharacters(currentPlayer);
+        RefreshRooms(currentPlayer);
     }
 
     private void CreateCharacterButtons()
@@ -37,6 +43,18 @@ public class NotebookScript : MonoBehaviour
         {
             buttons[i].SetButtonType(characterEnums[i]);
         }
+        characterButtons = buttons;
+    }
+
+    private void CreateRoomButtons()
+    {
+        Room[] roomEnums = (Room[])Enum.GetValues(typeof(Room));
+        NotebookButton[] buttons = RoomPanel.GetComponentsInChildren<NotebookButton>();
+        for (int i = 0; i < roomEnums.Length-2; i++)
+        {
+            buttons[i].SetButtonType(roomEnums[i]);
+        }
+        roomButtons = buttons;
     }
 
     internal void ToggleButton(NotebookButton notebookButton)
@@ -46,17 +64,36 @@ public class NotebookScript : MonoBehaviour
         RefreshNotebook();
     }
 
-    public void RefreshCharacters()
+    public void RefreshCharacters(PlayerMasterController currentPlayer)
     {
-        PlayerMasterController currentPlayer = roundManager.GetCurrentPlayer();
         if(currentPlayer != null)
         {
-            foreach(NotebookButton button in characterPanel.GetComponentsInChildren<NotebookButton>())
+            foreach (NotebookButton button in characterButtons)
             {
-                print(button.ButtonType);
                 button.setCrossedOut(currentPlayer.GetNotebookValue(button.ButtonType));
             }
 
+        }
+        else
+        {
+            print("currentPlayer is null");
+        }
+    }
+
+    public void RefreshRooms(PlayerMasterController currentPlayer)
+    {
+        
+        if (currentPlayer != null)
+        {
+            foreach (NotebookButton button in roomButtons)
+            {
+                button.setCrossedOut(currentPlayer.GetNotebookValue(button.ButtonType));
+            }
+
+        }
+        else
+        {
+            print("currentPlayer is null");
         }
     }
 }

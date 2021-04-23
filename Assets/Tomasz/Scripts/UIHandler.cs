@@ -319,7 +319,8 @@ public class UIHandler : MonoBehaviour
             deckGO.SetActive(false);
         }
         UpdateCurrentTurnText(EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()));
-
+        ToggleNotepad();
+        ToggleNotepad();
     }
 
     /// <summary>

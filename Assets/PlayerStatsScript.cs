@@ -26,7 +26,7 @@ public class PlayerStatsScript : MonoBehaviour
         }
         foreach (Room notebookRoom in System.Enum.GetValues(typeof(Room)))
         {
-            if (!notebookRoom.Equals(Room.None))
+            if (!notebookRoom.Equals(Room.None) && !notebookRoom.Equals(Room.Centre))
             {
                 notebook.Add(notebookRoom, false);
             }

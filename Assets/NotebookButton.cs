@@ -14,10 +14,6 @@ public class NotebookButton : MonoBehaviour
 
     public Enum ButtonType { get => buttonType;}
 
-    private void Start()
-    {
-        setCrossedOut(false);
-    }
     public void SetButtonType(Enum buttonType)
     {
         this.buttonType = buttonType;
