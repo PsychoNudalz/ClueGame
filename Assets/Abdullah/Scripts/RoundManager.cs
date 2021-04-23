@@ -127,7 +127,7 @@ public class RoundManager : MonoBehaviour
         //uIHandler.DisplayOutputText(b.ToString(), 5f);
 
     }
-    public Card ShowCard(PlayerMasterController playerMasterController, List<Card> c)
+    public Card AIShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         /*
         if getnextPlayer has card show Card
@@ -194,12 +194,20 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            uIHandler.DisplayViewBlocker(true, foundPlayer.Item1.GetCharacter().ToString());
-            uIHandler.SelectCardsToShow(foundPlayer.Item2);
-            Card card = ShowCard(foundPlayer.Item1, foundPlayer.Item2);
-            if (card != null)
+
+            //If a real player has those cards let them choose
+            if (!foundPlayer.Item1.isAI)
             {
-                GetCurrentPlayer().RemoveToGessCard(card);
+                uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(foundPlayer.Item1.GetCharacter()) + " \n TO CHOOSE A CARD");
+                uIHandler.DisplayChoicePanel(foundPlayer.Item1, foundPlayer.Item2);
+            }
+            else
+            {
+                Card card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
+                if (card != null)
+                {
+                    GetCurrentPlayer().RemoveToGessCard(card);
+                }
             }
         }
 
@@ -235,7 +243,7 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
-        
+
         if (turnController.SetCurrentPlayerToNext())
         {
 
