@@ -116,6 +116,11 @@ public class PlayerMasterController : MonoBehaviour
         return playerStatsScript.Deck;
     }
 
+    internal void initializeNotebook()
+    {
+        playerStatsScript.InitializeNotebook();
+    }
+
 
     /// <summary>
     /// check if the player has a card in his deck from the given list of cards
