@@ -17,7 +17,8 @@ public class RoundManager : MonoBehaviour
     bool canRoll = true;
     bool canSug = true;
     bool canAcc = true;
-    bool isOver = false;
+    bool isGameOver = false;
+    bool isGameWin = false;
 
     public bool CanRoll { get => canRoll; set => canRoll = value; }
     public bool CanSug { get => canSug; }
@@ -184,39 +185,38 @@ public class RoundManager : MonoBehaviour
         {
             print("No Player With Card Found");
             playerWithCardFound = false;
+            NotifySuggestion(null);
         }
         else
         {
 
             //If a real player has those cards let them choose
-
+            Card card = null;
             if (!foundPlayer.Item1.isAI)
 
             {
-
                 uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(foundPlayer.Item1.GetCharacter()) + " \n TO CHOOSE A CARD");
-
                 uIHandler.DisplayChoicePanel(foundPlayer.Item1, foundPlayer.Item2);
-
             }
-
             else
-
             {
-
-                Card card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
-
-                if (card != null)
-
-                {
-
-                    GetCurrentPlayer().RemoveToGessCard(card);
-
-                }
-
+                card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
+                NotifySuggestion(card);
             }
         }
 
+    }
+
+    public void NotifySuggestion(Card c)
+    {
+        if (c != null)
+        {
+            GetCurrentPlayer().RemoveToGessCard(c);
+        }
+        if (GetCurrentPlayer().isAI)
+        {
+            aIController.NotifySuggestion();
+        }
     }
 
     public void MakeAccusation(List<Card> cards)
@@ -233,13 +233,15 @@ public class RoundManager : MonoBehaviour
             //code for wining
             print("PLAYER WIN");
             uIHandler.DisplayWinScreen(true);
+            isGameOver = true;
+            isGameWin = true;
         }
         else
         {
             print(playerController + " Wrong answer");
             uIHandler.DisplayPlayerEliminated(true, EnumToString.GetStringFromEnum(GetCurrentPlayer().GetCharacter()));
             playerController.EliminatePlayer();
-            EndTurn();
+            //EndTurn();
         }
 
     }
@@ -249,7 +251,7 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
-        if (turnController.SetCurrentPlayerToNext())
+        if (turnController.SetCurrentPlayerToNext() && !isGameOver)
         {
             canRoll = true;
 
@@ -265,8 +267,11 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            isOver = true;
-            uIHandler.DisplayGameOverScreen(true);
+            isGameOver = true;
+            if (!isGameWin)
+            {
+                uIHandler.DisplayGameOverScreen(true);
+            }
             return null;
         }
     }
@@ -321,7 +326,7 @@ public class RoundManager : MonoBehaviour
     IEnumerator DelaySug(float timeDelay)
     {
         yield return new WaitForSeconds(timeDelay);
-        if (uIHandler != null)
+        if (uIHandler != null && !GetCurrentPlayer().isAI)
         {
             uIHandler.MakeSuggestionButton(true);
         }

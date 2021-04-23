@@ -147,7 +147,6 @@ public class RoomScript : MonoBehaviour
             }
             else
             {
-                print((slot.GetCharacterInSlot() != null) + ", " + (slot.GetCharacterInSlot().Equals(player)));
                 Debug.LogWarning(player.GetCharacter() + " not found in " + Room);
             }
         }

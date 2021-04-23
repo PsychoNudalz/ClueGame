@@ -11,10 +11,12 @@ public enum AIMode
     EndTurn,
     Waiting,
     None,
+    GameOver,
     Wait_Dice,
     Decide_Movement,
     Wait_PlayerMove,
     Decide_Suggest,
+    Wait_Suggest,
     Decide_Accuse
 }
 
@@ -158,6 +160,9 @@ public class AIControllerScript : MonoBehaviour
                 Debug.Log("Suggest");
                 Decide_Suggestion();
                 break;
+            case (AIMode.Wait_Suggest):
+                Debug.Log("Waiting for card return");
+                break;
 
             case (AIMode.Accusation):
                 Debug.LogWarning(currentCharacter.ToString() + " Accuse");
@@ -201,6 +206,12 @@ public class AIControllerScript : MonoBehaviour
     public void SetAIMode(AIMode a)
     {
         print("AI changing from: " + currentAIMode + " to " + a);
+        if (a.Equals(AIMode.GameOver))
+        {
+            Debug.LogWarning("AI is eliminated");
+            startTurnTime = Time.time;
+            DelayDecision(pauseTime);
+        }
         previousAIMode = currentAIMode;
         currentAIMode = a;
     }
@@ -242,18 +253,23 @@ public class AIControllerScript : MonoBehaviour
         List<BoardTileScript> movable = boardManager.MovableTile;
         List<RoomEntryBoardTileScript> possibleEntry = boardManager.GetRandomEntryTileInMovable();
         FreeRollBoardTileScript possibleFreeRoll = boardManager.GetFreeRollTileInMovable();
+        FreeSuggestionTileScript possibleSuggestRoll = boardManager.GetFreeSuggesTileInMovable();
 
 
         //Deciding which tile to go
         BoardTileScript selectedTile = null;
-        if (possibleEntry.Count != 0)
+
+        if (possibleSuggestRoll != null)
         {
-            /*
-            while (possibleEntry.Room.Equals(currentPlayerController.GetCurrentRoom()))
-            {
-                possibleEntry = boardManager.GetRandomEntryTileInMovable();
-            }
-            */
+            selectedTile = possibleSuggestRoll;
+            print("AI going to possible FreeSuggestion:" + selectedTile.ToString());
+
+        }
+
+        //Decide Possible Entry
+        else if (possibleEntry.Count != 0)
+        {
+
             int j = 0;
             if (currentPlayerController.IsInRoom())
             {
@@ -273,29 +289,28 @@ public class AIControllerScript : MonoBehaviour
 
             print("AI going to possible Entry:" + selectedTile.ToString());
         }
+        //Decide Possible Free Roll
         else if (possibleFreeRoll != null)
         {
             selectedTile = possibleFreeRoll;
             print("AI going to possible FreeRoll:" + selectedTile.ToString());
         }
+        //Pick a random tile if none found
         else
         {
             //randomly selects one
             selectedTile = movable[Random.Range(0, movable.Count) % movable.Count];
         }
         userController.SelectTile(selectedTile);
-        /*
-        if (selectedTile != null && selectedTile is FreeRollBoardTileScript)
+        if (selectedTile is FreeSuggestionTileScript)
         {
-            SetAIMode(AIMode.Wait_Dice);
+            SetAIMode(AIMode.Suggestion);
         }
         else
         {
             SetAIMode(AIMode.Wait_PlayerMove);
         }
-        */
-        SetAIMode(AIMode.Wait_PlayerMove);
-        if (currentPlayerController.IsInRoom() || selectedTile is RoomEntryBoardTileScript || selectedTile is FreeRollBoardTileScript)
+        if (currentPlayerController.IsInRoom() || selectedTile is RoomEntryBoardTileScript || selectedTile is FreeRollBoardTileScript || selectedTile is FreeSuggestionTileScript)
         {
             DelayDecision(pauseTime * 2);
         }
@@ -307,10 +322,23 @@ public class AIControllerScript : MonoBehaviour
         SetAIMode(AIMode.Decide_Suggest);
         LoadToGuessList(currentPlayerController.GetToGuessCards());
         userController.SetCharacter(Decide_Character());
-        userController.SetRoom(currentPlayerController.GetCurrentRoom().Room);
+        if (currentPlayerController.IsInRoom())
+        {
+            userController.SetRoom(currentPlayerController.GetCurrentRoom().Room);
+        }
+        else
+        {
+            userController.SetRoom(Decide_Room());
+        }
         userController.SetWeapon(Decide_Weapon());
+        SetAIMode(AIMode.Wait_Suggest);
         userController.MakeSuggestion();
         DelayDecision(pauseTime);
+    }
+
+    public void NotifySuggestion()
+    {
+        print("AI " + EnumToString.GetStringFromEnum(currentCharacter));
         SetAIMode(AIMode.Thinking);
     }
 
