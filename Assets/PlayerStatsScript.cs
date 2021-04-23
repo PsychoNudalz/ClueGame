@@ -12,7 +12,39 @@ public class PlayerStatsScript : MonoBehaviour
     /// list of cards that this player has not seen
     /// </summary>
     [SerializeField] List<Card> toGuessList = new List<Card>();
+    private Dictionary<System.Enum, bool> notebook;
 
+    public void InitializeNotebook()
+    {
+        notebook = new Dictionary<System.Enum, bool>();
+        foreach(CharacterEnum notebookCharacter in System.Enum.GetValues(typeof(CharacterEnum)))
+        {
+            if (!notebookCharacter.Equals(CharacterEnum.Initial))
+            {
+                notebook.Add(notebookCharacter, false);
+            }
+        }
+        foreach (Room notebookRoom in System.Enum.GetValues(typeof(Room)))
+        {
+            if (!notebookRoom.Equals(Room.None))
+            {
+                notebook.Add(notebookRoom, false);
+            }
+        }
+        foreach (WeaponEnum notebookWeapon in System.Enum.GetValues(typeof(WeaponEnum)))
+        {
+                notebook.Add(notebookWeapon, false);
+        }
+        foreach (Card card in deck)
+        {
+            notebook[card.GetCardType()] = true;
+        }
+
+        foreach(System.Enum key in notebook.Keys)
+        {
+            print(string.Format("{0} - {1} = {2}", Character, key, notebook[key]));
+        }
+    }
 
     public CharacterEnum Character { get => character;}
     public bool IsEliminated { get => isEliminated; set => isEliminated = value; }

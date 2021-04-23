@@ -106,7 +106,10 @@ public class CardManager : MonoBehaviour
             curPlayer++;
         }
 
-
+        foreach(PlayerMasterController player in players)
+        {
+            player.initializeNotebook();
+        }
         /*
         for (int i = 0; i < setOfcards.Count && i < players.Count; i++)
         {
