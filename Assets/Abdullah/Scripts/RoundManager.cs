@@ -130,20 +130,13 @@ public class RoundManager : MonoBehaviour
     public Card AIShowCard(PlayerMasterController playerMasterController, List<Card> c)
     {
         /*
-        if getnextPlayer has card show Card
-        else if getnextPlayer + 1 has 1 card show card
-        else if getnextPlayer + 2 has 1 card show card
-        else if getnextPlayer + 3 has 1 card show card
-        else if getnextPlayer + 4 has 1 card show card
-        else return no card found
+        AI Chooses a random card
          */
         if (uIHandler == null)
         {
             return null;
         }
 
-
-        //Anson: Currently show random cards
         Card selectedCard = c[(UnityEngine.Random.Range(0, c.Count) % c.Count)];
         if (!playerController.isAI)
         {

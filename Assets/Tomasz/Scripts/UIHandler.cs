@@ -243,7 +243,7 @@ public class UIHandler : MonoBehaviour
     {
         choosingPlayer = player;
         choosePanel.SetActive(true);
-        chooseCardText.SetText("SHOW A CARD TO:\n" + EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
+        chooseCardText.SetText("SELECT A CARD TO SHOW:\n" + EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
         chooseSlots = chooseSlots.OrderBy(p => p.name).ToList();
         foreach (CardSlot cs in chooseSlots)
         {
