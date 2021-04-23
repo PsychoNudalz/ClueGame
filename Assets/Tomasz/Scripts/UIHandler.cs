@@ -31,6 +31,7 @@ public class UIHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerEliminatedText;
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] GameObject noteBookPanel;
     [SerializeField] Button shortcutButton;
     [SerializeField] Button rollButton;
     [SerializeField] Button accuseButton;
@@ -249,6 +250,16 @@ public class UIHandler : MonoBehaviour
         winScreen.SetActive(b);
     }
 
+    public void ToggleNotepad()
+    {
+        DisplayNotePad(!noteBookPanel.activeSelf);
+    }
+    public void DisplayNotePad(bool b)
+    {
+        
+        noteBookPanel.SetActive(b);
+    }
+
     internal void DisplayGameOverScreen(bool b)
     {
         gameOverScreen.SetActive(b);
@@ -282,6 +293,7 @@ public class UIHandler : MonoBehaviour
             deckGO.SetActive(false);
         }
         UpdateCurrentTurnText(EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()));
+
     }
 
     /// <summary>
@@ -293,6 +305,7 @@ public class UIHandler : MonoBehaviour
     public void DisplayViewBlocker(bool b, string s = "")
     {
         viewBlocker.SetActive(b);
+        
         if (s.Equals(""))
         {
             viewBlockerPlayerName.text = "Next";
