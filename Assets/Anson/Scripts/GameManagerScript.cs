@@ -5,13 +5,13 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField]  PlayerMasterController playerMasterController;
-    [SerializeField]  BoardManager boardManager;
-    [SerializeField]  Dice dice;
-    [SerializeField]  TurnController turnController;
-    [SerializeField]  RoundManager roundManager;
-    [SerializeField]  CardManager cardManager;
-    [SerializeField]  UserController userController;
+    [SerializeField] PlayerMasterController playerMasterController;
+    [SerializeField] BoardManager boardManager;
+    [SerializeField] Dice dice;
+    [SerializeField] TurnController turnController;
+    [SerializeField] RoundManager roundManager;
+    [SerializeField] CardManager cardManager;
+    [SerializeField] UserController userController;
     [SerializeField] UIHandler uIHandler;
     private void Start()
     {
@@ -21,10 +21,13 @@ public class GameManagerScript : MonoBehaviour
 
     public void StartGame()
     {
-        FindObjectOfType<GameSetUpScript>().StartGame();
+        if (FindObjectOfType<GameSetUpScript>() != null)
+        {
+            FindObjectOfType<GameSetUpScript>().StartGame();
+        }
         turnController.StartGame();
         cardManager.Initialise();
-        foreach(PlayerMasterController p in FindObjectsOfType<PlayerMasterController>())
+        foreach (PlayerMasterController p in FindObjectsOfType<PlayerMasterController>())
         {
             p.StartBehaviour();
         }

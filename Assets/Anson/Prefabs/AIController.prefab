@@ -50,7 +50,8 @@ MonoBehaviour:
   currentPlayerController: {fileID: 0}
   decisionTime: 1
   pauseTime: 3
-  maxTurnTime: 30
+  maxTurnTime: 60
+  toGuessList: []
   userController: {fileID: 0}
   boardManager: {fileID: 0}
   roundManager: {fileID: 0}

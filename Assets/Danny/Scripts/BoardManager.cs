@@ -29,7 +29,7 @@ public class BoardManager : MonoBehaviour
     public RoomEntryBoardTileScript[] RoomEntries { get => roomEntries; set => roomEntries = value; }
     public WeaponTokenScript[] WeaponTokens { get => weaponTokens; set => weaponTokens = value; }
     public FreeRollBoardTileScript[] FreeRollTiles { get => freeRollTiles; set => freeRollTiles = value; }
-    public List<BoardTileScript> MovableTile { get => movableTile;}
+    public List<BoardTileScript> MovableTile { get => movableTile; }
     public FreeSuggestionTileScript[] FreeSuggestionTiles { get => freeSuggestionTiles; set => freeSuggestionTiles = value; }
 
     /*
@@ -203,7 +203,7 @@ public class BoardManager : MonoBehaviour
             }
             queue.AddRange(neighbours);
         }
-        if (currentTile is  RoomEntryBoardTileScript)
+        if (currentTile is RoomEntryBoardTileScript)
         {
 
         }
@@ -280,13 +280,13 @@ public class BoardManager : MonoBehaviour
     /*
      * Set all object arrays once board is built
      */
-    public void SetObjectArrays(PlayerTokenScript[] players, 
-                                RoomScript[] rooms, 
-                                RoomEntryBoardTileScript[] roomEntries, 
-                                ShortcutBoardTileScript[] shortcuts, 
-                                StartTileScript[] startTiles, 
-                                WeaponTokenScript[] weaponTokens, 
-                                FreeRollBoardTileScript[] freeRollTiles, 
+    public void SetObjectArrays(PlayerTokenScript[] players,
+                                RoomScript[] rooms,
+                                RoomEntryBoardTileScript[] roomEntries,
+                                ShortcutBoardTileScript[] shortcuts,
+                                StartTileScript[] startTiles,
+                                WeaponTokenScript[] weaponTokens,
+                                FreeRollBoardTileScript[] freeRollTiles,
                                 FreeSuggestionTileScript[] freeSuggestionTiles)
     {
         this.players = players;
@@ -300,22 +300,25 @@ public class BoardManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Gets an entry tile from Movable list
+    /// Gets a random list of entry tile from Movable list
     /// return null if none found
     /// </summary>
     /// <returns></returns>
-    public RoomEntryBoardTileScript GetEntryTileInMovable()
+    public List<RoomEntryBoardTileScript> GetRandomEntryTileInMovable()
     {
-        int offset = Random.Range(0, roomEntries.Length-1);
-        for(int i = 0; i < roomEntries.Length;i++)
+        int offset = Random.Range(0, roomEntries.Length - 1);
+        List<RoomEntryBoardTileScript> temp = new List<RoomEntryBoardTileScript>();
+        for (int i = 0; i < roomEntries.Length; i++)
         {
-            if (movableTile.Contains(roomEntries[(offset+i)%roomEntries.Length]))
+            if (movableTile.Contains(roomEntries[(offset + i) % roomEntries.Length]))
             {
-                return roomEntries[(offset + i) % roomEntries.Length];
-    }
+                temp.Add( roomEntries[(offset + i) % roomEntries.Length]);
+            }
         }
-        return null;
+
+        return temp;
     }
+
 
 
     /// <summary>

@@ -165,7 +165,7 @@ public class AIControllerScript : MonoBehaviour
                 Decide_Accusation();
                 break;
             default:
-                if (Time.time - startTurnTime > maxTurnTime*5f)
+                if (Time.time - startTurnTime > maxTurnTime * 5f)
                 {
                     Debug.Log("Max time spent");
 
@@ -178,11 +178,12 @@ public class AIControllerScript : MonoBehaviour
 
     public void AIThink()
     {
-        if (currentAIMode.Equals(AIMode.Thinking) && currentPlayerController.IsInRoom() && roundManager.CanSug)
+        if (currentAIMode.Equals(AIMode.Thinking) && currentPlayerController.IsInRoom() && roundManager.CanSug && !roundManager.CanRoll)
         {
             SetAIMode(AIMode.Suggestion);
         }
-        else if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
+        else
+        if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
         {
             SetAIMode(AIMode.Move);
         }
@@ -239,15 +240,37 @@ public class AIControllerScript : MonoBehaviour
     {
         SetAIMode(AIMode.Decide_Movement);
         List<BoardTileScript> movable = boardManager.MovableTile;
-        RoomEntryBoardTileScript possibleEntry = boardManager.GetEntryTileInMovable();
+        List<RoomEntryBoardTileScript> possibleEntry = boardManager.GetRandomEntryTileInMovable();
         FreeRollBoardTileScript possibleFreeRoll = boardManager.GetFreeRollTileInMovable();
 
 
         //Deciding which tile to go
         BoardTileScript selectedTile = null;
-        if (possibleEntry != null)
+        if (possibleEntry.Count != 0)
         {
-            selectedTile = possibleEntry;
+            /*
+            while (possibleEntry.Room.Equals(currentPlayerController.GetCurrentRoom()))
+            {
+                possibleEntry = boardManager.GetRandomEntryTileInMovable();
+            }
+            */
+            int j = 0;
+            if (currentPlayerController.IsInRoom())
+            {
+
+                for (int i = 0; i < possibleEntry.Count; i++)
+                {
+                    j = i;
+                    if (!possibleEntry[i].Room.Equals(currentPlayerController.GetCurrentRoom().Room))
+                    {
+                        print("found not the same:" + possibleEntry[i].Room + "  " + possibleEntry[i].Room.Equals(currentPlayerController.GetCurrentRoom()));
+                        break;
+                    }
+                    print(possibleEntry[i].Room + "  " + possibleEntry[i].Room.Equals(currentPlayerController.GetCurrentRoom()));
+                }
+            }
+            selectedTile = possibleEntry[j];
+
             print("AI going to possible Entry:" + selectedTile.ToString());
         }
         else if (possibleFreeRoll != null)
@@ -274,7 +297,7 @@ public class AIControllerScript : MonoBehaviour
         SetAIMode(AIMode.Wait_PlayerMove);
         if (currentPlayerController.IsInRoom() || selectedTile is RoomEntryBoardTileScript || selectedTile is FreeRollBoardTileScript)
         {
-            DelayDecision(pauseTime);
+            DelayDecision(pauseTime * 2);
         }
 
     }
@@ -367,7 +390,7 @@ public class AIControllerScript : MonoBehaviour
 
         float chance = Random.Range(0, 100f);
         print("AI chance Accuse: " + chance);
-        if (chance / 100f > ((toGuessList.Count - 3f )/ 6f))
+        if (chance / 100f > ((toGuessList.Count - 3f) / 6f))
         {
             return true;
         }
