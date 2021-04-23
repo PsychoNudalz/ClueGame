@@ -154,7 +154,7 @@ public class RoundManager : MonoBehaviour
           if no players have the card -> player can choose to make accusation or end turn
          */
 
-        //uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
+        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
 
         canSug = false;
         bool playerWithCardFound = false;
@@ -186,21 +186,34 @@ public class RoundManager : MonoBehaviour
             playerWithCardFound = false;
         }
         else
-        {
-
-            //If a real player has those cards let them choose
-            if (!foundPlayer.Item1.isAI)
-            {
-                uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(foundPlayer.Item1.GetCharacter()) + " \n TO CHOOSE A CARD");
-                uIHandler.DisplayChoicePanel(foundPlayer.Item1, foundPlayer.Item2);
-            }
-            else
-            {
-                Card card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
-                if (card != null)
-                {
-                    GetCurrentPlayer().RemoveToGessCard(card);
-                }
+        {
+
+            //If a real player has those cards let them choose
+
+            if (!foundPlayer.Item1.isAI)
+
+            {
+
+                uIHandler.DisplayViewBlocker(true, EnumToString.GetStringFromEnum(foundPlayer.Item1.GetCharacter()) + " \n TO CHOOSE A CARD");
+
+                uIHandler.DisplayChoicePanel(foundPlayer.Item1, foundPlayer.Item2);
+
+            }
+
+            else
+
+            {
+
+                Card card = AIShowCard(foundPlayer.Item1, foundPlayer.Item2);
+
+                if (card != null)
+
+                {
+
+                    GetCurrentPlayer().RemoveToGessCard(card);
+
+                }
+
             }
         }
 
@@ -235,23 +248,19 @@ public class RoundManager : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     public PlayerMasterController EndTurn()
-    {
-
+    {
         if (turnController.SetCurrentPlayerToNext())
-        {
-
-
-            canRoll = true;
-
-
-
-            //Anson: reset camera
-            cameraCloseUp.ClearCloseUp();
-
-            //Anson: start the turn to update the current player
-            StartTurn();
-
-
+        {
+            canRoll = true;
+
+            //Anson: reset camera
+
+            cameraCloseUp.ClearCloseUp();
+
+            //Anson: start the turn to update the current player
+
+            StartTurn();
+
             return GetCurrentPlayer();
         }
         else

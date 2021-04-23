@@ -7,6 +7,10 @@ public class PlayerStatsScript : MonoBehaviour
     [SerializeField] CharacterEnum character = CharacterEnum.Initial;
     [SerializeField] List<Card> deck = new List<Card>();
     [SerializeField] bool isEliminated = false;
+
+    /// <summary>
+    /// list of cards that this player has not seen
+    /// </summary>
     [SerializeField] List<Card> toGuessList = new List<Card>();
 
 
