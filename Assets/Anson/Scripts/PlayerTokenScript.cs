@@ -23,7 +23,7 @@ public class PlayerTokenScript : MonoBehaviour
     [SerializeField] float startMoveTime;
     [SerializeField] bool isMove = false;
     [SerializeField] BoardTileScript targetTile;
-    
+
     [Header("Tile")]
     [SerializeField] BoardTileScript currentTile;
 
@@ -41,7 +41,7 @@ public class PlayerTokenScript : MonoBehaviour
     public string CharacterName { get => characterName; set => characterName = value; }
     public BoardTileScript CurrentTile { get => currentTile; set => currentTile = value; }
     public RoomScript CurrentRoom { get => currentRoom; set => currentRoom = value; }
-    public bool IsMove { get => isMove;}
+    public bool IsMove { get => isMove; }
 
 
     // Start is called before the first frame update
@@ -64,7 +64,7 @@ public class PlayerTokenScript : MonoBehaviour
             //Anson: code for getting the smooth animation for the player to enter the room (it is a bit spaghetti)
             if (currentEntryPoint != null)
             {
-                if(Vector3.Distance(transform.position, currentEntryPoint.transform.position) == 0f)
+                if (Vector3.Distance(transform.position, currentEntryPoint.transform.position) == 0f)
                 {
                     currentEntryPoint.RoomScript.AddPlayer(controller);
                     currentEntryPoint = null;
@@ -158,7 +158,7 @@ public class PlayerTokenScript : MonoBehaviour
         AssignToPlayerMaster();
 
         GetComponentInChildren<Renderer>().material.SetColor("_MainColour", characterColour);
-        
+
     }
     /// <summary>
     /// Setting the colour of the character
@@ -201,7 +201,7 @@ public class PlayerTokenScript : MonoBehaviour
         currentTile.SetToken(null);
 
         targetTile = newTile;
-        
+
         targetTile.SetToken(gameObject);
         isMove = true;
         startMoveTime = Time.time;
@@ -230,7 +230,7 @@ public class PlayerTokenScript : MonoBehaviour
             currentRoom = null;
 
             RoomEntryBoardTileScript roomEntryScript = currentTile.GetComponent<RoomEntryBoardTileScript>();
-            if(roomEntryScript != null)
+            if (roomEntryScript != null)
             {
                 roomEntryScript.EnterRoom(this.controller);
             }
@@ -241,9 +241,17 @@ public class PlayerTokenScript : MonoBehaviour
         }
         else
         {
-            float currentPoint = movementGraph.Evaluate((Time.time- startMoveTime) / timeToMove);
+            float currentPoint = movementGraph.Evaluate((Time.time - startMoveTime) / timeToMove);
             //print(currentPoint);
-            transform.position = (currentPoint *(targetTile.transform.position - currentTile.transform.position))+ currentTile.transform.position;
+            try
+            {
+
+                transform.position = (currentPoint * (targetTile.transform.position - currentTile.transform.position)) + currentTile.transform.position;
+            }
+            catch (NullReferenceException e)
+            {
+                Debug.LogWarning("Movement Null error");
+            }
         }
     }
 
@@ -270,10 +278,11 @@ public class PlayerTokenScript : MonoBehaviour
     {
         if (CanTakeShortcut())
         {
-            
-            foreach(ShortcutBoardTileScript tile in boardManager.Shortcuts)
+
+            foreach (ShortcutBoardTileScript tile in boardManager.Shortcuts)
             {
-                if (tile.ShortcutTo.Equals(currentRoom.Room)){
+                if (tile.ShortcutTo.Equals(currentRoom.Room))
+                {
                     boardManager.ClearMovable();
                     StartCoroutine(ShortcutMovement(tile));
                     return true;
@@ -285,7 +294,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     IEnumerator ShortcutMovement(ShortcutBoardTileScript shortcutEnd)
     {
-        
+
         cameraCloseUp.SetRoomCloseUp(currentRoom.Room);
         transform.position = currentRoom.ShortcutTile.transform.position;
         currentRoom.RemovePlayerFromRoomViaShortcut(controller);
@@ -303,7 +312,7 @@ public class PlayerTokenScript : MonoBehaviour
         currentShortcut.RoomScript.AddPlayer(controller);
         currentTile = null;
         targetTile = null;
-        
+
     }
 
     public static CharacterEnum GetCharacterEnumFromString(string character)
@@ -330,10 +339,15 @@ public class PlayerTokenScript : MonoBehaviour
 
     public void ClearTokenTile()
     {
-        if (currentTile!= null)
+        if (currentTile != null)
         {
-        currentTile.SetToken(null);
+            currentTile.SetToken(null);
         }
         currentTile = null;
+    }
+
+    public bool IsMovingRoom()
+    {
+        return currentEntryPoint != null || currentExitPoint != null;
     }
 }

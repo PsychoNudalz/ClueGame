@@ -65,6 +65,14 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""TestButton4"",
+                    ""type"": ""Button"",
+                    ""id"": ""ded4a885-4f47-44a8-bf7c-d5b4169fdcb9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -177,6 +185,17 @@ public class @GameControls : IInputActionCollection, IDisposable
                     ""action"": ""MoveToken"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""354c5bbd-20b3-4d57-9648-dc90799856e8"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TestButton4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -191,6 +210,7 @@ public class @GameControls : IInputActionCollection, IDisposable
         m_PlayerMap_TestButton1 = m_PlayerMap.FindAction("TestButton1", throwIfNotFound: true);
         m_PlayerMap_TestButton2 = m_PlayerMap.FindAction("TestButton2", throwIfNotFound: true);
         m_PlayerMap_TestButton3 = m_PlayerMap.FindAction("TestButton3", throwIfNotFound: true);
+        m_PlayerMap_TestButton4 = m_PlayerMap.FindAction("TestButton4", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -246,6 +266,7 @@ public class @GameControls : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerMap_TestButton1;
     private readonly InputAction m_PlayerMap_TestButton2;
     private readonly InputAction m_PlayerMap_TestButton3;
+    private readonly InputAction m_PlayerMap_TestButton4;
     public struct PlayerMapActions
     {
         private @GameControls m_Wrapper;
@@ -256,6 +277,7 @@ public class @GameControls : IInputActionCollection, IDisposable
         public InputAction @TestButton1 => m_Wrapper.m_PlayerMap_TestButton1;
         public InputAction @TestButton2 => m_Wrapper.m_PlayerMap_TestButton2;
         public InputAction @TestButton3 => m_Wrapper.m_PlayerMap_TestButton3;
+        public InputAction @TestButton4 => m_Wrapper.m_PlayerMap_TestButton4;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -283,6 +305,9 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @TestButton3.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
                 @TestButton3.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
                 @TestButton3.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton3;
+                @TestButton4.started -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton4;
+                @TestButton4.performed -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton4;
+                @TestButton4.canceled -= m_Wrapper.m_PlayerMapActionsCallbackInterface.OnTestButton4;
             }
             m_Wrapper.m_PlayerMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -305,6 +330,9 @@ public class @GameControls : IInputActionCollection, IDisposable
                 @TestButton3.started += instance.OnTestButton3;
                 @TestButton3.performed += instance.OnTestButton3;
                 @TestButton3.canceled += instance.OnTestButton3;
+                @TestButton4.started += instance.OnTestButton4;
+                @TestButton4.performed += instance.OnTestButton4;
+                @TestButton4.canceled += instance.OnTestButton4;
             }
         }
     }
@@ -317,5 +345,6 @@ public class @GameControls : IInputActionCollection, IDisposable
         void OnTestButton1(InputAction.CallbackContext context);
         void OnTestButton2(InputAction.CallbackContext context);
         void OnTestButton3(InputAction.CallbackContext context);
+        void OnTestButton4(InputAction.CallbackContext context);
     }
 }

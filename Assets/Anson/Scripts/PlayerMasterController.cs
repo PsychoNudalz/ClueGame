@@ -265,7 +265,7 @@ public class PlayerMasterController : MonoBehaviour
 
     public bool IsMoving()
     {
-        return playerTokenScript.IsMove;
+        return playerTokenScript.IsMove || playerTokenScript.IsMovingRoom();
     }
 
     public bool RemoveToGessCard(Card c)
