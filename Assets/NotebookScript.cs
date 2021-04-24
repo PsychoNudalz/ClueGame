@@ -8,9 +8,11 @@ public class NotebookScript : MonoBehaviour
 {
     [SerializeField] private GameObject characterPanel;
     [SerializeField] private GameObject RoomPanel;
+    [SerializeField] private GameObject WeaponPanel;
     [SerializeField] private RoundManager roundManager;
     NotebookButton[] characterButtons;
     NotebookButton[] roomButtons;
+    NotebookButton[] weaponButtons;
 
     private void OnEnable()
     {
@@ -26,6 +28,7 @@ public class NotebookScript : MonoBehaviour
     {
         CreateCharacterButtons();
         CreateRoomButtons();
+        CreateWeaponButtons();
     }
 
     public void RefreshNotebook()
@@ -33,6 +36,7 @@ public class NotebookScript : MonoBehaviour
         PlayerMasterController currentPlayer = roundManager.GetCurrentPlayer();
         RefreshCharacters(currentPlayer);
         RefreshRooms(currentPlayer);
+        RefreshWeapons(currentPlayer);
     }
 
     private void CreateCharacterButtons()
@@ -55,6 +59,16 @@ public class NotebookScript : MonoBehaviour
             buttons[i].SetButtonType(roomEnums[i]);
         }
         roomButtons = buttons;
+    }
+    private void CreateWeaponButtons()
+    {
+        WeaponEnum[] weaponEnums = (WeaponEnum[])Enum.GetValues(typeof(WeaponEnum));
+        NotebookButton[] buttons = WeaponPanel.GetComponentsInChildren<NotebookButton>();
+        for (int i = 0; i < weaponEnums.Length; i++)
+        {
+            buttons[i].SetButtonType(weaponEnums[i]);
+        }
+        weaponButtons = buttons;
     }
 
     internal void ToggleButton(NotebookButton notebookButton)
@@ -86,6 +100,23 @@ public class NotebookScript : MonoBehaviour
         if (currentPlayer != null)
         {
             foreach (NotebookButton button in roomButtons)
+            {
+                button.setCrossedOut(currentPlayer.GetNotebookValue(button.ButtonType));
+            }
+
+        }
+        else
+        {
+            print("currentPlayer is null");
+        }
+    }
+    
+    public void RefreshWeapons(PlayerMasterController currentPlayer)
+    {
+
+        if (currentPlayer != null)
+        {
+            foreach (NotebookButton button in weaponButtons)
             {
                 button.setCrossedOut(currentPlayer.GetNotebookValue(button.ButtonType));
             }
