@@ -40,10 +40,10 @@ public class Dice : MonoBehaviour
         }
     }
 
-    public void ResetDice()
+    public void ResetDice(bool forced = false)
     {
 
-        if (CanReset())
+        if (CanReset()||forced)
         {
             setCloseUpCamera = false;
             mainCamera.ClearCloseUp();

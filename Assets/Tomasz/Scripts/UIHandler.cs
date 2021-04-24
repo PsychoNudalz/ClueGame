@@ -128,7 +128,7 @@ public class UIHandler : MonoBehaviour
         }
         for (int i = 0; i < deck.Count() && i < cardSlots.Count(); i++)
         {
-            print(i + "," + cardSlots[i] + "," + deck[i]);
+            //print(i + "," + cardSlots[i] + "," + deck[i]);
             cardSlots[i].SetCard(deck[i]);
             cardSlots[i].SetVisible();
 
@@ -310,7 +310,7 @@ public class UIHandler : MonoBehaviour
     public void InitialiseTurn(bool displayFullUI)
     {
         showCardGO.SetActive(false);
-
+        DisplayNotePad(false);
         showCardAnimator.SetBool("show", false);
         DisplayPlayerEliminated(false);
         if (displayFullUI)
@@ -324,8 +324,6 @@ public class UIHandler : MonoBehaviour
             deckGO.SetActive(false);
         }
         UpdateCurrentTurnText(EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()));
-        ToggleNotepad();
-        ToggleNotepad();
     }
 
     /// <summary>

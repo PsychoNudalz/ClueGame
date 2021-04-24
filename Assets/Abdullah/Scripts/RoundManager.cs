@@ -19,6 +19,8 @@ public class RoundManager : MonoBehaviour
     bool canAcc = true;
     bool isGameOver = false;
     bool isGameWin = false;
+    Coroutine rollCoroutine;
+    Coroutine sugCoroutine;
 
     public bool CanRoll { get => canRoll; set => canRoll = value; }
     public bool CanSug { get => canSug; }
@@ -119,11 +121,11 @@ public class RoundManager : MonoBehaviour
         boardManager.ClearMovable();
         if (b is FreeRollBoardTileScript)
         {
-            StartCoroutine(DelayRoll(1.5f));
+            rollCoroutine = StartCoroutine(DelayRoll(1.5f));
         }
         if (b is FreeSuggestionTileScript)
         {
-            StartCoroutine(DelaySug(1.5f));
+            sugCoroutine = StartCoroutine(DelaySug(1.5f));
         }
         //uIHandler.DisplayOutputText(b.ToString(), 5f);
 
@@ -251,6 +253,15 @@ public class RoundManager : MonoBehaviour
     /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
+        dice.ResetDice(true);
+        if (rollCoroutine != null)
+        {
+            StopCoroutine(rollCoroutine);
+        }
+        if (sugCoroutine != null)
+        {
+            StopCoroutine(sugCoroutine);
+        }
         if (turnController.SetCurrentPlayerToNext() && !isGameOver)
         {
             canRoll = true;
@@ -319,12 +330,21 @@ public class RoundManager : MonoBehaviour
 
     IEnumerator DelayRoll(float timeDelay)
     {
+        if (rollCoroutine != null)
+        {
+            StopCoroutine(rollCoroutine);
+        }
+        
         yield return new WaitForSeconds(timeDelay);
         RollDice(true);
     }
 
     IEnumerator DelaySug(float timeDelay)
     {
+        if (sugCoroutine != null)
+        {
+            StopCoroutine(sugCoroutine);
+        }
         yield return new WaitForSeconds(timeDelay);
         if (uIHandler != null && !GetCurrentPlayer().isAI)
         {
