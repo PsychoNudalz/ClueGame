@@ -371,6 +371,13 @@ public class UIHandler : MonoBehaviour
     }
 
 
+    public void ReturnToMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+
+
 }
 
 

@@ -8,6 +8,9 @@ public class GameSetUpScript : MonoBehaviour
 {
     [SerializeField] Toggle[] toggles;
     [SerializeField] bool[] toggleResults;
+
+    public bool[] ToggleResults { get => toggleResults; set => toggleResults = value; }
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -27,9 +30,16 @@ public class GameSetUpScript : MonoBehaviour
     public void StartGame()
     {
         PlayerMasterController[] allPlayers = FindObjectsOfType<PlayerMasterController>();
-        foreach(PlayerMasterController p in allPlayers)
+        if (toggleResults.Length == 0)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        foreach (PlayerMasterController p in allPlayers)
         {
             p.isAI = toggleResults[(int)p.GetCharacter()];
         }
+        Destroy(gameObject);
     }
 }
