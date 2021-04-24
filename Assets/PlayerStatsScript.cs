@@ -26,7 +26,7 @@ public class PlayerStatsScript : MonoBehaviour
         }
         foreach (Room notebookRoom in System.Enum.GetValues(typeof(Room)))
         {
-            if (!notebookRoom.Equals(Room.None))
+            if (!notebookRoom.Equals(Room.None) && !notebookRoom.Equals(Room.Centre))
             {
                 notebook.Add(notebookRoom, false);
             }
@@ -39,11 +39,21 @@ public class PlayerStatsScript : MonoBehaviour
         {
             notebook[card.GetCardType()] = true;
         }
-
+        /*
         foreach(System.Enum key in notebook.Keys)
         {
             print(string.Format("{0} - {1} = {2}", Character, key, notebook[key]));
-        }
+        }*/
+    }
+
+    public bool GetNotebookValue(System.Enum entryKey)
+    {
+        return notebook[entryKey];
+    }
+
+    public void SetNotebookValue(System.Enum entryKey, bool value)
+    {
+        notebook[entryKey] = value;
     }
 
     public CharacterEnum Character { get => character;}

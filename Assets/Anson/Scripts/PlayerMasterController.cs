@@ -51,6 +51,16 @@ public class PlayerMasterController : MonoBehaviour
 
     }
 
+    internal void SetNotebookValue(Enum entryKey, bool value)
+    {
+        playerStatsScript.SetNotebookValue(entryKey, value);
+    }
+
+    internal bool GetNotebookValue(Enum entryKey)
+    {
+        return playerStatsScript.GetNotebookValue(entryKey);
+    }
+
     /// <summary>
     /// check if the player can take a short cut 
     /// </summary>
