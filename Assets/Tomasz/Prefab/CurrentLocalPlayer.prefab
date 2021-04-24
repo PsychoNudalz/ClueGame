@@ -15420,7 +15420,7 @@ GameObject:
   - component: {fileID: 7100959756798456763}
   - component: {fileID: 7100959756798456762}
   m_Layer: 0
-  m_Name: CurrentLocalPlayer_2
+  m_Name: CurrentLocalPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
