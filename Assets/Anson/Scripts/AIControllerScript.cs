@@ -46,7 +46,9 @@ public class AIControllerScript : MonoBehaviour
     {
         AssignAllComponents();
     }
-
+    /// <summary>
+    /// For assigning all connected components
+    /// </summary>
     public void AssignAllComponents()
     {
 
