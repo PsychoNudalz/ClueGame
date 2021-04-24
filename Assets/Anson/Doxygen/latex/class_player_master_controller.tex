@@ -1,0 +1,331 @@
+\hypertarget{class_player_master_controller}{}\doxysection{Player\+Master\+Controller Class Reference}
+\label{class_player_master_controller}\index{PlayerMasterController@{PlayerMasterController}}
+
+
+Master controller for the player (character) it acts as a wrapper for the player to communicate with other controllers or managers and vis versa to avoid super spaghetii code  
+
+
+Inheritance diagram for Player\+Master\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_master_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e}{Start\+Behaviour}} ()
+\item 
+bool \mbox{\hyperlink{class_player_master_controller_a281d37e414bc17c9441964104f039b4a}{Can\+Take\+Shortcut}} ()
+\begin{DoxyCompactList}\small\item\em check if the player can take a short cut \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79}{Set\+Character}} (\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} ce)
+\begin{DoxyCompactList}\small\item\em Set the player\textquotesingle{}s character \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0}{Get\+Character}} ()
+\item 
+override string \mbox{\hyperlink{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6}{To\+String}} ()
+\item 
+Vector2 \mbox{\hyperlink{class_player_master_controller_aa139354307a94ed318c4cbe947434e52}{Get\+Grid\+Position}} ()
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde}{Get\+Tile}} ()
+\item 
+bool \mbox{\hyperlink{class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f}{Add\+Card}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cs)
+\begin{DoxyCompactList}\small\item\em Add a list of card to the player\textquotesingle{}s deck \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6}{Get\+Deck}} ()
+\item 
+Tuple$<$ \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ $>$ \mbox{\hyperlink{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c}{Find\+Card}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
+\begin{DoxyCompactList}\small\item\em check if the player has a card in his deck from the given list of cards it will return the cards and the \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} that has the card it will return null if none found \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_master_controller_ac1983e9bba9bc23150a830c04fd64889}{Start\+Turn}} ()
+\item 
+void \mbox{\hyperlink{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf}{Display\+Board\+Movable\+Tiles}} (int range)
+\begin{DoxyCompactList}\small\item\em calls the board\+Manager to display all the tiles that it can move to according to the range of it\textquotesingle{}s movement \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4}{Can\+Move}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} t)
+\begin{DoxyCompactList}\small\item\em check if the player can move to a certain tile \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce}{Move\+Player}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} b)
+\begin{DoxyCompactList}\small\item\em moving the player to a certain tile \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830}{Get\+Current\+Room}} ()
+\item 
+void \mbox{\hyperlink{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7}{Set\+Current\+Room}} (\mbox{\hyperlink{class_room_script}{Room\+Script}} room)
+\item 
+void \mbox{\hyperlink{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede}{Move\+Player}} (Vector3 v)
+\begin{DoxyCompactList}\small\item\em moving the player to a certain position instead of tile \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb}{Clear\+Token\+Tile}} ()
+\item 
+bool \mbox{\hyperlink{class_player_master_controller_acc21ebcf08452a6e52b180718ab26a9f}{Is\+Eliminated}} ()
+\begin{DoxyCompactList}\small\item\em check if the player is eleminated \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836}{Eliminate\+Player}} ()
+\begin{DoxyCompactList}\small\item\em eliminate player \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603}{Is\+Moving}} ()
+\item 
+bool \mbox{\hyperlink{class_player_master_controller_a648072fe000697a1557b8af0a4ee0eb6}{Remove\+To\+Gess\+Card}} (\mbox{\hyperlink{class_card}{Card}} c)
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75}{Get\+To\+Guess\+Cards}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_player_master_controller_a49c264905eb27bac2e66121d4ec487eb}{is\+AI}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} \mbox{\hyperlink{class_player_master_controller_a995e3e74643b78b78aeeebba4a27aa82}{Player\+Token\+Script}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Master controller for the player (character) it acts as a wrapper for the player to communicate with other controllers or managers and vis versa to avoid super spaghetii code 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f}\label{class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f}} 
+\index{PlayerMasterController@{PlayerMasterController}!AddCard@{AddCard}}
+\index{AddCard@{AddCard}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{AddCard()}{AddCard()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Add\+Card (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cs }\end{DoxyParamCaption})}
+
+
+
+Add a list of card to the player\textquotesingle{}s deck 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & list of cards \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if a card from cs is in the deck already
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4}\label{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4}} 
+\index{PlayerMasterController@{PlayerMasterController}!CanMove@{CanMove}}
+\index{CanMove@{CanMove}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{CanMove()}{CanMove()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Can\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{t }\end{DoxyParamCaption})}
+
+
+
+check if the player can move to a certain tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & tile to be move towards\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the player can move
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_master_controller_a281d37e414bc17c9441964104f039b4a}\label{class_player_master_controller_a281d37e414bc17c9441964104f039b4a}} 
+\index{PlayerMasterController@{PlayerMasterController}!CanTakeShortcut@{CanTakeShortcut}}
+\index{CanTakeShortcut@{CanTakeShortcut}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{CanTakeShortcut()}{CanTakeShortcut()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Can\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the player can take a short cut 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb}\label{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb}} 
+\index{PlayerMasterController@{PlayerMasterController}!ClearTokenTile@{ClearTokenTile}}
+\index{ClearTokenTile@{ClearTokenTile}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{ClearTokenTile()}{ClearTokenTile()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Clear\+Token\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf}\label{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf}} 
+\index{PlayerMasterController@{PlayerMasterController}!DisplayBoardMovableTiles@{DisplayBoardMovableTiles}}
+\index{DisplayBoardMovableTiles@{DisplayBoardMovableTiles}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{DisplayBoardMovableTiles()}{DisplayBoardMovableTiles()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Display\+Board\+Movable\+Tiles (\begin{DoxyParamCaption}\item[{int}]{range }\end{DoxyParamCaption})}
+
+
+
+calls the board\+Manager to display all the tiles that it can move to according to the range of it\textquotesingle{}s movement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em range} & how far can the player move (normally the dice roll)\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836}\label{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836}} 
+\index{PlayerMasterController@{PlayerMasterController}!EliminatePlayer@{EliminatePlayer}}
+\index{EliminatePlayer@{EliminatePlayer}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{EliminatePlayer()}{EliminatePlayer()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Eliminate\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+eliminate player 
+
+\mbox{\Hypertarget{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c}\label{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c}} 
+\index{PlayerMasterController@{PlayerMasterController}!FindCard@{FindCard}}
+\index{FindCard@{FindCard}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}}
+{\footnotesize\ttfamily Tuple$<$\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}},List$<$\mbox{\hyperlink{class_card}{Card}}$>$ $>$ Player\+Master\+Controller.\+Find\+Card (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
+
+
+
+check if the player has a card in his deck from the given list of cards it will return the cards and the \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} that has the card it will return null if none found 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cards} & cards to be found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current player controller and a list of cards that matched the cards to be found
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0}\label{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetCharacter@{GetCharacter}}
+\index{GetCharacter@{GetCharacter}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetCharacter()}{GetCharacter()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} Player\+Master\+Controller.\+Get\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830}\label{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetCurrentRoom@{GetCurrentRoom}}
+\index{GetCurrentRoom@{GetCurrentRoom}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetCurrentRoom()}{GetCurrentRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Player\+Master\+Controller.\+Get\+Current\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6}\label{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetDeck@{GetDeck}}
+\index{GetDeck@{GetDeck}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetDeck()}{GetDeck()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Player\+Master\+Controller.\+Get\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_aa139354307a94ed318c4cbe947434e52}\label{class_player_master_controller_aa139354307a94ed318c4cbe947434e52}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetGridPosition@{GetGridPosition}}
+\index{GetGridPosition@{GetGridPosition}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetGridPosition()}{GetGridPosition()}}
+{\footnotesize\ttfamily Vector2 Player\+Master\+Controller.\+Get\+Grid\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde}\label{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetTile@{GetTile}}
+\index{GetTile@{GetTile}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetTile()}{GetTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Player\+Master\+Controller.\+Get\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75}\label{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75}} 
+\index{PlayerMasterController@{PlayerMasterController}!GetToGuessCards@{GetToGuessCards}}
+\index{GetToGuessCards@{GetToGuessCards}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{GetToGuessCards()}{GetToGuessCards()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Player\+Master\+Controller.\+Get\+To\+Guess\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_acc21ebcf08452a6e52b180718ab26a9f}\label{class_player_master_controller_acc21ebcf08452a6e52b180718ab26a9f}} 
+\index{PlayerMasterController@{PlayerMasterController}!IsEliminated@{IsEliminated}}
+\index{IsEliminated@{IsEliminated}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{IsEliminated()}{IsEliminated()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Is\+Eliminated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the player is eleminated 
+
+\begin{DoxyReturn}{Returns}
+is the player eliminated
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603}\label{class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603}} 
+\index{PlayerMasterController@{PlayerMasterController}!IsMoving@{IsMoving}}
+\index{IsMoving@{IsMoving}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{IsMoving()}{IsMoving()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Is\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce}\label{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce}} 
+\index{PlayerMasterController@{PlayerMasterController}!MovePlayer@{MovePlayer}}
+\index{MovePlayer@{MovePlayer}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{b }\end{DoxyParamCaption})}
+
+
+
+moving the player to a certain tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & if the player can move to that tile\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede}\label{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede}} 
+\index{PlayerMasterController@{PlayerMasterController}!MovePlayer@{MovePlayer}}
+\index{MovePlayer@{MovePlayer}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Move\+Player (\begin{DoxyParamCaption}\item[{Vector3}]{v }\end{DoxyParamCaption})}
+
+
+
+moving the player to a certain position instead of tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & vector3 position\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_master_controller_a648072fe000697a1557b8af0a4ee0eb6}\label{class_player_master_controller_a648072fe000697a1557b8af0a4ee0eb6}} 
+\index{PlayerMasterController@{PlayerMasterController}!RemoveToGessCard@{RemoveToGessCard}}
+\index{RemoveToGessCard@{RemoveToGessCard}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{RemoveToGessCard()}{RemoveToGessCard()}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+Remove\+To\+Gess\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79}\label{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79}} 
+\index{PlayerMasterController@{PlayerMasterController}!SetCharacter@{SetCharacter}}
+\index{SetCharacter@{SetCharacter}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{ce }\end{DoxyParamCaption})}
+
+
+
+Set the player\textquotesingle{}s character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ce} & Character Enum\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7}\label{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7}} 
+\index{PlayerMasterController@{PlayerMasterController}!SetCurrentRoom@{SetCurrentRoom}}
+\index{SetCurrentRoom@{SetCurrentRoom}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{SetCurrentRoom()}{SetCurrentRoom()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Set\+Current\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}}]{room }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e}\label{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e}} 
+\index{PlayerMasterController@{PlayerMasterController}!StartBehaviour@{StartBehaviour}}
+\index{StartBehaviour@{StartBehaviour}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{StartBehaviour()}{StartBehaviour()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Start\+Behaviour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_ac1983e9bba9bc23150a830c04fd64889}\label{class_player_master_controller_ac1983e9bba9bc23150a830c04fd64889}} 
+\index{PlayerMasterController@{PlayerMasterController}!StartTurn@{StartTurn}}
+\index{StartTurn@{StartTurn}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{StartTurn()}{StartTurn()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Start\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6}\label{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6}} 
+\index{PlayerMasterController@{PlayerMasterController}!ToString@{ToString}}
+\index{ToString@{ToString}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Player\+Master\+Controller.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_master_controller_a49c264905eb27bac2e66121d4ec487eb}\label{class_player_master_controller_a49c264905eb27bac2e66121d4ec487eb}} 
+\index{PlayerMasterController@{PlayerMasterController}!isAI@{isAI}}
+\index{isAI@{isAI}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{isAI}{isAI}}
+{\footnotesize\ttfamily bool Player\+Master\+Controller.\+is\+AI = false}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_player_master_controller_a995e3e74643b78b78aeeebba4a27aa82}\label{class_player_master_controller_a995e3e74643b78b78aeeebba4a27aa82}} 
+\index{PlayerMasterController@{PlayerMasterController}!PlayerTokenScript@{PlayerTokenScript}}
+\index{PlayerTokenScript@{PlayerTokenScript}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{PlayerTokenScript}{PlayerTokenScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} Player\+Master\+Controller.\+Player\+Token\+Script\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Anson/\+Scripts/\mbox{\hyperlink{_player_master_controller_8cs}{Player\+Master\+Controller.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,252 @@
+\hypertarget{class_board_manager}{}\doxysection{Board\+Manager Class Reference}
+\label{class_board_manager}\index{BoardManager@{BoardManager}}
+Inheritance diagram for Board\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_board_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}{Get\+Tile\+Neighbours}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} tilescript)
+\item 
+void \mbox{\hyperlink{class_board_manager_ad208908578ffda25d87122a34e264b44}{Create\+Board\+Array}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} tiles, int board\+Height, int board\+Width)
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}{Get\+Tile\+From\+Grid}} (int XPos, int YPos)
+\item 
+List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}{bfs}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile, int range, List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ queue=null)
+\begin{DoxyCompactList}\small\item\em perform bfs search for the tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}{Show\+Movable}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile, int range)
+\begin{DoxyCompactList}\small\item\em mark and showwhich tile the player can move to \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}{Show\+Movable}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} board\+Tile\+Scripts, int range)
+\item 
+bool \mbox{\hyperlink{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}{Show\+Movable}} (\mbox{\hyperlink{class_room_script}{Room\+Script}} room\+Script, int range)
+\item 
+void \mbox{\hyperlink{class_board_manager_a653d38723d03f890d38a1b68a855c569}{Clear\+Movable}} ()
+\item 
+bool \mbox{\hyperlink{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}{Can\+Move}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile)
+\item 
+void \mbox{\hyperlink{class_board_manager_adc089b30dd732a7e8109c14143b01146}{Set\+Object\+Arrays}} (\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]} players, \mbox{\hyperlink{class_room_script}{Room\+Script}}\mbox{[}$\,$\mbox{]} rooms, \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} room\+Entries, \mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} shortcuts, \mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}}\mbox{[}$\,$\mbox{]} start\+Tiles, \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]} weapon\+Tokens, \mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} free\+Roll\+Tiles, \mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}}\mbox{[}$\,$\mbox{]} free\+Suggestion\+Tiles)
+\item 
+List$<$ \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_board_manager_a5eb67ec83794138860f40af509e4820c}{Get\+Random\+Entry\+Tile\+In\+Movable}} ()
+\begin{DoxyCompactList}\small\item\em Gets a random list of entry tile from Movable list return null if none found \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}{Get\+Free\+Roll\+Tile\+In\+Movable}} ()
+\begin{DoxyCompactList}\small\item\em Gets an free roll tile from Movable list return null if none found \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}{Get\+Free\+Sugges\+Tile\+In\+Movable}} ()
+\begin{DoxyCompactList}\small\item\em Gets an free suggestion tile from Movable list return null if none found \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a920d1f9d751fb94c9f6745bdb4873c92}{Players}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a2f0d9973c3eba5eaf38533884b030188}{Rooms}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a9ddc5fe7bd0c58b9714256cfb5a8dd6a}{Start\+Tiles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a448259a5bb48c02e5db09a22ba4ee9c1}{Shortcuts}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a8b70b4068c071cf1bb9501a74c621d00}{Room\+Entries}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_ad8c3050afd50d48c608cb14417a639f4}{Weapon\+Tokens}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a9722320a7b90b3b35ce5b56545ecb41f}{Free\+Roll\+Tiles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_board_manager_a22ca64210457ab959125dad5083de977}{Movable\+Tile}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a3c48dee7faeb9d726831a77c8e29cf7c}{Free\+Suggestion\+Tiles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}\label{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}} 
+\index{BoardManager@{BoardManager}!bfs@{bfs}}
+\index{bfs@{bfs}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}$>$ Board\+Manager.\+bfs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{current\+Tile,  }\item[{int}]{range,  }\item[{List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$}]{queue = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+perform bfs search for the tiles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Tile} & \\
+\hline
+{\em range} & \\
+\hline
+{\em queue} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}\label{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}} 
+\index{BoardManager@{BoardManager}!CanMove@{CanMove}}
+\index{CanMove@{CanMove}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{CanMove()}{CanMove()}}
+{\footnotesize\ttfamily bool Board\+Manager.\+Can\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{current\+Tile }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_a653d38723d03f890d38a1b68a855c569}\label{class_board_manager_a653d38723d03f890d38a1b68a855c569}} 
+\index{BoardManager@{BoardManager}!ClearMovable@{ClearMovable}}
+\index{ClearMovable@{ClearMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{ClearMovable()}{ClearMovable()}}
+{\footnotesize\ttfamily void Board\+Manager.\+Clear\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_ad208908578ffda25d87122a34e264b44}\label{class_board_manager_ad208908578ffda25d87122a34e264b44}} 
+\index{BoardManager@{BoardManager}!CreateBoardArray@{CreateBoardArray}}
+\index{CreateBoardArray@{CreateBoardArray}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{CreateBoardArray()}{CreateBoardArray()}}
+{\footnotesize\ttfamily void Board\+Manager.\+Create\+Board\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{tiles,  }\item[{int}]{board\+Height,  }\item[{int}]{board\+Width }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}\label{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}} 
+\index{BoardManager@{BoardManager}!GetFreeRollTileInMovable@{GetFreeRollTileInMovable}}
+\index{GetFreeRollTileInMovable@{GetFreeRollTileInMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{GetFreeRollTileInMovable()}{GetFreeRollTileInMovable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}} Board\+Manager.\+Get\+Free\+Roll\+Tile\+In\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets an free roll tile from Movable list return null if none found 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}\label{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}} 
+\index{BoardManager@{BoardManager}!GetFreeSuggesTileInMovable@{GetFreeSuggesTileInMovable}}
+\index{GetFreeSuggesTileInMovable@{GetFreeSuggesTileInMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{GetFreeSuggesTileInMovable()}{GetFreeSuggesTileInMovable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}} Board\+Manager.\+Get\+Free\+Sugges\+Tile\+In\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets an free suggestion tile from Movable list return null if none found 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_manager_a5eb67ec83794138860f40af509e4820c}\label{class_board_manager_a5eb67ec83794138860f40af509e4820c}} 
+\index{BoardManager@{BoardManager}!GetRandomEntryTileInMovable@{GetRandomEntryTileInMovable}}
+\index{GetRandomEntryTileInMovable@{GetRandomEntryTileInMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{GetRandomEntryTileInMovable()}{GetRandomEntryTileInMovable()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}$>$ Board\+Manager.\+Get\+Random\+Entry\+Tile\+In\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets a random list of entry tile from Movable list return null if none found 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}\label{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}} 
+\index{BoardManager@{BoardManager}!GetTileFromGrid@{GetTileFromGrid}}
+\index{GetTileFromGrid@{GetTileFromGrid}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{GetTileFromGrid()}{GetTileFromGrid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Board\+Manager.\+Get\+Tile\+From\+Grid (\begin{DoxyParamCaption}\item[{int}]{XPos,  }\item[{int}]{YPos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}\label{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}} 
+\index{BoardManager@{BoardManager}!GetTileNeighbours@{GetTileNeighbours}}
+\index{GetTileNeighbours@{GetTileNeighbours}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{GetTileNeighbours()}{GetTileNeighbours()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Get\+Tile\+Neighbours (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{tilescript }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_adc089b30dd732a7e8109c14143b01146}\label{class_board_manager_adc089b30dd732a7e8109c14143b01146}} 
+\index{BoardManager@{BoardManager}!SetObjectArrays@{SetObjectArrays}}
+\index{SetObjectArrays@{SetObjectArrays}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{SetObjectArrays()}{SetObjectArrays()}}
+{\footnotesize\ttfamily void Board\+Manager.\+Set\+Object\+Arrays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]}}]{players,  }\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}\mbox{[}$\,$\mbox{]}}]{rooms,  }\item[{\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{room\+Entries,  }\item[{\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{shortcuts,  }\item[{\mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{start\+Tiles,  }\item[{\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]}}]{weapon\+Tokens,  }\item[{\mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{free\+Roll\+Tiles,  }\item[{\mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{free\+Suggestion\+Tiles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}\label{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}} 
+\index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
+\index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{ShowMovable()}{ShowMovable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Board\+Manager.\+Show\+Movable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{current\+Tile,  }\item[{int}]{range }\end{DoxyParamCaption})}
+
+
+
+mark and showwhich tile the player can move to 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Tile} & \\
+\hline
+{\em range} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}\label{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}} 
+\index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
+\index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{ShowMovable()}{ShowMovable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Board\+Manager.\+Show\+Movable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{board\+Tile\+Scripts,  }\item[{int}]{range }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}\label{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}} 
+\index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
+\index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{ShowMovable()}{ShowMovable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Board\+Manager.\+Show\+Movable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}}]{room\+Script,  }\item[{int}]{range }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_board_manager_a9722320a7b90b3b35ce5b56545ecb41f}\label{class_board_manager_a9722320a7b90b3b35ce5b56545ecb41f}} 
+\index{BoardManager@{BoardManager}!FreeRollTiles@{FreeRollTiles}}
+\index{FreeRollTiles@{FreeRollTiles}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{FreeRollTiles}{FreeRollTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Free\+Roll\+Tiles\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_manager_a3c48dee7faeb9d726831a77c8e29cf7c}\label{class_board_manager_a3c48dee7faeb9d726831a77c8e29cf7c}} 
+\index{BoardManager@{BoardManager}!FreeSuggestionTiles@{FreeSuggestionTiles}}
+\index{FreeSuggestionTiles@{FreeSuggestionTiles}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{FreeSuggestionTiles}{FreeSuggestionTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Free\+Suggestion\+Tiles\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_manager_a22ca64210457ab959125dad5083de977}\label{class_board_manager_a22ca64210457ab959125dad5083de977}} 
+\index{BoardManager@{BoardManager}!MovableTile@{MovableTile}}
+\index{MovableTile@{MovableTile}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{MovableTile}{MovableTile}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}$>$ Board\+Manager.\+Movable\+Tile\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_board_manager_a920d1f9d751fb94c9f6745bdb4873c92}\label{class_board_manager_a920d1f9d751fb94c9f6745bdb4873c92}} 
+\index{BoardManager@{BoardManager}!Players@{Players}}
+\index{Players@{Players}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{Players}{Players}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Players\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_board_manager_a8b70b4068c071cf1bb9501a74c621d00}\label{class_board_manager_a8b70b4068c071cf1bb9501a74c621d00}} 
+\index{BoardManager@{BoardManager}!RoomEntries@{RoomEntries}}
+\index{RoomEntries@{RoomEntries}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{RoomEntries}{RoomEntries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Room\+Entries\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_manager_a2f0d9973c3eba5eaf38533884b030188}\label{class_board_manager_a2f0d9973c3eba5eaf38533884b030188}} 
+\index{BoardManager@{BoardManager}!Rooms@{Rooms}}
+\index{Rooms@{Rooms}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{Rooms}{Rooms}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Rooms\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_board_manager_a448259a5bb48c02e5db09a22ba4ee9c1}\label{class_board_manager_a448259a5bb48c02e5db09a22ba4ee9c1}} 
+\index{BoardManager@{BoardManager}!Shortcuts@{Shortcuts}}
+\index{Shortcuts@{Shortcuts}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{Shortcuts}{Shortcuts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Shortcuts\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_board_manager_a9ddc5fe7bd0c58b9714256cfb5a8dd6a}\label{class_board_manager_a9ddc5fe7bd0c58b9714256cfb5a8dd6a}} 
+\index{BoardManager@{BoardManager}!StartTiles@{StartTiles}}
+\index{StartTiles@{StartTiles}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{StartTiles}{StartTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Start\+Tiles\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_board_manager_ad8c3050afd50d48c608cb14417a639f4}\label{class_board_manager_ad8c3050afd50d48c608cb14417a639f4}} 
+\index{BoardManager@{BoardManager}!WeaponTokens@{WeaponTokens}}
+\index{WeaponTokens@{WeaponTokens}!BoardManager@{BoardManager}}
+\doxysubsubsection{\texorpdfstring{WeaponTokens}{WeaponTokens}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Weapon\+Tokens\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Danny/\+Scripts/\mbox{\hyperlink{_board_manager_8cs}{Board\+Manager.\+cs}}\end{DoxyCompactItemize}

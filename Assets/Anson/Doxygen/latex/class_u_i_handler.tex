@@ -1,0 +1,268 @@
+\hypertarget{class_u_i_handler}{}\doxysection{UIHandler Class Reference}
+\label{class_u_i_handler}\index{UIHandler@{UIHandler}}
+Inheritance diagram for UIHandler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_handler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}{Start\+Behaviour}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}{Display\+Deck}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_ac40571820fefd3233236883c01522fa1}{Roll\+Dice\+Button}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}{Make\+Suggestion\+Button}} (bool forced=false)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}{Show\+Card}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player\+Master\+Controller, \mbox{\hyperlink{class_card}{Card}} c)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}{Show\+Selected\+Card}} (int card\+Num)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}{Display\+Menu\+Suggestion}} (bool forced=false)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}{Confirm\+Suggestion}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_add00c20eda721835c57da7b133704066}{Make\+Accusation\+Button}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}{Display\+Menu\+Accusation}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}{Confirm\+Accusation}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}{Display\+Choice\+Panel}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ to\+Choose)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}{Toggle\+Notepad}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}{Display\+Note\+Pad}} (bool b)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}{End\+Turn}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}{Update\+Current\+Turn\+Text}} (string next\+Player)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}{Initialise\+Turn}} (bool display\+Full\+UI)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}{Display\+View\+Blocker}} (bool b, string s=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em To display the View Blocker can include the name of the player that needs it\textquotesingle{}s attention \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}{Display\+Player\+Eliminated}} (bool b, string s=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}{Take\+Shortcut\+Button}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}{Display\+Output\+Text}} (string s, float time\+Until\+Disappear)
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}{Return\+To\+Menu}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_u_i_handler_a9778aade715c31565c7772c0d61e2f7e}{deck}}
+\item 
+\mbox{\hyperlink{class_card_manager}{Card\+Manager}} \mbox{\hyperlink{class_u_i_handler_a4d379b8d4f504a05bfe7f0705b72f18c}{card\+Manager}}
+\item 
+List$<$ \mbox{\hyperlink{class_card_slot}{Card\+Slot}} $>$ \mbox{\hyperlink{class_u_i_handler_a5b46e0e834a9ef5f1feedda1acf7cb25}{card\+Slots}}
+\item 
+Animator \mbox{\hyperlink{class_u_i_handler_ad39d76c7890f5f9113a9c7dc8fb4052d}{show\+Card\+Animator}}
+\item 
+\mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_u_i_handler_afa78e9c56603acc341c34ef66471c76a}{user\+Controller}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_aad5de4d3c07898126149716623c62a88}{make\+Suggestion\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}{make\+Accusation\+Panel}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}\label{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}} 
+\index{UIHandler@{UIHandler}!ConfirmAccusation@{ConfirmAccusation}}
+\index{ConfirmAccusation@{ConfirmAccusation}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ConfirmAccusation()}{ConfirmAccusation()}}
+{\footnotesize\ttfamily void UIHandler.\+Confirm\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}\label{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}} 
+\index{UIHandler@{UIHandler}!ConfirmSuggestion@{ConfirmSuggestion}}
+\index{ConfirmSuggestion@{ConfirmSuggestion}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ConfirmSuggestion()}{ConfirmSuggestion()}}
+{\footnotesize\ttfamily void UIHandler.\+Confirm\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}\label{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}} 
+\index{UIHandler@{UIHandler}!DisplayChoicePanel@{DisplayChoicePanel}}
+\index{DisplayChoicePanel@{DisplayChoicePanel}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayChoicePanel()}{DisplayChoicePanel()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Choice\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player,  }\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{to\+Choose }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}\label{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}} 
+\index{UIHandler@{UIHandler}!DisplayDeck@{DisplayDeck}}
+\index{DisplayDeck@{DisplayDeck}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayDeck()}{DisplayDeck()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Deck (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}\label{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}} 
+\index{UIHandler@{UIHandler}!DisplayMenuAccusation@{DisplayMenuAccusation}}
+\index{DisplayMenuAccusation@{DisplayMenuAccusation}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayMenuAccusation()}{DisplayMenuAccusation()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}\label{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}} 
+\index{UIHandler@{UIHandler}!DisplayMenuSuggestion@{DisplayMenuSuggestion}}
+\index{DisplayMenuSuggestion@{DisplayMenuSuggestion}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayMenuSuggestion()}{DisplayMenuSuggestion()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Suggestion (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}\label{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}} 
+\index{UIHandler@{UIHandler}!DisplayNotePad@{DisplayNotePad}}
+\index{DisplayNotePad@{DisplayNotePad}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayNotePad()}{DisplayNotePad()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Note\+Pad (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}\label{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}} 
+\index{UIHandler@{UIHandler}!DisplayOutputText@{DisplayOutputText}}
+\index{DisplayOutputText@{DisplayOutputText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayOutputText()}{DisplayOutputText()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Output\+Text (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{float}]{time\+Until\+Disappear }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}\label{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}} 
+\index{UIHandler@{UIHandler}!DisplayPlayerEliminated@{DisplayPlayerEliminated}}
+\index{DisplayPlayerEliminated@{DisplayPlayerEliminated}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayPlayerEliminated()}{DisplayPlayerEliminated()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+Player\+Eliminated (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}\label{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}} 
+\index{UIHandler@{UIHandler}!DisplayViewBlocker@{DisplayViewBlocker}}
+\index{DisplayViewBlocker@{DisplayViewBlocker}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayViewBlocker()}{DisplayViewBlocker()}}
+{\footnotesize\ttfamily void UIHandler.\+Display\+View\+Blocker (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+To display the View Blocker can include the name of the player that needs it\textquotesingle{}s attention 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & enable or disable the view blocker\\
+\hline
+{\em s} & name of the player that needs it\textquotesingle{}s attention\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}\label{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}} 
+\index{UIHandler@{UIHandler}!EndTurn@{EndTurn}}
+\index{EndTurn@{EndTurn}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
+{\footnotesize\ttfamily void UIHandler.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}\label{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}} 
+\index{UIHandler@{UIHandler}!InitialiseTurn@{InitialiseTurn}}
+\index{InitialiseTurn@{InitialiseTurn}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{InitialiseTurn()}{InitialiseTurn()}}
+{\footnotesize\ttfamily void UIHandler.\+Initialise\+Turn (\begin{DoxyParamCaption}\item[{bool}]{display\+Full\+UI }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_add00c20eda721835c57da7b133704066}\label{class_u_i_handler_add00c20eda721835c57da7b133704066}} 
+\index{UIHandler@{UIHandler}!MakeAccusationButton@{MakeAccusationButton}}
+\index{MakeAccusationButton@{MakeAccusationButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{MakeAccusationButton()}{MakeAccusationButton()}}
+{\footnotesize\ttfamily void UIHandler.\+Make\+Accusation\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}\label{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}} 
+\index{UIHandler@{UIHandler}!MakeSuggestionButton@{MakeSuggestionButton}}
+\index{MakeSuggestionButton@{MakeSuggestionButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{MakeSuggestionButton()}{MakeSuggestionButton()}}
+{\footnotesize\ttfamily void UIHandler.\+Make\+Suggestion\+Button (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}\label{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}} 
+\index{UIHandler@{UIHandler}!ReturnToMenu@{ReturnToMenu}}
+\index{ReturnToMenu@{ReturnToMenu}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ReturnToMenu()}{ReturnToMenu()}}
+{\footnotesize\ttfamily void UIHandler.\+Return\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_ac40571820fefd3233236883c01522fa1}\label{class_u_i_handler_ac40571820fefd3233236883c01522fa1}} 
+\index{UIHandler@{UIHandler}!RollDiceButton@{RollDiceButton}}
+\index{RollDiceButton@{RollDiceButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{RollDiceButton()}{RollDiceButton()}}
+{\footnotesize\ttfamily void UIHandler.\+Roll\+Dice\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}\label{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}} 
+\index{UIHandler@{UIHandler}!ShowCard@{ShowCard}}
+\index{ShowCard@{ShowCard}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ShowCard()}{ShowCard()}}
+{\footnotesize\ttfamily void UIHandler.\+Show\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player\+Master\+Controller,  }\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}\label{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}} 
+\index{UIHandler@{UIHandler}!ShowSelectedCard@{ShowSelectedCard}}
+\index{ShowSelectedCard@{ShowSelectedCard}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ShowSelectedCard()}{ShowSelectedCard()}}
+{\footnotesize\ttfamily void UIHandler.\+Show\+Selected\+Card (\begin{DoxyParamCaption}\item[{int}]{card\+Num }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}\label{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}} 
+\index{UIHandler@{UIHandler}!StartBehaviour@{StartBehaviour}}
+\index{StartBehaviour@{StartBehaviour}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{StartBehaviour()}{StartBehaviour()}}
+{\footnotesize\ttfamily void UIHandler.\+Start\+Behaviour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}\label{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}} 
+\index{UIHandler@{UIHandler}!TakeShortcutButton@{TakeShortcutButton}}
+\index{TakeShortcutButton@{TakeShortcutButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{TakeShortcutButton()}{TakeShortcutButton()}}
+{\footnotesize\ttfamily void UIHandler.\+Take\+Shortcut\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}\label{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}} 
+\index{UIHandler@{UIHandler}!ToggleNotepad@{ToggleNotepad}}
+\index{ToggleNotepad@{ToggleNotepad}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{ToggleNotepad()}{ToggleNotepad()}}
+{\footnotesize\ttfamily void UIHandler.\+Toggle\+Notepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}\label{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}} 
+\index{UIHandler@{UIHandler}!UpdateCurrentTurnText@{UpdateCurrentTurnText}}
+\index{UpdateCurrentTurnText@{UpdateCurrentTurnText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{UpdateCurrentTurnText()}{UpdateCurrentTurnText()}}
+{\footnotesize\ttfamily void UIHandler.\+Update\+Current\+Turn\+Text (\begin{DoxyParamCaption}\item[{string}]{next\+Player }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_handler_a4d379b8d4f504a05bfe7f0705b72f18c}\label{class_u_i_handler_a4d379b8d4f504a05bfe7f0705b72f18c}} 
+\index{UIHandler@{UIHandler}!cardManager@{cardManager}}
+\index{cardManager@{cardManager}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{cardManager}{cardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_manager}{Card\+Manager}} UIHandler.\+card\+Manager}
+
+\mbox{\Hypertarget{class_u_i_handler_a5b46e0e834a9ef5f1feedda1acf7cb25}\label{class_u_i_handler_a5b46e0e834a9ef5f1feedda1acf7cb25}} 
+\index{UIHandler@{UIHandler}!cardSlots@{cardSlots}}
+\index{cardSlots@{cardSlots}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{cardSlots}{cardSlots}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card_slot}{Card\+Slot}}$>$ UIHandler.\+card\+Slots}
+
+\mbox{\Hypertarget{class_u_i_handler_a9778aade715c31565c7772c0d61e2f7e}\label{class_u_i_handler_a9778aade715c31565c7772c0d61e2f7e}} 
+\index{UIHandler@{UIHandler}!deck@{deck}}
+\index{deck@{deck}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{deck}{deck}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ UIHandler.\+deck}
+
+\mbox{\Hypertarget{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}\label{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}} 
+\index{UIHandler@{UIHandler}!makeAccusationPanel@{makeAccusationPanel}}
+\index{makeAccusationPanel@{makeAccusationPanel}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{makeAccusationPanel}{makeAccusationPanel}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+make\+Accusation\+Panel}
+
+\mbox{\Hypertarget{class_u_i_handler_aad5de4d3c07898126149716623c62a88}\label{class_u_i_handler_aad5de4d3c07898126149716623c62a88}} 
+\index{UIHandler@{UIHandler}!makeSuggestionPanel@{makeSuggestionPanel}}
+\index{makeSuggestionPanel@{makeSuggestionPanel}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{makeSuggestionPanel}{makeSuggestionPanel}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+make\+Suggestion\+Panel}
+
+\mbox{\Hypertarget{class_u_i_handler_ad39d76c7890f5f9113a9c7dc8fb4052d}\label{class_u_i_handler_ad39d76c7890f5f9113a9c7dc8fb4052d}} 
+\index{UIHandler@{UIHandler}!showCardAnimator@{showCardAnimator}}
+\index{showCardAnimator@{showCardAnimator}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{showCardAnimator}{showCardAnimator}}
+{\footnotesize\ttfamily Animator UIHandler.\+show\+Card\+Animator}
+
+\mbox{\Hypertarget{class_u_i_handler_afa78e9c56603acc341c34ef66471c76a}\label{class_u_i_handler_afa78e9c56603acc341c34ef66471c76a}} 
+\index{UIHandler@{UIHandler}!userController@{userController}}
+\index{userController@{userController}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{userController}{userController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} UIHandler.\+user\+Controller}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tomasz/\+Scripts/\mbox{\hyperlink{_u_i_handler_8cs}{UIHandler.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,190 @@
+\hypertarget{class_board_tile_script}{}\doxysection{Board\+Tile\+Script Class Reference}
+\label{class_board_tile_script}\index{BoardTileScript@{BoardTileScript}}
+
+
+Super class for all tiles  
+
+
+Inheritance diagram for Board\+Tile\+Script\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_board_tile_script}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f}{Clear\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em disable the select effect on the tile \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7}{Select\+Tile}} ()
+\begin{DoxyCompactList}\small\item\em enable the select effect on the tile \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f}{Glow\+Tile}} (bool b)
+\begin{DoxyCompactList}\small\item\em setting the glow on the tile \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c}{Set\+Token}} (Game\+Object token)
+\begin{DoxyCompactList}\small\item\em setting the player token that is currently on this tile \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a}{Is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em check if tile is empty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_tile_script_a166917e233ab3c3c442adc55b7ffc0e3}{Get\+Tile\+Neighbours}} ()
+\begin{DoxyCompactList}\small\item\em Get neighbouring tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4}{Can\+Move}} ()
+\begin{DoxyCompactList}\small\item\em check if the player can move to this tile \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136}{To\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_board_tile_script_a1b7d89743e911864de248e4176266acc}{Init}} ()
+\begin{DoxyCompactList}\small\item\em initialise and finding the needed componenets for the tile includes board\+Tile\+Effect\+Handler, board\+Manager \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_board_tile_script_a0930d5afaf31dc0a769a845db8526c99}{Grid\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{_board_tile_script_8cs_a985187fdbd4b493e0c678d9d97141e56}{Tile\+Type\+Enum}} \mbox{\hyperlink{class_board_tile_script_a92c8ccf4117ebf04fecd7450e95e194f}{Tile\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_tile_script_a0d029c8b19fc3db43474354f6fe581b8}{Player\+Token}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_board_tile_script_adb7cf5ebe723c312d036cf55d9a6fd02}{Board\+Manager}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Super class for all tiles 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4}\label{class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4}} 
+\index{BoardTileScript@{BoardTileScript}!CanMove@{CanMove}}
+\index{CanMove@{CanMove}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{CanMove()}{CanMove()}}
+{\footnotesize\ttfamily bool Board\+Tile\+Script.\+Can\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if the player can move to this tile 
+
+\begin{DoxyReturn}{Returns}
+if the player can move to this tile
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f}\label{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f}} 
+\index{BoardTileScript@{BoardTileScript}!ClearTile@{ClearTile}}
+\index{ClearTile@{ClearTile}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{ClearTile()}{ClearTile()}}
+{\footnotesize\ttfamily virtual void Board\+Tile\+Script.\+Clear\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+disable the select effect on the tile 
+
+\mbox{\Hypertarget{class_board_tile_script_a166917e233ab3c3c442adc55b7ffc0e3}\label{class_board_tile_script_a166917e233ab3c3c442adc55b7ffc0e3}} 
+\index{BoardTileScript@{BoardTileScript}!GetTileNeighbours@{GetTileNeighbours}}
+\index{GetTileNeighbours@{GetTileNeighbours}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GetTileNeighbours()}{GetTileNeighbours()}}
+{\footnotesize\ttfamily void Board\+Tile\+Script.\+Get\+Tile\+Neighbours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get neighbouring tiles 
+
+\mbox{\Hypertarget{class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f}\label{class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f}} 
+\index{BoardTileScript@{BoardTileScript}!GlowTile@{GlowTile}}
+\index{GlowTile@{GlowTile}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GlowTile()}{GlowTile()}}
+{\footnotesize\ttfamily virtual void Board\+Tile\+Script.\+Glow\+Tile (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+setting the glow on the tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & if the tile should glow\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_tile_script_a1b7d89743e911864de248e4176266acc}\label{class_board_tile_script_a1b7d89743e911864de248e4176266acc}} 
+\index{BoardTileScript@{BoardTileScript}!Init@{Init}}
+\index{Init@{Init}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Board\+Tile\+Script.\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+initialise and finding the needed componenets for the tile includes board\+Tile\+Effect\+Handler, board\+Manager 
+
+\mbox{\Hypertarget{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a}\label{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a}} 
+\index{BoardTileScript@{BoardTileScript}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily virtual bool Board\+Tile\+Script.\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+check if tile is empty 
+
+\begin{DoxyReturn}{Returns}
+return if tile is empty
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7}\label{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7}} 
+\index{BoardTileScript@{BoardTileScript}!SelectTile@{SelectTile}}
+\index{SelectTile@{SelectTile}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{SelectTile()}{SelectTile()}}
+{\footnotesize\ttfamily virtual void Board\+Tile\+Script.\+Select\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+enable the select effect on the tile 
+
+\mbox{\Hypertarget{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c}\label{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c}} 
+\index{BoardTileScript@{BoardTileScript}!SetToken@{SetToken}}
+\index{SetToken@{SetToken}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{SetToken()}{SetToken()}}
+{\footnotesize\ttfamily virtual void Board\+Tile\+Script.\+Set\+Token (\begin{DoxyParamCaption}\item[{Game\+Object}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+setting the player token that is currently on this tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & player token on this tile\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136}\label{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136}} 
+\index{BoardTileScript@{BoardTileScript}!ToString@{ToString}}
+\index{ToString@{ToString}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Board\+Tile\+Script.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_board_tile_script_adb7cf5ebe723c312d036cf55d9a6fd02}\label{class_board_tile_script_adb7cf5ebe723c312d036cf55d9a6fd02}} 
+\index{BoardTileScript@{BoardTileScript}!BoardManager@{BoardManager}}
+\index{BoardManager@{BoardManager}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{BoardManager}{BoardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Board\+Tile\+Script.\+Board\+Manager\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_tile_script_a0930d5afaf31dc0a769a845db8526c99}\label{class_board_tile_script_a0930d5afaf31dc0a769a845db8526c99}} 
+\index{BoardTileScript@{BoardTileScript}!GridPosition@{GridPosition}}
+\index{GridPosition@{GridPosition}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GridPosition}{GridPosition}}
+{\footnotesize\ttfamily Vector2 Board\+Tile\+Script.\+Grid\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_tile_script_a0d029c8b19fc3db43474354f6fe581b8}\label{class_board_tile_script_a0d029c8b19fc3db43474354f6fe581b8}} 
+\index{BoardTileScript@{BoardTileScript}!PlayerToken@{PlayerToken}}
+\index{PlayerToken@{PlayerToken}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{PlayerToken}{PlayerToken}}
+{\footnotesize\ttfamily Game\+Object Board\+Tile\+Script.\+Player\+Token\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_board_tile_script_a92c8ccf4117ebf04fecd7450e95e194f}\label{class_board_tile_script_a92c8ccf4117ebf04fecd7450e95e194f}} 
+\index{BoardTileScript@{BoardTileScript}!TileType@{TileType}}
+\index{TileType@{TileType}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{TileType}{TileType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_board_tile_script_8cs_a985187fdbd4b493e0c678d9d97141e56}{Tile\+Type\+Enum}} Board\+Tile\+Script.\+Tile\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Anson/\+Scripts/\mbox{\hyperlink{_board_tile_script_8cs}{Board\+Tile\+Script.\+cs}}\end{DoxyCompactItemize}

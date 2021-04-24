@@ -1,0 +1,156 @@
+\hypertarget{class_round_manager}{}\doxysection{Round\+Manager Class Reference}
+\label{class_round_manager}\index{RoundManager@{RoundManager}}
+Inheritance diagram for Round\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_round_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_round_manager_ab795c17242b95ab2cef508da5daa2593}{Roll\+Dice}} (bool force=false)
+\begin{DoxyCompactList}\small\item\em Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_round_manager_adfd4f66436e06c12a25c9236b629f369}{Move\+Player}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} b)
+\item 
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_round_manager_a780da336fd16dcaee0f00306578f13b4}{AIShow\+Card}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player\+Master\+Controller, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ c)
+\item 
+void \mbox{\hyperlink{class_round_manager_a46700375939ad4c047b64ca18364f2a3}{Make\+Suggestion}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ sug)
+\item 
+void \mbox{\hyperlink{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}{Notify\+Suggestion}} (\mbox{\hyperlink{class_card}{Card}} c)
+\item 
+void \mbox{\hyperlink{class_round_manager_ab691cd5cd773e23822b237834b1fcb0a}{Make\+Accusation}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0}{End\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Ending the turn. Returns the next player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc}{Start\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em Method for starting the turn \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}{Get\+Current\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Gets the player controller for the current player \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_round_manager_aabdab19afca9250b4706639633d96804}{Get\+Board\+Movable\+Tiles}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_round_manager_a8aa55bdb301ae15a1efac4ce6758d0fb}{Can\+Roll}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_round_manager_a9171253c36108372fd638a906f19b20a}{Can\+Sug}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_round_manager_a5081895b0186c09d29f789642ad098db}{Can\+Acc}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_round_manager_a780da336fd16dcaee0f00306578f13b4}\label{class_round_manager_a780da336fd16dcaee0f00306578f13b4}} 
+\index{RoundManager@{RoundManager}!AIShowCard@{AIShowCard}}
+\index{AIShowCard@{AIShowCard}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{AIShowCard()}{AIShowCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Round\+Manager.\+AIShow\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player\+Master\+Controller,  }\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0}\label{class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0}} 
+\index{RoundManager@{RoundManager}!EndTurn@{EndTurn}}
+\index{EndTurn@{EndTurn}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Round\+Manager.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ending the turn. Returns the next player 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_round_manager_aabdab19afca9250b4706639633d96804}\label{class_round_manager_aabdab19afca9250b4706639633d96804}} 
+\index{RoundManager@{RoundManager}!GetBoardMovableTiles@{GetBoardMovableTiles}}
+\index{GetBoardMovableTiles@{GetBoardMovableTiles}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{GetBoardMovableTiles()}{GetBoardMovableTiles()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}$>$ Round\+Manager.\+Get\+Board\+Movable\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}\label{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}} 
+\index{RoundManager@{RoundManager}!GetCurrentPlayer@{GetCurrentPlayer}}
+\index{GetCurrentPlayer@{GetCurrentPlayer}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{GetCurrentPlayer()}{GetCurrentPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Round\+Manager.\+Get\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the player controller for the current player 
+
+\begin{DoxyReturn}{Returns}
+player controller for the current player
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_round_manager_ab691cd5cd773e23822b237834b1fcb0a}\label{class_round_manager_ab691cd5cd773e23822b237834b1fcb0a}} 
+\index{RoundManager@{RoundManager}!MakeAccusation@{MakeAccusation}}
+\index{MakeAccusation@{MakeAccusation}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{MakeAccusation()}{MakeAccusation()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Make\+Accusation (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_a46700375939ad4c047b64ca18364f2a3}\label{class_round_manager_a46700375939ad4c047b64ca18364f2a3}} 
+\index{RoundManager@{RoundManager}!MakeSuggestion@{MakeSuggestion}}
+\index{MakeSuggestion@{MakeSuggestion}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{MakeSuggestion()}{MakeSuggestion()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Make\+Suggestion (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{sug }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_adfd4f66436e06c12a25c9236b629f369}\label{class_round_manager_adfd4f66436e06c12a25c9236b629f369}} 
+\index{RoundManager@{RoundManager}!MovePlayer@{MovePlayer}}
+\index{MovePlayer@{MovePlayer}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}\label{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}} 
+\index{RoundManager@{RoundManager}!NotifySuggestion@{NotifySuggestion}}
+\index{NotifySuggestion@{NotifySuggestion}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{NotifySuggestion()}{NotifySuggestion()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Notify\+Suggestion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_round_manager_ab795c17242b95ab2cef508da5daa2593}\label{class_round_manager_ab795c17242b95ab2cef508da5daa2593}} 
+\index{RoundManager@{RoundManager}!RollDice@{RollDice}}
+\index{RollDice@{RollDice}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Roll\+Dice (\begin{DoxyParamCaption}\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em force} & if roll forced\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc}\label{class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc}} 
+\index{RoundManager@{RoundManager}!StartTurn@{StartTurn}}
+\index{StartTurn@{StartTurn}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{StartTurn()}{StartTurn()}}
+{\footnotesize\ttfamily void Round\+Manager.\+Start\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method for starting the turn 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_round_manager_a5081895b0186c09d29f789642ad098db}\label{class_round_manager_a5081895b0186c09d29f789642ad098db}} 
+\index{RoundManager@{RoundManager}!CanAcc@{CanAcc}}
+\index{CanAcc@{CanAcc}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{CanAcc}{CanAcc}}
+{\footnotesize\ttfamily bool Round\+Manager.\+Can\+Acc\hspace{0.3cm}{\ttfamily [get]}}
+
+\mbox{\Hypertarget{class_round_manager_a8aa55bdb301ae15a1efac4ce6758d0fb}\label{class_round_manager_a8aa55bdb301ae15a1efac4ce6758d0fb}} 
+\index{RoundManager@{RoundManager}!CanRoll@{CanRoll}}
+\index{CanRoll@{CanRoll}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{CanRoll}{CanRoll}}
+{\footnotesize\ttfamily bool Round\+Manager.\+Can\+Roll\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_round_manager_a9171253c36108372fd638a906f19b20a}\label{class_round_manager_a9171253c36108372fd638a906f19b20a}} 
+\index{RoundManager@{RoundManager}!CanSug@{CanSug}}
+\index{CanSug@{CanSug}!RoundManager@{RoundManager}}
+\doxysubsubsection{\texorpdfstring{CanSug}{CanSug}}
+{\footnotesize\ttfamily bool Round\+Manager.\+Can\+Sug\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Abdullah/\+Scripts/\mbox{\hyperlink{_round_manager_8cs}{Round\+Manager.\+cs}}\end{DoxyCompactItemize}

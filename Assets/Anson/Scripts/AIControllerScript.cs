@@ -191,15 +191,16 @@ public class AIControllerScript : MonoBehaviour
 
     public void AIThink()
     {
-        if (currentAIMode.Equals(AIMode.Thinking) && currentPlayerController.IsInRoom() && roundManager.CanSug && !roundManager.CanRoll)
-        {
-            SetAIMode(AIMode.Suggestion);
-        }
-        else
         if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
         {
             SetAIMode(AIMode.Move);
         }
+        else
+        if (currentAIMode.Equals(AIMode.Thinking) && currentPlayerController.IsInRoom() && roundManager.CanSug && !roundManager.CanRoll)
+        {
+            SetAIMode(AIMode.Suggestion);
+        }
+        
         else if (currentAIMode.Equals(AIMode.Thinking) && !roundManager.CanRoll && !roundManager.CanSug && roundManager.CanAcc && CanAccuse())
         {
             SetAIMode(AIMode.Accusation);
