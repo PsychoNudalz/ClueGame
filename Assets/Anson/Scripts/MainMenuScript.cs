@@ -31,4 +31,17 @@ public class MainMenuScript : MonoBehaviour
         gameSetUp.SaveChoices();
     }
 
+    public void StartAIDemo()
+    {
+        gameSetUp.ToggleResults = new bool[6]{ true,true,true,true,true,true};
+        SceneManager.LoadScene("AI Scene");
+    }
+
+
+    public void LoadTestSence(string s)
+    {
+        Destroy(gameSetUpGO);
+        SceneManager.LoadScene(s);
+    }
+
 }

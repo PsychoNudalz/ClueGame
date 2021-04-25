@@ -115,11 +115,10 @@ public class TurnController : MonoBehaviour
                 currentPlayerIndex++;
                 currentPlayerIndex = currentPlayerIndex % currentPlayers.Count;
             }
-        } while (currentPlayers[currentPlayerIndex].IsEliminated()&&loopFlag<=currentPlayers.Count+1);
+        } while (currentPlayers[currentPlayerIndex].IsEliminated()&&loopFlag<=currentPlayers.Count*2);
         if(loopFlag >=currentPlayers.Count)
         {
-            Debug.LogError("Loop detected, game over");
-            FindObjectOfType<UIHandler>().DisplayGameOverScreen(true);
+            Debug.LogWarning("Loop detected, game over");
             return false;
         }
 

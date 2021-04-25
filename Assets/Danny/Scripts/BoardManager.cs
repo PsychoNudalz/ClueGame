@@ -337,4 +337,21 @@ public class BoardManager : MonoBehaviour
         }
         return null;
     }
+
+    /// <summary>
+    /// Gets an free suggestion tile from Movable list
+    /// return null if none found
+    /// </summary>
+    /// <returns></returns>
+    public FreeSuggestionTileScript GetFreeSuggesTileInMovable()
+    {
+        foreach (FreeSuggestionTileScript e in freeSuggestionTiles)
+        {
+            if (movableTile.Contains(e))
+            {
+                return e;
+            }
+        }
+        return null;
+    }
 }

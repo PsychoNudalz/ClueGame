@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] UIHandler uIHandler;
     private void Start()
     {
-
         AssignAllComponents();
     }
 
@@ -33,6 +33,11 @@ public class GameManagerScript : MonoBehaviour
         }
         uIHandler.StartBehaviour();
         roundManager.StartTurn();
+    }
+
+    public void LeaveToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
 

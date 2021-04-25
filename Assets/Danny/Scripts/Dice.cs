@@ -40,18 +40,22 @@ public class Dice : MonoBehaviour
         }
     }
 
-    public void ResetDice()
+    public void ResetDice(bool forced = false)
     {
-
-        if (CanReset())
+        try
         {
-            setCloseUpCamera = false;
-            mainCamera.ClearCloseUp();
-            foreach (Die die in dice)
+            if (CanReset() || forced)
             {
-                die.ResetDie();
+                setCloseUpCamera = false;
+                mainCamera.ClearCloseUp();
+                foreach (Die die in dice)
+                {
+                    die.ResetDie();
+                }
             }
         }
+        catch (System.NullReferenceException e) { }
+        
     }
 
     public bool CanReset()

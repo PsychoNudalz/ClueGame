@@ -87,12 +87,13 @@ public class UIHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        try{
+        try
+        {
 
-        rollButton.interactable = roundManager.CanRoll;
-        shortcutButton.interactable = userController.GetCurrentPlayer().CanTakeShortcut();
-        accuseButton.interactable = roundManager.CanAcc;
-        suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom()) ;
+            rollButton.interactable = roundManager.CanRoll;
+            shortcutButton.interactable = userController.GetCurrentPlayer().CanTakeShortcut();
+            accuseButton.interactable = roundManager.CanAcc;
+            suggestButton.interactable = (roundManager.CanSug && userController.GetCurrentPlayer().IsInRoom());
         }
         catch (NullReferenceException e)
         {
@@ -127,7 +128,7 @@ public class UIHandler : MonoBehaviour
         }
         for (int i = 0; i < deck.Count() && i < cardSlots.Count(); i++)
         {
-            print(i + "," + cardSlots[i] + "," + deck[i]);
+            //print(i + "," + cardSlots[i] + "," + deck[i]);
             cardSlots[i].SetCard(deck[i]);
             cardSlots[i].SetVisible();
 
@@ -180,7 +181,7 @@ public class UIHandler : MonoBehaviour
             showCardAnimator.SetBool("show", true);
             showCardText.text = EnumToString.GetStringFromEnum(playerMasterController.GetCharacter()) + "\n has this card";
             showCard.SetCard(c);
-
+            roundManager.NotifySuggestion(c);
             areControlsFrozen = false;
         }
 
@@ -189,7 +190,10 @@ public class UIHandler : MonoBehaviour
     {
         Card c = chooseSlots[cardNum].card;
         choosePanel.SetActive(false);
-        DisplayViewBlocker(true, EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
+        if (!roundManager.GetCurrentPlayer().isAI)
+        {
+            DisplayViewBlocker(true, EnumToString.GetStringFromEnum(roundManager.GetCurrentPlayer().GetCharacter()));
+        }
         ShowCard(choosingPlayer, c);
     }
 
@@ -289,7 +293,6 @@ public class UIHandler : MonoBehaviour
     internal void DisplayGameOverScreen(bool b)
     {
         gameOverScreen.SetActive(b);
-        DisplayGameOver();
     }
 
     public void EndTurn()
@@ -307,7 +310,9 @@ public class UIHandler : MonoBehaviour
     public void InitialiseTurn(bool displayFullUI)
     {
         showCardGO.SetActive(false);
+        DisplayNotePad(false);
         showCardAnimator.SetBool("show", false);
+        DisplayPlayerEliminated(false);
         if (displayFullUI)
         {
             allButtons.SetActive(true);
@@ -319,8 +324,6 @@ public class UIHandler : MonoBehaviour
             deckGO.SetActive(false);
         }
         UpdateCurrentTurnText(EnumToString.GetStringFromEnum(userController.GetCurrentPlayer().GetCharacter()));
-        ToggleNotepad();
-        ToggleNotepad();
     }
 
     /// <summary>
@@ -379,10 +382,12 @@ public class UIHandler : MonoBehaviour
 
     }
 
-    public void DisplayGameOver()
+
+    public void ReturnToMenu()
     {
-        //DisplayOutputText("GAME OVER", 100000f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
 
 
 }
