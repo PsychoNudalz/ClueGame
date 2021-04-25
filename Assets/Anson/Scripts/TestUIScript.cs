@@ -27,8 +27,6 @@ public class TestUIScript : MonoBehaviour
         outputText.text = s;
     }
 
-
-
     public virtual void UpdateExpectedText(string s)
     {
         expectedText.text = s;
@@ -48,7 +46,6 @@ public class TestUIScript : MonoBehaviour
     {
         if (playerMasterController == null)
         {
-
             playerMasterController = FindObjectOfType<PlayerMasterController>();
         }
         if (boardManager == null)

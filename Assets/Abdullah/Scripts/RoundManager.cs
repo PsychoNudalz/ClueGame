@@ -149,13 +149,12 @@ public class RoundManager : MonoBehaviour
 
     }
 
-    public void MakeSuggestion(List<Card> sug)
-    { /*
-          Player enters a room
-          Player makes a weapon and player suggestion
-          if other player has card -> show card
-          if no players have the card -> player can choose to make accusation or end turn
-         */
+    /// <summary>
+    /// Iterate through the rest of the players searching for if 1 or more of the cards were found 
+    /// </summary>
+    /// <param name="sug"></param>
+    public Tuple<PlayerMasterController, List<Card>> MakeSuggestion(List<Card> sug)
+    { 
 
         uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested:\n", sug[0], "\n", sug[1], "\n", sug[2]), 5f);
 
@@ -206,6 +205,7 @@ public class RoundManager : MonoBehaviour
                 NotifySuggestion(card);
             }
         }
+        return foundPlayer;
 
     }
 

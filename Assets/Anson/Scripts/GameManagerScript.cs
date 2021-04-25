@@ -16,7 +16,6 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] UIHandler uIHandler;
     private void Start()
     {
-
         AssignAllComponents();
     }
 
