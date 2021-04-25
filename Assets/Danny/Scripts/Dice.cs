@@ -42,16 +42,20 @@ public class Dice : MonoBehaviour
 
     public void ResetDice(bool forced = false)
     {
-
-        if (CanReset()||forced)
+        try
         {
-            setCloseUpCamera = false;
-            mainCamera.ClearCloseUp();
-            foreach (Die die in dice)
+            if (CanReset() || forced)
             {
-                die.ResetDie();
+                setCloseUpCamera = false;
+                mainCamera.ClearCloseUp();
+                foreach (Die die in dice)
+                {
+                    die.ResetDie();
+                }
             }
         }
+        catch (System.NullReferenceException e) { }
+        
     }
 
     public bool CanReset()

@@ -18,6 +18,7 @@ public class SuggestionTest : TestUIScript
     public TextMeshProUGUI Player5;
     public TextMeshProUGUI Player6;
     public TextMeshProUGUI playerFound;
+    public TextMeshProUGUI currentPLayer;
 
     [Header ("Option Dropdown")]
     public TMP_Dropdown roomDD;
@@ -138,19 +139,22 @@ public class SuggestionTest : TestUIScript
             revGreenHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(revGreenHandString);
-        Player5.SetText("Rev Green\n" + revGreenHand);
+        Player5.SetText("Rev Green\n" + revGreenHandString);
 
         foreach (Card c in msWhiteHand)
         {
             msWhiteHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(msWhiteHandString);
-        Player5.SetText("Ms White\n" + msWhiteHandString);
+        Player6.SetText("Ms White\n" + msWhiteHandString);
 
 
     }
 
-  
+    private void FixedUpdate()
+    {
+        currentPLayer.SetText("Current Player is: "+turnController.GetCurrentPlayer().ToString());
+    }
 
 
 }

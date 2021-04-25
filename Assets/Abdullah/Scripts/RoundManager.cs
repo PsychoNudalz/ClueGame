@@ -267,9 +267,11 @@ public class RoundManager : MonoBehaviour
             canRoll = true;
 
             //Anson: reset camera
-
-            cameraCloseUp.ClearCloseUp();
-
+            try
+            {
+                cameraCloseUp.ClearCloseUp();
+            }
+            catch (System.NullReferenceException e) { }
             //Anson: start the turn to update the current player
 
             StartTurn();
@@ -313,6 +315,10 @@ public class RoundManager : MonoBehaviour
         canAcc = true;
     }
 
+    public void voidEndTurn() {
+        EndTurn();
+    }
+
     /// <summary>
     /// Gets the player controller for the current player
     /// </summary>
@@ -351,4 +357,6 @@ public class RoundManager : MonoBehaviour
             uIHandler.MakeSuggestionButton(true);
         }
     }
+
+    
 }
