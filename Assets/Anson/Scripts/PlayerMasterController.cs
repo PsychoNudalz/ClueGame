@@ -39,23 +39,29 @@ public class PlayerMasterController : MonoBehaviour
         //print((int )playerMasterController.GetCharacter());
 
     }
-
-    private void Start()
-    {
-
-    }
-
+    /// <summary>
+    /// for initialising the player
+    /// </summary>
     public void StartBehaviour()
     {
         playerStatsScript.InititaliseToGuessList();
 
     }
-
+    /// <summary>
+    /// Setting the notebook value
+    /// </summary>
+    /// <param name="entryKey"></param>
+    /// <param name="value"></param>
     internal void SetNotebookValue(Enum entryKey, bool value)
     {
         playerStatsScript.SetNotebookValue(entryKey, value);
     }
 
+    /// <summary>
+    /// Getting the notebook value
+    /// </summary>
+    /// <param name="entryKey"></param>
+    /// <returns></returns>
     internal bool GetNotebookValue(Enum entryKey)
     {
         return playerStatsScript.GetNotebookValue(entryKey);
@@ -89,12 +95,18 @@ public class PlayerMasterController : MonoBehaviour
     {
         return playerStatsScript.Character.ToString()+" ("+name+")";
     }
-
+    /// <summary>
+    /// Get current grip position
+    /// </summary>
+    /// <returns></returns>
     public Vector2 GetGridPosition()
     {
         return playerTokenScript.GetGridPosition();
     }
-
+    /// <summary>
+    /// Get the current tile the token is on
+    /// </summary>
+    /// <returns></returns>
     public BoardTileScript GetTile()
     {
         return playerTokenScript.CurrentTile;

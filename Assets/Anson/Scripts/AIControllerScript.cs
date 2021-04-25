@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// this enum notes what mode the AI is in
+/// </summary>
 public enum AIMode
 {
     Thinking,
@@ -19,7 +22,9 @@ public enum AIMode
     Wait_Suggest,
     Decide_Accuse
 }
-
+/// <summary>
+/// this class controlls the AI's behaviour and actions
+/// </summary>
 public class AIControllerScript : MonoBehaviour
 {
     [Header("AI Mode")]
@@ -41,7 +46,7 @@ public class AIControllerScript : MonoBehaviour
     [SerializeField] RoundManager roundManager;
 
     [Header("Debug")]
-    [SerializeField] bool outputDebugDebugText;
+    [SerializeField] bool outputDebugText;
     [SerializeField] List<string> outputDebugStack;
 
     public AIMode CurrentAIMode { get => currentAIMode; }
@@ -88,13 +93,22 @@ public class AIControllerScript : MonoBehaviour
             OutputDebugStatus();
         }
     }
-
+    /// <summary>
+    /// to output the current status and previous status of the AI
+    /// </summary>
     void OutputDebugStatus()
     {
         OutputDebug("AI:" + currentCharacter.ToString() + ". Current Mode: " + currentAIMode + ". Previous Mode: " + previousAIMode);
 
     }
 
+
+    /// <summary>
+    /// to activate the AI or not
+    /// set which player the AI is controlling
+    /// </summary>
+    /// <param name="b">to activate the AI or not</param>
+    /// <param name="setPlayer">the player the AI gets to control</param>
     public void SetActive(bool b = false, PlayerMasterController setPlayer = null)
     {
         if (b)
@@ -122,6 +136,9 @@ public class AIControllerScript : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// dictates what the AI will do depending on what mode it is in
+    /// </summary>
     void AIBehaviour()
     {
         OutputDebug("AI " + currentCharacter + " currently: ");
@@ -189,7 +206,11 @@ public class AIControllerScript : MonoBehaviour
         }
     }
 
-    public void AIThink()
+    /// <summary>
+    /// the AI enter this when it is thinking to decide what to do
+    /// this should match the flow chart of the AI
+    /// </summary>
+    void AIThink()
     {
         if (currentAIMode.Equals(AIMode.Thinking) && roundManager.CanRoll)
         {
@@ -212,6 +233,11 @@ public class AIControllerScript : MonoBehaviour
         OutputDebug("AI thought to: " + currentAIMode);
     }
 
+
+    /// <summary>
+    /// to set the AI's mode
+    /// </summary>
+    /// <param name="a">the mode to set the AI to</param>
     public void SetAIMode(AIMode a)
     {
         OutputDebug("AI changing from: " + currentAIMode + " to " + a);
@@ -226,18 +252,26 @@ public class AIControllerScript : MonoBehaviour
         currentAIMode = a;
     }
 
+    /// <summary>
+    /// have AI to roll
+    /// </summary>
     public void RollDice()
     {
         userController.RollDice();
         SetAIMode(AIMode.Wait_Dice);
     }
 
+    /// <summary>
+    /// have AI to end turn
+    /// </summary>
     public void EndTurn()
     {
         SetAIMode(AIMode.None);
         userController.EndTurn();
     }
-
+    /// <summary>
+    /// have AI to start turn
+    /// </summary>
     void StartTurn()
     {
         SetAIMode(AIMode.EndTurn);
@@ -247,16 +281,28 @@ public class AIControllerScript : MonoBehaviour
         //SetAIMode(AIMode.Move);
     }
 
+    /// <summary>
+    /// check if the AI player can move
+    /// </summary>
+    /// <returns>can the AI player move</returns>
     bool CanMove()
     {
         return boardManager.MovableTile.Count != 0;
     }
 
+
+    /// <summary>
+    /// check if the player token is still moving
+    /// </summary>
+    /// <returns>check if the token is still moving</returns>
     bool IsTokenMoving()
     {
         return currentPlayerController.IsMoving();
     }
-
+    /// <summary>
+    /// Decides where the AI should move to
+    /// this should match the flow chart of the AI
+    /// </summary>
     public void Decide_Movement()
     {
         SetAIMode(AIMode.Decide_Movement);
@@ -283,7 +329,7 @@ public class AIControllerScript : MonoBehaviour
             int j = 0;
             if (currentPlayerController.IsInRoom())
             {
-
+                //Pick a tile that is not the same as the AI's current room
                 for (int i = 0; i < possibleEntry.Count; i++)
                 {
                     j = i;
@@ -326,8 +372,11 @@ public class AIControllerScript : MonoBehaviour
         }
 
     }
-
-    void Decide_Suggestion()
+    /// <summary>
+    /// Decides what the AI should suggest
+    /// this should match the flow chart of the AI
+    /// </summary>
+    public void Decide_Suggestion()
     {
         SetAIMode(AIMode.Decide_Suggest);
         LoadToGuessList(currentPlayerController.GetToGuessCards());
@@ -346,18 +395,27 @@ public class AIControllerScript : MonoBehaviour
         DelayDecision(pauseTime);
     }
 
+    /// <summary>
+    /// for the round manager to notify that another player finished picking a card to show
+    /// </summary>
     public void NotifySuggestion()
     {
         OutputDebug("AI " + EnumToString.GetStringFromEnum(currentCharacter));
         SetAIMode(AIMode.Thinking);
     }
-
+    /// <summary>
+    /// Load player's guess list
+    /// </summary>
+    /// <param name="c">cards that it still needs to guess</param>
     void LoadToGuessList(List<Card> c)
     {
         toGuessList = new List<Card>(c);
 
     }
-
+    /// <summary>
+    /// to decide a random character from the To Guess List
+    /// </summary>
+    /// <returns>random character</returns>
     CharacterEnum Decide_Character()
     {
         //return CharacterEnum.Initial;
@@ -373,7 +431,11 @@ public class AIControllerScript : MonoBehaviour
         }
         return (CharacterEnum)(Random.Range(0, 6) % 6);
     }
-
+    /// <summary>
+    /// to decide a random weapon from the To Guess List
+    /// 
+    /// </summary>
+    /// <returns>random weapon</returns>
     WeaponEnum Decide_Weapon()
     {
         //return CharacterEnum.Initial;
@@ -389,6 +451,11 @@ public class AIControllerScript : MonoBehaviour
         }
         return (WeaponEnum)(Random.Range(0, 6) % 6);
     }
+    /// <summary>
+    /// to decide a random Room from the To Guess List
+    /// 
+    /// </summary>
+    /// <returns>random room</returns>
     Room Decide_Room()
     {
         //return CharacterEnum.Initial;
@@ -404,7 +471,9 @@ public class AIControllerScript : MonoBehaviour
         }
         return (Room)(Random.Range(0, 9) % 9);
     }
-
+    /// <summary>
+    /// Decides that cards to accuse based on the To Guess List
+    /// </summary>
     void Decide_Accusation()
     {
         SetAIMode(AIMode.Decide_Accuse);
@@ -417,6 +486,11 @@ public class AIControllerScript : MonoBehaviour
         SetAIMode(AIMode.Thinking);
     }
 
+    /// <summary>
+    /// check if the AI is comfident enough to accuse
+    /// this should match the flow chart of the AI
+    /// </summary>
+    /// <returns></returns>
     bool CanAccuse()
     {
         LoadToGuessList(currentPlayerController.GetToGuessCards());
@@ -436,7 +510,10 @@ public class AIControllerScript : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// to delay the time for the next time the AI does something in the Update
+    /// </summary>
+    /// <param name="t"></param>
     void DelayDecision(float t)
     {
         OutputDebug("AI: delaying decision by: " + t.ToString() + " sec.");
@@ -444,9 +521,14 @@ public class AIControllerScript : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// for out putting the debug stack
+    /// if outputDebugText is true, it will out put the the console as well
+    /// </summary>
+    /// <param name="s">string to be out put or stored in the debug stack</param>
     void OutputDebug(string s)
     {
-        if (outputDebugDebugText)
+        if (outputDebugText)
         {
             OutputDebug(s);
         }
@@ -456,7 +538,10 @@ public class AIControllerScript : MonoBehaviour
             outputDebugStack.RemoveAt(0);
         }
     }
-
+    /// <summary>
+    /// Get the Output Debug stack in string
+    /// </summary>
+    /// <returns>string of the debug stack</returns>
     public string GetOutputDebugString()
     {
         string temp = "";
