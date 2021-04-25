@@ -271,7 +271,7 @@ public class PlayerTokenScript : MonoBehaviour
 
     public bool CanTakeShortcut()
     {
-        return (currentRoom != null && currentRoom.HasShortcut() && roundManager.CanRoll);
+        return (currentRoom != null && currentRoom.HasShortcut() && (roundManager == null|| roundManager.CanRoll));
     }
 
     public bool TakeShortcut()
