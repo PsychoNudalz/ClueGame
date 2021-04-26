@@ -318,10 +318,12 @@ public class BoardBuilder : MonoBehaviour
         tilescript.SetCharacter(character, characterName);
         tilescript.GridPosition = new Vector2(x, z);
         tilescript.TileType = TileTypeEnum.Start;
+        tilescript.SetToken(playerToken);
         
         //Set player token character, start tile and close up point
         playerToken.GetComponentInChildren<PlayerTokenScript>().SetCharacter(character,tilescript);
         playerToken.GetComponentInChildren<CloseUpPointScript>().SetCloseUpPointName(playerCameraTarget);
+        playerToken.GetComponentInChildren<PlayerTokenScript>().CurrentTile = tilescript;
         
     }
 
