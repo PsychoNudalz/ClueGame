@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['setofcards_859',['setOfcards',['../class_card_manager.html#ab05dfb92b4d5fdcb6c99023b0ccec27a',1,'CardManager']]],
-  ['showcardanimator_860',['showCardAnimator',['../class_u_i_handler.html#ad39d76c7890f5f9113a9c7dc8fb4052d',1,'UIHandler']]],
-  ['sugcharacter_861',['sugCharacter',['../class_suggestion.html#a737db31d077406fb0a3f6b6276695d16',1,'Suggestion']]],
-  ['sugroom_862',['sugRoom',['../class_suggestion.html#a73e8d2f771a64bc783ce83df8fafb71b',1,'Suggestion']]],
-  ['sugweapon_863',['sugWeapon',['../class_suggestion.html#a6a5a62957053deae6990068efb28eac2',1,'Suggestion']]]
+  ['room_879',['room',['../class_room_card.html#aaee2a1b49038db02250f95bc60c26a1e',1,'RoomCard']]],
+  ['roomdd_880',['roomDD',['../class_suggestion_test.html#a499d6f53d6a366bd18af1ded8697b6c1',1,'SuggestionTest']]],
+  ['rotationlerptime_881',['rotationLerpTime',['../class_unity_template_projects_1_1_simple_camera_controller.html#a4b8acc62cd20ada031234bdc9c612126',1,'UnityTemplateProjects::SimpleCameraController']]],
+  ['roundmanager_882',['roundManager',['../class_test_u_i_script.html#a4607f9824698f3b7e4cca5db49d72589',1,'TestUIScript']]]
 ];

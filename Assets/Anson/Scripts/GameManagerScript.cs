@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// This controls the starting and exiting the game loop
+/// </summary>
 public class GameManagerScript : MonoBehaviour
 {
     [Header("Components")]
@@ -17,8 +20,12 @@ public class GameManagerScript : MonoBehaviour
     private void Start()
     {
         AssignAllComponents();
-    }
+        Application.targetFrameRate = 300;
 
+    }
+    /// <summary>
+    /// starting and initialing the game and it's components
+    /// </summary>
     public void StartGame()
     {
         if (FindObjectOfType<GameSetUpScript>() != null)
@@ -34,13 +41,17 @@ public class GameManagerScript : MonoBehaviour
         uIHandler.StartBehaviour();
         roundManager.StartTurn();
     }
-
+    /// <summary>
+    /// returning to main menu
+    /// </summary>
     public void LeaveToMenu()
     {
         SceneManager.LoadScene(0);
     }
 
-
+    /// <summary>
+    /// assigning all the components if not linked
+    /// </summary>
     public void AssignAllComponents()
     {
         if (playerMasterController == null)

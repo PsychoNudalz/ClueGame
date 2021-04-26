@@ -1,5 +1,10 @@
 \hypertarget{class_player_stats_script}{}\doxysection{Player\+Stats\+Script Class Reference}
 \label{class_player_stats_script}\index{PlayerStatsScript@{PlayerStatsScript}}
+
+
+saves the character the player is and the deck it has  
+
+
 Inheritance diagram for Player\+Stats\+Script\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,7 +15,7 @@ Inheritance diagram for Player\+Stats\+Script\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_player_stats_script_a54cae1c61ecf8a4af6ae97724b0dc725}{Initialize\+Notebook}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise the notebook \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_player_stats_script_a224018c7f42a789314a8107719a2595c}{Get\+Notebook\+Value}} (System.\+Enum entry\+Key)
 \item 
 void \mbox{\hyperlink{class_player_stats_script_a77e8fc2ed73b8594b20c1c913a1ac1e9}{Set\+Notebook\+Value}} (System.\+Enum entry\+Key, bool value)
@@ -22,13 +27,13 @@ bool \mbox{\hyperlink{class_player_stats_script_ab6e2e29c99a27c5b76584d16cca75c2
 bool \mbox{\hyperlink{class_player_stats_script_a53b9b6ed7fe6d057381e0101099ca363}{Add\+Card}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cs)
 \begin{DoxyCompactList}\small\item\em Add a list of card to the player\textquotesingle{}s deck \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_player_stats_script_a4bc4319e9c609f83c177843b6d23edf2}{Find\+Card}} (\mbox{\hyperlink{class_card}{Card}} c)
-\begin{DoxyCompactList}\small\item\em find if the player has a certain card return a list of cards found \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em find if the player has a certain card returns the card that\textquotesingle{}s found \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_stats_script_a52b81eededa282574178d4eb2efa1a1d}{Find\+Card}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
-\item 
+\begin{DoxyCompactList}\small\item\em find if the player has a certain card from a passed list returns the list of cards that the player have \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_player_stats_script_a5229018c9a9248a90f447ca9e271ee0f}{Inititalise\+To\+Guess\+List}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em initialise the To Guess List it is the list that keeps track of which card was not suggested \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_player_stats_script_a9cfb94bd7661f4120b9ea69c025bd368}{Remove\+To\+Gess\+Card}} (\mbox{\hyperlink{class_card}{Card}} c)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em remove a selected card from To Guess List \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,6 +45,11 @@ List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_st
 \item 
 List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_player_stats_script_a0be369e1350c61a7a8ea7201a610d68a}{To\+Guess\+List}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+saves the character the player is and the deck it has 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -87,15 +97,15 @@ if a card from cs is in the deck already
 
 
 
-find if the player has a certain card return a list of cards found 
+find if the player has a certain card returns the card that\textquotesingle{}s found 
 
 
 \begin{DoxyParams}{Parameters}
-{\em c} & \\
+{\em c} & card to be found\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+the found card or null if none found
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_player_stats_script_a52b81eededa282574178d4eb2efa1a1d}\label{class_player_stats_script_a52b81eededa282574178d4eb2efa1a1d}} 
 \index{PlayerStatsScript@{PlayerStatsScript}!FindCard@{FindCard}}
@@ -103,6 +113,18 @@ find if the player has a certain card return a list of cards found
 \doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Player\+Stats\+Script.\+Find\+Card (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
 
+
+
+find if the player has a certain card from a passed list returns the list of cards that the player have 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cards} & list of cards to be found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the list of cards that the player have 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_player_stats_script_a224018c7f42a789314a8107719a2595c}\label{class_player_stats_script_a224018c7f42a789314a8107719a2595c}} 
 \index{PlayerStatsScript@{PlayerStatsScript}!GetNotebookValue@{GetNotebookValue}}
 \index{GetNotebookValue@{GetNotebookValue}!PlayerStatsScript@{PlayerStatsScript}}
@@ -115,11 +137,19 @@ find if the player has a certain card return a list of cards found
 \doxysubsubsection{\texorpdfstring{InitializeNotebook()}{InitializeNotebook()}}
 {\footnotesize\ttfamily void Player\+Stats\+Script.\+Initialize\+Notebook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Initialise the notebook 
+
 \mbox{\Hypertarget{class_player_stats_script_a5229018c9a9248a90f447ca9e271ee0f}\label{class_player_stats_script_a5229018c9a9248a90f447ca9e271ee0f}} 
 \index{PlayerStatsScript@{PlayerStatsScript}!InititaliseToGuessList@{InititaliseToGuessList}}
 \index{InititaliseToGuessList@{InititaliseToGuessList}!PlayerStatsScript@{PlayerStatsScript}}
 \doxysubsubsection{\texorpdfstring{InititaliseToGuessList()}{InititaliseToGuessList()}}
 {\footnotesize\ttfamily void Player\+Stats\+Script.\+Inititalise\+To\+Guess\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+initialise the To Guess List it is the list that keeps track of which card was not suggested 
 
 \mbox{\Hypertarget{class_player_stats_script_a9cfb94bd7661f4120b9ea69c025bd368}\label{class_player_stats_script_a9cfb94bd7661f4120b9ea69c025bd368}} 
 \index{PlayerStatsScript@{PlayerStatsScript}!RemoveToGessCard@{RemoveToGessCard}}
@@ -127,6 +157,18 @@ find if the player has a certain card return a list of cards found
 \doxysubsubsection{\texorpdfstring{RemoveToGessCard()}{RemoveToGessCard()}}
 {\footnotesize\ttfamily bool Player\+Stats\+Script.\+Remove\+To\+Gess\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
 
+
+
+remove a selected card from To Guess List 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & card to be removed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the card is in the To Guess List
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_player_stats_script_ae71569d6008ef02ad036e3d6de2c4c13}\label{class_player_stats_script_ae71569d6008ef02ad036e3d6de2c4c13}} 
 \index{PlayerStatsScript@{PlayerStatsScript}!SetCharacter@{SetCharacter}}
 \index{SetCharacter@{SetCharacter}!PlayerStatsScript@{PlayerStatsScript}}
@@ -179,4 +221,4 @@ Set the player\textquotesingle{}s character
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_player_stats_script_8cs}{Player\+Stats\+Script.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\mbox{\hyperlink{_player_stats_script_8cs}{Player\+Stats\+Script.\+cs}}\end{DoxyCompactItemize}

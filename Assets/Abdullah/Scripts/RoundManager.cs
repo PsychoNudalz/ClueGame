@@ -228,7 +228,7 @@ public class RoundManager : MonoBehaviour
     {
         if (c != null)
         {
-            GetCurrentPlayer().RemoveToGessCard(c);
+            GetCurrentPlayer().RemoveToGuessCard(c);
         }
         if (GetCurrentPlayer().isAI)
         {

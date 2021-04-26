@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
+/// <summary>
+/// super class for all testing with connection to UI outputs
+/// </summary>
 public class TestUIScript : MonoBehaviour
 {
     [Header("Components")]

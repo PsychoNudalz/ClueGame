@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['test_864',['test',['../class_card_manager.html#afbea4566292c82f137f4ca1ac4611a1d',1,'CardManager']]],
-  ['turncontroller_865',['turnController',['../class_test_u_i_script.html#ae65c2381a03dd1ed06f917020a700c9b',1,'TestUIScript']]],
-  ['txt_866',['txt',['../class_accusation_card_slot.html#ae3252dca819be512158971d3e131e274',1,'AccusationCardSlot.txt()'],['../class_card_slot.html#ae6fcf2ebab0b2a504ca88f2fea92d939',1,'CardSlot.txt()']]]
+  ['setofcards_883',['setOfcards',['../class_card_manager.html#ab05dfb92b4d5fdcb6c99023b0ccec27a',1,'CardManager']]],
+  ['showcardanimator_884',['showCardAnimator',['../class_u_i_handler.html#ad39d76c7890f5f9113a9c7dc8fb4052d',1,'UIHandler']]],
+  ['sugcharacter_885',['sugCharacter',['../class_suggestion.html#a737db31d077406fb0a3f6b6276695d16',1,'Suggestion']]],
+  ['sugroom_886',['sugRoom',['../class_suggestion.html#a73e8d2f771a64bc783ce83df8fafb71b',1,'Suggestion']]],
+  ['sugweapon_887',['sugWeapon',['../class_suggestion.html#a6a5a62957053deae6990068efb28eac2',1,'Suggestion']]]
 ];

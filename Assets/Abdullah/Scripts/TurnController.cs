@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// This handles the turn between the players
+/// </summary>
 public class TurnController : MonoBehaviour
 {
    [SerializeField] List<PlayerMasterController> currentPlayers;

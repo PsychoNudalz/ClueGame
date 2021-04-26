@@ -69,6 +69,9 @@ $(function() {
 <div class="title">RoundManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Control what each player can do during their round/ turn  
+ <a href="class_round_manager.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RoundManager:</div>
 <div class="dyncontent">
@@ -82,14 +85,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab795c17242b95ab2cef508da5daa2593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it  <a href="class_round_manager.html#ab795c17242b95ab2cef508da5daa2593">More...</a><br /></td></tr>
 <tr class="separator:ab795c17242b95ab2cef508da5daa2593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfd4f66436e06c12a25c9236b629f369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#adfd4f66436e06c12a25c9236b629f369">MovePlayer</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> b)</td></tr>
+<tr class="memdesc:adfd4f66436e06c12a25c9236b629f369"><td class="mdescLeft">&#160;</td><td class="mdescRight">moving the current player to the selected tile  <a href="class_round_manager.html#adfd4f66436e06c12a25c9236b629f369">More...</a><br /></td></tr>
 <tr class="separator:adfd4f66436e06c12a25c9236b629f369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a780da336fd16dcaee0f00306578f13b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_card.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a780da336fd16dcaee0f00306578f13b4">AIShowCard</a> (<a class="el" href="class_player_master_controller.html">PlayerMasterController</a> playerMasterController, List&lt; <a class="el" href="class_card.html">Card</a> &gt; c)</td></tr>
 <tr class="separator:a780da336fd16dcaee0f00306578f13b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46700375939ad4c047b64ca18364f2a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a46700375939ad4c047b64ca18364f2a3">MakeSuggestion</a> (List&lt; <a class="el" href="class_card.html">Card</a> &gt; sug)</td></tr>
-<tr class="separator:a46700375939ad4c047b64ca18364f2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596fc1c822ebb74dad8d238b15b1ea3a"><td class="memItemLeft" align="right" valign="top">Tuple&lt; <a class="el" href="class_player_master_controller.html">PlayerMasterController</a>, List&lt; <a class="el" href="class_card.html">Card</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a596fc1c822ebb74dad8d238b15b1ea3a">MakeSuggestion</a> (List&lt; <a class="el" href="class_card.html">Card</a> &gt; sug)</td></tr>
+<tr class="memdesc:a596fc1c822ebb74dad8d238b15b1ea3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate through the rest of the players searching for if 1 or more of the cards were found  <a href="class_round_manager.html#a596fc1c822ebb74dad8d238b15b1ea3a">More...</a><br /></td></tr>
+<tr class="separator:a596fc1c822ebb74dad8d238b15b1ea3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cf32ad7ffd3cafc902ae5faeb7605f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8">NotifySuggestion</a> (<a class="el" href="class_card.html">Card</a> c)</td></tr>
+<tr class="memdesc:a6cf32ad7ffd3cafc902ae5faeb7605f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">removing a card from the player's To Guess List notify the AI if a player finished showing a suggested card  <a href="class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8">More...</a><br /></td></tr>
 <tr class="separator:a6cf32ad7ffd3cafc902ae5faeb7605f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab691cd5cd773e23822b237834b1fcb0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#ab691cd5cd773e23822b237834b1fcb0a">MakeAccusation</a> (List&lt; <a class="el" href="class_card.html">Card</a> &gt; cards)</td></tr>
+<tr class="memdesc:ab691cd5cd773e23822b237834b1fcb0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">to have the current player to make an accusation eliminates the player if it is wrong wins the game if correct  <a href="class_round_manager.html#ab691cd5cd773e23822b237834b1fcb0a">More...</a><br /></td></tr>
 <tr class="separator:ab691cd5cd773e23822b237834b1fcb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29177f2e27c6c4af55dfa3c48d67cfb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0">EndTurn</a> ()</td></tr>
 <tr class="memdesc:a29177f2e27c6c4af55dfa3c48d67cfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ending the turn. Returns the next player  <a href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0">More...</a><br /></td></tr>
@@ -101,6 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aab3f49a5e05508a8e023a497e763c1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the player controller for the current player  <a href="class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8">More...</a><br /></td></tr>
 <tr class="separator:aab3f49a5e05508a8e023a497e763c1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabdab19afca9250b4706639633d96804"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_board_tile_script.html">BoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#aabdab19afca9250b4706639633d96804">GetBoardMovableTiles</a> ()</td></tr>
+<tr class="memdesc:aabdab19afca9250b4706639633d96804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the tiles that the player can move to  <a href="class_round_manager.html#aabdab19afca9250b4706639633d96804">More...</a><br /></td></tr>
 <tr class="separator:aabdab19afca9250b4706639633d96804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -112,7 +120,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a5081895b0186c09d29f789642ad098db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a5081895b0186c09d29f789642ad098db">CanAcc</a><code> [get]</code></td></tr>
 <tr class="separator:a5081895b0186c09d29f789642ad098db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Control what each player can do during their round/ turn </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a780da336fd16dcaee0f00306578f13b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a780da336fd16dcaee0f00306578f13b4">&#9670;&nbsp;</a></span>AIShowCard()</h2>
 
@@ -176,6 +186,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the tiles that the player can move to </p>
+<dl class="section return"><dt>Returns</dt><dd>list of tiles the player can move to</dd></dl>
+
 </div>
 </div>
 <a id="aab3f49a5e05508a8e023a497e763c1c8"></a>
@@ -214,16 +227,24 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>to have the current player to make an accusation eliminates the player if it is wrong wins the game if correct </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cards</td><td>cards for accusation</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a46700375939ad4c047b64ca18364f2a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46700375939ad4c047b64ca18364f2a3">&#9670;&nbsp;</a></span>MakeSuggestion()</h2>
+<a id="a596fc1c822ebb74dad8d238b15b1ea3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596fc1c822ebb74dad8d238b15b1ea3a">&#9670;&nbsp;</a></span>MakeSuggestion()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void RoundManager.MakeSuggestion </td>
+          <td class="memname">Tuple&lt;<a class="el" href="class_player_master_controller.html">PlayerMasterController</a>, List&lt;<a class="el" href="class_card.html">Card</a>&gt; &gt; RoundManager.MakeSuggestion </td>
           <td>(</td>
           <td class="paramtype">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td>
           <td class="paramname"><em>sug</em></td><td>)</td>
@@ -231,6 +252,14 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Iterate through the rest of the players searching for if 1 or more of the cards were found </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sug</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -250,6 +279,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>moving the current player to the selected tile </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>tile to move the player</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a6cf32ad7ffd3cafc902ae5faeb7605f8"></a>
@@ -267,6 +304,14 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>removing a card from the player's To Guess List notify the AI if a player finished showing a suggested card </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>card to be removed from To Guess List</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -383,7 +428,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Abdullah/Scripts/<a class="el" href="_round_manager_8cs.html">RoundManager.cs</a></li>
+<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Abdullah/Scripts/<a class="el" href="_round_manager_8cs.html">RoundManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
