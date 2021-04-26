@@ -97,7 +97,7 @@ public class TurnController : MonoBehaviour
         }
     }
 
-
+    
     public bool SetCurrentPlayerToNext() 
     {
         int loopFlag = 0;

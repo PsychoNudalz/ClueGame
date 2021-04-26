@@ -10,7 +10,7 @@ public class SuggestionTest : TestUIScript
 
     public GameManagerScript gameManager;
 
-    [Header ("Player Hand Text")]
+    [Header("Player Hand Text")]
     public TextMeshProUGUI Player1;
     public TextMeshProUGUI Player2;
     public TextMeshProUGUI Player3;
@@ -19,8 +19,9 @@ public class SuggestionTest : TestUIScript
     public TextMeshProUGUI Player6;
     public TextMeshProUGUI playerFound;
     public TextMeshProUGUI currentPLayer;
+    public TextMeshProUGUI answers;
 
-    [Header ("Option Dropdown")]
+    [Header("Option Dropdown")]
     public TMP_Dropdown roomDD;
     public TMP_Dropdown weaponDD;
     public TMP_Dropdown characterDD;
@@ -40,7 +41,20 @@ public class SuggestionTest : TestUIScript
     {
         gameManager.StartGame();
         GetPlayerCardsForUI();
+        AnswersText();
     }
+
+    /// <summary>
+    /// Set text to display answers on test scene
+    /// </summary>
+    void AnswersText() {
+        string temp = "";
+        foreach (Card c in cardManager.answers) {
+            temp += c.ToString() + "\n";
+        }
+        answers.SetText("Answers: "+temp);
+    }
+
 
     /// <summary>
     /// Add all enums to the dropdown lists in the test UI
@@ -63,7 +77,8 @@ public class SuggestionTest : TestUIScript
     /// <summary>
     /// get test choices and make suggestion
     /// </summary>
-    public void MakeSuggestion() {
+    public void MakeSuggestion()
+    {
         
         userController.SetRoom((Room)roomDD.value);
         userController.SetWeapon((WeaponEnum)weaponDD.value);
@@ -75,16 +90,24 @@ public class SuggestionTest : TestUIScript
         Card[] sugTest = { roomCard, weaponCard, characterCard };
 
         userController.MakeSuggestion();
+        try
+        {
+            Tuple<PlayerMasterController, List<Card>> foundPlayers = roundManager.MakeSuggestion(new List<Card>(sugTest));
 
-        Tuple<PlayerMasterController, List<Card>> foundPlayers = roundManager.MakeSuggestion(new List<Card>(sugTest));
 
-        string temp = foundPlayers.Item1.ToString();
+            string temp = foundPlayers.Item1.ToString();
 
-        foreach (Card c in foundPlayers.Item2) {
-            temp += c.ToString() + ",";
+            foreach (Card c in foundPlayers.Item2)
+            {
+                temp += c.ToString() + ",";
+            }
+            playerFound.SetText(temp);
+            Debug.Log(((Room)roomDD.value).ToString() + ", " + ((WeaponEnum)weaponDD.value).ToString() + ", " + ((CharacterEnum)characterDD.value).ToString());
         }
-        playerFound.SetText(temp);
-        Debug.Log(((Room)roomDD.value).ToString()+", " + ((WeaponEnum)weaponDD.value).ToString() + ", " + ((CharacterEnum)characterDD.value).ToString());
+        catch (System.NullReferenceException e) {
+            playerFound.SetText("No players with suggested card found");
+        }
+        
     }
 
 
