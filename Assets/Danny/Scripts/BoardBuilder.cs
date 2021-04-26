@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+/// <summary>
+/// Method to create the game board from a .csv file
+/// </summary>
 public class BoardBuilder : MonoBehaviour
 {
 
@@ -59,9 +61,6 @@ public class BoardBuilder : MonoBehaviour
         Initialise();
     }
 
-    /*
-     * Method to create the board, initialise and place all items and pass references to board manager
-     */
     /// <summary>
     /// Method to create the board, initialise and place all items and pass references to board manager
     /// </summary>
@@ -88,9 +87,9 @@ public class BoardBuilder : MonoBehaviour
         boardManager.PlaceWeapons();
     }
 
-    /*
-     * Load all prefabs from resources folder
-     */
+    /// <summary>
+    /// Load all prefabs from resources folder
+    /// </summary>
     private void LoadResources()
     {
         //Load board csv file
@@ -121,9 +120,9 @@ public class BoardBuilder : MonoBehaviour
         StudyPrefab = Resources.Load("Danny/Prefabs/Rooms/Study") as GameObject;
     }
 
-    /*
-     * Create a 2d array from the .csv file to build the board from
-     */
+    /// <summary>
+    /// Create a 2d array from the .csv file to build the board from
+    /// </summary>
     private void GenerateBoardArrayFromCSV()
     {
         //Create string array from .csv file
@@ -147,9 +146,9 @@ public class BoardBuilder : MonoBehaviour
         */
     }
 
-    /*
-     * Build the board using various helper methods
-     */
+    /// <summary>
+    /// Build the board using various helper methods
+    /// </summary>
     private void BuildBoard()
     {
         //Initialize gameobjects to organize board objects
@@ -217,18 +216,22 @@ public class BoardBuilder : MonoBehaviour
         }
     }
 
-    /*
-     * Randomly place Free roll / accusation tiles.
-     */
+    /// <summary>
+    /// Randomly place Free roll / accusation tiles.
+    /// </summary>
     private void PlaceBonusTiles()
     {
         CreateFreeRollTiles();
         CreateFreeSuggestionTiles();
     }
 
-    /*
-     * Instantiate a shortcut tile and set its parameters
-     */
+    /// <summary>
+    /// Instantiate a shortcut tile and set its parameters
+    /// </summary>
+    /// <param name="x">X position to create the tile</param>
+    /// <param name="z">Z position to create the tile</param>
+    /// <param name="shortcutRooms">Rooms to add to Shortcut tile</param>
+    /// <param name="rotation">Rotation to set the tile</param>
     private void CreateShortcutTile(int x, int z, string shortcutRooms, string rotation)
     {
         //Create shortcut tile
@@ -250,17 +253,15 @@ public class BoardBuilder : MonoBehaviour
         shortcutTile.name = $"Shortcut {rooms[0]} ==> {rooms[1]} ( {x} : {z} )";
     }
 
-    /*
-    * Instantiate a roomEntrance tile and set its parameters
-    */
+
     /// <summary>
-    /// 
+    /// Instantiate a roomEntrance tile and set its parameters
     /// </summary>
-    /// <param name="x"></param>
-    /// <param name="z"></param>
-    /// <param name="room"></param>
-    /// <param name="rotation"></param>
-    /// <param name="parent"></param>
+    /// <param name="x">X position to create the tile</param>
+    /// <param name="z">Z position to create the tile</param>
+    /// <param name="room">Room that tile is entrance to</param>
+    /// <param name="rotation">Rotation to set tile</param>
+    /// <param name="parent">GameObject to parent tile to</param>
     private void CreateRoomEntranceTile(int x, int z, string room, string rotation, GameObject parent)
     {
         //Create room entry tile 
@@ -277,9 +278,14 @@ public class BoardBuilder : MonoBehaviour
         roomEntryTile.name = $"Room Entry Tile - {room} - ( {x} : {z} )";
     }
 
-    /*
-    * Instantiate a start tile and set its parameters
-    */
+
+    /// <summary>
+    /// Instantiate a start tile and set its parameters
+    /// </summary>
+    /// <param name="x">X position to create the tile</param>
+    /// <param name="z">Z position to create the tile</param>
+    /// <param name="characterName">Character to assign to the Tile</param>
+    /// <param name="parent">GameObject to parent tile to</param>
     private void CreateStartTile(int x, int z, string characterName, GameObject parent)
     {
         //Get camera and character enum from string
@@ -338,9 +344,12 @@ public class BoardBuilder : MonoBehaviour
         
     }
 
-    /*
-    * Instantiate a General tile and set its parameters
-    */
+    /// <summary>
+    /// Instantiate a General tile and set its parameters
+    /// </summary>
+    /// <param name="x">X position to create the tile</param>
+    /// <param name="z">Z position to create the tile</param>
+    /// <param name="parent">GameObject to parent tile to</param>
     private void CreateBoardTile(int x, int z, GameObject parent)
     {
         //Create board tile, set name, type and coordinates
@@ -351,9 +360,12 @@ public class BoardBuilder : MonoBehaviour
         tileScript.TileType = TileTypeEnum.General;
     }
 
-    /*
-    * Instantiate a Room and set its parameters
-    */
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="x">X position to create the tile</param>
+    /// <param name="z">Z position to create the tile</param>
+    /// <param name="roomName">Room to instantiate</param>
     private void CreateRoom(int x, int z, string roomName)
     {
         //Create room from roomName string and set enum
@@ -404,10 +416,10 @@ public class BoardBuilder : MonoBehaviour
                 break;
         }
     }
-    
-    /*
-     * Instantiate all weapon tokens
-     */
+
+    /// <summary>
+    /// Instantiate all weapon tokens
+    /// </summary>
     private void CreateWeapons()
     {
         foreach (WeaponEnum weapon in Enum.GetValues(typeof(WeaponEnum))){
@@ -420,9 +432,9 @@ public class BoardBuilder : MonoBehaviour
         }
     }
 
-    /*
-     * Randomly replace required number of general tiles with FreeAccusation Tiles
-     */
+    /// <summary>
+    /// Randomly replace required number of general tiles with FreeAccusation Tiles
+    /// </summary>
     private void CreateFreeSuggestionTiles()
     {
         int tilesPlaced = 0;
@@ -451,9 +463,9 @@ public class BoardBuilder : MonoBehaviour
         }
     }
 
-    /*
-     * Randomly replace required number of general tiles with FreeRoll Tiles
-     */
+    /// <summary>
+    /// Randomly replace required number of general tiles with FreeRoll Tiles
+    /// </summary>
     private void CreateFreeRollTiles()
     {
         int tilesPlaced = 0;
@@ -482,9 +494,11 @@ public class BoardBuilder : MonoBehaviour
         }
     }
 
-    /*
-     * Check for nearby bonus / start tiles in order to space out around the board
-     */
+    /// <summary>
+    /// Check for nearby bonus / start tiles in order to space out around the board
+    /// </summary>
+    /// <param name="tile">Tile to check for nearby free roll or free suggestion tiles</param>
+    /// <returns></returns>
     private bool CheckNearbyTiles(BoardTileScript tile)
     {
         List<BoardTileScript> nearbyTiles = boardManager.bfs(tile,6);
