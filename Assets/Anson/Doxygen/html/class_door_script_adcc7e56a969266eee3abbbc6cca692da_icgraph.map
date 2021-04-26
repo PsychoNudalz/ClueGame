@@ -1,5 +1,5 @@
 <map id="DoorScript.CloseDoor" name="DoorScript.CloseDoor">
-<area shape="rect" id="node1" title=" " alt="" coords="415,32,593,61"/>
-<area shape="rect" id="node2" href="$class_room_entry_board_tile_script.html#a72d3a7835dcd42fc00e6c6caf0d1e174" title=" " alt="" coords="5,5,367,35"/>
-<area shape="rect" id="node3" href="$class_room_entry_board_tile_script.html#a89563c1c09bdf5bb73347dd676a10f2d" title=" " alt="" coords="26,59,346,88"/>
+<area shape="rect" id="node1" title="Close the door" alt="" coords="415,32,593,61"/>
+<area shape="rect" id="node2" href="$class_room_entry_board_tile_script.html#a72d3a7835dcd42fc00e6c6caf0d1e174" title="Open door, pause start player entry, pause then close door" alt="" coords="5,5,367,35"/>
+<area shape="rect" id="node3" href="$class_room_entry_board_tile_script.html#a89563c1c09bdf5bb73347dd676a10f2d" title="Move player to exit point, open door, exit player, close door, set player moving to target tile." alt="" coords="26,59,346,88"/>
 </map>

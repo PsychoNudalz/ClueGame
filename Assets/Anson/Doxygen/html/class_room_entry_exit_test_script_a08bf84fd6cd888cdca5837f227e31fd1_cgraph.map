@@ -1,7 +1,7 @@
 <map id="RoomEntryExitTestScript.Update" name="RoomEntryExitTestScript.Update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,32,256,61"/>
-<area shape="rect" id="node2" href="$class_room_entry_exit_test_script.html#a0c8b4f14f38fe1d1ab046735fafcd546" title=" " alt="" coords="316,5,651,35"/>
-<area shape="rect" id="node3" href="$class_room_entry_exit_test_script.html#a10ae072487c9377bd319cc46bca43700" title=" " alt="" coords="304,59,663,88"/>
+<area shape="rect" id="node1" title="Update players in room text and buttons interacable" alt="" coords="5,32,256,61"/>
+<area shape="rect" id="node2" href="$class_room_entry_exit_test_script.html#a0c8b4f14f38fe1d1ab046735fafcd546" title="Set buttons interacable" alt="" coords="316,5,651,35"/>
+<area shape="rect" id="node3" href="$class_room_entry_exit_test_script.html#a10ae072487c9377bd319cc46bca43700" title="Set players in room text" alt="" coords="304,59,663,88"/>
 <area shape="rect" id="node4" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="711,32,989,61"/>
-<area shape="rect" id="node5" href="$class_room_player_slot.html#a272109cc27023f73bb47253a07511ca9" title=" " alt="" coords="715,85,985,115"/>
+<area shape="rect" id="node5" href="$class_room_player_slot.html#a272109cc27023f73bb47253a07511ca9" title="Returns the player in the slot" alt="" coords="715,85,985,115"/>
 </map>

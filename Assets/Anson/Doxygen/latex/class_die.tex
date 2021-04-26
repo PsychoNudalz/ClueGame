@@ -2,38 +2,53 @@
 \label{class_die}\index{Die@{Die}}
 
 
-Inheritance diagram for Die\+:
-% FIG 0
+Script for the \mbox{\hyperlink{class_die}{Die}} Gameobject  
 
 
-Collaboration diagram for Die\+:
-% FIG 1
+
+
+Inheritance diagram for Die\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_die__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Die\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_die__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5}{Roll\+Die}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Roll the die \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_die_af3f246c8772c932e4ed78d35aed2e8cd}{Is\+Ready\+To\+Roll}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Is die ready to roll \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_die_a390d46459637fd249926cda472255d84}{Can\+Reset\+Die}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Can the die be reset \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}{Reset\+Die}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reset \mbox{\hyperlink{class_die}{Die}} to original position \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_die_ad1f02edcfdd486ab3da75162daab3570}{Get\+Value\+Die}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the value of the die \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_die_a80010ae1efa380a23ae3eb9596e37b0f}{Start}} ()
 \item 
 void \mbox{\hyperlink{class_die_aa0a20a760742d16532e25f94f5e33395}{Initialise}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise \mbox{\hyperlink{class_die}{Die}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_die_a1720b01fed5d5276f3761c944baa8126}{Update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em If die has been thrown, landed and stopped moving then update die value. If die stops on edge then roll again \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}{Roll\+Again}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Roll again in event of die getting stuck on edge \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}{Check\+Value\+Die}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set the current value of the die if on ground 0 if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,6 +66,11 @@ int \mbox{\hyperlink{class_die_ad79818183730430f990e6d00957947ae}{die\+Value}} =
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Script for the \mbox{\hyperlink{class_die}{Die}} Gameobject 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_die_a390d46459637fd249926cda472255d84}\label{class_die_a390d46459637fd249926cda472255d84}} 
 \index{Die@{Die}!CanResetDie@{CanResetDie}}
@@ -58,86 +78,196 @@ int \mbox{\hyperlink{class_die_ad79818183730430f990e6d00957947ae}{die\+Value}} =
 \doxysubsubsection{\texorpdfstring{CanResetDie()}{CanResetDie()}}
 {\footnotesize\ttfamily bool Die.\+Can\+Reset\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 2
+
+
+Can the die be reset 
+
+\begin{DoxyReturn}{Returns}
+trueif can be reset, false if not
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_a390d46459637fd249926cda472255d84_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}\label{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}} 
 \index{Die@{Die}!CheckValueDie@{CheckValueDie}}
 \index{CheckValueDie@{CheckValueDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{CheckValueDie()}{CheckValueDie()}}
 {\footnotesize\ttfamily void Die.\+Check\+Value\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 3
-Here is the caller graph for this function\+:
-% FIG 4
+
+
+Set the current value of the die if on ground 0 if not. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_ad1f02edcfdd486ab3da75162daab3570}\label{class_die_ad1f02edcfdd486ab3da75162daab3570}} 
 \index{Die@{Die}!GetValueDie@{GetValueDie}}
 \index{GetValueDie@{GetValueDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{GetValueDie()}{GetValueDie()}}
 {\footnotesize\ttfamily int Die.\+Get\+Value\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 5
+
+
+Get the value of the die 
+
+\begin{DoxyReturn}{Returns}
+Current value of the die, 0 if not valid
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_ad1f02edcfdd486ab3da75162daab3570_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_aa0a20a760742d16532e25f94f5e33395}\label{class_die_aa0a20a760742d16532e25f94f5e33395}} 
 \index{Die@{Die}!Initialise@{Initialise}}
 \index{Initialise@{Initialise}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
 {\footnotesize\ttfamily void Die.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:
-% FIG 6
+
+
+Initialise \mbox{\hyperlink{class_die}{Die}} 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{class_die_aa0a20a760742d16532e25f94f5e33395_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_af3f246c8772c932e4ed78d35aed2e8cd}\label{class_die_af3f246c8772c932e4ed78d35aed2e8cd}} 
 \index{Die@{Die}!IsReadyToRoll@{IsReadyToRoll}}
 \index{IsReadyToRoll@{IsReadyToRoll}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{IsReadyToRoll()}{IsReadyToRoll()}}
 {\footnotesize\ttfamily bool Die.\+Is\+Ready\+To\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 7
+
+
+Is die ready to roll 
+
+\begin{DoxyReturn}{Returns}
+true if ready to roll, false if not
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_af3f246c8772c932e4ed78d35aed2e8cd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}\label{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}} 
 \index{Die@{Die}!ResetDie@{ResetDie}}
 \index{ResetDie@{ResetDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{ResetDie()}{ResetDie()}}
 {\footnotesize\ttfamily void Die.\+Reset\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 8
+
+
+Reset \mbox{\hyperlink{class_die}{Die}} to original position 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_abc11c3d2bf0c0fba1555093eb5a8469e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}\label{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}} 
 \index{Die@{Die}!RollAgain@{RollAgain}}
 \index{RollAgain@{RollAgain}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{RollAgain()}{RollAgain()}}
 {\footnotesize\ttfamily void Die.\+Roll\+Again (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
+
+
+Roll again in event of die getting stuck on edge 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5}\label{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5}} 
 \index{Die@{Die}!RollDie@{RollDie}}
 \index{RollDie@{RollDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{RollDie()}{RollDie()}}
 {\footnotesize\ttfamily void Die.\+Roll\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 11
-Here is the caller graph for this function\+:
-% FIG 12
+
+
+Roll the die 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_a80010ae1efa380a23ae3eb9596e37b0f}\label{class_die_a80010ae1efa380a23ae3eb9596e37b0f}} 
 \index{Die@{Die}!Start@{Start}}
 \index{Start@{Start}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Die.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 13
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{class_die_a80010ae1efa380a23ae3eb9596e37b0f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_a1720b01fed5d5276f3761c944baa8126}\label{class_die_a1720b01fed5d5276f3761c944baa8126}} 
 \index{Die@{Die}!Update@{Update}}
 \index{Update@{Update}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Die.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 14
+
+
+If die has been thrown, landed and stopped moving then update die value. If die stops on edge then roll again 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_a1720b01fed5d5276f3761c944baa8126_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

@@ -1,6 +1,6 @@
 <map id="PlayerMovementTestScript.RollDice" name="PlayerMovementTestScript.RollDice">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,277,35"/>
-<area shape="rect" id="node2" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title=" " alt="" coords="325,5,444,35"/>
-<area shape="rect" id="node3" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title=" " alt="" coords="492,5,595,35"/>
-<area shape="rect" id="node4" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="643,5,760,35"/>
+<area shape="rect" id="node2" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title="Roll the Dice" alt="" coords="325,5,444,35"/>
+<area shape="rect" id="node3" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title="Roll the die" alt="" coords="492,5,595,35"/>
+<area shape="rect" id="node4" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title="Reset Die to original position" alt="" coords="643,5,760,35"/>
 </map>

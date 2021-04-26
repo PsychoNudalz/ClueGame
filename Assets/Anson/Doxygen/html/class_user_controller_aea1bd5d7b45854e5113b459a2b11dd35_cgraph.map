@@ -1,6 +1,6 @@
 <map id="UserController.SetWeapon" name="UserController.SetWeapon">
-<area shape="rect" id="node1" title=" " alt="" coords="5,59,215,88"/>
-<area shape="rect" id="node2" href="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1" title=" " alt="" coords="276,5,465,35"/>
+<area shape="rect" id="node1" title="Sets weapon for suggestions and accusation" alt="" coords="5,59,215,88"/>
+<area shape="rect" id="node2" href="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1" title="Looks for the specified weapon card" alt="" coords="276,5,465,35"/>
 <area shape="rect" id="node3" href="$class_suggestion.html#a1e1c18344f7cb7b0bde20ad7fa59286c" title=" " alt="" coords="263,59,479,88"/>
-<area shape="rect" id="node4" href="$class_accusation.html#a8ec681e44a6b354d986656ea54b6dd36" title=" " alt="" coords="277,112,464,141"/>
+<area shape="rect" id="node4" href="$class_accusation.html#a8ec681e44a6b354d986656ea54b6dd36" title="Set the current weapon for accusing" alt="" coords="277,112,464,141"/>
 </map>

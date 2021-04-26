@@ -1,7 +1,7 @@
 <map id="UIHandler.ShowCard" name="UIHandler.ShowCard">
-<area shape="rect" id="node1" title=" " alt="" coords="5,87,173,116"/>
+<area shape="rect" id="node1" title="Displays a card from a player that has it" alt="" coords="5,87,173,116"/>
 <area shape="rect" id="node2" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="221,7,500,36"/>
-<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="951,112,1219,141"/>
+<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="951,112,1219,141"/>
 <area shape="rect" id="node4" href="$class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8" title="removing a card from the player&#39;s To Guess List notify the AI if a player finished showing a suggeste..." alt="" coords="235,207,486,236"/>
 <area shape="rect" id="node13" href="$class_card_slot.html#a9049dedcebbbc4b2185a2a01d76d4ed5" title=" " alt="" coords="287,60,434,89"/>
 <area shape="rect" id="node5" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="592,297,845,327"/>

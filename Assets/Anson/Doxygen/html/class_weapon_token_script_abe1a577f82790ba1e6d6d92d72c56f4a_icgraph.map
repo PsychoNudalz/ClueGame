@@ -1,4 +1,4 @@
 <map id="WeaponTokenScript.GetWeaponEnumFromString" name="WeaponTokenScript.GetWeaponEnumFromString">
-<area shape="rect" id="node1" title=" " alt="" coords="336,5,707,35"/>
-<area shape="rect" id="node2" href="$class_move_tokens_test_script.html#a34b95df1819bb17340a2be4611f7c490" title=" " alt="" coords="5,5,288,35"/>
+<area shape="rect" id="node1" title="Method to get a weapon enum" alt="" coords="336,5,707,35"/>
+<area shape="rect" id="node2" href="$class_move_tokens_test_script.html#a34b95df1819bb17340a2be4611f7c490" title="Move weapon token to set room" alt="" coords="5,5,288,35"/>
 </map>

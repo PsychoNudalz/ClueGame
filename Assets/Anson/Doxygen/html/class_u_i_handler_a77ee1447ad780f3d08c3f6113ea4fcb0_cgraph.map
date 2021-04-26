@@ -1,4 +1,4 @@
 <map id="UIHandler.ToggleNotepad" name="UIHandler.ToggleNotepad">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,208,35"/>
-<area shape="rect" id="node2" href="$class_u_i_handler.html#abe1c78d110b0a4374daed98df71fcff1" title=" " alt="" coords="256,5,464,35"/>
+<area shape="rect" id="node1" title="Displays the notepad" alt="" coords="5,5,208,35"/>
+<area shape="rect" id="node2" href="$class_u_i_handler.html#abe1c78d110b0a4374daed98df71fcff1" title="Displays the notepad" alt="" coords="256,5,464,35"/>
 </map>

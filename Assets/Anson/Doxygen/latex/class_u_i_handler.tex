@@ -7,59 +7,70 @@ Handles the UI
 
 
 
-Inheritance diagram for UIHandler\+:
-% FIG 0
+Inheritance diagram for UIHandler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_u_i_handler__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for UIHandler\+:
-% FIG 1
+Collaboration diagram for UIHandler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_u_i_handler__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}{Start\+Behaviour}} ()
-\begin{DoxyCompactList}\small\item\em starting behaviour \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Starting behaviour \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}{Display\+Deck}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
 \begin{DoxyCompactList}\small\item\em Display the list of cards \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_ac40571820fefd3233236883c01522fa1}{Roll\+Dice\+Button}} ()
-\begin{DoxyCompactList}\small\item\em rolls dice when the button is pressed \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Rolls dice when the button is pressed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}{Make\+Suggestion\+Button}} (bool forced=false)
-\begin{DoxyCompactList}\small\item\em makes suggestion when the button is pressed \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Makes suggestion when the button is pressed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}{Show\+Card}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player\+Master\+Controller, \mbox{\hyperlink{class_card}{Card}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays a card from a player that has it \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}{Show\+Selected\+Card}} (int card\+Num)
-\item 
+\begin{DoxyCompactList}\small\item\em After pressing a card to choose pass this card to show it \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}{Display\+Menu\+Suggestion}} (bool forced=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays \mbox{\hyperlink{class_suggestion}{Suggestion}} menu, set the room if in a room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}{Confirm\+Suggestion}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Hides the suggestion panel ~\newline
+ \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_add00c20eda721835c57da7b133704066}{Make\+Accusation\+Button}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Make suggestion button \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}{Display\+Menu\+Accusation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Displays the suggestion menu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}{Confirm\+Accusation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Hides the accusation menu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}{Display\+Choice\+Panel}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ to\+Choose)
-\item 
+\begin{DoxyCompactList}\small\item\em Dispal a panel for a player to choose which card to show \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}{Toggle\+Notepad}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Displays the notepad \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}{Display\+Note\+Pad}} (bool b)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays the notepad \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}{End\+Turn}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ends current player\textquotesingle{}s turn \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}{Update\+Current\+Turn\+Text}} (string next\+Player)
-\item 
+\begin{DoxyCompactList}\small\item\em Updates the current turn text \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}{Initialise\+Turn}} (bool display\+Full\+UI)
-\item 
+\begin{DoxyCompactList}\small\item\em Resets UI for the next player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}{Display\+View\+Blocker}} (bool b, string s=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em To display the View Blocker can include the name of the player that needs it\textquotesingle{}s attention \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}{Display\+Player\+Eliminated}} (bool b, string s=\char`\"{}\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Displays a screen when a player is eliminated \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}{Take\+Shortcut\+Button}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Button for taking a shortcut \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}{Display\+Output\+Text}} (string s, float time\+Until\+Disappear)
-\item 
+\begin{DoxyCompactList}\small\item\em Dispalys text on screen \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}{Return\+To\+Menu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns to main menu \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,10 +95,8 @@ void \mbox{\hyperlink{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}{Start
 \item 
 void \mbox{\hyperlink{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}{Fixed\+Update}} ()
 \item 
-void \mbox{\hyperlink{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}{Cancel\+Suggestion\+Button}} ()
-\item 
 IEnumerator \mbox{\hyperlink{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}{Display\+Output\+Text\+Routine}} (string s, float time\+Until\+Disappear)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Dispalys text on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -157,38 +166,72 @@ Handles the UI
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}\label{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}} 
-\index{UIHandler@{UIHandler}!CancelSuggestionButton@{CancelSuggestionButton}}
-\index{CancelSuggestionButton@{CancelSuggestionButton}!UIHandler@{UIHandler}}
-\doxysubsubsection{\texorpdfstring{CancelSuggestionButton()}{CancelSuggestionButton()}}
-{\footnotesize\ttfamily void UIHandler.\+Cancel\+Suggestion\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
 \mbox{\Hypertarget{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}\label{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}} 
 \index{UIHandler@{UIHandler}!ConfirmAccusation@{ConfirmAccusation}}
 \index{ConfirmAccusation@{ConfirmAccusation}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ConfirmAccusation()}{ConfirmAccusation()}}
 {\footnotesize\ttfamily void UIHandler.\+Confirm\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 2
+
+
+Hides the accusation menu 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}\label{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}} 
 \index{UIHandler@{UIHandler}!ConfirmSuggestion@{ConfirmSuggestion}}
 \index{ConfirmSuggestion@{ConfirmSuggestion}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ConfirmSuggestion()}{ConfirmSuggestion()}}
 {\footnotesize\ttfamily void UIHandler.\+Confirm\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 3
+
+
+Hides the suggestion panel ~\newline
+ 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}\label{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}} 
 \index{UIHandler@{UIHandler}!DisplayChoicePanel@{DisplayChoicePanel}}
 \index{DisplayChoicePanel@{DisplayChoicePanel}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayChoicePanel()}{DisplayChoicePanel()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Choice\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player,  }\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{to\+Choose }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 4
-Here is the caller graph for this function\+:
-% FIG 5
+
+
+Dispal a panel for a player to choose which card to show 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Player that has to choose\\
+\hline
+{\em to\+Choose} & List of cards to choose from\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a81884a614bffa4b024ed137552033f7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a81884a614bffa4b024ed137552033f7f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}\label{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}} 
 \index{UIHandler@{UIHandler}!DisplayDeck@{DisplayDeck}}
 \index{DisplayDeck@{DisplayDeck}!UIHandler@{UIHandler}}
@@ -204,62 +247,162 @@ Display the list of cards
 {\em cards} & cards to be shown\\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 6
-Here is the caller graph for this function\+:
-% FIG 7
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}\label{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}} 
 \index{UIHandler@{UIHandler}!DisplayMenuAccusation@{DisplayMenuAccusation}}
 \index{DisplayMenuAccusation@{DisplayMenuAccusation}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayMenuAccusation()}{DisplayMenuAccusation()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 8
+
+
+Displays the suggestion menu 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}\label{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}} 
 \index{UIHandler@{UIHandler}!DisplayMenuSuggestion@{DisplayMenuSuggestion}}
 \index{DisplayMenuSuggestion@{DisplayMenuSuggestion}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayMenuSuggestion()}{DisplayMenuSuggestion()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Suggestion (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
+
+
+Displays \mbox{\hyperlink{class_suggestion}{Suggestion}} menu, set the room if in a room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forced} & if player is forced to make a suggestion after stepping on a suggestion token\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a99048b81a1303baba7efd44095c0f235_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a99048b81a1303baba7efd44095c0f235_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}\label{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}} 
 \index{UIHandler@{UIHandler}!DisplayNotePad@{DisplayNotePad}}
 \index{DisplayNotePad@{DisplayNotePad}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayNotePad()}{DisplayNotePad()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Note\+Pad (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 11
+
+
+Displays the notepad 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}\label{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}} 
 \index{UIHandler@{UIHandler}!DisplayOutputText@{DisplayOutputText}}
 \index{DisplayOutputText@{DisplayOutputText}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayOutputText()}{DisplayOutputText()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Output\+Text (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{float}]{time\+Until\+Disappear }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 12
-Here is the caller graph for this function\+:
-% FIG 13
+
+
+Dispalys text on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Text to display\\
+\hline
+{\em time\+Until\+Disappear} & Time until text disappears\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}\label{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}} 
 \index{UIHandler@{UIHandler}!DisplayOutputTextRoutine@{DisplayOutputTextRoutine}}
 \index{DisplayOutputTextRoutine@{DisplayOutputTextRoutine}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayOutputTextRoutine()}{DisplayOutputTextRoutine()}}
 {\footnotesize\ttfamily IEnumerator UIHandler.\+Display\+Output\+Text\+Routine (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{float}]{time\+Until\+Disappear }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:
-% FIG 14
+
+
+Dispalys text on screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Text to display\\
+\hline
+{\em time\+Until\+Disappear} & Time until text disappears\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}\label{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}} 
 \index{UIHandler@{UIHandler}!DisplayPlayerEliminated@{DisplayPlayerEliminated}}
 \index{DisplayPlayerEliminated@{DisplayPlayerEliminated}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayPlayerEliminated()}{DisplayPlayerEliminated()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Player\+Eliminated (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 15
+
+
+Displays a screen when a player is eliminated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Shows the eliminated screen if true\\
+\hline
+{\em s} & Message to show\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}\label{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}} 
 \index{UIHandler@{UIHandler}!DisplayViewBlocker@{DisplayViewBlocker}}
 \index{DisplayViewBlocker@{DisplayViewBlocker}!UIHandler@{UIHandler}}
@@ -277,42 +420,89 @@ To display the View Blocker can include the name of the player that needs it\tex
 {\em s} & name of the player that needs it\textquotesingle{}s attention\\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-% FIG 16
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}\label{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}} 
 \index{UIHandler@{UIHandler}!EndTurn@{EndTurn}}
 \index{EndTurn@{EndTurn}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
 {\footnotesize\ttfamily void UIHandler.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 17
+
+
+Ends current player\textquotesingle{}s turn 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}\label{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}} 
 \index{UIHandler@{UIHandler}!FixedUpdate@{FixedUpdate}}
 \index{FixedUpdate@{FixedUpdate}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
 {\footnotesize\ttfamily void UIHandler.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 18
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}\label{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}} 
 \index{UIHandler@{UIHandler}!InitialiseTurn@{InitialiseTurn}}
 \index{InitialiseTurn@{InitialiseTurn}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{InitialiseTurn()}{InitialiseTurn()}}
 {\footnotesize\ttfamily void UIHandler.\+Initialise\+Turn (\begin{DoxyParamCaption}\item[{bool}]{display\+Full\+UI }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 19
-Here is the caller graph for this function\+:
-% FIG 20
+
+
+Resets UI for the next player 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Full\+UI} & Hides the full UI if false, used for AI players\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_add00c20eda721835c57da7b133704066}\label{class_u_i_handler_add00c20eda721835c57da7b133704066}} 
 \index{UIHandler@{UIHandler}!MakeAccusationButton@{MakeAccusationButton}}
 \index{MakeAccusationButton@{MakeAccusationButton}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{MakeAccusationButton()}{MakeAccusationButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Make\+Accusation\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 21
+
+
+Make suggestion button 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_add00c20eda721835c57da7b133704066_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}\label{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}} 
 \index{UIHandler@{UIHandler}!MakeSuggestionButton@{MakeSuggestionButton}}
 \index{MakeSuggestionButton@{MakeSuggestionButton}!UIHandler@{UIHandler}}
@@ -321,22 +511,36 @@ Here is the call graph for this function\+:
 
 
 
-makes suggestion when the button is pressed 
+Makes suggestion when the button is pressed 
 
 
 \begin{DoxyParams}{Parameters}
 {\em forced} & to make a suggestion even though the play did already\\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 22
-Here is the caller graph for this function\+:
-% FIG 23
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}\label{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}} 
 \index{UIHandler@{UIHandler}!ReturnToMenu@{ReturnToMenu}}
 \index{ReturnToMenu@{ReturnToMenu}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ReturnToMenu()}{ReturnToMenu()}}
 {\footnotesize\ttfamily void UIHandler.\+Return\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns to main menu 
 
 \mbox{\Hypertarget{class_u_i_handler_ac40571820fefd3233236883c01522fa1}\label{class_u_i_handler_ac40571820fefd3233236883c01522fa1}} 
 \index{UIHandler@{UIHandler}!RollDiceButton@{RollDiceButton}}
@@ -346,28 +550,68 @@ Here is the caller graph for this function\+:
 
 
 
-rolls dice when the button is pressed 
+Rolls dice when the button is pressed 
 
-Here is the call graph for this function\+:
-% FIG 24
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_ac40571820fefd3233236883c01522fa1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}\label{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}} 
 \index{UIHandler@{UIHandler}!ShowCard@{ShowCard}}
 \index{ShowCard@{ShowCard}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ShowCard()}{ShowCard()}}
 {\footnotesize\ttfamily void UIHandler.\+Show\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player\+Master\+Controller,  }\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 25
-Here is the caller graph for this function\+:
-% FIG 26
+
+
+Displays a card from a player that has it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+Master\+Controller} & Player that has this card\\
+\hline
+{\em c} & The card to be shown\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a4009ca74f59111933be2a637c7835e18_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a4009ca74f59111933be2a637c7835e18_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}\label{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}} 
 \index{UIHandler@{UIHandler}!ShowSelectedCard@{ShowSelectedCard}}
 \index{ShowSelectedCard@{ShowSelectedCard}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ShowSelectedCard()}{ShowSelectedCard()}}
 {\footnotesize\ttfamily void UIHandler.\+Show\+Selected\+Card (\begin{DoxyParamCaption}\item[{int}]{card\+Num }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 27
+
+
+After pressing a card to choose pass this card to show it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em card\+Num} & Number of the card slot pressed\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}\label{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}} 
 \index{UIHandler@{UIHandler}!Start@{Start}}
 \index{Start@{Start}!UIHandler@{UIHandler}}
@@ -382,36 +626,78 @@ Here is the call graph for this function\+:
 
 
 
-starting behaviour 
+Starting behaviour 
 
-Here is the call graph for this function\+:
-% FIG 28
-Here is the caller graph for this function\+:
-% FIG 29
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}\label{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}} 
 \index{UIHandler@{UIHandler}!TakeShortcutButton@{TakeShortcutButton}}
 \index{TakeShortcutButton@{TakeShortcutButton}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{TakeShortcutButton()}{TakeShortcutButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Take\+Shortcut\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 30
+
+
+Button for taking a shortcut 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}\label{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}} 
 \index{UIHandler@{UIHandler}!ToggleNotepad@{ToggleNotepad}}
 \index{ToggleNotepad@{ToggleNotepad}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ToggleNotepad()}{ToggleNotepad()}}
 {\footnotesize\ttfamily void UIHandler.\+Toggle\+Notepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 31
+
+
+Displays the notepad 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}\label{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}} 
 \index{UIHandler@{UIHandler}!UpdateCurrentTurnText@{UpdateCurrentTurnText}}
 \index{UpdateCurrentTurnText@{UpdateCurrentTurnText}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{UpdateCurrentTurnText()}{UpdateCurrentTurnText()}}
 {\footnotesize\ttfamily void UIHandler.\+Update\+Current\+Turn\+Text (\begin{DoxyParamCaption}\item[{string}]{next\+Player }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 32
+
+
+Updates the current turn text 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\+Player} & Name of the next player\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_i_handler_a33d33813339ed163ad4ab8708226f911_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

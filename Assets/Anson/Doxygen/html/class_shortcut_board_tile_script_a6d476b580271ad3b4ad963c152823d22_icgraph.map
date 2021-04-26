@@ -1,0 +1,7 @@
+<map id="ShortcutBoardTileScript.SetShortcutRooms" name="ShortcutBoardTileScript.SetShortcutRooms">
+<area shape="rect" id="node1" title="Set shortcut rooms" alt="" coords="983,5,1305,35"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="687,5,935,35"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" id="node5" href="$class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>

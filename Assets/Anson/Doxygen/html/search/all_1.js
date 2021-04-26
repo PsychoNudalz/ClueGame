@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['ballroom_31',['Ballroom',['../_camera_close_up_8cs.html#ae78eb2383d398397da52f3769a2e1151a99b46ee68598455b26c07178a4e22cf7',1,'Ballroom():&#160;CameraCloseUp.cs'],['../_room_script_8cs.html#a487e93cb0c81b7ae3c65d743fde387c0a99b46ee68598455b26c07178a4e22cf7',1,'Ballroom():&#160;RoomScript.cs']]],
+  ['ballroom_31',['Ballroom',['../_camera_target_8cs.html#ae78eb2383d398397da52f3769a2e1151a99b46ee68598455b26c07178a4e22cf7',1,'Ballroom():&#160;CameraTarget.cs'],['../_room_enum_8cs.html#a069dbaf3daeaf12280213d54dcebeca2a99b46ee68598455b26c07178a4e22cf7',1,'Ballroom():&#160;RoomEnum.cs']]],
   ['ballroomprefab_32',['BallroomPrefab',['../class_board_builder.html#aa6b6f338a148987641c587f873ac3e65',1,'BoardBuilder']]],
   ['bfs_33',['bfs',['../class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d',1,'BoardManager']]],
-  ['billiardroom_34',['BilliardRoom',['../_room_script_8cs.html#a487e93cb0c81b7ae3c65d743fde387c0a89b0665a8c7cc09151fb6f2d48c03887',1,'BilliardRoom():&#160;RoomScript.cs'],['../_camera_close_up_8cs.html#ae78eb2383d398397da52f3769a2e1151a89b0665a8c7cc09151fb6f2d48c03887',1,'BilliardRoom():&#160;CameraCloseUp.cs']]],
+  ['billiardroom_34',['BilliardRoom',['../_room_enum_8cs.html#a069dbaf3daeaf12280213d54dcebeca2a89b0665a8c7cc09151fb6f2d48c03887',1,'BilliardRoom():&#160;RoomEnum.cs'],['../_camera_target_8cs.html#ae78eb2383d398397da52f3769a2e1151a89b0665a8c7cc09151fb6f2d48c03887',1,'BilliardRoom():&#160;CameraTarget.cs']]],
   ['billiardroomprefab_35',['BilliardRoomPrefab',['../class_board_builder.html#a23b769419783556b25837c1e0610ed02',1,'BoardBuilder']]],
   ['bindingmask_36',['bindingMask',['../class_game_controls.html#a3835ae318270ad8129a8806c2ea783ed',1,'GameControls']]],
   ['boardbuilder_37',['BoardBuilder',['../class_board_builder.html',1,'']]],

@@ -2,36 +2,51 @@
 \label{class_dice}\index{Dice@{Dice}}
 
 
-Inheritance diagram for Dice\+:
-% FIG 0
+Script for the \mbox{\hyperlink{class_dice}{Dice}} Gameobject  
 
 
-Collaboration diagram for Dice\+:
-% FIG 1
+
+
+Inheritance diagram for Dice\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_dice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dice\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_dice__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_dice_a333ed52f536c0e7748fafe9422b179b5}{Roll\+Dice}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Roll the \mbox{\hyperlink{class_dice}{Dice}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_dice_ade1dc529eeb31f31e668c595c5748e67}{Reset\+Dice}} (bool forced=false)
-\item 
+\begin{DoxyCompactList}\small\item\em Reset the dice \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_dice_ace4c995eb73b784d1076fde140ce85af}{Can\+Reset}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Can \mbox{\hyperlink{class_dice}{Dice}} be reset \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_dice_a84cd116dad344495cac8589afc974140}{Calculate\+Value}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Calculate total value of all dice \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_dice_a91e31e11d7028270bebdc80719c64c19}{Get\+Value}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Get value of all dice \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_dice_a9df730d8804e077cacc5efcbda241896}{Ready\+To\+Roll}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Are dice ready to roll \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}{Start}} ()
 \item 
 void \mbox{\hyperlink{class_dice_a4e3633a353a64777d364070bcda02af8}{Initialise}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialise \mbox{\hyperlink{class_dice}{Dice}} \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}{Update}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Set close up camera if set close up = true \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,6 +60,11 @@ bool \mbox{\hyperlink{class_dice_a0f074c20118ffabf81ad6d1421a8ec33}{set\+Close\+
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Script for the \mbox{\hyperlink{class_dice}{Dice}} Gameobject 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_dice_a84cd116dad344495cac8589afc974140}\label{class_dice_a84cd116dad344495cac8589afc974140}} 
 \index{Dice@{Dice}!CalculateValue@{CalculateValue}}
@@ -52,84 +72,205 @@ bool \mbox{\hyperlink{class_dice_a0f074c20118ffabf81ad6d1421a8ec33}{set\+Close\+
 \doxysubsubsection{\texorpdfstring{CalculateValue()}{CalculateValue()}}
 {\footnotesize\ttfamily void Dice.\+Calculate\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+
+
+Calculate total value of all dice 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_dice_a84cd116dad344495cac8589afc974140_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a84cd116dad344495cac8589afc974140_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_ace4c995eb73b784d1076fde140ce85af}\label{class_dice_ace4c995eb73b784d1076fde140ce85af}} 
 \index{Dice@{Dice}!CanReset@{CanReset}}
 \index{CanReset@{CanReset}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{CanReset()}{CanReset()}}
 {\footnotesize\ttfamily bool Dice.\+Can\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 4
-Here is the caller graph for this function\+:
-% FIG 5
+
+
+Can \mbox{\hyperlink{class_dice}{Dice}} be reset 
+
+\begin{DoxyReturn}{Returns}
+true if dice can reset, false otherwise
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_dice_ace4c995eb73b784d1076fde140ce85af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_ace4c995eb73b784d1076fde140ce85af_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_a91e31e11d7028270bebdc80719c64c19}\label{class_dice_a91e31e11d7028270bebdc80719c64c19}} 
 \index{Dice@{Dice}!GetValue@{GetValue}}
 \index{GetValue@{GetValue}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
 {\footnotesize\ttfamily int Dice.\+Get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 6
-Here is the caller graph for this function\+:
-% FIG 7
+
+
+Get value of all dice 
+
+\begin{DoxyReturn}{Returns}
+Value of all dice, 0 if invalid
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a91e31e11d7028270bebdc80719c64c19_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a91e31e11d7028270bebdc80719c64c19_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_a4e3633a353a64777d364070bcda02af8}\label{class_dice_a4e3633a353a64777d364070bcda02af8}} 
 \index{Dice@{Dice}!Initialise@{Initialise}}
 \index{Initialise@{Initialise}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
 {\footnotesize\ttfamily void Dice.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the caller graph for this function\+:
-% FIG 8
+
+
+Initialise \mbox{\hyperlink{class_dice}{Dice}} 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_dice_a4e3633a353a64777d364070bcda02af8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_a9df730d8804e077cacc5efcbda241896}\label{class_dice_a9df730d8804e077cacc5efcbda241896}} 
 \index{Dice@{Dice}!ReadyToRoll@{ReadyToRoll}}
 \index{ReadyToRoll@{ReadyToRoll}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{ReadyToRoll()}{ReadyToRoll()}}
 {\footnotesize\ttfamily bool Dice.\+Ready\+To\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
+
+
+Are dice ready to roll 
+
+\begin{DoxyReturn}{Returns}
+true if ready to roll, false if not
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{class_dice_a9df730d8804e077cacc5efcbda241896_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a9df730d8804e077cacc5efcbda241896_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_ade1dc529eeb31f31e668c595c5748e67}\label{class_dice_ade1dc529eeb31f31e668c595c5748e67}} 
 \index{Dice@{Dice}!ResetDice@{ResetDice}}
 \index{ResetDice@{ResetDice}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{ResetDice()}{ResetDice()}}
 {\footnotesize\ttfamily void Dice.\+Reset\+Dice (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 11
-Here is the caller graph for this function\+:
-% FIG 12
+
+
+Reset the dice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forced} & Set true if dice positions not right\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_ade1dc529eeb31f31e668c595c5748e67_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_ade1dc529eeb31f31e668c595c5748e67_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_a333ed52f536c0e7748fafe9422b179b5}\label{class_dice_a333ed52f536c0e7748fafe9422b179b5}} 
 \index{Dice@{Dice}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
 {\footnotesize\ttfamily void Dice.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 13
-Here is the caller graph for this function\+:
-% FIG 14
+
+
+Roll the \mbox{\hyperlink{class_dice}{Dice}} 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a333ed52f536c0e7748fafe9422b179b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_a333ed52f536c0e7748fafe9422b179b5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}\label{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}} 
 \index{Dice@{Dice}!Start@{Start}}
 \index{Start@{Start}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Dice.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 15
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_dice_a7169d2cb750fa0b490be9038a68ca9fb_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}\label{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}} 
 \index{Dice@{Dice}!Update@{Update}}
 \index{Update@{Update}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
 {\footnotesize\ttfamily void Dice.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 16
+
+
+Set close up camera if set close up = true 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

@@ -1,7 +1,7 @@
 <map id="UserController.EndTurn" name="UserController.EndTurn">
-<area shape="rect" id="node1" title=" " alt="" coords="827,32,1011,61"/>
+<area shape="rect" id="node1" title="Ends turn" alt="" coords="827,32,1011,61"/>
 <area shape="rect" id="node2" href="$class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="572,5,779,35"/>
-<area shape="rect" id="node5" href="$class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="599,59,751,88"/>
+<area shape="rect" id="node5" href="$class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title="Ends current player&#39;s turn" alt="" coords="599,59,751,88"/>
 <area shape="rect" id="node3" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
 <area shape="rect" id="node4" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="RoomEntryExitTestScript.Start" name="RoomEntryExitTestScript.Start">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,239,35"/>
+<area shape="rect" id="node1" title="Set required variables" alt="" coords="5,5,239,35"/>
 <area shape="rect" id="node2" href="$class_player_token_script.html#a900336d95223d960dedbc65b87d69906" title="Setting the character this token will be and the tile it will start from" alt="" coords="287,5,533,35"/>
-<area shape="rect" id="node3" href="$class_start_tile_script.html#ad0e187307b7edbb14da5d7bd580f411c" title=" " alt="" coords="581,5,801,35"/>
+<area shape="rect" id="node3" href="$class_start_tile_script.html#ad0e187307b7edbb14da5d7bd580f411c" title="Set the tile colour" alt="" coords="581,5,801,35"/>
 </map>

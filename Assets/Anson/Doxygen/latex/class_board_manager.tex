@@ -2,41 +2,56 @@
 \label{class_board_manager}\index{BoardManager@{BoardManager}}
 
 
-Inheritance diagram for Board\+Manager\+:
-% FIG 0
+Script to manage the board items  
 
 
-Collaboration diagram for Board\+Manager\+:
-% FIG 1
+
+
+Inheritance diagram for Board\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_board_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Board\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_board_manager__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}{Get\+Tile\+Neighbours}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} tilescript)
-\item 
+\begin{DoxyCompactList}\small\item\em Return array of all neighbours of given tile \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_board_manager_ad208908578ffda25d87122a34e264b44}{Create\+Board\+Array}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} tiles, int board\+Height, int board\+Width)
-\item 
+\begin{DoxyCompactList}\small\item\em Create 2d array of all board tiles \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}{Get\+Tile\+From\+Grid}} (int XPos, int YPos)
-\item 
+\begin{DoxyCompactList}\small\item\em Get a tile from the array using a grid reference. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}{bfs}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile, int range, List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ queue=null)
-\begin{DoxyCompactList}\small\item\em perform bfs search for the tiles \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Perform bfs search for the tiles \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}{Show\+Movable}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile, int range)
-\begin{DoxyCompactList}\small\item\em mark and showwhich tile the player can move to \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mark and show which tile the player can move to \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}{Show\+Movable}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} board\+Tile\+Scripts, int range)
-\item 
+\begin{DoxyCompactList}\small\item\em Show movable tiles \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}{Show\+Movable}} (\mbox{\hyperlink{class_room_script}{Room\+Script}} room\+Script, int range)
-\item 
+\begin{DoxyCompactList}\small\item\em Show movable tiles from room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_board_manager_a653d38723d03f890d38a1b68a855c569}{Clear\+Movable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Clear all movable tiles \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}{Can\+Move}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} current\+Tile)
 \item 
 void \mbox{\hyperlink{class_board_manager_adc089b30dd732a7e8109c14143b01146}{Set\+Object\+Arrays}} (\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a662a91f8d9b8e1034896534d8b931824}{players}}, \mbox{\hyperlink{class_room_script}{Room\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a54aa170dcd6571d525ad0ae91d4fc2e0}{rooms}}, \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_affb23a5e9a11cf0d422d2f6fdb907802}{room\+Entries}}, \mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_abe911c436d25d8e9b9d89d9b6a8a7cc3}{shortcuts}}, \mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_aa6b74bfd157803f2e434cea0569e87d7}{start\+Tiles}}, \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_ad5044039f19b34c6599b25f65c8178f4}{weapon\+Tokens}}, \mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a3113f325c18e05d15e4bb983850addf5}{free\+Roll\+Tiles}}, \mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_manager_a9882f73296780a6f39b0afd51f1cb261}{free\+Suggestion\+Tiles}})
-\item 
+\begin{DoxyCompactList}\small\item\em Set all object arrays once board is built \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_board_manager_a5eb67ec83794138860f40af509e4820c}{Get\+Random\+Entry\+Tile\+In\+Movable}} ()
 \begin{DoxyCompactList}\small\item\em Gets a random list of entry tile from Movable list return null if none found \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}{Get\+Free\+Roll\+Tile\+In\+Movable}} ()
-\begin{DoxyCompactList}\small\item\em Gets an free roll tile from Movable list return null if none found \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get a free roll tile from movable tiles \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}} \mbox{\hyperlink{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}{Get\+Free\+Sugges\+Tile\+In\+Movable}} ()
-\begin{DoxyCompactList}\small\item\em Gets an free suggestion tile from Movable list return null if none found \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets an free suggestion tile from Movable list \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -62,9 +77,9 @@ List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbo
 \begin{DoxyCompactItemize}
 \item 
 IEnumerator \mbox{\hyperlink{class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1}{Place\+Weapons\+Delay}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Coroutine to randomly place weapon tokens in rooms with no more than 1 per room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_board_manager_a11591587bdea96f6792097007c4f6e6f}{Print\+Array}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Print Array for Testing \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -90,6 +105,11 @@ List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbo
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Script to manage the board items 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}\label{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d}} 
 \index{BoardManager@{BoardManager}!bfs@{bfs}}
@@ -99,50 +119,97 @@ List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbo
 
 
 
-perform bfs search for the tiles 
+Perform bfs search for the tiles 
 
 
 \begin{DoxyParams}{Parameters}
-{\em current\+Tile} & \\
+{\em current\+Tile} & Tile to search from\\
 \hline
-{\em range} & \\
+{\em range} & Distance to search\\
 \hline
 {\em queue} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+List of board tiles in range
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}\label{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82}} 
 \index{BoardManager@{BoardManager}!CanMove@{CanMove}}
 \index{CanMove@{CanMove}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{CanMove()}{CanMove()}}
 {\footnotesize\ttfamily bool Board\+Manager.\+Can\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{current\+Tile }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 4
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a653d38723d03f890d38a1b68a855c569}\label{class_board_manager_a653d38723d03f890d38a1b68a855c569}} 
 \index{BoardManager@{BoardManager}!ClearMovable@{ClearMovable}}
 \index{ClearMovable@{ClearMovable}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{ClearMovable()}{ClearMovable()}}
 {\footnotesize\ttfamily void Board\+Manager.\+Clear\+Movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 5
-Here is the caller graph for this function\+:
-% FIG 6
+
+
+Clear all movable tiles 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_ad208908578ffda25d87122a34e264b44}\label{class_board_manager_ad208908578ffda25d87122a34e264b44}} 
 \index{BoardManager@{BoardManager}!CreateBoardArray@{CreateBoardArray}}
 \index{CreateBoardArray@{CreateBoardArray}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{CreateBoardArray()}{CreateBoardArray()}}
 {\footnotesize\ttfamily void Board\+Manager.\+Create\+Board\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{tiles,  }\item[{int}]{board\+Height,  }\item[{int}]{board\+Width }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 7
+
+
+Create 2d array of all board tiles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tiles} & All board tiles\\
+\hline
+{\em board\+Height} & Height of the board\\
+\hline
+{\em board\+Width} & Width of the board\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_ad208908578ffda25d87122a34e264b44_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}\label{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837}} 
 \index{BoardManager@{BoardManager}!GetFreeRollTileInMovable@{GetFreeRollTileInMovable}}
 \index{GetFreeRollTileInMovable@{GetFreeRollTileInMovable}!BoardManager@{BoardManager}}
@@ -151,13 +218,18 @@ Here is the caller graph for this function\+:
 
 
 
-Gets an free roll tile from Movable list return null if none found 
+Get a free roll tile from movable tiles 
 
 \begin{DoxyReturn}{Returns}
-
+free roll tile from Movable list, null if none found
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 8
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}\label{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823}} 
 \index{BoardManager@{BoardManager}!GetFreeSuggesTileInMovable@{GetFreeSuggesTileInMovable}}
 \index{GetFreeSuggesTileInMovable@{GetFreeSuggesTileInMovable}!BoardManager@{BoardManager}}
@@ -166,13 +238,18 @@ Here is the caller graph for this function\+:
 
 
 
-Gets an free suggestion tile from Movable list return null if none found 
+Gets an free suggestion tile from Movable list 
 
 \begin{DoxyReturn}{Returns}
-
+Free suggestion tile null if none found
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 9
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a5eb67ec83794138860f40af509e4820c}\label{class_board_manager_a5eb67ec83794138860f40af509e4820c}} 
 \index{BoardManager@{BoardManager}!GetRandomEntryTileInMovable@{GetRandomEntryTileInMovable}}
 \index{GetRandomEntryTileInMovable@{GetRandomEntryTileInMovable}!BoardManager@{BoardManager}}
@@ -184,52 +261,144 @@ Here is the caller graph for this function\+:
 Gets a random list of entry tile from Movable list return null if none found 
 
 \begin{DoxyReturn}{Returns}
-
+List of random entry tiles
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 10
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}\label{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216}} 
 \index{BoardManager@{BoardManager}!GetTileFromGrid@{GetTileFromGrid}}
 \index{GetTileFromGrid@{GetTileFromGrid}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{GetTileFromGrid()}{GetTileFromGrid()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Board\+Manager.\+Get\+Tile\+From\+Grid (\begin{DoxyParamCaption}\item[{int}]{XPos,  }\item[{int}]{YPos }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 11
+
+
+Get a tile from the array using a grid reference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em XPos} & X position\\
+\hline
+{\em YPos} & Y position\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Board tile at location, null if no tile exists at location.
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}\label{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d}} 
 \index{BoardManager@{BoardManager}!GetTileNeighbours@{GetTileNeighbours}}
 \index{GetTileNeighbours@{GetTileNeighbours}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{GetTileNeighbours()}{GetTileNeighbours()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Board\+Manager.\+Get\+Tile\+Neighbours (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{tilescript }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 12
-Here is the caller graph for this function\+:
-% FIG 13
+
+
+Return array of all neighbours of given tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tilescript} & Tile to check from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of all neighbouring tiles
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1}\label{class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1}} 
 \index{BoardManager@{BoardManager}!PlaceWeaponsDelay@{PlaceWeaponsDelay}}
 \index{PlaceWeaponsDelay@{PlaceWeaponsDelay}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{PlaceWeaponsDelay()}{PlaceWeaponsDelay()}}
 {\footnotesize\ttfamily IEnumerator Board\+Manager.\+Place\+Weapons\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 14
+
+
+Coroutine to randomly place weapon tokens in rooms with no more than 1 per room 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a11591587bdea96f6792097007c4f6e6f}\label{class_board_manager_a11591587bdea96f6792097007c4f6e6f}} 
 \index{BoardManager@{BoardManager}!PrintArray@{PrintArray}}
 \index{PrintArray@{PrintArray}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{PrintArray()}{PrintArray()}}
 {\footnotesize\ttfamily void Board\+Manager.\+Print\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 15
+
+
+Print Array for Testing 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_adc089b30dd732a7e8109c14143b01146}\label{class_board_manager_adc089b30dd732a7e8109c14143b01146}} 
 \index{BoardManager@{BoardManager}!SetObjectArrays@{SetObjectArrays}}
 \index{SetObjectArrays@{SetObjectArrays}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{SetObjectArrays()}{SetObjectArrays()}}
 {\footnotesize\ttfamily void Board\+Manager.\+Set\+Object\+Arrays (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]}}]{players,  }\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}\mbox{[}$\,$\mbox{]}}]{rooms,  }\item[{\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{room\+Entries,  }\item[{\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{shortcuts,  }\item[{\mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{start\+Tiles,  }\item[{\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]}}]{weapon\+Tokens,  }\item[{\mbox{\hyperlink{class_free_roll_board_tile_script}{Free\+Roll\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{free\+Roll\+Tiles,  }\item[{\mbox{\hyperlink{class_free_suggestion_tile_script}{Free\+Suggestion\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{free\+Suggestion\+Tiles }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-% FIG 16
+
+
+Set all object arrays once board is built 
+
+
+\begin{DoxyParams}{Parameters}
+{\em players} & Array of player scripts\\
+\hline
+{\em rooms} & Array of room scripts\\
+\hline
+{\em room\+Entries} & Array of room entry scripts\\
+\hline
+{\em shortcuts} & Array of shortcut scripts\\
+\hline
+{\em start\+Tiles} & Array of start tile scripts\\
+\hline
+{\em weapon\+Tokens} & Array of weapon token scripts\\
+\hline
+{\em free\+Roll\+Tiles} & Array of free roll tile scripts\\
+\hline
+{\em free\+Suggestion\+Tiles} & Array of free suggestion tile scripts\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}\label{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0}} 
 \index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
 \index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
@@ -238,38 +407,86 @@ Here is the caller graph for this function\+:
 
 
 
-mark and showwhich tile the player can move to 
+Mark and show which tile the player can move to 
 
 
 \begin{DoxyParams}{Parameters}
-{\em current\+Tile} & \\
+{\em current\+Tile} & Tile to search from\\
 \hline
-{\em range} & \\
+{\em range} & Distance to search\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+true if successful, false if invalid tile
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 17
-Here is the caller graph for this function\+:
-% FIG 18
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}\label{class_board_manager_a7607382dac3371733cee2f30a8ba6f25}} 
 \index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
 \index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{ShowMovable()}{ShowMovable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily bool Board\+Manager.\+Show\+Movable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]}}]{board\+Tile\+Scripts,  }\item[{int}]{range }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 19
+
+
+Show movable tiles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em board\+Tile\+Scripts} & Array of tiles to search from\\
+\hline
+{\em range} & Distance to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}\label{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609}} 
 \index{BoardManager@{BoardManager}!ShowMovable@{ShowMovable}}
 \index{ShowMovable@{ShowMovable}!BoardManager@{BoardManager}}
 \doxysubsubsection{\texorpdfstring{ShowMovable()}{ShowMovable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
 {\footnotesize\ttfamily bool Board\+Manager.\+Show\+Movable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}}]{room\+Script,  }\item[{int}]{range }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 20
+
+
+Show movable tiles from room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+Script} & Room to check from\\
+\hline
+{\em range} & Distance to search\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false if room is invalid
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

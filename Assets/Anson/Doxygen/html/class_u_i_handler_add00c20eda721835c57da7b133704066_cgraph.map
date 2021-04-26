@@ -1,4 +1,4 @@
 <map id="UIHandler.MakeAccusationButton" name="UIHandler.MakeAccusationButton">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,260,35"/>
-<area shape="rect" id="node2" href="$class_u_i_handler.html#a1b70b7b612bea6870be5cfc0fa69d72b" title=" " alt="" coords="308,5,569,35"/>
+<area shape="rect" id="node1" title="Make suggestion button" alt="" coords="5,5,260,35"/>
+<area shape="rect" id="node2" href="$class_u_i_handler.html#a1b70b7b612bea6870be5cfc0fa69d72b" title="Displays the suggestion menu" alt="" coords="308,5,569,35"/>
 </map>

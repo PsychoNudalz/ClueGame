@@ -1,5 +1,5 @@
 <map id="UserController.SelectTile" name="UserController.SelectTile">
-<area shape="rect" id="node1" title=" " alt="" coords="927,32,1121,61"/>
+<area shape="rect" id="node1" title="Selects a tile for player movement" alt="" coords="927,32,1121,61"/>
 <area shape="rect" id="node2" href="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="585,5,865,35"/>
 <area shape="rect" id="node5" href="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="572,59,879,88"/>
 <area shape="rect" id="node3" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>

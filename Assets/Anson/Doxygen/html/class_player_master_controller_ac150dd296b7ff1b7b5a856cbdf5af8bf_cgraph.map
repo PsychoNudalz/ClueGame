@@ -1,12 +1,12 @@
 <map id="PlayerMasterController.DisplayBoardMovableTiles" name="PlayerMasterController.DisplayBoardMovableTiles">
 <area shape="rect" id="node1" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="5,59,377,88"/>
 <area shape="rect" id="node2" href="$class_player_master_controller.html#a6e9a15dbaf465a0477ab5bab27570bde" title="Get the current tile the token is on" alt="" coords="425,32,660,61"/>
-<area shape="rect" id="node3" href="$class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="428,85,657,115"/>
-<area shape="rect" id="node4" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="729,59,881,88"/>
+<area shape="rect" id="node3" href="$class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="Mark and show which tile the player can move to" alt="" coords="428,85,657,115"/>
+<area shape="rect" id="node4" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="Perform bfs search for the tiles" alt="" coords="729,59,881,88"/>
 <area shape="rect" id="node8" href="$class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="708,112,903,141"/>
-<area shape="rect" id="node5" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="993,5,1255,35"/>
+<area shape="rect" id="node5" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title="Return array of all neighbours of given tile" alt="" coords="993,5,1255,35"/>
 <area shape="rect" id="node7" href="$class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1029,59,1219,88"/>
-<area shape="rect" id="node6" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1345,5,1593,35"/>
+<area shape="rect" id="node6" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title="Get a tile from the array using a grid reference." alt="" coords="1345,5,1593,35"/>
 <area shape="rect" id="node9" href="$class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="951,112,1297,141"/>
 <area shape="rect" id="node10" href="$class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="951,165,1297,195"/>
 </map>

@@ -2,33 +2,48 @@
 \label{class_weapon_token_script}\index{WeaponTokenScript@{WeaponTokenScript}}
 
 
-Inheritance diagram for Weapon\+Token\+Script\+:
-% FIG 0
+Class to manage the weapon tokens  
 
 
-Collaboration diagram for Weapon\+Token\+Script\+:
-% FIG 1
+
+
+Inheritance diagram for Weapon\+Token\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{class_weapon_token_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+Token\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_weapon_token_script__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} \mbox{\hyperlink{class_weapon_token_script_abe1a577f82790ba1e6d6d92d72c56f4a}{Get\+Weapon\+Enum\+From\+String}} (String weapon)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method to get a weapon enum \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} \mbox{\hyperlink{class_weapon_token_script_aa3e82db4756bc1a9d293889f12f871ca}{Weapon\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter and setter for tokens weapon type \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_weapon_token_script_af48e135875fb8aefa4707b31b6835c09}{Current\+Room}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter and setter for tokens current room \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_weapon_token_script_ade653c1f5bd70ac50091cf1973e7ff58}{Start}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Set required variables \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_weapon_token_script_a1ff587c9e19d1a3343ff561c5dfcafc9}{Fixed\+Update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Move token if required \end{DoxyCompactList}\item 
 IEnumerator \mbox{\hyperlink{class_weapon_token_script_aa690c62f61c9ac4eea5bec15075480e5}{Lift\+Token\+Delay}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Trigger lift animation then wait and start moving to new location \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +61,11 @@ bool \mbox{\hyperlink{class_weapon_token_script_ad69b0cbe409383ea34c3ad3a8feb9b1
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Class to manage the weapon tokens 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_weapon_token_script_a1ff587c9e19d1a3343ff561c5dfcafc9}\label{class_weapon_token_script_a1ff587c9e19d1a3343ff561c5dfcafc9}} 
 \index{WeaponTokenScript@{WeaponTokenScript}!FixedUpdate@{FixedUpdate}}
@@ -53,25 +73,57 @@ bool \mbox{\hyperlink{class_weapon_token_script_ad69b0cbe409383ea34c3ad3a8feb9b1
 \doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
 {\footnotesize\ttfamily void Weapon\+Token\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Move token if required 
+
 \mbox{\Hypertarget{class_weapon_token_script_abe1a577f82790ba1e6d6d92d72c56f4a}\label{class_weapon_token_script_abe1a577f82790ba1e6d6d92d72c56f4a}} 
 \index{WeaponTokenScript@{WeaponTokenScript}!GetWeaponEnumFromString@{GetWeaponEnumFromString}}
 \index{GetWeaponEnumFromString@{GetWeaponEnumFromString}!WeaponTokenScript@{WeaponTokenScript}}
 \doxysubsubsection{\texorpdfstring{GetWeaponEnumFromString()}{GetWeaponEnumFromString()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} Weapon\+Token\+Script.\+Get\+Weapon\+Enum\+From\+String (\begin{DoxyParamCaption}\item[{String}]{weapon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Here is the caller graph for this function\+:
-% FIG 2
+
+
+Method to get a weapon enum 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Weapon string for the Weapon\+Enum to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Weapon\+Enum based on string entered or throws exception if not found
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_token_script_abe1a577f82790ba1e6d6d92d72c56f4a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_weapon_token_script_aa690c62f61c9ac4eea5bec15075480e5}\label{class_weapon_token_script_aa690c62f61c9ac4eea5bec15075480e5}} 
 \index{WeaponTokenScript@{WeaponTokenScript}!LiftTokenDelay@{LiftTokenDelay}}
 \index{LiftTokenDelay@{LiftTokenDelay}!WeaponTokenScript@{WeaponTokenScript}}
 \doxysubsubsection{\texorpdfstring{LiftTokenDelay()}{LiftTokenDelay()}}
 {\footnotesize\ttfamily IEnumerator Weapon\+Token\+Script.\+Lift\+Token\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Trigger lift animation then wait and start moving to new location 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_weapon_token_script_ade653c1f5bd70ac50091cf1973e7ff58}\label{class_weapon_token_script_ade653c1f5bd70ac50091cf1973e7ff58}} 
 \index{WeaponTokenScript@{WeaponTokenScript}!Start@{Start}}
 \index{Start@{Start}!WeaponTokenScript@{WeaponTokenScript}}
 \doxysubsubsection{\texorpdfstring{Start()}{Start()}}
 {\footnotesize\ttfamily void Weapon\+Token\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set required variables 
 
 
 
@@ -121,11 +173,19 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{CurrentRoom}{CurrentRoom}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Weapon\+Token\+Script.\+Current\+Room\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
+
+
+Getter and setter for tokens current room 
+
 \mbox{\Hypertarget{class_weapon_token_script_aa3e82db4756bc1a9d293889f12f871ca}\label{class_weapon_token_script_aa3e82db4756bc1a9d293889f12f871ca}} 
 \index{WeaponTokenScript@{WeaponTokenScript}!WeaponType@{WeaponType}}
 \index{WeaponType@{WeaponType}!WeaponTokenScript@{WeaponTokenScript}}
 \doxysubsubsection{\texorpdfstring{WeaponType}{WeaponType}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} Weapon\+Token\+Script.\+Weapon\+Type\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Getter and setter for tokens weapon type 
 
 
 

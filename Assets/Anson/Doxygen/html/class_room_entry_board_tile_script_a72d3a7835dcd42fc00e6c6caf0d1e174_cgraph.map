@@ -1,5 +1,5 @@
 <map id="RoomEntryBoardTileScript.EnterRoomAnimation" name="RoomEntryBoardTileScript.EnterRoomAnimation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,32,367,61"/>
-<area shape="rect" id="node2" href="$class_door_script.html#adcc7e56a969266eee3abbbc6cca692da" title=" " alt="" coords="415,5,593,35"/>
-<area shape="rect" id="node3" href="$class_door_script.html#a2d8c537d4f48ea0e2b4c09eb9ef58d87" title=" " alt="" coords="417,59,591,88"/>
+<area shape="rect" id="node1" title="Open door, pause start player entry, pause then close door" alt="" coords="5,32,367,61"/>
+<area shape="rect" id="node2" href="$class_door_script.html#adcc7e56a969266eee3abbbc6cca692da" title="Close the door" alt="" coords="415,5,593,35"/>
+<area shape="rect" id="node3" href="$class_door_script.html#a2d8c537d4f48ea0e2b4c09eb9ef58d87" title="Open the door" alt="" coords="417,59,591,88"/>
 </map>

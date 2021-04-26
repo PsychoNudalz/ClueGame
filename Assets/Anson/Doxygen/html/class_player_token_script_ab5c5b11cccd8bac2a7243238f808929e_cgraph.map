@@ -1,5 +1,5 @@
 <map id="PlayerTokenScript.UpdateTokenMovement" name="PlayerTokenScript.UpdateTokenMovement">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,325,35"/>
-<area shape="rect" id="node2" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title=" " alt="" coords="373,5,616,35"/>
-<area shape="rect" id="node3" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title=" " alt="" coords="664,5,947,35"/>
+<area shape="rect" id="node2" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title="Clear camera close up" alt="" coords="373,5,616,35"/>
+<area shape="rect" id="node3" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title="Delay then clear close up" alt="" coords="664,5,947,35"/>
 </map>

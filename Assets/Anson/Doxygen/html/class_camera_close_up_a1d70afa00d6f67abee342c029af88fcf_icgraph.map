@@ -1,17 +1,17 @@
 <map id="CameraCloseUp.SetCloseUp" name="CameraCloseUp.SetCloseUp">
-<area shape="rect" id="node1" title=" " alt="" coords="2376,112,2605,141"/>
-<area shape="rect" id="node2" href="$class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title=" " alt="" coords="2029,59,2328,88"/>
-<area shape="rect" id="node13" href="$class_camera_close_up.html#a2a7e3969d2c696d94a6f0f6bf8b3c56a" title=" " alt="" coords="2051,112,2306,141"/>
-<area shape="rect" id="node15" href="$class_dice.html#adfddf272c9cd1ec9ea4639bbdb6b8126" title=" " alt="" coords="2123,165,2234,195"/>
+<area shape="rect" id="node1" title="Set close up point" alt="" coords="2376,112,2605,141"/>
+<area shape="rect" id="node2" href="$class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title="Set camera close up to character" alt="" coords="2029,59,2328,88"/>
+<area shape="rect" id="node13" href="$class_camera_close_up.html#a2a7e3969d2c696d94a6f0f6bf8b3c56a" title="For testing camera close ups" alt="" coords="2051,112,2306,141"/>
+<area shape="rect" id="node15" href="$class_dice.html#adfddf272c9cd1ec9ea4639bbdb6b8126" title="Set close up camera if set close up = true" alt="" coords="2123,165,2234,195"/>
 <area shape="rect" id="node3" href="$class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad" title=" " alt="" coords="1747,59,1981,88"/>
 <area shape="rect" id="node4" href="$class_player_master_controller.html#a9b23c4d50fabbc44dbba2b0db542efce" title="moving the player to a certain tile" alt="" coords="1432,32,1699,61"/>
 <area shape="rect" id="node12" href="$class_player_token_script.html#aabf6e085b41ef90234c5580c48389200" title=" " alt="" coords="1463,85,1668,115"/>
-<area shape="rect" id="node5" href="$class_shortcut_test_u_i.html#a3012692eeb4658dc688e82b431cc10f6" title=" " alt="" coords="1173,5,1380,35"/>
+<area shape="rect" id="node5" href="$class_shortcut_test_u_i.html#a3012692eeb4658dc688e82b431cc10f6" title="Enter a room" alt="" coords="1173,5,1380,35"/>
 <area shape="rect" id="node6" href="$class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="1169,59,1384,88"/>
-<area shape="rect" id="node7" href="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title=" " alt="" coords="927,59,1121,88"/>
+<area shape="rect" id="node7" href="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title="Selects a tile for player movement" alt="" coords="927,59,1121,88"/>
 <area shape="rect" id="node8" href="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="585,32,865,61"/>
 <area shape="rect" id="node11" href="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="572,85,879,115"/>
 <area shape="rect" id="node9" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,32,524,61"/>
 <area shape="rect" id="node10" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,32,244,61"/>
-<area shape="rect" id="node14" href="$class_camera_close_up.html#ab267d3e10045453ca402ae9c82069a01" title=" " alt="" coords="1767,112,1961,141"/>
+<area shape="rect" id="node14" href="$class_camera_close_up.html#ab267d3e10045453ca402ae9c82069a01" title="If test keys = true &#45; numpad / numbers control close ups lerp camera position towards close up point ..." alt="" coords="1767,112,1961,141"/>
 </map>

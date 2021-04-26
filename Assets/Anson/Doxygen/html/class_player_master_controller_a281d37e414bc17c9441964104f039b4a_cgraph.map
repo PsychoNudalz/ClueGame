@@ -1,5 +1,5 @@
 <map id="PlayerMasterController.CanTakeShortcut" name="PlayerMasterController.CanTakeShortcut">
 <area shape="rect" id="node1" title="check if the player can take a short cut" alt="" coords="5,5,312,35"/>
 <area shape="rect" id="node2" href="$class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="360,5,635,35"/>
-<area shape="rect" id="node3" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title=" " alt="" coords="683,5,877,35"/>
+<area shape="rect" id="node3" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title="Does the room have a shortcut tile" alt="" coords="683,5,877,35"/>
 </map>

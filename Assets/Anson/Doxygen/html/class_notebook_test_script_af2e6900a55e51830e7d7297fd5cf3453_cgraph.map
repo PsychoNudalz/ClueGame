@@ -1,8 +1,8 @@
 <map id="NotebookTestScript.Update" name="NotebookTestScript.Update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,59,221,88"/>
-<area shape="rect" id="node2" href="$class_notebook_test_script.html#a2fe069756e281210beaa15440a9bb259" title=" " alt="" coords="269,59,552,88"/>
-<area shape="rect" id="node3" href="$class_notebook_test_script.html#a9b8ec4a7586c8516aba4d8f684a3f19d" title=" " alt="" coords="600,5,900,35"/>
-<area shape="rect" id="node5" href="$class_notebook_test_script.html#a932234219a6c879897ab5b20fb6574fc" title=" " alt="" coords="613,59,887,88"/>
-<area shape="rect" id="node6" href="$class_notebook_test_script.html#adb07ae16fb57bee560aae3aab7f3bcbf" title=" " alt="" coords="611,112,889,141"/>
-<area shape="rect" id="node4" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="948,59,1216,88"/>
+<area shape="rect" id="node1" title="If current player is set then update output texts" alt="" coords="5,59,221,88"/>
+<area shape="rect" id="node2" href="$class_notebook_test_script.html#a2fe069756e281210beaa15440a9bb259" title="Update player reference then update all text strings" alt="" coords="269,59,552,88"/>
+<area shape="rect" id="node3" href="$class_notebook_test_script.html#a9b8ec4a7586c8516aba4d8f684a3f19d" title="Get character notebook text" alt="" coords="600,5,900,35"/>
+<area shape="rect" id="node5" href="$class_notebook_test_script.html#a932234219a6c879897ab5b20fb6574fc" title="Get Room notebook text" alt="" coords="613,59,887,88"/>
+<area shape="rect" id="node6" href="$class_notebook_test_script.html#adb07ae16fb57bee560aae3aab7f3bcbf" title="Get weapon notebook text" alt="" coords="611,112,889,141"/>
+<area shape="rect" id="node4" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="948,59,1216,88"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="FreeSuggestionTileScript" name="FreeSuggestionTileScript">
-<area shape="rect" id="node1" title=" " alt="" coords="5,567,205,652"/>
+<area shape="rect" id="node1" title="Script for the free suggestion board tile Gameobject" alt="" coords="5,567,205,652"/>
 <area shape="rect" id="node2" href="$class_board_tile_script.html" title="Super class for all tiles" alt="" coords="10,139,201,519"/>
 <area shape="rect" id="node3" title=" " alt="" coords="40,5,171,91"/>
 </map>

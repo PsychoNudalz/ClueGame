@@ -1,17 +1,17 @@
 <map id="UIHandler.ConfirmSuggestion" name="UIHandler.ConfirmSuggestion">
-<area shape="rect" id="node1" title=" " alt="" coords="5,372,233,401"/>
-<area shape="rect" id="node2" href="$class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd" title=" " alt="" coords="281,372,525,401"/>
+<area shape="rect" id="node1" title="Hides the suggestion panel" alt="" coords="5,372,233,401"/>
+<area shape="rect" id="node2" href="$class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd" title="Makes suggestion" alt="" coords="281,372,525,401"/>
 <area shape="rect" id="node3" href="$class_round_manager.html#a596fc1c822ebb74dad8d238b15b1ea3a" title="Iterate through the rest of the players searching for if 1 or more of the cards were found" alt="" coords="573,215,824,244"/>
 <area shape="rect" id="node27" href="$class_suggestion.html#ab326cb791b6707926dd69497e79d159b" title=" " alt="" coords="617,501,780,531"/>
 <area shape="rect" id="node4" href="$class_round_manager.html#a780da336fd16dcaee0f00306578f13b4" title=" " alt="" coords="911,112,1132,141"/>
 <area shape="rect" id="node6" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="1569,269,1848,299"/>
-<area shape="rect" id="node7" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="2299,164,2567,193"/>
+<area shape="rect" id="node7" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="2299,164,2567,193"/>
 <area shape="rect" id="node8" href="$class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8" title="removing a card from the player&#39;s To Guess List notify the AI if a player finished showing a suggeste..." alt="" coords="1583,216,1834,245"/>
-<area shape="rect" id="node21" href="$class_u_i_handler.html#a81884a614bffa4b024ed137552033f7f" title=" " alt="" coords="1252,421,1488,451"/>
-<area shape="rect" id="node23" href="$class_u_i_handler.html#a1f0729c8102e73f3d97c1f078b9f9d52" title=" " alt="" coords="911,317,1131,347"/>
+<area shape="rect" id="node21" href="$class_u_i_handler.html#a81884a614bffa4b024ed137552033f7f" title="Dispal a panel for a player to choose which card to show" alt="" coords="1252,421,1488,451"/>
+<area shape="rect" id="node23" href="$class_u_i_handler.html#a1f0729c8102e73f3d97c1f078b9f9d52" title="Dispalys text on screen" alt="" coords="911,317,1131,347"/>
 <area shape="rect" id="node25" href="$class_u_i_handler.html#abe1710aca2abe4dbb489f0c49a3af879" title="To display the View Blocker can include the name of the player that needs it&#39;s attention" alt="" coords="904,5,1139,35"/>
-<area shape="rect" id="node26" href="$class_turn_controller.html#a1eddf50c785325b5e873312d1fcd6380" title="Creates a list of the players in order without the current player" alt="" coords="872,59,1171,88"/>
-<area shape="rect" id="node5" href="$class_u_i_handler.html#a4009ca74f59111933be2a637c7835e18" title=" " alt="" coords="1286,112,1454,141"/>
+<area shape="rect" id="node26" href="$class_turn_controller.html#a1eddf50c785325b5e873312d1fcd6380" title=" " alt="" coords="872,59,1171,88"/>
+<area shape="rect" id="node5" href="$class_u_i_handler.html#a4009ca74f59111933be2a637c7835e18" title="Displays a card from a player that has it" alt="" coords="1286,112,1454,141"/>
 <area shape="rect" id="node17" href="$class_card_slot.html#a9049dedcebbbc4b2185a2a01d76d4ed5" title=" " alt="" coords="1635,61,1782,91"/>
 <area shape="rect" id="node9" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="1940,413,2193,443"/>
 <area shape="rect" id="node11" href="$class_a_i_controller_script.html#a208f5afe4102ff2ca04a03a425d76279" title="for the round manager to notify that another player finished picking a card to show" alt="" coords="1933,293,2200,323"/>
@@ -24,12 +24,12 @@
 <area shape="rect" id="node18" href="$class_card_slot.html#a4690c0753db45ada6b02681269ecfbb1" title=" " alt="" coords="1969,61,2165,91"/>
 <area shape="rect" id="node19" href="$class_card.html#a25e8366933b176fae41e4d2373be7815" title=" " alt="" coords="2351,33,2515,63"/>
 <area shape="rect" id="node20" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="2355,87,2510,116"/>
-<area shape="rect" id="node22" href="$class_card_slot.html#af678d8249e4d52bb791b47d4ed75e7f3" title=" " alt="" coords="1629,373,1789,403"/>
-<area shape="rect" id="node24" href="$class_u_i_handler.html#a25f316e553a6f1b60fb6c04a8dc23613" title=" " alt="" coords="1233,317,1507,347"/>
-<area shape="rect" id="node28" href="$class_character_card.html#a700a59f812d71708bb772b7df07f08bc" title=" " alt="" coords="909,635,1133,664"/>
-<area shape="rect" id="node29" href="$class_room_card.html#a7e77f1ec02f147b5a968305a16fe90bc" title=" " alt="" coords="923,475,1120,504"/>
-<area shape="rect" id="node30" href="$class_weapon_card.html#af3c92c9857cb9d637f36dcf6cda1282d" title=" " alt="" coords="914,528,1129,557"/>
-<area shape="rect" id="node31" href="$class_room_script.html#a4a19c52c114612c19ae2580768d94859" title=" " alt="" coords="896,421,1147,451"/>
-<area shape="rect" id="node33" href="$class_room_script.html#ae49a5bb396aa0c894fb1686b92f879da" title=" " alt="" coords="888,581,1155,611"/>
+<area shape="rect" id="node22" href="$class_card_slot.html#af678d8249e4d52bb791b47d4ed75e7f3" title="Makes the card slot visible and its game object active" alt="" coords="1629,373,1789,403"/>
+<area shape="rect" id="node24" href="$class_u_i_handler.html#a25f316e553a6f1b60fb6c04a8dc23613" title="Dispalys text on screen" alt="" coords="1233,317,1507,347"/>
+<area shape="rect" id="node28" href="$class_character_card.html#a700a59f812d71708bb772b7df07f08bc" title="Returns the enum of the card" alt="" coords="909,635,1133,664"/>
+<area shape="rect" id="node29" href="$class_room_card.html#a7e77f1ec02f147b5a968305a16fe90bc" title="Returns the enum of the card" alt="" coords="923,475,1120,504"/>
+<area shape="rect" id="node30" href="$class_weapon_card.html#af3c92c9857cb9d637f36dcf6cda1282d" title="Returns the enum of the card" alt="" coords="914,528,1129,557"/>
+<area shape="rect" id="node31" href="$class_room_script.html#a4a19c52c114612c19ae2580768d94859" title="Move a player to the room" alt="" coords="896,421,1147,451"/>
+<area shape="rect" id="node33" href="$class_room_script.html#ae49a5bb396aa0c894fb1686b92f879da" title="Move a weapon to the room" alt="" coords="888,581,1155,611"/>
 <area shape="rect" id="node32" href="$class_player_master_controller.html#a0447a8a21b5c0f2c94f9d27e0bcd0830" title=" " alt="" coords="1219,475,1521,504"/>
 </map>

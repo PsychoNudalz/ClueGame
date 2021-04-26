@@ -70,37 +70,38 @@ $(function() {
 <div class="title">DieSide Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Script for die side Gameobject  
+ <a href="class_die_side.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for DieSide:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_die_side__inherit__graph.png" border="0" usemap="#a_die_side_inherit__map" alt="Inheritance graph"/></div>
-<map name="a_die_side_inherit__map" id="a_die_side_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,139,148,293"/>
-<area shape="rect" title=" " alt="" coords="11,5,142,91"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_side__inherit__graph.svg" width="154" height="299"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <div class="dynheader">
 Collaboration diagram for DieSide:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_die_side__coll__graph.png" border="0" usemap="#a_die_side_coll__map" alt="Collaboration graph"/></div>
-<map name="a_die_side_coll__map" id="a_die_side_coll__map">
-<area shape="rect" title=" " alt="" coords="5,139,148,293"/>
-<area shape="rect" title=" " alt="" coords="11,5,142,91"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_side__coll__graph.svg" width="154" height="299"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a694174e094333dddba56a1fffeb7a00b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#a694174e094333dddba56a1fffeb7a00b">IsOnGround</a> ()</td></tr>
+<tr class="memdesc:a694174e094333dddba56a1fffeb7a00b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the die side in contact with the board  <a href="class_die_side.html#a694174e094333dddba56a1fffeb7a00b">More...</a><br /></td></tr>
 <tr class="separator:a694174e094333dddba56a1fffeb7a00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0dab76f00ebbd4a4d036be82948752"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#aad0dab76f00ebbd4a4d036be82948752">GetSideValue</a> ()</td></tr>
+<tr class="memdesc:aad0dab76f00ebbd4a4d036be82948752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value on the opposite side of the die  <a href="class_die_side.html#aad0dab76f00ebbd4a4d036be82948752">More...</a><br /></td></tr>
 <tr class="separator:aad0dab76f00ebbd4a4d036be82948752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aff297523ae7ec227e2d83ce6f9ae4340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#aff297523ae7ec227e2d83ce6f9ae4340">OnTriggerStay</a> (Collider other)</td></tr>
+<tr class="memdesc:aff297523ae7ec227e2d83ce6f9ae4340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set on ground = true if trigger is colliding with board  <a href="class_die_side.html#aff297523ae7ec227e2d83ce6f9ae4340">More...</a><br /></td></tr>
 <tr class="separator:aff297523ae7ec227e2d83ce6f9ae4340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c5323a459391b2e6248b5945d844d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#a11c5323a459391b2e6248b5945d844d9">OnTriggerExit</a> (Collider other)</td></tr>
+<tr class="memdesc:a11c5323a459391b2e6248b5945d844d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set on ground = false if trigger is not colliding with board  <a href="class_die_side.html#a11c5323a459391b2e6248b5945d844d9">More...</a><br /></td></tr>
 <tr class="separator:a11c5323a459391b2e6248b5945d844d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -110,7 +111,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a22f6d596bfe6cab76d93361f6abb9c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#a22f6d596bfe6cab76d93361f6abb9c33">isOnGround</a></td></tr>
 <tr class="separator:a22f6d596bfe6cab76d93361f6abb9c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Script for die side Gameobject </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aad0dab76f00ebbd4a4d036be82948752"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad0dab76f00ebbd4a4d036be82948752">&#9670;&nbsp;</a></span>GetSideValue()</h2>
 
@@ -125,15 +128,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get value on the opposite side of the die </p>
+<dl class="section return"><dt>Returns</dt><dd>Value from opposite side of die</dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph.png" border="0" usemap="#aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph" alt=""/></div>
-<map name="aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph" id="aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph">
-<area shape="rect" title=" " alt="" coords="365,5,548,35"/>
-<area shape="rect" href="class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title=" " alt="" coords="156,5,317,35"/>
-<area shape="rect" href="class_die.html#a1720b01fed5d5276f3761c944baa8126" title=" " alt="" coords="5,5,108,35"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph.svg" width="554" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -152,15 +154,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Is the die side in contact with the board </p>
+<dl class="section return"><dt>Returns</dt><dd>true if in contact with board, false if not</dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph.png" border="0" usemap="#aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph" alt=""/></div>
-<map name="aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph" id="aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph">
-<area shape="rect" title=" " alt="" coords="365,5,532,35"/>
-<area shape="rect" href="class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title=" " alt="" coords="156,5,317,35"/>
-<area shape="rect" href="class_die.html#a1720b01fed5d5276f3761c944baa8126" title=" " alt="" coords="5,5,108,35"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph.svg" width="538" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -189,6 +190,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Set on ground = false if trigger is not colliding with board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Other collider to check</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aff297523ae7ec227e2d83ce6f9ae4340"></a>
@@ -214,6 +223,14 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Set on ground = true if trigger is colliding with board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Other collider to check</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

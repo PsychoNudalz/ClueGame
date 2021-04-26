@@ -1,9 +1,9 @@
 <map id="BoardBuilder.CreateFreeRollTiles" name="BoardBuilder.CreateFreeRollTiles">
 <area shape="rect" id="node1" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="5,59,264,88"/>
 <area shape="rect" id="node2" href="$class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="318,32,565,61"/>
-<area shape="rect" id="node7" href="$class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="312,85,571,115"/>
-<area shape="rect" id="node3" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="619,32,771,61"/>
-<area shape="rect" id="node4" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="819,5,1080,35"/>
+<area shape="rect" id="node7" href="$class_board_manager.html#ad208908578ffda25d87122a34e264b44" title="Create 2d array of all board tiles" alt="" coords="312,85,571,115"/>
+<area shape="rect" id="node3" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="Perform bfs search for the tiles" alt="" coords="619,32,771,61"/>
+<area shape="rect" id="node4" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title="Return array of all neighbours of given tile" alt="" coords="819,5,1080,35"/>
 <area shape="rect" id="node6" href="$class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="854,59,1045,88"/>
-<area shape="rect" id="node5" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1128,5,1376,35"/>
+<area shape="rect" id="node5" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title="Get a tile from the array using a grid reference." alt="" coords="1128,5,1376,35"/>
 </map>

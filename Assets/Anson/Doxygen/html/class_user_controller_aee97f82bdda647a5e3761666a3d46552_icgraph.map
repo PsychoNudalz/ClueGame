@@ -1,7 +1,7 @@
 <map id="UserController.RollDice" name="UserController.RollDice">
-<area shape="rect" id="node1" title=" " alt="" coords="827,32,1012,61"/>
+<area shape="rect" id="node1" title="Rolls the dice" alt="" coords="827,32,1012,61"/>
 <area shape="rect" id="node2" href="$class_a_i_controller_script.html#a1584ffc08f2ea88236ad6df47319636b" title="have AI to roll" alt="" coords="572,5,779,35"/>
-<area shape="rect" id="node5" href="$class_u_i_handler.html#ac40571820fefd3233236883c01522fa1" title="rolls dice when the button is pressed" alt="" coords="577,59,774,88"/>
+<area shape="rect" id="node5" href="$class_u_i_handler.html#ac40571820fefd3233236883c01522fa1" title="Rolls dice when the button is pressed" alt="" coords="577,59,774,88"/>
 <area shape="rect" id="node3" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
 <area shape="rect" id="node4" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="DoorScript.ToggleDoorOpenClose" name="DoorScript.ToggleDoorOpenClose">
-<area shape="rect" id="node1" title=" " alt="" coords="207,5,471,35"/>
-<area shape="rect" id="node2" href="$class_door_script.html#a49b1f56617ce757c7b61acced607aece" title=" " alt="" coords="5,5,159,35"/>
+<area shape="rect" id="node1" title="Toggle door Open / Close" alt="" coords="207,5,471,35"/>
+<area shape="rect" id="node2" href="$class_door_script.html#a49b1f56617ce757c7b61acced607aece" title="If test keys active 0 key opens / closes the door" alt="" coords="5,5,159,35"/>
 </map>

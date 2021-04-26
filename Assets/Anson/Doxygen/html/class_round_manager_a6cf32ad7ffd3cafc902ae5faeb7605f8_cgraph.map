@@ -4,7 +4,7 @@
 <area shape="rect" id="node4" href="$class_a_i_controller_script.html#a208f5afe4102ff2ca04a03a425d76279" title="for the round manager to notify that another player finished picking a card to show" alt="" coords="341,111,608,140"/>
 <area shape="rect" id="node9" href="$class_player_master_controller.html#a16dbaeb841ba29cdc8b7cb3b3bc86d99" title="Remove a card from ToGuessCard" alt="" coords="304,189,645,219"/>
 <area shape="rect" id="node3" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="719,5,962,35"/>
-<area shape="rect" id="node5" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="707,59,975,88"/>
+<area shape="rect" id="node5" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="707,59,975,88"/>
 <area shape="rect" id="node6" href="$class_a_i_controller_script.html#ab124aec8211aa7b8f00c6ef5db6bc96a" title="for out putting the debug stack if outputDebugText is true, it will out put the the console as well" alt="" coords="1335,161,1575,191"/>
 <area shape="rect" id="node7" href="$class_a_i_controller_script.html#aaee909cd0f0ffdedd8d8425607d7ccb5" title="to set the AI&#39;s mode" alt="" coords="727,163,954,192"/>
 <area shape="rect" id="node8" href="$class_a_i_controller_script.html#afcb2875a5501f07a7f44d0fa720266f3" title="to delay the time for the next time the AI does something in the Update" alt="" coords="1036,213,1287,243"/>

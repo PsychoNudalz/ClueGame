@@ -1,9 +1,9 @@
 <map id="Die.Update" name="Die.Update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,108,115"/>
-<area shape="rect" id="node2" href="$class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title=" " alt="" coords="156,59,317,88"/>
-<area shape="rect" id="node5" href="$class_die.html#ab35c865f0a0084cf8741ea7bcfe1f9f7" title=" " alt="" coords="177,112,296,141"/>
-<area shape="rect" id="node3" href="$class_die_side.html#aad0dab76f00ebbd4a4d036be82948752" title=" " alt="" coords="365,5,548,35"/>
-<area shape="rect" id="node4" href="$class_die_side.html#a694174e094333dddba56a1fffeb7a00b" title=" " alt="" coords="373,59,540,88"/>
-<area shape="rect" id="node6" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="596,137,713,167"/>
-<area shape="rect" id="node7" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title=" " alt="" coords="405,163,508,192"/>
+<area shape="rect" id="node1" title="If die has been thrown, landed and stopped moving then update die value. If die stops on edge then ro..." alt="" coords="5,85,108,115"/>
+<area shape="rect" id="node2" href="$class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title="Set the current value of the die if on ground 0 if not." alt="" coords="156,59,317,88"/>
+<area shape="rect" id="node5" href="$class_die.html#ab35c865f0a0084cf8741ea7bcfe1f9f7" title="Roll again in event of die getting stuck on edge" alt="" coords="177,112,296,141"/>
+<area shape="rect" id="node3" href="$class_die_side.html#aad0dab76f00ebbd4a4d036be82948752" title="Get value on the opposite side of the die" alt="" coords="365,5,548,35"/>
+<area shape="rect" id="node4" href="$class_die_side.html#a694174e094333dddba56a1fffeb7a00b" title="Is the die side in contact with the board" alt="" coords="373,59,540,88"/>
+<area shape="rect" id="node6" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title="Reset Die to original position" alt="" coords="596,137,713,167"/>
+<area shape="rect" id="node7" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title="Roll the die" alt="" coords="405,163,508,192"/>
 </map>

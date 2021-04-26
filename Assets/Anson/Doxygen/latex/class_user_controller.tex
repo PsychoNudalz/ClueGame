@@ -2,35 +2,45 @@
 \label{class_user_controller}\index{UserController@{UserController}}
 
 
-Inheritance diagram for User\+Controller\+:
-% FIG 0
+Inheritance diagram for User\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_user_controller__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for User\+Controller\+:
-% FIG 1
+Collaboration diagram for User\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_user_controller__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_user_controller_aee97f82bdda647a5e3761666a3d46552}{Roll\+Dice}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Rolls the dice \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277}{Take\+Shortcut}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Takes the shortcut \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_controller_af896aefe0262e0d8f07fa5f18592877d}{Select\+Tile}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} tile)
-\item 
+\begin{DoxyCompactList}\small\item\em Selects a tile for player movement \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd}{Make\+Suggestion}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Makes suggestion \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8}{Set\+Character}} (\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets character for suggestions and accusation \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35}{Set\+Weapon}} (\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} c)
-\item 
-void \mbox{\hyperlink{class_user_controller_a80cdb48f3a7a1dbac2af911fb26d1c41}{Set\+Room}} (\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets weapon for suggestions and accusation \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_controller_a75e6950fdc74e232061ab078c36b9069}{Set\+Room}} (\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} c)
+\begin{DoxyCompactList}\small\item\em Sets room for suggestions and accusation \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_user_controller_afef83f9ab2a7f38ccfebe89c17b37510}{Pass\+Selected}} ()
 \item 
 bool \mbox{\hyperlink{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}{Make\+Accusation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Makes accusation \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_user_controller_ab90611f541e20c125133d09b62407f41}{End\+Turn}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ends turn \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_user_controller_a587c55687141d18f375e0504ea4649fa}{Get\+Current\+Player}} ()
 \begin{DoxyCompactList}\small\item\em Gets the player controller for the current player \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
@@ -71,10 +81,27 @@ void \mbox{\hyperlink{class_user_controller_a0d42e016d1428255def6c3d9b7050523}{A
 \doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} User\+Controller.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+
+
+Ends turn 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_ab90611f541e20c125133d09b62407f41_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_ab90611f541e20c125133d09b62407f41_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_a587c55687141d18f375e0504ea4649fa}\label{class_user_controller_a587c55687141d18f375e0504ea4649fa}} 
 \index{UserController@{UserController}!GetCurrentPlayer@{GetCurrentPlayer}}
 \index{GetCurrentPlayer@{GetCurrentPlayer}!UserController@{UserController}}
@@ -88,30 +115,74 @@ Gets the player controller for the current player
 \begin{DoxyReturn}{Returns}
 player controller for the current player
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 4
-Here is the caller graph for this function\+:
-% FIG 5
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a587c55687141d18f375e0504ea4649fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a587c55687141d18f375e0504ea4649fa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}\label{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}} 
 \index{UserController@{UserController}!MakeAccusation@{MakeAccusation}}
 \index{MakeAccusation@{MakeAccusation}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{MakeAccusation()}{MakeAccusation()}}
 {\footnotesize\ttfamily bool User\+Controller.\+Make\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 6
-Here is the caller graph for this function\+:
-% FIG 7
+
+
+Makes accusation 
+
+\begin{DoxyReturn}{Returns}
+True if accusation is made
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd}\label{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd}} 
 \index{UserController@{UserController}!MakeSuggestion@{MakeSuggestion}}
 \index{MakeSuggestion@{MakeSuggestion}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{MakeSuggestion()}{MakeSuggestion()}}
 {\footnotesize\ttfamily bool User\+Controller.\+Make\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 8
-Here is the caller graph for this function\+:
-% FIG 9
+
+
+Makes suggestion 
+
+\begin{DoxyReturn}{Returns}
+True if suggestion is made
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_afef83f9ab2a7f38ccfebe89c17b37510}\label{class_user_controller_afef83f9ab2a7f38ccfebe89c17b37510}} 
 \index{UserController@{UserController}!PassSelected@{PassSelected}}
 \index{PassSelected@{PassSelected}!UserController@{UserController}}
@@ -124,60 +195,164 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
 {\footnotesize\ttfamily void User\+Controller.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 10
-Here is the caller graph for this function\+:
-% FIG 11
+
+
+Rolls the dice 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aee97f82bdda647a5e3761666a3d46552_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aee97f82bdda647a5e3761666a3d46552_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_af896aefe0262e0d8f07fa5f18592877d}\label{class_user_controller_af896aefe0262e0d8f07fa5f18592877d}} 
 \index{UserController@{UserController}!SelectTile@{SelectTile}}
 \index{SelectTile@{SelectTile}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SelectTile()}{SelectTile()}}
 {\footnotesize\ttfamily void User\+Controller.\+Select\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{tile }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 12
-Here is the caller graph for this function\+:
-% FIG 13
+
+
+Selects a tile for player movement 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_af896aefe0262e0d8f07fa5f18592877d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_af896aefe0262e0d8f07fa5f18592877d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8}\label{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8}} 
 \index{UserController@{UserController}!SetCharacter@{SetCharacter}}
 \index{SetCharacter@{SetCharacter}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
 {\footnotesize\ttfamily void User\+Controller.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{c }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 14
-Here is the caller graph for this function\+:
-% FIG 15
-\mbox{\Hypertarget{class_user_controller_a80cdb48f3a7a1dbac2af911fb26d1c41}\label{class_user_controller_a80cdb48f3a7a1dbac2af911fb26d1c41}} 
+
+
+Sets character for suggestions and accusation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_controller_a75e6950fdc74e232061ab078c36b9069}\label{class_user_controller_a75e6950fdc74e232061ab078c36b9069}} 
 \index{UserController@{UserController}!SetRoom@{SetRoom}}
 \index{SetRoom@{SetRoom}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetRoom()}{SetRoom()}}
-{\footnotesize\ttfamily void User\+Controller.\+Set\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void User\+Controller.\+Set\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}}}]{c }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 16
-Here is the caller graph for this function\+:
-% FIG 17
+
+
+Sets room for suggestions and accusation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a75e6950fdc74e232061ab078c36b9069_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a75e6950fdc74e232061ab078c36b9069_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35}\label{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35}} 
 \index{UserController@{UserController}!SetWeapon@{SetWeapon}}
 \index{SetWeapon@{SetWeapon}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetWeapon()}{SetWeapon()}}
 {\footnotesize\ttfamily void User\+Controller.\+Set\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{c }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 18
-Here is the caller graph for this function\+:
-% FIG 19
+
+
+Sets weapon for suggestions and accusation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277}\label{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277}} 
 \index{UserController@{UserController}!TakeShortcut@{TakeShortcut}}
 \index{TakeShortcut@{TakeShortcut}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{TakeShortcut()}{TakeShortcut()}}
 {\footnotesize\ttfamily void User\+Controller.\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 20
-Here is the caller graph for this function\+:
-% FIG 21
+
+
+Takes the shortcut 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

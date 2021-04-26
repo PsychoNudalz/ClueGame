@@ -1,7 +1,7 @@
 <map id="MoveTokensTestScript.MovePlayer" name="MoveTokensTestScript.MovePlayer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,32,273,61"/>
+<area shape="rect" id="node1" title="Move player token to set room" alt="" coords="5,32,273,61"/>
 <area shape="rect" id="node2" href="$class_player_token_script.html#adfdc3e67c57ff06238789e480c9a7071" title=" " alt="" coords="321,5,688,35"/>
-<area shape="rect" id="node3" href="$class_room_script.html#a4a19c52c114612c19ae2580768d94859" title=" " alt="" coords="379,59,630,88"/>
+<area shape="rect" id="node3" href="$class_room_script.html#a4a19c52c114612c19ae2580768d94859" title="Move a player to the room" alt="" coords="379,59,630,88"/>
 <area shape="rect" id="node4" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="748,32,1027,61"/>
 <area shape="rect" id="node5" href="$class_player_master_controller.html#a0447a8a21b5c0f2c94f9d27e0bcd0830" title=" " alt="" coords="736,85,1039,115"/>
 </map>

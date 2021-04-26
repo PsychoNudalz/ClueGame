@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['deck_1619',['Deck',['../class_player_stats_script.html#ae1f0d6d0b3601c0b94259c5c04291518',1,'PlayerStatsScript']]],
-  ['devices_1620',['devices',['../class_game_controls.html#a32ac4d3d569fa8c10683ea9995518bb8',1,'GameControls']]]
+  ['deck_1623',['Deck',['../class_player_stats_script.html#ae1f0d6d0b3601c0b94259c5c04291518',1,'PlayerStatsScript']]],
+  ['devices_1624',['devices',['../class_game_controls.html#a32ac4d3d569fa8c10683ea9995518bb8',1,'GameControls']]]
 ];

@@ -2,38 +2,53 @@
 \label{class_notebook_script}\index{NotebookScript@{NotebookScript}}
 
 
-Inheritance diagram for Notebook\+Script\+:
-% FIG 0
+Script for the notebook UI object  
 
 
-Collaboration diagram for Notebook\+Script\+:
-% FIG 1
+
+
+Inheritance diagram for Notebook\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_notebook_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Notebook\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_notebook_script__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370}{initialize\+Notebook}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize notebook UI \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a3c031d903921e95ac42253bb09f5beec}{Refresh\+Notebook}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Refresh the notebook UI Object \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6}{Refresh\+Characters}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} current\+Player)
-\item 
+\begin{DoxyCompactList}\small\item\em Refresh all character button status. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}{Refresh\+Rooms}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} current\+Player)
-\item 
+\begin{DoxyCompactList}\small\item\em Refresh all room button status. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a4d45da2c213d4711991232101154510e}{Refresh\+Weapons}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} current\+Player)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Refresh all weapon button status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}{On\+Enable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Refresh notebook on enabling \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}{Awake}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialize notebook on awake \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}{Create\+Character\+Buttons}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Create the character buttons \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}{Create\+Room\+Buttons}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Create the room buttons \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_notebook_script_a32b5d422887498e904d1b820605978eb}{Create\+Weapon\+Buttons}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Create the Weapon buttons \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,6 +68,11 @@ Game\+Object \mbox{\hyperlink{class_notebook_script_a786e9f35fe0788722012f210e5c
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Script for the notebook UI object 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}\label{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}} 
 \index{NotebookScript@{NotebookScript}!Awake@{Awake}}
@@ -60,96 +80,241 @@ Game\+Object \mbox{\hyperlink{class_notebook_script_a786e9f35fe0788722012f210e5c
 \doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 2
+
+
+Initialize notebook on awake 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}\label{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}} 
 \index{NotebookScript@{NotebookScript}!CreateCharacterButtons@{CreateCharacterButtons}}
 \index{CreateCharacterButtons@{CreateCharacterButtons}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{CreateCharacterButtons()}{CreateCharacterButtons()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Create\+Character\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 3
-Here is the caller graph for this function\+:
-% FIG 4
+
+
+Create the character buttons 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}\label{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}} 
 \index{NotebookScript@{NotebookScript}!CreateRoomButtons@{CreateRoomButtons}}
 \index{CreateRoomButtons@{CreateRoomButtons}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{CreateRoomButtons()}{CreateRoomButtons()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Create\+Room\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 5
-Here is the caller graph for this function\+:
-% FIG 6
+
+
+Create the room buttons 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a32b5d422887498e904d1b820605978eb}\label{class_notebook_script_a32b5d422887498e904d1b820605978eb}} 
 \index{NotebookScript@{NotebookScript}!CreateWeaponButtons@{CreateWeaponButtons}}
 \index{CreateWeaponButtons@{CreateWeaponButtons}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{CreateWeaponButtons()}{CreateWeaponButtons()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Create\+Weapon\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 7
-Here is the caller graph for this function\+:
-% FIG 8
+
+
+Create the Weapon buttons 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a32b5d422887498e904d1b820605978eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a32b5d422887498e904d1b820605978eb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370}\label{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370}} 
 \index{NotebookScript@{NotebookScript}!initializeNotebook@{initializeNotebook}}
 \index{initializeNotebook@{initializeNotebook}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{initializeNotebook()}{initializeNotebook()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+initialize\+Notebook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
+
+
+Initialize notebook UI 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}\label{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}} 
 \index{NotebookScript@{NotebookScript}!OnEnable@{OnEnable}}
 \index{OnEnable@{OnEnable}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Here is the call graph for this function\+:
-% FIG 11
+
+
+Refresh notebook on enabling 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6}\label{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6}} 
 \index{NotebookScript@{NotebookScript}!RefreshCharacters@{RefreshCharacters}}
 \index{RefreshCharacters@{RefreshCharacters}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshCharacters()}{RefreshCharacters()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Characters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 12
-Here is the caller graph for this function\+:
-% FIG 13
+
+
+Refresh all character button status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & Current Player\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a3c031d903921e95ac42253bb09f5beec}\label{class_notebook_script_a3c031d903921e95ac42253bb09f5beec}} 
 \index{NotebookScript@{NotebookScript}!RefreshNotebook@{RefreshNotebook}}
 \index{RefreshNotebook@{RefreshNotebook}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshNotebook()}{RefreshNotebook()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Notebook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 14
-Here is the caller graph for this function\+:
-% FIG 15
+
+
+Refresh the notebook UI Object 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a3c031d903921e95ac42253bb09f5beec_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a3c031d903921e95ac42253bb09f5beec_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}\label{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}} 
 \index{NotebookScript@{NotebookScript}!RefreshRooms@{RefreshRooms}}
 \index{RefreshRooms@{RefreshRooms}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshRooms()}{RefreshRooms()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Rooms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 16
-Here is the caller graph for this function\+:
-% FIG 17
+
+
+Refresh all room button status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & Current Player\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_notebook_script_a4d45da2c213d4711991232101154510e}\label{class_notebook_script_a4d45da2c213d4711991232101154510e}} 
 \index{NotebookScript@{NotebookScript}!RefreshWeapons@{RefreshWeapons}}
 \index{RefreshWeapons@{RefreshWeapons}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshWeapons()}{RefreshWeapons()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Weapons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-% FIG 18
-Here is the caller graph for this function\+:
-% FIG 19
+
+
+Refresh all weapon button status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & Current Player\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a4d45da2c213d4711991232101154510e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_notebook_script_a4d45da2c213d4711991232101154510e_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

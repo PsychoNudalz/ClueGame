@@ -1,4 +1,4 @@
 <map id="CameraCloseUp.ClearCloseUp" name="CameraCloseUp.ClearCloseUp">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,248,35"/>
-<area shape="rect" id="node2" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title=" " alt="" coords="296,5,579,35"/>
+<area shape="rect" id="node1" title="Clear camera close up" alt="" coords="5,5,248,35"/>
+<area shape="rect" id="node2" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title="Delay then clear close up" alt="" coords="296,5,579,35"/>
 </map>

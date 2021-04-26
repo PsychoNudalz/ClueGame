@@ -1,4 +1,4 @@
 <map id="NotebookTestScript.GetWeaponText" name="NotebookTestScript.GetWeaponText">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,284,35"/>
-<area shape="rect" id="node2" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="332,5,600,35"/>
+<area shape="rect" id="node1" title="Get weapon notebook text" alt="" coords="5,5,284,35"/>
+<area shape="rect" id="node2" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="332,5,600,35"/>
 </map>

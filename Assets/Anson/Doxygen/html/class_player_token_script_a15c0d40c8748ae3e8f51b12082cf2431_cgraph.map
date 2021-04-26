@@ -1,4 +1,4 @@
 <map id="PlayerTokenScript.CanTakeShortcut" name="PlayerTokenScript.CanTakeShortcut">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,280,35"/>
-<area shape="rect" id="node2" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title=" " alt="" coords="328,5,523,35"/>
+<area shape="rect" id="node2" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title="Does the room have a shortcut tile" alt="" coords="328,5,523,35"/>
 </map>

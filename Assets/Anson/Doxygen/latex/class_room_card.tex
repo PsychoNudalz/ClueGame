@@ -2,33 +2,43 @@
 \label{class_room_card}\index{RoomCard@{RoomCard}}
 
 
-Inheritance diagram for Room\+Card\+:
-% FIG 0
+Inheritance diagram for Room\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_room_card__inherit__graph}
+\end{center}
+\end{figure}
 
 
-Collaboration diagram for Room\+Card\+:
-% FIG 1
+Collaboration diagram for Room\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_room_card__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override bool \mbox{\hyperlink{class_room_card_a287eaddefdc069da922bb63321827289}{Equals}} (object obj)
 \item 
 override Enum \mbox{\hyperlink{class_room_card_a7e77f1ec02f147b5a968305a16fe90bc}{Get\+Card\+Type}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the enum of the card \end{DoxyCompactList}\item 
 override int \mbox{\hyperlink{class_room_card_a56821e26e156eb0028a01397235bc3d4}{Get\+Hash\+Code}} ()
 \item 
 override Sprite \mbox{\hyperlink{class_room_card_a9f2cb9052e28347adc998f17c50b9922}{Get\+Card\+Image}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} \mbox{\hyperlink{class_room_card_aaee2a1b49038db02250f95bc60c26a1e}{room}}
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_room_card_a5a3da552cc70ccaad0d9325f2f86c675}{room}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_room_card_a4303b51cd352588c644b4bd7d4c99baf}{Awake}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the correct path for cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,6 +52,10 @@ Sprite \mbox{\hyperlink{class_room_card_ad19df0f9f4e57045ae41e91b14b3acc8}{card\
 \index{Awake@{Awake}!RoomCard@{RoomCard}}
 \doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
 {\footnotesize\ttfamily void Room\+Card.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the correct path for cards image 
 
 \mbox{\Hypertarget{class_room_card_a287eaddefdc069da922bb63321827289}\label{class_room_card_a287eaddefdc069da922bb63321827289}} 
 \index{RoomCard@{RoomCard}!Equals@{Equals}}
@@ -57,6 +71,13 @@ Sprite \mbox{\hyperlink{class_room_card_ad19df0f9f4e57045ae41e91b14b3acc8}{card\
 
 
 
+Returns cards image 
+
+\begin{DoxyReturn}{Returns}
+Cards image
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}.
 
 \mbox{\Hypertarget{class_room_card_a7e77f1ec02f147b5a968305a16fe90bc}\label{class_room_card_a7e77f1ec02f147b5a968305a16fe90bc}} 
@@ -67,10 +88,22 @@ Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}
 
 
 
+Returns the enum of the card 
+
+\begin{DoxyReturn}{Returns}
+Enum of the card
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a094a5e7ea98cc156ac64e578a987be85}{Card}}.
 
-Here is the caller graph for this function\+:
-% FIG 2
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_card_a7e77f1ec02f147b5a968305a16fe90bc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_card_a56821e26e156eb0028a01397235bc3d4}\label{class_room_card_a56821e26e156eb0028a01397235bc3d4}} 
 \index{RoomCard@{RoomCard}!GetHashCode@{GetHashCode}}
 \index{GetHashCode@{GetHashCode}!RoomCard@{RoomCard}}
@@ -86,11 +119,11 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{cardImage}{cardImage}}
 {\footnotesize\ttfamily Sprite Room\+Card.\+card\+Image\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_room_card_aaee2a1b49038db02250f95bc60c26a1e}\label{class_room_card_aaee2a1b49038db02250f95bc60c26a1e}} 
+\mbox{\Hypertarget{class_room_card_a5a3da552cc70ccaad0d9325f2f86c675}\label{class_room_card_a5a3da552cc70ccaad0d9325f2f86c675}} 
 \index{RoomCard@{RoomCard}!room@{room}}
 \index{room@{room}!RoomCard@{RoomCard}}
 \doxysubsubsection{\texorpdfstring{room}{room}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Room\+Card.\+room}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Room\+Card.\+room}
 
 
 

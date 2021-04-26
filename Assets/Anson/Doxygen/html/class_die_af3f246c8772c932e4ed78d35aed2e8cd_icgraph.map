@@ -1,6 +1,6 @@
 <map id="Die.IsReadyToRoll" name="Die.IsReadyToRoll">
-<area shape="rect" id="node1" title=" " alt="" coords="552,32,703,61"/>
-<area shape="rect" id="node2" href="$class_dice.html#a9df730d8804e077cacc5efcbda241896" title=" " alt="" coords="356,32,504,61"/>
+<area shape="rect" id="node1" title="Is die ready to roll" alt="" coords="552,32,703,61"/>
+<area shape="rect" id="node2" href="$class_dice.html#a9df730d8804e077cacc5efcbda241896" title="Are dice ready to roll" alt="" coords="356,32,504,61"/>
 <area shape="rect" id="node3" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="5,5,308,35"/>
-<area shape="rect" id="node4" href="$class_display_dice_value.html#a0f0f2e5d5a2ecc6e8530c82f897f5dba" title=" " alt="" coords="55,59,258,88"/>
+<area shape="rect" id="node4" href="$class_display_dice_value.html#a0f0f2e5d5a2ecc6e8530c82f897f5dba" title="Set button interactable and update dice value text" alt="" coords="55,59,258,88"/>
 </map>

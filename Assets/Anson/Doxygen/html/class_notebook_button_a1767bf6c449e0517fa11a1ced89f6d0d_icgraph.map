@@ -1,8 +1,8 @@
 <map id="NotebookButton.SetButtonType" name="NotebookButton.SetButtonType">
-<area shape="rect" id="node1" title=" " alt="" coords="895,59,1135,88"/>
-<area shape="rect" id="node2" href="$class_notebook_script.html#a0d865d47dca27b4d3e7a0a1a35036efb" title=" " alt="" coords="543,5,847,35"/>
-<area shape="rect" id="node5" href="$class_notebook_script.html#a970cdef3e0f21b0cc144fef7088bbeb0" title=" " alt="" coords="556,59,833,88"/>
-<area shape="rect" id="node6" href="$class_notebook_script.html#a32b5d422887498e904d1b820605978eb" title=" " alt="" coords="547,112,842,141"/>
-<area shape="rect" id="node3" href="$class_notebook_script.html#a829e34fac5e19bf031c070b44f0fe370" title=" " alt="" coords="236,59,495,88"/>
-<area shape="rect" id="node4" href="$class_notebook_script.html#ad7fb4caee1659d66f551b02983ef9d4c" title=" " alt="" coords="5,59,188,88"/>
+<area shape="rect" id="node1" title="Set the button type" alt="" coords="895,59,1135,88"/>
+<area shape="rect" id="node2" href="$class_notebook_script.html#a0d865d47dca27b4d3e7a0a1a35036efb" title="Create the character buttons" alt="" coords="543,5,847,35"/>
+<area shape="rect" id="node5" href="$class_notebook_script.html#a970cdef3e0f21b0cc144fef7088bbeb0" title="Create the room buttons" alt="" coords="556,59,833,88"/>
+<area shape="rect" id="node6" href="$class_notebook_script.html#a32b5d422887498e904d1b820605978eb" title="Create the Weapon buttons" alt="" coords="547,112,842,141"/>
+<area shape="rect" id="node3" href="$class_notebook_script.html#a829e34fac5e19bf031c070b44f0fe370" title="Initialize notebook UI" alt="" coords="236,59,495,88"/>
+<area shape="rect" id="node4" href="$class_notebook_script.html#ad7fb4caee1659d66f551b02983ef9d4c" title="Initialize notebook on awake" alt="" coords="5,59,188,88"/>
 </map>

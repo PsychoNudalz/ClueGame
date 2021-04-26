@@ -1,5 +1,5 @@
 <map id="NotebookScript.CreateWeaponButtons" name="NotebookScript.CreateWeaponButtons">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,300,35"/>
-<area shape="rect" id="node2" href="$class_notebook_button.html#a1767bf6c449e0517fa11a1ced89f6d0d" title=" " alt="" coords="348,5,588,35"/>
-<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="636,5,904,35"/>
+<area shape="rect" id="node1" title="Create the Weapon buttons" alt="" coords="5,5,300,35"/>
+<area shape="rect" id="node2" href="$class_notebook_button.html#a1767bf6c449e0517fa11a1ced89f6d0d" title="Set the button type" alt="" coords="348,5,588,35"/>
+<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="636,5,904,35"/>
 </map>

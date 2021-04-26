@@ -1,5 +1,5 @@
 <map id="BoardManager.GetFreeRollTileInMovable" name="BoardManager.GetFreeRollTileInMovable">
-<area shape="rect" id="node1" title="Gets an free roll tile from Movable list return null if none found" alt="" coords="900,5,1211,35"/>
+<area shape="rect" id="node1" title="Get a free roll tile from movable tiles" alt="" coords="900,5,1211,35"/>
 <area shape="rect" id="node2" href="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="572,5,852,35"/>
 <area shape="rect" id="node3" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
 <area shape="rect" id="node4" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>

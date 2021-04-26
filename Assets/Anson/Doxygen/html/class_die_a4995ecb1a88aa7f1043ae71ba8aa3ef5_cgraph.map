@@ -1,4 +1,4 @@
 <map id="Die.RollDie" name="Die.RollDie">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,108,35"/>
-<area shape="rect" id="node2" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="156,5,273,35"/>
+<area shape="rect" id="node1" title="Roll the die" alt="" coords="5,5,108,35"/>
+<area shape="rect" id="node2" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title="Reset Die to original position" alt="" coords="156,5,273,35"/>
 </map>
