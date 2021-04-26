@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// This handles the turn between the players
+/// </summary>
 public class TurnController : MonoBehaviour
 {
    [SerializeField] List<PlayerMasterController> currentPlayers;
@@ -118,7 +122,7 @@ public class TurnController : MonoBehaviour
         } while (currentPlayers[currentPlayerIndex].IsEliminated()&&loopFlag<=currentPlayers.Count*2);
         if(loopFlag >=currentPlayers.Count)
         {
-            Debug.LogError("Loop detected, game over");
+            Debug.LogWarning("Loop detected, game over");
             return false;
         }
 

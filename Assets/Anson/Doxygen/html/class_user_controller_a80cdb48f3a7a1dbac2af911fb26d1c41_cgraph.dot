@@ -1,0 +1,14 @@
+digraph "UserController.SetRoom"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UserController.SetRoom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CardManager.FindCard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Accusation.SetRoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_accusation.html#a15c3190bb9b3ff4be98195a3f72bcd23",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Suggestion.SetSugRoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_suggestion.html#aec2e9ce82ae5f51cea7570bc6dafa43a",tooltip=" "];
+}

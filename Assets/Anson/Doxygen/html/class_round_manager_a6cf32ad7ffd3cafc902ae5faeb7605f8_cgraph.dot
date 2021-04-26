@@ -1,0 +1,20 @@
+digraph "RoundManager.NotifySuggestion"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="RoundManager.NotifySuggestion",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="removing a card from the player's To Guess List notify the AI if a player finished showing a suggeste..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="RoundManager.GetCurrentPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8",tooltip="Gets the player controller for the current player"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TurnController.GetCurrent\lPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="AIControllerScript.Notify\lSuggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#a208f5afe4102ff2ca04a03a425d76279",tooltip="for the round manager to notify that another player finished picking a card to show"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="AIControllerScript.SetAIMode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#aaee909cd0f0ffdedd8d8425607d7ccb5",tooltip="to set the AI's mode"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PlayerMasterController.Remove\lToGuessCard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#a16dbaeb841ba29cdc8b7cb3b3bc86d99",tooltip="Remove a card from ToGuessCard"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PlayerStatsScript.Remove\lToGessCard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368",tooltip="remove a selected card from To Guess List"];
+}

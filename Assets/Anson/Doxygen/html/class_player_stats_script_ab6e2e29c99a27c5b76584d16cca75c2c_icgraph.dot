@@ -1,0 +1,12 @@
+digraph "PlayerStatsScript.AddCard"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="PlayerStatsScript.AddCard",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Add a card to the player's deck"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PlayerMasterController.AddCard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#ab42ac35f631ad5126bed911bbcd8383f",tooltip="Add a list of card to the player's deck"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PlayerStatsScript.AddCard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_stats_script.html#a53b9b6ed7fe6d057381e0101099ca363",tooltip="Add a list of card to the player's deck"];
+}

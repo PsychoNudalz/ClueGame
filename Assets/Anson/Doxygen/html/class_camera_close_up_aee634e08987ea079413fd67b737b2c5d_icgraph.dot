@@ -1,0 +1,22 @@
+digraph "CameraCloseUp.SetCharacterCloseUp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="CameraCloseUp.SetCharacter\lCloseUp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PlayerTokenScript.MoveToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="PlayerMasterController.Move\lPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#a9b23c4d50fabbc44dbba2b0db542efce",tooltip="moving the player to a certain tile"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ShortcutTestUI.EnterRoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shortcut_test_u_i.html#a3012692eeb4658dc688e82b431cc10f6",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="RoundManager.MovePlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#adfd4f66436e06c12a25c9236b629f369",tooltip="moving the current player to the selected tile"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="UserController.SelectTile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="AIControllerScript.Decide\l_Movement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df",tooltip="Decides where the AI should move to this should match the flow chart of the AI"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="UserInputControlScript.Move\lPlayerToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb",tooltip="move player token to the tile the cursor is on"];
+}

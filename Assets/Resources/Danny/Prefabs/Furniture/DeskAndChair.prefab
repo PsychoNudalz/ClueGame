@@ -186,36 +186,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Range
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.995283
-      objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.9995841
-      objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4643795770332929261, guid: cb80272e765216443a0b6f47c32c236d,
-        type: 3}
-      propertyPath: m_Lightmapping
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cb80272e765216443a0b6f47c32c236d,
         type: 3}
       propertyPath: m_Name

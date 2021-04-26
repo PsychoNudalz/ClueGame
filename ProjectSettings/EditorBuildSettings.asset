@@ -33,8 +33,11 @@ EditorBuildSettings:
     path: Assets/_TestScenes/Shortcut Test.unity
     guid: 77b5d342be163f14fac577142e69272b
   - enabled: 1
-    path: Assets/Abdullah/Suggestion_Test.unity
-    guid: b755deab73d99104281b32b1ba668c91
+    path: Assets/Abdullah/Sug_Test_Redo.unity
+    guid: 34006a6d3b62dd64cb0cc8a6a17c90d6
+  - enabled: 1
+    path: Assets/_TestScenes/NoteBookTest.unity
+    guid: 8e49d890c0260db49809893a56b7296b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 096337e020f97734aa55e214c66015e9,
       type: 2}

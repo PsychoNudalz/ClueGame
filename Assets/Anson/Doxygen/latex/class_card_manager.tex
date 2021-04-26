@@ -1,0 +1,152 @@
+\hypertarget{class_card_manager}{}\doxysection{Card\+Manager Class Reference}
+\label{class_card_manager}\index{CardManager@{CardManager}}
+Inheritance diagram for Card\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_card_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_card_manager_a246ee5512607a457900121c510a5e9f2}{Initialise}} ()
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_card_manager_a6fd6b995d49e43483aa85d7b52fd56f9}{Get\+Answers}} ()
+\begin{DoxyCompactList}\small\item\em Returns a list of 3 answer cards in order character, weapon, room; \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_card_manager_a3aa02d8bc476530b2e8e18019aa8a00e}{Is\+Match\+Answer}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ accusation)
+\begin{DoxyCompactList}\small\item\em check if the cards passed matches the answer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}{Deal\+Cards\+To\+Players}} ()
+\begin{DoxyCompactList}\small\item\em shuffles and deal the cards to players \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}{Find\+Card}} (\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} e)
+\item 
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_a86235545188a8d3aafd27cf89374fd75}{Find\+Card}} (\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} e)
+\item 
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_a0995d808bc6c1cd59f35f1fedf5647c9}{Find\+Card}} (\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} e)
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_card_manager_ac679b8c7b3c21ff195eef384e5b94e20}{Get\+All\+Cards}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_card_manager_ae422bd0c5ee4f4a928af6ab6a2bb35c8}{answers}}
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_card_manager_a2a60dd95ebf122d31bd5e0f2c526b21a}{playable\+Cards}}
+\item 
+List$<$ List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ $>$ \mbox{\hyperlink{class_card_manager_ab05dfb92b4d5fdcb6c99023b0ccec27a}{set\+Ofcards}}
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_card_manager_afbea4566292c82f137f4ca1ac4611a1d}{test}}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_card_manager_ab5f6874ccc96cb71b81cdd1d46424d44}{p}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}\label{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}} 
+\index{CardManager@{CardManager}!DealCardsToPlayers@{DealCardsToPlayers}}
+\index{DealCardsToPlayers@{DealCardsToPlayers}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{DealCardsToPlayers()}{DealCardsToPlayers()}}
+{\footnotesize\ttfamily void Card\+Manager.\+Deal\+Cards\+To\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+shuffles and deal the cards to players 
+
+\mbox{\Hypertarget{class_card_manager_a0995d808bc6c1cd59f35f1fedf5647c9}\label{class_card_manager_a0995d808bc6c1cd59f35f1fedf5647c9}} 
+\index{CardManager@{CardManager}!FindCard@{FindCard}}
+\index{FindCard@{FindCard}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Card\+Manager.\+Find\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_manager_a86235545188a8d3aafd27cf89374fd75}\label{class_card_manager_a86235545188a8d3aafd27cf89374fd75}} 
+\index{CardManager@{CardManager}!FindCard@{FindCard}}
+\index{FindCard@{FindCard}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Card\+Manager.\+Find\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}\label{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}} 
+\index{CardManager@{CardManager}!FindCard@{FindCard}}
+\index{FindCard@{FindCard}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Card\+Manager.\+Find\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{e }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_manager_ac679b8c7b3c21ff195eef384e5b94e20}\label{class_card_manager_ac679b8c7b3c21ff195eef384e5b94e20}} 
+\index{CardManager@{CardManager}!GetAllCards@{GetAllCards}}
+\index{GetAllCards@{GetAllCards}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{GetAllCards()}{GetAllCards()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+Get\+All\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_manager_a6fd6b995d49e43483aa85d7b52fd56f9}\label{class_card_manager_a6fd6b995d49e43483aa85d7b52fd56f9}} 
+\index{CardManager@{CardManager}!GetAnswers@{GetAnswers}}
+\index{GetAnswers@{GetAnswers}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{GetAnswers()}{GetAnswers()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+Get\+Answers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a list of 3 answer cards in order character, weapon, room; 
+
+\begin{DoxyReturn}{Returns}
+List of answer cards
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_card_manager_a246ee5512607a457900121c510a5e9f2}\label{class_card_manager_a246ee5512607a457900121c510a5e9f2}} 
+\index{CardManager@{CardManager}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily void Card\+Manager.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_card_manager_a3aa02d8bc476530b2e8e18019aa8a00e}\label{class_card_manager_a3aa02d8bc476530b2e8e18019aa8a00e}} 
+\index{CardManager@{CardManager}!IsMatchAnswer@{IsMatchAnswer}}
+\index{IsMatchAnswer@{IsMatchAnswer}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{IsMatchAnswer()}{IsMatchAnswer()}}
+{\footnotesize\ttfamily bool Card\+Manager.\+Is\+Match\+Answer (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{accusation }\end{DoxyParamCaption})}
+
+
+
+check if the cards passed matches the answer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em accusation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_card_manager_ae422bd0c5ee4f4a928af6ab6a2bb35c8}\label{class_card_manager_ae422bd0c5ee4f4a928af6ab6a2bb35c8}} 
+\index{CardManager@{CardManager}!answers@{answers}}
+\index{answers@{answers}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{answers}{answers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+answers}
+
+\mbox{\Hypertarget{class_card_manager_ab5f6874ccc96cb71b81cdd1d46424d44}\label{class_card_manager_ab5f6874ccc96cb71b81cdd1d46424d44}} 
+\index{CardManager@{CardManager}!p@{p}}
+\index{p@{p}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Card\+Manager.\+p}
+
+\mbox{\Hypertarget{class_card_manager_a2a60dd95ebf122d31bd5e0f2c526b21a}\label{class_card_manager_a2a60dd95ebf122d31bd5e0f2c526b21a}} 
+\index{CardManager@{CardManager}!playableCards@{playableCards}}
+\index{playableCards@{playableCards}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{playableCards}{playableCards}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+playable\+Cards}
+
+\mbox{\Hypertarget{class_card_manager_ab05dfb92b4d5fdcb6c99023b0ccec27a}\label{class_card_manager_ab05dfb92b4d5fdcb6c99023b0ccec27a}} 
+\index{CardManager@{CardManager}!setOfcards@{setOfcards}}
+\index{setOfcards@{setOfcards}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{setOfcards}{setOfcards}}
+{\footnotesize\ttfamily List$<$List$<$\mbox{\hyperlink{class_card}{Card}}$>$ $>$ Card\+Manager.\+set\+Ofcards}
+
+\mbox{\Hypertarget{class_card_manager_afbea4566292c82f137f4ca1ac4611a1d}\label{class_card_manager_afbea4566292c82f137f4ca1ac4611a1d}} 
+\index{CardManager@{CardManager}!test@{test}}
+\index{test@{test}!CardManager@{CardManager}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+test}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Tomasz/\+Scripts/\mbox{\hyperlink{_card_manager_8cs}{Card\+Manager.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+digraph "AITestScript.UpdateBehaviour"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="AITestScript.UpdateBehaviour",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="AIControllerScript.GetOutput\lDebugString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#a2a5225a5dd86ac65bba12292cd4797a0",tooltip="Get the Output Debug stack in string"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="TestUIScript.UpdateOutputText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_test_u_i_script.html#a94c0d3e6e72145977da15963e7eb2b4c",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="TestUIScript.UpdateStatusText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_test_u_i_script.html#ae0319bed835b9019d7e4a1713c49774f",tooltip=" "];
+}

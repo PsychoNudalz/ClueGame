@@ -62,6 +62,9 @@ public class BoardBuilder : MonoBehaviour
     /*
      * Method to create the board, initialise and place all items and pass references to board manager
      */
+    /// <summary>
+    /// Method to create the board, initialise and place all items and pass references to board manager
+    /// </summary>
     private void Initialise()
     {
         boardManager = GetComponentInParent<BoardManager>();
@@ -250,6 +253,14 @@ public class BoardBuilder : MonoBehaviour
     /*
     * Instantiate a roomEntrance tile and set its parameters
     */
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <param name="room"></param>
+    /// <param name="rotation"></param>
+    /// <param name="parent"></param>
     private void CreateRoomEntranceTile(int x, int z, string room, string rotation, GameObject parent)
     {
         //Create room entry tile 
@@ -318,10 +329,12 @@ public class BoardBuilder : MonoBehaviour
         tilescript.SetCharacter(character, characterName);
         tilescript.GridPosition = new Vector2(x, z);
         tilescript.TileType = TileTypeEnum.Start;
+        tilescript.SetToken(playerToken);
         
         //Set player token character, start tile and close up point
         playerToken.GetComponentInChildren<PlayerTokenScript>().SetCharacter(character,tilescript);
         playerToken.GetComponentInChildren<CloseUpPointScript>().SetCloseUpPointName(playerCameraTarget);
+        playerToken.GetComponentInChildren<PlayerTokenScript>().CurrentTile = tilescript;
         
     }
 

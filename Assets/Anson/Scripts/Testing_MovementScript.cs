@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// class for test the movement of the player
+/// </summary>
 public class Testing_MovementScript : TestUIScript
 {
 
@@ -17,6 +19,10 @@ public class Testing_MovementScript : TestUIScript
         UpdateBehaviour();
     }
 
+    /// <summary>
+    /// give a select value for the player roll
+    /// </summary>
+    /// <param name="r">range the player can move</param>
     public void GiveRoll(int r)
     {
         boardManager.ClearMovable();

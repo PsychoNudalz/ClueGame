@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// for controlling the cursor for the player to select which tile to move to
+/// </summary>
 public class UserCursorScript : MonoBehaviour
 {
     [SerializeField] UserSelectionScript connectedUserSelection;

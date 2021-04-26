@@ -1,0 +1,101 @@
+\hypertarget{_a_i_controller_script_8cs}{}\doxysection{C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Anson/\+Scripts/\+AIController\+Script.cs File Reference}
+\label{_a_i_controller_script_8cs}\index{C:/Users/Nudalz/Documents/UnityProjects\_Fast/ClueGame/Assets/Anson/Scripts/AIControllerScript.cs@{C:/Users/Nudalz/Documents/UnityProjects\_Fast/ClueGame/Assets/Anson/Scripts/AIControllerScript.cs}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_a_i_controller_script}{AIController\+Script}}
+\begin{DoxyCompactList}\small\item\em this class controlls the AI\textquotesingle{}s behaviour and actions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} \{ \newline
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feae067b6f4f09910ce519d4a9e1a76b1d6}{Thinking}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6bc362dbf494c61ea117fe3c71ca48a5}{Move}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f78b20318b5aef4dca6dbae5051960a}{Suggestion}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feac084faac3ff1cfad2d32708e10458acf}{Accusation}}
+, \newline
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f5830c168fdb5396f4c2eff1fc48aeb}{End\+Turn}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea5706de961fb376d701be6e7762d8b09c}{Waiting}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea8f347bc7cebca9fa6d97e70c6bc29eb3}{Game\+Over}}
+, \newline
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea7bf0bf5e3029ae5848a22a05e4ce3519}{Wait\+\_\+\+Dice}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea62a8ef7c5a20f58c8e35ba7119e646de}{Decide\+\_\+\+Movement}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea08a9e68ad20cb0b171472280782119ff}{Wait\+\_\+\+Player\+Move}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feaeae725480c88fceca641f35085a25d55}{Decide\+\_\+\+Suggest}}
+, \newline
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea49f54dbaa78551a72cc49f985443117f}{Wait\+\_\+\+Suggest}}
+, \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea56a8c81be77e375e5d7db248740ed651}{Decide\+\_\+\+Accuse}}
+ \}
+\begin{DoxyCompactList}\small\item\em this enum notes what mode the AI is in \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}} 
+\index{AIControllerScript.cs@{AIControllerScript.cs}!AIMode@{AIMode}}
+\index{AIMode@{AIMode}!AIControllerScript.cs@{AIControllerScript.cs}}
+\doxysubsubsection{\texorpdfstring{AIMode}{AIMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+this enum notes what mode the AI is in 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Thinking@{Thinking}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Thinking@{Thinking}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feae067b6f4f09910ce519d4a9e1a76b1d6}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feae067b6f4f09910ce519d4a9e1a76b1d6}} 
+Thinking&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move@{Move}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Move@{Move}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6bc362dbf494c61ea117fe3c71ca48a5}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6bc362dbf494c61ea117fe3c71ca48a5}} 
+Move&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Suggestion@{Suggestion}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Suggestion@{Suggestion}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f78b20318b5aef4dca6dbae5051960a}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f78b20318b5aef4dca6dbae5051960a}} 
+Suggestion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Accusation@{Accusation}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Accusation@{Accusation}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feac084faac3ff1cfad2d32708e10458acf}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feac084faac3ff1cfad2d32708e10458acf}} 
+Accusation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EndTurn@{EndTurn}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!EndTurn@{EndTurn}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f5830c168fdb5396f4c2eff1fc48aeb}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea0f5830c168fdb5396f4c2eff1fc48aeb}} 
+End\+Turn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Waiting@{Waiting}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Waiting@{Waiting}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea5706de961fb376d701be6e7762d8b09c}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea5706de961fb376d701be6e7762d8b09c}} 
+Waiting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!None@{None}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6adf97f83acf6453d4a6a4b1070f3754}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6adf97f83acf6453d4a6a4b1070f3754}} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GameOver@{GameOver}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!GameOver@{GameOver}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea8f347bc7cebca9fa6d97e70c6bc29eb3}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea8f347bc7cebca9fa6d97e70c6bc29eb3}} 
+Game\+Over&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wait\_Dice@{Wait\_Dice}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Wait\_Dice@{Wait\_Dice}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea7bf0bf5e3029ae5848a22a05e4ce3519}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea7bf0bf5e3029ae5848a22a05e4ce3519}} 
+Wait\+\_\+\+Dice&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Decide\_Movement@{Decide\_Movement}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Decide\_Movement@{Decide\_Movement}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea62a8ef7c5a20f58c8e35ba7119e646de}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea62a8ef7c5a20f58c8e35ba7119e646de}} 
+Decide\+\_\+\+Movement&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wait\_PlayerMove@{Wait\_PlayerMove}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Wait\_PlayerMove@{Wait\_PlayerMove}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea08a9e68ad20cb0b171472280782119ff}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea08a9e68ad20cb0b171472280782119ff}} 
+Wait\+\_\+\+Player\+Move&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Decide\_Suggest@{Decide\_Suggest}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Decide\_Suggest@{Decide\_Suggest}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feaeae725480c88fceca641f35085a25d55}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38feaeae725480c88fceca641f35085a25d55}} 
+Decide\+\_\+\+Suggest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wait\_Suggest@{Wait\_Suggest}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Wait\_Suggest@{Wait\_Suggest}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea49f54dbaa78551a72cc49f985443117f}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea49f54dbaa78551a72cc49f985443117f}} 
+Wait\+\_\+\+Suggest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Decide\_Accuse@{Decide\_Accuse}!AIControllerScript.cs@{AIControllerScript.cs}}\index{AIControllerScript.cs@{AIControllerScript.cs}!Decide\_Accuse@{Decide\_Accuse}}}\mbox{\Hypertarget{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea56a8c81be77e375e5d7db248740ed651}\label{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea56a8c81be77e375e5d7db248740ed651}} 
+Decide\+\_\+\+Accuse&\\
+\hline
+
+\end{DoxyEnumFields}

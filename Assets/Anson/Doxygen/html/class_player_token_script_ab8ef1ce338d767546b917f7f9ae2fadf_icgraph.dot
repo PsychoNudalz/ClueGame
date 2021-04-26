@@ -1,0 +1,10 @@
+digraph "PlayerTokenScript.IsMovingRoom"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="PlayerTokenScript.IsMovingRoom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PlayerMasterController.Is\lMoving",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#a4270ffe6f17cefe9bb15c82c74678603",tooltip="check if the player token is still moving. returns true if the token is moving to a new tile or if th..."];
+}

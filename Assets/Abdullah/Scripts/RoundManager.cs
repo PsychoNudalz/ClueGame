@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Control what each player can do during their round/ turn
+/// </summary>
 public class RoundManager : MonoBehaviour
 {
     [SerializeField] Dice dice;
@@ -37,18 +40,16 @@ public class RoundManager : MonoBehaviour
         aIController = FindObjectOfType<AIControllerScript>();
     }
 
-
-    private void Start()
-    {
-        //StartTurn();
-    }
-
     private void FixedUpdate()
     {
         DiceBehaviour();
 
     }
 
+
+    /// <summary>
+    /// for waiting the dice to be rolled, get it's results and display where the player can move to
+    /// </summary>
     void DiceBehaviour()
     {
         if (dice == null)
@@ -78,6 +79,12 @@ public class RoundManager : MonoBehaviour
             dice.ResetDice();
         }
     }
+
+    /// <summary>
+    /// reset the dice after a time delay
+    /// </summary>
+    /// <param name="t">amount of time for it to wait</param>
+    /// <returns>unity thing</returns>
     IEnumerator DelayResetDice(float t)
     {
         yield return new WaitForSeconds(t);
@@ -101,7 +108,10 @@ public class RoundManager : MonoBehaviour
         StartCoroutine(DelayResetDice(5f));
     }
 
-
+    /// <summary>
+    /// moving the current player to the selected tile
+    /// </summary>
+    /// <param name="b">tile to move the player</param>
     public void MovePlayer(BoardTileScript b)
     {
         playerController = turnController.GetCurrentPlayer();
@@ -208,19 +218,29 @@ public class RoundManager : MonoBehaviour
         return foundPlayer;
 
     }
-
+    
+    /// <summary>
+    /// removing a card from the player's To Guess List
+    /// notify the AI if a player finished showing a suggested card
+    /// </summary>
+    /// <param name="c">card to be removed from To Guess List</param>
     public void NotifySuggestion(Card c)
     {
         if (c != null)
         {
-            GetCurrentPlayer().RemoveToGessCard(c);
+            GetCurrentPlayer().RemoveToGuessCard(c);
         }
         if (GetCurrentPlayer().isAI)
         {
             aIController.NotifySuggestion();
         }
     }
-
+    /// <summary>
+    /// to have the current player to make an accusation
+    /// eliminates the player if it is wrong
+    /// wins the game if correct
+    /// </summary>
+    /// <param name="cards">cards for accusation</param>
     public void MakeAccusation(List<Card> cards)
     {
         /*Get player 3 chosen cards
@@ -315,9 +335,6 @@ public class RoundManager : MonoBehaviour
         canAcc = true;
     }
 
-    public void voidEndTurn() {
-        EndTurn();
-    }
 
     /// <summary>
     /// Gets the player controller for the current player
@@ -328,12 +345,20 @@ public class RoundManager : MonoBehaviour
         return turnController.GetCurrentPlayer();
     }
 
-
+    /// <summary>
+    /// Get the tiles that the player can move to
+    /// </summary>
+    /// <returns>list of tiles the player can move to</returns>
     public List<BoardTileScript> GetBoardMovableTiles()
     {
         return boardManager.MovableTile;
     }
 
+    /// <summary>
+    /// roll dice after a delay time, used for free roll tile
+    /// </summary>
+    /// <param name="timeDelay"> time for delay </param>
+    /// <returns>Unity thing</returns>
     IEnumerator DelayRoll(float timeDelay)
     {
         if (rollCoroutine != null)
@@ -345,6 +370,11 @@ public class RoundManager : MonoBehaviour
         RollDice(true);
     }
 
+    /// <summary>
+    /// Maek suggestion after a delay time, used for free suggestion tile
+    /// </summary>
+    /// <param name="timeDelay"> time for delay </param>
+    /// <returns>Unity thing</returns>
     IEnumerator DelaySug(float timeDelay)
     {
         if (sugCoroutine != null)

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class AITestScript : TestUIScript
 {
+    [Header("AI")]
     [SerializeField] AIControllerScript aIController;
     [SerializeField] bool isSpeedUp;
     [SerializeField] float speedUp = 10f;
@@ -16,6 +17,11 @@ public class AITestScript : TestUIScript
         {
             Time.timeScale = speedUp;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        UpdateBehaviour();
     }
     public void EndTurn(InputAction.CallbackContext callbackContext)
     {
@@ -48,5 +54,20 @@ public class AITestScript : TestUIScript
             Time.timeScale = 1f;
 
         }
+    }
+
+    public void SpeedAI_Pause(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.performed)
+        {
+            Time.timeScale = 0f;
+
+        }
+    }
+
+    public override void UpdateBehaviour()
+    {
+        UpdateStatusText(string.Concat("Current AI Mode:\n", aIController.CurrentAIMode, "\nPrevious AI Mode:\n", aIController.PreviousAIMode));
+        UpdateOutputText(aIController.GetOutputDebugString());
     }
 }

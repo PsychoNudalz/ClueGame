@@ -39,23 +39,29 @@ public class PlayerMasterController : MonoBehaviour
         //print((int )playerMasterController.GetCharacter());
 
     }
-
-    private void Start()
-    {
-
-    }
-
+    /// <summary>
+    /// for initialising the player
+    /// </summary>
     public void StartBehaviour()
     {
         playerStatsScript.InititaliseToGuessList();
 
     }
-
+    /// <summary>
+    /// Setting the notebook value
+    /// </summary>
+    /// <param name="entryKey"></param>
+    /// <param name="value"></param>
     internal void SetNotebookValue(Enum entryKey, bool value)
     {
         playerStatsScript.SetNotebookValue(entryKey, value);
     }
 
+    /// <summary>
+    /// Getting the notebook value
+    /// </summary>
+    /// <param name="entryKey"></param>
+    /// <returns></returns>
     internal bool GetNotebookValue(Enum entryKey)
     {
         return playerStatsScript.GetNotebookValue(entryKey);
@@ -89,12 +95,18 @@ public class PlayerMasterController : MonoBehaviour
     {
         return playerStatsScript.Character.ToString()+" ("+name+")";
     }
-
+    /// <summary>
+    /// Get current grip position
+    /// </summary>
+    /// <returns></returns>
     public Vector2 GetGridPosition()
     {
         return playerTokenScript.GetGridPosition();
     }
-
+    /// <summary>
+    /// Get the current tile the token is on
+    /// </summary>
+    /// <returns></returns>
     public BoardTileScript GetTile()
     {
         return playerTokenScript.CurrentTile;
@@ -125,7 +137,9 @@ public class PlayerMasterController : MonoBehaviour
     {
         return playerStatsScript.Deck;
     }
-
+    /// <summary>
+    /// Initialise the detective notebook
+    /// </summary>
     internal void initializeNotebook()
     {
         playerStatsScript.InitializeNotebook();
@@ -151,12 +165,6 @@ public class PlayerMasterController : MonoBehaviour
         {
             return null;
         }
-    }
-
-
-    public void StartTurn()
-    {
-        //DisplayBoardMovableTiles(5);
     }
 
 
@@ -232,6 +240,9 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.MoveToken(v);
     }
 
+    /// <summary>
+    /// clear the tile the token was on
+    /// </summary>
     public void ClearTokenTile()
     {
         playerTokenScript.ClearTokenTile();
@@ -262,13 +273,23 @@ public class PlayerMasterController : MonoBehaviour
         playerStatsScript.IsEliminated = true;
     }
 
-
+    /// <summary>
+    /// check if the player token is still moving.
+    /// returns true if the token is moving to a new tile or if the token is moving in to a room
+    /// 
+    /// </summary>
+    /// <returns>true if it the token is moving</returns>
     public bool IsMoving()
     {
-        return playerTokenScript.IsMove;
+        return playerTokenScript.IsMove || playerTokenScript.IsMovingRoom();
     }
 
-    public bool RemoveToGessCard(Card c)
+    /// <summary>
+    /// Remove a card from ToGuessCard
+    /// </summary>
+    /// <param name="c">card to be removed</param>
+    /// <returns>if the list contains the card to be removed</returns>
+    public bool RemoveToGuessCard(Card c)
     {
         return playerStatsScript.RemoveToGessCard(c);
     }

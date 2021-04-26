@@ -1,0 +1,22 @@
+digraph "Die.CanResetDie"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Die.CanResetDie",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Dice.CanReset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dice.html#ace4c995eb73b784d1076fde140ce85af",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Dice.ResetDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="RoundManager.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0",tooltip="Ending the turn. Returns the next player"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="UserController.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#ab90611f541e20c125133d09b62407f41",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="AIControllerScript.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0",tooltip="have AI to end turn"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="UIHandler.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="PlayerMovementTestScript.\lResetDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement_test_script.html#a1f9e6f5902a9ba827538f3325227917c",tooltip=" "];
+}
