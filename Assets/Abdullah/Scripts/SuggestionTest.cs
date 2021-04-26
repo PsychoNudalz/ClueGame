@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-
+/// <summary>
+/// This class handles the suggestion test scene, and handles the UI in the test scene
+/// </summary>
 public class SuggestionTest : TestUIScript
 {
 
