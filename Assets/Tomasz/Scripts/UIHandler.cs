@@ -66,7 +66,7 @@ public class UIHandler : MonoBehaviour
         //Anson: this gets you the deck for the current player, call this when you need to update the UI
     }
     /// <summary>
-    /// starting behaviour
+    /// Starting behaviour
     /// </summary>
     public void StartBehaviour()
     {
@@ -112,24 +112,6 @@ public class UIHandler : MonoBehaviour
     public void DisplayDeck(List<Card> cards)
     {
         deck = cards;
-
-        /*
-        int i = 0;
-        foreach (CardSlot cs in cardSlots)
-        {
-            if (i < deck.Count())
-            {
-
-                cs.SetCard(deck[i]);
-                cs.SetVisible();
-                i++;
-            }
-            else
-            {
-                cs.SetVisible(false);
-            }
-        }
-        */
         foreach (CardSlot cs in cardSlots)
         {
             cs.SetVisible(false);
@@ -145,7 +127,7 @@ public class UIHandler : MonoBehaviour
     }
 
     /// <summary>
-    /// rolls dice when the button is pressed
+    /// Rolls dice when the button is pressed
     /// </summary>
     public void RollDiceButton()
     {
@@ -160,7 +142,7 @@ public class UIHandler : MonoBehaviour
 
 
     /// <summary>
-    /// makes suggestion when the button is pressed
+    /// Makes suggestion when the button is pressed
     /// </summary>
     /// <param name="forced">to make a suggestion even though the play did already</param>
     public void MakeSuggestionButton(bool forced = false)
@@ -173,18 +155,11 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-    private void CancelSuggestionButton()
-    {
-
-        if (!areControlsFrozen)
-        {
-            areControlsFrozen = true;
-            Debug.Log("Cancel suggestion");
-            areControlsFrozen = false;
-        }
-    }
-
-
+    /// <summary>
+    /// Displays a card from a player that has it
+    /// </summary>
+    /// <param name="playerMasterController">Player that has this card</param>
+    /// <param name="c">The card to be shown</param>
     public void ShowCard(PlayerMasterController playerMasterController, Card c)
     {
         if (!areControlsFrozen)
@@ -200,6 +175,10 @@ public class UIHandler : MonoBehaviour
         }
 
     }
+    /// <summary>
+    /// After pressing a card to choose pass this card to show it
+    /// </summary>
+    /// <param name="cardNum">Number of the card slot pressed</param>
     public void ShowSelectedCard(int cardNum)
     {
         Card c = chooseSlots[cardNum].card;
@@ -210,7 +189,10 @@ public class UIHandler : MonoBehaviour
         }
         ShowCard(choosingPlayer, c);
     }
-
+    /// <summary>
+    /// Displays Suggestion menu, set the room if in a room 
+    /// </summary>
+    /// <param name="forced">if player is forced to make a suggestion after stepping on a suggestion token</param>
     public void DisplayMenuSuggestion(bool forced = false)
     {
         if (forced)
@@ -226,8 +208,6 @@ public class UIHandler : MonoBehaviour
                 makeSuggestionPanel.SetActive(true);
                 SuggestionRoomButton.interactable = false;
                 SuggestionRoomButton.GetComponentInChildren<AccusationCardSlot>().SetCard(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard);
-                //makeSuggestionPanel.GetComponent<Suggestion>().SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room)as RoomCard); ;
-                //Anson: hmmmmm yes, spaghetti
                 userController.Suggestion.SetSugRoom(cardManager.FindCard(userController.GetCurrentPlayer().GetCurrentRoom().Room) as RoomCard); ;
             }
             else
@@ -237,7 +217,9 @@ public class UIHandler : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Hides the suggestion panel  
+    /// </summary>
     public void ConfirmSuggestion()
     {
         if (userController.MakeSuggestion())
@@ -245,7 +227,9 @@ public class UIHandler : MonoBehaviour
             makeSuggestionPanel.SetActive(false);
         }
     }
-
+    /// <summary>
+    /// Make suggestion button
+    /// </summary>
     public void MakeAccusationButton()
     {
         if (!areControlsFrozen && userController.RM.CanAcc)
@@ -255,12 +239,16 @@ public class UIHandler : MonoBehaviour
             areControlsFrozen = false;
         }
     }
-
+    /// <summary>
+    /// Displays the suggestion menu 
+    /// </summary>
     public void DisplayMenuAccusation()
     {
         makeAccusationPanel.SetActive(true);
     }
-
+    /// <summary>
+    /// Hides the accusation menu
+    /// </summary>
     public void ConfirmAccusation()
     {
         if (userController.MakeAccusation())
@@ -269,7 +257,11 @@ public class UIHandler : MonoBehaviour
 
         }
     }
-
+    /// <summary>
+    /// Dispal a panel for a player to choose which card to show
+    /// </summary>
+    /// <param name="player">Player that has to choose</param>
+    /// <param name="toChoose">List of cards to choose from</param>
     public void DisplayChoicePanel(PlayerMasterController player, List<Card> toChoose)
     {
         choosingPlayer = player;
@@ -288,39 +280,57 @@ public class UIHandler : MonoBehaviour
             chooseSlots[i].SetVisible();
         }
     }
-
+    /// <summary>
+    /// Shows the win screen
+    /// </summary>
+    /// <param name="b">Shows if true , else hides it</param>
     internal void DisplayWinScreen(bool b)
     {
         winScreen.SetActive(b);
     }
-
+    /// <summary>
+    /// Displays the notepad
+    /// </summary>
     public void ToggleNotepad()
     {
         DisplayNotePad(!noteBookPanel.activeSelf);
     }
+    /// <summary>
+    /// Displays the notepad
+    /// </summary>
     public void DisplayNotePad(bool b)
     {
-        
+
         noteBookPanel.SetActive(b);
     }
-
+    /// <summary>
+    /// Displays the game over screen
+    /// </summary>
     internal void DisplayGameOverScreen(bool b)
     {
         gameOverScreen.SetActive(b);
     }
-
+    /// <summary>
+    /// Ends current player's turn
+    /// </summary>
     public void EndTurn()
     {
         print("Pressed End turn");
         DisplayViewBlocker(false);
         userController.EndTurn();
     }
-
+    /// <summary>
+    /// Updates the current turn text 
+    /// </summary>
+    /// <param name="nextPlayer">Name of the next player</param>
     public void UpdateCurrentTurnText(string nextPlayer)
     {
         currentPlayerName.text = nextPlayer + "'s turn";
     }
-
+    /// <summary>
+    /// Resets UI for the next player
+    /// </summary>
+    /// <param name="displayFullUI">Hides the full UI if false, used for AI players</param>
     public void InitialiseTurn(bool displayFullUI)
     {
         showCardGO.SetActive(false);
@@ -349,7 +359,7 @@ public class UIHandler : MonoBehaviour
     public void DisplayViewBlocker(bool b, string s = "")
     {
         viewBlocker.SetActive(b);
-        
+
         if (s.Equals(""))
         {
             viewBlockerPlayerName.text = "Next";
@@ -359,7 +369,11 @@ public class UIHandler : MonoBehaviour
             viewBlockerPlayerName.text = s;
         }
     }
-
+    /// <summary>
+    /// Displays a screen when a player is eliminated
+    /// </summary>
+    /// <param name="b">Shows the eliminated screen if true</param>
+    /// <param name="s">Message to show</param>
     public void DisplayPlayerEliminated(bool b, string s = "")
     {
         playerEliminatedScreen.SetActive(b);
@@ -372,13 +386,19 @@ public class UIHandler : MonoBehaviour
             playerEliminatedText.text = s + " has made an incorrect accusation and has been eliminated!";
         }
     }
-
+    /// <summary>
+    /// Button for taking a shortcut
+    /// </summary>
     public void TakeShortcutButton()
     {
         userController.TakeShortcut();
     }
 
-
+    /// <summary>
+    /// Dispalys text on screen
+    /// </summary>
+    /// <param name="s">Text to display</param>
+    /// <param name="timeUntilDisappear">Time until text disappears</param>
     public void DisplayOutputText(string s, float timeUntilDisappear)
     {
         if (outputTextCoroutine != null)
@@ -387,6 +407,12 @@ public class UIHandler : MonoBehaviour
         }
         outputTextCoroutine = StartCoroutine(DisplayOutputTextRoutine(s, timeUntilDisappear));
     }
+
+    /// <summary>
+    /// Dispalys text on screen
+    /// </summary>
+    /// <param name="s">Text to display</param>
+    /// <param name="timeUntilDisappear">Time until text disappears</param>
     IEnumerator DisplayOutputTextRoutine(string s, float timeUntilDisappear)
     {
         outputTextGO.gameObject.SetActive(true);
@@ -396,7 +422,9 @@ public class UIHandler : MonoBehaviour
 
     }
 
-
+    /// <summary>
+    /// Returns to main menu
+    /// </summary>
     public void ReturnToMenu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
