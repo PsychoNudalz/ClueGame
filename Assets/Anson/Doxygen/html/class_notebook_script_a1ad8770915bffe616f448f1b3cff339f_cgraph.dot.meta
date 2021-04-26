@@ -1,4 +1,6 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
 guid: a8ea830d7fbd88c43952d48fa1f8ed12
@@ -8,6 +10,12 @@ guid: 0fbc78adcdc5fda49999a252f7f1d876
 =======
 guid: ccd0fd5e26ce9cb4e89ba207c8619617
 >>>>>>> Tomasz
+=======
+guid: a8ea830d7fbd88c43952d48fa1f8ed12
+>>>>>>> Stashed changes
+=======
+guid: a8ea830d7fbd88c43952d48fa1f8ed12
+>>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
   userData: 

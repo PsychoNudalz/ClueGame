@@ -162,7 +162,7 @@ public class RoundManager : MonoBehaviour
     /// <summary>
     /// Iterate through the rest of the players searching for if 1 or more of the cards were found 
     /// </summary>
-    /// <param name="sug">List of cards chosen for the suggestion</param>
+    /// <param name="sug"></param>
     public Tuple<PlayerMasterController, List<Card>> MakeSuggestion(List<Card> sug)
     { 
 
