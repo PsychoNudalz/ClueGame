@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['outputstring_849',['outputString',['../class_test_u_i_script.html#a56753980ec6de695306661f0db0de0c2',1,'TestUIScript']]],
-  ['outputtext_850',['outputText',['../class_test_u_i_script.html#a83462db4958cc170f1d9444467a4a836',1,'TestUIScript']]]
+  ['names_865',['names',['../class_card.html#ae64c55ff63c0cd9c203241547b6fff39',1,'Card']]]
 ];

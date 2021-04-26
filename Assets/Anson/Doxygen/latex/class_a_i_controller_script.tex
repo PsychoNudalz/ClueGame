@@ -1,5 +1,10 @@
 \hypertarget{class_a_i_controller_script}{}\doxysection{AIController\+Script Class Reference}
 \label{class_a_i_controller_script}\index{AIControllerScript@{AIControllerScript}}
+
+
+this class controlls the AI\textquotesingle{}s behaviour and actions  
+
+
 Inheritance diagram for AIController\+Script\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,21 +17,21 @@ Inheritance diagram for AIController\+Script\+:\begin{figure}[H]
 void \mbox{\hyperlink{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de}{Assign\+All\+Components}} ()
 \begin{DoxyCompactList}\small\item\em For assigning all connected components \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960}{Set\+Active}} (bool b=false, \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} set\+Player=null)
-\item 
-void \mbox{\hyperlink{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}{AIThink}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em to activate the AI or not set which player the AI is controlling \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5}{Set\+AIMode}} (\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} a)
-\item 
+\begin{DoxyCompactList}\small\item\em to set the AI\textquotesingle{}s mode \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b}{Roll\+Dice}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em have AI to roll \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0}{End\+Turn}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em have AI to end turn \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_af04897fa0ae4ed5e472dea79bce8d7df}{Decide\+\_\+\+Movement}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Decides where the AI should move to this should match the flow chart of the AI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17}{Decide\+\_\+\+Suggestion}} ()
+\begin{DoxyCompactList}\small\item\em Decides what the AI should suggest this should match the flow chart of the AI \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279}{Notify\+Suggestion}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em for the round manager to notify that another player finished picking a card to show \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0}{Get\+Output\+Debug\+String}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the Output Debug stack in string \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,13 +41,12 @@ string \mbox{\hyperlink{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}\label{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}} 
-\index{AIControllerScript@{AIControllerScript}!AIThink@{AIThink}}
-\index{AIThink@{AIThink}!AIControllerScript@{AIControllerScript}}
-\doxysubsubsection{\texorpdfstring{AIThink()}{AIThink()}}
-{\footnotesize\ttfamily void AIController\+Script.\+AIThink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+this class controlls the AI\textquotesingle{}s behaviour and actions 
 
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de}\label{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de}} 
 \index{AIControllerScript@{AIControllerScript}!AssignAllComponents@{AssignAllComponents}}
 \index{AssignAllComponents@{AssignAllComponents}!AIControllerScript@{AIControllerScript}}
@@ -59,11 +63,29 @@ For assigning all connected components
 \doxysubsubsection{\texorpdfstring{Decide\_Movement()}{Decide\_Movement()}}
 {\footnotesize\ttfamily void AIController\+Script.\+Decide\+\_\+\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Decides where the AI should move to this should match the flow chart of the AI 
+
+\mbox{\Hypertarget{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17}\label{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17}} 
+\index{AIControllerScript@{AIControllerScript}!Decide\_Suggestion@{Decide\_Suggestion}}
+\index{Decide\_Suggestion@{Decide\_Suggestion}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Decide\_Suggestion()}{Decide\_Suggestion()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Decide\+\_\+\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Decides what the AI should suggest this should match the flow chart of the AI 
+
 \mbox{\Hypertarget{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0}\label{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0}} 
 \index{AIControllerScript@{AIControllerScript}!EndTurn@{EndTurn}}
 \index{EndTurn@{EndTurn}!AIControllerScript@{AIControllerScript}}
 \doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
 {\footnotesize\ttfamily void AIController\+Script.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+have AI to end turn 
 
 \mbox{\Hypertarget{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0}\label{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0}} 
 \index{AIControllerScript@{AIControllerScript}!GetOutputDebugString@{GetOutputDebugString}}
@@ -71,11 +93,22 @@ For assigning all connected components
 \doxysubsubsection{\texorpdfstring{GetOutputDebugString()}{GetOutputDebugString()}}
 {\footnotesize\ttfamily string AIController\+Script.\+Get\+Output\+Debug\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the Output Debug stack in string 
+
+\begin{DoxyReturn}{Returns}
+string of the debug stack
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279}\label{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279}} 
 \index{AIControllerScript@{AIControllerScript}!NotifySuggestion@{NotifySuggestion}}
 \index{NotifySuggestion@{NotifySuggestion}!AIControllerScript@{AIControllerScript}}
 \doxysubsubsection{\texorpdfstring{NotifySuggestion()}{NotifySuggestion()}}
 {\footnotesize\ttfamily void AIController\+Script.\+Notify\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+for the round manager to notify that another player finished picking a card to show 
 
 \mbox{\Hypertarget{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b}\label{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b}} 
 \index{AIControllerScript@{AIControllerScript}!RollDice@{RollDice}}
@@ -83,18 +116,42 @@ For assigning all connected components
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
 {\footnotesize\ttfamily void AIController\+Script.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+have AI to roll 
+
 \mbox{\Hypertarget{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960}\label{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960}} 
 \index{AIControllerScript@{AIControllerScript}!SetActive@{SetActive}}
 \index{SetActive@{SetActive}!AIControllerScript@{AIControllerScript}}
 \doxysubsubsection{\texorpdfstring{SetActive()}{SetActive()}}
 {\footnotesize\ttfamily void AIController\+Script.\+Set\+Active (\begin{DoxyParamCaption}\item[{bool}]{b = {\ttfamily false},  }\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{set\+Player = {\ttfamily null} }\end{DoxyParamCaption})}
 
+
+
+to activate the AI or not set which player the AI is controlling 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & to activate the AI or not\\
+\hline
+{\em set\+Player} & the player the AI gets to control\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5}\label{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5}} 
 \index{AIControllerScript@{AIControllerScript}!SetAIMode@{SetAIMode}}
 \index{SetAIMode@{SetAIMode}!AIControllerScript@{AIControllerScript}}
 \doxysubsubsection{\texorpdfstring{SetAIMode()}{SetAIMode()}}
 {\footnotesize\ttfamily void AIController\+Script.\+Set\+AIMode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}}}]{a }\end{DoxyParamCaption})}
 
+
+
+to set the AI\textquotesingle{}s mode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the mode to set the AI to\\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Property Documentation}
@@ -114,4 +171,4 @@ For assigning all connected components
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Anson/\+Scripts/\mbox{\hyperlink{_a_i_controller_script_8cs}{AIController\+Script.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Anson/\+Scripts/\mbox{\hyperlink{_a_i_controller_script_8cs}{AIController\+Script.\+cs}}\end{DoxyCompactItemize}

@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/// <summary>
+/// for passing the selection of which player is human or AI from the main menu
+/// </summary>
 public class GameSetUpScript : MonoBehaviour
 {
     [SerializeField] Toggle[] toggles;
@@ -16,6 +18,9 @@ public class GameSetUpScript : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    /// <summary>
+    /// passes the selection from the Toggle buttons
+    /// </summary>
     public void SaveChoices()
     {
         toggleResults = new bool[6];
@@ -27,6 +32,9 @@ public class GameSetUpScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// assigns the players in the game based on the saved AI selection 
+    /// </summary>
     public void StartGame()
     {
         PlayerMasterController[] allPlayers = FindObjectsOfType<PlayerMasterController>();

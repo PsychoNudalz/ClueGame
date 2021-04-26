@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['gamecontrols_509',['GameControls',['../class_game_controls.html',1,'']]],
-  ['gamemanagerscript_510',['GameManagerScript',['../class_game_manager_script.html',1,'']]],
-  ['gamesetupscript_511',['GameSetUpScript',['../class_game_set_up_script.html',1,'']]]
+  ['freerollboardtilescript_520',['FreeRollBoardTileScript',['../class_free_roll_board_tile_script.html',1,'']]],
+  ['freesuggestiontilescript_521',['FreeSuggestionTileScript',['../class_free_suggestion_tile_script.html',1,'']]]
 ];

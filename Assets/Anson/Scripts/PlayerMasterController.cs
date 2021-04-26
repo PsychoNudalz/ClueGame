@@ -137,7 +137,9 @@ public class PlayerMasterController : MonoBehaviour
     {
         return playerStatsScript.Deck;
     }
-
+    /// <summary>
+    /// Initialise the detective notebook
+    /// </summary>
     internal void initializeNotebook()
     {
         playerStatsScript.InitializeNotebook();
@@ -163,12 +165,6 @@ public class PlayerMasterController : MonoBehaviour
         {
             return null;
         }
-    }
-
-
-    public void StartTurn()
-    {
-        //DisplayBoardMovableTiles(5);
     }
 
 
@@ -244,6 +240,9 @@ public class PlayerMasterController : MonoBehaviour
         playerTokenScript.MoveToken(v);
     }
 
+    /// <summary>
+    /// clear the tile the token was on
+    /// </summary>
     public void ClearTokenTile()
     {
         playerTokenScript.ClearTokenTile();
@@ -274,13 +273,23 @@ public class PlayerMasterController : MonoBehaviour
         playerStatsScript.IsEliminated = true;
     }
 
-
+    /// <summary>
+    /// check if the player token is still moving.
+    /// returns true if the token is moving to a new tile or if the token is moving in to a room
+    /// 
+    /// </summary>
+    /// <returns>true if it the token is moving</returns>
     public bool IsMoving()
     {
         return playerTokenScript.IsMove || playerTokenScript.IsMovingRoom();
     }
 
-    public bool RemoveToGessCard(Card c)
+    /// <summary>
+    /// Remove a card from ToGuessCard
+    /// </summary>
+    /// <param name="c">card to be removed</param>
+    /// <returns>if the list contains the card to be removed</returns>
+    public bool RemoveToGuessCard(Card c)
     {
         return playerStatsScript.RemoveToGessCard(c);
     }

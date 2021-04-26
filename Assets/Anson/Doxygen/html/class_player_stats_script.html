@@ -69,6 +69,9 @@ $(function() {
 <div class="title">PlayerStatsScript Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>saves the character the player is and the deck it has  
+ <a href="class_player_stats_script.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for PlayerStatsScript:</div>
 <div class="dyncontent">
@@ -79,6 +82,7 @@ Inheritance diagram for PlayerStatsScript:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a54cae1c61ecf8a4af6ae97724b0dc725"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a54cae1c61ecf8a4af6ae97724b0dc725">InitializeNotebook</a> ()</td></tr>
+<tr class="memdesc:a54cae1c61ecf8a4af6ae97724b0dc725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the notebook  <a href="class_player_stats_script.html#a54cae1c61ecf8a4af6ae97724b0dc725">More...</a><br /></td></tr>
 <tr class="separator:a54cae1c61ecf8a4af6ae97724b0dc725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a224018c7f42a789314a8107719a2595c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a224018c7f42a789314a8107719a2595c">GetNotebookValue</a> (System.Enum entryKey)</td></tr>
 <tr class="separator:a224018c7f42a789314a8107719a2595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,13 +98,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a53b9b6ed7fe6d057381e0101099ca363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a list of card to the player's deck  <a href="class_player_stats_script.html#a53b9b6ed7fe6d057381e0101099ca363">More...</a><br /></td></tr>
 <tr class="separator:a53b9b6ed7fe6d057381e0101099ca363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc4319e9c609f83c177843b6d23edf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_card.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a4bc4319e9c609f83c177843b6d23edf2">FindCard</a> (<a class="el" href="class_card.html">Card</a> c)</td></tr>
-<tr class="memdesc:a4bc4319e9c609f83c177843b6d23edf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">find if the player has a certain card return a list of cards found  <a href="class_player_stats_script.html#a4bc4319e9c609f83c177843b6d23edf2">More...</a><br /></td></tr>
+<tr class="memdesc:a4bc4319e9c609f83c177843b6d23edf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">find if the player has a certain card returns the card that's found  <a href="class_player_stats_script.html#a4bc4319e9c609f83c177843b6d23edf2">More...</a><br /></td></tr>
 <tr class="separator:a4bc4319e9c609f83c177843b6d23edf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52b81eededa282574178d4eb2efa1a1d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a52b81eededa282574178d4eb2efa1a1d">FindCard</a> (List&lt; <a class="el" href="class_card.html">Card</a> &gt; cards)</td></tr>
+<tr class="memdesc:a52b81eededa282574178d4eb2efa1a1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">find if the player has a certain card from a passed list returns the list of cards that the player have  <a href="class_player_stats_script.html#a52b81eededa282574178d4eb2efa1a1d">More...</a><br /></td></tr>
 <tr class="separator:a52b81eededa282574178d4eb2efa1a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5229018c9a9248a90f447ca9e271ee0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a5229018c9a9248a90f447ca9e271ee0f">InititaliseToGuessList</a> ()</td></tr>
+<tr class="memdesc:a5229018c9a9248a90f447ca9e271ee0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise the To Guess List it is the list that keeps track of which card was not suggested  <a href="class_player_stats_script.html#a5229018c9a9248a90f447ca9e271ee0f">More...</a><br /></td></tr>
 <tr class="separator:a5229018c9a9248a90f447ca9e271ee0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cfb94bd7661f4120b9ea69c025bd368"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368">RemoveToGessCard</a> (<a class="el" href="class_card.html">Card</a> c)</td></tr>
+<tr class="memdesc:a9cfb94bd7661f4120b9ea69c025bd368"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a selected card from To Guess List  <a href="class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368">More...</a><br /></td></tr>
 <tr class="separator:a9cfb94bd7661f4120b9ea69c025bd368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -114,7 +121,9 @@ Properties</h2></td></tr>
 <tr class="memitem:a0be369e1350c61a7a8ea7201a610d68a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a0be369e1350c61a7a8ea7201a610d68a">ToGuessList</a><code> [get]</code></td></tr>
 <tr class="separator:a0be369e1350c61a7a8ea7201a610d68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>saves the character the player is and the deck it has </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab6e2e29c99a27c5b76584d16cca75c2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab6e2e29c99a27c5b76584d16cca75c2c">&#9670;&nbsp;</a></span>AddCard() <span class="overload">[1/2]</span></h2>
 
@@ -185,14 +194,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>find if the player has a certain card return a list of cards found </p>
+<p>find if the player has a certain card returns the card that's found </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">c</td><td>card to be found</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the found card or null if none found</dd></dl>
 
 </div>
 </div>
@@ -211,6 +220,15 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>find if the player has a certain card from a passed list returns the list of cards that the player have </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cards</td><td>list of cards to be found</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the list of cards that the player have </dd></dl>
 
 </div>
 </div>
@@ -247,6 +265,8 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initialise the notebook </p>
+
 </div>
 </div>
 <a id="a5229018c9a9248a90f447ca9e271ee0f"></a>
@@ -263,6 +283,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>initialise the To Guess List it is the list that keeps track of which card was not suggested </p>
 
 </div>
 </div>
@@ -281,6 +303,15 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>remove a selected card from To Guess List </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>card to be removed</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if the card is in the To Guess List</dd></dl>
 
 </div>
 </div>
@@ -428,7 +459,7 @@ Properties</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_player_stats_script_8cs.html">PlayerStatsScript.cs</a></li>
+<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/<a class="el" href="_player_stats_script_8cs.html">PlayerStatsScript.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

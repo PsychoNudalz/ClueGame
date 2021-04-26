@@ -1,5 +1,10 @@
 \hypertarget{class_u_i_handler}{}\doxysection{UIHandler Class Reference}
 \label{class_u_i_handler}\index{UIHandler@{UIHandler}}
+
+
+Handles the UI  
+
+
 Inheritance diagram for UIHandler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,13 +15,13 @@ Inheritance diagram for UIHandler\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}{Start\+Behaviour}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em starting behaviour \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}{Display\+Deck}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
-\item 
+\begin{DoxyCompactList}\small\item\em Display the list of cards \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_ac40571820fefd3233236883c01522fa1}{Roll\+Dice\+Button}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em rolls dice when the button is pressed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}{Make\+Suggestion\+Button}} (bool forced=false)
-\item 
+\begin{DoxyCompactList}\small\item\em makes suggestion when the button is pressed \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}{Show\+Card}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player\+Master\+Controller, \mbox{\hyperlink{class_card}{Card}} c)
 \item 
 void \mbox{\hyperlink{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}{Show\+Selected\+Card}} (int card\+Num)
@@ -72,6 +77,11 @@ Game\+Object \mbox{\hyperlink{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Handles the UI 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}\label{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}} 
 \index{UIHandler@{UIHandler}!ConfirmAccusation@{ConfirmAccusation}}
@@ -97,6 +107,15 @@ Game\+Object \mbox{\hyperlink{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d
 \doxysubsubsection{\texorpdfstring{DisplayDeck()}{DisplayDeck()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Deck (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
 
+
+
+Display the list of cards 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cards} & cards to be shown\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}\label{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}} 
 \index{UIHandler@{UIHandler}!DisplayMenuAccusation@{DisplayMenuAccusation}}
 \index{DisplayMenuAccusation@{DisplayMenuAccusation}!UIHandler@{UIHandler}}
@@ -168,6 +187,15 @@ To display the View Blocker can include the name of the player that needs it\tex
 \doxysubsubsection{\texorpdfstring{MakeSuggestionButton()}{MakeSuggestionButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Make\+Suggestion\+Button (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
 
+
+
+makes suggestion when the button is pressed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forced} & to make a suggestion even though the play did already\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}\label{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}} 
 \index{UIHandler@{UIHandler}!ReturnToMenu@{ReturnToMenu}}
 \index{ReturnToMenu@{ReturnToMenu}!UIHandler@{UIHandler}}
@@ -179,6 +207,10 @@ To display the View Blocker can include the name of the player that needs it\tex
 \index{RollDiceButton@{RollDiceButton}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{RollDiceButton()}{RollDiceButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Roll\+Dice\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+rolls dice when the button is pressed 
 
 \mbox{\Hypertarget{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}\label{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}} 
 \index{UIHandler@{UIHandler}!ShowCard@{ShowCard}}
@@ -197,6 +229,10 @@ To display the View Blocker can include the name of the player that needs it\tex
 \index{StartBehaviour@{StartBehaviour}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{StartBehaviour()}{StartBehaviour()}}
 {\footnotesize\ttfamily void UIHandler.\+Start\+Behaviour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+starting behaviour 
 
 \mbox{\Hypertarget{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}\label{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}} 
 \index{UIHandler@{UIHandler}!TakeShortcutButton@{TakeShortcutButton}}
@@ -265,4 +301,4 @@ To display the View Blocker can include the name of the player that needs it\tex
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Tomasz/\+Scripts/\mbox{\hyperlink{_u_i_handler_8cs}{UIHandler.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Tomasz/\+Scripts/\mbox{\hyperlink{_u_i_handler_8cs}{UIHandler.\+cs}}\end{DoxyCompactItemize}

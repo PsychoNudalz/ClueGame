@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['usercontroller_867',['userController',['../class_test_u_i_script.html#a6d4cf5af1c535067b2e039289b2c902f',1,'TestUIScript.userController()'],['../class_u_i_handler.html#afa78e9c56603acc341c34ef66471c76a',1,'UIHandler.userController()']]]
+  ['test_888',['test',['../class_card_manager.html#afbea4566292c82f137f4ca1ac4611a1d',1,'CardManager']]],
+  ['turncontroller_889',['turnController',['../class_test_u_i_script.html#ae65c2381a03dd1ed06f917020a700c9b',1,'TestUIScript']]],
+  ['txt_890',['txt',['../class_accusation_card_slot.html#ae3252dca819be512158971d3e131e274',1,'AccusationCardSlot.txt()'],['../class_card_slot.html#ae6fcf2ebab0b2a504ca88f2fea92d939',1,'CardSlot.txt()']]]
 ];

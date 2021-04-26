@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['weapondd_868',['weaponDD',['../class_suggestion_test.html#ac43c0b7e3b52c2eba98f20bf5241abd8',1,'SuggestionTest']]],
-  ['weaponenum_869',['weaponEnum',['../class_weapon_card.html#a21ebf214f10e2317660c68185ad311e6',1,'WeaponCard']]]
+  ['usercontroller_891',['userController',['../class_test_u_i_script.html#a6d4cf5af1c535067b2e039289b2c902f',1,'TestUIScript.userController()'],['../class_u_i_handler.html#afa78e9c56603acc341c34ef66471c76a',1,'UIHandler.userController()']]]
 ];

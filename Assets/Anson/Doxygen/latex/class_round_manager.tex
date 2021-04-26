@@ -1,5 +1,10 @@
 \hypertarget{class_round_manager}{}\doxysection{Round\+Manager Class Reference}
 \label{class_round_manager}\index{RoundManager@{RoundManager}}
+
+
+Control what each player can do during their round/ turn  
+
+
 Inheritance diagram for Round\+Manager\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,15 +17,15 @@ Inheritance diagram for Round\+Manager\+:\begin{figure}[H]
 void \mbox{\hyperlink{class_round_manager_ab795c17242b95ab2cef508da5daa2593}{Roll\+Dice}} (bool force=false)
 \begin{DoxyCompactList}\small\item\em Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_round_manager_adfd4f66436e06c12a25c9236b629f369}{Move\+Player}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} b)
-\item 
+\begin{DoxyCompactList}\small\item\em moving the current player to the selected tile \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_round_manager_a780da336fd16dcaee0f00306578f13b4}{AIShow\+Card}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player\+Master\+Controller, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ c)
 \item 
-void \mbox{\hyperlink{class_round_manager_a46700375939ad4c047b64ca18364f2a3}{Make\+Suggestion}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ sug)
-\item 
+Tuple$<$ \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}, List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ $>$ \mbox{\hyperlink{class_round_manager_a596fc1c822ebb74dad8d238b15b1ea3a}{Make\+Suggestion}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ sug)
+\begin{DoxyCompactList}\small\item\em Iterate through the rest of the players searching for if 1 or more of the cards were found \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}{Notify\+Suggestion}} (\mbox{\hyperlink{class_card}{Card}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em removing a card from the player\textquotesingle{}s To Guess List notify the AI if a player finished showing a suggested card \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_round_manager_ab691cd5cd773e23822b237834b1fcb0a}{Make\+Accusation}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ cards)
-\item 
+\begin{DoxyCompactList}\small\item\em to have the current player to make an accusation eliminates the player if it is wrong wins the game if correct \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0}{End\+Turn}} ()
 \begin{DoxyCompactList}\small\item\em Ending the turn. Returns the next player \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc}{Start\+Turn}} ()
@@ -28,7 +33,7 @@ void \mbox{\hyperlink{class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc}{Sta
 \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}{Get\+Current\+Player}} ()
 \begin{DoxyCompactList}\small\item\em Gets the player controller for the current player \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} $>$ \mbox{\hyperlink{class_round_manager_aabdab19afca9250b4706639633d96804}{Get\+Board\+Movable\+Tiles}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the tiles that the player can move to \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +43,11 @@ bool \mbox{\hyperlink{class_round_manager_a9171253c36108372fd638a906f19b20a}{Can
 \item 
 bool \mbox{\hyperlink{class_round_manager_a5081895b0186c09d29f789642ad098db}{Can\+Acc}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Control what each player can do during their round/ turn 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -66,6 +76,13 @@ Ending the turn. Returns the next player
 \doxysubsubsection{\texorpdfstring{GetBoardMovableTiles()}{GetBoardMovableTiles()}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}$>$ Round\+Manager.\+Get\+Board\+Movable\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get the tiles that the player can move to 
+
+\begin{DoxyReturn}{Returns}
+list of tiles the player can move to
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}\label{class_round_manager_aab3f49a5e05508a8e023a497e763c1c8}} 
 \index{RoundManager@{RoundManager}!GetCurrentPlayer@{GetCurrentPlayer}}
 \index{GetCurrentPlayer@{GetCurrentPlayer}!RoundManager@{RoundManager}}
@@ -85,24 +102,60 @@ player controller for the current player
 \doxysubsubsection{\texorpdfstring{MakeAccusation()}{MakeAccusation()}}
 {\footnotesize\ttfamily void Round\+Manager.\+Make\+Accusation (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{cards }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_round_manager_a46700375939ad4c047b64ca18364f2a3}\label{class_round_manager_a46700375939ad4c047b64ca18364f2a3}} 
+
+
+to have the current player to make an accusation eliminates the player if it is wrong wins the game if correct 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cards} & cards for accusation\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_round_manager_a596fc1c822ebb74dad8d238b15b1ea3a}\label{class_round_manager_a596fc1c822ebb74dad8d238b15b1ea3a}} 
 \index{RoundManager@{RoundManager}!MakeSuggestion@{MakeSuggestion}}
 \index{MakeSuggestion@{MakeSuggestion}!RoundManager@{RoundManager}}
 \doxysubsubsection{\texorpdfstring{MakeSuggestion()}{MakeSuggestion()}}
-{\footnotesize\ttfamily void Round\+Manager.\+Make\+Suggestion (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{sug }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Tuple$<$\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}, List$<$\mbox{\hyperlink{class_card}{Card}}$>$ $>$ Round\+Manager.\+Make\+Suggestion (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{sug }\end{DoxyParamCaption})}
 
+
+
+Iterate through the rest of the players searching for if 1 or more of the cards were found 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sug} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_round_manager_adfd4f66436e06c12a25c9236b629f369}\label{class_round_manager_adfd4f66436e06c12a25c9236b629f369}} 
 \index{RoundManager@{RoundManager}!MovePlayer@{MovePlayer}}
 \index{MovePlayer@{MovePlayer}!RoundManager@{RoundManager}}
 \doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}}
 {\footnotesize\ttfamily void Round\+Manager.\+Move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{b }\end{DoxyParamCaption})}
 
+
+
+moving the current player to the selected tile 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & tile to move the player\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}\label{class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8}} 
 \index{RoundManager@{RoundManager}!NotifySuggestion@{NotifySuggestion}}
 \index{NotifySuggestion@{NotifySuggestion}!RoundManager@{RoundManager}}
 \doxysubsubsection{\texorpdfstring{NotifySuggestion()}{NotifySuggestion()}}
 {\footnotesize\ttfamily void Round\+Manager.\+Notify\+Suggestion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
 
+
+
+removing a card from the player\textquotesingle{}s To Guess List notify the AI if a player finished showing a suggested card 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & card to be removed from To Guess List\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_round_manager_ab795c17242b95ab2cef508da5daa2593}\label{class_round_manager_ab795c17242b95ab2cef508da5daa2593}} 
 \index{RoundManager@{RoundManager}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!RoundManager@{RoundManager}}
@@ -153,4 +206,4 @@ Method for starting the turn
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Abdullah/\+Scripts/\mbox{\hyperlink{_round_manager_8cs}{Round\+Manager.\+cs}}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Abdullah/\+Scripts/\mbox{\hyperlink{_round_manager_8cs}{Round\+Manager.\+cs}}\end{DoxyCompactItemize}

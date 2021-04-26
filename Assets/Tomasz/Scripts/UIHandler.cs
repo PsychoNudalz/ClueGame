@@ -6,7 +6,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+/// <summary>
+/// Handles the UI 
+/// </summary>
 public class UIHandler : MonoBehaviour
 {
 
@@ -63,7 +65,9 @@ public class UIHandler : MonoBehaviour
 
         //Anson: this gets you the deck for the current player, call this when you need to update the UI
     }
-
+    /// <summary>
+    /// starting behaviour
+    /// </summary>
     public void StartBehaviour()
     {
         userController = FindObjectOfType<UserController>();
@@ -101,6 +105,10 @@ public class UIHandler : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Display the list of cards
+    /// </summary>
+    /// <param name="cards">cards to be shown</param>
     public void DisplayDeck(List<Card> cards)
     {
         deck = cards;
@@ -136,6 +144,9 @@ public class UIHandler : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// rolls dice when the button is pressed
+    /// </summary>
     public void RollDiceButton()
     {
         if (!areControlsFrozen && userController.RM.CanRoll)
@@ -148,7 +159,10 @@ public class UIHandler : MonoBehaviour
     }
 
 
-
+    /// <summary>
+    /// makes suggestion when the button is pressed
+    /// </summary>
+    /// <param name="forced">to make a suggestion even though the play did already</param>
     public void MakeSuggestionButton(bool forced = false)
     {
         if (!areControlsFrozen && (userController.RM.CanSug || forced))
