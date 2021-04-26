@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-
+/// <summary>
+/// Script for the Notebook test scene
+/// </summary>
 public class NotebookTestScript : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI characterText;
-    [SerializeField] TextMeshProUGUI roomText;
-    [SerializeField] TextMeshProUGUI weaponText;
-    PlayerMasterController currentPlayer;
-
-
-
-    // Update is called once per frame
+    [SerializeField] private TextMeshProUGUI characterText;
+    [SerializeField] private TextMeshProUGUI roomText;
+    [SerializeField] private TextMeshProUGUI weaponText;
+    private PlayerMasterController currentPlayer;
+    
+    /// <summary>
+    /// If current player is set then update output texts
+    /// </summary>
     void Update()
     {
         if(currentPlayer == null)
@@ -33,6 +35,9 @@ public class NotebookTestScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Update player reference then update all text strings
+    /// </summary>
     private void SetOutputStrings()
     {
         currentPlayer = FindObjectOfType<RoundManager>().GetCurrentPlayer();
@@ -41,7 +46,10 @@ public class NotebookTestScript : MonoBehaviour
         weaponText.text = GetWeaponText();
     }
 
-
+    /// <summary>
+    /// Get character notebook text
+    /// </summary>
+    /// <returns>Character statuses</returns>
     private string GetCharacterString()
     {
         string output = "Characters\n\n";
@@ -54,6 +62,11 @@ public class NotebookTestScript : MonoBehaviour
         }
         return output;
     }
+
+    /// <summary>
+    /// Get weapon notebook text
+    /// </summary>
+    /// <returns>Weapon statuses</returns>
     private string GetWeaponText()
     {
         string output = "Weapons\n\n";
@@ -64,12 +77,16 @@ public class NotebookTestScript : MonoBehaviour
         return output;
     }
 
+    /// <summary>
+    /// Get Room notebook text
+    /// </summary>
+    /// <returns>Room statuses</returns>
     private string GetRoomString()
     {
         string output = "Rooms\n\n";
-        foreach (Room room in System.Enum.GetValues(typeof(Room)))
+        foreach (RoomEnum room in System.Enum.GetValues(typeof(RoomEnum)))
         {
-            if(room != Room.Centre && room != Room.None)
+            if(room != RoomEnum.Centre && room != RoomEnum.None)
             {
                 output += string.Format("{0} = {1}\n", EnumToString.GetStringFromEnum(room), currentPlayer.GetNotebookValue(room));
             }

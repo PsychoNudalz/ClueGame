@@ -3,38 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
-public enum Room {
-    
-    Ballroom,
-    BilliardRoom,
-    Conservatory,
-    DiningRoom,
-    Hall,
-    Kitchen,
-    Library,
-    Lounge,
-    Study,
-    None,
-    Centre
-}
-    
+/// <summary>
+/// Script for the room Gameobject
+/// </summary>
 public class RoomScript : MonoBehaviour
 {
-    [SerializeField] Room room;
+    [SerializeField] private RoomEnum room;
     private RoomEntryBoardTileScript[] entryTiles;
     private RoomPlayerSlot[] playerSlots;
     private RoomWeaponSlot[] weaponSlots;
     private ShortcutBoardTileScript shortcutTile;
-
-    public Room Room { get => room; set => room = value; }
+    /// <summary>
+    /// Getter and setter for Room Type
+    /// </summary>
+    public RoomEnum Room { get => room; set => room = value; }
+    /// <summary>
+    /// Getter for PlayerSlots
+    /// </summary>
     public RoomPlayerSlot[] PlayerSlots { get => playerSlots;}
+    /// <summary>
+    /// Getter for Shortcut tile
+    /// </summary>
     public ShortcutBoardTileScript ShortcutTile { get => shortcutTile;}
+    /// <summary>
+    /// Getter for weaponSlots 
+    /// </summary>
     public RoomWeaponSlot[] WeaponSlots { get => weaponSlots;}
+    /// <summary>
+    /// Getter for entrytiles
+    /// </summary>
     public RoomEntryBoardTileScript[] EntryTiles { get => entryTiles;}
 
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Set required variables
+    /// </summary>
     void Start()
     {
         GetEntryTiles();
@@ -43,6 +46,9 @@ public class RoomScript : MonoBehaviour
         GetShortcut();
     }
 
+    /// <summary>
+    /// Set shortcut tile of script
+    /// </summary>
     private void GetShortcut()
     {
         foreach (ShortcutBoardTileScript shortcutTile in GameObject.FindObjectsOfType<ShortcutBoardTileScript>())
@@ -54,6 +60,10 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gets all entry tiles
+    /// </summary>
+    /// <returns>An array of EntryTiles</returns>
     public RoomEntryBoardTileScript[] GetEntryTiles()
     {
         List<RoomEntryBoardTileScript> entryTileList = new List<RoomEntryBoardTileScript>();
@@ -68,35 +78,44 @@ public class RoomScript : MonoBehaviour
         return entryTiles;
     }
 
-    public static Room GetRoomFromString(string roomString)
+    /// <summary>
+    /// Get Room Enum from string
+    /// </summary>
+    /// <param name="roomString">String of room to return</param>
+    /// <returns>Room Enum represented by string entered - throws exception if room not found</returns>
+    public static RoomEnum GetRoomFromString(string roomString)
     {
         switch (roomString)
         {
             case "Ballroom":
-                return Room.Ballroom;
+                return RoomEnum.Ballroom;
             case "Billiard Room":
-                return Room.BilliardRoom;
+                return RoomEnum.BilliardRoom;
             case "Centre":
-                return Room.Centre;
+                return RoomEnum.Centre;
             case "Conservatory":
-                return Room.Conservatory;
+                return RoomEnum.Conservatory;
             case "Dining Room":
-                return Room.DiningRoom;
+                return RoomEnum.DiningRoom;
             case "Hall":
-                return Room.Hall;
+                return RoomEnum.Hall;
             case "Kitchen":
-                return Room.Kitchen;
+                return RoomEnum.Kitchen;
             case "Study":
-                return Room.Study;
+                return RoomEnum.Study;
             case "Library":
-                return Room.Library;
+                return RoomEnum.Library;
             case "Lounge":
-                return Room.Lounge;
+                return RoomEnum.Lounge;
             default:
                 throw new Exception("Room enum not found");
         }
     }
 
+    /// <summary>
+    /// Add Player to Room
+    /// </summary>
+    /// <param name="PlayerController">Player to add</param>
     internal void AddPlayer(PlayerMasterController PlayerController)
     {
         foreach(RoomPlayerSlot slot in playerSlots)
@@ -112,6 +131,11 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Remove a Player from room and move to tile
+    /// </summary>
+    /// <param name="player">Player to remove</param>
+    /// <param name="targetTile">Tile to move player to on exit</param>
     internal void RemovePlayerFromRoom(PlayerMasterController player, BoardTileScript targetTile)
     {
         PlayerMasterController playerToRemove = null;
@@ -136,6 +160,10 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Remove a Player from room
+    /// </summary>
+    /// <param name="player">Player to remove</param>
     internal void RemovePlayerFromRoom(PlayerMasterController player)
     {
         PlayerMasterController playerToRemove;
@@ -152,7 +180,10 @@ public class RoomScript : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Remove player from room via shortcut
+    /// </summary>
+    /// <param name="player">Player to remove</param>
     internal void RemovePlayerFromRoomViaShortcut(PlayerMasterController player)
     {
         PlayerMasterController playerToRemove = null;
@@ -171,6 +202,10 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add weapon token to room
+    /// </summary>
+    /// <param name="weaponTokenScript">Weapon to add</param>
     internal void AddWeapon(WeaponTokenScript weaponTokenScript)
     {
         if(weaponTokenScript.CurrentRoom != null)
@@ -191,6 +226,11 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Remove weapon from room
+    /// </summary>
+    /// <param name="weapon">Weapon to remove</param>
+    /// <returns></returns>
     internal WeaponTokenScript RemoveWeaponFromRoom(WeaponTokenScript weapon)
     {
         WeaponTokenScript weaponToRemove = null;
@@ -205,6 +245,10 @@ public class RoomScript : MonoBehaviour
         return weaponToRemove;
     }
 
+    /// <summary>
+    /// Are weapon slots empty
+    /// </summary>
+    /// <returns>true if slots empty, false if not</returns>
     public bool WeaponSlotsEmpty()
     {
         bool result = true;
@@ -218,6 +262,11 @@ public class RoomScript : MonoBehaviour
         return result;
     }
 
+    /// <summary>
+    /// Returns the closest entry tile to target exit tile
+    /// </summary>
+    /// <param name="targetTile">Tile to check distance from</param>
+    /// <returns>Entry tile closest to target tile</returns>
     private RoomEntryBoardTileScript FindClosestEntryTile(BoardTileScript targetTile)
     {
         RoomEntryBoardTileScript closest = null;
@@ -234,11 +283,19 @@ public class RoomScript : MonoBehaviour
         return closest;
     }
 
+    /// <summary>
+    /// Does the room have a shortcut tile
+    /// </summary>
+    /// <returns>true if room has shortcut, false if not</returns>
     public bool HasShortcut()
     {
         return (shortcutTile != null);
     }
 
+    /// <summary>
+    /// Move a weapon to the room
+    /// </summary>
+    /// <param name="weaponEnum">Weapon to move</param>
     public void MoveWeaponToRoom(WeaponEnum weaponEnum)
     {
         WeaponTokenScript[] weapons = FindObjectsOfType<WeaponTokenScript>();
@@ -257,6 +314,10 @@ public class RoomScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Move a player to the room
+    /// </summary>
+    /// <param name="characterEnum">Player to move</param>
     public void MovePlayerToRoom(CharacterEnum characterEnum)
     {
         PlayerMasterController[] players = FindObjectsOfType<PlayerMasterController>();

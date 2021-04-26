@@ -80,7 +80,7 @@ public class UserController : MonoBehaviour
         accusation.SetWeapon(cardManager.FindCard(c) as WeaponCard);
     }
 
-    public void SetRoom(Room c) {
+    public void SetRoom(RoomEnum c) {
         suggestion.SetSugRoom(cardManager.FindCard(c) as RoomCard);
         accusation.SetRoom(cardManager.FindCard(c) as RoomCard);
     }

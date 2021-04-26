@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script for the Dice Gameobject
+/// </summary>
 public class Dice : MonoBehaviour
 {
-    Die[] dice;
-    int diceValue;
+    private Die[] dice;
+    private int diceValue;
     private CameraCloseUp mainCamera;
     private bool setCloseUpCamera;
 
@@ -15,6 +18,9 @@ public class Dice : MonoBehaviour
         Initialise();
     }
 
+    /// <summary>
+    /// Initialise Dice
+    /// </summary>
     private void Initialise()
     {
         dice = GetComponentsInChildren<Die>();
@@ -22,7 +28,9 @@ public class Dice : MonoBehaviour
         mainCamera = GameObject.FindObjectOfType<Camera>().GetComponent<CameraCloseUp>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Set close up camera if set close up = true
+    /// </summary>
     void Update()
     {
         if (setCloseUpCamera)
@@ -31,6 +39,9 @@ public class Dice : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Roll the Dice
+    /// </summary>
     public void RollDice()
     {
         setCloseUpCamera = true;
@@ -40,6 +51,10 @@ public class Dice : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reset the dice
+    /// </summary>
+    /// <param name="forced">Set true if dice positions not right</param>
     public void ResetDice(bool forced = false)
     {
         try
@@ -58,6 +73,10 @@ public class Dice : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Can Dice be reset
+    /// </summary>
+    /// <returns>true if dice can reset, false otherwise</returns>
     public bool CanReset()
     {
         bool canResetDice = true;
@@ -73,6 +92,9 @@ public class Dice : MonoBehaviour
         return canResetDice;
     }
 
+    /// <summary>
+    /// Calculate total value of all dice
+    /// </summary>
     public void CalculateValue()
     {
         int value = 0;
@@ -101,6 +123,10 @@ public class Dice : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Get value of all dice
+    /// </summary>
+    /// <returns>Value of all dice, 0 if invalid</returns>
     public int GetValue()
     {
         CalculateValue();
@@ -111,6 +137,10 @@ public class Dice : MonoBehaviour
         return 0;
     }
 
+    /// <summary>
+    /// Are dice ready to roll
+    /// </summary>
+    /// <returns>true if ready to roll, false if not</returns>
     public bool ReadyToRoll()
     {
         bool areReady = true;

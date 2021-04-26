@@ -456,7 +456,7 @@ public class AIControllerScript : MonoBehaviour
     /// 
     /// </summary>
     /// <returns>random room</returns>
-    Room Decide_Room()
+    RoomEnum Decide_Room()
     {
         //return CharacterEnum.Initial;
         int offset = Random.Range(0, 21);
@@ -466,10 +466,10 @@ public class AIControllerScript : MonoBehaviour
             temp = toGuessList[(i + offset) % toGuessList.Count];
             if (temp is RoomCard)
             {
-                return (Room)temp.GetCardType();
+                return (RoomEnum)temp.GetCardType();
             }
         }
-        return (Room)(Random.Range(0, 9) % 9);
+        return (RoomEnum)(Random.Range(0, 9) % 9);
     }
     /// <summary>
     /// Decides that cards to accuse based on the To Guess List

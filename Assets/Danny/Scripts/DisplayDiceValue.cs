@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Script for Dice test script
+/// </summary>
 public class DisplayDiceValue : MonoBehaviour
 {
     
-    [SerializeField]
-    Button rollButton;
-    [SerializeField]
-    Button resetButton;
-    Text diceDisplay;
-    Dice dice;
-    int dieValue;
-
+    [SerializeField] private Button rollButton;
+    [SerializeField] private Button resetButton;
+    private Text diceDisplay;
+    private Dice dice;
+    private int dieValue;
+    /// <summary>
+    /// Set required variables
+    /// </summary>
     private void Start()
     {
         diceDisplay = GetComponent<Text>();
         dice = FindObjectOfType<Dice>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Set button interactable and update dice value text 
+    /// </summary>
     void Update()
     {
         rollButton.interactable = dice.ReadyToRoll();

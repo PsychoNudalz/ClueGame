@@ -33,7 +33,7 @@ public class Suggestion : MonoBehaviour
             RoomScript[] allRooms = FindObjectsOfType<RoomScript>();
             for (int i = 0; i < allRooms.Length && roomScript == null; i++)
             {
-                if (allRooms[i].Room.Equals((Room)sugRoom.GetCardType()))
+                if (allRooms[i].Room.Equals((RoomEnum)sugRoom.GetCardType()))
                 {
                     roomScript = allRooms[i];
                 }

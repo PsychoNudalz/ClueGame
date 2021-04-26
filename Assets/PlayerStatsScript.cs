@@ -36,9 +36,9 @@ public class PlayerStatsScript : MonoBehaviour
                 notebook.Add(notebookCharacter, false);
             }
         }
-        foreach (Room notebookRoom in System.Enum.GetValues(typeof(Room)))
+        foreach (RoomEnum notebookRoom in System.Enum.GetValues(typeof(RoomEnum)))
         {
-            if (!notebookRoom.Equals(Room.None) && !notebookRoom.Equals(Room.Centre))
+            if (!notebookRoom.Equals(RoomEnum.None) && !notebookRoom.Equals(RoomEnum.Centre))
             {
                 notebook.Add(notebookRoom, false);
             }

@@ -61,7 +61,7 @@ public class SuggestionTest : TestUIScript
     /// </summary>
     void PopulateList() 
     {
-        string[] roomNames = System.Enum.GetNames(typeof(Room));
+        string[] roomNames = System.Enum.GetNames(typeof(RoomEnum));
         List <string> room = new List<string>(roomNames);
         roomDD.AddOptions(room);
 
@@ -80,11 +80,11 @@ public class SuggestionTest : TestUIScript
     public void MakeSuggestion()
     {
         
-        userController.SetRoom((Room)roomDD.value);
+        userController.SetRoom((RoomEnum)roomDD.value);
         userController.SetWeapon((WeaponEnum)weaponDD.value);
         userController.SetCharacter((CharacterEnum)characterDD.value);
 
-        RoomCard roomCard = cardManager.FindCard((Room)roomDD.value) as RoomCard;
+        RoomCard roomCard = cardManager.FindCard((RoomEnum)roomDD.value) as RoomCard;
         WeaponCard weaponCard = cardManager.FindCard((WeaponEnum)weaponDD.value) as WeaponCard;
         CharacterCard characterCard = cardManager.FindCard((CharacterEnum)characterDD.value) as CharacterCard;
         Card[] sugTest = { roomCard, weaponCard, characterCard };
@@ -102,7 +102,7 @@ public class SuggestionTest : TestUIScript
                 temp += c.ToString() + ",";
             }
             playerFound.SetText(temp);
-            Debug.Log(((Room)roomDD.value).ToString() + ", " + ((WeaponEnum)weaponDD.value).ToString() + ", " + ((CharacterEnum)characterDD.value).ToString());
+            Debug.Log(((RoomEnum)roomDD.value).ToString() + ", " + ((WeaponEnum)weaponDD.value).ToString() + ", " + ((CharacterEnum)characterDD.value).ToString());
         }
         catch (System.NullReferenceException e) {
             playerFound.SetText("No players with suggested card found");

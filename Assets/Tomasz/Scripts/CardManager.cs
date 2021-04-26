@@ -134,7 +134,7 @@ public class CardManager : MonoBehaviour
 
         return null;
     }
-    public Card FindCard(Room e)
+    public Card FindCard(RoomEnum e)
     {
         List<Card> allCards = new List<Card>(playableCards);
         allCards.AddRange(answers);

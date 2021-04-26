@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Class to run the shortcut test scene
+/// </summary>
 public class ShortcutTestUI : MonoBehaviour
 {
     [SerializeField] private Transform entryButtonTransform;
@@ -13,7 +15,9 @@ public class ShortcutTestUI : MonoBehaviour
     private Button[] entryButtons;
     private BoardTileScript exitTile;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Assign required variables
+    /// </summary>
     void Start()
     {
         player = FindObjectOfType<PlayerMasterController>();
@@ -22,7 +26,9 @@ public class ShortcutTestUI : MonoBehaviour
         exitTile = boardManager.GetTileFromGrid(11, 9);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Set button interactables
+    /// </summary>
     void Update()
     {
         exitButton.interactable = player.IsInRoom();
@@ -33,23 +39,32 @@ public class ShortcutTestUI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Enter a room
+    /// </summary>
+    /// <param name="roomToEnter">Room to enter</param>
     public void EnterRoom(string roomToEnter)
     {
         foreach(RoomEntryBoardTileScript entryTile in boardManager.RoomEntries)
         {
             if (entryTile.Room.ToString().Equals(roomToEnter)){
                 player.MovePlayer(entryTile);
-                //print(entryTile);
                 break;
             }
         }
     }
 
+    /// <summary>
+    /// Trigger take shortcut
+    /// </summary>
     public void TakeShortcut()
     {
         player.TakeShortcut();
     }
 
+    /// <summary>
+    /// Trigger player to exit room
+    /// </summary>
     public void ExitRoom()
     {
         player.GetCurrentRoom().RemovePlayerFromRoom(player, exitTile);
