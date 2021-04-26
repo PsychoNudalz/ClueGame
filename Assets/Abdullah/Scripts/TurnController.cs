@@ -52,11 +52,6 @@ public class TurnController : MonoBehaviour
 
     }
 
-
-    /// <summary>
-    /// Creates a list of the players in order without the current player
-    /// </summary>
-    /// <returns>A list of the players after the current player in order</returns>
     public List<PlayerMasterController> GetRestOfPlayersInOrder() {
         //copy current players into a pseudo list
         List<PlayerMasterController> restOfPlayers = new List<PlayerMasterController>(currentPlayers);
@@ -140,14 +135,15 @@ public class TurnController : MonoBehaviour
         return currentPlayers[currentPlayerIndex];
     }
 
-
-    /// <summary>
-    /// remove current player from the turn list
-    /// </summary>
     public void RemovePlayer() 
     {
         //remove current player
         currentPlayers.RemoveAt(currentPlayerIndex);
     }
 
+    public void Win() 
+    {
+        //TODO: wining
+        print("You Win!");
+    }
 }

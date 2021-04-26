@@ -36,25 +36,33 @@ public class UserController : MonoBehaviour
         //print(FindObjectOfType<Suggestion>());
 
     }
-
+    /// <summary>
+    /// Rolls the dice
+    /// </summary>
     public void RollDice()
     {
         rM.RollDice();
     }
-
+    /// <summary>
+    /// Takes the shortcut 
+    /// </summary>
     public void TakeShortcut()
     {
         GetCurrentPlayer().TakeShortcut();
         rM.CanRoll = false;
     }
-
-    //public void MoveCursor() { }
-
+    /// <summary>
+    /// Selects a tile for player movement
+    /// </summary>
+    /// <param name="tile"></param>
     public void SelectTile(BoardTileScript tile)
     {
         rM.MovePlayer(tile);
     }
-
+    /// <summary>
+    /// Makes suggestion 
+    /// </summary>
+    /// <returns>True if suggestion is made</returns>
     public bool MakeSuggestion()
     {
         List<Card> sug = suggestion.Suggest();
@@ -68,25 +76,40 @@ public class UserController : MonoBehaviour
             return true;
         }
     }
-
+    /// <summary>
+    /// Sets character for suggestions and accusation
+    /// </summary>
+    /// <param name="c"></param>
     public void SetCharacter(CharacterEnum c)
     {
         suggestion.SetSugCharacter(cardManager.FindCard(c) as CharacterCard);
         accusation.SetCharacter(cardManager.FindCard(c) as CharacterCard);
     }
-
-    public void SetWeapon(WeaponEnum c) {
+    /// <summary>
+    /// Sets weapon for suggestions and accusation
+    /// </summary>
+    /// <param name="c"></param>
+    public void SetWeapon(WeaponEnum c)
+    {
         suggestion.SetSugWeapon(cardManager.FindCard(c) as WeaponCard);
         accusation.SetWeapon(cardManager.FindCard(c) as WeaponCard);
     }
+    /// <summary>
+    /// Sets room for suggestions and accusation
+    /// </summary>
+    /// <param name="c"></param>
 
-    public void SetRoom(Room c) {
+    public void SetRoom(RoomEnum c) 
+    {
         suggestion.SetSugRoom(cardManager.FindCard(c) as RoomCard);
         accusation.SetRoom(cardManager.FindCard(c) as RoomCard);
     }
 
     public void PassSelected() { }
-
+    /// <summary>
+    /// Makes accusation
+    /// </summary>
+    /// <returns>True if accusation is made</returns>
     public bool MakeAccusation()
     {
         List<Card> acc = accusation.Accuse();
@@ -101,7 +124,10 @@ public class UserController : MonoBehaviour
 
         }
     }
-
+    /// <summary>
+    /// Ends turn
+    /// </summary>
+    /// <returns></returns>
     public PlayerMasterController EndTurn()
     {
         return rM.EndTurn();

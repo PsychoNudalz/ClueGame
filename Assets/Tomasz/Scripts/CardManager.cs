@@ -18,11 +18,10 @@ public class CardManager : MonoBehaviour
     public PlayerMasterController p;
 
 
-    private void Awake()
-    {
-        //Initialise();
-    }
 
+    /// <summary>
+    /// Selects random answer cards and deal cards to players
+    /// </summary>
     public void Initialise()
     {
         //Create lists of each type of card
@@ -66,13 +65,13 @@ public class CardManager : MonoBehaviour
 
 
     /// <summary>
-    /// check if the cards passed matches the answer
+    /// Check if the cards passed matches the answer
     /// </summary>
     /// <param name="accusation"></param>
-    /// <returns></returns>
+    /// <returns>True if matches else false</returns>
     public bool IsMatchAnswer(List<Card> accusation)
     {
-        foreach(Card c in accusation)
+        foreach (Card c in accusation)
         {
             print(c.GetCardType());
         }
@@ -106,24 +105,23 @@ public class CardManager : MonoBehaviour
             curPlayer++;
         }
 
-        foreach(PlayerMasterController player in players)
+        foreach (PlayerMasterController player in players)
         {
             player.initializeNotebook();
         }
-        /*
-        for (int i = 0; i < setOfcards.Count && i < players.Count; i++)
-        {
-            players[i].AddCard(setOfcards[i]);
-        }
-        */
+
     }
 
-
+    /// <summary>
+    /// Looks for the specified weapon card
+    /// </summary>
+    /// <param name="e">Needed weapon card</param>
+    /// <returns>Card if exists else null</returns>
     public Card FindCard(WeaponEnum e)
     {
         List<Card> allCards = new List<Card>(playableCards);
         allCards.AddRange(answers);
-        foreach(Card c in allCards)
+        foreach (Card c in allCards)
         {
             if (c.Equals(e))
             {
@@ -134,7 +132,12 @@ public class CardManager : MonoBehaviour
 
         return null;
     }
-    public Card FindCard(Room e)
+    /// <summary>
+    /// Looks for the specified room card
+    /// </summary>
+    /// <param name="e">Needed room card</param>
+    /// <returns>Card if exists else null</returns>
+    public Card FindCard(RoomEnum e)
     {
         List<Card> allCards = new List<Card>(playableCards);
         allCards.AddRange(answers);
@@ -150,6 +153,11 @@ public class CardManager : MonoBehaviour
         Debug.LogError("Could not Find card Enum e: " + e.ToString());
         return null;
     }
+    /// <summary>
+    /// Looks for the specified character card
+    /// </summary>
+    /// <param name="e">Needed character card</param>
+    /// <returns>Card if exists else null</returns>
     public Card FindCard(CharacterEnum e)
     {
         List<Card> allCards = new List<Card>(playableCards);
@@ -165,7 +173,10 @@ public class CardManager : MonoBehaviour
         return null;
     }
 
-
+    /// <summary>
+    /// Returns list of all cards
+    /// </summary>
+    /// <returns>List of all cards</returns>
     public List<Card> GetAllCards()
     {
         List<Card> allCards = new List<Card>(playableCards);

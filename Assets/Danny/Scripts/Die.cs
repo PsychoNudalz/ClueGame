@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+/// <summary>
+/// Script for the Die Gameobject
+/// </summary>
 public class Die : MonoBehaviour
 {
-    //[SerializeField] private Transform closeUpCameraPosition;
-
+    
     private DieSide[] dieSides;
     private Rigidbody dieRigidbody;
     private bool hasLanded;
@@ -15,11 +16,15 @@ public class Die : MonoBehaviour
     private Vector3 initialPosition;
     private int dieValue = -1;
 
+    // Start is called before the first frame update
     private void Start()
     {
         Initialise();
     }
 
+    /// <summary>
+    /// Initialise Die
+    /// </summary>
     private void Initialise()
     {
         dieSides = GetComponentsInChildren<DieSide>();
@@ -28,6 +33,11 @@ public class Die : MonoBehaviour
         dieRigidbody.useGravity = false;
     }
 
+    /// <summary>
+    /// If die has been thrown, landed and stopped moving
+    /// then update die value. If die stops on edge then
+    /// roll again
+    /// </summary>
     private void Update()
     {
         if(dieRigidbody.IsSleeping() && !hasLanded && isThrown)
@@ -42,12 +52,18 @@ public class Die : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Roll again in event of die getting stuck on edge
+    /// </summary>
     private void RollAgain()
     {
         ResetDie();
         RollDie();
     }
 
+    /// <summary>
+    /// Roll the die
+    /// </summary>
     public void RollDie()
     {
         if (hasLanded)
@@ -65,16 +81,27 @@ public class Die : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Is die ready to roll
+    /// </summary>
+    /// <returns>true if ready to roll, false if not</returns>
     public bool IsReadyToRoll()
     {
         return !isThrown || hasLanded;
     }
 
+    /// <summary>
+    /// Can the die be reset
+    /// </summary>
+    /// <returns>trueif can be reset, false if not</returns>
     public bool CanResetDie()
     {
         return hasLanded && isThrown;
     }
 
+    /// <summary>
+    /// Reset Die to original position
+    /// </summary>
     public void ResetDie()
     {
         GetComponent<MeshRenderer>().enabled = false;
@@ -84,6 +111,9 @@ public class Die : MonoBehaviour
         hasLanded = false;
     }
 
+    /// <summary>
+    /// Set the current value of the die if on ground 0 if not.
+    /// </summary>
     private void CheckValueDie()
     {
         dieValue = 0;
@@ -96,6 +126,10 @@ public class Die : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Get the value of the die
+    /// </summary>
+    /// <returns>Current value of the die, 0 if not valid</returns>
     public int GetValueDie()
     {
         if (hasLanded)

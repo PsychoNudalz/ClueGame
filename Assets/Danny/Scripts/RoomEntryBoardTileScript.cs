@@ -2,20 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Script for the room entry board tile GameObject
+/// </summary>
 public class RoomEntryBoardTileScript : BoardTileScript
 {
-    [SerializeField] private Room room;
+    [SerializeField] private RoomEnum room;
     private RoomEntryPoint entryPoint;
     private RoomScript roomScript;
-    DoorScript door;
+    private DoorScript door;
 
-    public Room Room { get => room; set => room = value; }
+    public RoomEnum Room { get => room; set => room = value; }
     public RoomScript RoomScript { get => roomScript; set => roomScript = value; }
     public RoomEntryPoint EntryPoint { get => entryPoint; set => entryPoint = value; }
     BoardTileScript exitTarget;
 
-
+    /// <summary>
+    /// Set required Variables
+    /// </summary>
     private void Start()
     {
         base.Init();
@@ -24,7 +28,9 @@ public class RoomEntryBoardTileScript : BoardTileScript
         GetEntryPoint();
         entryPoint.RoomScript = roomScript;
     }
-
+    /// <summary>
+    /// Set the reference to the closest door on the board
+    /// </summary>
     private void GetDoor()
     {
         DoorScript closest = null;
@@ -40,7 +46,9 @@ public class RoomEntryBoardTileScript : BoardTileScript
         }
         door = closest;
     }
-
+    /// <summary>
+    /// Set the reference to the entry tilse roomScript
+    /// </summary>
     private void GetRoomScript()
     {
         foreach (RoomScript tempRoomScript in GameObject.FindObjectsOfType<RoomScript>())
@@ -52,7 +60,9 @@ public class RoomEntryBoardTileScript : BoardTileScript
             }
         }
     }
-
+    /// <summary>
+    /// Set reference to the closest room entry point on the board
+    /// </summary>
     private void GetEntryPoint()
     {
         RoomEntryPoint closest = null;
@@ -68,12 +78,19 @@ public class RoomEntryBoardTileScript : BoardTileScript
         }
         entryPoint = closest;
     }
-    
+    /// <summary>
+    /// Start entering player to room
+    /// </summary>
+    /// <param name="player">Player to enter room</param>
     internal void EnterRoom(PlayerMasterController player)
     {
         StartCoroutine(EnterRoomAnimation(player));
     }
-
+    /// <summary>
+    /// Open door, pause start player entry, pause then close door
+    /// </summary>
+    /// <param name="player"></param>
+    /// <returns></returns>
     IEnumerator EnterRoomAnimation(PlayerMasterController player)
     {
         door.OpenDoor();
@@ -84,22 +101,31 @@ public class RoomEntryBoardTileScript : BoardTileScript
         door.CloseDoor();
 
     }
-
+    /// <summary>
+    /// Overidden ToString Method
+    /// </summary>
+    /// <returns>Description of the tile</returns>
     override
     public string ToString()
     {
         return $"{TileType} Tile ({room}) located at ({GridPosition.x} : {GridPosition.y})";
     }
-
+    /// <summary>
+    /// Start player exit from room
+    /// </summary>
+    /// <param name="playerToRemove">Player to exit</param>
+    /// <param name="targetTile">target tile to move player to</param>
     internal void ExitRoom(PlayerMasterController playerToRemove, BoardTileScript targetTile)
     {
         StartCoroutine(ExitRoomDelay(playerToRemove, targetTile));
     }
-
+    /// <summary>
+    /// Move player to exit point, open door, exit player, close door, set player moving to target tile.
+    /// </summary>
+    /// <param name="playerToRemove">Player to exit</param>
+    /// <param name="targetTile">Tile to move player to on exit</param>
     public IEnumerator ExitRoomDelay(PlayerMasterController playerToRemove, BoardTileScript targetTile)
     {
-        //print(playerToRemove.Character + " exiting via " + this.transform);
-        //playerToRemove.CurrentRoom = null;
         playerToRemove.SetPosition(entryPoint.transform.position);
         playerToRemove.SetCurrentTile(this);
         door.OpenDoor();

@@ -3,21 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
-public enum CameraTarget
-{
-    Study, Hall, Lounge, Library, Centre, DiningRoom, BilliardRoom, Conservatory, Ballroom, Kitchen,
-    MissScarlett, ProfPlum, ColMustard, MrsPeacock, RevGreen, MrsWhite, Initial
-};
-
+/// <summary>
+/// Script to control the camera close up shots
+/// </summary>
 public class CameraCloseUp : MonoBehaviour
 {
     private float moveSpeed = 5f;
     [SerializeField] private bool testKeys;
-    Keyboard kb;
+    private Keyboard kb;
     private Vector3 initialCameraPosition;
     private CameraTarget currentCameraTarget;
     private CloseUpPointScript[] closeUpPoints;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +34,10 @@ public class CameraCloseUp : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// If test keys = true - numpad / numbers control close ups
+    /// lerp camera position towards close up point set
+    /// </summary>
     void Update()
     {
         if (testKeys)
@@ -50,7 +50,11 @@ public class CameraCloseUp : MonoBehaviour
             }
     }
 
-
+    /// <summary>
+    /// Get the camera location target from point
+    /// </summary>
+    /// <param name="currentTarget">Target to get position for</param>
+    /// <returns>Location of target close up</returns>
     Vector3 GetCameraPosition(CameraTarget currentTarget)
     {
         foreach(CloseUpPointScript point in closeUpPoints)
@@ -63,31 +67,45 @@ public class CameraCloseUp : MonoBehaviour
         return initialCameraPosition;
     }
 
-
+    /// <summary>
+    /// Set close up point
+    /// </summary>
+    /// <param name="target">Enum representing close up point</param>
     public void SetCloseUp(CameraTarget target)
     {
         currentCameraTarget = target;
     }
 
+    /// <summary>
+    /// Clear camera close up
+    /// </summary>
+    /// <param name="delay">Add a delay</param>
     public void ClearCloseUp(float delay)
     {
         StartCoroutine(ClearCloseUpDelay(delay));
     }
 
+    /// <summary>
+    /// Clear camera close up
+    /// </summary>
     public void ClearCloseUp()
     {
         currentCameraTarget = CameraTarget.Initial;
     }
 
+    /// <summary>
+    /// Delay then clear close up
+    /// </summary>
+    /// <param name="delay">Delay to wait for</param>
     IEnumerator ClearCloseUpDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         currentCameraTarget = CameraTarget.Initial;
     }
 
-    /*
-     * For testing camera close ups
-     */
+    /// <summary>
+    /// For testing camera close ups
+    /// </summary>
     private void TestSetCamera()
     {
         if (kb.numpad7Key.isPressed)
@@ -160,7 +178,11 @@ public class CameraCloseUp : MonoBehaviour
         }
     }
 
-    internal void SetRoomCloseUp(Room room)
+    /// <summary>
+    /// Set camera close up to room
+    /// </summary>
+    /// <param name="room">Room for close up</param>
+    internal void SetRoomCloseUp(RoomEnum room)
     {
         foreach (CameraTarget target in Enum.GetValues(typeof(CameraTarget)))
         {
@@ -171,6 +193,10 @@ public class CameraCloseUp : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Set camera close up to character
+    /// </summary>
+    /// <param name="character">Character for close up</param>
     public void SetCharacterCloseUp(CharacterEnum character)
     {
         foreach (CameraTarget target in Enum.GetValues(typeof(CameraTarget)))

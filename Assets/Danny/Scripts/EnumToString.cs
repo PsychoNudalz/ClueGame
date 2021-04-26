@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Script to get a string value from an enum
+/// </summary>
 public static class EnumToString
 {
+    /// <summary>
+    /// Get a string value from a valid enum
+    /// </summary>
+    /// <param name="enumInput">Enum to get string value from</param>
+    /// <returns>String value of Enum, throws exception if not valid enum</returns>
     public static string GetStringFromEnum(System.Enum enumInput)
     {
         switch (enumInput)
@@ -21,25 +28,25 @@ public static class EnumToString
             case CharacterEnum.RevGreen:
                 return "Reverend Green";
            
-            case Room.Ballroom:
+            case RoomEnum.Ballroom:
                 return "Ballroom";
-            case Room.BilliardRoom:
+            case RoomEnum.BilliardRoom:
                 return "Billiard Room";
-            case Room.Centre:
+            case RoomEnum.Centre:
                 return "Centre Room";
-            case Room.Conservatory:
+            case RoomEnum.Conservatory:
                 return "Conservatory";
-            case Room.DiningRoom:
+            case RoomEnum.DiningRoom:
                 return "Dining Room";
-            case Room.Hall:
+            case RoomEnum.Hall:
                 return "Hall";
-            case Room.Kitchen:
+            case RoomEnum.Kitchen:
                 return "Kitchen";
-            case Room.Library:
+            case RoomEnum.Library:
                 return "Library";
-            case Room.Lounge:
+            case RoomEnum.Lounge:
                 return "Lounge";
-            case Room.Study:
+            case RoomEnum.Study:
                 return "Study";
             
             case WeaponEnum.CandleStick:

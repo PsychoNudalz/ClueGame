@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+/// <summary>
+/// Script for the door Gameobject
+/// </summary>
 public class DoorScript : MonoBehaviour
 {
-    [SerializeField] bool testKeysActive;
-    Animator doorAnimator;
-    bool isOpen;
-    Keyboard kb;
+    [SerializeField] private bool testKeysActive;
+    private Animator doorAnimator;
+    private bool isOpen;
+    private Keyboard kb;
 
+    /// <summary>
+    /// Set Required variables
+    /// </summary>
     private void Start()
     {
         doorAnimator = GetComponent<Animator>();
@@ -17,6 +22,9 @@ public class DoorScript : MonoBehaviour
         isOpen = false;
     }
 
+    /// <summary>
+    /// If test keys active 0 key opens / closes the door
+    /// </summary>
     private void Update()
     {
         if (testKeysActive)
@@ -27,35 +35,25 @@ public class DoorScript : MonoBehaviour
             }
         }
     }
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        { 
-            OpenDoor();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            CloseDoor();
-        }
-    }
-    */
+    /// <summary>
+    /// Open the door
+    /// </summary>
     public void OpenDoor()
     {
         isOpen = true;
         doorAnimator.SetBool("DoorOpen", isOpen);
     }
-
+    /// <summary>
+    /// Close the door
+    /// </summary>
     public void CloseDoor()
     {
         isOpen = false;
         doorAnimator.SetBool("DoorOpen", isOpen);
     }
-
+    /// <summary>
+    /// Toggle door Open / Close
+    /// </summary>
     public void ToggleDoorOpenClose()
     {
         isOpen = !isOpen;

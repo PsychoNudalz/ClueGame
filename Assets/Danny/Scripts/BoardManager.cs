@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+/// <summary>
+/// Script to manage the board items
+/// </summary>
 public class BoardManager : MonoBehaviour
 {
     /*
@@ -31,10 +33,12 @@ public class BoardManager : MonoBehaviour
     public FreeRollBoardTileScript[] FreeRollTiles { get => freeRollTiles; set => freeRollTiles = value; }
     public List<BoardTileScript> MovableTile { get => movableTile; }
     public FreeSuggestionTileScript[] FreeSuggestionTiles { get => freeSuggestionTiles; set => freeSuggestionTiles = value; }
-
-    /*
-     * Return array of all neighbours of given tile
-     */
+    
+    /// <summary>
+    /// Return array of all neighbours of given tile
+    /// </summary>
+    /// <param name="tilescript">Tile to check from</param>
+    /// <returns>Array of all neighbouring tiles</returns>
     public BoardTileScript[] GetTileNeighbours(BoardTileScript tilescript)
     {
         List<BoardTileScript> neighboursToReturn = new List<BoardTileScript>();
@@ -77,9 +81,12 @@ public class BoardManager : MonoBehaviour
         return neighboursToReturn.ToArray();
     }
 
-    /*
-     * Create 2d array of all board tiles
-     */
+    /// <summary>
+    /// Create 2d array of all board tiles
+    /// </summary>
+    /// <param name="tiles">All board tiles</param>
+    /// <param name="boardHeight">Height of the board</param>
+    /// <param name="boardWidth">Width of the board</param>
     public void CreateBoardArray(BoardTileScript[] tiles, int boardHeight, int boardWidth)
     {
         boardTiles = new BoardTileScript[boardHeight][];
@@ -98,9 +105,12 @@ public class BoardManager : MonoBehaviour
         //PrintArray();
     }
 
-    /*
-     * Return a tile from the array using a grid reference. null if no tile exists at location.
-     */
+    /// <summary>
+    /// Get a tile from the array using a grid reference. 
+    /// </summary>
+    /// <param name="XPos">X position</param>
+    /// <param name="YPos">Y position</param>
+    /// <returns>Board tile at location, null if no tile exists at location.</returns>
     public BoardTileScript GetTileFromGrid(int XPos, int YPos)
     {
         if (XPos < boardTiles[0].Length && YPos < boardTiles.Length && XPos >= 0 && YPos >= 0)
@@ -113,17 +123,17 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    /*
-     * Start coroutine to place all the weapons after a delay.
-     */
+    /// <summary>
+    /// Start coroutine to place all the weapons after a delay.
+    /// </summary>
     internal void PlaceWeapons()
     {
         StartCoroutine(PlaceWeaponsDelay());
     }
 
-    /*
-     * Coroutine to randomly place weapon tokens in rooms with no more than 1 per room
-     */
+    /// <summary>
+    /// Coroutine to randomly place weapon tokens in rooms with no more than 1 per room
+    /// </summary>
     IEnumerator PlaceWeaponsDelay()
     {
         yield return new WaitForSeconds(0.01f);
@@ -134,7 +144,7 @@ public class BoardManager : MonoBehaviour
             {
                 int rand = Random.Range(0, rooms.Length);
                 RoomScript roomToTry = rooms[rand];
-                if (roomToTry.Room != Room.None && roomToTry.Room != Room.Centre && roomToTry.WeaponSlotsEmpty())
+                if (roomToTry.Room != RoomEnum.None && roomToTry.Room != RoomEnum.Centre && roomToTry.WeaponSlotsEmpty())
                 {
                     roomToTry.AddWeapon(weapon);
                 }
@@ -142,9 +152,9 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    /*
-     * Print Array for Testing
-     */
+    /// <summary>
+    /// Print Array for Testing
+    /// </summary>
     private void PrintArray()
     {
         for (int row = 0; row < boardTiles.Length; row++)
@@ -166,12 +176,12 @@ public class BoardManager : MonoBehaviour
     }
 
     /// <summary>
-    /// perform bfs search for the tiles
+    /// Perform bfs search for the tiles
     /// </summary>
-    /// <param name="currentTile"></param>
-    /// <param name="range"></param>
+    /// <param name="currentTile">Tile to search from</param>
+    /// <param name="range">Distance to search</param>
     /// <param name="queue"></param>
-    /// <returns></returns>
+    /// <returns>List of board tiles in range</returns>
     public List<BoardTileScript> bfs(BoardTileScript currentTile, int range, List<BoardTileScript> queue = null)
     {
         if (queue == null)
@@ -215,11 +225,11 @@ public class BoardManager : MonoBehaviour
     }
 
     /// <summary>
-    /// mark and showwhich tile the player can move to
+    /// Mark and show which tile the player can move to
     /// </summary>
-    /// <param name="currentTile"></param>
-    /// <param name="range"></param>
-    /// <returns></returns>
+    /// <param name="currentTile">Tile to search from</param>
+    /// <param name="range">Distance to search</param>
+    /// <returns>true if successful, false if invalid tile</returns>
     public bool ShowMovable(BoardTileScript currentTile, int range)
     {
         if (currentTile == null)
@@ -236,6 +246,12 @@ public class BoardManager : MonoBehaviour
         }
         return true;
     }
+    /// <summary>
+    /// Show movable tiles
+    /// </summary>
+    /// <param name="boardTileScripts">Array of tiles to search from</param>
+    /// <param name="range">Distance to search</param>
+    /// <returns>true if successful</returns>
     public bool ShowMovable(BoardTileScript[] boardTileScripts, int range)
     {
         ClearMovable();
@@ -249,6 +265,12 @@ public class BoardManager : MonoBehaviour
         print("finished room");
         return true;
     }
+    /// <summary>
+    /// Show movable tiles from room
+    /// </summary>
+    /// <param name="roomScript">Room to check from</param>
+    /// <param name="range">Distance to search</param>
+    /// <returns>true if successful, false if room is invalid</returns>
     public bool ShowMovable(RoomScript roomScript, int range)
     {
         if (roomScript == null)
@@ -260,7 +282,9 @@ public class BoardManager : MonoBehaviour
         return true;
     }
 
-
+    /// <summary>
+    /// Clear all movable tiles
+    /// </summary>
     public void ClearMovable()
     {
         foreach (BoardTileScript b in movableTile)
@@ -277,9 +301,17 @@ public class BoardManager : MonoBehaviour
         return movableTile.Contains(currentTile);
     }
 
-    /*
-     * Set all object arrays once board is built
-     */
+    /// <summary>
+    /// Set all object arrays once board is built
+    /// </summary>
+    /// <param name="players">Array of player scripts</param>
+    /// <param name="rooms">Array of room scripts</param>
+    /// <param name="roomEntries">Array of room entry scripts</param>
+    /// <param name="shortcuts">Array of shortcut scripts</param>
+    /// <param name="startTiles">Array of start tile scripts</param>
+    /// <param name="weaponTokens">Array of weapon token scripts</param>
+    /// <param name="freeRollTiles">Array of free roll tile scripts</param>
+    /// <param name="freeSuggestionTiles">Array of free suggestion tile scripts</param>
     public void SetObjectArrays(PlayerTokenScript[] players,
                                 RoomScript[] rooms,
                                 RoomEntryBoardTileScript[] roomEntries,
@@ -303,7 +335,7 @@ public class BoardManager : MonoBehaviour
     /// Gets a random list of entry tile from Movable list
     /// return null if none found
     /// </summary>
-    /// <returns></returns>
+    /// <returns>List of random entry tiles</returns>
     public List<RoomEntryBoardTileScript> GetRandomEntryTileInMovable()
     {
         int offset = Random.Range(0, roomEntries.Length - 1);
@@ -319,13 +351,10 @@ public class BoardManager : MonoBehaviour
         return temp;
     }
 
-
-
     /// <summary>
-    /// Gets an free roll tile from Movable list
-    /// return null if none found
+    /// Get a free roll tile from movable tiles
     /// </summary>
-    /// <returns></returns>
+    /// <returns>free roll tile from Movable list, null if none found</returns>
     public FreeRollBoardTileScript GetFreeRollTileInMovable()
     {
         foreach (FreeRollBoardTileScript e in freeRollTiles)
@@ -340,9 +369,8 @@ public class BoardManager : MonoBehaviour
 
     /// <summary>
     /// Gets an free suggestion tile from Movable list
-    /// return null if none found
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Free suggestion tile null if none found</returns>
     public FreeSuggestionTileScript GetFreeSuggesTileInMovable()
     {
         foreach (FreeSuggestionTileScript e in freeSuggestionTiles)

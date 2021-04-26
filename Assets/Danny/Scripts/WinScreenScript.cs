@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Script to create the win screnn
+/// </summary>
 public class WinScreenScript : MonoBehaviour
 {
     [SerializeField] CardSlot murdererCard;
@@ -12,11 +15,17 @@ public class WinScreenScript : MonoBehaviour
     private CardManager cardManager;
     private RoundManager roundManager;
 
+    /// <summary>
+    /// Assign required variables
+    /// </summary>
     private void Awake()
     {
         cardManager = FindObjectOfType<CardManager>();
         roundManager = FindObjectOfType<RoundManager>();
     }
+    /// <summary>
+    /// Update the win screen when enabled
+    /// </summary>
     private void OnEnable()
     {
         List<Card> answers = cardManager.answers;

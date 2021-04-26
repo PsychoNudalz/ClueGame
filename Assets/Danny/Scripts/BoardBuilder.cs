@@ -10,8 +10,8 @@ public class BoardBuilder : MonoBehaviour
 {
 
     //Number of bonus tiles to add
-    [SerializeField] int numberOfFreeRollTiles = 3;
-    [SerializeField] int numberOfFreeSuggestionTiles = 3;
+    [SerializeField] private int numberOfFreeRollTiles = 3;
+    [SerializeField] private int numberOfFreeSuggestionTiles = 3;
 
     //.csv file containing board layout
     private TextAsset boardCSV;
@@ -245,8 +245,8 @@ public class BoardBuilder : MonoBehaviour
 
         //Set shortcut rooms
         string[] rooms = shortcutRooms.Split('/');
-        Room shortcutFrom = RoomScript.GetRoomFromString(rooms[0]);
-        Room shortcutTo = RoomScript.GetRoomFromString(rooms[1]);
+        RoomEnum shortcutFrom = RoomScript.GetRoomFromString(rooms[0]);
+        RoomEnum shortcutTo = RoomScript.GetRoomFromString(rooms[1]);
         tileScript.SetShortcutRooms(shortcutFrom, shortcutTo);
 
         //Name tile object
@@ -374,43 +374,43 @@ public class BoardBuilder : MonoBehaviour
         {
             case "Study":
                 room = GameObject.Instantiate(StudyPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Study;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Study;
                 break;
             case "Hall":
                 room = GameObject.Instantiate(HallPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Hall;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Hall;
                 break;
             case "Lounge":
                 room = GameObject.Instantiate(LoungePrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Lounge;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Lounge;
                 break;
             case "Library":
                 room = GameObject.Instantiate(LibraryPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Library;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Library;
                 break;
             case "Centre":
                 room = GameObject.Instantiate(CentrePrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Centre;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Centre;
                 break;
             case "Dining Room":
                 room = GameObject.Instantiate(DiningRoomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.DiningRoom;
+                room.GetComponent<RoomScript>().Room = RoomEnum.DiningRoom;
                 break;
             case "Billiard Room":
                 room = GameObject.Instantiate(BilliardRoomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.BilliardRoom;
+                room.GetComponent<RoomScript>().Room = RoomEnum.BilliardRoom;
                 break;
             case "Conservatory":
                 room = GameObject.Instantiate(ConservatoryPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Conservatory;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Conservatory;
                 break;
             case "Ballroom":
                 room = GameObject.Instantiate(BallroomPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Ballroom;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Ballroom;
                 break;
             case "Kitchen":
                 room = GameObject.Instantiate(KitchenPrefab, new Vector3(x, 0, z), transform.rotation, rooms.transform);
-                room.GetComponent<RoomScript>().Room = Room.Kitchen;
+                room.GetComponent<RoomScript>().Room = RoomEnum.Kitchen;
                 break;
             default:
                 break;
