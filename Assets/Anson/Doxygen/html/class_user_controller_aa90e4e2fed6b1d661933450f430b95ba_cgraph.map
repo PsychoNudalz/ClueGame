@@ -1,0 +1,12 @@
+<map id="UserController.MakeAccusation" name="UserController.MakeAccusation">
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,248,115"/>
+<area shape="rect" id="node2" href="$class_accusation.html#abba1b95fd7e759eac9efbf52819abd75" title=" " alt="" coords="343,59,498,88"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#ab691cd5cd773e23822b237834b1fcb0a" title="to have the current player to make an accusation eliminates the player if it is wrong wins the game i..." alt="" coords="296,112,545,141"/>
+<area shape="rect" id="node4" href="$class_u_i_handler.html#a2db6b92acd51a72b431b3eacb3884ddd" title=" " alt="" coords="609,5,873,35"/>
+<area shape="rect" id="node5" href="$class_player_master_controller.html#a0dae7cbe3c8b1c8bcb5ca694d9815836" title="eliminate player" alt="" coords="593,59,888,88"/>
+<area shape="rect" id="node6" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="614,112,867,141"/>
+<area shape="rect" id="node8" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="607,165,875,195"/>
+<area shape="rect" id="node9" href="$class_card_manager.html#a3aa02d8bc476530b2e8e18019aa8a00e" title="check if the cards passed matches the answer" alt="" coords="627,219,855,248"/>
+<area shape="rect" id="node7" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="936,112,1179,141"/>
+<area shape="rect" id="node10" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="980,219,1135,248"/>
+</map>

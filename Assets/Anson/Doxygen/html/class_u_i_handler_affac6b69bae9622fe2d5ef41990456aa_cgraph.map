@@ -1,0 +1,4 @@
+<map id="UIHandler.DisplayDeck" name="UIHandler.DisplayDeck">
+<area shape="rect" id="node1" title="Display the list of cards" alt="" coords="5,5,188,35"/>
+<area shape="rect" id="node2" href="$class_card_slot.html#af678d8249e4d52bb791b47d4ed75e7f3" title=" " alt="" coords="236,5,396,35"/>
+</map>

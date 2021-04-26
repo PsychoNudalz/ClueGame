@@ -1,0 +1,5 @@
+<map id="RoomScript.GetEntryTiles" name="RoomScript.GetEntryTiles">
+<area shape="rect" id="node1" title=" " alt="" coords="283,32,485,61"/>
+<area shape="rect" id="node2" href="$class_board_manager.html#a0e14ab6cda8d33b4a1a79c0505400609" title=" " alt="" coords="5,5,235,35"/>
+<area shape="rect" id="node3" href="$class_room_script.html#ac1f4ee4e0bcdd6c8de67ddce44725733" title=" " alt="" coords="49,59,191,88"/>
+</map>

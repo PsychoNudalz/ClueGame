@@ -1,0 +1,7 @@
+<map id="TestUIScript" name="TestUIScript">
+<area shape="rect" id="node1" title="super class for all testing with connection to UI outputs" alt="" coords="192,139,391,467"/>
+<area shape="rect" id="node3" href="$class_a_i_test_script.html" title=" " alt="" coords="5,593,172,834"/>
+<area shape="rect" id="node4" href="$class_suggestion_test.html" title="This class handles the suggestion test scene, and handles the UI in the test scene" alt="" coords="196,515,387,912"/>
+<area shape="rect" id="node5" href="$class_testing___movement_script.html" title="class for test the movement of the player" alt="" coords="411,645,606,782"/>
+<area shape="rect" id="node2" title=" " alt="" coords="226,5,357,91"/>
+</map>

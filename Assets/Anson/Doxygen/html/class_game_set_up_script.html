@@ -64,6 +64,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game_set_up_script-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GameSetUpScript Class Reference</div>  </div>
@@ -75,9 +77,21 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for GameSetUpScript:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_game_set_up_script.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_game_set_up_script__inherit__graph.png" border="0" usemap="#a_game_set_up_script_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_game_set_up_script_inherit__map" id="a_game_set_up_script_inherit__map">
+<area shape="rect" title="for passing the selection of which player is human or AI from the main menu" alt="" coords="5,139,156,293"/>
+<area shape="rect" title=" " alt="" coords="15,5,146,91"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for GameSetUpScript:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_set_up_script__coll__graph.png" border="0" usemap="#a_game_set_up_script_coll__map" alt="Collaboration graph"/></div>
+<map name="a_game_set_up_script_coll__map" id="a_game_set_up_script_coll__map">
+<area shape="rect" title="for passing the selection of which player is human or AI from the main menu" alt="" coords="5,139,156,293"/>
+<area shape="rect" title=" " alt="" coords="15,5,146,91"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -92,10 +106,47 @@ Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a0d8750d79fab23d988c05132025a4ef7"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_set_up_script.html#a0d8750d79fab23d988c05132025a4ef7">ToggleResults</a><code> [get, set]</code></td></tr>
 <tr class="separator:a0d8750d79fab23d988c05132025a4ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a12ee814f78e3f902cb8b1c44396f4b53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_set_up_script.html#a12ee814f78e3f902cb8b1c44396f4b53">Awake</a> ()</td></tr>
+<tr class="separator:a12ee814f78e3f902cb8b1c44396f4b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8e0f78a5e50e58a8ee42dd11d70fd04b"><td class="memItemLeft" align="right" valign="top">Toggle[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_set_up_script.html#a8e0f78a5e50e58a8ee42dd11d70fd04b">toggles</a></td></tr>
+<tr class="separator:a8e0f78a5e50e58a8ee42dd11d70fd04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f02250a996aba0f9e2d951e365ceb35"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_set_up_script.html#a8f02250a996aba0f9e2d951e365ceb35">toggleResults</a></td></tr>
+<tr class="separator:a8f02250a996aba0f9e2d951e365ceb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>for passing the selection of which player is human or AI from the main menu </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12ee814f78e3f902cb8b1c44396f4b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12ee814f78e3f902cb8b1c44396f4b53">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameSetUpScript.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af2006c4cc7cf6d21f731c5acde607ae3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2006c4cc7cf6d21f731c5acde607ae3">&#9670;&nbsp;</a></span>SaveChoices()</h2>
 
@@ -112,6 +163,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>passes the selection from the Toggle buttons </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_set_up_script_af2006c4cc7cf6d21f731c5acde607ae3_icgraph.png" border="0" usemap="#aclass_game_set_up_script_af2006c4cc7cf6d21f731c5acde607ae3_icgraph" alt=""/></div>
+<map name="aclass_game_set_up_script_af2006c4cc7cf6d21f731c5acde607ae3_icgraph" id="aclass_game_set_up_script_af2006c4cc7cf6d21f731c5acde607ae3_icgraph">
+<area shape="rect" title="passes the selection from the Toggle buttons" alt="" coords="268,5,516,35"/>
+<area shape="rect" href="class_main_menu_script.html#a6475e7b57ea806821eaa351f7fb0e4da" title="to start the game and load the game scene" alt="" coords="5,5,220,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -131,6 +191,60 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>assigns the players in the game based on the saved AI selection </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_set_up_script_a783bb4575e7a8718ea2907af860a687b_cgraph.png" border="0" usemap="#aclass_game_set_up_script_a783bb4575e7a8718ea2907af860a687b_cgraph" alt=""/></div>
+<map name="aclass_game_set_up_script_a783bb4575e7a8718ea2907af860a687b_cgraph" id="aclass_game_set_up_script_a783bb4575e7a8718ea2907af860a687b_cgraph">
+<area shape="rect" title="assigns the players in the game based on the saved AI selection" alt="" coords="5,5,236,35"/>
+<area shape="rect" href="class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="284,5,563,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8f02250a996aba0f9e2d951e365ceb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f02250a996aba0f9e2d951e365ceb35">&#9670;&nbsp;</a></span>toggleResults</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] GameSetUpScript.toggleResults</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e0f78a5e50e58a8ee42dd11d70fd04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0f78a5e50e58a8ee42dd11d70fd04b">&#9670;&nbsp;</a></span>toggles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Toggle [] GameSetUpScript.toggles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

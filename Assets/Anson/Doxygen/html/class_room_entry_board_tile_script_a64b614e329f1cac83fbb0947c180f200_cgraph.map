@@ -1,0 +1,6 @@
+<map id="RoomEntryBoardTileScript.Start" name="RoomEntryBoardTileScript.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,59,251,88"/>
+<area shape="rect" id="node2" href="$class_room_entry_board_tile_script.html#ac32d28fe8815d6b9c2a7271d145ad24a" title=" " alt="" coords="323,5,595,35"/>
+<area shape="rect" id="node3" href="$class_room_entry_board_tile_script.html#a9c64a40265b2c0f2771f945e993639d6" title=" " alt="" coords="305,59,613,88"/>
+<area shape="rect" id="node4" href="$class_room_entry_board_tile_script.html#ae14f33e8fb193fd2113d29b5803f42e5" title=" " alt="" coords="299,112,619,141"/>
+</map>

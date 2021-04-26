@@ -1,0 +1,4 @@
+<map id="MainMenuScript.StartGame" name="MainMenuScript.StartGame">
+<area shape="rect" id="node1" title="to start the game and load the game scene" alt="" coords="5,5,220,35"/>
+<area shape="rect" id="node2" href="$class_game_set_up_script.html#af2006c4cc7cf6d21f731c5acde607ae3" title="passes the selection from the Toggle buttons" alt="" coords="268,5,516,35"/>
+</map>

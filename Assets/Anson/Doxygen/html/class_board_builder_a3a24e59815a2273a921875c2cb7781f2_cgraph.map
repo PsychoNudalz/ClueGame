@@ -1,0 +1,13 @@
+<map id="BoardBuilder.BuildBoard" name="BoardBuilder.BuildBoard">
+<area shape="rect" id="node1" title="Build the board using various helper methods" alt="" coords="5,112,201,141"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6" title="Instantiate a General tile and set its parameters" alt="" coords="279,5,514,35"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a491ed54feb27cf486245a500c16ff310" title=" " alt="" coords="293,59,501,88"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="249,112,544,141"/>
+<area shape="rect" id="node6" href="$class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="273,165,521,195"/>
+<area shape="rect" id="node8" href="$class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2" title="Instantiate a start tile and set its parameters" alt="" coords="285,219,509,248"/>
+<area shape="rect" id="node5" href="$class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="626,112,881,141"/>
+<area shape="rect" id="node7" href="$class_shortcut_board_tile_script.html#a80487fbb1c2457f09fa5ca7e20879015" title=" " alt="" coords="592,165,915,195"/>
+<area shape="rect" id="node9" href="$class_start_tile_script.html#a33514048a06840acdadc966c14cef503" title=" " alt="" coords="644,219,863,248"/>
+<area shape="rect" id="node11" href="$class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="652,272,855,301"/>
+<area shape="rect" id="node10" href="$class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title=" " alt="" coords="963,219,1165,248"/>
+</map>

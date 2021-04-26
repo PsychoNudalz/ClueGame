@@ -63,6 +63,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_die_side-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">DieSide Class Reference</div>  </div>
@@ -71,9 +73,21 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for DieSide:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_die_side.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_die_side__inherit__graph.png" border="0" usemap="#a_die_side_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_die_side_inherit__map" id="a_die_side_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,139,148,293"/>
+<area shape="rect" title=" " alt="" coords="11,5,142,91"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for DieSide:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_die_side__coll__graph.png" border="0" usemap="#a_die_side_coll__map" alt="Collaboration graph"/></div>
+<map name="a_die_side_coll__map" id="a_die_side_coll__map">
+<area shape="rect" title=" " alt="" coords="5,139,148,293"/>
+<area shape="rect" title=" " alt="" coords="11,5,142,91"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -81,6 +95,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a694174e094333dddba56a1fffeb7a00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0dab76f00ebbd4a4d036be82948752"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#aad0dab76f00ebbd4a4d036be82948752">GetSideValue</a> ()</td></tr>
 <tr class="separator:aad0dab76f00ebbd4a4d036be82948752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aff297523ae7ec227e2d83ce6f9ae4340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#aff297523ae7ec227e2d83ce6f9ae4340">OnTriggerStay</a> (Collider other)</td></tr>
+<tr class="separator:aff297523ae7ec227e2d83ce6f9ae4340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c5323a459391b2e6248b5945d844d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#a11c5323a459391b2e6248b5945d844d9">OnTriggerExit</a> (Collider other)</td></tr>
+<tr class="separator:a11c5323a459391b2e6248b5945d844d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aff82d0cbf7f0e719778efbbf39d2b662"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#aff82d0cbf7f0e719778efbbf39d2b662">value</a></td></tr>
+<tr class="separator:aff82d0cbf7f0e719778efbbf39d2b662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f6d596bfe6cab76d93361f6abb9c33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_die_side.html#a22f6d596bfe6cab76d93361f6abb9c33">isOnGround</a></td></tr>
+<tr class="separator:a22f6d596bfe6cab76d93361f6abb9c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aad0dab76f00ebbd4a4d036be82948752"></a>
@@ -97,6 +125,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph.png" border="0" usemap="#aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph" alt=""/></div>
+<map name="aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph" id="aclass_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph">
+<area shape="rect" title=" " alt="" coords="365,5,548,35"/>
+<area shape="rect" href="class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title=" " alt="" coords="156,5,317,35"/>
+<area shape="rect" href="class_die.html#a1720b01fed5d5276f3761c944baa8126" title=" " alt="" coords="5,5,108,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -113,6 +151,113 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph.png" border="0" usemap="#aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph" alt=""/></div>
+<map name="aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph" id="aclass_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph">
+<area shape="rect" title=" " alt="" coords="365,5,532,35"/>
+<area shape="rect" href="class_die.html#a69a9f7355c4b76e3fb34747a8ee97b8f" title=" " alt="" coords="156,5,317,35"/>
+<area shape="rect" href="class_die.html#a1720b01fed5d5276f3761c944baa8126" title=" " alt="" coords="5,5,108,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11c5323a459391b2e6248b5945d844d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c5323a459391b2e6248b5945d844d9">&#9670;&nbsp;</a></span>OnTriggerExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DieSide.OnTriggerExit </td>
+          <td>(</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff297523ae7ec227e2d83ce6f9ae4340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff297523ae7ec227e2d83ce6f9ae4340">&#9670;&nbsp;</a></span>OnTriggerStay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DieSide.OnTriggerStay </td>
+          <td>(</td>
+          <td class="paramtype">Collider&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a22f6d596bfe6cab76d93361f6abb9c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f6d596bfe6cab76d93361f6abb9c33">&#9670;&nbsp;</a></span>isOnGround</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DieSide.isOnGround</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff82d0cbf7f0e719778efbbf39d2b662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff82d0cbf7f0e719778efbbf39d2b662">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DieSide.value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

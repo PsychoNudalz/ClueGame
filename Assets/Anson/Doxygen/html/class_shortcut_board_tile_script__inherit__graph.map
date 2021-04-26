@@ -1,0 +1,5 @@
+<map id="ShortcutBoardTileScript" name="ShortcutBoardTileScript">
+<area shape="rect" id="node1" title=" " alt="" coords="7,567,195,791"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html" title="Super class for all tiles" alt="" coords="5,139,196,519"/>
+<area shape="rect" id="node3" title=" " alt="" coords="35,5,166,91"/>
+</map>

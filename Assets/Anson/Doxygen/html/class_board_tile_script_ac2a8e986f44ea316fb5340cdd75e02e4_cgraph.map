@@ -1,0 +1,4 @@
+<map id="BoardTileScript.CanMove" name="BoardTileScript.CanMove">
+<area shape="rect" id="node1" title="check if the player can move to this tile" alt="" coords="5,5,208,35"/>
+<area shape="rect" id="node2" href="$class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82" title=" " alt="" coords="256,5,455,35"/>
+</map>

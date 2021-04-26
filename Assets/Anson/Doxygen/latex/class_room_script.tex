@@ -1,11 +1,13 @@
 \hypertarget{class_room_script}{}\doxysection{Room\+Script Class Reference}
 \label{class_room_script}\index{RoomScript@{RoomScript}}
-Inheritance diagram for Room\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_room_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Room\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Room\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,44 +39,137 @@ static \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room
 \item 
 \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_script_aef28c7cccea88741e822727ec3e859c3}{Entry\+Tiles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_room_script_ac1f4ee4e0bcdd6c8de67ddce44725733}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_room_script_aeef60b1341cc0a72587a8d5a1e5b7cfa}{Get\+Shortcut}} ()
+\item 
+\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{\hyperlink{class_room_script_a1895b83af8262f67e7cc5f12963e799f}{Find\+Closest\+Entry\+Tile}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} target\+Tile)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} \mbox{\hyperlink{class_room_script_aa90f1c4a3759131f16a3cadfffe085b4}{room}}
+\item 
+\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_script_a387bab51c8776e269bca86252eccd032}{entry\+Tiles}}
+\item 
+\mbox{\hyperlink{class_room_player_slot}{Room\+Player\+Slot}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_script_a3c06edea2f04e15a6341bac865d41292}{player\+Slots}}
+\item 
+\mbox{\hyperlink{class_room_weapon_slot}{Room\+Weapon\+Slot}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_script_a5be47eef483e41f634b329c52201342e}{weapon\+Slots}}
+\item 
+\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}} \mbox{\hyperlink{class_room_script_ac08fa602bc56d51925ce8da8bbcfd926}{shortcut\+Tile}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_script_a1895b83af8262f67e7cc5f12963e799f}\label{class_room_script_a1895b83af8262f67e7cc5f12963e799f}} 
+\index{RoomScript@{RoomScript}!FindClosestEntryTile@{FindClosestEntryTile}}
+\index{FindClosestEntryTile@{FindClosestEntryTile}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{FindClosestEntryTile()}{FindClosestEntryTile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} Room\+Script.\+Find\+Closest\+Entry\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{target\+Tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_room_script_afdf6318e292ff6c9da3002950c5dd498}\label{class_room_script_afdf6318e292ff6c9da3002950c5dd498}} 
 \index{RoomScript@{RoomScript}!GetEntryTiles@{GetEntryTiles}}
 \index{GetEntryTiles@{GetEntryTiles}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{GetEntryTiles()}{GetEntryTiles()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Room\+Script.\+Get\+Entry\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_room_script_a940f64ec88c83cb1e1e8f029c44099a8}\label{class_room_script_a940f64ec88c83cb1e1e8f029c44099a8}} 
 \index{RoomScript@{RoomScript}!GetRoomFromString@{GetRoomFromString}}
 \index{GetRoomFromString@{GetRoomFromString}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{GetRoomFromString()}{GetRoomFromString()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Room\+Script.\+Get\+Room\+From\+String (\begin{DoxyParamCaption}\item[{string}]{room\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_room_script_aeef60b1341cc0a72587a8d5a1e5b7cfa}\label{class_room_script_aeef60b1341cc0a72587a8d5a1e5b7cfa}} 
+\index{RoomScript@{RoomScript}!GetShortcut@{GetShortcut}}
+\index{GetShortcut@{GetShortcut}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{GetShortcut()}{GetShortcut()}}
+{\footnotesize\ttfamily void Room\+Script.\+Get\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 4
 \mbox{\Hypertarget{class_room_script_ae66d7fcde6ab8dcbb746309fd6550ae5}\label{class_room_script_ae66d7fcde6ab8dcbb746309fd6550ae5}} 
 \index{RoomScript@{RoomScript}!HasShortcut@{HasShortcut}}
 \index{HasShortcut@{HasShortcut}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{HasShortcut()}{HasShortcut()}}
 {\footnotesize\ttfamily bool Room\+Script.\+Has\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_room_script_a4a19c52c114612c19ae2580768d94859}\label{class_room_script_a4a19c52c114612c19ae2580768d94859}} 
 \index{RoomScript@{RoomScript}!MovePlayerToRoom@{MovePlayerToRoom}}
 \index{MovePlayerToRoom@{MovePlayerToRoom}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{MovePlayerToRoom()}{MovePlayerToRoom()}}
 {\footnotesize\ttfamily void Room\+Script.\+Move\+Player\+To\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{character\+Enum }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_room_script_ae49a5bb396aa0c894fb1686b92f879da}\label{class_room_script_ae49a5bb396aa0c894fb1686b92f879da}} 
 \index{RoomScript@{RoomScript}!MoveWeaponToRoom@{MoveWeaponToRoom}}
 \index{MoveWeaponToRoom@{MoveWeaponToRoom}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{MoveWeaponToRoom()}{MoveWeaponToRoom()}}
 {\footnotesize\ttfamily void Room\+Script.\+Move\+Weapon\+To\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{weapon\+Enum }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_room_script_ac1f4ee4e0bcdd6c8de67ddce44725733}\label{class_room_script_ac1f4ee4e0bcdd6c8de67ddce44725733}} 
+\index{RoomScript@{RoomScript}!Start@{Start}}
+\index{Start@{Start}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Room\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{class_room_script_a6bf61204f9a96ad3bf5e377b9938809d}\label{class_room_script_a6bf61204f9a96ad3bf5e377b9938809d}} 
 \index{RoomScript@{RoomScript}!WeaponSlotsEmpty@{WeaponSlotsEmpty}}
 \index{WeaponSlotsEmpty@{WeaponSlotsEmpty}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{WeaponSlotsEmpty()}{WeaponSlotsEmpty()}}
 {\footnotesize\ttfamily bool Room\+Script.\+Weapon\+Slots\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_script_a387bab51c8776e269bca86252eccd032}\label{class_room_script_a387bab51c8776e269bca86252eccd032}} 
+\index{RoomScript@{RoomScript}!entryTiles@{entryTiles}}
+\index{entryTiles@{entryTiles}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{entryTiles}{entryTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Room\+Script.\+entry\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_script_a3c06edea2f04e15a6341bac865d41292}\label{class_room_script_a3c06edea2f04e15a6341bac865d41292}} 
+\index{RoomScript@{RoomScript}!playerSlots@{playerSlots}}
+\index{playerSlots@{playerSlots}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{playerSlots}{playerSlots}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_player_slot}{Room\+Player\+Slot}} \mbox{[}$\,$\mbox{]} Room\+Script.\+player\+Slots\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_script_aa90f1c4a3759131f16a3cadfffe085b4}\label{class_room_script_aa90f1c4a3759131f16a3cadfffe085b4}} 
+\index{RoomScript@{RoomScript}!room@{room}}
+\index{room@{room}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{room}{room}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Room\+Script.\+room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_script_ac08fa602bc56d51925ce8da8bbcfd926}\label{class_room_script_ac08fa602bc56d51925ce8da8bbcfd926}} 
+\index{RoomScript@{RoomScript}!shortcutTile@{shortcutTile}}
+\index{shortcutTile@{shortcutTile}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{shortcutTile}{shortcutTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}} Room\+Script.\+shortcut\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_script_a5be47eef483e41f634b329c52201342e}\label{class_room_script_a5be47eef483e41f634b329c52201342e}} 
+\index{RoomScript@{RoomScript}!weaponSlots@{weaponSlots}}
+\index{weaponSlots@{weaponSlots}!RoomScript@{RoomScript}}
+\doxysubsubsection{\texorpdfstring{weaponSlots}{weaponSlots}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_weapon_slot}{Room\+Weapon\+Slot}} \mbox{[}$\,$\mbox{]} Room\+Script.\+weapon\+Slots\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

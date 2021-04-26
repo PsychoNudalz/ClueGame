@@ -5,12 +5,14 @@
 Handles the UI  
 
 
-Inheritance diagram for UIHandler\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_u_i_handler}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for UIHandler\+:
+% FIG 0
+
+
+Collaboration diagram for UIHandler\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,6 +77,78 @@ Game\+Object \mbox{\hyperlink{class_u_i_handler_aad5de4d3c07898126149716623c62a8
 \item 
 Game\+Object \mbox{\hyperlink{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}{make\+Accusation\+Panel}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}{Cancel\+Suggestion\+Button}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}{Display\+Output\+Text\+Routine}} (string s, float time\+Until\+Disappear)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_a43080599b603d2372907128dbd228e61}{txt}}
+\item 
+Image \mbox{\hyperlink{class_u_i_handler_a2e543551ddaae706d8fb8a64c1b8e2d9}{img}}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_u_i_handler_ae868da0f3d2e7fa9484b70fec5944289}{choosing\+Player}}
+\item 
+bool \mbox{\hyperlink{class_u_i_handler_a61d12746b419db06f78147cb97b0af08}{are\+Controls\+Frozen}} = false
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_afdbaf52a91dccbe1128f336d78fed5e2}{all\+Buttons}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a5523a4d840438b656d07e907eeff65ad}{deck\+GO}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_a90819e0ed36925a3fec087a08f53bba9}{current\+Player\+Name}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_ac8ccaf95e009001fb010fb9f3426cb8f}{output\+Text}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a0d3e9ef72139e0da292be722dff25c71}{output\+Text\+GO}}
+\item 
+Coroutine \mbox{\hyperlink{class_u_i_handler_a647a69622d73d91238023f732919b06c}{output\+Text\+Coroutine}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a35a94ed31223d05d87fff51dda88168b}{view\+Blocker}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_ab5cfffd84240f1a8653e059bb9bc464c}{view\+Blocker\+Player\+Name}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a9c80bee4d0b682894c7f76686e04f617}{player\+Eliminated\+Screen}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_ac18bff289df80bd4d477702469291897}{player\+Eliminated\+Text}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a93ee2270991e5f32becdd12aa234b8e0}{win\+Screen}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a991e1e8fb1271b619c55d2edf88a06f4}{game\+Over\+Screen}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a2a7e47f4fc5ab84728c916e22cd4bba6}{note\+Book\+Panel}}
+\item 
+Button \mbox{\hyperlink{class_u_i_handler_a0fb2a994595661d9ea17f82fa38bdcd5}{shortcut\+Button}}
+\item 
+Button \mbox{\hyperlink{class_u_i_handler_af90c0ef23503205089016879c637995b}{roll\+Button}}
+\item 
+Button \mbox{\hyperlink{class_u_i_handler_a3af2093eaa52aa468b410f2195776d31}{accuse\+Button}}
+\item 
+Button \mbox{\hyperlink{class_u_i_handler_aff6eefc473a0eb2daa053a28badd3fb8}{suggest\+Button}}
+\item 
+Button \mbox{\hyperlink{class_u_i_handler_a48c0a742b1b8c107d433cf27687e517d}{Suggestion\+Room\+Button}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a29a73edc2742ba7913c739ef7b0218e4}{choose\+Panel}}
+\item 
+List$<$ \mbox{\hyperlink{class_card_slot}{Card\+Slot}} $>$ \mbox{\hyperlink{class_u_i_handler_ab2b4c828bcd96290221a7ab933e3830e}{choose\+Slots}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_a6b5d4bbdce54d7a8b269b0bdb3828ceb}{choose\+Card\+Text}}
+\item 
+Game\+Object \mbox{\hyperlink{class_u_i_handler_a58808261b20a690be6c3c777b723fe5e}{show\+Card\+GO}}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_u_i_handler_a489f3573705e7b4fa983124d9e95561c}{show\+Card\+Text}}
+\item 
+\mbox{\hyperlink{class_card_slot}{Card\+Slot}} \mbox{\hyperlink{class_u_i_handler_a352a060e5d4a450c0f815c3dd9bf74f6}{show\+Card}}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_u_i_handler_aa4ec01c8144aaf2ad375a737b285a6c6}{round\+Manager}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -83,24 +157,38 @@ Handles the UI
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}\label{class_u_i_handler_a06f28d8d05eaab3257dfc644f1a9126c}} 
+\index{UIHandler@{UIHandler}!CancelSuggestionButton@{CancelSuggestionButton}}
+\index{CancelSuggestionButton@{CancelSuggestionButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{CancelSuggestionButton()}{CancelSuggestionButton()}}
+{\footnotesize\ttfamily void UIHandler.\+Cancel\+Suggestion\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}\label{class_u_i_handler_adc2ae7669cebeb4d9109002f0d3e8c7a}} 
 \index{UIHandler@{UIHandler}!ConfirmAccusation@{ConfirmAccusation}}
 \index{ConfirmAccusation@{ConfirmAccusation}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ConfirmAccusation()}{ConfirmAccusation()}}
 {\footnotesize\ttfamily void UIHandler.\+Confirm\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}\label{class_u_i_handler_ae6960c4c231f0e85718af2150449bb1f}} 
 \index{UIHandler@{UIHandler}!ConfirmSuggestion@{ConfirmSuggestion}}
 \index{ConfirmSuggestion@{ConfirmSuggestion}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ConfirmSuggestion()}{ConfirmSuggestion()}}
 {\footnotesize\ttfamily void UIHandler.\+Confirm\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}\label{class_u_i_handler_a81884a614bffa4b024ed137552033f7f}} 
 \index{UIHandler@{UIHandler}!DisplayChoicePanel@{DisplayChoicePanel}}
 \index{DisplayChoicePanel@{DisplayChoicePanel}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayChoicePanel()}{DisplayChoicePanel()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Choice\+Panel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player,  }\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{to\+Choose }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}\label{class_u_i_handler_affac6b69bae9622fe2d5ef41990456aa}} 
 \index{UIHandler@{UIHandler}!DisplayDeck@{DisplayDeck}}
 \index{DisplayDeck@{DisplayDeck}!UIHandler@{UIHandler}}
@@ -116,36 +204,62 @@ Display the list of cards
 {\em cards} & cards to be shown\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}\label{class_u_i_handler_a1b70b7b612bea6870be5cfc0fa69d72b}} 
 \index{UIHandler@{UIHandler}!DisplayMenuAccusation@{DisplayMenuAccusation}}
 \index{DisplayMenuAccusation@{DisplayMenuAccusation}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayMenuAccusation()}{DisplayMenuAccusation()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}\label{class_u_i_handler_a99048b81a1303baba7efd44095c0f235}} 
 \index{UIHandler@{UIHandler}!DisplayMenuSuggestion@{DisplayMenuSuggestion}}
 \index{DisplayMenuSuggestion@{DisplayMenuSuggestion}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayMenuSuggestion()}{DisplayMenuSuggestion()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Menu\+Suggestion (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}\label{class_u_i_handler_abe1c78d110b0a4374daed98df71fcff1}} 
 \index{UIHandler@{UIHandler}!DisplayNotePad@{DisplayNotePad}}
 \index{DisplayNotePad@{DisplayNotePad}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayNotePad()}{DisplayNotePad()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Note\+Pad (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 11
 \mbox{\Hypertarget{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}\label{class_u_i_handler_a1f0729c8102e73f3d97c1f078b9f9d52}} 
 \index{UIHandler@{UIHandler}!DisplayOutputText@{DisplayOutputText}}
 \index{DisplayOutputText@{DisplayOutputText}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayOutputText()}{DisplayOutputText()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Output\+Text (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{float}]{time\+Until\+Disappear }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}\label{class_u_i_handler_a25f316e553a6f1b60fb6c04a8dc23613}} 
+\index{UIHandler@{UIHandler}!DisplayOutputTextRoutine@{DisplayOutputTextRoutine}}
+\index{DisplayOutputTextRoutine@{DisplayOutputTextRoutine}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{DisplayOutputTextRoutine()}{DisplayOutputTextRoutine()}}
+{\footnotesize\ttfamily IEnumerator UIHandler.\+Display\+Output\+Text\+Routine (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{float}]{time\+Until\+Disappear }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 14
 \mbox{\Hypertarget{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}\label{class_u_i_handler_a2db6b92acd51a72b431b3eacb3884ddd}} 
 \index{UIHandler@{UIHandler}!DisplayPlayerEliminated@{DisplayPlayerEliminated}}
 \index{DisplayPlayerEliminated@{DisplayPlayerEliminated}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{DisplayPlayerEliminated()}{DisplayPlayerEliminated()}}
 {\footnotesize\ttfamily void UIHandler.\+Display\+Player\+Eliminated (\begin{DoxyParamCaption}\item[{bool}]{b,  }\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 15
 \mbox{\Hypertarget{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}\label{class_u_i_handler_abe1710aca2abe4dbb489f0c49a3af879}} 
 \index{UIHandler@{UIHandler}!DisplayViewBlocker@{DisplayViewBlocker}}
 \index{DisplayViewBlocker@{DisplayViewBlocker}!UIHandler@{UIHandler}}
@@ -163,24 +277,42 @@ To display the View Blocker can include the name of the player that needs it\tex
 {\em s} & name of the player that needs it\textquotesingle{}s attention\\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 16
 \mbox{\Hypertarget{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}\label{class_u_i_handler_acc06a1dab8566d9e14f7ab3ae1ffea93}} 
 \index{UIHandler@{UIHandler}!EndTurn@{EndTurn}}
 \index{EndTurn@{EndTurn}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
 {\footnotesize\ttfamily void UIHandler.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}\label{class_u_i_handler_ab35722a35c0035fb164d984c49cec4de}} 
+\index{UIHandler@{UIHandler}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void UIHandler.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 18
 \mbox{\Hypertarget{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}\label{class_u_i_handler_ac072319b13f11e5ac215a0ed6ab11aa9}} 
 \index{UIHandler@{UIHandler}!InitialiseTurn@{InitialiseTurn}}
 \index{InitialiseTurn@{InitialiseTurn}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{InitialiseTurn()}{InitialiseTurn()}}
 {\footnotesize\ttfamily void UIHandler.\+Initialise\+Turn (\begin{DoxyParamCaption}\item[{bool}]{display\+Full\+UI }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 19
+Here is the caller graph for this function\+:
+% FIG 20
 \mbox{\Hypertarget{class_u_i_handler_add00c20eda721835c57da7b133704066}\label{class_u_i_handler_add00c20eda721835c57da7b133704066}} 
 \index{UIHandler@{UIHandler}!MakeAccusationButton@{MakeAccusationButton}}
 \index{MakeAccusationButton@{MakeAccusationButton}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{MakeAccusationButton()}{MakeAccusationButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Make\+Accusation\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 21
 \mbox{\Hypertarget{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}\label{class_u_i_handler_a52241b6fefb8a446c2c000202216bfd2}} 
 \index{UIHandler@{UIHandler}!MakeSuggestionButton@{MakeSuggestionButton}}
 \index{MakeSuggestionButton@{MakeSuggestionButton}!UIHandler@{UIHandler}}
@@ -196,6 +328,10 @@ makes suggestion when the button is pressed
 {\em forced} & to make a suggestion even though the play did already\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 22
+Here is the caller graph for this function\+:
+% FIG 23
 \mbox{\Hypertarget{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}\label{class_u_i_handler_a6a7fdd422f2d7d0e20e3f69e248b8a71}} 
 \index{UIHandler@{UIHandler}!ReturnToMenu@{ReturnToMenu}}
 \index{ReturnToMenu@{ReturnToMenu}!UIHandler@{UIHandler}}
@@ -212,17 +348,31 @@ makes suggestion when the button is pressed
 
 rolls dice when the button is pressed 
 
+Here is the call graph for this function\+:
+% FIG 24
 \mbox{\Hypertarget{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}\label{class_u_i_handler_a4009ca74f59111933be2a637c7835e18}} 
 \index{UIHandler@{UIHandler}!ShowCard@{ShowCard}}
 \index{ShowCard@{ShowCard}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ShowCard()}{ShowCard()}}
 {\footnotesize\ttfamily void UIHandler.\+Show\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player\+Master\+Controller,  }\item[{\mbox{\hyperlink{class_card}{Card}}}]{c }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 25
+Here is the caller graph for this function\+:
+% FIG 26
 \mbox{\Hypertarget{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}\label{class_u_i_handler_a7e471e88a4baaa1993d0a85035c38016}} 
 \index{UIHandler@{UIHandler}!ShowSelectedCard@{ShowSelectedCard}}
 \index{ShowSelectedCard@{ShowSelectedCard}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ShowSelectedCard()}{ShowSelectedCard()}}
 {\footnotesize\ttfamily void UIHandler.\+Show\+Selected\+Card (\begin{DoxyParamCaption}\item[{int}]{card\+Num }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 27
+\mbox{\Hypertarget{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}\label{class_u_i_handler_a8406fb55a283e8f771ed329e73d03bb4}} 
+\index{UIHandler@{UIHandler}!Start@{Start}}
+\index{Start@{Start}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void UIHandler.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}\label{class_u_i_handler_a94a29c2949506b7cd0de99509a6673b5}} 
 \index{UIHandler@{UIHandler}!StartBehaviour@{StartBehaviour}}
@@ -234,27 +384,55 @@ rolls dice when the button is pressed
 
 starting behaviour 
 
+Here is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
 \mbox{\Hypertarget{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}\label{class_u_i_handler_a22b216d36344557c94a5b5c3eef79d8f}} 
 \index{UIHandler@{UIHandler}!TakeShortcutButton@{TakeShortcutButton}}
 \index{TakeShortcutButton@{TakeShortcutButton}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{TakeShortcutButton()}{TakeShortcutButton()}}
 {\footnotesize\ttfamily void UIHandler.\+Take\+Shortcut\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 30
 \mbox{\Hypertarget{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}\label{class_u_i_handler_a77ee1447ad780f3d08c3f6113ea4fcb0}} 
 \index{UIHandler@{UIHandler}!ToggleNotepad@{ToggleNotepad}}
 \index{ToggleNotepad@{ToggleNotepad}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{ToggleNotepad()}{ToggleNotepad()}}
 {\footnotesize\ttfamily void UIHandler.\+Toggle\+Notepad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 31
 \mbox{\Hypertarget{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}\label{class_u_i_handler_a33d33813339ed163ad4ab8708226f911}} 
 \index{UIHandler@{UIHandler}!UpdateCurrentTurnText@{UpdateCurrentTurnText}}
 \index{UpdateCurrentTurnText@{UpdateCurrentTurnText}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{UpdateCurrentTurnText()}{UpdateCurrentTurnText()}}
 {\footnotesize\ttfamily void UIHandler.\+Update\+Current\+Turn\+Text (\begin{DoxyParamCaption}\item[{string}]{next\+Player }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 32
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_handler_a3af2093eaa52aa468b410f2195776d31}\label{class_u_i_handler_a3af2093eaa52aa468b410f2195776d31}} 
+\index{UIHandler@{UIHandler}!accuseButton@{accuseButton}}
+\index{accuseButton@{accuseButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{accuseButton}{accuseButton}}
+{\footnotesize\ttfamily Button UIHandler.\+accuse\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_afdbaf52a91dccbe1128f336d78fed5e2}\label{class_u_i_handler_afdbaf52a91dccbe1128f336d78fed5e2}} 
+\index{UIHandler@{UIHandler}!allButtons@{allButtons}}
+\index{allButtons@{allButtons}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{allButtons}{allButtons}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+all\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a61d12746b419db06f78147cb97b0af08}\label{class_u_i_handler_a61d12746b419db06f78147cb97b0af08}} 
+\index{UIHandler@{UIHandler}!areControlsFrozen@{areControlsFrozen}}
+\index{areControlsFrozen@{areControlsFrozen}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{areControlsFrozen}{areControlsFrozen}}
+{\footnotesize\ttfamily bool UIHandler.\+are\+Controls\+Frozen = false\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_u_i_handler_a4d379b8d4f504a05bfe7f0705b72f18c}\label{class_u_i_handler_a4d379b8d4f504a05bfe7f0705b72f18c}} 
 \index{UIHandler@{UIHandler}!cardManager@{cardManager}}
 \index{cardManager@{cardManager}!UIHandler@{UIHandler}}
@@ -267,11 +445,59 @@ starting behaviour
 \doxysubsubsection{\texorpdfstring{cardSlots}{cardSlots}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card_slot}{Card\+Slot}}$>$ UIHandler.\+card\+Slots}
 
+\mbox{\Hypertarget{class_u_i_handler_a6b5d4bbdce54d7a8b269b0bdb3828ceb}\label{class_u_i_handler_a6b5d4bbdce54d7a8b269b0bdb3828ceb}} 
+\index{UIHandler@{UIHandler}!chooseCardText@{chooseCardText}}
+\index{chooseCardText@{chooseCardText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{chooseCardText}{chooseCardText}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+choose\+Card\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a29a73edc2742ba7913c739ef7b0218e4}\label{class_u_i_handler_a29a73edc2742ba7913c739ef7b0218e4}} 
+\index{UIHandler@{UIHandler}!choosePanel@{choosePanel}}
+\index{choosePanel@{choosePanel}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{choosePanel}{choosePanel}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+choose\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_ab2b4c828bcd96290221a7ab933e3830e}\label{class_u_i_handler_ab2b4c828bcd96290221a7ab933e3830e}} 
+\index{UIHandler@{UIHandler}!chooseSlots@{chooseSlots}}
+\index{chooseSlots@{chooseSlots}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{chooseSlots}{chooseSlots}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card_slot}{Card\+Slot}}$>$ UIHandler.\+choose\+Slots\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_ae868da0f3d2e7fa9484b70fec5944289}\label{class_u_i_handler_ae868da0f3d2e7fa9484b70fec5944289}} 
+\index{UIHandler@{UIHandler}!choosingPlayer@{choosingPlayer}}
+\index{choosingPlayer@{choosingPlayer}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{choosingPlayer}{choosingPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} UIHandler.\+choosing\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a90819e0ed36925a3fec087a08f53bba9}\label{class_u_i_handler_a90819e0ed36925a3fec087a08f53bba9}} 
+\index{UIHandler@{UIHandler}!currentPlayerName@{currentPlayerName}}
+\index{currentPlayerName@{currentPlayerName}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{currentPlayerName}{currentPlayerName}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+current\+Player\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_u_i_handler_a9778aade715c31565c7772c0d61e2f7e}\label{class_u_i_handler_a9778aade715c31565c7772c0d61e2f7e}} 
 \index{UIHandler@{UIHandler}!deck@{deck}}
 \index{deck@{deck}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{deck}{deck}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ UIHandler.\+deck}
+
+\mbox{\Hypertarget{class_u_i_handler_a5523a4d840438b656d07e907eeff65ad}\label{class_u_i_handler_a5523a4d840438b656d07e907eeff65ad}} 
+\index{UIHandler@{UIHandler}!deckGO@{deckGO}}
+\index{deckGO@{deckGO}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{deckGO}{deckGO}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+deck\+GO\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a991e1e8fb1271b619c55d2edf88a06f4}\label{class_u_i_handler_a991e1e8fb1271b619c55d2edf88a06f4}} 
+\index{UIHandler@{UIHandler}!gameOverScreen@{gameOverScreen}}
+\index{gameOverScreen@{gameOverScreen}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{gameOverScreen}{gameOverScreen}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+game\+Over\+Screen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a2e543551ddaae706d8fb8a64c1b8e2d9}\label{class_u_i_handler_a2e543551ddaae706d8fb8a64c1b8e2d9}} 
+\index{UIHandler@{UIHandler}!img@{img}}
+\index{img@{img}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{img}{img}}
+{\footnotesize\ttfamily Image UIHandler.\+img\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}\label{class_u_i_handler_a93348fd53ce3ad5d8abb17418017a7d3}} 
 \index{UIHandler@{UIHandler}!makeAccusationPanel@{makeAccusationPanel}}
@@ -285,17 +511,125 @@ starting behaviour
 \doxysubsubsection{\texorpdfstring{makeSuggestionPanel}{makeSuggestionPanel}}
 {\footnotesize\ttfamily Game\+Object UIHandler.\+make\+Suggestion\+Panel}
 
+\mbox{\Hypertarget{class_u_i_handler_a2a7e47f4fc5ab84728c916e22cd4bba6}\label{class_u_i_handler_a2a7e47f4fc5ab84728c916e22cd4bba6}} 
+\index{UIHandler@{UIHandler}!noteBookPanel@{noteBookPanel}}
+\index{noteBookPanel@{noteBookPanel}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{noteBookPanel}{noteBookPanel}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+note\+Book\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_ac8ccaf95e009001fb010fb9f3426cb8f}\label{class_u_i_handler_ac8ccaf95e009001fb010fb9f3426cb8f}} 
+\index{UIHandler@{UIHandler}!outputText@{outputText}}
+\index{outputText@{outputText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{outputText}{outputText}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+output\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a647a69622d73d91238023f732919b06c}\label{class_u_i_handler_a647a69622d73d91238023f732919b06c}} 
+\index{UIHandler@{UIHandler}!outputTextCoroutine@{outputTextCoroutine}}
+\index{outputTextCoroutine@{outputTextCoroutine}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{outputTextCoroutine}{outputTextCoroutine}}
+{\footnotesize\ttfamily Coroutine UIHandler.\+output\+Text\+Coroutine\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a0d3e9ef72139e0da292be722dff25c71}\label{class_u_i_handler_a0d3e9ef72139e0da292be722dff25c71}} 
+\index{UIHandler@{UIHandler}!outputTextGO@{outputTextGO}}
+\index{outputTextGO@{outputTextGO}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{outputTextGO}{outputTextGO}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+output\+Text\+GO\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a9c80bee4d0b682894c7f76686e04f617}\label{class_u_i_handler_a9c80bee4d0b682894c7f76686e04f617}} 
+\index{UIHandler@{UIHandler}!playerEliminatedScreen@{playerEliminatedScreen}}
+\index{playerEliminatedScreen@{playerEliminatedScreen}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{playerEliminatedScreen}{playerEliminatedScreen}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+player\+Eliminated\+Screen\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_ac18bff289df80bd4d477702469291897}\label{class_u_i_handler_ac18bff289df80bd4d477702469291897}} 
+\index{UIHandler@{UIHandler}!playerEliminatedText@{playerEliminatedText}}
+\index{playerEliminatedText@{playerEliminatedText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{playerEliminatedText}{playerEliminatedText}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+player\+Eliminated\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_af90c0ef23503205089016879c637995b}\label{class_u_i_handler_af90c0ef23503205089016879c637995b}} 
+\index{UIHandler@{UIHandler}!rollButton@{rollButton}}
+\index{rollButton@{rollButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{rollButton}{rollButton}}
+{\footnotesize\ttfamily Button UIHandler.\+roll\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_aa4ec01c8144aaf2ad375a737b285a6c6}\label{class_u_i_handler_aa4ec01c8144aaf2ad375a737b285a6c6}} 
+\index{UIHandler@{UIHandler}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} UIHandler.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a0fb2a994595661d9ea17f82fa38bdcd5}\label{class_u_i_handler_a0fb2a994595661d9ea17f82fa38bdcd5}} 
+\index{UIHandler@{UIHandler}!shortcutButton@{shortcutButton}}
+\index{shortcutButton@{shortcutButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{shortcutButton}{shortcutButton}}
+{\footnotesize\ttfamily Button UIHandler.\+shortcut\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a352a060e5d4a450c0f815c3dd9bf74f6}\label{class_u_i_handler_a352a060e5d4a450c0f815c3dd9bf74f6}} 
+\index{UIHandler@{UIHandler}!showCard@{showCard}}
+\index{showCard@{showCard}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{showCard}{showCard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_slot}{Card\+Slot}} UIHandler.\+show\+Card\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_u_i_handler_ad39d76c7890f5f9113a9c7dc8fb4052d}\label{class_u_i_handler_ad39d76c7890f5f9113a9c7dc8fb4052d}} 
 \index{UIHandler@{UIHandler}!showCardAnimator@{showCardAnimator}}
 \index{showCardAnimator@{showCardAnimator}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{showCardAnimator}{showCardAnimator}}
 {\footnotesize\ttfamily Animator UIHandler.\+show\+Card\+Animator}
 
+\mbox{\Hypertarget{class_u_i_handler_a58808261b20a690be6c3c777b723fe5e}\label{class_u_i_handler_a58808261b20a690be6c3c777b723fe5e}} 
+\index{UIHandler@{UIHandler}!showCardGO@{showCardGO}}
+\index{showCardGO@{showCardGO}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{showCardGO}{showCardGO}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+show\+Card\+GO\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a489f3573705e7b4fa983124d9e95561c}\label{class_u_i_handler_a489f3573705e7b4fa983124d9e95561c}} 
+\index{UIHandler@{UIHandler}!showCardText@{showCardText}}
+\index{showCardText@{showCardText}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{showCardText}{showCardText}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+show\+Card\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_aff6eefc473a0eb2daa053a28badd3fb8}\label{class_u_i_handler_aff6eefc473a0eb2daa053a28badd3fb8}} 
+\index{UIHandler@{UIHandler}!suggestButton@{suggestButton}}
+\index{suggestButton@{suggestButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{suggestButton}{suggestButton}}
+{\footnotesize\ttfamily Button UIHandler.\+suggest\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a48c0a742b1b8c107d433cf27687e517d}\label{class_u_i_handler_a48c0a742b1b8c107d433cf27687e517d}} 
+\index{UIHandler@{UIHandler}!SuggestionRoomButton@{SuggestionRoomButton}}
+\index{SuggestionRoomButton@{SuggestionRoomButton}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{SuggestionRoomButton}{SuggestionRoomButton}}
+{\footnotesize\ttfamily Button UIHandler.\+Suggestion\+Room\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a43080599b603d2372907128dbd228e61}\label{class_u_i_handler_a43080599b603d2372907128dbd228e61}} 
+\index{UIHandler@{UIHandler}!txt@{txt}}
+\index{txt@{txt}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{txt}{txt}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+txt\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_u_i_handler_afa78e9c56603acc341c34ef66471c76a}\label{class_u_i_handler_afa78e9c56603acc341c34ef66471c76a}} 
 \index{UIHandler@{UIHandler}!userController@{userController}}
 \index{userController@{userController}!UIHandler@{UIHandler}}
 \doxysubsubsection{\texorpdfstring{userController}{userController}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} UIHandler.\+user\+Controller}
+
+\mbox{\Hypertarget{class_u_i_handler_a35a94ed31223d05d87fff51dda88168b}\label{class_u_i_handler_a35a94ed31223d05d87fff51dda88168b}} 
+\index{UIHandler@{UIHandler}!viewBlocker@{viewBlocker}}
+\index{viewBlocker@{viewBlocker}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{viewBlocker}{viewBlocker}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+view\+Blocker\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_ab5cfffd84240f1a8653e059bb9bc464c}\label{class_u_i_handler_ab5cfffd84240f1a8653e059bb9bc464c}} 
+\index{UIHandler@{UIHandler}!viewBlockerPlayerName@{viewBlockerPlayerName}}
+\index{viewBlockerPlayerName@{viewBlockerPlayerName}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{viewBlockerPlayerName}{viewBlockerPlayerName}}
+{\footnotesize\ttfamily Text\+Mesh\+Pro\+UGUI UIHandler.\+view\+Blocker\+Player\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_i_handler_a93ee2270991e5f32becdd12aa234b8e0}\label{class_u_i_handler_a93ee2270991e5f32becdd12aa234b8e0}} 
+\index{UIHandler@{UIHandler}!winScreen@{winScreen}}
+\index{winScreen@{winScreen}!UIHandler@{UIHandler}}
+\doxysubsubsection{\texorpdfstring{winScreen}{winScreen}}
+{\footnotesize\ttfamily Game\+Object UIHandler.\+win\+Screen\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

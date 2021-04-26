@@ -1,0 +1,9 @@
+<map id="RoundManager.DelayResetDice" name="RoundManager.DelayResetDice">
+<area shape="rect" id="node1" title="reset the dice after a time delay" alt="" coords="5,59,252,88"/>
+<area shape="rect" id="node2" href="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67" title=" " alt="" coords="300,59,433,88"/>
+<area shape="rect" id="node3" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title=" " alt="" coords="538,5,667,35"/>
+<area shape="rect" id="node5" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title=" " alt="" coords="481,59,724,88"/>
+<area shape="rect" id="node7" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="544,112,661,141"/>
+<area shape="rect" id="node4" href="$class_die.html#a390d46459637fd249926cda472255d84" title=" " alt="" coords="840,5,987,35"/>
+<area shape="rect" id="node6" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title=" " alt="" coords="772,59,1055,88"/>
+</map>

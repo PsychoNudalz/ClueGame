@@ -5,12 +5,14 @@
 For handling the player/ character\textquotesingle{}s token  
 
 
-Inheritance diagram for Player\+Token\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_player_token_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Player\+Token\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+Token\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +43,7 @@ bool \mbox{\hyperlink{class_player_token_script_ab8ef1ce338d767546b917f7f9ae2fad
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_player_token_script_adfdc3e67c57ff06238789e480c9a7071}{Get\+Character\+Enum\+From\+String}} (string character)
+static \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_player_token_script_adfdc3e67c57ff06238789e480c9a7071}{Get\+Character\+Enum\+From\+String}} (string \mbox{\hyperlink{class_player_token_script_a0f7f61abb3f71924b25b061af999388e}{character}})
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -58,6 +60,62 @@ string \mbox{\hyperlink{class_player_token_script_ac09d252c5474c82723febd57676b5
 \item 
 bool \mbox{\hyperlink{class_player_token_script_ac9c18b23ebb9e57f1e5a65f226cb5c6c}{Is\+Move}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_token_script_ab4c4f5628d593473750d2b31f61ab102}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_player_token_script_aabf6e085b41ef90234c5580c48389200}{Update}} ()
+\item 
+bool \mbox{\hyperlink{class_player_token_script_ad83b16b76e1b0aefbcfe938b64fb1b7f}{Assign\+To\+Player\+Master}} ()
+\begin{DoxyCompactList}\small\item\em assigns token to the correct player \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_token_script_ab5c5b11cccd8bac2a7243238f808929e}{Update\+Token\+Movement}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_player_token_script_adb723bfd264252f5cc0de7e91553cea4}{Shortcut\+Movement}} (\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}} shortcut\+End)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_player_token_script_a0f7f61abb3f71924b25b061af999388e}{character}}
+\item 
+Color \mbox{\hyperlink{class_player_token_script_aa2dfe0c999f8f13a819d2c26d82778cd}{character\+Colour}}
+\item 
+string \mbox{\hyperlink{class_player_token_script_a0d0d206a98330e9e942887579c593082}{character\+Name}}
+\item 
+\mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}} \mbox{\hyperlink{class_player_token_script_aec64dfa73ddddad4c2bb5b40d769d591}{start\+Tile}}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_player_token_script_a3d4c66886c1ee35401316156738e5974}{controller}}
+\item 
+Animator \mbox{\hyperlink{class_player_token_script_a542da4ee4387f79bebfda5f8ffae8906}{animator}}
+\item 
+Animation\+Curve \mbox{\hyperlink{class_player_token_script_a9c7eb212a8780fe9060ae476dd89d259}{movement\+Graph}}
+\item 
+float \mbox{\hyperlink{class_player_token_script_ac23aabeb80ee9621374108f17ae4d6ce}{time\+To\+Move}} = 2
+\item 
+float \mbox{\hyperlink{class_player_token_script_a44d003ed2200faebf158b0d7a671e6dc}{time\+To\+Distance}} = .\+25f
+\item 
+float \mbox{\hyperlink{class_player_token_script_a4e0af8d7753fffbac5f7006ff0e0b5b7}{start\+Move\+Time}}
+\item 
+bool \mbox{\hyperlink{class_player_token_script_aff84dd8d3d1e5d72fb72b0a75f07ab3e}{is\+Move}} = false
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_player_token_script_a3a6846ff90d1bbf228e69775afdc22c2}{target\+Tile}}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_player_token_script_a7720c13f481ed88a186cc89b2635a4f7}{current\+Tile}}
+\item 
+\mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}} \mbox{\hyperlink{class_player_token_script_a869b14d298ec92b059920915930cf8bb}{current\+Entry\+Point}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_player_token_script_ac093589567f45b01054822aaabe9aca5}{current\+Room}}
+\item 
+\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{\hyperlink{class_player_token_script_a71653d5e86326546464e0bf7ad088989}{current\+Exit\+Point}}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_player_token_script_a467fb4772e3cc702c9c0b2ed6d61c007}{room\+Exit\+Tile\+Target}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_player_token_script_aa199a4d1c818117160266bcad8166755}{board\+Manager}}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_player_token_script_a7c018e009230c542346c51eeb72067e9}{round\+Manager}}
+\item 
+\mbox{\hyperlink{class_camera_close_up}{Camera\+Close\+Up}} \mbox{\hyperlink{class_player_token_script_aac8bd6fb326211c65f3559d3c861cebc}{camera\+Close\+Up}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -66,24 +124,51 @@ For handling the player/ character\textquotesingle{}s token
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_token_script_ad83b16b76e1b0aefbcfe938b64fb1b7f}\label{class_player_token_script_ad83b16b76e1b0aefbcfe938b64fb1b7f}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!AssignToPlayerMaster@{AssignToPlayerMaster}}
+\index{AssignToPlayerMaster@{AssignToPlayerMaster}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{AssignToPlayerMaster()}{AssignToPlayerMaster()}}
+{\footnotesize\ttfamily bool Player\+Token\+Script.\+Assign\+To\+Player\+Master (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+assigns token to the correct player 
+
+\begin{DoxyReturn}{Returns}
+returns true if it can assign to the player, false if it can\textquotesingle{}t find a matching Player 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{class_player_token_script_a15c0d40c8748ae3e8f51b12082cf2431}\label{class_player_token_script_a15c0d40c8748ae3e8f51b12082cf2431}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!CanTakeShortcut@{CanTakeShortcut}}
 \index{CanTakeShortcut@{CanTakeShortcut}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{CanTakeShortcut()}{CanTakeShortcut()}}
 {\footnotesize\ttfamily bool Player\+Token\+Script.\+Can\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_player_token_script_a3c30c1b665fbcaa3db3dfe42f0871147}\label{class_player_token_script_a3c30c1b665fbcaa3db3dfe42f0871147}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!ClearTokenTile@{ClearTokenTile}}
 \index{ClearTokenTile@{ClearTokenTile}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{ClearTokenTile()}{ClearTokenTile()}}
 {\footnotesize\ttfamily void Player\+Token\+Script.\+Clear\+Token\+Tile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_player_token_script_a91ce7f589629491f404aa8586962a95c}\label{class_player_token_script_a91ce7f589629491f404aa8586962a95c}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!EnterRoom@{EnterRoom}}
 \index{EnterRoom@{EnterRoom}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{EnterRoom()}{EnterRoom()}}
 {\footnotesize\ttfamily void Player\+Token\+Script.\+Enter\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}}}]{entry\+Point }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_player_token_script_a0c7f2bdb7db30cf41630dc576264b4af}\label{class_player_token_script_a0c7f2bdb7db30cf41630dc576264b4af}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!GetCharacterColour@{GetCharacterColour}}
 \index{GetCharacterColour@{GetCharacterColour}!PlayerTokenScript@{PlayerTokenScript}}
@@ -103,30 +188,42 @@ Setting the colour of the character
 \doxysubsubsection{\texorpdfstring{GetCharacterEnumFromString()}{GetCharacterEnumFromString()}}
 {\footnotesize\ttfamily static \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} Player\+Token\+Script.\+Get\+Character\+Enum\+From\+String (\begin{DoxyParamCaption}\item[{string}]{character }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+Here is the caller graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{class_player_token_script_a1c32aeb4d4e8689ae992e44c63005787}\label{class_player_token_script_a1c32aeb4d4e8689ae992e44c63005787}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!GetGridPosition@{GetGridPosition}}
 \index{GetGridPosition@{GetGridPosition}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{GetGridPosition()}{GetGridPosition()}}
 {\footnotesize\ttfamily Vector2 Player\+Token\+Script.\+Get\+Grid\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{class_player_token_script_a98d00a98b6bf03a74b59a9127e951cfe}\label{class_player_token_script_a98d00a98b6bf03a74b59a9127e951cfe}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!IsInRoom@{IsInRoom}}
 \index{IsInRoom@{IsInRoom}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{IsInRoom()}{IsInRoom()}}
 {\footnotesize\ttfamily bool Player\+Token\+Script.\+Is\+In\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 11
 \mbox{\Hypertarget{class_player_token_script_ab8ef1ce338d767546b917f7f9ae2fadf}\label{class_player_token_script_ab8ef1ce338d767546b917f7f9ae2fadf}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!IsMovingRoom@{IsMovingRoom}}
 \index{IsMovingRoom@{IsMovingRoom}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{IsMovingRoom()}{IsMovingRoom()}}
 {\footnotesize\ttfamily bool Player\+Token\+Script.\+Is\+Moving\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 12
 \mbox{\Hypertarget{class_player_token_script_af62557bd1edf071efadf23c84f0db1ad}\label{class_player_token_script_af62557bd1edf071efadf23c84f0db1ad}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!MoveToken@{MoveToken}}
 \index{MoveToken@{MoveToken}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{MoveToken()}{MoveToken()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Player\+Token\+Script.\+Move\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{new\+Tile }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
 \mbox{\Hypertarget{class_player_token_script_adedabed62fda822417d6911f9053be02}\label{class_player_token_script_adedabed62fda822417d6911f9053be02}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!MoveToken@{MoveToken}}
 \index{MoveToken@{MoveToken}!PlayerTokenScript@{PlayerTokenScript}}
@@ -148,6 +245,8 @@ Setting the character this token will be
 {\em set\+Character} & Enum of the character\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 15
 \mbox{\Hypertarget{class_player_token_script_a900336d95223d960dedbc65b87d69906}\label{class_player_token_script_a900336d95223d960dedbc65b87d69906}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!SetCharacter@{SetCharacter}}
 \index{SetCharacter@{SetCharacter}!PlayerTokenScript@{PlayerTokenScript}}
@@ -165,11 +264,172 @@ Setting the character this token will be and the tile it will start from
 {\em tile} & thile for which it starts from\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{class_player_token_script_adb723bfd264252f5cc0de7e91553cea4}\label{class_player_token_script_adb723bfd264252f5cc0de7e91553cea4}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!ShortcutMovement@{ShortcutMovement}}
+\index{ShortcutMovement@{ShortcutMovement}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{ShortcutMovement()}{ShortcutMovement()}}
+{\footnotesize\ttfamily IEnumerator Player\+Token\+Script.\+Shortcut\+Movement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}}}]{shortcut\+End }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{class_player_token_script_ab4c4f5628d593473750d2b31f61ab102}\label{class_player_token_script_ab4c4f5628d593473750d2b31f61ab102}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!Start@{Start}}
+\index{Start@{Start}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Player\+Token\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_player_token_script_acadae9824e11bd147d2c65cbb86ea89d}\label{class_player_token_script_acadae9824e11bd147d2c65cbb86ea89d}} 
 \index{PlayerTokenScript@{PlayerTokenScript}!TakeShortcut@{TakeShortcut}}
 \index{TakeShortcut@{TakeShortcut}!PlayerTokenScript@{PlayerTokenScript}}
 \doxysubsubsection{\texorpdfstring{TakeShortcut()}{TakeShortcut()}}
 {\footnotesize\ttfamily bool Player\+Token\+Script.\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{class_player_token_script_aabf6e085b41ef90234c5580c48389200}\label{class_player_token_script_aabf6e085b41ef90234c5580c48389200}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!Update@{Update}}
+\index{Update@{Update}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+Token\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{class_player_token_script_ab5c5b11cccd8bac2a7243238f808929e}\label{class_player_token_script_ab5c5b11cccd8bac2a7243238f808929e}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!UpdateTokenMovement@{UpdateTokenMovement}}
+\index{UpdateTokenMovement@{UpdateTokenMovement}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{UpdateTokenMovement()}{UpdateTokenMovement()}}
+{\footnotesize\ttfamily void Player\+Token\+Script.\+Update\+Token\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_token_script_a542da4ee4387f79bebfda5f8ffae8906}\label{class_player_token_script_a542da4ee4387f79bebfda5f8ffae8906}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!animator@{animator}}
+\index{animator@{animator}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily Animator Player\+Token\+Script.\+animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_aa199a4d1c818117160266bcad8166755}\label{class_player_token_script_aa199a4d1c818117160266bcad8166755}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Player\+Token\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_aac8bd6fb326211c65f3559d3c861cebc}\label{class_player_token_script_aac8bd6fb326211c65f3559d3c861cebc}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!cameraCloseUp@{cameraCloseUp}}
+\index{cameraCloseUp@{cameraCloseUp}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{cameraCloseUp}{cameraCloseUp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_close_up}{Camera\+Close\+Up}} Player\+Token\+Script.\+camera\+Close\+Up\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a0f7f61abb3f71924b25b061af999388e}\label{class_player_token_script_a0f7f61abb3f71924b25b061af999388e}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!character@{character}}
+\index{character@{character}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{character}{character}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} Player\+Token\+Script.\+character\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_aa2dfe0c999f8f13a819d2c26d82778cd}\label{class_player_token_script_aa2dfe0c999f8f13a819d2c26d82778cd}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!characterColour@{characterColour}}
+\index{characterColour@{characterColour}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{characterColour}{characterColour}}
+{\footnotesize\ttfamily Color Player\+Token\+Script.\+character\+Colour\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a0d0d206a98330e9e942887579c593082}\label{class_player_token_script_a0d0d206a98330e9e942887579c593082}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!characterName@{characterName}}
+\index{characterName@{characterName}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{characterName}{characterName}}
+{\footnotesize\ttfamily string Player\+Token\+Script.\+character\+Name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a3d4c66886c1ee35401316156738e5974}\label{class_player_token_script_a3d4c66886c1ee35401316156738e5974}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!controller@{controller}}
+\index{controller@{controller}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Player\+Token\+Script.\+controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a869b14d298ec92b059920915930cf8bb}\label{class_player_token_script_a869b14d298ec92b059920915930cf8bb}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!currentEntryPoint@{currentEntryPoint}}
+\index{currentEntryPoint@{currentEntryPoint}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{currentEntryPoint}{currentEntryPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}} Player\+Token\+Script.\+current\+Entry\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a71653d5e86326546464e0bf7ad088989}\label{class_player_token_script_a71653d5e86326546464e0bf7ad088989}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!currentExitPoint@{currentExitPoint}}
+\index{currentExitPoint@{currentExitPoint}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{currentExitPoint}{currentExitPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} Player\+Token\+Script.\+current\+Exit\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_ac093589567f45b01054822aaabe9aca5}\label{class_player_token_script_ac093589567f45b01054822aaabe9aca5}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!currentRoom@{currentRoom}}
+\index{currentRoom@{currentRoom}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{currentRoom}{currentRoom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Player\+Token\+Script.\+current\+Room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a7720c13f481ed88a186cc89b2635a4f7}\label{class_player_token_script_a7720c13f481ed88a186cc89b2635a4f7}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!currentTile@{currentTile}}
+\index{currentTile@{currentTile}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{currentTile}{currentTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Player\+Token\+Script.\+current\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_aff84dd8d3d1e5d72fb72b0a75f07ab3e}\label{class_player_token_script_aff84dd8d3d1e5d72fb72b0a75f07ab3e}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!isMove@{isMove}}
+\index{isMove@{isMove}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{isMove}{isMove}}
+{\footnotesize\ttfamily bool Player\+Token\+Script.\+is\+Move = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a9c7eb212a8780fe9060ae476dd89d259}\label{class_player_token_script_a9c7eb212a8780fe9060ae476dd89d259}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!movementGraph@{movementGraph}}
+\index{movementGraph@{movementGraph}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{movementGraph}{movementGraph}}
+{\footnotesize\ttfamily Animation\+Curve Player\+Token\+Script.\+movement\+Graph\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a467fb4772e3cc702c9c0b2ed6d61c007}\label{class_player_token_script_a467fb4772e3cc702c9c0b2ed6d61c007}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!roomExitTileTarget@{roomExitTileTarget}}
+\index{roomExitTileTarget@{roomExitTileTarget}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{roomExitTileTarget}{roomExitTileTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Player\+Token\+Script.\+room\+Exit\+Tile\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a7c018e009230c542346c51eeb72067e9}\label{class_player_token_script_a7c018e009230c542346c51eeb72067e9}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} Player\+Token\+Script.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a4e0af8d7753fffbac5f7006ff0e0b5b7}\label{class_player_token_script_a4e0af8d7753fffbac5f7006ff0e0b5b7}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!startMoveTime@{startMoveTime}}
+\index{startMoveTime@{startMoveTime}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{startMoveTime}{startMoveTime}}
+{\footnotesize\ttfamily float Player\+Token\+Script.\+start\+Move\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_aec64dfa73ddddad4c2bb5b40d769d591}\label{class_player_token_script_aec64dfa73ddddad4c2bb5b40d769d591}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!startTile@{startTile}}
+\index{startTile@{startTile}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{startTile}{startTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_start_tile_script}{Start\+Tile\+Script}} Player\+Token\+Script.\+start\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a3a6846ff90d1bbf228e69775afdc22c2}\label{class_player_token_script_a3a6846ff90d1bbf228e69775afdc22c2}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!targetTile@{targetTile}}
+\index{targetTile@{targetTile}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{targetTile}{targetTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Player\+Token\+Script.\+target\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_a44d003ed2200faebf158b0d7a671e6dc}\label{class_player_token_script_a44d003ed2200faebf158b0d7a671e6dc}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!timeToDistance@{timeToDistance}}
+\index{timeToDistance@{timeToDistance}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{timeToDistance}{timeToDistance}}
+{\footnotesize\ttfamily float Player\+Token\+Script.\+time\+To\+Distance = .\+25f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_token_script_ac23aabeb80ee9621374108f17ae4d6ce}\label{class_player_token_script_ac23aabeb80ee9621374108f17ae4d6ce}} 
+\index{PlayerTokenScript@{PlayerTokenScript}!timeToMove@{timeToMove}}
+\index{timeToMove@{timeToMove}!PlayerTokenScript@{PlayerTokenScript}}
+\doxysubsubsection{\texorpdfstring{timeToMove}{timeToMove}}
+{\footnotesize\ttfamily float Player\+Token\+Script.\+time\+To\+Move = 2\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,26 @@
+<map id="RoundManager.MakeSuggestion" name="RoundManager.MakeSuggestion">
+<area shape="rect" id="node1" title="Iterate through the rest of the players searching for if 1 or more of the cards were found" alt="" coords="5,321,256,351"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#a780da336fd16dcaee0f00306578f13b4" title=" " alt="" coords="343,193,564,223"/>
+<area shape="rect" id="node4" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="972,296,1251,325"/>
+<area shape="rect" id="node5" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="1701,136,1969,165"/>
+<area shape="rect" id="node6" href="$class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8" title="removing a card from the player&#39;s To Guess List notify the AI if a player finished showing a suggeste..." alt="" coords="986,243,1237,272"/>
+<area shape="rect" id="node19" href="$class_u_i_handler.html#a81884a614bffa4b024ed137552033f7f" title=" " alt="" coords="669,348,905,377"/>
+<area shape="rect" id="node21" href="$class_u_i_handler.html#a1f0729c8102e73f3d97c1f078b9f9d52" title=" " alt="" coords="343,399,563,428"/>
+<area shape="rect" id="node23" href="$class_u_i_handler.html#abe1710aca2abe4dbb489f0c49a3af879" title="To display the View Blocker can include the name of the player that needs it&#39;s attention" alt="" coords="336,452,571,481"/>
+<area shape="rect" id="node24" href="$class_turn_controller.html#a1eddf50c785325b5e873312d1fcd6380" title="Creates a list of the players in order without the current player" alt="" coords="304,505,603,535"/>
+<area shape="rect" id="node3" href="$class_u_i_handler.html#a4009ca74f59111933be2a637c7835e18" title=" " alt="" coords="703,193,871,223"/>
+<area shape="rect" id="node15" href="$class_card_slot.html#a9049dedcebbbc4b2185a2a01d76d4ed5" title=" " alt="" coords="1038,139,1185,168"/>
+<area shape="rect" id="node7" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="1343,347,1596,376"/>
+<area shape="rect" id="node9" href="$class_a_i_controller_script.html#a208f5afe4102ff2ca04a03a425d76279" title="for the round manager to notify that another player finished picking a card to show" alt="" coords="1336,240,1603,269"/>
+<area shape="rect" id="node13" href="$class_player_master_controller.html#a16dbaeb841ba29cdc8b7cb3b3bc86d99" title="Remove a card from ToGuessCard" alt="" coords="1299,293,1640,323"/>
+<area shape="rect" id="node8" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="1714,347,1957,376"/>
+<area shape="rect" id="node10" href="$class_a_i_controller_script.html#ab124aec8211aa7b8f00c6ef5db6bc96a" title="for out putting the debug stack if outputDebugText is true, it will out put the the console as well" alt="" coords="2329,189,2569,219"/>
+<area shape="rect" id="node11" href="$class_a_i_controller_script.html#aaee909cd0f0ffdedd8d8425607d7ccb5" title="to set the AI&#39;s mode" alt="" coords="1722,189,1949,219"/>
+<area shape="rect" id="node12" href="$class_a_i_controller_script.html#afcb2875a5501f07a7f44d0fa720266f3" title="to delay the time for the next time the AI does something in the Update" alt="" coords="2031,189,2281,219"/>
+<area shape="rect" id="node14" href="$class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368" title="remove a selected card from To Guess List" alt="" coords="1688,293,1983,323"/>
+<area shape="rect" id="node16" href="$class_card_slot.html#a4690c0753db45ada6b02681269ecfbb1" title=" " alt="" coords="1371,35,1567,64"/>
+<area shape="rect" id="node17" href="$class_card.html#a25e8366933b176fae41e4d2373be7815" title=" " alt="" coords="1753,5,1917,35"/>
+<area shape="rect" id="node18" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="1758,59,1913,88"/>
+<area shape="rect" id="node20" href="$class_card_slot.html#af678d8249e4d52bb791b47d4ed75e7f3" title=" " alt="" coords="1031,451,1191,480"/>
+<area shape="rect" id="node22" href="$class_u_i_handler.html#a25f316e553a6f1b60fb6c04a8dc23613" title=" " alt="" coords="651,401,924,431"/>
+</map>

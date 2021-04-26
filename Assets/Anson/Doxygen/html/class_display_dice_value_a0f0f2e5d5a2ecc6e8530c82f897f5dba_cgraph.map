@@ -1,0 +1,10 @@
+<map id="DisplayDiceValue.Update" name="DisplayDiceValue.Update">
+<area shape="rect" id="node1" title=" " alt="" coords="5,59,208,88"/>
+<area shape="rect" id="node2" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title=" " alt="" coords="265,5,395,35"/>
+<area shape="rect" id="node4" href="$class_dice.html#a91e31e11d7028270bebdc80719c64c19" title=" " alt="" coords="268,59,392,88"/>
+<area shape="rect" id="node7" href="$class_dice.html#a9df730d8804e077cacc5efcbda241896" title=" " alt="" coords="256,112,404,141"/>
+<area shape="rect" id="node3" href="$class_die.html#a390d46459637fd249926cda472255d84" title=" " alt="" coords="461,5,607,35"/>
+<area shape="rect" id="node5" href="$class_dice.html#a84cd116dad344495cac8589afc974140" title=" " alt="" coords="452,59,616,88"/>
+<area shape="rect" id="node6" href="$class_die.html#ad1f02edcfdd486ab3da75162daab3570" title=" " alt="" coords="664,59,805,88"/>
+<area shape="rect" id="node8" href="$class_die.html#af3f246c8772c932e4ed78d35aed2e8cd" title=" " alt="" coords="459,112,609,141"/>
+</map>

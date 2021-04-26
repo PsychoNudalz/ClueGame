@@ -1,0 +1,8 @@
+<map id="RoundManager.MakeAccusation" name="RoundManager.MakeAccusation">
+<area shape="rect" id="node1" title="to have the current player to make an accusation eliminates the player if it is wrong wins the game i..." alt="" coords="1196,32,1445,61"/>
+<area shape="rect" id="node2" href="$class_user_controller.html#aa90e4e2fed6b1d661933450f430b95ba" title=" " alt="" coords="905,32,1148,61"/>
+<area shape="rect" id="node3" href="$class_u_i_handler.html#adc2ae7669cebeb4d9109002f0d3e8c7a" title=" " alt="" coords="601,5,828,35"/>
+<area shape="rect" id="node4" href="$class_a_i_controller_script.html#a7be5eb284c6258672e70af128f8638df" title="Decides that cards to accuse based on the To Guess List" alt="" coords="572,59,857,88"/>
+<area shape="rect" id="node5" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,59,524,88"/>
+<area shape="rect" id="node6" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,59,244,88"/>
+</map>

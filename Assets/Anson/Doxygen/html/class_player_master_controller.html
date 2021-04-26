@@ -65,6 +65,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player_master_controller-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerMasterController Class Reference</div>  </div>
@@ -76,9 +78,55 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for PlayerMasterController:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_player_master_controller.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_player_master_controller__inherit__graph.png" border="0" usemap="#a_player_master_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_player_master_controller_inherit__map" id="a_player_master_controller_inherit__map">
+<area shape="rect" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="5,139,237,831"/>
+<area shape="rect" title=" " alt="" coords="56,5,187,91"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for PlayerMasterController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller__coll__graph.png" border="0" usemap="#a_player_master_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="a_player_master_controller_coll__map" id="a_player_master_controller_coll__map">
+<area shape="rect" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="1547,757,1779,1397"/>
+<area shape="rect" href="class_player_token_script.html" title="For handling the player/ character&#39;s token" alt="" coords="1245,1652,1503,2309"/>
+<area shape="rect" href="class_room_player_slot.html" title=" " alt="" coords="305,1912,515,2049"/>
+<area shape="rect" href="class_round_manager.html" title="Control what each player can do during their round/ turn" alt="" coords="2125,3975,2330,4493"/>
+<area shape="rect" href="class_u_i_handler.html" title="Handles the UI" alt="" coords="2243,5397,2465,6471"/>
+<area shape="rect" href="class_card_manager.html" title=" " alt="" coords="2548,3382,2739,3710"/>
+<area shape="rect" href="class_a_i_controller_script.html" title="this class controlls the AI&#39;s behaviour and actions" alt="" coords="2071,3183,2274,3909"/>
+<area shape="rect" title=" " alt="" coords="2103,5,2234,91"/>
+<area shape="rect" href="class_player_stats_script.html" title="saves the character the player is and the deck it has" alt="" coords="1733,140,1927,520"/>
+<area shape="rect" href="class_room_entry_point.html" title=" " alt="" coords="1443,5143,1577,5228"/>
+<area shape="rect" href="class_room_script.html" title=" " alt="" coords="386,4559,693,4973"/>
+<area shape="rect" href="class_room_weapon_slot.html" title=" " alt="" coords="57,5865,283,6003"/>
+<area shape="rect" href="class_weapon_token_script.html" title=" " alt="" coords="47,5056,293,5315"/>
+<area shape="rect" href="class_board_tile_script.html" title="Super class for all tiles" alt="" coords="1092,3373,1267,3719"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html" title="This handles the effects and shader on the tile" alt="" coords="1823,544,2048,733"/>
+<area shape="rect" href="class_board_manager.html" title=" " alt="" coords="989,2616,1247,3117"/>
+<area shape="rect" href="class_door_script.html" title=" " alt="" coords="587,1421,793,1628"/>
+<area shape="rect" href="class_dice.html" title=" " alt="" coords="2435,1860,2606,2101"/>
+<area shape="rect" href="class_camera_close_up.html" title=" " alt="" coords="2233,922,2432,1233"/>
+<area shape="rect" href="class_close_up_point_script.html" title=" " alt="" coords="2257,270,2467,390"/>
+<area shape="rect" href="class_die.html" title=" " alt="" coords="2543,922,2693,1233"/>
+<area shape="rect" href="class_die_side.html" title=" " alt="" coords="2543,253,2685,407"/>
+<area shape="rect" href="class_user_controller.html" title=" " alt="" coords="2594,5039,2759,5332"/>
+<area shape="rect" href="class_accusation.html" title=" " alt="" coords="2753,4689,2891,4843"/>
+<area shape="rect" href="class_card.html" title=" " alt="" coords="3071,3495,3219,3597"/>
+<area shape="rect" href="class_suggestion.html" title=" " alt="" coords="3332,4680,3499,4852"/>
+<area shape="rect" href="class_card_slot.html" title=" " alt="" coords="3726,4139,3875,4329"/>
+<area shape="rect" href="class_turn_controller.html" title="This handles the turn between the players" alt="" coords="2570,2333,2791,2592"/>
+<area shape="rect" href="class_room_entry_board_tile_script.html" title=" " alt="" coords="595,4096,803,4372"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html" title=" " alt="" coords="693,5082,881,5289"/>
+<area shape="rect" href="class_free_suggestion_tile_script.html" title=" " alt="" coords="947,4191,1147,4277"/>
+<area shape="rect" href="class_free_roll_board_tile_script.html" title=" " alt="" coords="1223,4191,1413,4277"/>
+<area shape="rect" href="class_start_tile_script.html" title=" " alt="" coords="1437,4139,1577,4329"/>
+<area shape="rect" href="class_room_card.html" title=" " alt="" coords="3071,4148,3219,4320"/>
+<area shape="rect" href="class_character_card.html" title=" " alt="" coords="3243,4148,3391,4320"/>
+<area shape="rect" href="class_weapon_card.html" title=" " alt="" coords="2899,4148,3047,4320"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -152,6 +200,20 @@ Public Attributes</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:a995e3e74643b78b78aeeebba4a27aa82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_master_controller.html#a995e3e74643b78b78aeeebba4a27aa82">PlayerTokenScript</a><code> [get, set]</code></td></tr>
 <tr class="separator:a995e3e74643b78b78aeeebba4a27aa82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9532f73327d32aedf700fd3c2af2243a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_master_controller.html#a9532f73327d32aedf700fd3c2af2243a">Awake</a> ()</td></tr>
+<tr class="separator:a9532f73327d32aedf700fd3c2af2243a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a609753c224c7c2dc65d1c84bf9ad066d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_master_controller.html#a609753c224c7c2dc65d1c84bf9ad066d">playerTokenScript</a></td></tr>
+<tr class="separator:a609753c224c7c2dc65d1c84bf9ad066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af38dac9fb901d199bed01e2818bed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_stats_script.html">PlayerStatsScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_master_controller.html#a5af38dac9fb901d199bed01e2818bed0">playerStatsScript</a></td></tr>
+<tr class="separator:a5af38dac9fb901d199bed01e2818bed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab339d031f0f6bb0ac2f902dafcfda3ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_manager.html">BoardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_master_controller.html#ab339d031f0f6bb0ac2f902dafcfda3ee">boardManager</a></td></tr>
+<tr class="separator:ab339d031f0f6bb0ac2f902dafcfda3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Master controller for the player (character) it acts as a wrapper for the player to communicate with other controllers or managers and vis versa to avoid super spaghetii code </p>
@@ -180,6 +242,40 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if a card from cs is in the deck already</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph.png" border="0" usemap="#aclass_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph" id="aclass_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph">
+<area shape="rect" title="Add a list of card to the player&#39;s deck" alt="" coords="5,5,255,35"/>
+<area shape="rect" href="class_player_stats_script.html#ab6e2e29c99a27c5b76584d16cca75c2c" title="Add a card to the player&#39;s deck" alt="" coords="303,5,513,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9532f73327d32aedf700fd3c2af2243a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9532f73327d32aedf700fd3c2af2243a">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerMasterController.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -207,6 +303,15 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the player can move</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph.png" border="0" usemap="#aclass_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph" id="aclass_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph">
+<area shape="rect" title="check if the player can move to a certain tile" alt="" coords="5,5,257,35"/>
+<area shape="rect" href="class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82" title=" " alt="" coords="305,5,504,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -227,6 +332,27 @@ Properties</h2></td></tr>
 
 <p>check if the player can take a short cut </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph.png" border="0" usemap="#aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph" id="aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph">
+<area shape="rect" title="check if the player can take a short cut" alt="" coords="5,5,312,35"/>
+<area shape="rect" href="class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="360,5,635,35"/>
+<area shape="rect" href="class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title=" " alt="" coords="683,5,877,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph.png" border="0" usemap="#aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph" id="aclass_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph">
+<area shape="rect" title="check if the player can take a short cut" alt="" coords="356,59,663,88"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="5,5,308,35"/>
+<area shape="rect" href="class_u_i_handler.html#ab35722a35c0035fb164d984c49cec4de" title=" " alt="" coords="65,59,249,88"/>
+<area shape="rect" href="class_shortcut_test_u_i.html#afbe911ad229226696830dd46743f45c5" title=" " alt="" coords="67,112,246,141"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -246,6 +372,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>clear the tile the token was on </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph.png" border="0" usemap="#aclass_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph" id="aclass_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph">
+<area shape="rect" title="clear the tile the token was on" alt="" coords="5,5,296,35"/>
+<area shape="rect" href="class_player_token_script.html#a3c30c1b665fbcaa3db3dfe42f0871147" title=" " alt="" coords="344,5,604,35"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="652,5,855,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -272,6 +408,23 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph.png" border="0" usemap="#aclass_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph" id="aclass_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph">
+<area shape="rect" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="5,59,377,88"/>
+<area shape="rect" href="class_player_master_controller.html#a6e9a15dbaf465a0477ab5bab27570bde" title="Get the current tile the token is on" alt="" coords="425,32,660,61"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="428,85,657,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="729,59,881,88"/>
+<area shape="rect" href="class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="708,112,903,141"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="993,5,1255,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1029,59,1219,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1345,5,1593,35"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="951,112,1297,141"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="951,165,1297,195"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -291,6 +444,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>eliminate player </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph.png" border="0" usemap="#aclass_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph" id="aclass_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph">
+<area shape="rect" title="eliminate player" alt="" coords="1493,32,1788,61"/>
+<area shape="rect" href="class_round_manager.html#ab691cd5cd773e23822b237834b1fcb0a" title="to have the current player to make an accusation eliminates the player if it is wrong wins the game i..." alt="" coords="1196,32,1445,61"/>
+<area shape="rect" href="class_user_controller.html#aa90e4e2fed6b1d661933450f430b95ba" title=" " alt="" coords="905,32,1148,61"/>
+<area shape="rect" href="class_u_i_handler.html#adc2ae7669cebeb4d9109002f0d3e8c7a" title=" " alt="" coords="601,5,828,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a7be5eb284c6258672e70af128f8638df" title="Decides that cards to accuse based on the To Guess List" alt="" coords="572,59,857,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,59,524,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,59,244,88"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -318,6 +485,24 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The current player controller and a list of cards that matched the cards to be found</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph.png" border="0" usemap="#aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph" id="aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph">
+<area shape="rect" title="check if the player has a card in his deck from the given list of cards it will return the cards and ..." alt="" coords="5,5,256,35"/>
+<area shape="rect" href="class_player_stats_script.html#a4bc4319e9c609f83c177843b6d23edf2" title="find if the player has a certain card returns the card that&#39;s found" alt="" coords="304,5,517,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph.png" border="0" usemap="#aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph" id="aclass_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph">
+<area shape="rect" title="check if the player has a card in his deck from the given list of cards it will return the cards and ..." alt="" coords="268,5,519,35"/>
+<area shape="rect" href="class_anson_test_script.html#a5aa5459561a7c1f7cb500dd10193bae2" title=" " alt="" coords="5,5,220,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -335,6 +520,48 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph.png" border="0" usemap="#aclass_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph" id="aclass_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph">
+<area shape="rect" title=" " alt="" coords="2220,401,2499,431"/>
+<area shape="rect" href="class_player_token_script.html#ad83b16b76e1b0aefbcfe938b64fb1b7f" title="assigns token to the correct player" alt="" coords="1837,5,2149,35"/>
+<area shape="rect" href="class_u_i_handler.html#a81884a614bffa4b024ed137552033f7f" title=" " alt="" coords="1513,109,1749,139"/>
+<area shape="rect" href="class_round_manager.html#a596fc1c822ebb74dad8d238b15b1ea3a" title="Iterate through the rest of the players searching for if 1 or more of the cards were found" alt="" coords="1199,161,1449,191"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#acef5d54ed15d851447350fd66a63adad" title=" " alt="" coords="1849,479,2137,508"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#a94091c962445d710eb5851b0eb538b3b" title=" " alt="" coords="1849,532,2137,561"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#ae421f4c452e2ad1617ea98958045e8de" title=" " alt="" coords="1854,585,2131,615"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#a25f805d4eea55ff282a3a2680f281f32" title=" " alt="" coords="1854,639,2131,668"/>
+<area shape="rect" href="class_u_i_handler.html#ac072319b13f11e5ac215a0ed6ab11aa9" title=" " alt="" coords="1903,321,2083,351"/>
+<area shape="rect" href="class_room_script.html#a4a19c52c114612c19ae2580768d94859" title=" " alt="" coords="1867,164,2118,193"/>
+<area shape="rect" href="class_win_screen_script.html#a302ac9587462267075bd86d7c66e2ee8" title=" " alt="" coords="1886,692,2099,721"/>
+<area shape="rect" href="class_a_i_controller_script.html#a606c498cbb805d816c1b06f94631a960" title="to activate the AI or not set which player the AI is controlling" alt="" coords="1885,375,2100,404"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#a10ae072487c9377bd319cc46bca43700" title=" " alt="" coords="1813,745,2172,775"/>
+<area shape="rect" href="class_u_i_handler.html#a4009ca74f59111933be2a637c7835e18" title=" " alt="" coords="1909,217,2077,247"/>
+<area shape="rect" href="class_u_i_handler.html#a7e471e88a4baaa1993d0a85035c38016" title=" " alt="" coords="1516,320,1747,349"/>
+<area shape="rect" href="class_u_i_handler.html#a94a29c2949506b7cd0de99509a6673b5" title="starting behaviour" alt="" coords="1533,427,1730,456"/>
+<area shape="rect" href="class_game_set_up_script.html#a783bb4575e7a8718ea2907af860a687b" title="assigns the players in the game based on the saved AI selection" alt="" coords="1877,799,2108,828"/>
+<area shape="rect" href="class_player_token_script.html#a41bd3464349e8764ffa0d07391aaded4" title="Setting the character this token will be" alt="" coords="1508,5,1755,35"/>
+<area shape="rect" href="class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3" title="get test choices and make suggestion" alt="" coords="589,161,842,191"/>
+<area shape="rect" href="class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd" title=" " alt="" coords="907,215,1151,244"/>
+<area shape="rect" href="class_u_i_handler.html#ae6960c4c231f0e85718af2150449bb1f" title=" " alt="" coords="601,215,829,244"/>
+<area shape="rect" href="class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="572,268,859,297"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,295,524,324"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,295,244,324"/>
+<area shape="rect" href="class_round_manager.html#acf644ae21a6f9ebc2a476fc8603e18fc" title="Method for starting the turn" alt="" coords="1533,373,1729,403"/>
+<area shape="rect" href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0" title="Ending the turn. Returns the next player" alt="" coords="1229,373,1419,403"/>
+<area shape="rect" href="class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="1200,427,1448,456"/>
+<area shape="rect" href="class_user_controller.html#ab90611f541e20c125133d09b62407f41" title=" " alt="" coords="937,373,1121,403"/>
+<area shape="rect" href="class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="612,321,819,351"/>
+<area shape="rect" href="class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="639,375,791,404"/>
+<area shape="rect" href="class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="945,427,1113,456"/>
+<area shape="rect" href="class_move_tokens_test_script.html#a8f13bba80a272ef71d23715279a9ad89" title=" " alt="" coords="1497,163,1765,192"/>
+<area shape="rect" href="class_suggestion.html#ab326cb791b6707926dd69497e79d159b" title=" " alt="" coords="1243,215,1405,244"/>
+<area shape="rect" href="class_room_entry_exit_test_script.html#a08bf84fd6cd888cdca5837f227e31fd1" title=" " alt="" coords="1506,745,1757,775"/>
+<area shape="rect" href="class_round_manager.html#a780da336fd16dcaee0f00306578f13b4" title=" " alt="" coords="1521,267,1742,296"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -352,6 +579,38 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph.png" border="0" usemap="#aclass_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph" id="aclass_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph">
+<area shape="rect" title=" " alt="" coords="2501,314,2804,343"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="585,211,865,241"/>
+<area shape="rect" href="class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="1169,263,1456,293"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="2175,159,2411,189"/>
+<area shape="rect" href="class_u_i_handler.html#a99048b81a1303baba7efd44095c0f235" title=" " alt="" coords="2162,106,2425,135"/>
+<area shape="rect" href="class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="1205,106,1420,135"/>
+<area shape="rect" href="class_shortcut_test_u_i.html#ada4b889c0948d9fc4895b9c581b530b7" title=" " alt="" coords="2196,314,2391,343"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="2178,367,2409,397"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="2142,421,2445,450"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="2165,474,2422,503"/>
+<area shape="rect" href="class_room_script.html#a4a19c52c114612c19ae2580768d94859" title=" " alt="" coords="2168,527,2419,557"/>
+<area shape="rect" href="class_testing___movement_script.html#abaaeb242fee8995f1058fde65fc793ba" title=" " alt="" coords="2133,581,2453,610"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,238,524,267"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,238,244,267"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="1829,159,2052,189"/>
+<area shape="rect" href="class_u_i_handler.html#a52241b6fefb8a446c2c000202216bfd2" title="makes suggestion when the button is pressed" alt="" coords="1813,106,2069,135"/>
+<area shape="rect" href="class_round_manager.html#afb3821e66d79eeb0991f620ced62940a" title="Maek suggestion after a delay time, used for free suggestion tile" alt="" coords="1525,106,1727,135"/>
+<area shape="rect" href="class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title=" " alt="" coords="927,133,1121,162"/>
+<area shape="rect" href="class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="572,133,879,162"/>
+<area shape="rect" href="class_move_tokens_test_script.html#a8f13bba80a272ef71d23715279a9ad89" title=" " alt="" coords="1807,474,2075,503"/>
+<area shape="rect" href="class_suggestion.html#ab326cb791b6707926dd69497e79d159b" title=" " alt="" coords="1859,527,2022,557"/>
+<area shape="rect" href="class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd" title=" " alt="" coords="1504,435,1748,465"/>
+<area shape="rect" href="class_u_i_handler.html#ae6960c4c231f0e85718af2150449bb1f" title=" " alt="" coords="1199,462,1427,491"/>
+<area shape="rect" href="class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3" title="get test choices and make suggestion" alt="" coords="1186,409,1439,438"/>
+<area shape="rect" href="class_testing___movement_script.html#ae339e23abbecd335a3325f7c5cd886c5" title=" " alt="" coords="1796,581,2085,610"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -369,6 +628,23 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph.png" border="0" usemap="#aclass_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph" id="aclass_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph">
+<area shape="rect" title=" " alt="" coords="1599,59,1845,88"/>
+<area shape="rect" href="class_round_manager.html#acf644ae21a6f9ebc2a476fc8603e18fc" title="Method for starting the turn" alt="" coords="1355,59,1551,88"/>
+<area shape="rect" href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0" title="Ending the turn. Returns the next player" alt="" coords="1087,32,1278,61"/>
+<area shape="rect" href="class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="1059,85,1307,115"/>
+<area shape="rect" href="class_user_controller.html#ab90611f541e20c125133d09b62407f41" title=" " alt="" coords="827,32,1011,61"/>
+<area shape="rect" href="class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="572,5,779,35"/>
+<area shape="rect" href="class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="599,59,751,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+<area shape="rect" href="class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="835,85,1003,115"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -389,6 +665,15 @@ Properties</h2></td></tr>
 
 <p>Get current grip position </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph.png" border="0" usemap="#aclass_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph" id="aclass_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph">
+<area shape="rect" title="Get current grip position" alt="" coords="5,5,303,35"/>
+<area shape="rect" href="class_player_token_script.html#a1c32aeb4d4e8689ae992e44c63005787" title=" " alt="" coords="351,5,617,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -409,6 +694,24 @@ Properties</h2></td></tr>
 
 <p>Get the current tile the token is on </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph.png" border="0" usemap="#aclass_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph" id="aclass_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph">
+<area shape="rect" title="Get the current tile the token is on" alt="" coords="763,165,997,195"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="413,5,645,35"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="411,59,647,88"/>
+<area shape="rect" href="class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="343,112,715,141"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="413,165,644,195"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="377,219,680,248"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="400,272,657,301"/>
+<area shape="rect" href="class_testing___movement_script.html#abaaeb242fee8995f1058fde65fc793ba" title=" " alt="" coords="369,325,689,355"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="31,5,269,35"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="39,59,261,88"/>
+<area shape="rect" href="class_testing___movement_script.html#ae339e23abbecd335a3325f7c5cd886c5" title=" " alt="" coords="5,325,295,355"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -426,6 +729,20 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph.png" border="0" usemap="#aclass_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph" id="aclass_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph">
+<area shape="rect" title=" " alt="" coords="1240,59,1556,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#a0bfee235827ff618fa3325164969c2a4" title="check if the AI is comfident enough to accuse this should match the flow chart of the AI" alt="" coords="935,5,1164,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a7be5eb284c6258672e70af128f8638df" title="Decides that cards to accuse based on the To Guess List" alt="" coords="907,59,1192,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="572,111,859,140"/>
+<area shape="rect" href="class_a_i_controller_script.html#af05eaa86fd4cfef3b4b0b79b0883322c" title="the AI enter this when it is thinking to decide what to do this should match the flow chart of the AI" alt="" coords="616,7,815,36"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,59,524,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,59,244,88"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -466,6 +783,26 @@ Properties</h2></td></tr>
 
 <p>check if the player token is still moving. returns true if the token is moving to a new tile or if the token is moving in to a room </p>
 <dl class="section return"><dt>Returns</dt><dd>true if it the token is moving</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph.png" border="0" usemap="#aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph" id="aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph">
+<area shape="rect" title="check if the player token is still moving. returns true if the token is moving to a new tile or if th..." alt="" coords="5,5,252,35"/>
+<area shape="rect" href="class_player_token_script.html#ab8ef1ce338d767546b917f7f9ae2fadf" title=" " alt="" coords="300,5,557,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph.png" border="0" usemap="#aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph" id="aclass_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph">
+<area shape="rect" title="check if the player token is still moving. returns true if the token is moving to a new tile or if th..." alt="" coords="872,5,1119,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a8b57daca04e528b57a612de3b285b4c2" title="check if the player token is still moving" alt="" coords="572,5,824,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -492,6 +829,33 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph.png" border="0" usemap="#aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph" id="aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph">
+<area shape="rect" title="moving the player to a certain tile" alt="" coords="5,32,272,61"/>
+<area shape="rect" href="class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad" title=" " alt="" coords="320,32,555,61"/>
+<area shape="rect" href="class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title=" " alt="" coords="603,5,901,35"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="651,59,853,88"/>
+<area shape="rect" href="class_camera_close_up.html#a1d70afa00d6f67abee342c029af88fcf" title=" " alt="" coords="949,5,1179,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph.png" border="0" usemap="#aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph" id="aclass_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph">
+<area shape="rect" title="moving the player to a certain tile" alt="" coords="1432,32,1699,61"/>
+<area shape="rect" href="class_shortcut_test_u_i.html#a3012692eeb4658dc688e82b431cc10f6" title=" " alt="" coords="1173,5,1380,35"/>
+<area shape="rect" href="class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="1169,59,1384,88"/>
+<area shape="rect" href="class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title=" " alt="" coords="927,59,1121,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="585,32,865,61"/>
+<area shape="rect" href="class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="572,85,879,115"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,32,524,61"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,32,244,61"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -518,6 +882,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph.png" border="0" usemap="#aclass_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph" id="aclass_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph">
+<area shape="rect" title="moving the player to a certain position instead of tile" alt="" coords="5,32,272,61"/>
+<area shape="rect" href="class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad" title=" " alt="" coords="320,32,555,61"/>
+<area shape="rect" href="class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title=" " alt="" coords="603,5,901,35"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="651,59,853,88"/>
+<area shape="rect" href="class_camera_close_up.html#a1d70afa00d6f67abee342c029af88fcf" title=" " alt="" coords="949,5,1179,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -545,6 +921,34 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the list contains the card to be removed</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph.png" border="0" usemap="#aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph" id="aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph">
+<area shape="rect" title="Remove a card from ToGuessCard" alt="" coords="5,5,347,35"/>
+<area shape="rect" href="class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368" title="remove a selected card from To Guess List" alt="" coords="395,5,689,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph.png" border="0" usemap="#aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph" id="aclass_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph">
+<area shape="rect" title="Remove a card from ToGuessCard" alt="" coords="2291,33,2632,63"/>
+<area shape="rect" href="class_round_manager.html#a6cf32ad7ffd3cafc902ae5faeb7605f8" title="removing a card from the player&#39;s To Guess List notify the AI if a player finished showing a suggeste..." alt="" coords="1992,33,2243,63"/>
+<area shape="rect" href="class_round_manager.html#a596fc1c822ebb74dad8d238b15b1ea3a" title="Iterate through the rest of the players searching for if 1 or more of the cards were found" alt="" coords="1199,33,1449,63"/>
+<area shape="rect" href="class_u_i_handler.html#a4009ca74f59111933be2a637c7835e18" title=" " alt="" coords="1776,59,1944,88"/>
+<area shape="rect" href="class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3" title="get test choices and make suggestion" alt="" coords="589,5,842,35"/>
+<area shape="rect" href="class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd" title=" " alt="" coords="907,59,1151,88"/>
+<area shape="rect" href="class_u_i_handler.html#ae6960c4c231f0e85718af2150449bb1f" title=" " alt="" coords="601,59,829,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="572,112,859,141"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,112,524,141"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,112,244,141"/>
+<area shape="rect" href="class_round_manager.html#a780da336fd16dcaee0f00306578f13b4" title=" " alt="" coords="1502,59,1723,88"/>
+<area shape="rect" href="class_u_i_handler.html#a7e471e88a4baaa1993d0a85035c38016" title=" " alt="" coords="1497,112,1728,141"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -571,6 +975,15 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph.png" border="0" usemap="#aclass_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph" id="aclass_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph">
+<area shape="rect" title="Set the player&#39;s character" alt="" coords="5,5,284,35"/>
+<area shape="rect" href="class_player_stats_script.html#ae71569d6008ef02ad036e3d6de2c4c13" title="Set the player&#39;s character" alt="" coords="332,5,572,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -589,6 +1002,15 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph.png" border="0" usemap="#aclass_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph" id="aclass_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph">
+<area shape="rect" title=" " alt="" coords="373,5,676,35"/>
+<area shape="rect" href="class_room_entry_board_tile_script.html#a89563c1c09bdf5bb73347dd676a10f2d" title=" " alt="" coords="5,5,325,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -608,6 +1030,25 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>for initialising the player </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph.png" border="0" usemap="#aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph" id="aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph">
+<area shape="rect" title="for initialising the player" alt="" coords="5,5,293,35"/>
+<area shape="rect" href="class_player_stats_script.html#a5229018c9a9248a90f447ca9e271ee0f" title="initialise the To Guess List it is the list that keeps track of which card was not suggested" alt="" coords="341,5,636,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph.png" border="0" usemap="#aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph" id="aclass_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph">
+<area shape="rect" title="for initialising the player" alt="" coords="517,5,805,35"/>
+<area shape="rect" href="class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="221,5,469,35"/>
+<area shape="rect" href="class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="5,5,173,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -625,10 +1066,53 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph.png" border="0" usemap="#aclass_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph" alt=""/></div>
+<map name="aclass_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph" id="aclass_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph">
+<area shape="rect" title=" " alt="" coords="1904,85,2148,115"/>
+<area shape="rect" href="class_anson_test_script.html#a5aa5459561a7c1f7cb500dd10193bae2" title=" " alt="" coords="1620,5,1835,35"/>
+<area shape="rect" href="class_suggestion_test.html#a613e68c69120a4eb0782dda49fcd6fb9" title=" " alt="" coords="1615,59,1840,88"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="1599,112,1856,141"/>
+<area shape="rect" href="class_a_i_controller_script.html#a606c498cbb805d816c1b06f94631a960" title="to activate the AI or not set which player the AI is controlling" alt="" coords="1620,165,1835,195"/>
+<area shape="rect" href="class_round_manager.html#acf644ae21a6f9ebc2a476fc8603e18fc" title="Method for starting the turn" alt="" coords="1355,165,1551,195"/>
+<area shape="rect" href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0" title="Ending the turn. Returns the next player" alt="" coords="1087,139,1278,168"/>
+<area shape="rect" href="class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="1059,192,1307,221"/>
+<area shape="rect" href="class_user_controller.html#ab90611f541e20c125133d09b62407f41" title=" " alt="" coords="827,139,1011,168"/>
+<area shape="rect" href="class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="572,112,779,141"/>
+<area shape="rect" href="class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="599,165,751,195"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,112,524,141"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,112,244,141"/>
+<area shape="rect" href="class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="835,192,1003,221"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab339d031f0f6bb0ac2f902dafcfda3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab339d031f0f6bb0ac2f902dafcfda3ee">&#9670;&nbsp;</a></span>boardManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_manager.html">BoardManager</a> PlayerMasterController.boardManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a49c264905eb27bac2e66121d4ec487eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49c264905eb27bac2e66121d4ec487eb">&#9670;&nbsp;</a></span>isAI</h2>
 
@@ -639,6 +1123,50 @@ Properties</h2></td></tr>
           <td class="memname">bool PlayerMasterController.isAI = false</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5af38dac9fb901d199bed01e2818bed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af38dac9fb901d199bed01e2818bed0">&#9670;&nbsp;</a></span>playerStatsScript</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_stats_script.html">PlayerStatsScript</a> PlayerMasterController.playerStatsScript</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a609753c224c7c2dc65d1c84bf9ad066d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609753c224c7c2dc65d1c84bf9ad066d">&#9670;&nbsp;</a></span>playerTokenScript</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a> PlayerMasterController.playerTokenScript</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

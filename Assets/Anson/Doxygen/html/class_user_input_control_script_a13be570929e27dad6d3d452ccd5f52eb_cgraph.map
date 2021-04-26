@@ -1,0 +1,36 @@
+<map id="UserInputControlScript.MovePlayerToken" name="UserInputControlScript.MovePlayerToken">
+<area shape="rect" id="node1" title="move player token to the tile the cursor is on" alt="" coords="5,532,312,561"/>
+<area shape="rect" id="node2" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="2623,481,2865,511"/>
+<area shape="rect" id="node3" href="$class_user_selection_script.html#a4cf10f22504d0bd38d6e316a76e76285" title=" " alt="" coords="360,584,627,613"/>
+<area shape="rect" id="node4" href="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title=" " alt="" coords="396,388,591,417"/>
+<area shape="rect" id="node5" href="$class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="675,296,889,325"/>
+<area shape="rect" id="node6" href="$class_board_manager.html#a653d38723d03f890d38a1b68a855c569" title=" " alt="" coords="957,375,1185,404"/>
+<area shape="rect" id="node10" href="$class_round_manager.html#a8d52738f26bc5b5eea98f8e3dd213744" title="roll dice after a delay time, used for free roll tile" alt="" coords="971,84,1170,113"/>
+<area shape="rect" id="node21" href="$class_round_manager.html#afb3821e66d79eeb0991f620ced62940a" title="Maek suggestion after a delay time, used for free suggestion tile" alt="" coords="970,269,1171,299"/>
+<area shape="rect" id="node27" href="$class_player_master_controller.html#a0447a8a21b5c0f2c94f9d27e0bcd0830" title=" " alt="" coords="1951,269,2253,299"/>
+<area shape="rect" id="node29" href="$class_player_token_script.html#a98d00a98b6bf03a74b59a9127e951cfe" title=" " alt="" coords="961,216,1180,245"/>
+<area shape="rect" id="node30" href="$class_player_master_controller.html#a9b23c4d50fabbc44dbba2b0db542efce" title="moving the player to a certain tile" alt="" coords="937,163,1204,192"/>
+<area shape="rect" id="node7" href="$class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="1283,376,1477,405"/>
+<area shape="rect" id="node8" href="$class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="1556,429,1903,459"/>
+<area shape="rect" id="node9" href="$class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="1556,376,1903,405"/>
+<area shape="rect" id="node11" href="$class_round_manager.html#ab795c17242b95ab2cef508da5daa2593" title="Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it" alt="" coords="1284,59,1476,88"/>
+<area shape="rect" id="node12" href="$class_round_manager.html#a5cfea3b56a7576ad02c82c27bb0c6ba7" title="reset the dice after a time delay" alt="" coords="1606,59,1853,88"/>
+<area shape="rect" id="node19" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title=" " alt="" coords="1670,5,1789,35"/>
+<area shape="rect" id="node13" href="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67" title=" " alt="" coords="2035,59,2169,88"/>
+<area shape="rect" id="node14" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title=" " alt="" coords="2363,59,2493,88"/>
+<area shape="rect" id="node16" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title=" " alt="" coords="2307,112,2549,141"/>
+<area shape="rect" id="node18" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="2369,5,2487,35"/>
+<area shape="rect" id="node15" href="$class_die.html#a390d46459637fd249926cda472255d84" title=" " alt="" coords="2671,59,2817,88"/>
+<area shape="rect" id="node17" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title=" " alt="" coords="2603,112,2885,141"/>
+<area shape="rect" id="node20" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title=" " alt="" coords="2051,5,2153,35"/>
+<area shape="rect" id="node22" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="2301,323,2555,352"/>
+<area shape="rect" id="node23" href="$class_u_i_handler.html#a52241b6fefb8a446c2c000202216bfd2" title="makes suggestion when the button is pressed" alt="" coords="1252,269,1508,299"/>
+<area shape="rect" id="node24" href="$class_u_i_handler.html#a99048b81a1303baba7efd44095c0f235" title=" " alt="" coords="1598,323,1861,352"/>
+<area shape="rect" id="node25" href="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1" title=" " alt="" coords="2007,376,2197,405"/>
+<area shape="rect" id="node26" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="1979,323,2225,352"/>
+<area shape="rect" id="node28" href="$class_suggestion.html#aec2e9ce82ae5f51cea7570bc6dafa43a" title=" " alt="" coords="2003,429,2201,459"/>
+<area shape="rect" id="node31" href="$class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad" title=" " alt="" coords="1263,163,1497,192"/>
+<area shape="rect" id="node32" href="$class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title=" " alt="" coords="1580,112,1879,141"/>
+<area shape="rect" id="node34" href="$class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="1628,165,1831,195"/>
+<area shape="rect" id="node33" href="$class_camera_close_up.html#a1d70afa00d6f67abee342c029af88fcf" title=" " alt="" coords="1987,112,2217,141"/>
+</map>

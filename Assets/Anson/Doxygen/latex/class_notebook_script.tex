@@ -1,11 +1,13 @@
 \hypertarget{class_notebook_script}{}\doxysection{Notebook\+Script Class Reference}
 \label{class_notebook_script}\index{NotebookScript@{NotebookScript}}
-Inheritance diagram for Notebook\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_notebook_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Notebook\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Notebook\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,38 +21,179 @@ void \mbox{\hyperlink{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}{R
 \item 
 void \mbox{\hyperlink{class_notebook_script_a4d45da2c213d4711991232101154510e}{Refresh\+Weapons}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} current\+Player)
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}{On\+Enable}} ()
+\item 
+void \mbox{\hyperlink{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}{Create\+Character\+Buttons}} ()
+\item 
+void \mbox{\hyperlink{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}{Create\+Room\+Buttons}} ()
+\item 
+void \mbox{\hyperlink{class_notebook_script_a32b5d422887498e904d1b820605978eb}{Create\+Weapon\+Buttons}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_notebook_script_a69d94b01191158cd13adee3f86672135}{character\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_notebook_script_ab6220c5c67be226874d7297d90130012}{Room\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_notebook_script_a786e9f35fe0788722012f210e5ca9d7b}{Weapon\+Panel}}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_notebook_script_ae41fbe9c971a5695ea87bb4796b70518}{round\+Manager}}
+\item 
+\mbox{\hyperlink{class_notebook_button}{Notebook\+Button}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_notebook_script_a701174c338e5c371d404aea299eb15ac}{character\+Buttons}}
+\item 
+\mbox{\hyperlink{class_notebook_button}{Notebook\+Button}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_notebook_script_ac9fb6181c2d69936ff9eace26d3515bb}{room\+Buttons}}
+\item 
+\mbox{\hyperlink{class_notebook_button}{Notebook\+Button}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_notebook_script_a1579235e03e71d67312601c9c73259ff}{weapon\+Buttons}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}\label{class_notebook_script_ad7fb4caee1659d66f551b02983ef9d4c}} 
+\index{NotebookScript@{NotebookScript}!Awake@{Awake}}
+\index{Awake@{Awake}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Notebook\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}\label{class_notebook_script_a0d865d47dca27b4d3e7a0a1a35036efb}} 
+\index{NotebookScript@{NotebookScript}!CreateCharacterButtons@{CreateCharacterButtons}}
+\index{CreateCharacterButtons@{CreateCharacterButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{CreateCharacterButtons()}{CreateCharacterButtons()}}
+{\footnotesize\ttfamily void Notebook\+Script.\+Create\+Character\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}\label{class_notebook_script_a970cdef3e0f21b0cc144fef7088bbeb0}} 
+\index{NotebookScript@{NotebookScript}!CreateRoomButtons@{CreateRoomButtons}}
+\index{CreateRoomButtons@{CreateRoomButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{CreateRoomButtons()}{CreateRoomButtons()}}
+{\footnotesize\ttfamily void Notebook\+Script.\+Create\+Room\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_notebook_script_a32b5d422887498e904d1b820605978eb}\label{class_notebook_script_a32b5d422887498e904d1b820605978eb}} 
+\index{NotebookScript@{NotebookScript}!CreateWeaponButtons@{CreateWeaponButtons}}
+\index{CreateWeaponButtons@{CreateWeaponButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{CreateWeaponButtons()}{CreateWeaponButtons()}}
+{\footnotesize\ttfamily void Notebook\+Script.\+Create\+Weapon\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370}\label{class_notebook_script_a829e34fac5e19bf031c070b44f0fe370}} 
 \index{NotebookScript@{NotebookScript}!initializeNotebook@{initializeNotebook}}
 \index{initializeNotebook@{initializeNotebook}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{initializeNotebook()}{initializeNotebook()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+initialize\+Notebook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}\label{class_notebook_script_a68c629fcde9476555ad02cc1e884d85f}} 
+\index{NotebookScript@{NotebookScript}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Notebook\+Script.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 11
 \mbox{\Hypertarget{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6}\label{class_notebook_script_a4d3a7148faf9db0faae9b942f01e84b6}} 
 \index{NotebookScript@{NotebookScript}!RefreshCharacters@{RefreshCharacters}}
 \index{RefreshCharacters@{RefreshCharacters}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshCharacters()}{RefreshCharacters()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Characters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
 \mbox{\Hypertarget{class_notebook_script_a3c031d903921e95ac42253bb09f5beec}\label{class_notebook_script_a3c031d903921e95ac42253bb09f5beec}} 
 \index{NotebookScript@{NotebookScript}!RefreshNotebook@{RefreshNotebook}}
 \index{RefreshNotebook@{RefreshNotebook}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshNotebook()}{RefreshNotebook()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Notebook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
 \mbox{\Hypertarget{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}\label{class_notebook_script_a1ad8770915bffe616f448f1b3cff339f}} 
 \index{NotebookScript@{NotebookScript}!RefreshRooms@{RefreshRooms}}
 \index{RefreshRooms@{RefreshRooms}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshRooms()}{RefreshRooms()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Rooms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
 \mbox{\Hypertarget{class_notebook_script_a4d45da2c213d4711991232101154510e}\label{class_notebook_script_a4d45da2c213d4711991232101154510e}} 
 \index{NotebookScript@{NotebookScript}!RefreshWeapons@{RefreshWeapons}}
 \index{RefreshWeapons@{RefreshWeapons}!NotebookScript@{NotebookScript}}
 \doxysubsubsection{\texorpdfstring{RefreshWeapons()}{RefreshWeapons()}}
 {\footnotesize\ttfamily void Notebook\+Script.\+Refresh\+Weapons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{current\+Player }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_notebook_script_a701174c338e5c371d404aea299eb15ac}\label{class_notebook_script_a701174c338e5c371d404aea299eb15ac}} 
+\index{NotebookScript@{NotebookScript}!characterButtons@{characterButtons}}
+\index{characterButtons@{characterButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{characterButtons}{characterButtons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_notebook_button}{Notebook\+Button}} \mbox{[}$\,$\mbox{]} Notebook\+Script.\+character\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_a69d94b01191158cd13adee3f86672135}\label{class_notebook_script_a69d94b01191158cd13adee3f86672135}} 
+\index{NotebookScript@{NotebookScript}!characterPanel@{characterPanel}}
+\index{characterPanel@{characterPanel}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{characterPanel}{characterPanel}}
+{\footnotesize\ttfamily Game\+Object Notebook\+Script.\+character\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_ac9fb6181c2d69936ff9eace26d3515bb}\label{class_notebook_script_ac9fb6181c2d69936ff9eace26d3515bb}} 
+\index{NotebookScript@{NotebookScript}!roomButtons@{roomButtons}}
+\index{roomButtons@{roomButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{roomButtons}{roomButtons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_notebook_button}{Notebook\+Button}} \mbox{[}$\,$\mbox{]} Notebook\+Script.\+room\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_ab6220c5c67be226874d7297d90130012}\label{class_notebook_script_ab6220c5c67be226874d7297d90130012}} 
+\index{NotebookScript@{NotebookScript}!RoomPanel@{RoomPanel}}
+\index{RoomPanel@{RoomPanel}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{RoomPanel}{RoomPanel}}
+{\footnotesize\ttfamily Game\+Object Notebook\+Script.\+Room\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_ae41fbe9c971a5695ea87bb4796b70518}\label{class_notebook_script_ae41fbe9c971a5695ea87bb4796b70518}} 
+\index{NotebookScript@{NotebookScript}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} Notebook\+Script.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_a1579235e03e71d67312601c9c73259ff}\label{class_notebook_script_a1579235e03e71d67312601c9c73259ff}} 
+\index{NotebookScript@{NotebookScript}!weaponButtons@{weaponButtons}}
+\index{weaponButtons@{weaponButtons}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{weaponButtons}{weaponButtons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_notebook_button}{Notebook\+Button}} \mbox{[}$\,$\mbox{]} Notebook\+Script.\+weapon\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_notebook_script_a786e9f35fe0788722012f210e5ca9d7b}\label{class_notebook_script_a786e9f35fe0788722012f210e5ca9d7b}} 
+\index{NotebookScript@{NotebookScript}!WeaponPanel@{WeaponPanel}}
+\index{WeaponPanel@{WeaponPanel}!NotebookScript@{NotebookScript}}
+\doxysubsubsection{\texorpdfstring{WeaponPanel}{WeaponPanel}}
+{\footnotesize\ttfamily Game\+Object Notebook\+Script.\+Weapon\+Panel\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

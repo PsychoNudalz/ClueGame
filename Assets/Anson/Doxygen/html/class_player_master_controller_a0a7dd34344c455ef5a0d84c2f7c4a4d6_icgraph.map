@@ -1,0 +1,12 @@
+<map id="PlayerMasterController.GetDeck" name="PlayerMasterController.GetDeck">
+<area shape="rect" id="node1" title=" " alt="" coords="1599,59,1845,88"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#acf644ae21a6f9ebc2a476fc8603e18fc" title="Method for starting the turn" alt="" coords="1355,59,1551,88"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0" title="Ending the turn. Returns the next player" alt="" coords="1087,32,1278,61"/>
+<area shape="rect" id="node9" href="$class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="1059,85,1307,115"/>
+<area shape="rect" id="node4" href="$class_user_controller.html#ab90611f541e20c125133d09b62407f41" title=" " alt="" coords="827,32,1011,61"/>
+<area shape="rect" id="node5" href="$class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="572,5,779,35"/>
+<area shape="rect" id="node8" href="$class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="599,59,751,88"/>
+<area shape="rect" id="node6" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" id="node7" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+<area shape="rect" id="node10" href="$class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="835,85,1003,115"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="UIHandler.FixedUpdate" name="UIHandler.FixedUpdate">
+<area shape="rect" id="node1" title=" " alt="" coords="5,32,189,61"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a281d37e414bc17c9441964104f039b4a" title="check if the player can take a short cut" alt="" coords="237,5,544,35"/>
+<area shape="rect" id="node5" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="267,59,514,88"/>
+<area shape="rect" id="node3" href="$class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="592,5,867,35"/>
+<area shape="rect" id="node4" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title=" " alt="" coords="939,5,1133,35"/>
+<area shape="rect" id="node6" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="603,59,856,88"/>
+<area shape="rect" id="node7" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="915,59,1157,88"/>
+</map>

@@ -1,11 +1,13 @@
 \hypertarget{class_die}{}\doxysection{Die Class Reference}
 \label{class_die}\index{Die@{Die}}
-Inheritance diagram for Die\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_die}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Die\+:
+% FIG 0
+
+
+Collaboration diagram for Die\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +21,34 @@ void \mbox{\hyperlink{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}{Reset\+Die}} 
 \item 
 int \mbox{\hyperlink{class_die_ad1f02edcfdd486ab3da75162daab3570}{Get\+Value\+Die}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_die_a80010ae1efa380a23ae3eb9596e37b0f}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_die_aa0a20a760742d16532e25f94f5e33395}{Initialise}} ()
+\item 
+void \mbox{\hyperlink{class_die_a1720b01fed5d5276f3761c944baa8126}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}{Roll\+Again}} ()
+\item 
+void \mbox{\hyperlink{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}{Check\+Value\+Die}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_die_side}{Die\+Side}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_die_afb744bd140e5da9e18eb78af14554bd8}{die\+Sides}}
+\item 
+Rigidbody \mbox{\hyperlink{class_die_a028c3875dd38662acbeee6c637f976d8}{die\+Rigidbody}}
+\item 
+bool \mbox{\hyperlink{class_die_afae4916aeba5de85bc01f515340da65f}{has\+Landed}}
+\item 
+bool \mbox{\hyperlink{class_die_ac61642826101b36f0f03a1f5424d6764}{is\+Thrown}}
+\item 
+Vector3 \mbox{\hyperlink{class_die_a592f00e34df791b177fe953cd20aeda3}{initial\+Position}}
+\item 
+int \mbox{\hyperlink{class_die_ad79818183730430f990e6d00957947ae}{die\+Value}} = -\/1
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -28,29 +58,124 @@ int \mbox{\hyperlink{class_die_ad1f02edcfdd486ab3da75162daab3570}{Get\+Value\+Di
 \doxysubsubsection{\texorpdfstring{CanResetDie()}{CanResetDie()}}
 {\footnotesize\ttfamily bool Die.\+Can\+Reset\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}\label{class_die_a69a9f7355c4b76e3fb34747a8ee97b8f}} 
+\index{Die@{Die}!CheckValueDie@{CheckValueDie}}
+\index{CheckValueDie@{CheckValueDie}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{CheckValueDie()}{CheckValueDie()}}
+{\footnotesize\ttfamily void Die.\+Check\+Value\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
 \mbox{\Hypertarget{class_die_ad1f02edcfdd486ab3da75162daab3570}\label{class_die_ad1f02edcfdd486ab3da75162daab3570}} 
 \index{Die@{Die}!GetValueDie@{GetValueDie}}
 \index{GetValueDie@{GetValueDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{GetValueDie()}{GetValueDie()}}
 {\footnotesize\ttfamily int Die.\+Get\+Value\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_die_aa0a20a760742d16532e25f94f5e33395}\label{class_die_aa0a20a760742d16532e25f94f5e33395}} 
+\index{Die@{Die}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily void Die.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 6
 \mbox{\Hypertarget{class_die_af3f246c8772c932e4ed78d35aed2e8cd}\label{class_die_af3f246c8772c932e4ed78d35aed2e8cd}} 
 \index{Die@{Die}!IsReadyToRoll@{IsReadyToRoll}}
 \index{IsReadyToRoll@{IsReadyToRoll}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{IsReadyToRoll()}{IsReadyToRoll()}}
 {\footnotesize\ttfamily bool Die.\+Is\+Ready\+To\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}\label{class_die_abc11c3d2bf0c0fba1555093eb5a8469e}} 
 \index{Die@{Die}!ResetDie@{ResetDie}}
 \index{ResetDie@{ResetDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{ResetDie()}{ResetDie()}}
 {\footnotesize\ttfamily void Die.\+Reset\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}\label{class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7}} 
+\index{Die@{Die}!RollAgain@{RollAgain}}
+\index{RollAgain@{RollAgain}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{RollAgain()}{RollAgain()}}
+{\footnotesize\ttfamily void Die.\+Roll\+Again (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5}\label{class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5}} 
 \index{Die@{Die}!RollDie@{RollDie}}
 \index{RollDie@{RollDie}!Die@{Die}}
 \doxysubsubsection{\texorpdfstring{RollDie()}{RollDie()}}
 {\footnotesize\ttfamily void Die.\+Roll\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{class_die_a80010ae1efa380a23ae3eb9596e37b0f}\label{class_die_a80010ae1efa380a23ae3eb9596e37b0f}} 
+\index{Die@{Die}!Start@{Start}}
+\index{Start@{Start}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Die.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{class_die_a1720b01fed5d5276f3761c944baa8126}\label{class_die_a1720b01fed5d5276f3761c944baa8126}} 
+\index{Die@{Die}!Update@{Update}}
+\index{Update@{Update}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Die.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 14
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_die_a028c3875dd38662acbeee6c637f976d8}\label{class_die_a028c3875dd38662acbeee6c637f976d8}} 
+\index{Die@{Die}!dieRigidbody@{dieRigidbody}}
+\index{dieRigidbody@{dieRigidbody}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{dieRigidbody}{dieRigidbody}}
+{\footnotesize\ttfamily Rigidbody Die.\+die\+Rigidbody\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_afb744bd140e5da9e18eb78af14554bd8}\label{class_die_afb744bd140e5da9e18eb78af14554bd8}} 
+\index{Die@{Die}!dieSides@{dieSides}}
+\index{dieSides@{dieSides}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{dieSides}{dieSides}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_die_side}{Die\+Side}} \mbox{[}$\,$\mbox{]} Die.\+die\+Sides\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_ad79818183730430f990e6d00957947ae}\label{class_die_ad79818183730430f990e6d00957947ae}} 
+\index{Die@{Die}!dieValue@{dieValue}}
+\index{dieValue@{dieValue}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{dieValue}{dieValue}}
+{\footnotesize\ttfamily int Die.\+die\+Value = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_afae4916aeba5de85bc01f515340da65f}\label{class_die_afae4916aeba5de85bc01f515340da65f}} 
+\index{Die@{Die}!hasLanded@{hasLanded}}
+\index{hasLanded@{hasLanded}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{hasLanded}{hasLanded}}
+{\footnotesize\ttfamily bool Die.\+has\+Landed\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_a592f00e34df791b177fe953cd20aeda3}\label{class_die_a592f00e34df791b177fe953cd20aeda3}} 
+\index{Die@{Die}!initialPosition@{initialPosition}}
+\index{initialPosition@{initialPosition}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{initialPosition}{initialPosition}}
+{\footnotesize\ttfamily Vector3 Die.\+initial\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_ac61642826101b36f0f03a1f5424d6764}\label{class_die_ac61642826101b36f0f03a1f5424d6764}} 
+\index{Die@{Die}!isThrown@{isThrown}}
+\index{isThrown@{isThrown}!Die@{Die}}
+\doxysubsubsection{\texorpdfstring{isThrown}{isThrown}}
+{\footnotesize\ttfamily bool Die.\+is\+Thrown\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

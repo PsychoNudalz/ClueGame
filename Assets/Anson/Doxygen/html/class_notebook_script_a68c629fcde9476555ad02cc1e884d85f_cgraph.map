@@ -1,0 +1,10 @@
+<map id="NotebookScript.OnEnable" name="NotebookScript.OnEnable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,209,115"/>
+<area shape="rect" id="node2" href="$class_notebook_script.html#a3c031d903921e95ac42253bb09f5beec" title=" " alt="" coords="257,85,515,115"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="569,5,823,35"/>
+<area shape="rect" id="node5" href="$class_notebook_script.html#a4d3a7148faf9db0faae9b942f01e84b6" title=" " alt="" coords="563,59,829,88"/>
+<area shape="rect" id="node7" href="$class_notebook_script.html#a1ad8770915bffe616f448f1b3cff339f" title=" " alt="" coords="577,112,815,141"/>
+<area shape="rect" id="node8" href="$class_notebook_script.html#a4d45da2c213d4711991232101154510e" title=" " alt="" coords="568,165,824,195"/>
+<area shape="rect" id="node4" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="877,5,1120,35"/>
+<area shape="rect" id="node6" href="$class_notebook_button.html#a3db612f7ac70f28eb24790f27a6f1c82" title=" " alt="" coords="877,112,1120,141"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="PlayerTokenScript.IsMovingRoom" name="PlayerTokenScript.IsMovingRoom">
+<area shape="rect" id="node1" title=" " alt="" coords="1167,5,1424,35"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a4270ffe6f17cefe9bb15c82c74678603" title="check if the player token is still moving. returns true if the token is moving to a new tile or if th..." alt="" coords="872,5,1119,35"/>
+<area shape="rect" id="node3" href="$class_a_i_controller_script.html#a8b57daca04e528b57a612de3b285b4c2" title="check if the player token is still moving" alt="" coords="572,5,824,35"/>
+<area shape="rect" id="node4" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" id="node5" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+</map>

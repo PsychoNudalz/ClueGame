@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.StartBehaviour" name="PlayerMasterController.StartBehaviour">
+<area shape="rect" id="node1" title="for initialising the player" alt="" coords="5,5,293,35"/>
+<area shape="rect" id="node2" href="$class_player_stats_script.html#a5229018c9a9248a90f447ca9e271ee0f" title="initialise the To Guess List it is the list that keeps track of which card was not suggested" alt="" coords="341,5,636,35"/>
+</map>

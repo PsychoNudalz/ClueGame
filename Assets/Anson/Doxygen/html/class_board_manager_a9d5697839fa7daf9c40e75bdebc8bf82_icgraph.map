@@ -1,0 +1,7 @@
+<map id="BoardManager.CanMove" name="BoardManager.CanMove">
+<area shape="rect" id="node1" title=" " alt="" coords="935,32,1133,61"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#ac2a8e986f44ea316fb5340cdd75e02e4" title="check if the player can move to this tile" alt="" coords="659,5,862,35"/>
+<area shape="rect" id="node5" href="$class_player_master_controller.html#aa777652a6197abe043a097ce3a1201b4" title="check if the player can move to a certain tile" alt="" coords="635,59,887,88"/>
+<area shape="rect" id="node3" href="$class_user_selection_script.html#a79fe134329afe738c1e4fb0d66c99d69" title="Setting the current tile clears the previous tile and set the effect for the new tile" alt="" coords="301,5,587,35"/>
+<area shape="rect" id="node4" href="$class_user_cursor_script.html#a86dacfae5227440b7f8ca3c7042a8892" title=" " alt="" coords="5,5,253,35"/>
+</map>

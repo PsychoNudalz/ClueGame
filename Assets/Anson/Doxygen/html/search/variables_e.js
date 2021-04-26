@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['usercontroller_896',['userController',['../class_test_u_i_script.html#a6d4cf5af1c535067b2e039289b2c902f',1,'TestUIScript.userController()'],['../class_u_i_handler.html#afa78e9c56603acc341c34ef66471c76a',1,'UIHandler.userController()']]]
+  ['p_1426',['p',['../class_card_manager.html#ab5f6874ccc96cb71b81cdd1d46424d44',1,'CardManager']]],
+  ['pausetime_1427',['pauseTime',['../class_a_i_controller_script.html#abac442bb20e415558352716ab8d9389f',1,'AIControllerScript']]],
+  ['pitch_1428',['pitch',['../class_unity_template_projects_1_1_simple_camera_controller_1_1_camera_state.html#ab331842253f91e09b2560559518184d4',1,'UnityTemplateProjects::SimpleCameraController::CameraState']]],
+  ['playablecards_1429',['playableCards',['../class_card_manager.html#a2a60dd95ebf122d31bd5e0f2c526b21a',1,'CardManager']]],
+  ['player_1430',['player',['../class_shortcut_test_u_i.html#a96a353099a365223f9597f607c54fcc8',1,'ShortcutTestUI']]],
+  ['player1_1431',['Player1',['../class_suggestion_test.html#acf31e41fbc684c080985535db03e35d2',1,'SuggestionTest']]],
+  ['player2_1432',['Player2',['../class_suggestion_test.html#a1bc28b3aa6258f154563e39e43557b06',1,'SuggestionTest']]],
+  ['player3_1433',['Player3',['../class_suggestion_test.html#ad05d437ed590913a0fd254413c74022a',1,'SuggestionTest']]],
+  ['player4_1434',['Player4',['../class_suggestion_test.html#a9b22a5ce2871c18fef75b475f4aa5f6c',1,'SuggestionTest']]],
+  ['player5_1435',['Player5',['../class_suggestion_test.html#a68218ee2c77bf0d480276fcc77190780',1,'SuggestionTest']]],
+  ['player6_1436',['Player6',['../class_suggestion_test.html#a9bdfbe8861a29f41e8a08b1d5b9cbe3f',1,'SuggestionTest']]],
+  ['playercontroller_1437',['playerController',['../class_round_manager.html#aa06567cbb4448d7a1730554283b07920',1,'RoundManager']]],
+  ['playereliminatedscreen_1438',['playerEliminatedScreen',['../class_u_i_handler.html#a9c80bee4d0b682894c7f76686e04f617',1,'UIHandler']]],
+  ['playereliminatedtext_1439',['playerEliminatedText',['../class_u_i_handler.html#ac18bff289df80bd4d477702469291897',1,'UIHandler']]],
+  ['playerfound_1440',['playerFound',['../class_suggestion_test.html#a3531cb958e93eb942726558173e494c3',1,'SuggestionTest']]],
+  ['playerinslot_1441',['playerInSlot',['../class_room_player_slot.html#ada30753aed732d0685e0e1784dd4128f',1,'RoomPlayerSlot']]],
+  ['playermastercontroller_1442',['playerMasterController',['../class_anson_test_script.html#a755df382f3af7865c1c69bf1dfb5eabd',1,'AnsonTestScript.playerMasterController()'],['../class_game_manager_script.html#ae18016cd5d49cf173a935b5dabd710a0',1,'GameManagerScript.playerMasterController()'],['../class_test_u_i_script.html#a5e6511176673fa73f808b6c35b8ea57d',1,'TestUIScript.playerMasterController()'],['../class_player_movement_test_script.html#afbc51ee01695e5139c5bec0c90f8a29f',1,'PlayerMovementTestScript.playerMasterController()']]],
+  ['playerpieceprefab_1443',['playerPiecePrefab',['../class_board_builder.html#a949a29202d898e07ccf976e8194e55c0',1,'BoardBuilder']]],
+  ['players_1444',['players',['../class_board_builder.html#aea1aba1b6f52feba6c147970c922f2bf',1,'BoardBuilder.players()'],['../class_board_manager.html#a662a91f8d9b8e1034896534d8b931824',1,'BoardManager.players()'],['../class_room_entry_exit_test_script.html#a87adf155bce5613a3e09a3f730d4e218',1,'RoomEntryExitTestScript.players()']]],
+  ['playersinroom_1445',['playersInRoom',['../class_room_entry_exit_test_script.html#ade54fc7830c8d6b6d39824ea903f8bd1',1,'RoomEntryExitTestScript']]],
+  ['playerslots_1446',['playerSlots',['../class_room_script.html#a3c06edea2f04e15a6341bac865d41292',1,'RoomScript']]],
+  ['playerstatsscript_1447',['playerStatsScript',['../class_player_master_controller.html#a5af38dac9fb901d199bed01e2818bed0',1,'PlayerMasterController']]],
+  ['playertoken_1448',['playerToken',['../class_board_tile_script.html#ae74e713cd21a6f2588a446cfbd3add6f',1,'BoardTileScript']]],
+  ['playertokens_1449',['playerTokens',['../class_room_entry_exit_test_script.html#a55b742f0bdedbed6d3dc177647b10ef3',1,'RoomEntryExitTestScript']]],
+  ['playertokenscript_1450',['playerTokenScript',['../class_player_master_controller.html#a609753c224c7c2dc65d1c84bf9ad066d',1,'PlayerMasterController']]],
+  ['positionlerptime_1451',['positionLerpTime',['../class_unity_template_projects_1_1_simple_camera_controller.html#a036fd7d0359c4010f5f1f667d782e429',1,'UnityTemplateProjects::SimpleCameraController']]],
+  ['previousaimode_1452',['previousAIMode',['../class_a_i_controller_script.html#a6d80108a01df61fb017b072d5984ca07',1,'AIControllerScript']]],
+  ['profplumentry_1453',['profPlumEntry',['../class_room_entry_exit_test_script.html#a2504ffb1f400344c516f8956f236f809',1,'RoomEntryExitTestScript']]],
+  ['profplumexit_1454',['profPlumExit',['../class_room_entry_exit_test_script.html#ae97827c7d6c66334fc14cc972c1aa136',1,'RoomEntryExitTestScript']]]
 ];

@@ -1,0 +1,11 @@
+<map id="RoundManager.DelaySug" name="RoundManager.DelaySug">
+<area shape="rect" id="node1" title="Maek suggestion after a delay time, used for free suggestion tile" alt="" coords="5,31,207,60"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="1220,31,1473,60"/>
+<area shape="rect" id="node4" href="$class_u_i_handler.html#a52241b6fefb8a446c2c000202216bfd2" title="makes suggestion when the button is pressed" alt="" coords="255,56,511,86"/>
+<area shape="rect" id="node3" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="1521,31,1764,60"/>
+<area shape="rect" id="node5" href="$class_u_i_handler.html#a99048b81a1303baba7efd44095c0f235" title=" " alt="" coords="559,83,821,112"/>
+<area shape="rect" id="node6" href="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1" title=" " alt="" coords="926,30,1115,59"/>
+<area shape="rect" id="node7" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="897,83,1144,112"/>
+<area shape="rect" id="node8" href="$class_player_master_controller.html#a0447a8a21b5c0f2c94f9d27e0bcd0830" title=" " alt="" coords="869,136,1172,166"/>
+<area shape="rect" id="node9" href="$class_suggestion.html#aec2e9ce82ae5f51cea7570bc6dafa43a" title=" " alt="" coords="921,190,1120,219"/>
+</map>

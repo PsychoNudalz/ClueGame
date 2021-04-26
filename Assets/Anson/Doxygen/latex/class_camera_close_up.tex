@@ -1,11 +1,13 @@
 \hypertarget{class_camera_close_up}{}\doxysection{Camera\+Close\+Up Class Reference}
 \label{class_camera_close_up}\index{CameraCloseUp@{CameraCloseUp}}
-Inheritance diagram for Camera\+Close\+Up\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_camera_close_up}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Camera\+Close\+Up\+:
+% FIG 0
+
+
+Collaboration diagram for Camera\+Close\+Up\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,6 +18,34 @@ void \mbox{\hyperlink{class_camera_close_up_ad31062bdf359a453fc85ebdd71fa1bae}{C
 void \mbox{\hyperlink{class_camera_close_up_a5d9269db8992f56ba4929347e2dc6522}{Clear\+Close\+Up}} ()
 \item 
 void \mbox{\hyperlink{class_camera_close_up_aee634e08987ea079413fd67b737b2c5d}{Set\+Character\+Close\+Up}} (\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} character)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_camera_close_up_a459b2850796bf20dc58e6bca58551d79}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_camera_close_up_ab267d3e10045453ca402ae9c82069a01}{Update}} ()
+\item 
+Vector3 \mbox{\hyperlink{class_camera_close_up_a684c25133060e7ff6e1d462b0504c590}{Get\+Camera\+Position}} (\mbox{\hyperlink{_camera_close_up_8cs_ae78eb2383d398397da52f3769a2e1151}{Camera\+Target}} current\+Target)
+\item 
+IEnumerator \mbox{\hyperlink{class_camera_close_up_ae902d2ccdf969212e0cb84f638f68851}{Clear\+Close\+Up\+Delay}} (float delay)
+\item 
+void \mbox{\hyperlink{class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a}{Test\+Set\+Camera}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_camera_close_up_a2bd88b20a7e7124fcc5d1fe7570a4646}{move\+Speed}} = 5f
+\item 
+bool \mbox{\hyperlink{class_camera_close_up_a755eada6a26c2769c7bc54e16036e6dd}{test\+Keys}}
+\item 
+Keyboard \mbox{\hyperlink{class_camera_close_up_a9d82764c57b8d9a0a01bc986cae7894f}{kb}}
+\item 
+Vector3 \mbox{\hyperlink{class_camera_close_up_a5bba59a8cbc85f7366e3bf62b251bdf2}{initial\+Camera\+Position}}
+\item 
+\mbox{\hyperlink{_camera_close_up_8cs_ae78eb2383d398397da52f3769a2e1151}{Camera\+Target}} \mbox{\hyperlink{class_camera_close_up_ae727e93b95f1bfa38bbbc471828e76c4}{current\+Camera\+Target}}
+\item 
+\mbox{\hyperlink{class_close_up_point_script}{Close\+Up\+Point\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_camera_close_up_a81928b6c44fcc814ae3edf330f7f57c5}{close\+Up\+Points}}
 \end{DoxyCompactItemize}
 
 
@@ -32,17 +62,108 @@ void \mbox{\hyperlink{class_camera_close_up_aee634e08987ea079413fd67b737b2c5d}{S
 \doxysubsubsection{\texorpdfstring{ClearCloseUp()}{ClearCloseUp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Camera\+Close\+Up.\+Clear\+Close\+Up (\begin{DoxyParamCaption}\item[{float}]{delay }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_camera_close_up_ae902d2ccdf969212e0cb84f638f68851}\label{class_camera_close_up_ae902d2ccdf969212e0cb84f638f68851}} 
+\index{CameraCloseUp@{CameraCloseUp}!ClearCloseUpDelay@{ClearCloseUpDelay}}
+\index{ClearCloseUpDelay@{ClearCloseUpDelay}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{ClearCloseUpDelay()}{ClearCloseUpDelay()}}
+{\footnotesize\ttfamily IEnumerator Camera\+Close\+Up.\+Clear\+Close\+Up\+Delay (\begin{DoxyParamCaption}\item[{float}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_camera_close_up_a684c25133060e7ff6e1d462b0504c590}\label{class_camera_close_up_a684c25133060e7ff6e1d462b0504c590}} 
+\index{CameraCloseUp@{CameraCloseUp}!GetCameraPosition@{GetCameraPosition}}
+\index{GetCameraPosition@{GetCameraPosition}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{GetCameraPosition()}{GetCameraPosition()}}
+{\footnotesize\ttfamily Vector3 Camera\+Close\+Up.\+Get\+Camera\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_camera_close_up_8cs_ae78eb2383d398397da52f3769a2e1151}{Camera\+Target}}}]{current\+Target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
 \mbox{\Hypertarget{class_camera_close_up_aee634e08987ea079413fd67b737b2c5d}\label{class_camera_close_up_aee634e08987ea079413fd67b737b2c5d}} 
 \index{CameraCloseUp@{CameraCloseUp}!SetCharacterCloseUp@{SetCharacterCloseUp}}
 \index{SetCharacterCloseUp@{SetCharacterCloseUp}!CameraCloseUp@{CameraCloseUp}}
 \doxysubsubsection{\texorpdfstring{SetCharacterCloseUp()}{SetCharacterCloseUp()}}
 {\footnotesize\ttfamily void Camera\+Close\+Up.\+Set\+Character\+Close\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{character }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_camera_close_up_a1d70afa00d6f67abee342c029af88fcf}\label{class_camera_close_up_a1d70afa00d6f67abee342c029af88fcf}} 
 \index{CameraCloseUp@{CameraCloseUp}!SetCloseUp@{SetCloseUp}}
 \index{SetCloseUp@{SetCloseUp}!CameraCloseUp@{CameraCloseUp}}
 \doxysubsubsection{\texorpdfstring{SetCloseUp()}{SetCloseUp()}}
 {\footnotesize\ttfamily void Camera\+Close\+Up.\+Set\+Close\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_camera_close_up_8cs_ae78eb2383d398397da52f3769a2e1151}{Camera\+Target}}}]{target }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{class_camera_close_up_a459b2850796bf20dc58e6bca58551d79}\label{class_camera_close_up_a459b2850796bf20dc58e6bca58551d79}} 
+\index{CameraCloseUp@{CameraCloseUp}!Start@{Start}}
+\index{Start@{Start}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Camera\+Close\+Up.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a}\label{class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a}} 
+\index{CameraCloseUp@{CameraCloseUp}!TestSetCamera@{TestSetCamera}}
+\index{TestSetCamera@{TestSetCamera}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{TestSetCamera()}{TestSetCamera()}}
+{\footnotesize\ttfamily void Camera\+Close\+Up.\+Test\+Set\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{class_camera_close_up_ab267d3e10045453ca402ae9c82069a01}\label{class_camera_close_up_ab267d3e10045453ca402ae9c82069a01}} 
+\index{CameraCloseUp@{CameraCloseUp}!Update@{Update}}
+\index{Update@{Update}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Camera\+Close\+Up.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 12
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_camera_close_up_a81928b6c44fcc814ae3edf330f7f57c5}\label{class_camera_close_up_a81928b6c44fcc814ae3edf330f7f57c5}} 
+\index{CameraCloseUp@{CameraCloseUp}!closeUpPoints@{closeUpPoints}}
+\index{closeUpPoints@{closeUpPoints}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{closeUpPoints}{closeUpPoints}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_close_up_point_script}{Close\+Up\+Point\+Script}} \mbox{[}$\,$\mbox{]} Camera\+Close\+Up.\+close\+Up\+Points\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_ae727e93b95f1bfa38bbbc471828e76c4}\label{class_camera_close_up_ae727e93b95f1bfa38bbbc471828e76c4}} 
+\index{CameraCloseUp@{CameraCloseUp}!currentCameraTarget@{currentCameraTarget}}
+\index{currentCameraTarget@{currentCameraTarget}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{currentCameraTarget}{currentCameraTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_camera_close_up_8cs_ae78eb2383d398397da52f3769a2e1151}{Camera\+Target}} Camera\+Close\+Up.\+current\+Camera\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_a5bba59a8cbc85f7366e3bf62b251bdf2}\label{class_camera_close_up_a5bba59a8cbc85f7366e3bf62b251bdf2}} 
+\index{CameraCloseUp@{CameraCloseUp}!initialCameraPosition@{initialCameraPosition}}
+\index{initialCameraPosition@{initialCameraPosition}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{initialCameraPosition}{initialCameraPosition}}
+{\footnotesize\ttfamily Vector3 Camera\+Close\+Up.\+initial\+Camera\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_a9d82764c57b8d9a0a01bc986cae7894f}\label{class_camera_close_up_a9d82764c57b8d9a0a01bc986cae7894f}} 
+\index{CameraCloseUp@{CameraCloseUp}!kb@{kb}}
+\index{kb@{kb}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{kb}{kb}}
+{\footnotesize\ttfamily Keyboard Camera\+Close\+Up.\+kb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_a2bd88b20a7e7124fcc5d1fe7570a4646}\label{class_camera_close_up_a2bd88b20a7e7124fcc5d1fe7570a4646}} 
+\index{CameraCloseUp@{CameraCloseUp}!moveSpeed@{moveSpeed}}
+\index{moveSpeed@{moveSpeed}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{moveSpeed}{moveSpeed}}
+{\footnotesize\ttfamily float Camera\+Close\+Up.\+move\+Speed = 5f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_camera_close_up_a755eada6a26c2769c7bc54e16036e6dd}\label{class_camera_close_up_a755eada6a26c2769c7bc54e16036e6dd}} 
+\index{CameraCloseUp@{CameraCloseUp}!testKeys@{testKeys}}
+\index{testKeys@{testKeys}!CameraCloseUp@{CameraCloseUp}}
+\doxysubsubsection{\texorpdfstring{testKeys}{testKeys}}
+{\footnotesize\ttfamily bool Camera\+Close\+Up.\+test\+Keys\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

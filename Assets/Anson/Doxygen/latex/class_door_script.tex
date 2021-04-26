@@ -1,11 +1,13 @@
 \hypertarget{class_door_script}{}\doxysection{Door\+Script Class Reference}
 \label{class_door_script}\index{DoorScript@{DoorScript}}
-Inheritance diagram for Door\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_door_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Door\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Door\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,6 +16,24 @@ void \mbox{\hyperlink{class_door_script_a2d8c537d4f48ea0e2b4c09eb9ef58d87}{Open\
 void \mbox{\hyperlink{class_door_script_adcc7e56a969266eee3abbbc6cca692da}{Close\+Door}} ()
 \item 
 void \mbox{\hyperlink{class_door_script_acd71d503cce9056e65142a859bd2aad4}{Toggle\+Door\+Open\+Close}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_door_script_a1c8cc5df4d793c173d8289bf97437dbe}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_door_script_a49b1f56617ce757c7b61acced607aece}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_door_script_ab54d709333e29c25138f6a2eb592a082}{test\+Keys\+Active}}
+\item 
+Animator \mbox{\hyperlink{class_door_script_ac73ec3d5f004014298385b25bfa628f2}{door\+Animator}}
+\item 
+bool \mbox{\hyperlink{class_door_script_af7272e796e46c4637180f818ba5259d6}{is\+Open}}
+\item 
+Keyboard \mbox{\hyperlink{class_door_script_a64843c8f57cd2750de9e1482fe8d2ea9}{kb}}
 \end{DoxyCompactItemize}
 
 
@@ -24,17 +44,64 @@ void \mbox{\hyperlink{class_door_script_acd71d503cce9056e65142a859bd2aad4}{Toggl
 \doxysubsubsection{\texorpdfstring{CloseDoor()}{CloseDoor()}}
 {\footnotesize\ttfamily void Door\+Script.\+Close\+Door (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_door_script_a2d8c537d4f48ea0e2b4c09eb9ef58d87}\label{class_door_script_a2d8c537d4f48ea0e2b4c09eb9ef58d87}} 
 \index{DoorScript@{DoorScript}!OpenDoor@{OpenDoor}}
 \index{OpenDoor@{OpenDoor}!DoorScript@{DoorScript}}
 \doxysubsubsection{\texorpdfstring{OpenDoor()}{OpenDoor()}}
 {\footnotesize\ttfamily void Door\+Script.\+Open\+Door (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_door_script_a1c8cc5df4d793c173d8289bf97437dbe}\label{class_door_script_a1c8cc5df4d793c173d8289bf97437dbe}} 
+\index{DoorScript@{DoorScript}!Start@{Start}}
+\index{Start@{Start}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Door\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_door_script_acd71d503cce9056e65142a859bd2aad4}\label{class_door_script_acd71d503cce9056e65142a859bd2aad4}} 
 \index{DoorScript@{DoorScript}!ToggleDoorOpenClose@{ToggleDoorOpenClose}}
 \index{ToggleDoorOpenClose@{ToggleDoorOpenClose}!DoorScript@{DoorScript}}
 \doxysubsubsection{\texorpdfstring{ToggleDoorOpenClose()}{ToggleDoorOpenClose()}}
 {\footnotesize\ttfamily void Door\+Script.\+Toggle\+Door\+Open\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_door_script_a49b1f56617ce757c7b61acced607aece}\label{class_door_script_a49b1f56617ce757c7b61acced607aece}} 
+\index{DoorScript@{DoorScript}!Update@{Update}}
+\index{Update@{Update}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Door\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 5
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_door_script_ac73ec3d5f004014298385b25bfa628f2}\label{class_door_script_ac73ec3d5f004014298385b25bfa628f2}} 
+\index{DoorScript@{DoorScript}!doorAnimator@{doorAnimator}}
+\index{doorAnimator@{doorAnimator}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{doorAnimator}{doorAnimator}}
+{\footnotesize\ttfamily Animator Door\+Script.\+door\+Animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_door_script_af7272e796e46c4637180f818ba5259d6}\label{class_door_script_af7272e796e46c4637180f818ba5259d6}} 
+\index{DoorScript@{DoorScript}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{isOpen}{isOpen}}
+{\footnotesize\ttfamily bool Door\+Script.\+is\+Open\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_door_script_a64843c8f57cd2750de9e1482fe8d2ea9}\label{class_door_script_a64843c8f57cd2750de9e1482fe8d2ea9}} 
+\index{DoorScript@{DoorScript}!kb@{kb}}
+\index{kb@{kb}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{kb}{kb}}
+{\footnotesize\ttfamily Keyboard Door\+Script.\+kb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_door_script_ab54d709333e29c25138f6a2eb592a082}\label{class_door_script_ab54d709333e29c25138f6a2eb592a082}} 
+\index{DoorScript@{DoorScript}!testKeysActive@{testKeysActive}}
+\index{testKeysActive@{testKeysActive}!DoorScript@{DoorScript}}
+\doxysubsubsection{\texorpdfstring{testKeysActive}{testKeysActive}}
+{\footnotesize\ttfamily bool Door\+Script.\+test\+Keys\+Active\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

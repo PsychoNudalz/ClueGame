@@ -1,0 +1,4 @@
+<map id="RoundManager.GetCurrentPlayer" name="RoundManager.GetCurrentPlayer">
+<area shape="rect" id="node1" title="Gets the player controller for the current player" alt="" coords="5,5,259,35"/>
+<area shape="rect" id="node2" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="307,5,549,35"/>
+</map>

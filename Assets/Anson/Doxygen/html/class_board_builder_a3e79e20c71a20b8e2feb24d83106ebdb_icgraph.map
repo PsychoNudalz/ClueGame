@@ -1,0 +1,8 @@
+<map id="BoardBuilder.CheckNearbyTiles" name="BoardBuilder.CheckNearbyTiles">
+<area shape="rect" id="node1" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1084,32,1331,61"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="751,5,1010,35"/>
+<area shape="rect" id="node6" href="$class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="725,59,1036,88"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" id="node5" href="$class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+</map>

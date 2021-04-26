@@ -1,0 +1,4 @@
+<map id="GameSetUpScript.StartGame" name="GameSetUpScript.StartGame">
+<area shape="rect" id="node1" title="assigns the players in the game based on the saved AI selection" alt="" coords="5,5,236,35"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="284,5,563,35"/>
+</map>

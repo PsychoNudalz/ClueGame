@@ -1,0 +1,8 @@
+<map id="UserController.SetWeapon" name="UserController.SetWeapon">
+<area shape="rect" id="node1" title=" " alt="" coords="907,59,1116,88"/>
+<area shape="rect" id="node2" href="$class_a_i_controller_script.html#a7be5eb284c6258672e70af128f8638df" title="Decides that cards to accuse based on the To Guess List" alt="" coords="573,5,858,35"/>
+<area shape="rect" id="node5" href="$class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="572,59,859,88"/>
+<area shape="rect" id="node6" href="$class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3" title="get test choices and make suggestion" alt="" coords="589,112,842,141"/>
+<area shape="rect" id="node3" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,32,524,61"/>
+<area shape="rect" id="node4" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,32,244,61"/>
+</map>

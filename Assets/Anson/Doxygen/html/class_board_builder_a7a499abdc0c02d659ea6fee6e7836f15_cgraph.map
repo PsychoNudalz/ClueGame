@@ -1,0 +1,11 @@
+<map id="BoardBuilder.PlaceBonusTiles" name="BoardBuilder.PlaceBonusTiles">
+<area shape="rect" id="node1" title="Randomly place Free roll / accusation tiles." alt="" coords="5,59,240,88"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="314,32,573,61"/>
+<area shape="rect" id="node9" href="$class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="288,85,599,115"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="653,32,899,61"/>
+<area shape="rect" id="node8" href="$class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="647,85,905,115"/>
+<area shape="rect" id="node4" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="953,32,1105,61"/>
+<area shape="rect" id="node5" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="1153,5,1415,35"/>
+<area shape="rect" id="node7" href="$class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1189,59,1379,88"/>
+<area shape="rect" id="node6" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1463,5,1711,35"/>
+</map>

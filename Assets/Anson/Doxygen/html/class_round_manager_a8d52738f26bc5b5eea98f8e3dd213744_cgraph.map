@@ -1,0 +1,13 @@
+<map id="RoundManager.DelayRoll" name="RoundManager.DelayRoll">
+<area shape="rect" id="node1" title="roll dice after a delay time, used for free roll tile" alt="" coords="5,85,204,115"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#ab795c17242b95ab2cef508da5daa2593" title="Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it" alt="" coords="252,85,444,115"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#a5cfea3b56a7576ad02c82c27bb0c6ba7" title="reset the dice after a time delay" alt="" coords="492,59,739,88"/>
+<area shape="rect" id="node10" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title=" " alt="" coords="556,112,675,141"/>
+<area shape="rect" id="node4" href="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67" title=" " alt="" coords="787,59,920,88"/>
+<area shape="rect" id="node5" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title=" " alt="" coords="1025,5,1154,35"/>
+<area shape="rect" id="node7" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title=" " alt="" coords="968,59,1211,88"/>
+<area shape="rect" id="node9" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="1031,112,1148,141"/>
+<area shape="rect" id="node6" href="$class_die.html#a390d46459637fd249926cda472255d84" title=" " alt="" coords="1327,5,1473,35"/>
+<area shape="rect" id="node8" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title=" " alt="" coords="1259,59,1541,88"/>
+<area shape="rect" id="node11" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title=" " alt="" coords="802,112,905,141"/>
+</map>

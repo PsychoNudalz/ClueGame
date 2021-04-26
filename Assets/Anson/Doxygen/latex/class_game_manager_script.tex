@@ -5,12 +5,14 @@
 This controls the starting and exiting the game loop  
 
 
-Inheritance diagram for Game\+Manager\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_game_manager_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Game\+Manager\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Game\+Manager\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,6 +22,30 @@ void \mbox{\hyperlink{class_game_manager_script_ad5fb4e070e2f640dac33825687c5f49
 \begin{DoxyCompactList}\small\item\em returning to main menu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_manager_script_ae40b6e53f9f1fe97a3b12dfb2467b48a}{Assign\+All\+Components}} ()
 \begin{DoxyCompactList}\small\item\em assigning all the components if not linked \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game_manager_script_a51acc0112ff3191f7c22046af6556a1c}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_game_manager_script_ae18016cd5d49cf173a935b5dabd710a0}{player\+Master\+Controller}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_game_manager_script_ad801cf4cc3d0161cdb7205e208caf3b4}{board\+Manager}}
+\item 
+\mbox{\hyperlink{class_dice}{Dice}} \mbox{\hyperlink{class_game_manager_script_a82a19dc92f490bb4ca5db411e5404cad}{dice}}
+\item 
+\mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} \mbox{\hyperlink{class_game_manager_script_aa4955149874803110db080362a0f9155}{turn\+Controller}}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_game_manager_script_abd59691c5be0eb811c397a5b2491bfbd}{round\+Manager}}
+\item 
+\mbox{\hyperlink{class_card_manager}{Card\+Manager}} \mbox{\hyperlink{class_game_manager_script_acbb4c87a56320f54561dce1610b8664e}{card\+Manager}}
+\item 
+\mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_game_manager_script_ac252d887c4da24545a80b08a38cd8d41}{user\+Controller}}
+\item 
+\mbox{\hyperlink{class_u_i_handler}{UIHandler}} \mbox{\hyperlink{class_game_manager_script_a7684140c1c1ac70fc95b4565d59cbb8c}{u\+IHandler}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -38,6 +64,8 @@ This controls the starting and exiting the game loop
 
 assigning all the components if not linked 
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_game_manager_script_ad5fb4e070e2f640dac33825687c5f49f}\label{class_game_manager_script_ad5fb4e070e2f640dac33825687c5f49f}} 
 \index{GameManagerScript@{GameManagerScript}!LeaveToMenu@{LeaveToMenu}}
 \index{LeaveToMenu@{LeaveToMenu}!GameManagerScript@{GameManagerScript}}
@@ -48,6 +76,14 @@ assigning all the components if not linked
 
 returning to main menu 
 
+\mbox{\Hypertarget{class_game_manager_script_a51acc0112ff3191f7c22046af6556a1c}\label{class_game_manager_script_a51acc0112ff3191f7c22046af6556a1c}} 
+\index{GameManagerScript@{GameManagerScript}!Start@{Start}}
+\index{Start@{Start}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Game\+Manager\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31}\label{class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31}} 
 \index{GameManagerScript@{GameManagerScript}!StartGame@{StartGame}}
 \index{StartGame@{StartGame}!GameManagerScript@{GameManagerScript}}
@@ -57,6 +93,61 @@ returning to main menu
 
 
 starting and initialing the game and it\textquotesingle{}s components 
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_manager_script_ad801cf4cc3d0161cdb7205e208caf3b4}\label{class_game_manager_script_ad801cf4cc3d0161cdb7205e208caf3b4}} 
+\index{GameManagerScript@{GameManagerScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Game\+Manager\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_acbb4c87a56320f54561dce1610b8664e}\label{class_game_manager_script_acbb4c87a56320f54561dce1610b8664e}} 
+\index{GameManagerScript@{GameManagerScript}!cardManager@{cardManager}}
+\index{cardManager@{cardManager}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{cardManager}{cardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_manager}{Card\+Manager}} Game\+Manager\+Script.\+card\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_a82a19dc92f490bb4ca5db411e5404cad}\label{class_game_manager_script_a82a19dc92f490bb4ca5db411e5404cad}} 
+\index{GameManagerScript@{GameManagerScript}!dice@{dice}}
+\index{dice@{dice}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dice}{Dice}} Game\+Manager\+Script.\+dice\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_ae18016cd5d49cf173a935b5dabd710a0}\label{class_game_manager_script_ae18016cd5d49cf173a935b5dabd710a0}} 
+\index{GameManagerScript@{GameManagerScript}!playerMasterController@{playerMasterController}}
+\index{playerMasterController@{playerMasterController}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{playerMasterController}{playerMasterController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Game\+Manager\+Script.\+player\+Master\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_abd59691c5be0eb811c397a5b2491bfbd}\label{class_game_manager_script_abd59691c5be0eb811c397a5b2491bfbd}} 
+\index{GameManagerScript@{GameManagerScript}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} Game\+Manager\+Script.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_aa4955149874803110db080362a0f9155}\label{class_game_manager_script_aa4955149874803110db080362a0f9155}} 
+\index{GameManagerScript@{GameManagerScript}!turnController@{turnController}}
+\index{turnController@{turnController}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{turnController}{turnController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} Game\+Manager\+Script.\+turn\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_a7684140c1c1ac70fc95b4565d59cbb8c}\label{class_game_manager_script_a7684140c1c1ac70fc95b4565d59cbb8c}} 
+\index{GameManagerScript@{GameManagerScript}!uIHandler@{uIHandler}}
+\index{uIHandler@{uIHandler}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{uIHandler}{uIHandler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_i_handler}{UIHandler}} Game\+Manager\+Script.\+u\+IHandler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_game_manager_script_ac252d887c4da24545a80b08a38cd8d41}\label{class_game_manager_script_ac252d887c4da24545a80b08a38cd8d41}} 
+\index{GameManagerScript@{GameManagerScript}!userController@{userController}}
+\index{userController@{userController}!GameManagerScript@{GameManagerScript}}
+\doxysubsubsection{\texorpdfstring{userController}{userController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} Game\+Manager\+Script.\+user\+Controller\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

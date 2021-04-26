@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.RemoveToGuessCard" name="PlayerMasterController.RemoveToGuessCard">
+<area shape="rect" id="node1" title="Remove a card from ToGuessCard" alt="" coords="5,5,347,35"/>
+<area shape="rect" id="node2" href="$class_player_stats_script.html#a9cfb94bd7661f4120b9ea69c025bd368" title="remove a selected card from To Guess List" alt="" coords="395,5,689,35"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="BoardTileScript.Start" name="BoardTileScript.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,173,35"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#a1b7d89743e911864de248e4176266acc" title="initialise and finding the needed componenets for the tile includes boardTileEffectHandler,..." alt="" coords="221,5,376,35"/>
+</map>

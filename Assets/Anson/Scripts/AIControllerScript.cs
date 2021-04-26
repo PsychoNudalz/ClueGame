@@ -221,7 +221,7 @@ public class AIControllerScript : MonoBehaviour
         {
             SetAIMode(AIMode.Suggestion);
         }
-        
+
         else if (currentAIMode.Equals(AIMode.Thinking) && !roundManager.CanRoll && !roundManager.CanSug && roundManager.CanAcc && CanAccuse())
         {
             SetAIMode(AIMode.Accusation);
@@ -494,9 +494,12 @@ public class AIControllerScript : MonoBehaviour
     bool CanAccuse()
     {
         LoadToGuessList(currentPlayerController.GetToGuessCards());
+        OutputDebug("AI To Guess List Length: " + toGuessList.Count);
 
         if (toGuessList.Count > 6)
         {
+            OutputDebug("AI to guess list too long to accuse");
+
             return false;
         }
 
@@ -532,7 +535,7 @@ public class AIControllerScript : MonoBehaviour
         {
             OutputDebug(s);
         }
-        outputDebugStack.Add(Time.time + ": "+s);
+        outputDebugStack.Add(Time.time + ": " + s);
         if (outputDebugStack.Count > 15)
         {
             outputDebugStack.RemoveAt(0);

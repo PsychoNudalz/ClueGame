@@ -1,11 +1,13 @@
 \hypertarget{class_player_movement_test_script}{}\doxysection{Player\+Movement\+Test\+Script Class Reference}
 \label{class_player_movement_test_script}\index{PlayerMovementTestScript@{PlayerMovementTestScript}}
-Inheritance diagram for Player\+Movement\+Test\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_player_movement_test_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Player\+Movement\+Test\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+Movement\+Test\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,6 +23,30 @@ void \mbox{\hyperlink{class_player_movement_test_script_a8a5a612e81f2f93e8095b0e
 \item 
 void \mbox{\hyperlink{class_player_movement_test_script_ab5645a145e38d212e350eb69d3096574}{Take\+Shortcut}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_movement_test_script_a0af58f97133603ab1ff16c72678ef28b}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_player_movement_test_script_a1c247cfdee35d3a1c1d3a81fd579b426}{Fixed\+Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_player_movement_test_script_afbc51ee01695e5139c5bec0c90f8a29f}{player\+Master\+Controller}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_player_movement_test_script_ad169b0fb46bf694793ecaa924f40e1e8}{board\+Manager}}
+\item 
+\mbox{\hyperlink{class_dice}{Dice}} \mbox{\hyperlink{class_player_movement_test_script_ad491ce8bec5daed7f084c01db5d983d1}{dice}}
+\item 
+Button \mbox{\hyperlink{class_player_movement_test_script_af5a26c69c72a393cca5f2cc6653a500f}{shortcut\+Button}}
+\item 
+Button \mbox{\hyperlink{class_player_movement_test_script_a1717cfa7e46ada67f79f095b35be8869}{roll\+Button}}
+\item 
+Button \mbox{\hyperlink{class_player_movement_test_script_afad0d9802c6673808525ab370bcc45ad}{reset\+Button}}
+\item 
+bool \mbox{\hyperlink{class_player_movement_test_script_aca945f32cbe6da52941cf91d2da93ab7}{dice\+Rolled}} = false
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -30,35 +56,108 @@ void \mbox{\hyperlink{class_player_movement_test_script_ab5645a145e38d212e350eb6
 \doxysubsubsection{\texorpdfstring{AssignAllComponents()}{AssignAllComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Assign\+All\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_player_movement_test_script_a8d7940f1f0235c447e995eccecfa2085}\label{class_player_movement_test_script_a8d7940f1f0235c447e995eccecfa2085}} 
 \index{PlayerMovementTestScript@{PlayerMovementTestScript}!AssignAllComponents@{AssignAllComponents}}
 \index{AssignAllComponents@{AssignAllComponents}!PlayerMovementTestScript@{PlayerMovementTestScript}}
 \doxysubsubsection{\texorpdfstring{AssignAllComponents()}{AssignAllComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Assign\+All\+Components (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{callback\+Context }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_player_movement_test_script_a0af58f97133603ab1ff16c72678ef28b}\label{class_player_movement_test_script_a0af58f97133603ab1ff16c72678ef28b}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_player_movement_test_script_a1c247cfdee35d3a1c1d3a81fd579b426}\label{class_player_movement_test_script_a1c247cfdee35d3a1c1d3a81fd579b426}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_player_movement_test_script_a1f9e6f5902a9ba827538f3325227917c}\label{class_player_movement_test_script_a1f9e6f5902a9ba827538f3325227917c}} 
 \index{PlayerMovementTestScript@{PlayerMovementTestScript}!ResetDice@{ResetDice}}
 \index{ResetDice@{ResetDice}!PlayerMovementTestScript@{PlayerMovementTestScript}}
 \doxysubsubsection{\texorpdfstring{ResetDice()}{ResetDice()}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Reset\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 6
 \mbox{\Hypertarget{class_player_movement_test_script_aaa8efc18953ff0b4e286c66962221a8f}\label{class_player_movement_test_script_aaa8efc18953ff0b4e286c66962221a8f}} 
 \index{PlayerMovementTestScript@{PlayerMovementTestScript}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!PlayerMovementTestScript@{PlayerMovementTestScript}}
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_player_movement_test_script_a36e775e38982d88a818317723d2a04c2}\label{class_player_movement_test_script_a36e775e38982d88a818317723d2a04c2}} 
 \index{PlayerMovementTestScript@{PlayerMovementTestScript}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!PlayerMovementTestScript@{PlayerMovementTestScript}}
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Roll\+Dice (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{callback\+Context }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{class_player_movement_test_script_ab5645a145e38d212e350eb69d3096574}\label{class_player_movement_test_script_ab5645a145e38d212e350eb69d3096574}} 
 \index{PlayerMovementTestScript@{PlayerMovementTestScript}!TakeShortcut@{TakeShortcut}}
 \index{TakeShortcut@{TakeShortcut}!PlayerMovementTestScript@{PlayerMovementTestScript}}
 \doxysubsubsection{\texorpdfstring{TakeShortcut()}{TakeShortcut()}}
 {\footnotesize\ttfamily void Player\+Movement\+Test\+Script.\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_movement_test_script_ad169b0fb46bf694793ecaa924f40e1e8}\label{class_player_movement_test_script_ad169b0fb46bf694793ecaa924f40e1e8}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Player\+Movement\+Test\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_ad491ce8bec5daed7f084c01db5d983d1}\label{class_player_movement_test_script_ad491ce8bec5daed7f084c01db5d983d1}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!dice@{dice}}
+\index{dice@{dice}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dice}{Dice}} Player\+Movement\+Test\+Script.\+dice\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_aca945f32cbe6da52941cf91d2da93ab7}\label{class_player_movement_test_script_aca945f32cbe6da52941cf91d2da93ab7}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!diceRolled@{diceRolled}}
+\index{diceRolled@{diceRolled}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{diceRolled}{diceRolled}}
+{\footnotesize\ttfamily bool Player\+Movement\+Test\+Script.\+dice\+Rolled = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_afbc51ee01695e5139c5bec0c90f8a29f}\label{class_player_movement_test_script_afbc51ee01695e5139c5bec0c90f8a29f}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!playerMasterController@{playerMasterController}}
+\index{playerMasterController@{playerMasterController}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{playerMasterController}{playerMasterController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Player\+Movement\+Test\+Script.\+player\+Master\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_afad0d9802c6673808525ab370bcc45ad}\label{class_player_movement_test_script_afad0d9802c6673808525ab370bcc45ad}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!resetButton@{resetButton}}
+\index{resetButton@{resetButton}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{resetButton}{resetButton}}
+{\footnotesize\ttfamily Button Player\+Movement\+Test\+Script.\+reset\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_a1717cfa7e46ada67f79f095b35be8869}\label{class_player_movement_test_script_a1717cfa7e46ada67f79f095b35be8869}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!rollButton@{rollButton}}
+\index{rollButton@{rollButton}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{rollButton}{rollButton}}
+{\footnotesize\ttfamily Button Player\+Movement\+Test\+Script.\+roll\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_movement_test_script_af5a26c69c72a393cca5f2cc6653a500f}\label{class_player_movement_test_script_af5a26c69c72a393cca5f2cc6653a500f}} 
+\index{PlayerMovementTestScript@{PlayerMovementTestScript}!shortcutButton@{shortcutButton}}
+\index{shortcutButton@{shortcutButton}!PlayerMovementTestScript@{PlayerMovementTestScript}}
+\doxysubsubsection{\texorpdfstring{shortcutButton}{shortcutButton}}
+{\footnotesize\ttfamily Button Player\+Movement\+Test\+Script.\+shortcut\+Button\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,11 +1,13 @@
 \hypertarget{class_user_controller}{}\doxysection{User\+Controller Class Reference}
 \label{class_user_controller}\index{UserController@{UserController}}
-Inheritance diagram for User\+Controller\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_user_controller}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for User\+Controller\+:
+% FIG 0
+
+
+Collaboration diagram for User\+Controller\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,15 +40,41 @@ bool \mbox{\hyperlink{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}{M
 \item 
 \mbox{\hyperlink{class_suggestion}{Suggestion}} \mbox{\hyperlink{class_user_controller_a0273ddf3a60d73b91c0e89a0e8264f83}{Suggestion}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_controller_a0d42e016d1428255def6c3d9b7050523}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_user_controller_aa0657dfc523bb408c48fec9fd5dc6892}{rM}}
+\item 
+\mbox{\hyperlink{class_card_manager}{Card\+Manager}} \mbox{\hyperlink{class_user_controller_ac0bdbfabd82266c2165b37f788e8b25e}{card\+Manager}}
+\item 
+\mbox{\hyperlink{class_suggestion}{Suggestion}} \mbox{\hyperlink{class_user_controller_ad6cf04c90e9175027de685fb5894f8d6}{suggestion}}
+\item 
+\mbox{\hyperlink{class_accusation}{Accusation}} \mbox{\hyperlink{class_user_controller_a91104df4d881cade9f8deb961646d51f}{accusation}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_controller_a0d42e016d1428255def6c3d9b7050523}\label{class_user_controller_a0d42e016d1428255def6c3d9b7050523}} 
+\index{UserController@{UserController}!Awake@{Awake}}
+\index{Awake@{Awake}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void User\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_user_controller_ab90611f541e20c125133d09b62407f41}\label{class_user_controller_ab90611f541e20c125133d09b62407f41}} 
 \index{UserController@{UserController}!EndTurn@{EndTurn}}
 \index{EndTurn@{EndTurn}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{EndTurn()}{EndTurn()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} User\+Controller.\+End\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{class_user_controller_a587c55687141d18f375e0504ea4649fa}\label{class_user_controller_a587c55687141d18f375e0504ea4649fa}} 
 \index{UserController@{UserController}!GetCurrentPlayer@{GetCurrentPlayer}}
 \index{GetCurrentPlayer@{GetCurrentPlayer}!UserController@{UserController}}
@@ -60,18 +88,30 @@ Gets the player controller for the current player
 \begin{DoxyReturn}{Returns}
 player controller for the current player
 \end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}\label{class_user_controller_aa90e4e2fed6b1d661933450f430b95ba}} 
 \index{UserController@{UserController}!MakeAccusation@{MakeAccusation}}
 \index{MakeAccusation@{MakeAccusation}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{MakeAccusation()}{MakeAccusation()}}
 {\footnotesize\ttfamily bool User\+Controller.\+Make\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd}\label{class_user_controller_a6230816eec4c8be9bda248a166d7b9bd}} 
 \index{UserController@{UserController}!MakeSuggestion@{MakeSuggestion}}
 \index{MakeSuggestion@{MakeSuggestion}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{MakeSuggestion()}{MakeSuggestion()}}
 {\footnotesize\ttfamily bool User\+Controller.\+Make\+Suggestion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
 \mbox{\Hypertarget{class_user_controller_afef83f9ab2a7f38ccfebe89c17b37510}\label{class_user_controller_afef83f9ab2a7f38ccfebe89c17b37510}} 
 \index{UserController@{UserController}!PassSelected@{PassSelected}}
 \index{PassSelected@{PassSelected}!UserController@{UserController}}
@@ -84,35 +124,86 @@ player controller for the current player
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
 {\footnotesize\ttfamily void User\+Controller.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
 \mbox{\Hypertarget{class_user_controller_af896aefe0262e0d8f07fa5f18592877d}\label{class_user_controller_af896aefe0262e0d8f07fa5f18592877d}} 
 \index{UserController@{UserController}!SelectTile@{SelectTile}}
 \index{SelectTile@{SelectTile}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SelectTile()}{SelectTile()}}
 {\footnotesize\ttfamily void User\+Controller.\+Select\+Tile (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{tile }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
 \mbox{\Hypertarget{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8}\label{class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8}} 
 \index{UserController@{UserController}!SetCharacter@{SetCharacter}}
 \index{SetCharacter@{SetCharacter}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
 {\footnotesize\ttfamily void User\+Controller.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}}}]{c }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
 \mbox{\Hypertarget{class_user_controller_a80cdb48f3a7a1dbac2af911fb26d1c41}\label{class_user_controller_a80cdb48f3a7a1dbac2af911fb26d1c41}} 
 \index{UserController@{UserController}!SetRoom@{SetRoom}}
 \index{SetRoom@{SetRoom}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetRoom()}{SetRoom()}}
 {\footnotesize\ttfamily void User\+Controller.\+Set\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}}}]{c }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 16
+Here is the caller graph for this function\+:
+% FIG 17
 \mbox{\Hypertarget{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35}\label{class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35}} 
 \index{UserController@{UserController}!SetWeapon@{SetWeapon}}
 \index{SetWeapon@{SetWeapon}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{SetWeapon()}{SetWeapon()}}
 {\footnotesize\ttfamily void User\+Controller.\+Set\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{c }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
 \mbox{\Hypertarget{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277}\label{class_user_controller_a5141fbe53b6605d5431a4125ce8a1277}} 
 \index{UserController@{UserController}!TakeShortcut@{TakeShortcut}}
 \index{TakeShortcut@{TakeShortcut}!UserController@{UserController}}
 \doxysubsubsection{\texorpdfstring{TakeShortcut()}{TakeShortcut()}}
 {\footnotesize\ttfamily void User\+Controller.\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 20
+Here is the caller graph for this function\+:
+% FIG 21
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_controller_a91104df4d881cade9f8deb961646d51f}\label{class_user_controller_a91104df4d881cade9f8deb961646d51f}} 
+\index{UserController@{UserController}!accusation@{accusation}}
+\index{accusation@{accusation}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{accusation}{accusation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_accusation}{Accusation}} User\+Controller.\+accusation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_controller_ac0bdbfabd82266c2165b37f788e8b25e}\label{class_user_controller_ac0bdbfabd82266c2165b37f788e8b25e}} 
+\index{UserController@{UserController}!cardManager@{cardManager}}
+\index{cardManager@{cardManager}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{cardManager}{cardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_manager}{Card\+Manager}} User\+Controller.\+card\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_controller_aa0657dfc523bb408c48fec9fd5dc6892}\label{class_user_controller_aa0657dfc523bb408c48fec9fd5dc6892}} 
+\index{UserController@{UserController}!rM@{rM}}
+\index{rM@{rM}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{rM}{rM}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} User\+Controller.\+rM\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_controller_ad6cf04c90e9175027de685fb5894f8d6}\label{class_user_controller_ad6cf04c90e9175027de685fb5894f8d6}} 
+\index{UserController@{UserController}!suggestion@{suggestion}}
+\index{suggestion@{suggestion}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{suggestion}{suggestion}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_suggestion}{Suggestion}} User\+Controller.\+suggestion\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

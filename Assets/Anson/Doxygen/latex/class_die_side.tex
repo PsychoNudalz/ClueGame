@@ -1,17 +1,33 @@
 \hypertarget{class_die_side}{}\doxysection{Die\+Side Class Reference}
 \label{class_die_side}\index{DieSide@{DieSide}}
-Inheritance diagram for Die\+Side\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_die_side}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Die\+Side\+:
+% FIG 0
+
+
+Collaboration diagram for Die\+Side\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_die_side_a694174e094333dddba56a1fffeb7a00b}{Is\+On\+Ground}} ()
 \item 
 int \mbox{\hyperlink{class_die_side_aad0dab76f00ebbd4a4d036be82948752}{Get\+Side\+Value}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}{On\+Trigger\+Stay}} (Collider other)
+\item 
+void \mbox{\hyperlink{class_die_side_a11c5323a459391b2e6248b5945d844d9}{On\+Trigger\+Exit}} (Collider other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}{value}}
+\item 
+bool \mbox{\hyperlink{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}{is\+On\+Ground}}
 \end{DoxyCompactItemize}
 
 
@@ -22,11 +38,42 @@ int \mbox{\hyperlink{class_die_side_aad0dab76f00ebbd4a4d036be82948752}{Get\+Side
 \doxysubsubsection{\texorpdfstring{GetSideValue()}{GetSideValue()}}
 {\footnotesize\ttfamily int Die\+Side.\+Get\+Side\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_die_side_a694174e094333dddba56a1fffeb7a00b}\label{class_die_side_a694174e094333dddba56a1fffeb7a00b}} 
 \index{DieSide@{DieSide}!IsOnGround@{IsOnGround}}
 \index{IsOnGround@{IsOnGround}!DieSide@{DieSide}}
 \doxysubsubsection{\texorpdfstring{IsOnGround()}{IsOnGround()}}
 {\footnotesize\ttfamily bool Die\+Side.\+Is\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_die_side_a11c5323a459391b2e6248b5945d844d9}\label{class_die_side_a11c5323a459391b2e6248b5945d844d9}} 
+\index{DieSide@{DieSide}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void Die\+Side.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}\label{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}} 
+\index{DieSide@{DieSide}!OnTriggerStay@{OnTriggerStay}}
+\index{OnTriggerStay@{OnTriggerStay}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay()}{OnTriggerStay()}}
+{\footnotesize\ttfamily void Die\+Side.\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}\label{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}} 
+\index{DieSide@{DieSide}!isOnGround@{isOnGround}}
+\index{isOnGround@{isOnGround}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{isOnGround}{isOnGround}}
+{\footnotesize\ttfamily bool Die\+Side.\+is\+On\+Ground\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}\label{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}} 
+\index{DieSide@{DieSide}!value@{value}}
+\index{value@{value}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int Die\+Side.\+value\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

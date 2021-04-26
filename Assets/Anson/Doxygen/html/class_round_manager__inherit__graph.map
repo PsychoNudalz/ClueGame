@@ -1,0 +1,4 @@
+<map id="RoundManager" name="RoundManager">
+<area shape="rect" id="node1" title="Control what each player can do during their round/ turn" alt="" coords="5,139,211,796"/>
+<area shape="rect" id="node2" title=" " alt="" coords="43,5,173,91"/>
+</map>

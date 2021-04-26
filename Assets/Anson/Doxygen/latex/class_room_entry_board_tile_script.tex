@@ -1,11 +1,13 @@
 \hypertarget{class_room_entry_board_tile_script}{}\doxysection{Room\+Entry\+Board\+Tile\+Script Class Reference}
 \label{class_room_entry_board_tile_script}\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
-Inheritance diagram for Room\+Entry\+Board\+Tile\+Script\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=3.000000cm]{class_room_entry_board_tile_script}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Room\+Entry\+Board\+Tile\+Script\+:
+% FIG 0
+
+
+Collaboration diagram for Room\+Entry\+Board\+Tile\+Script\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,21 +24,122 @@ IEnumerator \mbox{\hyperlink{class_room_entry_board_tile_script_a89563c1c09bdf5b
 \item 
 \mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}} \mbox{\hyperlink{class_room_entry_board_tile_script_aae651430307c929233b7feb0c3e913dd}{Entry\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_room_entry_board_tile_script_a64b614e329f1cac83fbb0947c180f200}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_room_entry_board_tile_script_ac32d28fe8815d6b9c2a7271d145ad24a}{Get\+Door}} ()
+\item 
+void \mbox{\hyperlink{class_room_entry_board_tile_script_ae14f33e8fb193fd2113d29b5803f42e5}{Get\+Room\+Script}} ()
+\item 
+void \mbox{\hyperlink{class_room_entry_board_tile_script_a9c64a40265b2c0f2771f945e993639d6}{Get\+Entry\+Point}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_room_entry_board_tile_script_a72d3a7835dcd42fc00e6c6caf0d1e174}{Enter\+Room\+Animation}} (\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} player)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} \mbox{\hyperlink{class_room_entry_board_tile_script_a7d40908edd63f74420272df90de09fd8}{room}}
+\item 
+\mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}} \mbox{\hyperlink{class_room_entry_board_tile_script_a3746ecbb668aacd1a827a343ade7510f}{entry\+Point}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_room_entry_board_tile_script_a9afa9cede5c35ac3f540af597edac287}{room\+Script}}
+\item 
+\mbox{\hyperlink{class_door_script}{Door\+Script}} \mbox{\hyperlink{class_room_entry_board_tile_script_ab823b3eafd60cee5cfd316648e3ca512}{door}}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_room_entry_board_tile_script_a1266a68e6949933d21b0e9564a7961c2}{exit\+Target}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a72d3a7835dcd42fc00e6c6caf0d1e174}\label{class_room_entry_board_tile_script_a72d3a7835dcd42fc00e6c6caf0d1e174}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!EnterRoomAnimation@{EnterRoomAnimation}}
+\index{EnterRoomAnimation@{EnterRoomAnimation}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{EnterRoomAnimation()}{EnterRoomAnimation()}}
+{\footnotesize\ttfamily IEnumerator Room\+Entry\+Board\+Tile\+Script.\+Enter\+Room\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{class_room_entry_board_tile_script_a89563c1c09bdf5bb73347dd676a10f2d}\label{class_room_entry_board_tile_script_a89563c1c09bdf5bb73347dd676a10f2d}} 
 \index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!ExitRoomDelay@{ExitRoomDelay}}
 \index{ExitRoomDelay@{ExitRoomDelay}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ExitRoomDelay()}{ExitRoomDelay()}}
 {\footnotesize\ttfamily IEnumerator Room\+Entry\+Board\+Tile\+Script.\+Exit\+Room\+Delay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}}]{player\+To\+Remove,  }\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{target\+Tile }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_room_entry_board_tile_script_ac32d28fe8815d6b9c2a7271d145ad24a}\label{class_room_entry_board_tile_script_ac32d28fe8815d6b9c2a7271d145ad24a}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!GetDoor@{GetDoor}}
+\index{GetDoor@{GetDoor}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GetDoor()}{GetDoor()}}
+{\footnotesize\ttfamily void Room\+Entry\+Board\+Tile\+Script.\+Get\+Door (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a9c64a40265b2c0f2771f945e993639d6}\label{class_room_entry_board_tile_script_a9c64a40265b2c0f2771f945e993639d6}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!GetEntryPoint@{GetEntryPoint}}
+\index{GetEntryPoint@{GetEntryPoint}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GetEntryPoint()}{GetEntryPoint()}}
+{\footnotesize\ttfamily void Room\+Entry\+Board\+Tile\+Script.\+Get\+Entry\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_room_entry_board_tile_script_ae14f33e8fb193fd2113d29b5803f42e5}\label{class_room_entry_board_tile_script_ae14f33e8fb193fd2113d29b5803f42e5}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!GetRoomScript@{GetRoomScript}}
+\index{GetRoomScript@{GetRoomScript}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GetRoomScript()}{GetRoomScript()}}
+{\footnotesize\ttfamily void Room\+Entry\+Board\+Tile\+Script.\+Get\+Room\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a64b614e329f1cac83fbb0947c180f200}\label{class_room_entry_board_tile_script_a64b614e329f1cac83fbb0947c180f200}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!Start@{Start}}
+\index{Start@{Start}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Room\+Entry\+Board\+Tile\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 7
 \mbox{\Hypertarget{class_room_entry_board_tile_script_a5f3e63d81d1ad29ec6c178460804490b}\label{class_room_entry_board_tile_script_a5f3e63d81d1ad29ec6c178460804490b}} 
 \index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!ToString@{ToString}}
 \index{ToString@{ToString}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
 {\footnotesize\ttfamily override string Room\+Entry\+Board\+Tile\+Script.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_entry_board_tile_script_ab823b3eafd60cee5cfd316648e3ca512}\label{class_room_entry_board_tile_script_ab823b3eafd60cee5cfd316648e3ca512}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!door@{door}}
+\index{door@{door}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{door}{door}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_door_script}{Door\+Script}} Room\+Entry\+Board\+Tile\+Script.\+door\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a3746ecbb668aacd1a827a343ade7510f}\label{class_room_entry_board_tile_script_a3746ecbb668aacd1a827a343ade7510f}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!entryPoint@{entryPoint}}
+\index{entryPoint@{entryPoint}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{entryPoint}{entryPoint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_point}{Room\+Entry\+Point}} Room\+Entry\+Board\+Tile\+Script.\+entry\+Point\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a1266a68e6949933d21b0e9564a7961c2}\label{class_room_entry_board_tile_script_a1266a68e6949933d21b0e9564a7961c2}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!exitTarget@{exitTarget}}
+\index{exitTarget@{exitTarget}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{exitTarget}{exitTarget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Room\+Entry\+Board\+Tile\+Script.\+exit\+Target\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a7d40908edd63f74420272df90de09fd8}\label{class_room_entry_board_tile_script_a7d40908edd63f74420272df90de09fd8}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!room@{room}}
+\index{room@{room}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{room}{room}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Room\+Entry\+Board\+Tile\+Script.\+room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_board_tile_script_a9afa9cede5c35ac3f540af597edac287}\label{class_room_entry_board_tile_script_a9afa9cede5c35ac3f540af597edac287}} 
+\index{RoomEntryBoardTileScript@{RoomEntryBoardTileScript}!roomScript@{roomScript}}
+\index{roomScript@{roomScript}!RoomEntryBoardTileScript@{RoomEntryBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{roomScript}{roomScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Room\+Entry\+Board\+Tile\+Script.\+room\+Script\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

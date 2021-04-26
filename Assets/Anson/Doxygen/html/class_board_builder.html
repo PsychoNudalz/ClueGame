@@ -62,17 +62,1797 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_board_builder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BoardBuilder Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Method to create the game board from a .csv file  
+ <a href="class_board_builder.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for BoardBuilder:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_board_builder.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_board_builder__inherit__graph.png" border="0" usemap="#a_board_builder_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_board_builder_inherit__map" id="a_board_builder_inherit__map">
+<area shape="rect" title="Method to create the game board from a .csv file" alt="" coords="5,139,263,1021"/>
+<area shape="rect" title=" " alt="" coords="69,5,199,91"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for BoardBuilder:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder__coll__graph.png" border="0" usemap="#a_board_builder_coll__map" alt="Collaboration graph"/></div>
+<map name="a_board_builder_coll__map" id="a_board_builder_coll__map">
+<area shape="rect" title="Method to create the game board from a .csv file" alt="" coords="256,1069,513,1935"/>
+<area shape="rect" title=" " alt="" coords="2261,5,2391,91"/>
+<area shape="rect" href="class_board_manager.html" title=" " alt="" coords="1079,140,1338,641"/>
+<area shape="rect" href="class_board_tile_script.html" title="Super class for all tiles" alt="" coords="1052,1329,1227,1675"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html" title="This handles the effects and shader on the tile" alt="" coords="1723,296,1948,485"/>
+<area shape="rect" href="class_player_token_script.html" title="For handling the player/ character&#39;s token" alt="" coords="1609,2737,1867,3395"/>
+<area shape="rect" href="class_room_entry_point.html" title=" " alt="" coords="1016,5628,1151,5713"/>
+<area shape="rect" href="class_room_script.html" title=" " alt="" coords="531,5009,838,5424"/>
+<area shape="rect" href="class_room_weapon_slot.html" title=" " alt="" coords="134,5943,361,6081"/>
+<area shape="rect" href="class_weapon_token_script.html" title=" " alt="" coords="124,5541,371,5800"/>
+<area shape="rect" href="class_room_player_slot.html" title=" " alt="" coords="722,4460,933,4597"/>
+<area shape="rect" href="class_player_master_controller.html" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="2109,3460,2341,4100"/>
+<area shape="rect" href="class_player_stats_script.html" title="saves the character the player is and the deck it has" alt="" coords="2595,665,2788,1045"/>
+<area shape="rect" href="class_door_script.html" title=" " alt="" coords="85,2507,292,2713"/>
+<area shape="rect" href="class_round_manager.html" title="Control what each player can do during their round/ turn" alt="" coords="2383,4957,2589,5476"/>
+<area shape="rect" href="class_dice.html" title=" " alt="" coords="1937,2241,2107,2483"/>
+<area shape="rect" href="class_camera_close_up.html" title=" " alt="" coords="2299,1347,2497,1657"/>
+<area shape="rect" href="class_close_up_point_script.html" title=" " alt="" coords="2293,331,2503,451"/>
+<area shape="rect" href="class_die.html" title=" " alt="" coords="2020,1347,2171,1657"/>
+<area shape="rect" href="class_die_side.html" title=" " alt="" coords="2075,313,2217,468"/>
+<area shape="rect" href="class_u_i_handler.html" title="Handles the UI" alt="" coords="2516,6224,2739,7297"/>
+<area shape="rect" href="class_user_controller.html" title=" " alt="" coords="2867,5865,3033,6159"/>
+<area shape="rect" href="class_accusation.html" title=" " alt="" coords="3026,5593,3165,5748"/>
+<area shape="rect" href="class_card.html" title=" " alt="" coords="3317,4477,3465,4580"/>
+<area shape="rect" href="class_suggestion.html" title=" " alt="" coords="3589,5585,3756,5757"/>
+<area shape="rect" href="class_card_manager.html" title=" " alt="" coords="2844,4365,3035,4693"/>
+<area shape="rect" href="class_card_slot.html" title=" " alt="" coords="3999,5122,4149,5311"/>
+<area shape="rect" href="class_turn_controller.html" title="This handles the turn between the players" alt="" coords="2747,1959,2969,2217"/>
+<area shape="rect" href="class_a_i_controller_script.html" title="this class controlls the AI&#39;s behaviour and actions" alt="" coords="2379,4165,2582,4892"/>
+<area shape="rect" href="class_free_suggestion_tile_script.html" title=" " alt="" coords="1159,2319,1359,2405"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html" title=" " alt="" coords="544,5567,732,5774"/>
+<area shape="rect" href="class_room_entry_board_tile_script.html" title=" " alt="" coords="1033,5874,1241,6150"/>
+<area shape="rect" href="class_start_tile_script.html" title=" " alt="" coords="1721,2267,1861,2457"/>
+<area shape="rect" href="class_free_roll_board_tile_script.html" title=" " alt="" coords="792,2319,983,2405"/>
+<area shape="rect" href="class_room_card.html" title=" " alt="" coords="3145,5131,3293,5303"/>
+<area shape="rect" href="class_character_card.html" title=" " alt="" coords="3317,5131,3465,5303"/>
+<area shape="rect" href="class_weapon_card.html" title=" " alt="" coords="3489,5131,3637,5303"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a40848d7394ead9e79f4f2dad2d7756b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8">Awake</a> ()</td></tr>
+<tr class="separator:a40848d7394ead9e79f4f2dad2d7756b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e09ea29b1d031cfe2fa3b444c12c99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99">Initialise</a> ()</td></tr>
+<tr class="memdesc:a82e09ea29b1d031cfe2fa3b444c12c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to create the board, initialise and place all items and pass references to board manager  <a href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99">More...</a><br /></td></tr>
+<tr class="separator:a82e09ea29b1d031cfe2fa3b444c12c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab340fc9336c3174138bfb6b2f3b31c37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#ab340fc9336c3174138bfb6b2f3b31c37">LoadResources</a> ()</td></tr>
+<tr class="memdesc:ab340fc9336c3174138bfb6b2f3b31c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load all prefabs from resources folder  <a href="class_board_builder.html#ab340fc9336c3174138bfb6b2f3b31c37">More...</a><br /></td></tr>
+<tr class="separator:ab340fc9336c3174138bfb6b2f3b31c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94d9474a9d66a0748a402c743a22cf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#ac94d9474a9d66a0748a402c743a22cf7">GenerateBoardArrayFromCSV</a> ()</td></tr>
+<tr class="memdesc:ac94d9474a9d66a0748a402c743a22cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a 2d array from the .csv file to build the board from  <a href="class_board_builder.html#ac94d9474a9d66a0748a402c743a22cf7">More...</a><br /></td></tr>
+<tr class="separator:ac94d9474a9d66a0748a402c743a22cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a24e59815a2273a921875c2cb7781f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2">BuildBoard</a> ()</td></tr>
+<tr class="memdesc:a3a24e59815a2273a921875c2cb7781f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the board using various helper methods  <a href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2">More...</a><br /></td></tr>
+<tr class="separator:a3a24e59815a2273a921875c2cb7781f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a499abdc0c02d659ea6fee6e7836f15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15">PlaceBonusTiles</a> ()</td></tr>
+<tr class="memdesc:a7a499abdc0c02d659ea6fee6e7836f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomly place Free roll / accusation tiles.  <a href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15">More...</a><br /></td></tr>
+<tr class="separator:a7a499abdc0c02d659ea6fee6e7836f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03504edb607b14737199d2e66b4ce07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aa03504edb607b14737199d2e66b4ce07">CreateShortcutTile</a> (int x, int z, string shortcutRooms, string rotation)</td></tr>
+<tr class="memdesc:aa03504edb607b14737199d2e66b4ce07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a shortcut tile and set its parameters  <a href="class_board_builder.html#aa03504edb607b14737199d2e66b4ce07">More...</a><br /></td></tr>
+<tr class="separator:aa03504edb607b14737199d2e66b4ce07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03451888fabe0fefe9bb547dd510ac1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d">CreateRoomEntranceTile</a> (int x, int z, string room, string rotation, GameObject parent)</td></tr>
+<tr class="memdesc:a03451888fabe0fefe9bb547dd510ac1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a roomEntrance tile and set its parameters  <a href="class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d">More...</a><br /></td></tr>
+<tr class="separator:a03451888fabe0fefe9bb547dd510ac1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37fc56697e202c34e1f8a1ee3677ea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2">CreateStartTile</a> (int x, int z, string characterName, GameObject parent)</td></tr>
+<tr class="memdesc:aa37fc56697e202c34e1f8a1ee3677ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a start tile and set its parameters  <a href="class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2">More...</a><br /></td></tr>
+<tr class="separator:aa37fc56697e202c34e1f8a1ee3677ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39010ec9af85bdbe95514a26a2d8aba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6">CreateBoardTile</a> (int x, int z, GameObject parent)</td></tr>
+<tr class="memdesc:a39010ec9af85bdbe95514a26a2d8aba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a General tile and set its parameters  <a href="class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6">More...</a><br /></td></tr>
+<tr class="separator:a39010ec9af85bdbe95514a26a2d8aba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491ed54feb27cf486245a500c16ff310"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a491ed54feb27cf486245a500c16ff310">CreateRoom</a> (int x, int z, string roomName)</td></tr>
+<tr class="separator:a491ed54feb27cf486245a500c16ff310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9935d1e9f5b2286d246e38151ee313eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a9935d1e9f5b2286d246e38151ee313eb">CreateWeapons</a> ()</td></tr>
+<tr class="memdesc:a9935d1e9f5b2286d246e38151ee313eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate all weapon tokens  <a href="class_board_builder.html#a9935d1e9f5b2286d246e38151ee313eb">More...</a><br /></td></tr>
+<tr class="separator:a9935d1e9f5b2286d246e38151ee313eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeca1094dc5e50c5612bba9336efd9d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3">CreateFreeSuggestionTiles</a> ()</td></tr>
+<tr class="memdesc:aeeca1094dc5e50c5612bba9336efd9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomly replace required number of general tiles with FreeAccusation Tiles  <a href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3">More...</a><br /></td></tr>
+<tr class="separator:aeeca1094dc5e50c5612bba9336efd9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ce7b540b58b1e6fde74e064107ae954"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954">CreateFreeRollTiles</a> ()</td></tr>
+<tr class="memdesc:a1ce7b540b58b1e6fde74e064107ae954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomly replace required number of general tiles with FreeRoll Tiles  <a href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954">More...</a><br /></td></tr>
+<tr class="separator:a1ce7b540b58b1e6fde74e064107ae954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e79e20c71a20b8e2feb24d83106ebdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb">CheckNearbyTiles</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> tile)</td></tr>
+<tr class="memdesc:a3e79e20c71a20b8e2feb24d83106ebdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for nearby bonus / start tiles in order to space out around the board  <a href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb">More...</a><br /></td></tr>
+<tr class="separator:a3e79e20c71a20b8e2feb24d83106ebdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a68f8060e2351a4b64d50554e209ddd51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a68f8060e2351a4b64d50554e209ddd51">numberOfFreeRollTiles</a> = 3</td></tr>
+<tr class="separator:a68f8060e2351a4b64d50554e209ddd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0132c58af8523934fa222e061df8762e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a0132c58af8523934fa222e061df8762e">numberOfFreeSuggestionTiles</a> = 3</td></tr>
+<tr class="separator:a0132c58af8523934fa222e061df8762e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f6dd4cab07a7619a6fb89f940b2e67"><td class="memItemLeft" align="right" valign="top">TextAsset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a02f6dd4cab07a7619a6fb89f940b2e67">boardCSV</a></td></tr>
+<tr class="separator:a02f6dd4cab07a7619a6fb89f940b2e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949a29202d898e07ccf976e8194e55c0"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a949a29202d898e07ccf976e8194e55c0">playerPiecePrefab</a></td></tr>
+<tr class="separator:a949a29202d898e07ccf976e8194e55c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63c16e22910133b05bd64d64215976d"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#ab63c16e22910133b05bd64d64215976d">generalTilePrefab</a></td></tr>
+<tr class="separator:ab63c16e22910133b05bd64d64215976d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2fe47aa5a4eef20330241cfd789e62"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#adc2fe47aa5a4eef20330241cfd789e62">startingTilePrefab</a></td></tr>
+<tr class="separator:adc2fe47aa5a4eef20330241cfd789e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae235708c406976cb0faee8014cf24e63"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#ae235708c406976cb0faee8014cf24e63">roomEntryTilePrefab</a></td></tr>
+<tr class="separator:ae235708c406976cb0faee8014cf24e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8852142854b010000ad4199eedc77416"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a8852142854b010000ad4199eedc77416">shortcutTilePrefab</a></td></tr>
+<tr class="separator:a8852142854b010000ad4199eedc77416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7cd702f787470deecbc4cb14cc13bb"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aec7cd702f787470deecbc4cb14cc13bb">freeRollTilePrefab</a></td></tr>
+<tr class="separator:aec7cd702f787470deecbc4cb14cc13bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbf1e9dc869a2dbf6e9423205081586"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a9cbf1e9dc869a2dbf6e9423205081586">freeSuggestionTilePrefab</a></td></tr>
+<tr class="separator:a9cbf1e9dc869a2dbf6e9423205081586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b6f338a148987641c587f873ac3e65"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aa6b6f338a148987641c587f873ac3e65">BallroomPrefab</a></td></tr>
+<tr class="separator:aa6b6f338a148987641c587f873ac3e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b769419783556b25837c1e0610ed02"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a23b769419783556b25837c1e0610ed02">BilliardRoomPrefab</a></td></tr>
+<tr class="separator:a23b769419783556b25837c1e0610ed02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71602b9fcdd084ccb23ca2becadfa9d"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#ad71602b9fcdd084ccb23ca2becadfa9d">CentrePrefab</a></td></tr>
+<tr class="separator:ad71602b9fcdd084ccb23ca2becadfa9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef9bc69ac9c603cceecab242ff6e0a1"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#afef9bc69ac9c603cceecab242ff6e0a1">ConservatoryPrefab</a></td></tr>
+<tr class="separator:afef9bc69ac9c603cceecab242ff6e0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb736cb50a4ececfccc25d5a56421dad"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#afb736cb50a4ececfccc25d5a56421dad">DiningRoomPrefab</a></td></tr>
+<tr class="separator:afb736cb50a4ececfccc25d5a56421dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c64ad1e6ba51bcba96329b5dc55eb98"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a4c64ad1e6ba51bcba96329b5dc55eb98">HallPrefab</a></td></tr>
+<tr class="separator:a4c64ad1e6ba51bcba96329b5dc55eb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb69d7e535e0900b6200fffb0add11c"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a8cb69d7e535e0900b6200fffb0add11c">KitchenPrefab</a></td></tr>
+<tr class="separator:a8cb69d7e535e0900b6200fffb0add11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca4c65bfc6a80cb15bef7a0291263ca"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a4ca4c65bfc6a80cb15bef7a0291263ca">LibraryPrefab</a></td></tr>
+<tr class="separator:a4ca4c65bfc6a80cb15bef7a0291263ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c00b1eb8c3051833730a273bbf8737f"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a5c00b1eb8c3051833730a273bbf8737f">LoungePrefab</a></td></tr>
+<tr class="separator:a5c00b1eb8c3051833730a273bbf8737f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e959c519e3ad716056c66a994712e78"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a4e959c519e3ad716056c66a994712e78">StudyPrefab</a></td></tr>
+<tr class="separator:a4e959c519e3ad716056c66a994712e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b8ded609546459587610c11c3c70c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_manager.html">BoardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a73b8ded609546459587610c11c3c70c1">boardManager</a></td></tr>
+<tr class="separator:a73b8ded609546459587610c11c3c70c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d1e95b95a03bc8ce9c44af1b711bce"><td class="memItemLeft" align="right" valign="top">string[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a56d1e95b95a03bc8ce9c44af1b711bce">boardStringArray</a></td></tr>
+<tr class="separator:a56d1e95b95a03bc8ce9c44af1b711bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1aba1b6f52feba6c147970c922f2bf"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#aea1aba1b6f52feba6c147970c922f2bf">players</a></td></tr>
+<tr class="separator:aea1aba1b6f52feba6c147970c922f2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8028e388f4d498a97e6803a050d883bd"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a8028e388f4d498a97e6803a050d883bd">startTiles</a></td></tr>
+<tr class="separator:a8028e388f4d498a97e6803a050d883bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a36a45959838b704a88c9c685a4e51c"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a5a36a45959838b704a88c9c685a4e51c">roomEntryTiles</a></td></tr>
+<tr class="separator:a5a36a45959838b704a88c9c685a4e51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c598b7725daa0cac503412a9b7be946"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a9c598b7725daa0cac503412a9b7be946">rooms</a></td></tr>
+<tr class="separator:a9c598b7725daa0cac503412a9b7be946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21586d418e74568ab3e95b16b6a8ffa9"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a21586d418e74568ab3e95b16b6a8ffa9">generalTiles</a></td></tr>
+<tr class="separator:a21586d418e74568ab3e95b16b6a8ffa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7d69a4dfb6581f20e393a4a522817a"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a9d7d69a4dfb6581f20e393a4a522817a">shortcutTiles</a></td></tr>
+<tr class="separator:a9d7d69a4dfb6581f20e393a4a522817a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af031b5fa8c1feabdc022ade83a9d68d0"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#af031b5fa8c1feabdc022ade83a9d68d0">weaponTokens</a></td></tr>
+<tr class="separator:af031b5fa8c1feabdc022ade83a9d68d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb88577492a8bc4c4c8e40f98d4a2425"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#abb88577492a8bc4c4c8e40f98d4a2425">freeRollTiles</a></td></tr>
+<tr class="separator:abb88577492a8bc4c4c8e40f98d4a2425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aadd6db35237dcc81f7f9df8db06490"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a1aadd6db35237dcc81f7f9df8db06490">freeSuggestionTiles</a></td></tr>
+<tr class="separator:a1aadd6db35237dcc81f7f9df8db06490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4961cb7b7e8af415bf20725c5c1503fb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a4961cb7b7e8af415bf20725c5c1503fb">boardWidth</a></td></tr>
+<tr class="separator:a4961cb7b7e8af415bf20725c5c1503fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1da04c8bd686938f07acb6fdc2b64aa3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_builder.html#a1da04c8bd686938f07acb6fdc2b64aa3">boardHeight</a></td></tr>
+<tr class="separator:a1da04c8bd686938f07acb6fdc2b64aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Method to create the game board from a .csv file </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a40848d7394ead9e79f4f2dad2d7756b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40848d7394ead9e79f4f2dad2d7756b8">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph.png" border="0" usemap="#aclass_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph" id="aclass_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,376,172,405"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,376,395,405"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="512,139,708,168"/>
+<area shape="rect" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="1216,323,1475,352"/>
+<area shape="rect" href="class_board_builder.html#a9935d1e9f5b2286d246e38151ee313eb" title="Instantiate all weapon tokens" alt="" coords="493,376,727,405"/>
+<area shape="rect" href="class_board_builder.html#ac94d9474a9d66a0748a402c743a22cf7" title="Create a 2d array from the .csv file to build the board from" alt="" coords="443,429,777,459"/>
+<area shape="rect" href="class_board_builder.html#ab340fc9336c3174138bfb6b2f3b31c37" title="Load all prefabs from resources folder" alt="" coords="495,483,725,512"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="493,323,727,352"/>
+<area shape="rect" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146" title=" " alt="" coords="487,536,733,565"/>
+<area shape="rect" href="class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6" title="Instantiate a General tile and set its parameters" alt="" coords="863,219,1098,248"/>
+<area shape="rect" href="class_board_builder.html#a491ed54feb27cf486245a500c16ff310" title=" " alt="" coords="877,5,1085,35"/>
+<area shape="rect" href="class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="833,59,1128,88"/>
+<area shape="rect" href="class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="857,112,1105,141"/>
+<area shape="rect" href="class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2" title="Instantiate a start tile and set its parameters" alt="" coords="869,165,1093,195"/>
+<area shape="rect" href="class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="1218,59,1473,88"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html#a80487fbb1c2457f09fa5ca7e20879015" title=" " alt="" coords="1184,112,1507,141"/>
+<area shape="rect" href="class_start_tile_script.html#a33514048a06840acdadc966c14cef503" title=" " alt="" coords="1236,165,1455,195"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="1244,219,1447,248"/>
+<area shape="rect" href="class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title=" " alt="" coords="1555,165,1757,195"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="851,323,1110,352"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="825,376,1136,405"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1222,376,1469,405"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="1580,376,1732,405"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="1805,349,2067,379"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1841,403,2031,432"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="2115,349,2363,379"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a24e59815a2273a921875c2cb7781f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a24e59815a2273a921875c2cb7781f2">&#9670;&nbsp;</a></span>BuildBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.BuildBoard </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Build the board using various helper methods </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph.png" border="0" usemap="#aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph" id="aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph">
+<area shape="rect" title="Build the board using various helper methods" alt="" coords="5,112,201,141"/>
+<area shape="rect" href="class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6" title="Instantiate a General tile and set its parameters" alt="" coords="279,5,514,35"/>
+<area shape="rect" href="class_board_builder.html#a491ed54feb27cf486245a500c16ff310" title=" " alt="" coords="293,59,501,88"/>
+<area shape="rect" href="class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="249,112,544,141"/>
+<area shape="rect" href="class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="273,165,521,195"/>
+<area shape="rect" href="class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2" title="Instantiate a start tile and set its parameters" alt="" coords="285,219,509,248"/>
+<area shape="rect" href="class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="626,112,881,141"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html#a80487fbb1c2457f09fa5ca7e20879015" title=" " alt="" coords="592,165,915,195"/>
+<area shape="rect" href="class_start_tile_script.html#a33514048a06840acdadc966c14cef503" title=" " alt="" coords="644,219,863,248"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="652,272,855,301"/>
+<area shape="rect" href="class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title=" " alt="" coords="963,219,1165,248"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph.png" border="0" usemap="#aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph" id="aclass_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph">
+<area shape="rect" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3e79e20c71a20b8e2feb24d83106ebdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e79e20c71a20b8e2feb24d83106ebdb">&#9670;&nbsp;</a></span>CheckNearbyTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardBuilder.CheckNearbyTiles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>&#160;</td>
+          <td class="paramname"><em>tile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check for nearby bonus / start tiles in order to space out around the board </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tile</td><td>Tile to check for nearby free roll or free suggestion tiles</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph.png" border="0" usemap="#aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph" id="aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph">
+<area shape="rect" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="5,32,252,61"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="300,32,452,61"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="500,5,761,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="535,59,726,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="809,5,1057,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph.png" border="0" usemap="#aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph" id="aclass_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph">
+<area shape="rect" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1084,32,1331,61"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="751,5,1010,35"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="725,59,1036,88"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39010ec9af85bdbe95514a26a2d8aba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39010ec9af85bdbe95514a26a2d8aba6">&#9670;&nbsp;</a></span>CreateBoardTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateBoardTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiate a General tile and set its parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X position to create the tile</td></tr>
+    <tr><td class="paramname">z</td><td>Z position to create the tile</td></tr>
+    <tr><td class="paramname">parent</td><td>GameObject to parent tile to</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph.png" border="0" usemap="#aclass_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph" id="aclass_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph">
+<area shape="rect" title="Instantiate a General tile and set its parameters" alt="" coords="687,5,921,35"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1ce7b540b58b1e6fde74e064107ae954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce7b540b58b1e6fde74e064107ae954">&#9670;&nbsp;</a></span>CreateFreeRollTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateFreeRollTiles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Randomly replace required number of general tiles with FreeRoll Tiles </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph.png" border="0" usemap="#aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph" id="aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph">
+<area shape="rect" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="5,59,264,88"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="318,32,565,61"/>
+<area shape="rect" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="312,85,571,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="619,32,771,61"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="819,5,1080,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="854,59,1045,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1128,5,1376,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph.png" border="0" usemap="#aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph" id="aclass_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph">
+<area shape="rect" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="725,5,984,35"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,5,677,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeeca1094dc5e50c5612bba9336efd9d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeca1094dc5e50c5612bba9336efd9d3">&#9670;&nbsp;</a></span>CreateFreeSuggestionTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateFreeSuggestionTiles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Randomly replace required number of general tiles with FreeAccusation Tiles </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph.png" border="0" usemap="#aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph" alt=""/></div>
+<map name="aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph" id="aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph">
+<area shape="rect" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="5,59,316,88"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="370,32,617,61"/>
+<area shape="rect" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="364,85,623,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="671,32,823,61"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="871,5,1132,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="906,59,1097,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1180,5,1428,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph.png" border="0" usemap="#aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph" alt=""/></div>
+<map name="aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph" id="aclass_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph">
+<area shape="rect" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="725,5,1036,35"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,5,677,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a491ed54feb27cf486245a500c16ff310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491ed54feb27cf486245a500c16ff310">&#9670;&nbsp;</a></span>CreateRoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateRoom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>roomName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X position to create the tile</td></tr>
+    <tr><td class="paramname">z</td><td>Z position to create the tile</td></tr>
+    <tr><td class="paramname">roomName</td><td>Room to instantiate</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph.png" border="0" usemap="#aclass_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph" id="aclass_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph">
+<area shape="rect" title=" " alt="" coords="687,5,895,35"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a03451888fabe0fefe9bb547dd510ac1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03451888fabe0fefe9bb547dd510ac1d">&#9670;&nbsp;</a></span>CreateRoomEntranceTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateRoomEntranceTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>room</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiate a roomEntrance tile and set its parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X position to create the tile</td></tr>
+    <tr><td class="paramname">z</td><td>Z position to create the tile</td></tr>
+    <tr><td class="paramname">room</td><td>Room that tile is entrance to</td></tr>
+    <tr><td class="paramname">rotation</td><td>Rotation to set tile</td></tr>
+    <tr><td class="paramname">parent</td><td>GameObject to parent tile to</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph.png" border="0" usemap="#aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph" id="aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph">
+<area shape="rect" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="5,5,300,35"/>
+<area shape="rect" href="class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="348,5,603,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph.png" border="0" usemap="#aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph" id="aclass_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph">
+<area shape="rect" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="687,5,981,35"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa03504edb607b14737199d2e66b4ce07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03504edb607b14737199d2e66b4ce07">&#9670;&nbsp;</a></span>CreateShortcutTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateShortcutTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>shortcutRooms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>rotation</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiate a shortcut tile and set its parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X position to create the tile</td></tr>
+    <tr><td class="paramname">z</td><td>Z position to create the tile</td></tr>
+    <tr><td class="paramname">shortcutRooms</td><td>Rooms to add to Shortcut tile</td></tr>
+    <tr><td class="paramname">rotation</td><td>Rotation to set the tile</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph.png" border="0" usemap="#aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph" alt=""/></div>
+<map name="aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph" id="aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph">
+<area shape="rect" title="Instantiate a shortcut tile and set its parameters" alt="" coords="5,32,253,61"/>
+<area shape="rect" href="class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="335,5,590,35"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html#a80487fbb1c2457f09fa5ca7e20879015" title=" " alt="" coords="301,59,624,88"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph.png" border="0" usemap="#aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph" alt=""/></div>
+<map name="aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph" id="aclass_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph">
+<area shape="rect" title="Instantiate a shortcut tile and set its parameters" alt="" coords="687,5,935,35"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa37fc56697e202c34e1f8a1ee3677ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37fc56697e202c34e1f8a1ee3677ea2">&#9670;&nbsp;</a></span>CreateStartTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateStartTile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>characterName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiate a start tile and set its parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>X position to create the tile</td></tr>
+    <tr><td class="paramname">z</td><td>Z position to create the tile</td></tr>
+    <tr><td class="paramname">characterName</td><td>Character to assign to the Tile</td></tr>
+    <tr><td class="paramname">parent</td><td>GameObject to parent tile to</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph.png" border="0" usemap="#aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph" alt=""/></div>
+<map name="aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph" id="aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph">
+<area shape="rect" title="Instantiate a start tile and set its parameters" alt="" coords="5,32,229,61"/>
+<area shape="rect" href="class_start_tile_script.html#a33514048a06840acdadc966c14cef503" title=" " alt="" coords="277,5,496,35"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="285,59,488,88"/>
+<area shape="rect" href="class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title=" " alt="" coords="544,5,747,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph.png" border="0" usemap="#aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph" alt=""/></div>
+<map name="aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph" id="aclass_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph">
+<area shape="rect" title="Instantiate a start tile and set its parameters" alt="" coords="687,5,911,35"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,5,639,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9935d1e9f5b2286d246e38151ee313eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9935d1e9f5b2286d246e38151ee313eb">&#9670;&nbsp;</a></span>CreateWeapons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.CreateWeapons </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instantiate all weapon tokens </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph.png" border="0" usemap="#aclass_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph" id="aclass_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph">
+<area shape="rect" title="Instantiate all weapon tokens" alt="" coords="443,5,676,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac94d9474a9d66a0748a402c743a22cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94d9474a9d66a0748a402c743a22cf7">&#9670;&nbsp;</a></span>GenerateBoardArrayFromCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.GenerateBoardArrayFromCSV </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a 2d array from the .csv file to build the board from </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph.png" border="0" usemap="#aclass_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph" alt=""/></div>
+<map name="aclass_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph" id="aclass_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph">
+<area shape="rect" title="Create a 2d array from the .csv file to build the board from" alt="" coords="443,5,777,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a82e09ea29b1d031cfe2fa3b444c12c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e09ea29b1d031cfe2fa3b444c12c99">&#9670;&nbsp;</a></span>Initialise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.Initialise </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method to create the board, initialise and place all items and pass references to board manager </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph.png" border="0" usemap="#aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph" id="aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph">
+<area shape="rect" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="5,376,180,405"/>
+<area shape="rect" href="class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="297,139,493,168"/>
+<area shape="rect" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="1001,323,1260,352"/>
+<area shape="rect" href="class_board_builder.html#a9935d1e9f5b2286d246e38151ee313eb" title="Instantiate all weapon tokens" alt="" coords="279,376,512,405"/>
+<area shape="rect" href="class_board_builder.html#ac94d9474a9d66a0748a402c743a22cf7" title="Create a 2d array from the .csv file to build the board from" alt="" coords="228,429,563,459"/>
+<area shape="rect" href="class_board_builder.html#ab340fc9336c3174138bfb6b2f3b31c37" title="Load all prefabs from resources folder" alt="" coords="281,483,510,512"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="278,323,513,352"/>
+<area shape="rect" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146" title=" " alt="" coords="273,536,518,565"/>
+<area shape="rect" href="class_board_builder.html#a39010ec9af85bdbe95514a26a2d8aba6" title="Instantiate a General tile and set its parameters" alt="" coords="649,219,883,248"/>
+<area shape="rect" href="class_board_builder.html#a491ed54feb27cf486245a500c16ff310" title=" " alt="" coords="662,5,870,35"/>
+<area shape="rect" href="class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="619,59,913,88"/>
+<area shape="rect" href="class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="642,112,890,141"/>
+<area shape="rect" href="class_board_builder.html#aa37fc56697e202c34e1f8a1ee3677ea2" title="Instantiate a start tile and set its parameters" alt="" coords="654,165,878,195"/>
+<area shape="rect" href="class_room_script.html#a940f64ec88c83cb1e1e8f029c44099a8" title=" " alt="" coords="1003,59,1258,88"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html#a80487fbb1c2457f09fa5ca7e20879015" title=" " alt="" coords="969,112,1292,141"/>
+<area shape="rect" href="class_start_tile_script.html#a33514048a06840acdadc966c14cef503" title=" " alt="" coords="1021,165,1240,195"/>
+<area shape="rect" href="class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="1029,219,1232,248"/>
+<area shape="rect" href="class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title=" " alt="" coords="1340,165,1543,195"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="637,323,895,352"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="611,376,921,405"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1007,376,1254,405"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="1365,376,1517,405"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="1591,349,1852,379"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1626,403,1817,432"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1900,349,2148,379"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph.png" border="0" usemap="#aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph" id="aclass_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph">
+<area shape="rect" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab340fc9336c3174138bfb6b2f3b31c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab340fc9336c3174138bfb6b2f3b31c37">&#9670;&nbsp;</a></span>LoadResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.LoadResources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load all prefabs from resources folder </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph.png" border="0" usemap="#aclass_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph" alt=""/></div>
+<map name="aclass_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph" id="aclass_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph">
+<area shape="rect" title="Load all prefabs from resources folder" alt="" coords="443,5,672,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a499abdc0c02d659ea6fee6e7836f15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a499abdc0c02d659ea6fee6e7836f15">&#9670;&nbsp;</a></span>PlaceBonusTiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardBuilder.PlaceBonusTiles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Randomly place Free roll / accusation tiles. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph.png" border="0" usemap="#aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph" alt=""/></div>
+<map name="aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph" id="aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph">
+<area shape="rect" title="Randomly place Free roll / accusation tiles." alt="" coords="5,59,240,88"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="314,32,573,61"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="288,85,599,115"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="653,32,899,61"/>
+<area shape="rect" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44" title=" " alt="" coords="647,85,905,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="953,32,1105,61"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="1153,5,1415,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="1189,59,1379,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1463,5,1711,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph.png" border="0" usemap="#aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph" alt=""/></div>
+<map name="aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph" id="aclass_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph">
+<area shape="rect" title="Randomly place Free roll / accusation tiles." alt="" coords="443,5,677,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa6b6f338a148987641c587f873ac3e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b6f338a148987641c587f873ac3e65">&#9670;&nbsp;</a></span>BallroomPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.BallroomPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23b769419783556b25837c1e0610ed02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b769419783556b25837c1e0610ed02">&#9670;&nbsp;</a></span>BilliardRoomPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.BilliardRoomPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02f6dd4cab07a7619a6fb89f940b2e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f6dd4cab07a7619a6fb89f940b2e67">&#9670;&nbsp;</a></span>boardCSV</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TextAsset BoardBuilder.boardCSV</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1da04c8bd686938f07acb6fdc2b64aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1da04c8bd686938f07acb6fdc2b64aa3">&#9670;&nbsp;</a></span>boardHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardBuilder.boardHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73b8ded609546459587610c11c3c70c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b8ded609546459587610c11c3c70c1">&#9670;&nbsp;</a></span>boardManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_manager.html">BoardManager</a> BoardBuilder.boardManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56d1e95b95a03bc8ce9c44af1b711bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d1e95b95a03bc8ce9c44af1b711bce">&#9670;&nbsp;</a></span>boardStringArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [][] BoardBuilder.boardStringArray</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4961cb7b7e8af415bf20725c5c1503fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4961cb7b7e8af415bf20725c5c1503fb">&#9670;&nbsp;</a></span>boardWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardBuilder.boardWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad71602b9fcdd084ccb23ca2becadfa9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71602b9fcdd084ccb23ca2becadfa9d">&#9670;&nbsp;</a></span>CentrePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.CentrePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afef9bc69ac9c603cceecab242ff6e0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef9bc69ac9c603cceecab242ff6e0a1">&#9670;&nbsp;</a></span>ConservatoryPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.ConservatoryPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb736cb50a4ececfccc25d5a56421dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb736cb50a4ececfccc25d5a56421dad">&#9670;&nbsp;</a></span>DiningRoomPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.DiningRoomPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec7cd702f787470deecbc4cb14cc13bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7cd702f787470deecbc4cb14cc13bb">&#9670;&nbsp;</a></span>freeRollTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.freeRollTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb88577492a8bc4c4c8e40f98d4a2425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb88577492a8bc4c4c8e40f98d4a2425">&#9670;&nbsp;</a></span>freeRollTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.freeRollTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cbf1e9dc869a2dbf6e9423205081586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cbf1e9dc869a2dbf6e9423205081586">&#9670;&nbsp;</a></span>freeSuggestionTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.freeSuggestionTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aadd6db35237dcc81f7f9df8db06490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aadd6db35237dcc81f7f9df8db06490">&#9670;&nbsp;</a></span>freeSuggestionTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.freeSuggestionTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab63c16e22910133b05bd64d64215976d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63c16e22910133b05bd64d64215976d">&#9670;&nbsp;</a></span>generalTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.generalTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21586d418e74568ab3e95b16b6a8ffa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21586d418e74568ab3e95b16b6a8ffa9">&#9670;&nbsp;</a></span>generalTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.generalTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c64ad1e6ba51bcba96329b5dc55eb98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c64ad1e6ba51bcba96329b5dc55eb98">&#9670;&nbsp;</a></span>HallPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.HallPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cb69d7e535e0900b6200fffb0add11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb69d7e535e0900b6200fffb0add11c">&#9670;&nbsp;</a></span>KitchenPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.KitchenPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ca4c65bfc6a80cb15bef7a0291263ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca4c65bfc6a80cb15bef7a0291263ca">&#9670;&nbsp;</a></span>LibraryPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.LibraryPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c00b1eb8c3051833730a273bbf8737f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c00b1eb8c3051833730a273bbf8737f">&#9670;&nbsp;</a></span>LoungePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.LoungePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68f8060e2351a4b64d50554e209ddd51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f8060e2351a4b64d50554e209ddd51">&#9670;&nbsp;</a></span>numberOfFreeRollTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardBuilder.numberOfFreeRollTiles = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0132c58af8523934fa222e061df8762e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0132c58af8523934fa222e061df8762e">&#9670;&nbsp;</a></span>numberOfFreeSuggestionTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardBuilder.numberOfFreeSuggestionTiles = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a949a29202d898e07ccf976e8194e55c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949a29202d898e07ccf976e8194e55c0">&#9670;&nbsp;</a></span>playerPiecePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.playerPiecePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea1aba1b6f52feba6c147970c922f2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1aba1b6f52feba6c147970c922f2bf">&#9670;&nbsp;</a></span>players</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.players</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae235708c406976cb0faee8014cf24e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae235708c406976cb0faee8014cf24e63">&#9670;&nbsp;</a></span>roomEntryTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.roomEntryTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a36a45959838b704a88c9c685a4e51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a36a45959838b704a88c9c685a4e51c">&#9670;&nbsp;</a></span>roomEntryTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.roomEntryTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c598b7725daa0cac503412a9b7be946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c598b7725daa0cac503412a9b7be946">&#9670;&nbsp;</a></span>rooms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.rooms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8852142854b010000ad4199eedc77416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8852142854b010000ad4199eedc77416">&#9670;&nbsp;</a></span>shortcutTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.shortcutTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7d69a4dfb6581f20e393a4a522817a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7d69a4dfb6581f20e393a4a522817a">&#9670;&nbsp;</a></span>shortcutTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.shortcutTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc2fe47aa5a4eef20330241cfd789e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2fe47aa5a4eef20330241cfd789e62">&#9670;&nbsp;</a></span>startingTilePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.startingTilePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8028e388f4d498a97e6803a050d883bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8028e388f4d498a97e6803a050d883bd">&#9670;&nbsp;</a></span>startTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.startTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e959c519e3ad716056c66a994712e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e959c519e3ad716056c66a994712e78">&#9670;&nbsp;</a></span>StudyPrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.StudyPrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af031b5fa8c1feabdc022ade83a9d68d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af031b5fa8c1feabdc022ade83a9d68d0">&#9670;&nbsp;</a></span>weaponTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject BoardBuilder.weaponTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_board_builder_8cs.html">BoardBuilder.cs</a></li>
 </ul>

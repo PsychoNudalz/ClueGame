@@ -1,0 +1,4 @@
+<map id="GameSetUpScript.SaveChoices" name="GameSetUpScript.SaveChoices">
+<area shape="rect" id="node1" title="passes the selection from the Toggle buttons" alt="" coords="268,5,516,35"/>
+<area shape="rect" id="node2" href="$class_main_menu_script.html#a6475e7b57ea806821eaa351f7fb0e4da" title="to start the game and load the game scene" alt="" coords="5,5,220,35"/>
+</map>

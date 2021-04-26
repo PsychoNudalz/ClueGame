@@ -1,0 +1,9 @@
+<map id="UIHandler.StartBehaviour" name="UIHandler.StartBehaviour">
+<area shape="rect" id="node1" title="starting behaviour" alt="" coords="5,85,203,115"/>
+<area shape="rect" id="node2" href="$class_u_i_handler.html#abe1710aca2abe4dbb489f0c49a3af879" title="To display the View Blocker can include the name of the player that needs it&#39;s attention" alt="" coords="273,5,507,35"/>
+<area shape="rect" id="node3" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="251,59,529,88"/>
+<area shape="rect" id="node4" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="267,112,513,141"/>
+<area shape="rect" id="node7" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title=" " alt="" coords="256,165,524,195"/>
+<area shape="rect" id="node5" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="577,112,831,141"/>
+<area shape="rect" id="node6" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="879,112,1121,141"/>
+</map>

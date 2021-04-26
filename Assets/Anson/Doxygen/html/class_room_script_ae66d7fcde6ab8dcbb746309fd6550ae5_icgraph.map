@@ -1,0 +1,9 @@
+<map id="RoomScript.HasShortcut" name="RoomScript.HasShortcut">
+<area shape="rect" id="node1" title=" " alt="" coords="1033,85,1228,115"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="711,85,985,115"/>
+<area shape="rect" id="node3" href="$class_player_master_controller.html#a281d37e414bc17c9441964104f039b4a" title="check if the player can take a short cut" alt="" coords="356,59,663,88"/>
+<area shape="rect" id="node7" href="$class_player_token_script.html#acadae9824e11bd147d2c65cbb86ea89d" title=" " alt="" coords="386,112,633,141"/>
+<area shape="rect" id="node4" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="5,5,308,35"/>
+<area shape="rect" id="node5" href="$class_u_i_handler.html#ab35722a35c0035fb164d984c49cec4de" title=" " alt="" coords="65,59,249,88"/>
+<area shape="rect" id="node6" href="$class_shortcut_test_u_i.html#afbe911ad229226696830dd46743f45c5" title=" " alt="" coords="67,112,246,141"/>
+</map>

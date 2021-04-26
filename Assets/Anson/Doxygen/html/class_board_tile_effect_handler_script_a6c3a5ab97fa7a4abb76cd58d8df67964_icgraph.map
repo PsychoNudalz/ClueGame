@@ -1,0 +1,8 @@
+<map id="BoardTileEffectHandlerScript.DeselectTile" name="BoardTileEffectHandlerScript.DeselectTile">
+<area shape="rect" id="node1" title="disable the glow box effect for when the cursor hovering on it" alt="" coords="1208,32,1524,61"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#a58615feb64c22a128cc22b7e0276ad5f" title="disable the select effect on the tile" alt="" coords="961,32,1160,61"/>
+<area shape="rect" id="node3" href="$class_user_selection_script.html#a011d55536bb7550a00a7029cb7b6a6b5" title="reset the effects on the current tile" alt="" coords="635,32,913,61"/>
+<area shape="rect" id="node4" href="$class_user_cursor_script.html#a112fedaa8fccb220ccb350bc1ac622aa" title=" " alt="" coords="323,5,565,35"/>
+<area shape="rect" id="node5" href="$class_user_selection_script.html#a79fe134329afe738c1e4fb0d66c99d69" title="Setting the current tile clears the previous tile and set the effect for the new tile" alt="" coords="301,59,587,88"/>
+<area shape="rect" id="node6" href="$class_user_cursor_script.html#a86dacfae5227440b7f8ca3c7042a8892" title=" " alt="" coords="5,59,253,88"/>
+</map>

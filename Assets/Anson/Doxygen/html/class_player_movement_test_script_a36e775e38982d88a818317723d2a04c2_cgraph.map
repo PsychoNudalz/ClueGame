@@ -1,0 +1,7 @@
+<map id="PlayerMovementTestScript.RollDice" name="PlayerMovementTestScript.RollDice">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,277,35"/>
+<area shape="rect" id="node2" href="$class_player_movement_test_script.html#aaa8efc18953ff0b4e286c66962221a8f" title=" " alt="" coords="325,5,597,35"/>
+<area shape="rect" id="node3" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title=" " alt="" coords="645,5,764,35"/>
+<area shape="rect" id="node4" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title=" " alt="" coords="812,5,915,35"/>
+<area shape="rect" id="node5" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title=" " alt="" coords="963,5,1080,35"/>
+</map>

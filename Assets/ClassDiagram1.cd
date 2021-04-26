@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="RoundManager">
-    <Position X="28.5" Y="4.5" Width="1.5" />
+  <Class Name="RoundManager" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>hYAAAAGEAgAIJAIAIBEBEQCQIAAAUUAEAADAAAgCIEA=</HashCode>
       <FileName>Assets\Abdullah\Scripts\RoundManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Suggestion">
-    <Position X="19.75" Y="5.5" Width="1.5" />
+  <Class Name="Suggestion" Collapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAQAAQAAAAAAAIEAAAAAAAAAAAAAAAIAoAAEA=</HashCode>
       <FileName>Assets\Abdullah\Scripts\Suggestion.cs</FileName>
@@ -21,14 +21,14 @@
       <FileName>Assets\Abdullah\Scripts\SuggestionTest.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="TurnController">
-    <Position X="21.5" Y="5.5" Width="1.5" />
+  <Class Name="TurnController" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAKAAAAAAgCAAAAAAFAAQEAgAEAAAABAAAAAAIAAAEA=</HashCode>
+      <HashCode>AAKAAAAAAgCAAAAAABAAQEAgAEAAAABAAAAAAIAAAEA=</HashCode>
       <FileName>Assets\Abdullah\Scripts\TurnController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AIControllerScript">
+  <Class Name="AIControllerScript" Collapsed="true">
     <Position X="21.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AFoAQCUEggAAgBICAqIBEwCUIIOCQAAAABAAIIFQAEA=</HashCode>
@@ -42,15 +42,15 @@
       <FileName>Assets\Anson\Scripts\AITestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AnsonTestScript">
+  <Class Name="AnsonTestScript" Collapsed="true">
     <Position X="23.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAgAQEAAAAAAAAQAYAAAAAQAEAAAAAAACAEI=</HashCode>
       <FileName>Assets\Anson\Scripts\AnsonTestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoardTileEffectHandlerScript">
-    <Position X="30.25" Y="0.5" Width="1.5" />
+  <Class Name="BoardTileEffectHandlerScript" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAQAAAAAACAAAEAAAAAAAAAgAAAAAABAAAAAAEA=</HashCode>
       <FileName>Assets\Anson\Scripts\BoardTileEffectHandlerScript.cs</FileName>
@@ -63,43 +63,43 @@
       <FileName>Assets\Anson\Scripts\BoardTileScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExitGameScript">
-    <Position X="26.75" Y="2.5" Width="1.5" />
+  <Class Name="ExitGameScript" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Assets\Anson\Scripts\ExitGameScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameManagerScript">
-    <Position X="28.5" Y="2.5" Width="1.5" />
+  <Class Name="GameManagerScript" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAEAACAAAAAAAgAAAQA4AAEAgQAAAAAAAAAAAAI=</HashCode>
       <FileName>Assets\Anson\Scripts\GameManagerScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GameSetUpScript">
-    <Position X="30.25" Y="2.5" Width="1.5" />
+  <Class Name="GameSetUpScript" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAAAAACCAAAAAgAAAAAAAAAAQAAAAAAEA=</HashCode>
       <FileName>Assets\Anson\Scripts\GameSetUpScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MainMenuScript">
-    <Position X="18" Y="3.5" Width="1.5" />
+  <Class Name="MainMenuScript" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAABAAAAAIAgAABAAAAAAEAAAAgAAEA=</HashCode>
       <FileName>Assets\Anson\Scripts\MainMenuScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerMasterController">
-    <Position X="26.75" Y="3.5" Width="1.5" />
+  <Class Name="PlayerMasterController" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>A4AIIKABIAAANBEEyAAAAAAwApgAAgEAIAAAKACBAUE=</HashCode>
       <FileName>Assets\Anson\Scripts\PlayerMasterController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerTokenScript">
-    <Position X="18" Y="4.5" Width="1.5" />
+  <Class Name="PlayerTokenScript" Collapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>RIQIAMAJACAAAAkEAAgJIJEYAiEAAAAAAyAAKAOFCAE=</HashCode>
       <FileName>Assets\Anson\Scripts\PlayerTokenScript.cs</FileName>
@@ -119,99 +119,92 @@
       <FileName>Assets\Anson\Scripts\TestUIScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UserCursorScript">
-    <Position X="26.75" Y="5.5" Width="1.5" />
+  <Class Name="UserCursorScript" Collapsed="true">
+    <Position X="25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAjAAABAAAAAAAAAAAAAACIAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Anson\Scripts\UserCursorScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UserInputControlScript">
-    <Position X="28.5" Y="5.5" Width="1.5" />
+  <Class Name="UserInputControlScript" Collapsed="true">
+    <Position X="26.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAECABAAAwAACAMAAgIgBEIAAAAAAQgAAIAwAEAACEA=</HashCode>
       <FileName>Assets\Anson\Scripts\UserInputControlScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UserSelectionScript">
-    <Position X="30.25" Y="5.5" Width="1.5" />
+  <Class Name="UserSelectionScript" Collapsed="true">
+    <Position X="28.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAABEAAQAAAAAAAAA=</HashCode>
       <FileName>Assets\Anson\Scripts\UserSelectionScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoardArrayGenerator">
+  <Class Name="BoardBuilder" Collapsed="true">
     <Position X="25" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Danny\Scripts\BoardArrayGenerator.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BoardBuilder">
-    <Position X="26.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gQBXAEABhIAEE4AEYQIAYB1QA0AACBAEIAGAAigBkmA=</HashCode>
       <FileName>Assets\Danny\Scripts\BoardBuilder.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BoardManager">
-    <Position X="28.5" Y="0.5" Width="1.5" />
+  <Class Name="BoardManager" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>kCAAACAAAAAAhAAAAAIFAAgKJQAgiMAgJJCAKgAAAAI=</HashCode>
       <FileName>Assets\Danny\Scripts\BoardManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CameraCloseUp">
-    <Position X="18" Y="1.5" Width="1.5" />
+  <Class Name="CameraCloseUp" Collapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ECQAQEAAECAAAAICAAAAAAAAQAAIEAAQAAABAAAQAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\CameraCloseUp.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CloseUpPointScript">
-    <Position X="26.75" Y="1.5" Width="1.5" />
+  <Class Name="CloseUpPointScript" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAQAAAABAAAAAAQ=</HashCode>
       <FileName>Assets\Danny\Scripts\CloseUpPointScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Dice">
-    <Position X="30.25" Y="1.5" Width="1.5" />
+  <Class Name="Dice" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QRQAAAAgICAAAQIAAAAAAAAAAAAAEAAAAAAAAABACAg=</HashCode>
       <FileName>Assets\Danny\Scripts\Dice.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Die">
-    <Position X="18" Y="2.5" Width="1.5" />
+  <Class Name="Die" Collapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EEQEAAAEACAQAQAAACABAAAAQAgAAAAIIAEAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\Die.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DieSide">
-    <Position X="19.75" Y="2.5" Width="1.5" />
+  <Class Name="DieSide" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAABAAAAAAAAAAAAAAAKAgAAAAIAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\DieSide.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DisplayDiceValue">
-    <Position X="21.5" Y="2.5" Width="1.5" />
+  <Class Name="DisplayDiceValue" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQQIAAAEACAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\DisplayDiceValue.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DoorScript">
-    <Position X="23.25" Y="2.5" Width="1.5" />
+  <Class Name="DoorScript" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAACACAAgAIAIAAABAAEAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\DoorScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EnumToString">
-    <Position X="25" Y="2.5" Width="1.5" />
+  <Class Name="EnumToString" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\EnumToString.cs</FileName>
@@ -231,29 +224,29 @@
       <FileName>Assets\Danny\Scripts\FreeSuggestionTileScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MoveTokensTestScript">
-    <Position X="19.75" Y="3.5" Width="1.5" />
+  <Class Name="MoveTokensTestScript" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAACAAIAAAEAIAAAAAAAAAAAAgAAAAAAIAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\MoveTokensTestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NotebookButton">
-    <Position X="21.5" Y="3.5" Width="1.5" />
+  <Class Name="NotebookButton" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQIAAAEAAAAAAAAgAAAgABAAAAAAAAAAAAAgAAEAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\NotebookButton.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NotebookScript">
-    <Position X="23.25" Y="3.5" Width="1.5" />
+  <Class Name="NotebookScript" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAjAACAIBgAEAAAEAAAEAAAAQEAAAAAEAIAAAAAiEA=</HashCode>
       <FileName>Assets\Danny\Scripts\NotebookScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NotebookTestScript">
-    <Position X="25" Y="3.5" Width="1.5" />
+  <Class Name="NotebookTestScript" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAEAAAgAAAAAgAAAAAAAAAAACAEAAAAAAQAUA=</HashCode>
       <FileName>Assets\Danny\Scripts\NotebookTestScript.cs</FileName>
@@ -266,36 +259,36 @@
       <FileName>Assets\Danny\Scripts\RoomEntryBoardTileScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RoomEntryExitTestScript">
-    <Position X="19.75" Y="4.5" Width="1.5" />
+  <Class Name="RoomEntryExitTestScript" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEQAAIAEADAAQBAASAIkAAAUCAAAAChAIAQACAAAAEA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomEntryExitTestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RoomEntryPoint">
-    <Position X="21.5" Y="4.5" Width="1.5" />
+  <Class Name="RoomEntryPoint" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomEntryPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RoomPlayerSlot">
-    <Position X="23.25" Y="4.5" Width="1.5" />
+  <Class Name="RoomPlayerSlot" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAACAAAAAAAAQAAAAAAAIAAAAgAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomPlayerSlot.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RoomScript">
-    <Position X="25" Y="4.5" Width="1.5" />
+  <Class Name="RoomScript" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAgiBACAACAEBAAABhACAAAcAAAACAACCAgBAAgEAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RoomWeaponSlot">
-    <Position X="26.75" Y="4.5" Width="1.5" />
+  <Class Name="RoomWeaponSlot" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAIAAAAQAAAAgAAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomWeaponSlot.cs</FileName>
@@ -308,8 +301,8 @@
       <FileName>Assets\Danny\Scripts\ShortcutBoardTileScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ShortcutTestUI">
-    <Position X="30.25" Y="4.5" Width="1.5" />
+  <Class Name="ShortcutTestUI" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAABACgAEAAAIAAAQAAQAAAAAAABAAAACAAAAQE=</HashCode>
       <FileName>Assets\Danny\Scripts\ShortcutTestUI.cs</FileName>
@@ -322,28 +315,28 @@
       <FileName>Assets\Danny\Scripts\StartTileScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WeaponSlotTestScript">
-    <Position X="18" Y="6.5" Width="1.5" />
+  <Class Name="WeaponSlotTestScript" Collapsed="true">
+    <Position X="30.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AARABAAAACAAAAAIAAAAAAAQAAAAAAAAAggAEAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\WeaponSlotTestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WeaponTokenScript">
-    <Position X="19.75" Y="6.5" Width="1.5" />
+  <Class Name="WeaponTokenScript" Collapsed="true">
+    <Position X="18" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BgAAEAAAEiAAAAAAAAAAAAAAAAQAAAAAAiEBAAIAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\WeaponTokenScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WinScreenScript">
-    <Position X="21.5" Y="6.5" Width="1.5" />
+  <Class Name="WinScreenScript" Collapsed="true">
+    <Position X="19.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAgAACAAAAgAAAAAKAAEAAAAAAAAAAAAACEA=</HashCode>
       <FileName>Assets\Danny\Scripts\WinScreenScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Accusation">
+  <Class Name="Accusation" Collapsed="true">
     <Position X="18" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAQABAAIAAAAAAAAAAAAEAAAAAAAAAAAOAACA=</HashCode>
@@ -357,15 +350,15 @@
       <FileName>Assets\Tomasz\Scripts\Card.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CardManager">
-    <Position X="19.75" Y="1.5" Width="1.5" />
+  <Class Name="CardManager" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEQAAACKAAAAAAEBBAQAIQMAAEAAAAEA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\CardManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CardSlot">
-    <Position X="21.5" Y="1.5" Width="1.5" />
+  <Class Name="CardSlot" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAQCAIEQAAEBAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\CardSlot.cs</FileName>
@@ -378,22 +371,22 @@
       <FileName>Assets\Tomasz\Scripts\CharacterCard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ChooseCard">
-    <Position X="23.25" Y="1.5" Width="1.5" />
+  <Class Name="ChooseCard" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\ChooseCard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ChooseSlot">
-    <Position X="25" Y="1.5" Width="1.5" />
+  <Class Name="ChooseSlot" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\ChooseSlot.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DeckAnimation">
-    <Position X="28.5" Y="1.5" Width="1.5" />
+  <Class Name="DeckAnimation" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAACBAAEAgAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\DeckAnimation.cs</FileName>
@@ -406,22 +399,22 @@
       <FileName>Assets\Tomasz\Scripts\RoomCard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ShowableCard">
-    <Position X="18" Y="5.5" Width="1.5" />
+  <Class Name="ShowableCard" Collapsed="true">
+    <Position X="30.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\ShowableCard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UIHandler">
-    <Position X="23.25" Y="5.5" Width="1.5" />
+  <Class Name="UIHandler" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>pCgMAgQHCqAAEsQAA4AFQEsMEBEhhEAAAmQsACMAxzk=</HashCode>
       <FileName>Assets\Tomasz\Scripts\UIHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UserController">
-    <Position X="25" Y="5.5" Width="1.5" />
+  <Class Name="UserController" Collapsed="true">
+    <Position X="23.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABCQAAABAgAAAAKAAAEBgAAIAAAAQAIAAAAAAACCgGA=</HashCode>
       <FileName>Assets\Tomasz\Scripts\UserController.cs</FileName>
@@ -434,63 +427,63 @@
       <FileName>Assets\Tomasz\Scripts\WeaponCard.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AccusationCardSlot">
+  <Class Name="AccusationCardSlot" Collapsed="true">
     <Position X="19.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAQCAIEAAAEBAACAAEAAAAAAIAAABAAAAAAAA=</HashCode>
       <FileName>Assets\AccusationCardSlot.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerMovementTestScript">
-    <Position X="28.5" Y="3.5" Width="1.5" />
+  <Class Name="PlayerMovementTestScript" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAIAAABAgAAAAIAAAAAQQAQAAAAAAQEAAAAAABAAEI=</HashCode>
       <FileName>Assets\PlayerMovementTestScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PlayerStatsScript">
-    <Position X="30.25" Y="3.5" Width="1.5" />
+  <Class Name="PlayerStatsScript" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgCIJAIAgAAAEBAAAAABCAAAAAAAAEAAAABAAACJCAA=</HashCode>
       <FileName>Assets\PlayerStatsScript.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="AIMode">
+  <Enum Name="AIMode" Collapsed="true">
     <Position X="18" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAggAGAIAABAAAAAABAAAAAAAAQAAAAgAAQAEAgIA=</HashCode>
       <FileName>Assets\Anson\Scripts\AIControllerScript.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="TileTypeEnum">
+  <Enum Name="TileTypeEnum" Collapsed="true">
     <Position X="25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAACAAAAAAAAAAACACBAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>Assets\Anson\Scripts\BoardTileScript.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CharacterEnum">
+  <Enum Name="CharacterEnum" Collapsed="true">
     <Position X="21.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAIAAAAAAAAAACAAAAAgAQAAAAAAAAAAAEAEAAAAAA=</HashCode>
       <FileName>Assets\Anson\Scripts\CharacterEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="CameraTarget">
+  <Enum Name="CameraTarget" Collapsed="true">
     <Position X="19.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AJAIAAAAoAAAAACACAEAhAQIABEAAAAAAAEAEAAAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\CameraCloseUp.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="Room">
+  <Enum Name="Room" Collapsed="true">
     <Position X="23.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAoAAAAAAACAEABAAIABEAAAAAAAEAAAEAAAA=</HashCode>
       <FileName>Assets\Danny\Scripts\RoomScript.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="WeaponEnum">
+  <Enum Name="WeaponEnum" Collapsed="true">
     <Position X="26.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAIAEAAAAAAAIAAAAAAAAAAABAAACAA=</HashCode>

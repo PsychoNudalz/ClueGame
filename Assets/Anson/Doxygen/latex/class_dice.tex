@@ -1,11 +1,13 @@
 \hypertarget{class_dice}{}\doxysection{Dice Class Reference}
 \label{class_dice}\index{Dice@{Dice}}
-Inheritance diagram for Dice\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_dice}
-\end{center}
-\end{figure}
+
+
+Inheritance diagram for Dice\+:
+% FIG 0
+
+
+Collaboration diagram for Dice\+:
+% FIG 1
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -21,6 +23,26 @@ int \mbox{\hyperlink{class_dice_a91e31e11d7028270bebdc80719c64c19}{Get\+Value}} 
 \item 
 bool \mbox{\hyperlink{class_dice_a9df730d8804e077cacc5efcbda241896}{Ready\+To\+Roll}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_dice_a4e3633a353a64777d364070bcda02af8}{Initialise}} ()
+\item 
+void \mbox{\hyperlink{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_die}{Die}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_dice_a62a4234541bf06abd1d3a3aadf912084}{dice}}
+\item 
+int \mbox{\hyperlink{class_dice_aed5a9d6271c9204752d827d84d715fc7}{dice\+Value}}
+\item 
+\mbox{\hyperlink{class_camera_close_up}{Camera\+Close\+Up}} \mbox{\hyperlink{class_dice_a858e1adfdf5e1b6378edd5bf4fb7b1c0}{main\+Camera}}
+\item 
+bool \mbox{\hyperlink{class_dice_a0f074c20118ffabf81ad6d1421a8ec33}{set\+Close\+Up\+Camera}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -30,35 +52,110 @@ bool \mbox{\hyperlink{class_dice_a9df730d8804e077cacc5efcbda241896}{Ready\+To\+R
 \doxysubsubsection{\texorpdfstring{CalculateValue()}{CalculateValue()}}
 {\footnotesize\ttfamily void Dice.\+Calculate\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
 \mbox{\Hypertarget{class_dice_ace4c995eb73b784d1076fde140ce85af}\label{class_dice_ace4c995eb73b784d1076fde140ce85af}} 
 \index{Dice@{Dice}!CanReset@{CanReset}}
 \index{CanReset@{CanReset}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{CanReset()}{CanReset()}}
 {\footnotesize\ttfamily bool Dice.\+Can\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
 \mbox{\Hypertarget{class_dice_a91e31e11d7028270bebdc80719c64c19}\label{class_dice_a91e31e11d7028270bebdc80719c64c19}} 
 \index{Dice@{Dice}!GetValue@{GetValue}}
 \index{GetValue@{GetValue}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
 {\footnotesize\ttfamily int Dice.\+Get\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_dice_a4e3633a353a64777d364070bcda02af8}\label{class_dice_a4e3633a353a64777d364070bcda02af8}} 
+\index{Dice@{Dice}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily void Dice.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+% FIG 8
 \mbox{\Hypertarget{class_dice_a9df730d8804e077cacc5efcbda241896}\label{class_dice_a9df730d8804e077cacc5efcbda241896}} 
 \index{Dice@{Dice}!ReadyToRoll@{ReadyToRoll}}
 \index{ReadyToRoll@{ReadyToRoll}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{ReadyToRoll()}{ReadyToRoll()}}
 {\footnotesize\ttfamily bool Dice.\+Ready\+To\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
 \mbox{\Hypertarget{class_dice_ade1dc529eeb31f31e668c595c5748e67}\label{class_dice_ade1dc529eeb31f31e668c595c5748e67}} 
 \index{Dice@{Dice}!ResetDice@{ResetDice}}
 \index{ResetDice@{ResetDice}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{ResetDice()}{ResetDice()}}
 {\footnotesize\ttfamily void Dice.\+Reset\+Dice (\begin{DoxyParamCaption}\item[{bool}]{forced = {\ttfamily false} }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
 \mbox{\Hypertarget{class_dice_a333ed52f536c0e7748fafe9422b179b5}\label{class_dice_a333ed52f536c0e7748fafe9422b179b5}} 
 \index{Dice@{Dice}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!Dice@{Dice}}
 \doxysubsubsection{\texorpdfstring{RollDice()}{RollDice()}}
 {\footnotesize\ttfamily void Dice.\+Roll\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+\mbox{\Hypertarget{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}\label{class_dice_a7169d2cb750fa0b490be9038a68ca9fb}} 
+\index{Dice@{Dice}!Start@{Start}}
+\index{Start@{Start}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Dice.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}\label{class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126}} 
+\index{Dice@{Dice}!Update@{Update}}
+\index{Update@{Update}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Dice.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+% FIG 16
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dice_a62a4234541bf06abd1d3a3aadf912084}\label{class_dice_a62a4234541bf06abd1d3a3aadf912084}} 
+\index{Dice@{Dice}!dice@{dice}}
+\index{dice@{dice}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_die}{Die}} \mbox{[}$\,$\mbox{]} Dice.\+dice\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_dice_aed5a9d6271c9204752d827d84d715fc7}\label{class_dice_aed5a9d6271c9204752d827d84d715fc7}} 
+\index{Dice@{Dice}!diceValue@{diceValue}}
+\index{diceValue@{diceValue}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{diceValue}{diceValue}}
+{\footnotesize\ttfamily int Dice.\+dice\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_dice_a858e1adfdf5e1b6378edd5bf4fb7b1c0}\label{class_dice_a858e1adfdf5e1b6378edd5bf4fb7b1c0}} 
+\index{Dice@{Dice}!mainCamera@{mainCamera}}
+\index{mainCamera@{mainCamera}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{mainCamera}{mainCamera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_camera_close_up}{Camera\+Close\+Up}} Dice.\+main\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_dice_a0f074c20118ffabf81ad6d1421a8ec33}\label{class_dice_a0f074c20118ffabf81ad6d1421a8ec33}} 
+\index{Dice@{Dice}!setCloseUpCamera@{setCloseUpCamera}}
+\index{setCloseUpCamera@{setCloseUpCamera}!Dice@{Dice}}
+\doxysubsubsection{\texorpdfstring{setCloseUpCamera}{setCloseUpCamera}}
+{\footnotesize\ttfamily bool Dice.\+set\+Close\+Up\+Camera\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

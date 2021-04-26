@@ -64,6 +64,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_board_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BoardManager Class Reference</div>  </div>
@@ -72,9 +74,55 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for BoardManager:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_board_manager.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_board_manager__inherit__graph.png" border="0" usemap="#a_board_manager_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_board_manager_inherit__map" id="a_board_manager_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,139,264,796"/>
+<area shape="rect" title=" " alt="" coords="69,5,200,91"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for BoardManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager__coll__graph.png" border="0" usemap="#a_board_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_board_manager_coll__map" id="a_board_manager_coll__map">
+<area shape="rect" title=" " alt="" coords="1359,140,1617,641"/>
+<area shape="rect" href="class_board_tile_script.html" title="Super class for all tiles" alt="" coords="1123,896,1298,1241"/>
+<area shape="rect" href="class_player_token_script.html" title="For handling the player/ character&#39;s token" alt="" coords="1585,2217,1842,2875"/>
+<area shape="rect" href="class_player_master_controller.html" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="2013,2940,2245,3580"/>
+<area shape="rect" href="class_round_manager.html" title="Control what each player can do during their round/ turn" alt="" coords="2387,4437,2592,4956"/>
+<area shape="rect" href="class_a_i_controller_script.html" title="this class controlls the AI&#39;s behaviour and actions" alt="" coords="2269,3645,2472,4372"/>
+<area shape="rect" title=" " alt="" coords="2305,5,2436,91"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html" title="This handles the effects and shader on the tile" alt="" coords="614,296,839,485"/>
+<area shape="rect" href="class_room_entry_point.html" title=" " alt="" coords="1194,5108,1329,5193"/>
+<area shape="rect" href="class_room_script.html" title=" " alt="" coords="679,4489,985,4904"/>
+<area shape="rect" href="class_room_weapon_slot.html" title=" " alt="" coords="5,5423,232,5561"/>
+<area shape="rect" href="class_weapon_token_script.html" title=" " alt="" coords="251,5021,498,5280"/>
+<area shape="rect" href="class_room_player_slot.html" title=" " alt="" coords="780,3940,991,4077"/>
+<area shape="rect" href="class_player_stats_script.html" title="saves the character the player is and the deck it has" alt="" coords="2245,1813,2438,2193"/>
+<area shape="rect" href="class_door_script.html" title=" " alt="" coords="195,665,402,872"/>
+<area shape="rect" href="class_dice.html" title=" " alt="" coords="2580,1548,2751,1789"/>
+<area shape="rect" href="class_camera_close_up.html" title=" " alt="" coords="2391,913,2590,1224"/>
+<area shape="rect" href="class_close_up_point_script.html" title=" " alt="" coords="2409,331,2618,451"/>
+<area shape="rect" href="class_die.html" title=" " alt="" coords="2694,913,2845,1224"/>
+<area shape="rect" href="class_die_side.html" title=" " alt="" coords="2694,313,2837,468"/>
+<area shape="rect" href="class_u_i_handler.html" title="Handles the UI" alt="" coords="2481,5704,2703,6777"/>
+<area shape="rect" href="class_user_controller.html" title=" " alt="" coords="2745,5345,2911,5639"/>
+<area shape="rect" href="class_accusation.html" title=" " alt="" coords="3045,5073,3184,5228"/>
+<area shape="rect" href="class_card.html" title=" " alt="" coords="3450,3957,3598,4060"/>
+<area shape="rect" href="class_suggestion.html" title=" " alt="" coords="3458,5065,3625,5237"/>
+<area shape="rect" href="class_card_manager.html" title=" " alt="" coords="2813,3845,3003,4173"/>
+<area shape="rect" href="class_card_slot.html" title=" " alt="" coords="4019,4602,4168,4791"/>
+<area shape="rect" href="class_turn_controller.html" title="This handles the turn between the players" alt="" coords="2747,1265,2968,1524"/>
+<area shape="rect" href="class_free_suggestion_tile_script.html" title=" " alt="" coords="849,1626,1049,1711"/>
+<area shape="rect" href="class_shortcut_board_tile_script.html" title=" " alt="" coords="722,5047,910,5254"/>
+<area shape="rect" href="class_room_entry_board_tile_script.html" title=" " alt="" coords="1043,5354,1251,5630"/>
+<area shape="rect" href="class_start_tile_script.html" title=" " alt="" coords="1626,1574,1766,1763"/>
+<area shape="rect" href="class_free_roll_board_tile_script.html" title=" " alt="" coords="1411,1626,1602,1711"/>
+<area shape="rect" href="class_room_card.html" title=" " alt="" coords="3278,4611,3426,4783"/>
+<area shape="rect" href="class_character_card.html" title=" " alt="" coords="3450,4611,3598,4783"/>
+<area shape="rect" href="class_weapon_card.html" title=" " alt="" coords="3622,4611,3770,4783"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,7 +146,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a653d38723d03f890d38a1b68a855c569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5697839fa7daf9c40e75bdebc8bf82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82">CanMove</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> currentTile)</td></tr>
 <tr class="separator:a9d5697839fa7daf9c40e75bdebc8bf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc089b30dd732a7e8109c14143b01146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146">SetObjectArrays</a> (<a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[] players, <a class="el" href="class_room_script.html">RoomScript</a>[] rooms, <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[] roomEntries, <a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[] shortcuts, <a class="el" href="class_start_tile_script.html">StartTileScript</a>[] startTiles, <a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[] weaponTokens, <a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[] freeRollTiles, <a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[] freeSuggestionTiles)</td></tr>
+<tr class="memitem:adc089b30dd732a7e8109c14143b01146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146">SetObjectArrays</a> (<a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[] <a class="el" href="class_board_manager.html#a662a91f8d9b8e1034896534d8b931824">players</a>, <a class="el" href="class_room_script.html">RoomScript</a>[] <a class="el" href="class_board_manager.html#a54aa170dcd6571d525ad0ae91d4fc2e0">rooms</a>, <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[] <a class="el" href="class_board_manager.html#affb23a5e9a11cf0d422d2f6fdb907802">roomEntries</a>, <a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[] <a class="el" href="class_board_manager.html#abe911c436d25d8e9b9d89d9b6a8a7cc3">shortcuts</a>, <a class="el" href="class_start_tile_script.html">StartTileScript</a>[] <a class="el" href="class_board_manager.html#aa6b74bfd157803f2e434cea0569e87d7">startTiles</a>, <a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[] <a class="el" href="class_board_manager.html#ad5044039f19b34c6599b25f65c8178f4">weaponTokens</a>, <a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[] <a class="el" href="class_board_manager.html#a3113f325c18e05d15e4bb983850addf5">freeRollTiles</a>, <a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[] <a class="el" href="class_board_manager.html#a9882f73296780a6f39b0afd51f1cb261">freeSuggestionTiles</a>)</td></tr>
 <tr class="separator:adc089b30dd732a7e8109c14143b01146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb67ec83794138860f40af509e4820c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a5eb67ec83794138860f40af509e4820c">GetRandomEntryTileInMovable</a> ()</td></tr>
 <tr class="memdesc:a5eb67ec83794138860f40af509e4820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random list of entry tile from Movable list return null if none found  <a href="class_board_manager.html#a5eb67ec83794138860f40af509e4820c">More...</a><br /></td></tr>
@@ -130,6 +178,36 @@ Properties</h2></td></tr>
 <tr class="separator:a22ca64210457ab959125dad5083de977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c48dee7faeb9d726831a77c8e29cf7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a3c48dee7faeb9d726831a77c8e29cf7c">FreeSuggestionTiles</a><code> [get, set]</code></td></tr>
 <tr class="separator:a3c48dee7faeb9d726831a77c8e29cf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a83a5b3680205d298cfcc9552a75ed1a1"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a83a5b3680205d298cfcc9552a75ed1a1">PlaceWeaponsDelay</a> ()</td></tr>
+<tr class="separator:a83a5b3680205d298cfcc9552a75ed1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11591587bdea96f6792097007c4f6e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a11591587bdea96f6792097007c4f6e6f">PrintArray</a> ()</td></tr>
+<tr class="separator:a11591587bdea96f6792097007c4f6e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a63f83aa9d97fa187d7fc05846ae0b2cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a63f83aa9d97fa187d7fc05846ae0b2cb">boardTiles</a></td></tr>
+<tr class="separator:a63f83aa9d97fa187d7fc05846ae0b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662a91f8d9b8e1034896534d8b931824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a662a91f8d9b8e1034896534d8b931824">players</a></td></tr>
+<tr class="separator:a662a91f8d9b8e1034896534d8b931824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aa170dcd6571d525ad0ae91d4fc2e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_script.html">RoomScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a54aa170dcd6571d525ad0ae91d4fc2e0">rooms</a></td></tr>
+<tr class="separator:a54aa170dcd6571d525ad0ae91d4fc2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b74bfd157803f2e434cea0569e87d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_start_tile_script.html">StartTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#aa6b74bfd157803f2e434cea0569e87d7">startTiles</a></td></tr>
+<tr class="separator:aa6b74bfd157803f2e434cea0569e87d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe911c436d25d8e9b9d89d9b6a8a7cc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#abe911c436d25d8e9b9d89d9b6a8a7cc3">shortcuts</a></td></tr>
+<tr class="separator:abe911c436d25d8e9b9d89d9b6a8a7cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb23a5e9a11cf0d422d2f6fdb907802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#affb23a5e9a11cf0d422d2f6fdb907802">roomEntries</a></td></tr>
+<tr class="separator:affb23a5e9a11cf0d422d2f6fdb907802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3113f325c18e05d15e4bb983850addf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a3113f325c18e05d15e4bb983850addf5">freeRollTiles</a></td></tr>
+<tr class="separator:a3113f325c18e05d15e4bb983850addf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9882f73296780a6f39b0afd51f1cb261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9882f73296780a6f39b0afd51f1cb261">freeSuggestionTiles</a></td></tr>
+<tr class="separator:a9882f73296780a6f39b0afd51f1cb261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5044039f19b34c6599b25f65c8178f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#ad5044039f19b34c6599b25f65c8178f4">weaponTokens</a></td></tr>
+<tr class="separator:ad5044039f19b34c6599b25f65c8178f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e08af11795ad615b8d7458c1d12d7a0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_board_tile_script.html">BoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9e08af11795ad615b8d7458c1d12d7a0">movableTile</a></td></tr>
+<tr class="separator:a9e08af11795ad615b8d7458c1d12d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1ea52b667d1dd7ca6b4fa956a19ee26d"></a>
@@ -174,6 +252,39 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph.png" border="0" usemap="#aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph" id="aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph">
+<area shape="rect" title="perform bfs search for the tiles" alt="" coords="5,32,157,61"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="205,5,467,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="241,59,431,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="515,5,763,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph.png" border="0" usemap="#aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph" id="aclass_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph">
+<area shape="rect" title="perform bfs search for the tiles" alt="" coords="1440,139,1592,168"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1145,59,1392,88"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="1154,219,1383,248"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="782,5,1041,35"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="756,59,1067,88"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="793,112,1029,141"/>
+<area shape="rect" href="class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="725,165,1097,195"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="796,219,1027,248"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="760,272,1063,301"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="783,325,1040,355"/>
+<area shape="rect" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title=" " alt="" coords="797,379,1026,408"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="449,112,671,141"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -192,6 +303,18 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph.png" border="0" usemap="#aclass_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph" id="aclass_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph">
+<area shape="rect" title=" " alt="" coords="935,32,1133,61"/>
+<area shape="rect" href="class_board_tile_script.html#ac2a8e986f44ea316fb5340cdd75e02e4" title="check if the player can move to this tile" alt="" coords="659,5,862,35"/>
+<area shape="rect" href="class_player_master_controller.html#aa777652a6197abe043a097ce3a1201b4" title="check if the player can move to a certain tile" alt="" coords="635,59,887,88"/>
+<area shape="rect" href="class_user_selection_script.html#a79fe134329afe738c1e4fb0d66c99d69" title="Setting the current tile clears the previous tile and set the effect for the new tile" alt="" coords="301,5,587,35"/>
+<area shape="rect" href="class_user_cursor_script.html#a86dacfae5227440b7f8ca3c7042a8892" title=" " alt="" coords="5,5,253,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -209,6 +332,41 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph.png" border="0" usemap="#aclass_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph" id="aclass_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph">
+<area shape="rect" title=" " alt="" coords="5,32,233,61"/>
+<area shape="rect" href="class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="281,32,476,61"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="524,5,871,35"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="524,59,871,88"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph.png" border="0" usemap="#aclass_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph" id="aclass_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph">
+<area shape="rect" title=" " alt="" coords="1856,112,2084,141"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="1551,5,1808,35"/>
+<area shape="rect" href="class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="1572,59,1787,88"/>
+<area shape="rect" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title=" " alt="" coords="1565,112,1794,141"/>
+<area shape="rect" href="class_round_manager.html#acf644ae21a6f9ebc2a476fc8603e18fc" title="Method for starting the turn" alt="" coords="1581,165,1777,195"/>
+<area shape="rect" href="class_player_token_script.html#acadae9824e11bd147d2c65cbb86ea89d" title=" " alt="" coords="1556,219,1803,248"/>
+<area shape="rect" href="class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title=" " alt="" coords="1281,59,1476,88"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="572,33,852,63"/>
+<area shape="rect" href="class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="900,85,1207,115"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,60,524,89"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,60,244,89"/>
+<area shape="rect" href="class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0" title="Ending the turn. Returns the next player" alt="" coords="1283,140,1474,169"/>
+<area shape="rect" href="class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="1255,193,1503,223"/>
+<area shape="rect" href="class_user_controller.html#ab90611f541e20c125133d09b62407f41" title=" " alt="" coords="961,140,1145,169"/>
+<area shape="rect" href="class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0" title="have AI to end turn" alt="" coords="609,87,815,116"/>
+<area shape="rect" href="class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93" title=" " alt="" coords="636,140,788,169"/>
+<area shape="rect" href="class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="969,193,1137,223"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -243,6 +401,19 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_ad208908578ffda25d87122a34e264b44_icgraph.png" border="0" usemap="#aclass_board_manager_ad208908578ffda25d87122a34e264b44_icgraph" alt=""/></div>
+<map name="aclass_board_manager_ad208908578ffda25d87122a34e264b44_icgraph" id="aclass_board_manager_ad208908578ffda25d87122a34e264b44_icgraph">
+<area shape="rect" title=" " alt="" coords="1084,59,1343,88"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="751,5,1010,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,85,395,115"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="725,59,1036,88"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,59,677,88"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,85,172,115"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -263,6 +434,17 @@ Properties</h2></td></tr>
 
 <p>Gets an free roll tile from Movable list return null if none found </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph.png" border="0" usemap="#aclass_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph" id="aclass_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph">
+<area shape="rect" title="Gets an free roll tile from Movable list return null if none found" alt="" coords="900,5,1211,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="572,5,852,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -283,6 +465,17 @@ Properties</h2></td></tr>
 
 <p>Gets an free suggestion tile from Movable list return null if none found </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph.png" border="0" usemap="#aclass_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph" id="aclass_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph">
+<area shape="rect" title="Gets an free suggestion tile from Movable list return null if none found" alt="" coords="900,5,1239,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="572,5,852,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -303,6 +496,17 @@ Properties</h2></td></tr>
 
 <p>Gets a random list of entry tile from Movable list return null if none found </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph.png" border="0" usemap="#aclass_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph" id="aclass_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph">
+<area shape="rect" title="Gets a random list of entry tile from Movable list return null if none found" alt="" coords="900,5,1245,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="572,5,852,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,5,524,35"/>
+<area shape="rect" href="class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,5,244,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -331,6 +535,32 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph.png" border="0" usemap="#aclass_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph" alt=""/></div>
+<map name="aclass_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph" id="aclass_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph">
+<area shape="rect" title=" " alt="" coords="1997,192,2245,221"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="1688,140,1949,169"/>
+<area shape="rect" href="class_board_manager.html#a11591587bdea96f6792097007c4f6e6f" title=" " alt="" coords="1440,192,1640,221"/>
+<area shape="rect" href="class_shortcut_test_u_i.html#a348c3a480e18ee735a31915ef7956bc0" title=" " alt="" coords="1739,244,1899,273"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="1464,139,1616,168"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1145,59,1392,88"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="1154,219,1383,248"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="782,5,1041,35"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="756,59,1067,88"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="793,112,1029,141"/>
+<area shape="rect" href="class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="725,165,1097,195"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="796,219,1027,248"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="760,272,1063,301"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="783,325,1040,355"/>
+<area shape="rect" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title=" " alt="" coords="797,379,1026,408"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="449,112,671,141"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -349,6 +579,109 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph.png" border="0" usemap="#aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph" alt=""/></div>
+<map name="aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph" id="aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,267,35"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="315,5,563,35"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph.png" border="0" usemap="#aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph" alt=""/></div>
+<map name="aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph" id="aclass_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph">
+<area shape="rect" title=" " alt="" coords="1688,165,1949,195"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="1464,139,1616,168"/>
+<area shape="rect" href="class_board_manager.html#a11591587bdea96f6792097007c4f6e6f" title=" " alt="" coords="1440,192,1640,221"/>
+<area shape="rect" href="class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1145,59,1392,88"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="1154,219,1383,248"/>
+<area shape="rect" href="class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="782,5,1041,35"/>
+<area shape="rect" href="class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="756,59,1067,88"/>
+<area shape="rect" href="class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="793,112,1029,141"/>
+<area shape="rect" href="class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="725,165,1097,195"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="796,219,1027,248"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="760,272,1063,301"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="783,325,1040,355"/>
+<area shape="rect" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title=" " alt="" coords="797,379,1026,408"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="449,112,671,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83a5b3680205d298cfcc9552a75ed1a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a5b3680205d298cfcc9552a75ed1a1">&#9670;&nbsp;</a></span>PlaceWeaponsDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator BoardManager.PlaceWeaponsDelay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph.png" border="0" usemap="#aclass_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph" id="aclass_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,284,35"/>
+<area shape="rect" href="class_room_script.html#a6bf61204f9a96ad3bf5e377b9938809d" title=" " alt="" coords="332,5,579,35"/>
+<area shape="rect" href="class_room_weapon_slot.html#a9aa6b21ab7fc6b27172e71637d52011f" title=" " alt="" coords="627,5,875,35"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11591587bdea96f6792097007c4f6e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11591587bdea96f6792097007c4f6e6f">&#9670;&nbsp;</a></span>PrintArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardManager.PrintArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph.png" border="0" usemap="#aclass_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph" id="aclass_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,35"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="563,5,811,35"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="253,31,515,60"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -413,6 +746,16 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph.png" border="0" usemap="#aclass_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph" alt=""/></div>
+<map name="aclass_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph" id="aclass_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph">
+<area shape="rect" title=" " alt="" coords="443,5,688,35"/>
+<area shape="rect" href="class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" href="class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -451,6 +794,36 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph.png" border="0" usemap="#aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph" alt=""/></div>
+<map name="aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph" id="aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph">
+<area shape="rect" title="mark and showwhich tile the player can move to" alt="" coords="5,85,235,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="304,59,456,88"/>
+<area shape="rect" href="class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="283,112,477,141"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="568,5,829,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="603,59,794,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="920,5,1168,35"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="525,112,872,141"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="525,165,872,195"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph.png" border="0" usemap="#aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph" alt=""/></div>
+<map name="aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph" id="aclass_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph">
+<area shape="rect" title="mark and showwhich tile the player can move to" alt="" coords="696,139,925,168"/>
+<area shape="rect" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="344,5,580,35"/>
+<area shape="rect" href="class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="276,59,648,88"/>
+<area shape="rect" href="class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="347,112,577,141"/>
+<area shape="rect" href="class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="311,165,613,195"/>
+<area shape="rect" href="class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="333,219,591,248"/>
+<area shape="rect" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title=" " alt="" coords="347,272,577,301"/>
+<area shape="rect" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="5,5,228,35"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -479,6 +852,23 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph.png" border="0" usemap="#aclass_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph" id="aclass_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph">
+<area shape="rect" title=" " alt="" coords="5,85,235,115"/>
+<area shape="rect" href="class_board_manager.html#a653d38723d03f890d38a1b68a855c569" title=" " alt="" coords="283,59,511,88"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="283,112,512,141"/>
+<area shape="rect" href="class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="560,59,755,88"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="803,5,1149,35"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="803,59,1149,88"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="581,112,733,141"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="845,112,1107,141"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="881,165,1071,195"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1197,112,1445,141"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -506,6 +896,244 @@ Properties</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph.png" border="0" usemap="#aclass_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph" alt=""/></div>
+<map name="aclass_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph" id="aclass_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph">
+<area shape="rect" title=" " alt="" coords="5,59,235,88"/>
+<area shape="rect" href="class_room_script.html#afdf6318e292ff6c9da3002950c5dd498" title=" " alt="" coords="296,32,499,61"/>
+<area shape="rect" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="mark and showwhich tile the player can move to" alt="" coords="283,85,512,115"/>
+<area shape="rect" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="perform bfs search for the tiles" alt="" coords="581,59,733,88"/>
+<area shape="rect" href="class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="560,112,755,141"/>
+<area shape="rect" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title=" " alt="" coords="845,5,1107,35"/>
+<area shape="rect" href="class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="881,59,1071,88"/>
+<area shape="rect" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title=" " alt="" coords="1197,5,1445,35"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="803,112,1149,141"/>
+<area shape="rect" href="class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="803,165,1149,195"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a63f83aa9d97fa187d7fc05846ae0b2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f83aa9d97fa187d7fc05846ae0b2cb">&#9670;&nbsp;</a></span>boardTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_tile_script.html">BoardTileScript</a> [][] BoardManager.boardTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3113f325c18e05d15e4bb983850addf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3113f325c18e05d15e4bb983850addf5">&#9670;&nbsp;</a></span>freeRollTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a> [] BoardManager.freeRollTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9882f73296780a6f39b0afd51f1cb261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9882f73296780a6f39b0afd51f1cb261">&#9670;&nbsp;</a></span>freeSuggestionTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a> [] BoardManager.freeSuggestionTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e08af11795ad615b8d7458c1d12d7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e08af11795ad615b8d7458c1d12d7a0">&#9670;&nbsp;</a></span>movableTile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_board_tile_script.html">BoardTileScript</a>&gt; BoardManager.movableTile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a662a91f8d9b8e1034896534d8b931824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662a91f8d9b8e1034896534d8b931824">&#9670;&nbsp;</a></span>players</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a> [] BoardManager.players</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affb23a5e9a11cf0d422d2f6fdb907802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb23a5e9a11cf0d422d2f6fdb907802">&#9670;&nbsp;</a></span>roomEntries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a> [] BoardManager.roomEntries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54aa170dcd6571d525ad0ae91d4fc2e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54aa170dcd6571d525ad0ae91d4fc2e0">&#9670;&nbsp;</a></span>rooms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_script.html">RoomScript</a> [] BoardManager.rooms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe911c436d25d8e9b9d89d9b6a8a7cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe911c436d25d8e9b9d89d9b6a8a7cc3">&#9670;&nbsp;</a></span>shortcuts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a> [] BoardManager.shortcuts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6b74bfd157803f2e434cea0569e87d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b74bfd157803f2e434cea0569e87d7">&#9670;&nbsp;</a></span>startTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_start_tile_script.html">StartTileScript</a> [] BoardManager.startTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5044039f19b34c6599b25f65c8178f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5044039f19b34c6599b25f65c8178f4">&#9670;&nbsp;</a></span>weaponTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a> [] BoardManager.weaponTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
