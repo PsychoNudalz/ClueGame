@@ -10,7 +10,9 @@ public class WeaponCard : Card
 {
     public WeaponEnum weaponEnum;
     private Sprite cardImage;
-
+    /// <summary>
+    /// Sets the correct path for cards image
+    /// </summary>
     private void Awake()
     {
         String path = "Danny/CardImages/Weapons/" + weaponEnum.ToString();
@@ -36,9 +38,12 @@ public class WeaponCard : Card
         }
 
         return false;
-        
-    }
 
+    }
+    /// <summary>
+    /// Returns the enum of the card
+    /// </summary>
+    /// <returns>Enum of the card</returns>
     public override Enum GetCardType()
     {
         return weaponEnum;
@@ -48,7 +53,10 @@ public class WeaponCard : Card
     {
         return base.GetHashCode();
     }
-
+    /// <summary>
+    /// Returns cards image 
+    /// </summary>
+    /// <returns>Cards image</returns>
     public override Sprite GetCardImage()
     {
         return cardImage;
