@@ -17,7 +17,7 @@ var searchData=
   ['aitestscript_2ecs_14',['AITestScript.cs',['../_a_i_test_script_8cs.html',1,'']]],
   ['ansontestscript_15',['AnsonTestScript',['../class_anson_test_script.html',1,'']]],
   ['ansontestscript_2ecs_16',['AnsonTestScript.cs',['../_anson_test_script_8cs.html',1,'']]],
-  ['answers_17',['answers',['../class_card_manager.html#ae422bd0c5ee4f4a928af6ab6a2bb35c8',1,'CardManager']]],
+  ['answers_17',['answers',['../class_suggestion_test.html#ab8059788e6aa98e564551a13fe3f653e',1,'SuggestionTest.answers()'],['../class_card_manager.html#ae422bd0c5ee4f4a928af6ab6a2bb35c8',1,'CardManager.answers()']]],
   ['asset_18',['asset',['../class_game_controls.html#a0f8eb38b754d1d8ac655204f1f3cdbf1',1,'GameControls']]],
   ['assignallcomponents_19',['AssignAllComponents',['../class_a_i_controller_script.html#a339af11f679c84a01e392ef7f924c4de',1,'AIControllerScript.AssignAllComponents()'],['../class_anson_test_script.html#a2048b81df83ae3e211e0c2fc2e9b4c84',1,'AnsonTestScript.AssignAllComponents(InputAction.CallbackContext callbackContext)'],['../class_anson_test_script.html#ae4361c8467c54fedd780c0844ee48d37',1,'AnsonTestScript.AssignAllComponents()'],['../class_game_manager_script.html#ae40b6e53f9f1fe97a3b12dfb2467b48a',1,'GameManagerScript.AssignAllComponents()'],['../class_test_u_i_script.html#a506ea6fe2de0c00f44518caaecca2f84',1,'TestUIScript.AssignAllComponents()'],['../class_player_movement_test_script.html#a8d7940f1f0235c447e995eccecfa2085',1,'PlayerMovementTestScript.AssignAllComponents(InputAction.CallbackContext callbackContext)'],['../class_player_movement_test_script.html#a8a5a612e81f2f93e8095b0e5285fecea',1,'PlayerMovementTestScript.AssignAllComponents()']]]
 ];

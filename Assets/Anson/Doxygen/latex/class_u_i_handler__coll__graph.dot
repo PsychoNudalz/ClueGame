@@ -1,0 +1,18 @@
+digraph "UIHandler"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="UIHandler",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Handles the UI"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="MonoBehaviour",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" userController" ];
+  Node3 [label="UserController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cardManager" ];
+  Node4 [label="CardManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_card_manager.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" p" ];
+  Node5 [label="PlayerMasterController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html",tooltip="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

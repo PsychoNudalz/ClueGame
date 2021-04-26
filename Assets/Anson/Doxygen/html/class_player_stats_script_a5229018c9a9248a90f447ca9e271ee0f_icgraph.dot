@@ -1,0 +1,12 @@
+digraph "PlayerStatsScript.InititaliseToGuessList"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="PlayerStatsScript.Inititalise\lToGuessList",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="initialise the To Guess List it is the list that keeps track of which card was not suggested"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="PlayerMasterController.Start\lBehaviour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#a292e03d361cb54e21a038cba42902b7e",tooltip="for initialising the player"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GameManagerScript.StartGame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31",tooltip="starting and initialing the game and it's components"];
+}

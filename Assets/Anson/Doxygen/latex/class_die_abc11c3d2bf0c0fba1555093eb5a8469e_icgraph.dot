@@ -1,0 +1,40 @@
+digraph "Die.ResetDie"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Die.ResetDie",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Dice.ResetDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="RoundManager.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#a29177f2e27c6c4af55dfa3c48d67cfb0",tooltip="Ending the turn. Returns the next player"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="UserController.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#ab90611f541e20c125133d09b62407f41",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="AIControllerScript.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#a9c386cf1258ad897c9a1068804f07ba0",tooltip="have AI to end turn"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="UIHandler.EndTurn",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#acc06a1dab8566d9e14f7ab3ae1ffea93",tooltip=" "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="PlayerMovementTestScript.\lResetDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement_test_script.html#a1f9e6f5902a9ba827538f3325227917c",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Die.RollDie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Dice.RollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="PlayerMovementTestScript.\lRollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement_test_script.html#aaa8efc18953ff0b4e286c66962221a8f",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="PlayerMovementTestScript.\lRollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement_test_script.html#a36e775e38982d88a818317723d2a04c2",tooltip=" "];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="RoundManager.RollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#ab795c17242b95ab2cef508da5daa2593",tooltip="Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it"];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="UserController.RollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#aee97f82bdda647a5e3761666a3d46552",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="AIControllerScript.RollDice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#a1584ffc08f2ea88236ad6df47319636b",tooltip="have AI to roll"];
+  Node13 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="UIHandler.RollDiceButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#ac40571820fefd3233236883c01522fa1",tooltip="rolls dice when the button is pressed"];
+  Node9 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="AnsonTestScript.RollDie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_anson_test_script.html#a88d84c041cb91d2f739270581d59d7e9",tooltip=" "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="AnsonTestScript.RollDie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_anson_test_script.html#a89ed8bb63ce2a8c4631e2dc3d9301e38",tooltip=" "];
+}

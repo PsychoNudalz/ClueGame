@@ -1,0 +1,42 @@
+digraph "PlayerMasterController.GetCurrentRoom"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="PlayerMasterController.Get\lCurrentRoom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="AIControllerScript.Decide\l_Movement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df",tooltip="Decides where the AI should move to this should match the flow chart of the AI"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="AIControllerScript.Decide\l_Suggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17",tooltip="Decides what the AI should suggest this should match the flow chart of the AI"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="UIHandler.DisplayMenuSuggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#a99048b81a1303baba7efd44095c0f235",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="UIHandler.MakeSuggestion\lButton",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#a52241b6fefb8a446c2c000202216bfd2",tooltip="makes suggestion when the button is pressed"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ShortcutTestUI.ExitRoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shortcut_test_u_i.html#ada4b889c0948d9fc4895b9c581b530b7",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Testing_MovementScript.GiveRoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a",tooltip="give a select value for the player roll"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="RoundManager.MovePlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#adfd4f66436e06c12a25c9236b629f369",tooltip="moving the current player to the selected tile"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="UserController.SelectTile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d",tooltip=" "];
+  Node9 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="UserInputControlScript.Move\lPlayerToken",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb",tooltip="move player token to the tile the cursor is on"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="RoomScript.MovePlayerToRoom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_room_script.html#a4a19c52c114612c19ae2580768d94859",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="MoveTokensTestScript.Move\lPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_move_tokens_test_script.html#a8f13bba80a272ef71d23715279a9ad89",tooltip=" "];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Suggestion.Suggest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_suggestion.html#ab326cb791b6707926dd69497e79d159b",tooltip=" "];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="UserController.MakeSuggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#a6230816eec4c8be9bda248a166d7b9bd",tooltip=" "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="UIHandler.ConfirmSuggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#ae6960c4c231f0e85718af2150449bb1f",tooltip=" "];
+  Node14 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="SuggestionTest.MakeSuggestion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3",tooltip="get test choices and make suggestion"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="Testing_MovementScript.Update\lBehaviour",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_testing___movement_script.html#abaaeb242fee8995f1058fde65fc793ba",tooltip=" "];
+}

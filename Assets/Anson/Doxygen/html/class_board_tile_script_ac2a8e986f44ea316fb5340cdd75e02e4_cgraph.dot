@@ -1,0 +1,10 @@
+digraph "BoardTileScript.CanMove"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="BoardTileScript.CanMove",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="check if the player can move to this tile"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="BoardManager.CanMove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82",tooltip=" "];
+}

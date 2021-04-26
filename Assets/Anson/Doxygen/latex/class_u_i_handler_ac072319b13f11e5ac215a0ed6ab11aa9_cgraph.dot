@@ -1,0 +1,22 @@
+digraph "UIHandler.InitialiseTurn"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="UIHandler.InitialiseTurn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="UIHandler.DisplayNotePad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#abe1c78d110b0a4374daed98df71fcff1",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="UIHandler.DisplayPlayerEliminated",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#a2db6b92acd51a72b431b3eacb3884ddd",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="PlayerMasterController.Get\lCharacter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="UserController.GetCurrent\lPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa",tooltip="Gets the player controller for the current player"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="RoundManager.GetCurrentPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8",tooltip="Gets the player controller for the current player"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="TurnController.GetCurrent\lPlayer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="UIHandler.UpdateCurrentTurnText",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_u_i_handler.html#a33d33813339ed163ad4ab8708226f911",tooltip=" "];
+}
