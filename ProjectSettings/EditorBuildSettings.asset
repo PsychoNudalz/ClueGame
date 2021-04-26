@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Abdullah/Sug_Test_Redo.unity
     guid: 34006a6d3b62dd64cb0cc8a6a17c90d6
+  - enabled: 1
+    path: Assets/_TestScenes/NoteBookTest.unity
+    guid: 8e49d890c0260db49809893a56b7296b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 096337e020f97734aa55e214c66015e9,
       type: 2}
