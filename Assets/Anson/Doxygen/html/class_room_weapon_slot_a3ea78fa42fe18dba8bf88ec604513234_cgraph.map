@@ -1,0 +1,4 @@
+<map id="RoomWeaponSlot.AddWeaponToSlot" name="RoomWeaponSlot.AddWeaponToSlot">
+<area shape="rect" id="node1" title="Add Weapon to the slot if not occupied" alt="" coords="5,5,292,35"/>
+<area shape="rect" id="node2" href="$class_room_weapon_slot.html#a9aa6b21ab7fc6b27172e71637d52011f" title="I slot currently occupied by a weapon token" alt="" coords="340,5,588,35"/>
+</map>

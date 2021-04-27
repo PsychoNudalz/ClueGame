@@ -1,0 +1,4 @@
+<map id="PlayerStatsScript" name="PlayerStatsScript">
+<area shape="rect" id="node1" title="saves the character the player is and the deck it has" alt="" coords="5,139,199,519"/>
+<area shape="rect" id="node2" title=" " alt="" coords="37,5,167,91"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="UserSelectionScript.GetCurrentTile" name="UserSelectionScript.GetCurrentTile">
+<area shape="rect" id="node1" title=" " alt="" coords="360,5,627,35"/>
+<area shape="rect" id="node2" href="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="5,5,312,35"/>
+</map>

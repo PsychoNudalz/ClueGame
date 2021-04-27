@@ -1,0 +1,9 @@
+<map id="BoardTileScript" name="BoardTileScript">
+<area shape="rect" id="node1" title="Super class for all tiles" alt="" coords="453,139,644,519"/>
+<area shape="rect" id="node3" href="$class_free_roll_board_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="5,697,196,782"/>
+<area shape="rect" id="node4" href="$class_free_suggestion_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="221,697,421,782"/>
+<area shape="rect" id="node5" href="$class_room_entry_board_tile_script.html" title="Script for the room entry board tile GameObject" alt="" coords="445,567,653,912"/>
+<area shape="rect" id="node6" href="$class_shortcut_board_tile_script.html" title="Class for the Shortcut board tile Gameobject" alt="" coords="677,627,865,851"/>
+<area shape="rect" id="node7" href="$class_start_tile_script.html" title="Class for the start tile Gameobject" alt="" coords="889,645,1029,834"/>
+<area shape="rect" id="node2" title=" " alt="" coords="483,5,614,91"/>
+</map>

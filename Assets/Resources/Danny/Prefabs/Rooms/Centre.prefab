@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf60f0ef9506bf4dbfbfccea9766a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: 3
+  room: 10
 --- !u!54 &559287759328722600
 Rigidbody:
   m_ObjectHideFlags: 0

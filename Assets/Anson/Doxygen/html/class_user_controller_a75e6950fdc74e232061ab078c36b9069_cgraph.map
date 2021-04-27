@@ -1,0 +1,6 @@
+<map id="UserController.SetRoom" name="UserController.SetRoom">
+<area shape="rect" id="node1" title="Sets room for suggestions and accusation" alt="" coords="5,59,197,88"/>
+<area shape="rect" id="node2" href="$class_card_manager.html#a124d7d9ab3a0e7c22ca64c15da76d4b1" title="Looks for the specified weapon card" alt="" coords="250,5,439,35"/>
+<area shape="rect" id="node3" href="$class_accusation.html#a15c3190bb9b3ff4be98195a3f72bcd23" title="Set the current room for accusing" alt="" coords="260,59,429,88"/>
+<area shape="rect" id="node4" href="$class_suggestion.html#aec2e9ce82ae5f51cea7570bc6dafa43a" title=" " alt="" coords="245,112,444,141"/>
+</map>

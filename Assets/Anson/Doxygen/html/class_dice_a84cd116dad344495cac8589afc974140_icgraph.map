@@ -1,0 +1,9 @@
+<map id="Dice.CalculateValue" name="Dice.CalculateValue">
+<area shape="rect" id="node1" title="Calculate total value of all dice" alt="" coords="799,85,963,115"/>
+<area shape="rect" id="node2" href="$class_dice.html#a91e31e11d7028270bebdc80719c64c19" title="Get value of all dice" alt="" coords="627,85,751,115"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="309,5,545,35"/>
+<area shape="rect" id="node5" href="$class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="312,59,543,88"/>
+<area shape="rect" id="node6" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="276,112,579,141"/>
+<area shape="rect" id="node7" href="$class_display_dice_value.html#a0f0f2e5d5a2ecc6e8530c82f897f5dba" title="Set button interactable and update dice value text" alt="" coords="326,165,529,195"/>
+<area shape="rect" id="node4" href="$class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="5,5,228,35"/>
+</map>

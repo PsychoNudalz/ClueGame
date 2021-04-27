@@ -1,0 +1,4 @@
+<map id="PlayerStatsScript.AddCard" name="PlayerStatsScript.AddCard">
+<area shape="rect" id="node1" title="Add a list of card to the player&#39;s deck" alt="" coords="5,5,216,35"/>
+<area shape="rect" id="node2" href="$class_player_stats_script.html#ab6e2e29c99a27c5b76584d16cca75c2c" title="Add a card to the player&#39;s deck" alt="" coords="264,5,475,35"/>
+</map>

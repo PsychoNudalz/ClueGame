@@ -1,0 +1,4 @@
+<map id="NotebookButton.SetButtonType" name="NotebookButton.SetButtonType">
+<area shape="rect" id="node1" title="Set the button type" alt="" coords="5,5,245,35"/>
+<area shape="rect" id="node2" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="293,5,561,35"/>
+</map>

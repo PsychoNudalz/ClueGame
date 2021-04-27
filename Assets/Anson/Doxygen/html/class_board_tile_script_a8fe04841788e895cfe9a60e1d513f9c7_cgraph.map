@@ -1,0 +1,4 @@
+<map id="BoardTileScript.SelectTile" name="BoardTileScript.SelectTile">
+<area shape="rect" id="node1" title="enable the select effect on the tile" alt="" coords="5,5,209,35"/>
+<area shape="rect" id="node2" href="$class_board_tile_effect_handler_script.html#a1ea26493f3277f4bc1f8f16a506cf29f" title="display the glow box effect for when the cursor hovering on it" alt="" coords="257,5,556,35"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="UIHandler.DisplayChoicePanel" name="UIHandler.DisplayChoicePanel">
+<area shape="rect" id="node1" title="Dispal a panel for a player to choose which card to show" alt="" coords="5,85,241,115"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="289,5,568,35"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="302,59,555,88"/>
+<area shape="rect" id="node5" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="295,112,563,141"/>
+<area shape="rect" id="node6" href="$class_card_slot.html#af678d8249e4d52bb791b47d4ed75e7f3" title="Makes the card slot visible and its game object active" alt="" coords="349,165,509,195"/>
+<area shape="rect" id="node4" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="616,59,859,88"/>
+</map>

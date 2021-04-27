@@ -1,24 +1,36 @@
 \hypertarget{class_accusation}{}\doxysection{Accusation Class Reference}
 \label{class_accusation}\index{Accusation@{Accusation}}
-Inheritance diagram for Accusation\+:\begin{figure}[H]
+
+
+Inheritance diagram for Accusation\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_accusation}
+\includegraphics[width=193pt]{class_accusation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Accusation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_accusation__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_accusation_abba1b95fd7e759eac9efbf52819abd75}{Accuse}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Passes a list of selected cards \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_accusation_a8ec681e44a6b354d986656ea54b6dd36}{Set\+Weapon}} (\mbox{\hyperlink{class_weapon_card}{Weapon\+Card}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current weapon for accusing \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_accusation_ac3146e7ac1d8844109100dc748bba140}{Set\+Character}} (\mbox{\hyperlink{class_character_card}{Character\+Card}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current character for accusing \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_accusation_a15c3190bb9b3ff4be98195a3f72bcd23}{Set\+Room}} (\mbox{\hyperlink{class_room_card}{Room\+Card}} c)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the current room for accusing \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}{Cancel}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clears selected cards \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +39,11 @@ void \mbox{\hyperlink{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}{Cancel
 \mbox{\hyperlink{class_room_card}{Room\+Card}} \mbox{\hyperlink{class_accusation_a5188e82f81048daa8655cf34d56adbcd}{current\+Room}}
 \item 
 \mbox{\hyperlink{class_character_card}{Character\+Card}} \mbox{\hyperlink{class_accusation_a942e8db3e668c6a6788f65c1ef93efcc}{current\+Character}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_accusation_a7180047309e27a2ef01985ce6a04dfe8}{round\+Manager}}
 \end{DoxyCompactItemize}
 
 
@@ -37,11 +54,29 @@ void \mbox{\hyperlink{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}{Cancel
 \doxysubsubsection{\texorpdfstring{Accuse()}{Accuse()}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Accusation.\+Accuse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Passes a list of selected cards 
+
+\begin{DoxyReturn}{Returns}
+Returns a list of selcted cards for accusing
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_accusation_abba1b95fd7e759eac9efbf52819abd75_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}\label{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}} 
 \index{Accusation@{Accusation}!Cancel@{Cancel}}
 \index{Cancel@{Cancel}!Accusation@{Accusation}}
 \doxysubsubsection{\texorpdfstring{Cancel()}{Cancel()}}
 {\footnotesize\ttfamily void Accusation.\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears selected cards 
 
 \mbox{\Hypertarget{class_accusation_ac3146e7ac1d8844109100dc748bba140}\label{class_accusation_ac3146e7ac1d8844109100dc748bba140}} 
 \index{Accusation@{Accusation}!SetCharacter@{SetCharacter}}
@@ -49,18 +84,66 @@ void \mbox{\hyperlink{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}{Cancel
 \doxysubsubsection{\texorpdfstring{SetCharacter()}{SetCharacter()}}
 {\footnotesize\ttfamily void Accusation.\+Set\+Character (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character_card}{Character\+Card}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Set the current character for accusing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Selected character card\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_accusation_ac3146e7ac1d8844109100dc748bba140_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_accusation_a15c3190bb9b3ff4be98195a3f72bcd23}\label{class_accusation_a15c3190bb9b3ff4be98195a3f72bcd23}} 
 \index{Accusation@{Accusation}!SetRoom@{SetRoom}}
 \index{SetRoom@{SetRoom}!Accusation@{Accusation}}
 \doxysubsubsection{\texorpdfstring{SetRoom()}{SetRoom()}}
 {\footnotesize\ttfamily void Accusation.\+Set\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_card}{Room\+Card}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Set the current room for accusing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Selected room card \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_accusation_a15c3190bb9b3ff4be98195a3f72bcd23_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_accusation_a8ec681e44a6b354d986656ea54b6dd36}\label{class_accusation_a8ec681e44a6b354d986656ea54b6dd36}} 
 \index{Accusation@{Accusation}!SetWeapon@{SetWeapon}}
 \index{SetWeapon@{SetWeapon}!Accusation@{Accusation}}
 \doxysubsubsection{\texorpdfstring{SetWeapon()}{SetWeapon()}}
 {\footnotesize\ttfamily void Accusation.\+Set\+Weapon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_card}{Weapon\+Card}}}]{c }\end{DoxyParamCaption})}
 
+
+
+Set the current weapon for accusing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Selected weapon card\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_accusation_a8ec681e44a6b354d986656ea54b6dd36_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -81,6 +164,12 @@ void \mbox{\hyperlink{class_accusation_a99357b8dc99b1ba6f1d8e6fa156ee029}{Cancel
 \index{currentWeapon@{currentWeapon}!Accusation@{Accusation}}
 \doxysubsubsection{\texorpdfstring{currentWeapon}{currentWeapon}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_card}{Weapon\+Card}} Accusation.\+current\+Weapon}
+
+\mbox{\Hypertarget{class_accusation_a7180047309e27a2ef01985ce6a04dfe8}\label{class_accusation_a7180047309e27a2ef01985ce6a04dfe8}} 
+\index{Accusation@{Accusation}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!Accusation@{Accusation}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} Accusation.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

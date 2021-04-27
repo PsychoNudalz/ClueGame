@@ -1,0 +1,4 @@
+<map id="PlayerTokenScript.AssignToPlayerMaster" name="PlayerTokenScript.AssignToPlayerMaster">
+<area shape="rect" id="node1" title="assigns token to the correct player" alt="" coords="300,5,612,35"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#a41bd3464349e8764ffa0d07391aaded4" title="Setting the character this token will be" alt="" coords="5,5,252,35"/>
+</map>

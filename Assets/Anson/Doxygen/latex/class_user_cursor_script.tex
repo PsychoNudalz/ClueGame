@@ -5,10 +5,22 @@
 for controlling the cursor for the player to select which tile to move to  
 
 
-Inheritance diagram for User\+Cursor\+Script\+:\begin{figure}[H]
+
+
+Inheritance diagram for User\+Cursor\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_user_cursor_script}
+\includegraphics[width=245pt]{class_user_cursor_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+Cursor\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_user_cursor_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Properties}
@@ -16,10 +28,84 @@ Inheritance diagram for User\+Cursor\+Script\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_user_selection_script}{User\+Selection\+Script}} \mbox{\hyperlink{class_user_cursor_script_ac04bacce89ba4662450bf8d85cf18455}{Connected\+Player\+Selection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_cursor_script_a5b6484a15dd4c5335a1a003f51239231}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_user_cursor_script_a29dd14768f80acba3eccddcc48671ea4}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_user_cursor_script_a86dacfae5227440b7f8ca3c7042a8892}{On\+Trigger\+Stay}} (Collider other)
+\item 
+void \mbox{\hyperlink{class_user_cursor_script_a112fedaa8fccb220ccb350bc1ac622aa}{On\+Trigger\+Exit}} (Collider other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_selection_script}{User\+Selection\+Script}} \mbox{\hyperlink{class_user_cursor_script_ae9025e2150b57ae377b4af257643e297}{connected\+User\+Selection}}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_user_cursor_script_ad993fa71160175d11828b7de81c50372}{tag\+List}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 for controlling the cursor for the player to select which tile to move to 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_cursor_script_a29dd14768f80acba3eccddcc48671ea4}\label{class_user_cursor_script_a29dd14768f80acba3eccddcc48671ea4}} 
+\index{UserCursorScript@{UserCursorScript}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void User\+Cursor\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_cursor_script_a112fedaa8fccb220ccb350bc1ac622aa}\label{class_user_cursor_script_a112fedaa8fccb220ccb350bc1ac622aa}} 
+\index{UserCursorScript@{UserCursorScript}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void User\+Cursor\+Script.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_cursor_script_a112fedaa8fccb220ccb350bc1ac622aa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_cursor_script_a86dacfae5227440b7f8ca3c7042a8892}\label{class_user_cursor_script_a86dacfae5227440b7f8ca3c7042a8892}} 
+\index{UserCursorScript@{UserCursorScript}!OnTriggerStay@{OnTriggerStay}}
+\index{OnTriggerStay@{OnTriggerStay}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay()}{OnTriggerStay()}}
+{\footnotesize\ttfamily void User\+Cursor\+Script.\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_cursor_script_a86dacfae5227440b7f8ca3c7042a8892_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_cursor_script_a5b6484a15dd4c5335a1a003f51239231}\label{class_user_cursor_script_a5b6484a15dd4c5335a1a003f51239231}} 
+\index{UserCursorScript@{UserCursorScript}!Start@{Start}}
+\index{Start@{Start}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void User\+Cursor\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_cursor_script_ae9025e2150b57ae377b4af257643e297}\label{class_user_cursor_script_ae9025e2150b57ae377b4af257643e297}} 
+\index{UserCursorScript@{UserCursorScript}!connectedUserSelection@{connectedUserSelection}}
+\index{connectedUserSelection@{connectedUserSelection}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{connectedUserSelection}{connectedUserSelection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_selection_script}{User\+Selection\+Script}} User\+Cursor\+Script.\+connected\+User\+Selection\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_cursor_script_ad993fa71160175d11828b7de81c50372}\label{class_user_cursor_script_ad993fa71160175d11828b7de81c50372}} 
+\index{UserCursorScript@{UserCursorScript}!tagList@{tagList}}
+\index{tagList@{tagList}!UserCursorScript@{UserCursorScript}}
+\doxysubsubsection{\texorpdfstring{tagList}{tagList}}
+{\footnotesize\ttfamily List$<$string$>$ User\+Cursor\+Script.\+tag\+List\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,11 +1,714 @@
 \hypertarget{class_board_builder}{}\doxysection{Board\+Builder Class Reference}
 \label{class_board_builder}\index{BoardBuilder@{BoardBuilder}}
-Inheritance diagram for Board\+Builder\+:\begin{figure}[H]
+
+
+Method to create the game board from a .csv file  
+
+
+
+
+Inheritance diagram for Board\+Builder\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_board_builder}
+\includegraphics[height=550pt]{class_board_builder__inherit__graph}
 \end{center}
 \end{figure}
+
+
+Collaboration diagram for Board\+Builder\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_board_builder__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99}{Initialise}} ()
+\begin{DoxyCompactList}\small\item\em Method to create the board, initialise and place all items and pass references to board manager \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37}{Load\+Resources}} ()
+\begin{DoxyCompactList}\small\item\em Load all prefabs from resources folder \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_ac94d9474a9d66a0748a402c743a22cf7}{Generate\+Board\+Array\+From\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em Create a 2d array from the .csv file to build the board from \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a3a24e59815a2273a921875c2cb7781f2}{Build\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Build the board using various helper methods \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15}{Place\+Bonus\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Randomly place Free roll / accusation tiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_aa03504edb607b14737199d2e66b4ce07}{Create\+Shortcut\+Tile}} (int x, int z, string shortcut\+Rooms, string rotation)
+\begin{DoxyCompactList}\small\item\em Instantiate a shortcut tile and set its parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a03451888fabe0fefe9bb547dd510ac1d}{Create\+Room\+Entrance\+Tile}} (int x, int z, string room, string rotation, Game\+Object parent)
+\begin{DoxyCompactList}\small\item\em Instantiate a room\+Entrance tile and set its parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2}{Create\+Start\+Tile}} (int x, int z, string character\+Name, Game\+Object parent)
+\begin{DoxyCompactList}\small\item\em Instantiate a start tile and set its parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6}{Create\+Board\+Tile}} (int x, int z, Game\+Object parent)
+\begin{DoxyCompactList}\small\item\em Instantiate a General tile and set its parameters \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a491ed54feb27cf486245a500c16ff310}{Create\+Room}} (int x, int z, string room\+Name)
+\item 
+void \mbox{\hyperlink{class_board_builder_a9935d1e9f5b2286d246e38151ee313eb}{Create\+Weapons}} ()
+\begin{DoxyCompactList}\small\item\em Instantiate all weapon tokens \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3}{Create\+Free\+Suggestion\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Randomly replace required number of general tiles with Free\+Accusation Tiles \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_board_builder_a1ce7b540b58b1e6fde74e064107ae954}{Create\+Free\+Roll\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Randomly replace required number of general tiles with Free\+Roll Tiles \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb}{Check\+Nearby\+Tiles}} (\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} tile)
+\begin{DoxyCompactList}\small\item\em Check for nearby bonus / start tiles in order to space out around the board \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_builder_a68f8060e2351a4b64d50554e209ddd51}{number\+Of\+Free\+Roll\+Tiles}} = 3
+\item 
+int \mbox{\hyperlink{class_board_builder_a0132c58af8523934fa222e061df8762e}{number\+Of\+Free\+Suggestion\+Tiles}} = 3
+\item 
+Text\+Asset \mbox{\hyperlink{class_board_builder_a02f6dd4cab07a7619a6fb89f940b2e67}{board\+CSV}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a949a29202d898e07ccf976e8194e55c0}{player\+Piece\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_ab63c16e22910133b05bd64d64215976d}{general\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_adc2fe47aa5a4eef20330241cfd789e62}{starting\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_ae235708c406976cb0faee8014cf24e63}{room\+Entry\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a8852142854b010000ad4199eedc77416}{shortcut\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_aec7cd702f787470deecbc4cb14cc13bb}{free\+Roll\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a9cbf1e9dc869a2dbf6e9423205081586}{free\+Suggestion\+Tile\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_aa6b6f338a148987641c587f873ac3e65}{Ballroom\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a23b769419783556b25837c1e0610ed02}{Billiard\+Room\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_ad71602b9fcdd084ccb23ca2becadfa9d}{Centre\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_afef9bc69ac9c603cceecab242ff6e0a1}{Conservatory\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_afb736cb50a4ececfccc25d5a56421dad}{Dining\+Room\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a4c64ad1e6ba51bcba96329b5dc55eb98}{Hall\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a8cb69d7e535e0900b6200fffb0add11c}{Kitchen\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a4ca4c65bfc6a80cb15bef7a0291263ca}{Library\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a5c00b1eb8c3051833730a273bbf8737f}{Lounge\+Prefab}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a4e959c519e3ad716056c66a994712e78}{Study\+Prefab}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_board_builder_a73b8ded609546459587610c11c3c70c1}{board\+Manager}}
+\item 
+string\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_board_builder_a56d1e95b95a03bc8ce9c44af1b711bce}{board\+String\+Array}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_aea1aba1b6f52feba6c147970c922f2bf}{players}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a8028e388f4d498a97e6803a050d883bd}{start\+Tiles}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a5a36a45959838b704a88c9c685a4e51c}{room\+Entry\+Tiles}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a9c598b7725daa0cac503412a9b7be946}{rooms}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a21586d418e74568ab3e95b16b6a8ffa9}{general\+Tiles}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a9d7d69a4dfb6581f20e393a4a522817a}{shortcut\+Tiles}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_af031b5fa8c1feabdc022ade83a9d68d0}{weapon\+Tokens}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_abb88577492a8bc4c4c8e40f98d4a2425}{free\+Roll\+Tiles}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_builder_a1aadd6db35237dcc81f7f9df8db06490}{free\+Suggestion\+Tiles}}
+\item 
+int \mbox{\hyperlink{class_board_builder_a4961cb7b7e8af415bf20725c5c1503fb}{board\+Width}}
+\item 
+int \mbox{\hyperlink{class_board_builder_a1da04c8bd686938f07acb6fdc2b64aa3}{board\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Method to create the game board from a .csv file 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8}\label{class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8}} 
+\index{BoardBuilder@{BoardBuilder}!Awake@{Awake}}
+\index{Awake@{Awake}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a3a24e59815a2273a921875c2cb7781f2}\label{class_board_builder_a3a24e59815a2273a921875c2cb7781f2}} 
+\index{BoardBuilder@{BoardBuilder}!BuildBoard@{BuildBoard}}
+\index{BuildBoard@{BuildBoard}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{BuildBoard()}{BuildBoard()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Build\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Build the board using various helper methods 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb}\label{class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb}} 
+\index{BoardBuilder@{BoardBuilder}!CheckNearbyTiles@{CheckNearbyTiles}}
+\index{CheckNearbyTiles@{CheckNearbyTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CheckNearbyTiles()}{CheckNearbyTiles()}}
+{\footnotesize\ttfamily bool Board\+Builder.\+Check\+Nearby\+Tiles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}}]{tile }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Check for nearby bonus / start tiles in order to space out around the board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tile} & Tile to check for nearby free roll or free suggestion tiles\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6}\label{class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6}} 
+\index{BoardBuilder@{BoardBuilder}!CreateBoardTile@{CreateBoardTile}}
+\index{CreateBoardTile@{CreateBoardTile}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateBoardTile()}{CreateBoardTile()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Board\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{Game\+Object}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instantiate a General tile and set its parameters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position to create the tile\\
+\hline
+{\em z} & Z position to create the tile\\
+\hline
+{\em parent} & Game\+Object to parent tile to\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a1ce7b540b58b1e6fde74e064107ae954}\label{class_board_builder_a1ce7b540b58b1e6fde74e064107ae954}} 
+\index{BoardBuilder@{BoardBuilder}!CreateFreeRollTiles@{CreateFreeRollTiles}}
+\index{CreateFreeRollTiles@{CreateFreeRollTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateFreeRollTiles()}{CreateFreeRollTiles()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Free\+Roll\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Randomly replace required number of general tiles with Free\+Roll Tiles 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3}\label{class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3}} 
+\index{BoardBuilder@{BoardBuilder}!CreateFreeSuggestionTiles@{CreateFreeSuggestionTiles}}
+\index{CreateFreeSuggestionTiles@{CreateFreeSuggestionTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateFreeSuggestionTiles()}{CreateFreeSuggestionTiles()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Free\+Suggestion\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Randomly replace required number of general tiles with Free\+Accusation Tiles 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a491ed54feb27cf486245a500c16ff310}\label{class_board_builder_a491ed54feb27cf486245a500c16ff310}} 
+\index{BoardBuilder@{BoardBuilder}!CreateRoom@{CreateRoom}}
+\index{CreateRoom@{CreateRoom}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateRoom()}{CreateRoom()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Room (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{string}]{room\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position to create the tile\\
+\hline
+{\em z} & Z position to create the tile\\
+\hline
+{\em room\+Name} & Room to instantiate\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a03451888fabe0fefe9bb547dd510ac1d}\label{class_board_builder_a03451888fabe0fefe9bb547dd510ac1d}} 
+\index{BoardBuilder@{BoardBuilder}!CreateRoomEntranceTile@{CreateRoomEntranceTile}}
+\index{CreateRoomEntranceTile@{CreateRoomEntranceTile}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateRoomEntranceTile()}{CreateRoomEntranceTile()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Room\+Entrance\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{string}]{room,  }\item[{string}]{rotation,  }\item[{Game\+Object}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instantiate a room\+Entrance tile and set its parameters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position to create the tile\\
+\hline
+{\em z} & Z position to create the tile\\
+\hline
+{\em room} & Room that tile is entrance to\\
+\hline
+{\em rotation} & Rotation to set tile\\
+\hline
+{\em parent} & Game\+Object to parent tile to\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_aa03504edb607b14737199d2e66b4ce07}\label{class_board_builder_aa03504edb607b14737199d2e66b4ce07}} 
+\index{BoardBuilder@{BoardBuilder}!CreateShortcutTile@{CreateShortcutTile}}
+\index{CreateShortcutTile@{CreateShortcutTile}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateShortcutTile()}{CreateShortcutTile()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Shortcut\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{string}]{shortcut\+Rooms,  }\item[{string}]{rotation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instantiate a shortcut tile and set its parameters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position to create the tile\\
+\hline
+{\em z} & Z position to create the tile\\
+\hline
+{\em shortcut\+Rooms} & Rooms to add to Shortcut tile\\
+\hline
+{\em rotation} & Rotation to set the tile\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2}\label{class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2}} 
+\index{BoardBuilder@{BoardBuilder}!CreateStartTile@{CreateStartTile}}
+\index{CreateStartTile@{CreateStartTile}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateStartTile()}{CreateStartTile()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Start\+Tile (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{z,  }\item[{string}]{character\+Name,  }\item[{Game\+Object}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instantiate a start tile and set its parameters 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X position to create the tile\\
+\hline
+{\em z} & Z position to create the tile\\
+\hline
+{\em character\+Name} & Character to assign to the Tile\\
+\hline
+{\em parent} & Game\+Object to parent tile to\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a9935d1e9f5b2286d246e38151ee313eb}\label{class_board_builder_a9935d1e9f5b2286d246e38151ee313eb}} 
+\index{BoardBuilder@{BoardBuilder}!CreateWeapons@{CreateWeapons}}
+\index{CreateWeapons@{CreateWeapons}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CreateWeapons()}{CreateWeapons()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Create\+Weapons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instantiate all weapon tokens 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_ac94d9474a9d66a0748a402c743a22cf7}\label{class_board_builder_ac94d9474a9d66a0748a402c743a22cf7}} 
+\index{BoardBuilder@{BoardBuilder}!GenerateBoardArrayFromCSV@{GenerateBoardArrayFromCSV}}
+\index{GenerateBoardArrayFromCSV@{GenerateBoardArrayFromCSV}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{GenerateBoardArrayFromCSV()}{GenerateBoardArrayFromCSV()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Generate\+Board\+Array\+From\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create a 2d array from the .csv file to build the board from 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99}\label{class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99}} 
+\index{BoardBuilder@{BoardBuilder}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{Initialise()}{Initialise()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Initialise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method to create the board, initialise and place all items and pass references to board manager 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37}\label{class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37}} 
+\index{BoardBuilder@{BoardBuilder}!LoadResources@{LoadResources}}
+\index{LoadResources@{LoadResources}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{LoadResources()}{LoadResources()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Load\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load all prefabs from resources folder 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15}\label{class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15}} 
+\index{BoardBuilder@{BoardBuilder}!PlaceBonusTiles@{PlaceBonusTiles}}
+\index{PlaceBonusTiles@{PlaceBonusTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{PlaceBonusTiles()}{PlaceBonusTiles()}}
+{\footnotesize\ttfamily void Board\+Builder.\+Place\+Bonus\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Randomly place Free roll / accusation tiles. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_board_builder_aa6b6f338a148987641c587f873ac3e65}\label{class_board_builder_aa6b6f338a148987641c587f873ac3e65}} 
+\index{BoardBuilder@{BoardBuilder}!BallroomPrefab@{BallroomPrefab}}
+\index{BallroomPrefab@{BallroomPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{BallroomPrefab}{BallroomPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Ballroom\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a23b769419783556b25837c1e0610ed02}\label{class_board_builder_a23b769419783556b25837c1e0610ed02}} 
+\index{BoardBuilder@{BoardBuilder}!BilliardRoomPrefab@{BilliardRoomPrefab}}
+\index{BilliardRoomPrefab@{BilliardRoomPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{BilliardRoomPrefab}{BilliardRoomPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Billiard\+Room\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a02f6dd4cab07a7619a6fb89f940b2e67}\label{class_board_builder_a02f6dd4cab07a7619a6fb89f940b2e67}} 
+\index{BoardBuilder@{BoardBuilder}!boardCSV@{boardCSV}}
+\index{boardCSV@{boardCSV}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{boardCSV}{boardCSV}}
+{\footnotesize\ttfamily Text\+Asset Board\+Builder.\+board\+CSV\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a1da04c8bd686938f07acb6fdc2b64aa3}\label{class_board_builder_a1da04c8bd686938f07acb6fdc2b64aa3}} 
+\index{BoardBuilder@{BoardBuilder}!boardHeight@{boardHeight}}
+\index{boardHeight@{boardHeight}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{boardHeight}{boardHeight}}
+{\footnotesize\ttfamily int Board\+Builder.\+board\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a73b8ded609546459587610c11c3c70c1}\label{class_board_builder_a73b8ded609546459587610c11c3c70c1}} 
+\index{BoardBuilder@{BoardBuilder}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Board\+Builder.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a56d1e95b95a03bc8ce9c44af1b711bce}\label{class_board_builder_a56d1e95b95a03bc8ce9c44af1b711bce}} 
+\index{BoardBuilder@{BoardBuilder}!boardStringArray@{boardStringArray}}
+\index{boardStringArray@{boardStringArray}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{boardStringArray}{boardStringArray}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} Board\+Builder.\+board\+String\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a4961cb7b7e8af415bf20725c5c1503fb}\label{class_board_builder_a4961cb7b7e8af415bf20725c5c1503fb}} 
+\index{BoardBuilder@{BoardBuilder}!boardWidth@{boardWidth}}
+\index{boardWidth@{boardWidth}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{boardWidth}{boardWidth}}
+{\footnotesize\ttfamily int Board\+Builder.\+board\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_ad71602b9fcdd084ccb23ca2becadfa9d}\label{class_board_builder_ad71602b9fcdd084ccb23ca2becadfa9d}} 
+\index{BoardBuilder@{BoardBuilder}!CentrePrefab@{CentrePrefab}}
+\index{CentrePrefab@{CentrePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{CentrePrefab}{CentrePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Centre\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_afef9bc69ac9c603cceecab242ff6e0a1}\label{class_board_builder_afef9bc69ac9c603cceecab242ff6e0a1}} 
+\index{BoardBuilder@{BoardBuilder}!ConservatoryPrefab@{ConservatoryPrefab}}
+\index{ConservatoryPrefab@{ConservatoryPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{ConservatoryPrefab}{ConservatoryPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Conservatory\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_afb736cb50a4ececfccc25d5a56421dad}\label{class_board_builder_afb736cb50a4ececfccc25d5a56421dad}} 
+\index{BoardBuilder@{BoardBuilder}!DiningRoomPrefab@{DiningRoomPrefab}}
+\index{DiningRoomPrefab@{DiningRoomPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{DiningRoomPrefab}{DiningRoomPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Dining\+Room\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_aec7cd702f787470deecbc4cb14cc13bb}\label{class_board_builder_aec7cd702f787470deecbc4cb14cc13bb}} 
+\index{BoardBuilder@{BoardBuilder}!freeRollTilePrefab@{freeRollTilePrefab}}
+\index{freeRollTilePrefab@{freeRollTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{freeRollTilePrefab}{freeRollTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+free\+Roll\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_abb88577492a8bc4c4c8e40f98d4a2425}\label{class_board_builder_abb88577492a8bc4c4c8e40f98d4a2425}} 
+\index{BoardBuilder@{BoardBuilder}!freeRollTiles@{freeRollTiles}}
+\index{freeRollTiles@{freeRollTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{freeRollTiles}{freeRollTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+free\+Roll\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a9cbf1e9dc869a2dbf6e9423205081586}\label{class_board_builder_a9cbf1e9dc869a2dbf6e9423205081586}} 
+\index{BoardBuilder@{BoardBuilder}!freeSuggestionTilePrefab@{freeSuggestionTilePrefab}}
+\index{freeSuggestionTilePrefab@{freeSuggestionTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{freeSuggestionTilePrefab}{freeSuggestionTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+free\+Suggestion\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a1aadd6db35237dcc81f7f9df8db06490}\label{class_board_builder_a1aadd6db35237dcc81f7f9df8db06490}} 
+\index{BoardBuilder@{BoardBuilder}!freeSuggestionTiles@{freeSuggestionTiles}}
+\index{freeSuggestionTiles@{freeSuggestionTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{freeSuggestionTiles}{freeSuggestionTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+free\+Suggestion\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_ab63c16e22910133b05bd64d64215976d}\label{class_board_builder_ab63c16e22910133b05bd64d64215976d}} 
+\index{BoardBuilder@{BoardBuilder}!generalTilePrefab@{generalTilePrefab}}
+\index{generalTilePrefab@{generalTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{generalTilePrefab}{generalTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+general\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a21586d418e74568ab3e95b16b6a8ffa9}\label{class_board_builder_a21586d418e74568ab3e95b16b6a8ffa9}} 
+\index{BoardBuilder@{BoardBuilder}!generalTiles@{generalTiles}}
+\index{generalTiles@{generalTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{generalTiles}{generalTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+general\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a4c64ad1e6ba51bcba96329b5dc55eb98}\label{class_board_builder_a4c64ad1e6ba51bcba96329b5dc55eb98}} 
+\index{BoardBuilder@{BoardBuilder}!HallPrefab@{HallPrefab}}
+\index{HallPrefab@{HallPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{HallPrefab}{HallPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Hall\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a8cb69d7e535e0900b6200fffb0add11c}\label{class_board_builder_a8cb69d7e535e0900b6200fffb0add11c}} 
+\index{BoardBuilder@{BoardBuilder}!KitchenPrefab@{KitchenPrefab}}
+\index{KitchenPrefab@{KitchenPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{KitchenPrefab}{KitchenPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Kitchen\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a4ca4c65bfc6a80cb15bef7a0291263ca}\label{class_board_builder_a4ca4c65bfc6a80cb15bef7a0291263ca}} 
+\index{BoardBuilder@{BoardBuilder}!LibraryPrefab@{LibraryPrefab}}
+\index{LibraryPrefab@{LibraryPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{LibraryPrefab}{LibraryPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Library\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a5c00b1eb8c3051833730a273bbf8737f}\label{class_board_builder_a5c00b1eb8c3051833730a273bbf8737f}} 
+\index{BoardBuilder@{BoardBuilder}!LoungePrefab@{LoungePrefab}}
+\index{LoungePrefab@{LoungePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{LoungePrefab}{LoungePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Lounge\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a68f8060e2351a4b64d50554e209ddd51}\label{class_board_builder_a68f8060e2351a4b64d50554e209ddd51}} 
+\index{BoardBuilder@{BoardBuilder}!numberOfFreeRollTiles@{numberOfFreeRollTiles}}
+\index{numberOfFreeRollTiles@{numberOfFreeRollTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{numberOfFreeRollTiles}{numberOfFreeRollTiles}}
+{\footnotesize\ttfamily int Board\+Builder.\+number\+Of\+Free\+Roll\+Tiles = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a0132c58af8523934fa222e061df8762e}\label{class_board_builder_a0132c58af8523934fa222e061df8762e}} 
+\index{BoardBuilder@{BoardBuilder}!numberOfFreeSuggestionTiles@{numberOfFreeSuggestionTiles}}
+\index{numberOfFreeSuggestionTiles@{numberOfFreeSuggestionTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{numberOfFreeSuggestionTiles}{numberOfFreeSuggestionTiles}}
+{\footnotesize\ttfamily int Board\+Builder.\+number\+Of\+Free\+Suggestion\+Tiles = 3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a949a29202d898e07ccf976e8194e55c0}\label{class_board_builder_a949a29202d898e07ccf976e8194e55c0}} 
+\index{BoardBuilder@{BoardBuilder}!playerPiecePrefab@{playerPiecePrefab}}
+\index{playerPiecePrefab@{playerPiecePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{playerPiecePrefab}{playerPiecePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+player\+Piece\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_aea1aba1b6f52feba6c147970c922f2bf}\label{class_board_builder_aea1aba1b6f52feba6c147970c922f2bf}} 
+\index{BoardBuilder@{BoardBuilder}!players@{players}}
+\index{players@{players}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{players}{players}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+players\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_ae235708c406976cb0faee8014cf24e63}\label{class_board_builder_ae235708c406976cb0faee8014cf24e63}} 
+\index{BoardBuilder@{BoardBuilder}!roomEntryTilePrefab@{roomEntryTilePrefab}}
+\index{roomEntryTilePrefab@{roomEntryTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{roomEntryTilePrefab}{roomEntryTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+room\+Entry\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a5a36a45959838b704a88c9c685a4e51c}\label{class_board_builder_a5a36a45959838b704a88c9c685a4e51c}} 
+\index{BoardBuilder@{BoardBuilder}!roomEntryTiles@{roomEntryTiles}}
+\index{roomEntryTiles@{roomEntryTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{roomEntryTiles}{roomEntryTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+room\+Entry\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a9c598b7725daa0cac503412a9b7be946}\label{class_board_builder_a9c598b7725daa0cac503412a9b7be946}} 
+\index{BoardBuilder@{BoardBuilder}!rooms@{rooms}}
+\index{rooms@{rooms}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{rooms}{rooms}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+rooms\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a8852142854b010000ad4199eedc77416}\label{class_board_builder_a8852142854b010000ad4199eedc77416}} 
+\index{BoardBuilder@{BoardBuilder}!shortcutTilePrefab@{shortcutTilePrefab}}
+\index{shortcutTilePrefab@{shortcutTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{shortcutTilePrefab}{shortcutTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+shortcut\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a9d7d69a4dfb6581f20e393a4a522817a}\label{class_board_builder_a9d7d69a4dfb6581f20e393a4a522817a}} 
+\index{BoardBuilder@{BoardBuilder}!shortcutTiles@{shortcutTiles}}
+\index{shortcutTiles@{shortcutTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{shortcutTiles}{shortcutTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+shortcut\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_adc2fe47aa5a4eef20330241cfd789e62}\label{class_board_builder_adc2fe47aa5a4eef20330241cfd789e62}} 
+\index{BoardBuilder@{BoardBuilder}!startingTilePrefab@{startingTilePrefab}}
+\index{startingTilePrefab@{startingTilePrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{startingTilePrefab}{startingTilePrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+starting\+Tile\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a8028e388f4d498a97e6803a050d883bd}\label{class_board_builder_a8028e388f4d498a97e6803a050d883bd}} 
+\index{BoardBuilder@{BoardBuilder}!startTiles@{startTiles}}
+\index{startTiles@{startTiles}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{startTiles}{startTiles}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+start\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_a4e959c519e3ad716056c66a994712e78}\label{class_board_builder_a4e959c519e3ad716056c66a994712e78}} 
+\index{BoardBuilder@{BoardBuilder}!StudyPrefab@{StudyPrefab}}
+\index{StudyPrefab@{StudyPrefab}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{StudyPrefab}{StudyPrefab}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+Study\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_builder_af031b5fa8c1feabdc022ade83a9d68d0}\label{class_board_builder_af031b5fa8c1feabdc022ade83a9d68d0}} 
+\index{BoardBuilder@{BoardBuilder}!weaponTokens@{weaponTokens}}
+\index{weaponTokens@{weaponTokens}!BoardBuilder@{BoardBuilder}}
+\doxysubsubsection{\texorpdfstring{weaponTokens}{weaponTokens}}
+{\footnotesize\ttfamily Game\+Object Board\+Builder.\+weapon\+Tokens\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

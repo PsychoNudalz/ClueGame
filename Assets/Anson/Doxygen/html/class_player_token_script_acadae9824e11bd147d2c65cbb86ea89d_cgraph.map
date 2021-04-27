@@ -1,0 +1,10 @@
+<map id="PlayerTokenScript.TakeShortcut" name="PlayerTokenScript.TakeShortcut">
+<area shape="rect" id="node1" title=" " alt="" coords="5,59,252,88"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="304,5,579,35"/>
+<area shape="rect" id="node4" href="$class_board_manager.html#a653d38723d03f890d38a1b68a855c569" title="Clear all movable tiles" alt="" coords="327,59,555,88"/>
+<area shape="rect" id="node8" href="$class_player_token_script.html#adb723bfd264252f5cc0de7e91553cea4" title=" " alt="" coords="300,112,583,141"/>
+<area shape="rect" id="node3" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title="Does the room have a shortcut tile" alt="" coords="631,5,825,35"/>
+<area shape="rect" id="node5" href="$class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="631,59,825,88"/>
+<area shape="rect" id="node6" href="$class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="873,32,1220,61"/>
+<area shape="rect" id="node7" href="$class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="873,85,1220,115"/>
+</map>

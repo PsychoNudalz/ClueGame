@@ -1,0 +1,12 @@
+<map id="RoundManager.RollDice" name="RoundManager.RollDice">
+<area shape="rect" id="node1" title="Rolls dice, will not roll if the player has rolled aready. Pass true to forcfully roll it" alt="" coords="5,85,197,115"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#a5cfea3b56a7576ad02c82c27bb0c6ba7" title="reset the dice after a time delay" alt="" coords="245,59,492,88"/>
+<area shape="rect" id="node9" href="$class_dice.html#a333ed52f536c0e7748fafe9422b179b5" title="Roll the Dice" alt="" coords="309,112,428,141"/>
+<area shape="rect" id="node3" href="$class_dice.html#ade1dc529eeb31f31e668c595c5748e67" title="Reset the dice" alt="" coords="540,59,673,88"/>
+<area shape="rect" id="node4" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title="Can Dice be reset" alt="" coords="778,5,907,35"/>
+<area shape="rect" id="node6" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title="Clear camera close up" alt="" coords="721,59,964,88"/>
+<area shape="rect" id="node8" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title="Reset Die to original position" alt="" coords="784,112,901,141"/>
+<area shape="rect" id="node5" href="$class_die.html#a390d46459637fd249926cda472255d84" title="Can the die be reset" alt="" coords="1080,5,1227,35"/>
+<area shape="rect" id="node7" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title="Delay then clear close up" alt="" coords="1012,59,1295,88"/>
+<area shape="rect" id="node10" href="$class_die.html#a4995ecb1a88aa7f1043ae71ba8aa3ef5" title="Roll the die" alt="" coords="555,112,658,141"/>
+</map>

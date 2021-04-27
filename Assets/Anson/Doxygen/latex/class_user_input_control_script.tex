@@ -5,10 +5,22 @@
 this is for handling the cursor controls  
 
 
-Inheritance diagram for User\+Input\+Control\+Script\+:\begin{figure}[H]
+
+
+Inheritance diagram for User\+Input\+Control\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_user_input_control_script}
+\includegraphics[width=232pt]{class_user_input_control_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+Input\+Control\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_user_input_control_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -27,6 +39,46 @@ Game\+Object \mbox{\hyperlink{class_user_input_control_script_a84e6e1071771cfa15
 \item 
 \mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_user_input_control_script_a902ad1cef9ec2a604e8aa5feb2e8dc17}{User\+Controller}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_input_control_script_a560a75579a5a60253e031e9ae0fea154}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_user_input_control_script_a9ab5c822ac087e043919948196844254}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_user_input_control_script_a1b72e8fa36102bb46711f990939626fc}{Cast\+Update\+With\+Mouse}} ()
+\begin{DoxyCompactList}\small\item\em raycast from the camera to board to update the cursor\textquotesingle{}s target position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_input_control_script_a6b763e8414f6c97987907f2cde8a6aff}{Update\+Cursor}} ()
+\begin{DoxyCompactList}\small\item\em update lerp transform the cursor\textquotesingle{}s location to the target position \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mouse \mbox{\hyperlink{class_user_input_control_script_a0b9eb6c0fddda2aa0a0fc8cb22c3c0b4}{mouse}}
+\item 
+Game\+Object \mbox{\hyperlink{class_user_input_control_script_a90ecddd0ce55c1fb4a4d470748b86d9b}{cursor}}
+\item 
+float \mbox{\hyperlink{class_user_input_control_script_a6ee56d0551ff9b29d581a1d7a93c57a2}{y\+Offset}} = .\+2f
+\item 
+bool \mbox{\hyperlink{class_user_input_control_script_adaeaab1372510849c961ad6451e1df9f}{is\+Mouse}} = true
+\item 
+bool \mbox{\hyperlink{class_user_input_control_script_a8498da7e9e1c4ab8d0706192dd32c766}{is\+Controller}} = false
+\item 
+Camera \mbox{\hyperlink{class_user_input_control_script_adb126ccaa86870ad3c38ceb32e05f363}{camera\+Object}}
+\item 
+Layer\+Mask \mbox{\hyperlink{class_user_input_control_script_a0ea693d6b6c38a2afa3e359757719656}{layer\+Mask}}
+\item 
+Vector3 \mbox{\hyperlink{class_user_input_control_script_acbf1135a0dafc2265951d757a4f60396}{target\+Pos}}
+\item 
+float \mbox{\hyperlink{class_user_input_control_script_a6eb758d5790323afafd46ba99408734e}{referesh\+Rate}}
+\item 
+float \mbox{\hyperlink{class_user_input_control_script_a065810cae8c1abc93a6a8da18bf31604}{time\+Now\+\_\+referesh\+Rate}}
+\item 
+\mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_user_input_control_script_ad7d48a5b73e8fbfc87bbfffa70c8e55f}{user\+Controller}}
+\item 
+\mbox{\hyperlink{class_user_selection_script}{User\+Selection\+Script}} \mbox{\hyperlink{class_user_input_control_script_a00d921628c947a548b072446a5cb90cb}{user\+Selection\+Script}}
+\item 
+\mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} \mbox{\hyperlink{class_user_input_control_script_a704b4bd1b9c980870243b8e64acb778c}{turn\+Controller}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,6 +87,42 @@ this is for handling the cursor controls
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_input_control_script_a560a75579a5a60253e031e9ae0fea154}\label{class_user_input_control_script_a560a75579a5a60253e031e9ae0fea154}} 
+\index{UserInputControlScript@{UserInputControlScript}!Awake@{Awake}}
+\index{Awake@{Awake}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void User\+Input\+Control\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a1b72e8fa36102bb46711f990939626fc}\label{class_user_input_control_script_a1b72e8fa36102bb46711f990939626fc}} 
+\index{UserInputControlScript@{UserInputControlScript}!CastUpdateWithMouse@{CastUpdateWithMouse}}
+\index{CastUpdateWithMouse@{CastUpdateWithMouse}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{CastUpdateWithMouse()}{CastUpdateWithMouse()}}
+{\footnotesize\ttfamily void User\+Input\+Control\+Script.\+Cast\+Update\+With\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+raycast from the camera to board to update the cursor\textquotesingle{}s target position 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_input_control_script_a1b72e8fa36102bb46711f990939626fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_user_input_control_script_a9ab5c822ac087e043919948196844254}\label{class_user_input_control_script_a9ab5c822ac087e043919948196844254}} 
+\index{UserInputControlScript@{UserInputControlScript}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void User\+Input\+Control\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_input_control_script_a9ab5c822ac087e043919948196844254_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_input_control_script_a13be570929e27dad6d3d452ccd5f52eb}\label{class_user_input_control_script_a13be570929e27dad6d3d452ccd5f52eb}} 
 \index{UserInputControlScript@{UserInputControlScript}!MovePlayerToken@{MovePlayerToken}}
 \index{MovePlayerToken@{MovePlayerToken}!UserInputControlScript@{UserInputControlScript}}
@@ -50,6 +138,13 @@ move player token to the tile the cursor is on
 {\em input\+Action} & \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_input_control_script_a13be570929e27dad6d3d452ccd5f52eb_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_user_input_control_script_a20860a281bcd05da3bbe620b703cb697}\label{class_user_input_control_script_a20860a281bcd05da3bbe620b703cb697}} 
 \index{UserInputControlScript@{UserInputControlScript}!MoveWithAxis@{MoveWithAxis}}
 \index{MoveWithAxis@{MoveWithAxis}!UserInputControlScript@{UserInputControlScript}}
@@ -61,6 +156,104 @@ move player token to the tile the cursor is on
 \index{MoveWithMouse@{MoveWithMouse}!UserInputControlScript@{UserInputControlScript}}
 \doxysubsubsection{\texorpdfstring{MoveWithMouse()}{MoveWithMouse()}}
 {\footnotesize\ttfamily void User\+Input\+Control\+Script.\+Move\+With\+Mouse (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{input\+Action }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_user_input_control_script_a6b763e8414f6c97987907f2cde8a6aff}\label{class_user_input_control_script_a6b763e8414f6c97987907f2cde8a6aff}} 
+\index{UserInputControlScript@{UserInputControlScript}!UpdateCursor@{UpdateCursor}}
+\index{UpdateCursor@{UpdateCursor}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{UpdateCursor()}{UpdateCursor()}}
+{\footnotesize\ttfamily void User\+Input\+Control\+Script.\+Update\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+update lerp transform the cursor\textquotesingle{}s location to the target position 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_input_control_script_a6b763e8414f6c97987907f2cde8a6aff_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_user_input_control_script_adb126ccaa86870ad3c38ceb32e05f363}\label{class_user_input_control_script_adb126ccaa86870ad3c38ceb32e05f363}} 
+\index{UserInputControlScript@{UserInputControlScript}!cameraObject@{cameraObject}}
+\index{cameraObject@{cameraObject}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{cameraObject}{cameraObject}}
+{\footnotesize\ttfamily Camera User\+Input\+Control\+Script.\+camera\+Object\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a90ecddd0ce55c1fb4a4d470748b86d9b}\label{class_user_input_control_script_a90ecddd0ce55c1fb4a4d470748b86d9b}} 
+\index{UserInputControlScript@{UserInputControlScript}!cursor@{cursor}}
+\index{cursor@{cursor}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily Game\+Object User\+Input\+Control\+Script.\+cursor\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a8498da7e9e1c4ab8d0706192dd32c766}\label{class_user_input_control_script_a8498da7e9e1c4ab8d0706192dd32c766}} 
+\index{UserInputControlScript@{UserInputControlScript}!isController@{isController}}
+\index{isController@{isController}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{isController}{isController}}
+{\footnotesize\ttfamily bool User\+Input\+Control\+Script.\+is\+Controller = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_adaeaab1372510849c961ad6451e1df9f}\label{class_user_input_control_script_adaeaab1372510849c961ad6451e1df9f}} 
+\index{UserInputControlScript@{UserInputControlScript}!isMouse@{isMouse}}
+\index{isMouse@{isMouse}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{isMouse}{isMouse}}
+{\footnotesize\ttfamily bool User\+Input\+Control\+Script.\+is\+Mouse = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a0ea693d6b6c38a2afa3e359757719656}\label{class_user_input_control_script_a0ea693d6b6c38a2afa3e359757719656}} 
+\index{UserInputControlScript@{UserInputControlScript}!layerMask@{layerMask}}
+\index{layerMask@{layerMask}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{layerMask}{layerMask}}
+{\footnotesize\ttfamily Layer\+Mask User\+Input\+Control\+Script.\+layer\+Mask\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a0b9eb6c0fddda2aa0a0fc8cb22c3c0b4}\label{class_user_input_control_script_a0b9eb6c0fddda2aa0a0fc8cb22c3c0b4}} 
+\index{UserInputControlScript@{UserInputControlScript}!mouse@{mouse}}
+\index{mouse@{mouse}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{mouse}{mouse}}
+{\footnotesize\ttfamily Mouse User\+Input\+Control\+Script.\+mouse\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a6eb758d5790323afafd46ba99408734e}\label{class_user_input_control_script_a6eb758d5790323afafd46ba99408734e}} 
+\index{UserInputControlScript@{UserInputControlScript}!refereshRate@{refereshRate}}
+\index{refereshRate@{refereshRate}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{refereshRate}{refereshRate}}
+{\footnotesize\ttfamily float User\+Input\+Control\+Script.\+referesh\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_acbf1135a0dafc2265951d757a4f60396}\label{class_user_input_control_script_acbf1135a0dafc2265951d757a4f60396}} 
+\index{UserInputControlScript@{UserInputControlScript}!targetPos@{targetPos}}
+\index{targetPos@{targetPos}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{targetPos}{targetPos}}
+{\footnotesize\ttfamily Vector3 User\+Input\+Control\+Script.\+target\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a065810cae8c1abc93a6a8da18bf31604}\label{class_user_input_control_script_a065810cae8c1abc93a6a8da18bf31604}} 
+\index{UserInputControlScript@{UserInputControlScript}!timeNow\_refereshRate@{timeNow\_refereshRate}}
+\index{timeNow\_refereshRate@{timeNow\_refereshRate}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{timeNow\_refereshRate}{timeNow\_refereshRate}}
+{\footnotesize\ttfamily float User\+Input\+Control\+Script.\+time\+Now\+\_\+referesh\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a704b4bd1b9c980870243b8e64acb778c}\label{class_user_input_control_script_a704b4bd1b9c980870243b8e64acb778c}} 
+\index{UserInputControlScript@{UserInputControlScript}!turnController@{turnController}}
+\index{turnController@{turnController}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{turnController}{turnController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} User\+Input\+Control\+Script.\+turn\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_ad7d48a5b73e8fbfc87bbfffa70c8e55f}\label{class_user_input_control_script_ad7d48a5b73e8fbfc87bbfffa70c8e55f}} 
+\index{UserInputControlScript@{UserInputControlScript}!userController@{userController}}
+\index{userController@{userController}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{userController}{userController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} User\+Input\+Control\+Script.\+user\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a00d921628c947a548b072446a5cb90cb}\label{class_user_input_control_script_a00d921628c947a548b072446a5cb90cb}} 
+\index{UserInputControlScript@{UserInputControlScript}!userSelectionScript@{userSelectionScript}}
+\index{userSelectionScript@{userSelectionScript}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{userSelectionScript}{userSelectionScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_selection_script}{User\+Selection\+Script}} User\+Input\+Control\+Script.\+user\+Selection\+Script\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_user_input_control_script_a6ee56d0551ff9b29d581a1d7a93c57a2}\label{class_user_input_control_script_a6ee56d0551ff9b29d581a1d7a93c57a2}} 
+\index{UserInputControlScript@{UserInputControlScript}!yOffset@{yOffset}}
+\index{yOffset@{yOffset}!UserInputControlScript@{UserInputControlScript}}
+\doxysubsubsection{\texorpdfstring{yOffset}{yOffset}}
+{\footnotesize\ttfamily float User\+Input\+Control\+Script.\+y\+Offset = .\+2f\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

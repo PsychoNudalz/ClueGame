@@ -1,4 +1,7 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 4f6e23849de58a54d8e28c0f5cd6144f
+=======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< HEAD
@@ -16,6 +19,7 @@ guid: 8349a8ec1cb4e4040b0e701af4e40cec
 =======
 guid: 8349a8ec1cb4e4040b0e701af4e40cec
 >>>>>>> Stashed changes
+>>>>>>> Danny
 TextScriptImporter:
   externalObjects: {}
   userData: 

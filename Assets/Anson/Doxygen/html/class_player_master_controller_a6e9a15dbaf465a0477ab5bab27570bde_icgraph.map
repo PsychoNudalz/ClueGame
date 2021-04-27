@@ -1,0 +1,13 @@
+<map id="PlayerMasterController.GetTile" name="PlayerMasterController.GetTile">
+<area shape="rect" id="node1" title="Get the current tile the token is on" alt="" coords="763,165,997,195"/>
+<area shape="rect" id="node2" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="413,5,645,35"/>
+<area shape="rect" id="node4" href="$class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="411,59,647,88"/>
+<area shape="rect" id="node6" href="$class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="343,112,715,141"/>
+<area shape="rect" id="node7" href="$class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="413,165,644,195"/>
+<area shape="rect" id="node8" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="377,219,680,248"/>
+<area shape="rect" id="node9" href="$class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="400,272,657,301"/>
+<area shape="rect" id="node10" href="$class_testing___movement_script.html#abaaeb242fee8995f1058fde65fc793ba" title=" " alt="" coords="369,325,689,355"/>
+<area shape="rect" id="node3" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="31,5,269,35"/>
+<area shape="rect" id="node5" href="$class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="39,59,261,88"/>
+<area shape="rect" id="node11" href="$class_testing___movement_script.html#ae339e23abbecd335a3325f7c5cd886c5" title=" " alt="" coords="5,325,295,355"/>
+</map>

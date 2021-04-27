@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.GetGridPosition" name="PlayerMasterController.GetGridPosition">
+<area shape="rect" id="node1" title="Get current grip position" alt="" coords="5,5,303,35"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#a1c32aeb4d4e8689ae992e44c63005787" title=" " alt="" coords="351,5,617,35"/>
+</map>

@@ -1,18 +1,54 @@
 \hypertarget{class_deck_animation}{}\doxysection{Deck\+Animation Class Reference}
 \label{class_deck_animation}\index{DeckAnimation@{DeckAnimation}}
-Inheritance diagram for Deck\+Animation\+:\begin{figure}[H]
+
+
+Class for the deck animation  
+
+
+
+
+Inheritance diagram for Deck\+Animation\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_deck_animation}
+\includegraphics[width=178pt]{class_deck_animation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Deck\+Animation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_deck_animation__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_deck_animation_a928cda0cae827688d917cb63fcb6fd49}{Go\+Up}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Animation for the deck of cards to go up \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_deck_animation_ad86d5599d11ed30a1d3a1e0ca4143840}{Go\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Animation for the deck of cards to go down \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_deck_animation_a26dea2523c9013ba20b57ea5010be37c}{Start}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_deck_animation_ae05204cf9c29b7bbd45d5a56c175e669}{is\+Up}} = false
+\item 
+bool \mbox{\hyperlink{class_deck_animation_a093ab275c57645288b8b0533b577f33a}{stay\+Up}} = false
+\item 
+Animator \mbox{\hyperlink{class_deck_animation_ae4c644aa5cfc4aaa97d2893bd37e740e}{deck\+Animator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the deck animation 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -22,11 +58,46 @@ void \mbox{\hyperlink{class_deck_animation_ad86d5599d11ed30a1d3a1e0ca4143840}{Go
 \doxysubsubsection{\texorpdfstring{GoDown()}{GoDown()}}
 {\footnotesize\ttfamily void Deck\+Animation.\+Go\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Animation for the deck of cards to go down 
+
 \mbox{\Hypertarget{class_deck_animation_a928cda0cae827688d917cb63fcb6fd49}\label{class_deck_animation_a928cda0cae827688d917cb63fcb6fd49}} 
 \index{DeckAnimation@{DeckAnimation}!GoUp@{GoUp}}
 \index{GoUp@{GoUp}!DeckAnimation@{DeckAnimation}}
 \doxysubsubsection{\texorpdfstring{GoUp()}{GoUp()}}
 {\footnotesize\ttfamily void Deck\+Animation.\+Go\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Animation for the deck of cards to go up 
+
+\mbox{\Hypertarget{class_deck_animation_a26dea2523c9013ba20b57ea5010be37c}\label{class_deck_animation_a26dea2523c9013ba20b57ea5010be37c}} 
+\index{DeckAnimation@{DeckAnimation}!Start@{Start}}
+\index{Start@{Start}!DeckAnimation@{DeckAnimation}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Deck\+Animation.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_deck_animation_ae4c644aa5cfc4aaa97d2893bd37e740e}\label{class_deck_animation_ae4c644aa5cfc4aaa97d2893bd37e740e}} 
+\index{DeckAnimation@{DeckAnimation}!deckAnimator@{deckAnimator}}
+\index{deckAnimator@{deckAnimator}!DeckAnimation@{DeckAnimation}}
+\doxysubsubsection{\texorpdfstring{deckAnimator}{deckAnimator}}
+{\footnotesize\ttfamily Animator Deck\+Animation.\+deck\+Animator\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_deck_animation_ae05204cf9c29b7bbd45d5a56c175e669}\label{class_deck_animation_ae05204cf9c29b7bbd45d5a56c175e669}} 
+\index{DeckAnimation@{DeckAnimation}!isUp@{isUp}}
+\index{isUp@{isUp}!DeckAnimation@{DeckAnimation}}
+\doxysubsubsection{\texorpdfstring{isUp}{isUp}}
+{\footnotesize\ttfamily bool Deck\+Animation.\+is\+Up = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_deck_animation_a093ab275c57645288b8b0533b577f33a}\label{class_deck_animation_a093ab275c57645288b8b0533b577f33a}} 
+\index{DeckAnimation@{DeckAnimation}!stayUp@{stayUp}}
+\index{stayUp@{stayUp}!DeckAnimation@{DeckAnimation}}
+\doxysubsubsection{\texorpdfstring{stayUp}{stayUp}}
+{\footnotesize\ttfamily bool Deck\+Animation.\+stay\+Up = false\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

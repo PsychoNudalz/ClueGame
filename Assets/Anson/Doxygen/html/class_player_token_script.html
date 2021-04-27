@@ -65,6 +65,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player_token_script-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerTokenScript Class Reference</div>  </div>
@@ -76,9 +78,15 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for PlayerTokenScript:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_player_token_script.png" alt=""/>
- </div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for PlayerTokenScript:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -112,7 +120,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:adfdc3e67c57ff06238789e480c9a7071"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#adfdc3e67c57ff06238789e480c9a7071">GetCharacterEnumFromString</a> (string character)</td></tr>
+<tr class="memitem:adfdc3e67c57ff06238789e480c9a7071"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#adfdc3e67c57ff06238789e480c9a7071">GetCharacterEnumFromString</a> (string <a class="el" href="class_player_token_script.html#a0f7f61abb3f71924b25b061af999388e">character</a>)</td></tr>
 <tr class="separator:adfdc3e67c57ff06238789e480c9a7071"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -129,10 +137,107 @@ Properties</h2></td></tr>
 <tr class="separator:ad36226da94a885c1901c230f669bd4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c18b23ebb9e57f1e5a65f226cb5c6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ac9c18b23ebb9e57f1e5a65f226cb5c6c">IsMove</a><code> [get]</code></td></tr>
 <tr class="separator:ac9c18b23ebb9e57f1e5a65f226cb5c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab4c4f5628d593473750d2b31f61ab102"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ab4c4f5628d593473750d2b31f61ab102">Start</a> ()</td></tr>
+<tr class="separator:ab4c4f5628d593473750d2b31f61ab102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf6e085b41ef90234c5580c48389200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aabf6e085b41ef90234c5580c48389200">Update</a> ()</td></tr>
+<tr class="separator:aabf6e085b41ef90234c5580c48389200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad83b16b76e1b0aefbcfe938b64fb1b7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ad83b16b76e1b0aefbcfe938b64fb1b7f">AssignToPlayerMaster</a> ()</td></tr>
+<tr class="memdesc:ad83b16b76e1b0aefbcfe938b64fb1b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">assigns token to the correct player  <a href="class_player_token_script.html#ad83b16b76e1b0aefbcfe938b64fb1b7f">More...</a><br /></td></tr>
+<tr class="separator:ad83b16b76e1b0aefbcfe938b64fb1b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c5b11cccd8bac2a7243238f808929e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ab5c5b11cccd8bac2a7243238f808929e">UpdateTokenMovement</a> ()</td></tr>
+<tr class="separator:ab5c5b11cccd8bac2a7243238f808929e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb723bfd264252f5cc0de7e91553cea4"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#adb723bfd264252f5cc0de7e91553cea4">ShortcutMovement</a> (<a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a> shortcutEnd)</td></tr>
+<tr class="separator:adb723bfd264252f5cc0de7e91553cea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0f7f61abb3f71924b25b061af999388e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a0f7f61abb3f71924b25b061af999388e">character</a></td></tr>
+<tr class="separator:a0f7f61abb3f71924b25b061af999388e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2dfe0c999f8f13a819d2c26d82778cd"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aa2dfe0c999f8f13a819d2c26d82778cd">characterColour</a></td></tr>
+<tr class="separator:aa2dfe0c999f8f13a819d2c26d82778cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0d206a98330e9e942887579c593082"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a0d0d206a98330e9e942887579c593082">characterName</a></td></tr>
+<tr class="separator:a0d0d206a98330e9e942887579c593082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec64dfa73ddddad4c2bb5b40d769d591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_start_tile_script.html">StartTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aec64dfa73ddddad4c2bb5b40d769d591">startTile</a></td></tr>
+<tr class="separator:aec64dfa73ddddad4c2bb5b40d769d591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4c66886c1ee35401316156738e5974"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a3d4c66886c1ee35401316156738e5974">controller</a></td></tr>
+<tr class="separator:a3d4c66886c1ee35401316156738e5974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542da4ee4387f79bebfda5f8ffae8906"><td class="memItemLeft" align="right" valign="top">Animator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a542da4ee4387f79bebfda5f8ffae8906">animator</a></td></tr>
+<tr class="separator:a542da4ee4387f79bebfda5f8ffae8906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7eb212a8780fe9060ae476dd89d259"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a9c7eb212a8780fe9060ae476dd89d259">movementGraph</a></td></tr>
+<tr class="separator:a9c7eb212a8780fe9060ae476dd89d259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23aabeb80ee9621374108f17ae4d6ce"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ac23aabeb80ee9621374108f17ae4d6ce">timeToMove</a> = 2</td></tr>
+<tr class="separator:ac23aabeb80ee9621374108f17ae4d6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d003ed2200faebf158b0d7a671e6dc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a44d003ed2200faebf158b0d7a671e6dc">timeToDistance</a> = .25f</td></tr>
+<tr class="separator:a44d003ed2200faebf158b0d7a671e6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0af8d7753fffbac5f7006ff0e0b5b7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a4e0af8d7753fffbac5f7006ff0e0b5b7">startMoveTime</a></td></tr>
+<tr class="separator:a4e0af8d7753fffbac5f7006ff0e0b5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff84dd8d3d1e5d72fb72b0a75f07ab3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aff84dd8d3d1e5d72fb72b0a75f07ab3e">isMove</a> = false</td></tr>
+<tr class="separator:aff84dd8d3d1e5d72fb72b0a75f07ab3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6846ff90d1bbf228e69775afdc22c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a3a6846ff90d1bbf228e69775afdc22c2">targetTile</a></td></tr>
+<tr class="separator:a3a6846ff90d1bbf228e69775afdc22c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7720c13f481ed88a186cc89b2635a4f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a7720c13f481ed88a186cc89b2635a4f7">currentTile</a></td></tr>
+<tr class="separator:a7720c13f481ed88a186cc89b2635a4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869b14d298ec92b059920915930cf8bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_entry_point.html">RoomEntryPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a869b14d298ec92b059920915930cf8bb">currentEntryPoint</a></td></tr>
+<tr class="separator:a869b14d298ec92b059920915930cf8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac093589567f45b01054822aaabe9aca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_script.html">RoomScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#ac093589567f45b01054822aaabe9aca5">currentRoom</a></td></tr>
+<tr class="separator:ac093589567f45b01054822aaabe9aca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71653d5e86326546464e0bf7ad088989"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a71653d5e86326546464e0bf7ad088989">currentExitPoint</a></td></tr>
+<tr class="separator:a71653d5e86326546464e0bf7ad088989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467fb4772e3cc702c9c0b2ed6d61c007"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a467fb4772e3cc702c9c0b2ed6d61c007">roomExitTileTarget</a></td></tr>
+<tr class="separator:a467fb4772e3cc702c9c0b2ed6d61c007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa199a4d1c818117160266bcad8166755"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_manager.html">BoardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aa199a4d1c818117160266bcad8166755">boardManager</a></td></tr>
+<tr class="separator:aa199a4d1c818117160266bcad8166755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c018e009230c542346c51eeb72067e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_round_manager.html">RoundManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#a7c018e009230c542346c51eeb72067e9">roundManager</a></td></tr>
+<tr class="separator:a7c018e009230c542346c51eeb72067e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac8bd6fb326211c65f3559d3c861cebc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera_close_up.html">CameraCloseUp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_token_script.html#aac8bd6fb326211c65f3559d3c861cebc">cameraCloseUp</a></td></tr>
+<tr class="separator:aac8bd6fb326211c65f3559d3c861cebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>For handling the player/ character's token </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad83b16b76e1b0aefbcfe938b64fb1b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad83b16b76e1b0aefbcfe938b64fb1b7f">&#9670;&nbsp;</a></span>AssignToPlayerMaster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerTokenScript.AssignToPlayerMaster </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>assigns token to the correct player </p>
+<dl class="section return"><dt>Returns</dt><dd>returns true if it can assign to the player, false if it can't find a matching Player </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_ad83b16b76e1b0aefbcfe938b64fb1b7f_cgraph.svg" width="650" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_ad83b16b76e1b0aefbcfe938b64fb1b7f_icgraph.svg" width="618" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
 <a id="a15c0d40c8748ae3e8f51b12082cf2431"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15c0d40c8748ae3e8f51b12082cf2431">&#9670;&nbsp;</a></span>CanTakeShortcut()</h2>
 
@@ -147,6 +252,18 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a15c0d40c8748ae3e8f51b12082cf2431_cgraph.svg" width="528" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a15c0d40c8748ae3e8f51b12082cf2431_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -164,6 +281,18 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a3c30c1b665fbcaa3db3dfe42f0871147_cgraph.svg" width="522" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a3c30c1b665fbcaa3db3dfe42f0871147_icgraph.svg" width="610" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -182,6 +311,12 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a91ce7f589629491f404aa8586962a95c_cgraph.svg" width="495" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -228,6 +363,12 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_adfdc3e67c57ff06238789e480c9a7071_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -245,6 +386,12 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a1c32aeb4d4e8689ae992e44c63005787_icgraph.svg" width="623" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -262,6 +409,12 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a98d00a98b6bf03a74b59a9127e951cfe_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -279,6 +432,12 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_ab8ef1ce338d767546b917f7f9ae2fadf_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -297,6 +456,18 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_af62557bd1edf071efadf23c84f0db1ad_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_af62557bd1edf071efadf23c84f0db1ad_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -341,6 +512,12 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a41bd3464349e8764ffa0d07391aaded4_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -378,6 +555,75 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a900336d95223d960dedbc65b87d69906_cgraph.svg" width="526" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_a900336d95223d960dedbc65b87d69906_icgraph.svg" width="539" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="adb723bfd264252f5cc0de7e91553cea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb723bfd264252f5cc0de7e91553cea4">&#9670;&nbsp;</a></span>ShortcutMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator PlayerTokenScript.ShortcutMovement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>&#160;</td>
+          <td class="paramname"><em>shortcutEnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_adb723bfd264252f5cc0de7e91553cea4_icgraph.svg" width="588" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab4c4f5628d593473750d2b31f61ab102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c4f5628d593473750d2b31f61ab102">&#9670;&nbsp;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerTokenScript.Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -394,6 +640,521 @@ Properties</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_acadae9824e11bd147d2c65cbb86ea89d_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="aabf6e085b41ef90234c5580c48389200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf6e085b41ef90234c5580c48389200">&#9670;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerTokenScript.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_aabf6e085b41ef90234c5580c48389200_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab5c5b11cccd8bac2a7243238f808929e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c5b11cccd8bac2a7243238f808929e">&#9670;&nbsp;</a></span>UpdateTokenMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlayerTokenScript.UpdateTokenMovement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_token_script_ab5c5b11cccd8bac2a7243238f808929e_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_token_script_ab5c5b11cccd8bac2a7243238f808929e_icgraph.svg" width="584" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a542da4ee4387f79bebfda5f8ffae8906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542da4ee4387f79bebfda5f8ffae8906">&#9670;&nbsp;</a></span>animator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Animator PlayerTokenScript.animator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa199a4d1c818117160266bcad8166755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa199a4d1c818117160266bcad8166755">&#9670;&nbsp;</a></span>boardManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_manager.html">BoardManager</a> PlayerTokenScript.boardManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac8bd6fb326211c65f3559d3c861cebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8bd6fb326211c65f3559d3c861cebc">&#9670;&nbsp;</a></span>cameraCloseUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera_close_up.html">CameraCloseUp</a> PlayerTokenScript.cameraCloseUp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f7f61abb3f71924b25b061af999388e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7f61abb3f71924b25b061af999388e">&#9670;&nbsp;</a></span>character</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a> PlayerTokenScript.character</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2dfe0c999f8f13a819d2c26d82778cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2dfe0c999f8f13a819d2c26d82778cd">&#9670;&nbsp;</a></span>characterColour</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color PlayerTokenScript.characterColour</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d0d206a98330e9e942887579c593082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0d206a98330e9e942887579c593082">&#9670;&nbsp;</a></span>characterName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string PlayerTokenScript.characterName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d4c66886c1ee35401316156738e5974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4c66886c1ee35401316156738e5974">&#9670;&nbsp;</a></span>controller</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a> PlayerTokenScript.controller</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a869b14d298ec92b059920915930cf8bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869b14d298ec92b059920915930cf8bb">&#9670;&nbsp;</a></span>currentEntryPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_entry_point.html">RoomEntryPoint</a> PlayerTokenScript.currentEntryPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71653d5e86326546464e0bf7ad088989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71653d5e86326546464e0bf7ad088989">&#9670;&nbsp;</a></span>currentExitPoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a> PlayerTokenScript.currentExitPoint</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac093589567f45b01054822aaabe9aca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac093589567f45b01054822aaabe9aca5">&#9670;&nbsp;</a></span>currentRoom</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_script.html">RoomScript</a> PlayerTokenScript.currentRoom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7720c13f481ed88a186cc89b2635a4f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7720c13f481ed88a186cc89b2635a4f7">&#9670;&nbsp;</a></span>currentTile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_tile_script.html">BoardTileScript</a> PlayerTokenScript.currentTile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff84dd8d3d1e5d72fb72b0a75f07ab3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff84dd8d3d1e5d72fb72b0a75f07ab3e">&#9670;&nbsp;</a></span>isMove</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerTokenScript.isMove = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c7eb212a8780fe9060ae476dd89d259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7eb212a8780fe9060ae476dd89d259">&#9670;&nbsp;</a></span>movementGraph</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimationCurve PlayerTokenScript.movementGraph</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a467fb4772e3cc702c9c0b2ed6d61c007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467fb4772e3cc702c9c0b2ed6d61c007">&#9670;&nbsp;</a></span>roomExitTileTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_tile_script.html">BoardTileScript</a> PlayerTokenScript.roomExitTileTarget</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c018e009230c542346c51eeb72067e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c018e009230c542346c51eeb72067e9">&#9670;&nbsp;</a></span>roundManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_round_manager.html">RoundManager</a> PlayerTokenScript.roundManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e0af8d7753fffbac5f7006ff0e0b5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0af8d7753fffbac5f7006ff0e0b5b7">&#9670;&nbsp;</a></span>startMoveTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerTokenScript.startMoveTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec64dfa73ddddad4c2bb5b40d769d591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec64dfa73ddddad4c2bb5b40d769d591">&#9670;&nbsp;</a></span>startTile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_start_tile_script.html">StartTileScript</a> PlayerTokenScript.startTile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a6846ff90d1bbf228e69775afdc22c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6846ff90d1bbf228e69775afdc22c2">&#9670;&nbsp;</a></span>targetTile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_tile_script.html">BoardTileScript</a> PlayerTokenScript.targetTile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44d003ed2200faebf158b0d7a671e6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d003ed2200faebf158b0d7a671e6dc">&#9670;&nbsp;</a></span>timeToDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerTokenScript.timeToDistance = .25f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac23aabeb80ee9621374108f17ae4d6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23aabeb80ee9621374108f17ae4d6ce">&#9670;&nbsp;</a></span>timeToMove</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlayerTokenScript.timeToMove = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

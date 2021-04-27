@@ -1,0 +1,6 @@
+<map id="PlayerMasterController.CanTakeShortcut" name="PlayerMasterController.CanTakeShortcut">
+<area shape="rect" id="node1" title="check if the player can take a short cut" alt="" coords="356,59,663,88"/>
+<area shape="rect" id="node2" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="5,5,308,35"/>
+<area shape="rect" id="node3" href="$class_u_i_handler.html#ab35722a35c0035fb164d984c49cec4de" title=" " alt="" coords="65,59,249,88"/>
+<area shape="rect" id="node4" href="$class_shortcut_test_u_i.html#afbe911ad229226696830dd46743f45c5" title="Set button interactables" alt="" coords="67,112,246,141"/>
+</map>

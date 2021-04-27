@@ -1,0 +1,4 @@
+<map id="NotebookTestScript.SetOutputStrings" name="NotebookTestScript.SetOutputStrings">
+<area shape="rect" id="node1" title="Update player reference then update all text strings" alt="" coords="269,5,552,35"/>
+<area shape="rect" id="node2" href="$class_notebook_test_script.html#af2e6900a55e51830e7d7297fd5cf3453" title="If current player is set then update output texts" alt="" coords="5,5,221,35"/>
+</map>

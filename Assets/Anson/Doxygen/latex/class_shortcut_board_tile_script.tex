@@ -1,42 +1,160 @@
 \hypertarget{class_shortcut_board_tile_script}{}\doxysection{Shortcut\+Board\+Tile\+Script Class Reference}
 \label{class_shortcut_board_tile_script}\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}}
-Inheritance diagram for Shortcut\+Board\+Tile\+Script\+:\begin{figure}[H]
+
+
+Class for the Shortcut board tile Gameobject  
+
+
+
+
+Inheritance diagram for Shortcut\+Board\+Tile\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_shortcut_board_tile_script}
+\includegraphics[height=550pt]{class_shortcut_board_tile_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shortcut\+Board\+Tile\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_shortcut_board_tile_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_shortcut_board_tile_script_a80487fbb1c2457f09fa5ca7e20879015}{Set\+Shortcut\+Rooms}} (\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} from, \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} to)
-\item 
+void \mbox{\hyperlink{class_shortcut_board_tile_script_a6d476b580271ad3b4ad963c152823d22}{Set\+Shortcut\+Rooms}} (\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} from, \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} to)
+\begin{DoxyCompactList}\small\item\em Set shortcut rooms \end{DoxyCompactList}\item 
 override string \mbox{\hyperlink{class_shortcut_board_tile_script_ac570975ed8c1f8c85c2a6eeada242c51}{To\+String}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overidden To\+String Method \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} \mbox{\hyperlink{class_shortcut_board_tile_script_a3035fa98c15da7e0144da52d2d4f3ba8}{Shortcut\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
-\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} \mbox{\hyperlink{class_shortcut_board_tile_script_a5601c721c7a1bd164197bbe8236cae8e}{Shortcut\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_shortcut_board_tile_script_ac220ecfb20d4e2eae1aff2b637cfff43}{Shortcut\+From}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Room tile is shortcut from \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_shortcut_board_tile_script_a6e87d35aeb3b0bc8e73f74053c5a0e3f}{Shortcut\+To}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Room tile is shortcut to \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_shortcut_board_tile_script_a579f990f77221d6bca86570bac521630}{Room\+Script}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Roomscript from room tile located in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shortcut_board_tile_script_a2ee44f600a0c407def49973b90416132}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Assign required variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shortcut_board_tile_script_a1d01b9e81ec8626c0c3bd2e681018dbe}{Get\+Room\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Set this tiles Roomscript based upon room located in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_shortcut_board_tile_script_a2d37ad600fea0f0429cf83442b8377c0}{shortcut\+From}}
+\item 
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_shortcut_board_tile_script_a8482d73542e6a93f3bd8b0a7450e222b}{shortcut\+To}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_shortcut_board_tile_script_abf3cc8cd4303731bff4ee9610c88d2c7}{room\+Script}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
+\doxysubsection{Detailed Description}
+Class for the Shortcut board tile Gameobject 
+
+
+
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_shortcut_board_tile_script_a80487fbb1c2457f09fa5ca7e20879015}\label{class_shortcut_board_tile_script_a80487fbb1c2457f09fa5ca7e20879015}} 
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a1d01b9e81ec8626c0c3bd2e681018dbe}\label{class_shortcut_board_tile_script_a1d01b9e81ec8626c0c3bd2e681018dbe}} 
+\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!GetRoomScript@{GetRoomScript}}
+\index{GetRoomScript@{GetRoomScript}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{GetRoomScript()}{GetRoomScript()}}
+{\footnotesize\ttfamily void Shortcut\+Board\+Tile\+Script.\+Get\+Room\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set this tiles Roomscript based upon room located in. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_board_tile_script_a1d01b9e81ec8626c0c3bd2e681018dbe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a6d476b580271ad3b4ad963c152823d22}\label{class_shortcut_board_tile_script_a6d476b580271ad3b4ad963c152823d22}} 
 \index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!SetShortcutRooms@{SetShortcutRooms}}
 \index{SetShortcutRooms@{SetShortcutRooms}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{SetShortcutRooms()}{SetShortcutRooms()}}
-{\footnotesize\ttfamily void Shortcut\+Board\+Tile\+Script.\+Set\+Shortcut\+Rooms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}}}]{from,  }\item[{\mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}}}]{to }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Shortcut\+Board\+Tile\+Script.\+Set\+Shortcut\+Rooms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}}}]{from,  }\item[{\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}}}]{to }\end{DoxyParamCaption})}
 
+
+
+Set shortcut rooms 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & Set room shortcut is from\\
+\hline
+{\em to} & Set room shortcut is to\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_board_tile_script_a6d476b580271ad3b4ad963c152823d22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a2ee44f600a0c407def49973b90416132}\label{class_shortcut_board_tile_script_a2ee44f600a0c407def49973b90416132}} 
+\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!Start@{Start}}
+\index{Start@{Start}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Shortcut\+Board\+Tile\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assign required variables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_board_tile_script_a2ee44f600a0c407def49973b90416132_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_shortcut_board_tile_script_ac570975ed8c1f8c85c2a6eeada242c51}\label{class_shortcut_board_tile_script_ac570975ed8c1f8c85c2a6eeada242c51}} 
 \index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!ToString@{ToString}}
 \index{ToString@{ToString}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
 {\footnotesize\ttfamily override string Shortcut\+Board\+Tile\+Script.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Overidden To\+String Method 
+
+\begin{DoxyReturn}{Returns}
+Description of the tile
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_shortcut_board_tile_script_abf3cc8cd4303731bff4ee9610c88d2c7}\label{class_shortcut_board_tile_script_abf3cc8cd4303731bff4ee9610c88d2c7}} 
+\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!roomScript@{roomScript}}
+\index{roomScript@{roomScript}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{roomScript}{roomScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Shortcut\+Board\+Tile\+Script.\+room\+Script\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a2d37ad600fea0f0429cf83442b8377c0}\label{class_shortcut_board_tile_script_a2d37ad600fea0f0429cf83442b8377c0}} 
+\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!shortcutFrom@{shortcutFrom}}
+\index{shortcutFrom@{shortcutFrom}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{shortcutFrom}{shortcutFrom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Shortcut\+Board\+Tile\+Script.\+shortcut\+From\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a8482d73542e6a93f3bd8b0a7450e222b}\label{class_shortcut_board_tile_script_a8482d73542e6a93f3bd8b0a7450e222b}} 
+\index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!shortcutTo@{shortcutTo}}
+\index{shortcutTo@{shortcutTo}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
+\doxysubsubsection{\texorpdfstring{shortcutTo}{shortcutTo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Shortcut\+Board\+Tile\+Script.\+shortcut\+To\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -47,17 +165,29 @@ override string \mbox{\hyperlink{class_shortcut_board_tile_script_ac570975ed8c1f
 \doxysubsubsection{\texorpdfstring{RoomScript}{RoomScript}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Shortcut\+Board\+Tile\+Script.\+Room\+Script\hspace{0.3cm}{\ttfamily [get]}}
 
-\mbox{\Hypertarget{class_shortcut_board_tile_script_a3035fa98c15da7e0144da52d2d4f3ba8}\label{class_shortcut_board_tile_script_a3035fa98c15da7e0144da52d2d4f3ba8}} 
+
+
+Roomscript from room tile located in. 
+
+\mbox{\Hypertarget{class_shortcut_board_tile_script_ac220ecfb20d4e2eae1aff2b637cfff43}\label{class_shortcut_board_tile_script_ac220ecfb20d4e2eae1aff2b637cfff43}} 
 \index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!ShortcutFrom@{ShortcutFrom}}
 \index{ShortcutFrom@{ShortcutFrom}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ShortcutFrom}{ShortcutFrom}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Shortcut\+Board\+Tile\+Script.\+Shortcut\+From\hspace{0.3cm}{\ttfamily [get]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Shortcut\+Board\+Tile\+Script.\+Shortcut\+From\hspace{0.3cm}{\ttfamily [get]}}
 
-\mbox{\Hypertarget{class_shortcut_board_tile_script_a5601c721c7a1bd164197bbe8236cae8e}\label{class_shortcut_board_tile_script_a5601c721c7a1bd164197bbe8236cae8e}} 
+
+
+Room tile is shortcut from 
+
+\mbox{\Hypertarget{class_shortcut_board_tile_script_a6e87d35aeb3b0bc8e73f74053c5a0e3f}\label{class_shortcut_board_tile_script_a6e87d35aeb3b0bc8e73f74053c5a0e3f}} 
 \index{ShortcutBoardTileScript@{ShortcutBoardTileScript}!ShortcutTo@{ShortcutTo}}
 \index{ShortcutTo@{ShortcutTo}!ShortcutBoardTileScript@{ShortcutBoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ShortcutTo}{ShortcutTo}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_room_script_8cs_a487e93cb0c81b7ae3c65d743fde387c0}{Room}} Shortcut\+Board\+Tile\+Script.\+Shortcut\+To\hspace{0.3cm}{\ttfamily [get]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Shortcut\+Board\+Tile\+Script.\+Shortcut\+To\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Room tile is shortcut to 
 
 
 

@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.IsMoving" name="PlayerMasterController.IsMoving">
+<area shape="rect" id="node1" title="check if the player token is still moving. returns true if the token is moving to a new tile or if th..." alt="" coords="5,5,252,35"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#ab8ef1ce338d767546b917f7f9ae2fadf" title=" " alt="" coords="300,5,557,35"/>
+</map>

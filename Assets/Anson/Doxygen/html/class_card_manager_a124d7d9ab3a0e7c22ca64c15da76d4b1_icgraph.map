@@ -1,0 +1,18 @@
+<map id="CardManager.FindCard" name="CardManager.FindCard">
+<area shape="rect" id="node1" title="Looks for the specified weapon card" alt="" coords="2327,163,2516,192"/>
+<area shape="rect" id="node2" href="$class_u_i_handler.html#a99048b81a1303baba7efd44095c0f235" title="Displays Suggestion menu, set the room if in a room" alt="" coords="2016,56,2279,85"/>
+<area shape="rect" id="node11" href="$class_suggestion_test.html#ac6fed8b504eb8b103cb5c38fa895edf3" title="get test choices and make suggestion" alt="" coords="1698,216,1951,245"/>
+<area shape="rect" id="node12" href="$class_user_controller.html#a16a0eca976cd0f767ab444ba8d96c4a8" title="Sets character for suggestions and accusation" alt="" coords="2038,109,2257,139"/>
+<area shape="rect" id="node15" href="$class_user_controller.html#a75e6950fdc74e232061ab078c36b9069" title="Sets room for suggestions and accusation" alt="" coords="2051,163,2243,192"/>
+<area shape="rect" id="node16" href="$class_user_controller.html#aea1bd5d7b45854e5113b459a2b11dd35" title="Sets weapon for suggestions and accusation" alt="" coords="2043,216,2252,245"/>
+<area shape="rect" id="node3" href="$class_u_i_handler.html#a52241b6fefb8a446c2c000202216bfd2" title="Makes suggestion when the button is pressed" alt="" coords="1697,56,1953,85"/>
+<area shape="rect" id="node4" href="$class_round_manager.html#afb3821e66d79eeb0991f620ced62940a" title="Maek suggestion after a delay time, used for free suggestion tile" alt="" coords="1432,56,1633,85"/>
+<area shape="rect" id="node5" href="$class_round_manager.html#adfd4f66436e06c12a25c9236b629f369" title="moving the current player to the selected tile" alt="" coords="1169,56,1384,85"/>
+<area shape="rect" id="node6" href="$class_user_controller.html#af896aefe0262e0d8f07fa5f18592877d" title="Selects a tile for player movement" alt="" coords="927,56,1121,85"/>
+<area shape="rect" id="node7" href="$class_a_i_controller_script.html#af04897fa0ae4ed5e472dea79bce8d7df" title="Decides where the AI should move to this should match the flow chart of the AI" alt="" coords="585,59,865,88"/>
+<area shape="rect" id="node10" href="$class_user_input_control_script.html#a13be570929e27dad6d3d452ccd5f52eb" title="move player token to the tile the cursor is on" alt="" coords="572,5,879,35"/>
+<area shape="rect" id="node8" href="$class_a_i_controller_script.html#ac31d9b8dbb75696b181eff1fbef41b97" title="dictates what the AI will do depending on what mode it is in" alt="" coords="292,111,524,140"/>
+<area shape="rect" id="node9" href="$class_a_i_controller_script.html#a74dc0e720fafceb873d3b19c12f68d58" title=" " alt="" coords="5,111,244,140"/>
+<area shape="rect" id="node13" href="$class_a_i_controller_script.html#a7be5eb284c6258672e70af128f8638df" title="Decides that cards to accuse based on the To Guess List" alt="" coords="1682,163,1967,192"/>
+<area shape="rect" id="node14" href="$class_a_i_controller_script.html#affdf86fa313c46463a9a5a2b20020a17" title="Decides what the AI should suggest this should match the flow chart of the AI" alt="" coords="1681,109,1968,139"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Die" name="Die">
+<area shape="rect" id="node1" title="Script for the Die Gameobject" alt="" coords="5,360,156,671"/>
+<area shape="rect" id="node2" title=" " alt="" coords="10,5,141,91"/>
+<area shape="rect" id="node3" href="$class_die_side.html" title="Script for die side Gameobject" alt="" coords="97,140,240,295"/>
+</map>

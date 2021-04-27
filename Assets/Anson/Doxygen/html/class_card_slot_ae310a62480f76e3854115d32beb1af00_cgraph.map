@@ -1,0 +1,8 @@
+<map id="CardSlot.Start" name="CardSlot.Start">
+<area shape="rect" id="node1" title=" " alt="" coords="5,32,127,61"/>
+<area shape="rect" id="node2" href="$class_card_slot.html#a4104eaa61f0aa1eeec4ed80cc08c4818" title=" " alt="" coords="201,5,345,35"/>
+<area shape="rect" id="node3" href="$class_card_slot.html#a4690c0753db45ada6b02681269ecfbb1" title=" " alt="" coords="175,59,371,88"/>
+<area shape="rect" id="node4" href="$class_card.html#a25e8366933b176fae41e4d2373be7815" title=" " alt="" coords="471,5,635,35"/>
+<area shape="rect" id="node5" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="475,59,630,88"/>
+<area shape="rect" id="node6" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="419,112,687,141"/>
+</map>

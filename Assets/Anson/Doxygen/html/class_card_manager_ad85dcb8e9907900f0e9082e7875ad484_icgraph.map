@@ -1,0 +1,6 @@
+<map id="CardManager.DealCardsToPlayers" name="CardManager.DealCardsToPlayers">
+<area shape="rect" id="node1" title="shuffles and deal the cards to players" alt="" coords="744,5,1013,35"/>
+<area shape="rect" id="node2" href="$class_card_manager.html#a246ee5512607a457900121c510a5e9f2" title="Selects random answer cards and deal cards to players" alt="" coords="517,5,696,35"/>
+<area shape="rect" id="node3" href="$class_game_manager_script.html#a12cbaf1ff00804887619c07c7267cf31" title="starting and initialing the game and it&#39;s components" alt="" coords="221,5,469,35"/>
+<area shape="rect" id="node4" href="$class_suggestion_test.html#a904e4481863c3e620574eba37c993a26" title=" " alt="" coords="5,5,173,35"/>
+</map>

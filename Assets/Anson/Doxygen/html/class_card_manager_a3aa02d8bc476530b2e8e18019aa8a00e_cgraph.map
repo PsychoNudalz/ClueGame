@@ -1,0 +1,4 @@
+<map id="CardManager.IsMatchAnswer" name="CardManager.IsMatchAnswer">
+<area shape="rect" id="node1" title="Check if the cards passed matches the answer" alt="" coords="5,5,233,35"/>
+<area shape="rect" id="node2" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="281,5,436,35"/>
+</map>

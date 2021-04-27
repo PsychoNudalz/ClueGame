@@ -1,0 +1,4 @@
+<map id="StartTileScript.SetCharacter" name="StartTileScript.SetCharacter">
+<area shape="rect" id="node1" title="Set the character for the start tile" alt="" coords="5,5,224,35"/>
+<area shape="rect" id="node2" href="$class_start_tile_script.html#a478e37b4e8befbb49b5729b3362b1f4c" title="Format and set the text displayed on the tile" alt="" coords="272,5,475,35"/>
+</map>

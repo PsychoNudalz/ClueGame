@@ -1,0 +1,4 @@
+<map id="BoardBuilder.CreateRoomEntranceTile" name="BoardBuilder.CreateRoomEntranceTile">
+<area shape="rect" id="node1" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="5,5,300,35"/>
+<area shape="rect" id="node2" href="$class_room_script.html#a1747ef3091a32115e7bdbd53f5764a31" title="Get Room Enum from string" alt="" coords="348,5,603,35"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="NotebookTestScript.GetWeaponText" name="NotebookTestScript.GetWeaponText">
+<area shape="rect" id="node1" title="Get weapon notebook text" alt="" coords="600,5,879,35"/>
+<area shape="rect" id="node2" href="$class_notebook_test_script.html#a2fe069756e281210beaa15440a9bb259" title="Update player reference then update all text strings" alt="" coords="269,5,552,35"/>
+<area shape="rect" id="node3" href="$class_notebook_test_script.html#af2e6900a55e51830e7d7297fd5cf3453" title="If current player is set then update output texts" alt="" coords="5,5,221,35"/>
+</map>

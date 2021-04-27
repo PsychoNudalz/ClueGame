@@ -1,0 +1,4 @@
+<map id="RoomScript.WeaponSlotsEmpty" name="RoomScript.WeaponSlotsEmpty">
+<area shape="rect" id="node1" title="Are weapon slots empty" alt="" coords="332,5,579,35"/>
+<area shape="rect" id="node2" href="$class_board_manager.html#a83a5b3680205d298cfcc9552a75ed1a1" title="Coroutine to randomly place weapon tokens in rooms with no more than 1 per room" alt="" coords="5,5,284,35"/>
+</map>

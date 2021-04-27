@@ -1,22 +1,49 @@
 \hypertarget{class_room_weapon_slot}{}\doxysection{Room\+Weapon\+Slot Class Reference}
 \label{class_room_weapon_slot}\index{RoomWeaponSlot@{RoomWeaponSlot}}
-Inheritance diagram for Room\+Weapon\+Slot\+:\begin{figure}[H]
+
+
+Script for the Room Weapon slot Game\+Object  
+
+
+
+
+Inheritance diagram for Room\+Weapon\+Slot\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_room_weapon_slot}
+\includegraphics[width=250pt]{class_room_weapon_slot__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Room\+Weapon\+Slot\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_room_weapon_slot__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_room_weapon_slot_a3ea78fa42fe18dba8bf88ec604513234}{Add\+Weapon\+To\+Slot}} (\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} weapon)
-\item 
+\begin{DoxyCompactList}\small\item\em Add Weapon to the slot if not occupied \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} \mbox{\hyperlink{class_room_weapon_slot_a0c98132f0c9fa762003963d2dcb13846}{Remove\+Weapon\+From\+Slot}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Remove weapon from slot \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_room_weapon_slot_a9aa6b21ab7fc6b27172e71637d52011f}{Slot\+Occupied}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em I slot currently occupied by a weapon token \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} \mbox{\hyperlink{class_room_weapon_slot_acf33fb247d9a628940453caf153d53db}{Get\+Weapon\+In\+Slot}} ()
+\begin{DoxyCompactList}\small\item\em Return the weapon in the slot \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} \mbox{\hyperlink{class_room_weapon_slot_a5c1df2505a53717c571699ef321c9dbc}{weapon\+In\+Slot}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Script for the Room Weapon slot Game\+Object 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -26,23 +53,83 @@ bool \mbox{\hyperlink{class_room_weapon_slot_a9aa6b21ab7fc6b27172e71637d52011f}{
 \doxysubsubsection{\texorpdfstring{AddWeaponToSlot()}{AddWeaponToSlot()}}
 {\footnotesize\ttfamily void Room\+Weapon\+Slot.\+Add\+Weapon\+To\+Slot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}}]{weapon }\end{DoxyParamCaption})}
 
+
+
+Add Weapon to the slot if not occupied 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Weapon token to add\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_weapon_slot_a3ea78fa42fe18dba8bf88ec604513234_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_weapon_slot_acf33fb247d9a628940453caf153d53db}\label{class_room_weapon_slot_acf33fb247d9a628940453caf153d53db}} 
 \index{RoomWeaponSlot@{RoomWeaponSlot}!GetWeaponInSlot@{GetWeaponInSlot}}
 \index{GetWeaponInSlot@{GetWeaponInSlot}!RoomWeaponSlot@{RoomWeaponSlot}}
 \doxysubsubsection{\texorpdfstring{GetWeaponInSlot()}{GetWeaponInSlot()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} Room\+Weapon\+Slot.\+Get\+Weapon\+In\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Return the weapon in the slot 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_weapon_slot_acf33fb247d9a628940453caf153d53db_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_weapon_slot_a0c98132f0c9fa762003963d2dcb13846}\label{class_room_weapon_slot_a0c98132f0c9fa762003963d2dcb13846}} 
 \index{RoomWeaponSlot@{RoomWeaponSlot}!RemoveWeaponFromSlot@{RemoveWeaponFromSlot}}
 \index{RemoveWeaponFromSlot@{RemoveWeaponFromSlot}!RoomWeaponSlot@{RoomWeaponSlot}}
 \doxysubsubsection{\texorpdfstring{RemoveWeaponFromSlot()}{RemoveWeaponFromSlot()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} Room\+Weapon\+Slot.\+Remove\+Weapon\+From\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Remove weapon from slot 
+
+\begin{DoxyReturn}{Returns}
+Weapon removed from slot
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_room_weapon_slot_a9aa6b21ab7fc6b27172e71637d52011f}\label{class_room_weapon_slot_a9aa6b21ab7fc6b27172e71637d52011f}} 
 \index{RoomWeaponSlot@{RoomWeaponSlot}!SlotOccupied@{SlotOccupied}}
 \index{SlotOccupied@{SlotOccupied}!RoomWeaponSlot@{RoomWeaponSlot}}
 \doxysubsubsection{\texorpdfstring{SlotOccupied()}{SlotOccupied()}}
 {\footnotesize\ttfamily bool Room\+Weapon\+Slot.\+Slot\+Occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+I slot currently occupied by a weapon token 
+
+\begin{DoxyReturn}{Returns}
+true if occupied, false if not
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_weapon_slot_a9aa6b21ab7fc6b27172e71637d52011f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_weapon_slot_a5c1df2505a53717c571699ef321c9dbc}\label{class_room_weapon_slot_a5c1df2505a53717c571699ef321c9dbc}} 
+\index{RoomWeaponSlot@{RoomWeaponSlot}!weaponInSlot@{weaponInSlot}}
+\index{weaponInSlot@{weaponInSlot}!RoomWeaponSlot@{RoomWeaponSlot}}
+\doxysubsubsection{\texorpdfstring{weaponInSlot}{weaponInSlot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} Room\+Weapon\+Slot.\+weapon\+In\+Slot\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

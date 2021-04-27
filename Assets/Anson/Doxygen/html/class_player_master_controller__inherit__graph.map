@@ -1,0 +1,4 @@
+<map id="PlayerMasterController" name="PlayerMasterController">
+<area shape="rect" id="node1" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="5,139,237,831"/>
+<area shape="rect" id="node2" title=" " alt="" coords="56,5,187,91"/>
+</map>

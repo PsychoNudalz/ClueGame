@@ -1,0 +1,4 @@
+<map id="BoardTileScript.ClearTile" name="BoardTileScript.ClearTile">
+<area shape="rect" id="node1" title="disable the select effect on the tile" alt="" coords="5,5,204,35"/>
+<area shape="rect" id="node2" href="$class_board_tile_effect_handler_script.html#a6c3a5ab97fa7a4abb76cd58d8df67964" title="disable the glow box effect for when the cursor hovering on it" alt="" coords="252,5,568,35"/>
+</map>

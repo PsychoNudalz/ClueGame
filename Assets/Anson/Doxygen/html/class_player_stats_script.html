@@ -64,6 +64,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player_stats_script-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">PlayerStatsScript Class Reference</div>  </div>
@@ -75,9 +76,15 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for PlayerStatsScript:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_player_stats_script.png" alt=""/>
- </div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script__inherit__graph.svg" width="204" height="524"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for PlayerStatsScript:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script__coll__graph.svg" width="204" height="524"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -120,6 +127,20 @@ Properties</h2></td></tr>
 <tr class="separator:ae1f0d6d0b3601c0b94259c5c04291518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be369e1350c61a7a8ea7201a610d68a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a0be369e1350c61a7a8ea7201a610d68a">ToGuessList</a><code> [get]</code></td></tr>
 <tr class="separator:a0be369e1350c61a7a8ea7201a610d68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab1d4366f1ad98b2bf40d79f0fc157201"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#ab1d4366f1ad98b2bf40d79f0fc157201">character</a> = <a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92a4f2a91e15af2631ff9424564b8a45fb2">CharacterEnum.Initial</a></td></tr>
+<tr class="separator:ab1d4366f1ad98b2bf40d79f0fc157201"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ac8d3f5c4bedbaa941879d9891605a"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a45ac8d3f5c4bedbaa941879d9891605a">deck</a> = new List&lt;<a class="el" href="class_card.html">Card</a>&gt;()</td></tr>
+<tr class="separator:a45ac8d3f5c4bedbaa941879d9891605a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b47843ca6a36177d8d14a7a9fa307b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a16b47843ca6a36177d8d14a7a9fa307b">isEliminated</a> = false</td></tr>
+<tr class="separator:a16b47843ca6a36177d8d14a7a9fa307b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad016824f21b4a43feb73e370d1257aa4"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_card.html">Card</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#ad016824f21b4a43feb73e370d1257aa4">toGuessList</a> = new List&lt;<a class="el" href="class_card.html">Card</a>&gt;()</td></tr>
+<tr class="memdesc:ad016824f21b4a43feb73e370d1257aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of cards that this player has not seen  <a href="class_player_stats_script.html#ad016824f21b4a43feb73e370d1257aa4">More...</a><br /></td></tr>
+<tr class="separator:ad016824f21b4a43feb73e370d1257aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edd9d751bfaa0e790c70ff942ec10e8"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; System.Enum, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_stats_script.html#a8edd9d751bfaa0e790c70ff942ec10e8">notebook</a></td></tr>
+<tr class="separator:a8edd9d751bfaa0e790c70ff942ec10e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>saves the character the player is and the deck it has </p>
@@ -148,6 +169,12 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if card c is in the deck already </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_ab6e2e29c99a27c5b76584d16cca75c2c_icgraph.svg" width="519" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -175,6 +202,12 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if a card from cs is in the deck already</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a53b9b6ed7fe6d057381e0101099ca363_cgraph.svg" width="480" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -202,6 +235,12 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the found card or null if none found</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a4bc4319e9c609f83c177843b6d23edf2_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -229,6 +268,12 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns the list of cards that the player have </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a52b81eededa282574178d4eb2efa1a1d_cgraph.svg" width="486" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -266,6 +311,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialise the notebook </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a54cae1c61ecf8a4af6ae97724b0dc725_cgraph.svg" width="484" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -285,6 +336,12 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>initialise the To Guess List it is the list that keeps track of which card was not suggested </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a5229018c9a9248a90f447ca9e271ee0f_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -312,6 +369,12 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the card is in the To Guess List</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_a9cfb94bd7661f4120b9ea69c025bd368_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -338,6 +401,12 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_stats_script_ae71569d6008ef02ad036e3d6de2c4c13_icgraph.svg" width="578" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -366,6 +435,119 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab1d4366f1ad98b2bf40d79f0fc157201"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d4366f1ad98b2bf40d79f0fc157201">&#9670;&nbsp;</a></span>character</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a> PlayerStatsScript.character = <a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92a4f2a91e15af2631ff9424564b8a45fb2">CharacterEnum.Initial</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45ac8d3f5c4bedbaa941879d9891605a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ac8d3f5c4bedbaa941879d9891605a">&#9670;&nbsp;</a></span>deck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_card.html">Card</a>&gt; PlayerStatsScript.deck = new List&lt;<a class="el" href="class_card.html">Card</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16b47843ca6a36177d8d14a7a9fa307b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b47843ca6a36177d8d14a7a9fa307b">&#9670;&nbsp;</a></span>isEliminated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayerStatsScript.isEliminated = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8edd9d751bfaa0e790c70ff942ec10e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edd9d751bfaa0e790c70ff942ec10e8">&#9670;&nbsp;</a></span>notebook</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;System.Enum, bool&gt; PlayerStatsScript.notebook</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad016824f21b4a43feb73e370d1257aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad016824f21b4a43feb73e370d1257aa4">&#9670;&nbsp;</a></span>toGuessList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_card.html">Card</a>&gt; PlayerStatsScript.toGuessList = new List&lt;<a class="el" href="class_card.html">Card</a>&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>list of cards that this player has not seen </p>
 
 </div>
 </div>

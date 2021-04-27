@@ -5,10 +5,22 @@
 this class controlls the AI\textquotesingle{}s behaviour and actions  
 
 
-Inheritance diagram for AIController\+Script\+:\begin{figure}[H]
+
+
+Inheritance diagram for AIController\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_a_i_controller_script}
+\includegraphics[height=550pt]{class_a_i_controller_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AIController\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_a_i_controller_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -39,6 +51,76 @@ string \mbox{\hyperlink{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4
 \item 
 \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} \mbox{\hyperlink{class_a_i_controller_script_a615501da8c35e8f6fe8aa6fc67f3a05f}{Previous\+AIMode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_i_controller_script_ad6405c6a658a38d39256a78fdaa15b23}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_a_i_controller_script_a74dc0e720fafceb873d3b19c12f68d58}{Fixed\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_a_i_controller_script_af0dd8e39267e3e139524f59fb9c858b4}{Output\+Debug\+Status}} ()
+\begin{DoxyCompactList}\small\item\em to output the current status and previous status of the AI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_ac31d9b8dbb75696b181eff1fbef41b97}{AIBehaviour}} ()
+\begin{DoxyCompactList}\small\item\em dictates what the AI will do depending on what mode it is in \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}{AIThink}} ()
+\begin{DoxyCompactList}\small\item\em the AI enter this when it is thinking to decide what to do this should match the flow chart of the AI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_acb4af4c99bf1e7610b45d9f81457d625}{Start\+Turn}} ()
+\begin{DoxyCompactList}\small\item\em have AI to start turn \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_i_controller_script_a0b6b57b043b61e3426e15a0de6ed8ad3}{Can\+Move}} ()
+\begin{DoxyCompactList}\small\item\em check if the AI player can move \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_i_controller_script_a8b57daca04e528b57a612de3b285b4c2}{Is\+Token\+Moving}} ()
+\begin{DoxyCompactList}\small\item\em check if the player token is still moving \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_a68e87147ee3eff77870c974edbb2e7ea}{Load\+To\+Guess\+List}} (List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ c)
+\begin{DoxyCompactList}\small\item\em Load player\textquotesingle{}s guess list \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_a_i_controller_script_af8ec3d63334b6e9973a077d6ad401f59}{Decide\+\_\+\+Character}} ()
+\begin{DoxyCompactList}\small\item\em to decide a random character from the To Guess List \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} \mbox{\hyperlink{class_a_i_controller_script_a739618354871d708a1e898c8b9a46dc8}{Decide\+\_\+\+Weapon}} ()
+\begin{DoxyCompactList}\small\item\em to decide a random weapon from the To Guess List \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} \mbox{\hyperlink{class_a_i_controller_script_a585a72fce6ad8b1d60160b2ae0762769}{Decide\+\_\+\+Room}} ()
+\begin{DoxyCompactList}\small\item\em to decide a random Room from the To Guess List \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_a7be5eb284c6258672e70af128f8638df}{Decide\+\_\+\+Accusation}} ()
+\begin{DoxyCompactList}\small\item\em Decides that cards to accuse based on the To Guess List \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_i_controller_script_a0bfee235827ff618fa3325164969c2a4}{Can\+Accuse}} ()
+\begin{DoxyCompactList}\small\item\em check if the AI is comfident enough to accuse this should match the flow chart of the AI \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_afcb2875a5501f07a7f44d0fa720266f3}{Delay\+Decision}} (float t)
+\begin{DoxyCompactList}\small\item\em to delay the time for the next time the AI does something in the Update \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_i_controller_script_ab124aec8211aa7b8f00c6ef5db6bc96a}{Output\+Debug}} (string s)
+\begin{DoxyCompactList}\small\item\em for out putting the debug stack if output\+Debug\+Text is true, it will out put the the console as well \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} \mbox{\hyperlink{class_a_i_controller_script_a052d8b4f50da565a5cae2dbe7bc8d07e}{current\+AIMode}} = \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea5706de961fb376d701be6e7762d8b09c}{AIMode.\+Waiting}}
+\item 
+\mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} \mbox{\hyperlink{class_a_i_controller_script_a6d80108a01df61fb017b072d5984ca07}{previous\+AIMode}} = \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6adf97f83acf6453d4a6a4b1070f3754}{AIMode.\+None}}
+\item 
+bool \mbox{\hyperlink{class_a_i_controller_script_accab29009b4a1bb7d2ba772fa90c48b2}{is\+AIActive}}
+\item 
+\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_a_i_controller_script_a01ffcf02c9fd43b81a6b645462768eea}{current\+Character}}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_a_i_controller_script_ad593271e2e73c1ba1c287ea5e1049cc7}{current\+Player\+Controller}}
+\item 
+float \mbox{\hyperlink{class_a_i_controller_script_a757ffa51f47851bd22574a55de68408b}{decision\+Time}} = 0.\+1f
+\item 
+float \mbox{\hyperlink{class_a_i_controller_script_abac442bb20e415558352716ab8d9389f}{pause\+Time}} = 3f
+\item 
+float \mbox{\hyperlink{class_a_i_controller_script_af06b00a45798a361dd6d2a161a4d2a50}{max\+Turn\+Time}} = 10f
+\item 
+float \mbox{\hyperlink{class_a_i_controller_script_a422cca49441eaa147a2a2eac7bda7aa8}{last\+Decision\+Time}}
+\item 
+float \mbox{\hyperlink{class_a_i_controller_script_a10b65a2cd52a2a677f5420c4e6bb7ccd}{start\+Turn\+Time}} = 0
+\item 
+List$<$ \mbox{\hyperlink{class_card}{Card}} $>$ \mbox{\hyperlink{class_a_i_controller_script_a3b0d2f1724a871a08ecbe3b56c95f3a2}{to\+Guess\+List}}
+\item 
+\mbox{\hyperlink{class_user_controller}{User\+Controller}} \mbox{\hyperlink{class_a_i_controller_script_a83b94d25f667766c89cff60b438d10a5}{user\+Controller}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_a_i_controller_script_ab909d9626ac376b021a79a0a61a78b84}{board\+Manager}}
+\item 
+\mbox{\hyperlink{class_round_manager}{Round\+Manager}} \mbox{\hyperlink{class_a_i_controller_script_af6c84d8376256547cd72ea71eb201f8a}{round\+Manager}}
+\item 
+bool \mbox{\hyperlink{class_a_i_controller_script_a061d77d9f83d1688bfe83391a9766885}{output\+Debug\+Text}}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_a_i_controller_script_a637133b0cc8b84d4b4c1f9e290b20901}{output\+Debug\+Stack}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -47,6 +129,54 @@ this class controlls the AI\textquotesingle{}s behaviour and actions
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_i_controller_script_ac31d9b8dbb75696b181eff1fbef41b97}\label{class_a_i_controller_script_ac31d9b8dbb75696b181eff1fbef41b97}} 
+\index{AIControllerScript@{AIControllerScript}!AIBehaviour@{AIBehaviour}}
+\index{AIBehaviour@{AIBehaviour}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{AIBehaviour()}{AIBehaviour()}}
+{\footnotesize\ttfamily void AIController\+Script.\+AIBehaviour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+dictates what the AI will do depending on what mode it is in 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_ac31d9b8dbb75696b181eff1fbef41b97_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_ac31d9b8dbb75696b181eff1fbef41b97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}\label{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c}} 
+\index{AIControllerScript@{AIControllerScript}!AIThink@{AIThink}}
+\index{AIThink@{AIThink}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{AIThink()}{AIThink()}}
+{\footnotesize\ttfamily void AIController\+Script.\+AIThink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the AI enter this when it is thinking to decide what to do this should match the flow chart of the AI 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af05eaa86fd4cfef3b4b0b79b0883322c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de}\label{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de}} 
 \index{AIControllerScript@{AIControllerScript}!AssignAllComponents@{AssignAllComponents}}
 \index{AssignAllComponents@{AssignAllComponents}!AIControllerScript@{AIControllerScript}}
@@ -57,6 +187,124 @@ this class controlls the AI\textquotesingle{}s behaviour and actions
 
 For assigning all connected components 
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a339af11f679c84a01e392ef7f924c4de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_ad6405c6a658a38d39256a78fdaa15b23}\label{class_a_i_controller_script_ad6405c6a658a38d39256a78fdaa15b23}} 
+\index{AIControllerScript@{AIControllerScript}!Awake@{Awake}}
+\index{Awake@{Awake}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_ad6405c6a658a38d39256a78fdaa15b23_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a0bfee235827ff618fa3325164969c2a4}\label{class_a_i_controller_script_a0bfee235827ff618fa3325164969c2a4}} 
+\index{AIControllerScript@{AIControllerScript}!CanAccuse@{CanAccuse}}
+\index{CanAccuse@{CanAccuse}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{CanAccuse()}{CanAccuse()}}
+{\footnotesize\ttfamily bool AIController\+Script.\+Can\+Accuse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if the AI is comfident enough to accuse this should match the flow chart of the AI 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a0bfee235827ff618fa3325164969c2a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a0bfee235827ff618fa3325164969c2a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a0b6b57b043b61e3426e15a0de6ed8ad3}\label{class_a_i_controller_script_a0b6b57b043b61e3426e15a0de6ed8ad3}} 
+\index{AIControllerScript@{AIControllerScript}!CanMove@{CanMove}}
+\index{CanMove@{CanMove}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{CanMove()}{CanMove()}}
+{\footnotesize\ttfamily bool AIController\+Script.\+Can\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if the AI player can move 
+
+\begin{DoxyReturn}{Returns}
+can the AI player move
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a0b6b57b043b61e3426e15a0de6ed8ad3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a7be5eb284c6258672e70af128f8638df}\label{class_a_i_controller_script_a7be5eb284c6258672e70af128f8638df}} 
+\index{AIControllerScript@{AIControllerScript}!Decide\_Accusation@{Decide\_Accusation}}
+\index{Decide\_Accusation@{Decide\_Accusation}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Decide\_Accusation()}{Decide\_Accusation()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Decide\+\_\+\+Accusation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Decides that cards to accuse based on the To Guess List 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a7be5eb284c6258672e70af128f8638df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a7be5eb284c6258672e70af128f8638df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_af8ec3d63334b6e9973a077d6ad401f59}\label{class_a_i_controller_script_af8ec3d63334b6e9973a077d6ad401f59}} 
+\index{AIControllerScript@{AIControllerScript}!Decide\_Character@{Decide\_Character}}
+\index{Decide\_Character@{Decide\_Character}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Decide\_Character()}{Decide\_Character()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} AIController\+Script.\+Decide\+\_\+\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+to decide a random character from the To Guess List 
+
+\begin{DoxyReturn}{Returns}
+random character
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af8ec3d63334b6e9973a077d6ad401f59_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af8ec3d63334b6e9973a077d6ad401f59_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_af04897fa0ae4ed5e472dea79bce8d7df}\label{class_a_i_controller_script_af04897fa0ae4ed5e472dea79bce8d7df}} 
 \index{AIControllerScript@{AIControllerScript}!Decide\_Movement@{Decide\_Movement}}
 \index{Decide\_Movement@{Decide\_Movement}!AIControllerScript@{AIControllerScript}}
@@ -67,6 +315,47 @@ For assigning all connected components
 
 Decides where the AI should move to this should match the flow chart of the AI 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af04897fa0ae4ed5e472dea79bce8d7df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af04897fa0ae4ed5e472dea79bce8d7df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a585a72fce6ad8b1d60160b2ae0762769}\label{class_a_i_controller_script_a585a72fce6ad8b1d60160b2ae0762769}} 
+\index{AIControllerScript@{AIControllerScript}!Decide\_Room@{Decide\_Room}}
+\index{Decide\_Room@{Decide\_Room}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Decide\_Room()}{Decide\_Room()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} AIController\+Script.\+Decide\+\_\+\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+to decide a random Room from the To Guess List 
+
+\begin{DoxyReturn}{Returns}
+random room
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a585a72fce6ad8b1d60160b2ae0762769_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a585a72fce6ad8b1d60160b2ae0762769_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17}\label{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17}} 
 \index{AIControllerScript@{AIControllerScript}!Decide\_Suggestion@{Decide\_Suggestion}}
 \index{Decide\_Suggestion@{Decide\_Suggestion}!AIControllerScript@{AIControllerScript}}
@@ -77,6 +366,76 @@ Decides where the AI should move to this should match the flow chart of the AI
 
 Decides what the AI should suggest this should match the flow chart of the AI 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_affdf86fa313c46463a9a5a2b20020a17_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a739618354871d708a1e898c8b9a46dc8}\label{class_a_i_controller_script_a739618354871d708a1e898c8b9a46dc8}} 
+\index{AIControllerScript@{AIControllerScript}!Decide\_Weapon@{Decide\_Weapon}}
+\index{Decide\_Weapon@{Decide\_Weapon}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{Decide\_Weapon()}{Decide\_Weapon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} AIController\+Script.\+Decide\+\_\+\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+to decide a random weapon from the To Guess List 
+
+\begin{DoxyReturn}{Returns}
+random weapon
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a739618354871d708a1e898c8b9a46dc8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a739618354871d708a1e898c8b9a46dc8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_afcb2875a5501f07a7f44d0fa720266f3}\label{class_a_i_controller_script_afcb2875a5501f07a7f44d0fa720266f3}} 
+\index{AIControllerScript@{AIControllerScript}!DelayDecision@{DelayDecision}}
+\index{DelayDecision@{DelayDecision}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{DelayDecision()}{DelayDecision()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Delay\+Decision (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+to delay the time for the next time the AI does something in the Update 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_afcb2875a5501f07a7f44d0fa720266f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_afcb2875a5501f07a7f44d0fa720266f3_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0}\label{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0}} 
 \index{AIControllerScript@{AIControllerScript}!EndTurn@{EndTurn}}
 \index{EndTurn@{EndTurn}!AIControllerScript@{AIControllerScript}}
@@ -87,6 +446,33 @@ Decides what the AI should suggest this should match the flow chart of the AI
 
 have AI to end turn 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a9c386cf1258ad897c9a1068804f07ba0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a74dc0e720fafceb873d3b19c12f68d58}\label{class_a_i_controller_script_a74dc0e720fafceb873d3b19c12f68d58}} 
+\index{AIControllerScript@{AIControllerScript}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a74dc0e720fafceb873d3b19c12f68d58_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0}\label{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0}} 
 \index{AIControllerScript@{AIControllerScript}!GetOutputDebugString@{GetOutputDebugString}}
 \index{GetOutputDebugString@{GetOutputDebugString}!AIControllerScript@{AIControllerScript}}
@@ -100,6 +486,62 @@ Get the Output Debug stack in string
 \begin{DoxyReturn}{Returns}
 string of the debug stack
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a2a5225a5dd86ac65bba12292cd4797a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a8b57daca04e528b57a612de3b285b4c2}\label{class_a_i_controller_script_a8b57daca04e528b57a612de3b285b4c2}} 
+\index{AIControllerScript@{AIControllerScript}!IsTokenMoving@{IsTokenMoving}}
+\index{IsTokenMoving@{IsTokenMoving}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{IsTokenMoving()}{IsTokenMoving()}}
+{\footnotesize\ttfamily bool AIController\+Script.\+Is\+Token\+Moving (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+check if the player token is still moving 
+
+\begin{DoxyReturn}{Returns}
+check if the token is still moving
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a8b57daca04e528b57a612de3b285b4c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a8b57daca04e528b57a612de3b285b4c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_a68e87147ee3eff77870c974edbb2e7ea}\label{class_a_i_controller_script_a68e87147ee3eff77870c974edbb2e7ea}} 
+\index{AIControllerScript@{AIControllerScript}!LoadToGuessList@{LoadToGuessList}}
+\index{LoadToGuessList@{LoadToGuessList}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{LoadToGuessList()}{LoadToGuessList()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Load\+To\+Guess\+List (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_card}{Card}} $>$}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Load player\textquotesingle{}s guess list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & cards that it still needs to guess\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a68e87147ee3eff77870c974edbb2e7ea_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279}\label{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279}} 
 \index{AIControllerScript@{AIControllerScript}!NotifySuggestion@{NotifySuggestion}}
 \index{NotifySuggestion@{NotifySuggestion}!AIControllerScript@{AIControllerScript}}
@@ -110,6 +552,66 @@ string of the debug stack
 
 for the round manager to notify that another player finished picking a card to show 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a208f5afe4102ff2ca04a03a425d76279_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_ab124aec8211aa7b8f00c6ef5db6bc96a}\label{class_a_i_controller_script_ab124aec8211aa7b8f00c6ef5db6bc96a}} 
+\index{AIControllerScript@{AIControllerScript}!OutputDebug@{OutputDebug}}
+\index{OutputDebug@{OutputDebug}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{OutputDebug()}{OutputDebug()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Output\+Debug (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+for out putting the debug stack if output\+Debug\+Text is true, it will out put the the console as well 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & string to be out put or stored in the debug stack\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_ab124aec8211aa7b8f00c6ef5db6bc96a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_af0dd8e39267e3e139524f59fb9c858b4}\label{class_a_i_controller_script_af0dd8e39267e3e139524f59fb9c858b4}} 
+\index{AIControllerScript@{AIControllerScript}!OutputDebugStatus@{OutputDebugStatus}}
+\index{OutputDebugStatus@{OutputDebugStatus}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{OutputDebugStatus()}{OutputDebugStatus()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Output\+Debug\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+to output the current status and previous status of the AI 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af0dd8e39267e3e139524f59fb9c858b4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_af0dd8e39267e3e139524f59fb9c858b4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b}\label{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b}} 
 \index{AIControllerScript@{AIControllerScript}!RollDice@{RollDice}}
 \index{RollDice@{RollDice}!AIControllerScript@{AIControllerScript}}
@@ -120,6 +622,20 @@ for the round manager to notify that another player finished picking a card to s
 
 have AI to roll 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a1584ffc08f2ea88236ad6df47319636b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960}\label{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960}} 
 \index{AIControllerScript@{AIControllerScript}!SetActive@{SetActive}}
 \index{SetActive@{SetActive}!AIControllerScript@{AIControllerScript}}
@@ -137,6 +653,20 @@ to activate the AI or not set which player the AI is controlling
 {\em set\+Player} & the player the AI gets to control\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_a606c498cbb805d816c1b06f94631a960_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5}\label{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5}} 
 \index{AIControllerScript@{AIControllerScript}!SetAIMode@{SetAIMode}}
 \index{SetAIMode@{SetAIMode}!AIControllerScript@{AIControllerScript}}
@@ -152,6 +682,143 @@ to set the AI\textquotesingle{}s mode
 {\em a} & the mode to set the AI to\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_aaee909cd0f0ffdedd8d8425607d7ccb5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_a_i_controller_script_acb4af4c99bf1e7610b45d9f81457d625}\label{class_a_i_controller_script_acb4af4c99bf1e7610b45d9f81457d625}} 
+\index{AIControllerScript@{AIControllerScript}!StartTurn@{StartTurn}}
+\index{StartTurn@{StartTurn}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{StartTurn()}{StartTurn()}}
+{\footnotesize\ttfamily void AIController\+Script.\+Start\+Turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+have AI to start turn 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_acb4af4c99bf1e7610b45d9f81457d625_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_i_controller_script_acb4af4c99bf1e7610b45d9f81457d625_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_a_i_controller_script_ab909d9626ac376b021a79a0a61a78b84}\label{class_a_i_controller_script_ab909d9626ac376b021a79a0a61a78b84}} 
+\index{AIControllerScript@{AIControllerScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} AIController\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a052d8b4f50da565a5cae2dbe7bc8d07e}\label{class_a_i_controller_script_a052d8b4f50da565a5cae2dbe7bc8d07e}} 
+\index{AIControllerScript@{AIControllerScript}!currentAIMode@{currentAIMode}}
+\index{currentAIMode@{currentAIMode}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{currentAIMode}{currentAIMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} AIController\+Script.\+current\+AIMode = \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea5706de961fb376d701be6e7762d8b09c}{AIMode.\+Waiting}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a01ffcf02c9fd43b81a6b645462768eea}\label{class_a_i_controller_script_a01ffcf02c9fd43b81a6b645462768eea}} 
+\index{AIControllerScript@{AIControllerScript}!currentCharacter@{currentCharacter}}
+\index{currentCharacter@{currentCharacter}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{currentCharacter}{currentCharacter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} AIController\+Script.\+current\+Character\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_ad593271e2e73c1ba1c287ea5e1049cc7}\label{class_a_i_controller_script_ad593271e2e73c1ba1c287ea5e1049cc7}} 
+\index{AIControllerScript@{AIControllerScript}!currentPlayerController@{currentPlayerController}}
+\index{currentPlayerController@{currentPlayerController}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{currentPlayerController}{currentPlayerController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} AIController\+Script.\+current\+Player\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a757ffa51f47851bd22574a55de68408b}\label{class_a_i_controller_script_a757ffa51f47851bd22574a55de68408b}} 
+\index{AIControllerScript@{AIControllerScript}!decisionTime@{decisionTime}}
+\index{decisionTime@{decisionTime}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{decisionTime}{decisionTime}}
+{\footnotesize\ttfamily float AIController\+Script.\+decision\+Time = 0.\+1f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_accab29009b4a1bb7d2ba772fa90c48b2}\label{class_a_i_controller_script_accab29009b4a1bb7d2ba772fa90c48b2}} 
+\index{AIControllerScript@{AIControllerScript}!isAIActive@{isAIActive}}
+\index{isAIActive@{isAIActive}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{isAIActive}{isAIActive}}
+{\footnotesize\ttfamily bool AIController\+Script.\+is\+AIActive\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a422cca49441eaa147a2a2eac7bda7aa8}\label{class_a_i_controller_script_a422cca49441eaa147a2a2eac7bda7aa8}} 
+\index{AIControllerScript@{AIControllerScript}!lastDecisionTime@{lastDecisionTime}}
+\index{lastDecisionTime@{lastDecisionTime}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{lastDecisionTime}{lastDecisionTime}}
+{\footnotesize\ttfamily float AIController\+Script.\+last\+Decision\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_af06b00a45798a361dd6d2a161a4d2a50}\label{class_a_i_controller_script_af06b00a45798a361dd6d2a161a4d2a50}} 
+\index{AIControllerScript@{AIControllerScript}!maxTurnTime@{maxTurnTime}}
+\index{maxTurnTime@{maxTurnTime}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{maxTurnTime}{maxTurnTime}}
+{\footnotesize\ttfamily float AIController\+Script.\+max\+Turn\+Time = 10f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a637133b0cc8b84d4b4c1f9e290b20901}\label{class_a_i_controller_script_a637133b0cc8b84d4b4c1f9e290b20901}} 
+\index{AIControllerScript@{AIControllerScript}!outputDebugStack@{outputDebugStack}}
+\index{outputDebugStack@{outputDebugStack}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{outputDebugStack}{outputDebugStack}}
+{\footnotesize\ttfamily List$<$string$>$ AIController\+Script.\+output\+Debug\+Stack\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a061d77d9f83d1688bfe83391a9766885}\label{class_a_i_controller_script_a061d77d9f83d1688bfe83391a9766885}} 
+\index{AIControllerScript@{AIControllerScript}!outputDebugText@{outputDebugText}}
+\index{outputDebugText@{outputDebugText}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{outputDebugText}{outputDebugText}}
+{\footnotesize\ttfamily bool AIController\+Script.\+output\+Debug\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_abac442bb20e415558352716ab8d9389f}\label{class_a_i_controller_script_abac442bb20e415558352716ab8d9389f}} 
+\index{AIControllerScript@{AIControllerScript}!pauseTime@{pauseTime}}
+\index{pauseTime@{pauseTime}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{pauseTime}{pauseTime}}
+{\footnotesize\ttfamily float AIController\+Script.\+pause\+Time = 3f\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a6d80108a01df61fb017b072d5984ca07}\label{class_a_i_controller_script_a6d80108a01df61fb017b072d5984ca07}} 
+\index{AIControllerScript@{AIControllerScript}!previousAIMode@{previousAIMode}}
+\index{previousAIMode@{previousAIMode}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{previousAIMode}{previousAIMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fe}{AIMode}} AIController\+Script.\+previous\+AIMode = \mbox{\hyperlink{_a_i_controller_script_8cs_a4d1b5e3b240c270ba59463005b6b38fea6adf97f83acf6453d4a6a4b1070f3754}{AIMode.\+None}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_af6c84d8376256547cd72ea71eb201f8a}\label{class_a_i_controller_script_af6c84d8376256547cd72ea71eb201f8a}} 
+\index{AIControllerScript@{AIControllerScript}!roundManager@{roundManager}}
+\index{roundManager@{roundManager}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{roundManager}{roundManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_round_manager}{Round\+Manager}} AIController\+Script.\+round\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a10b65a2cd52a2a677f5420c4e6bb7ccd}\label{class_a_i_controller_script_a10b65a2cd52a2a677f5420c4e6bb7ccd}} 
+\index{AIControllerScript@{AIControllerScript}!startTurnTime@{startTurnTime}}
+\index{startTurnTime@{startTurnTime}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{startTurnTime}{startTurnTime}}
+{\footnotesize\ttfamily float AIController\+Script.\+start\+Turn\+Time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a3b0d2f1724a871a08ecbe3b56c95f3a2}\label{class_a_i_controller_script_a3b0d2f1724a871a08ecbe3b56c95f3a2}} 
+\index{AIControllerScript@{AIControllerScript}!toGuessList@{toGuessList}}
+\index{toGuessList@{toGuessList}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{toGuessList}{toGuessList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ AIController\+Script.\+to\+Guess\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_i_controller_script_a83b94d25f667766c89cff60b438d10a5}\label{class_a_i_controller_script_a83b94d25f667766c89cff60b438d10a5}} 
+\index{AIControllerScript@{AIControllerScript}!userController@{userController}}
+\index{userController@{userController}!AIControllerScript@{AIControllerScript}}
+\doxysubsubsection{\texorpdfstring{userController}{userController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_controller}{User\+Controller}} AIController\+Script.\+user\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 \doxysubsection{Property Documentation}

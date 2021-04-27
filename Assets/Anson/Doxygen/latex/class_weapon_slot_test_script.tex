@@ -1,18 +1,60 @@
 \hypertarget{class_weapon_slot_test_script}{}\doxysection{Weapon\+Slot\+Test\+Script Class Reference}
 \label{class_weapon_slot_test_script}\index{WeaponSlotTestScript@{WeaponSlotTestScript}}
-Inheritance diagram for Weapon\+Slot\+Test\+Script\+:\begin{figure}[H]
+
+
+Class to run weapon slot tests in room test scene  
+
+
+
+
+Inheritance diagram for Weapon\+Slot\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_weapon_slot_test_script}
+\includegraphics[width=241pt]{class_weapon_slot_test_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+Slot\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_weapon_slot_test_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_weapon_slot_test_script_a03b1b92b7b643bf9d94dbae8cc58e3f6}{Add\+Weapon}} (string weapon)
-\item 
+\begin{DoxyCompactList}\small\item\em Add a weapon to the room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_weapon_slot_test_script_a6c7b1e51d4ae2dfc4e8334671b084083}{Remove\+Weapon}} (string weapon)
+\begin{DoxyCompactList}\small\item\em Remove weapon from the room \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_weapon_slot_test_script_a6220adb9a581907a10e66c5ba11cb9c3}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Set required variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_weapon_slot_test_script_a92dc32fad961668315aa642c3586acee}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_weapon_slot_test_script_abf650efabf59b98429890a3de4b43a28}{Set\+Weapons\+In\+Room\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Set text to display weapons in room \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_weapon_slot_test_script_abc3955d860ecaa11c114fa00d23fa1e6}{weapons}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_weapon_slot_test_script_a74c6cef9d37eb840e24692796de8bdb9}{room}}
+\item 
+Text \mbox{\hyperlink{class_weapon_slot_test_script_af7f9704473001b3cdbe8a658520c922e}{weapons\+In\+Room}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_weapon_slot_test_script_a8922bb10ecc583f8b0528fac8cb73981}{dagger\+Buttons}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to run weapon slot tests in room test scene 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -22,11 +64,103 @@ void \mbox{\hyperlink{class_weapon_slot_test_script_a6c7b1e51d4ae2dfc4e8334671b0
 \doxysubsubsection{\texorpdfstring{AddWeapon()}{AddWeapon()}}
 {\footnotesize\ttfamily void Weapon\+Slot\+Test\+Script.\+Add\+Weapon (\begin{DoxyParamCaption}\item[{string}]{weapon }\end{DoxyParamCaption})}
 
+
+
+Add a weapon to the room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Weapon to add to room\\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_weapon_slot_test_script_a6c7b1e51d4ae2dfc4e8334671b084083}\label{class_weapon_slot_test_script_a6c7b1e51d4ae2dfc4e8334671b084083}} 
 \index{WeaponSlotTestScript@{WeaponSlotTestScript}!RemoveWeapon@{RemoveWeapon}}
 \index{RemoveWeapon@{RemoveWeapon}!WeaponSlotTestScript@{WeaponSlotTestScript}}
 \doxysubsubsection{\texorpdfstring{RemoveWeapon()}{RemoveWeapon()}}
 {\footnotesize\ttfamily void Weapon\+Slot\+Test\+Script.\+Remove\+Weapon (\begin{DoxyParamCaption}\item[{string}]{weapon }\end{DoxyParamCaption})}
+
+
+
+Remove weapon from the room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Weapon to remove from the room\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_weapon_slot_test_script_abf650efabf59b98429890a3de4b43a28}\label{class_weapon_slot_test_script_abf650efabf59b98429890a3de4b43a28}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!SetWeaponsInRoomText@{SetWeaponsInRoomText}}
+\index{SetWeaponsInRoomText@{SetWeaponsInRoomText}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{SetWeaponsInRoomText()}{SetWeaponsInRoomText()}}
+{\footnotesize\ttfamily void Weapon\+Slot\+Test\+Script.\+Set\+Weapons\+In\+Room\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set text to display weapons in room 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_slot_test_script_abf650efabf59b98429890a3de4b43a28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_slot_test_script_abf650efabf59b98429890a3de4b43a28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_weapon_slot_test_script_a6220adb9a581907a10e66c5ba11cb9c3}\label{class_weapon_slot_test_script_a6220adb9a581907a10e66c5ba11cb9c3}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!Start@{Start}}
+\index{Start@{Start}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Weapon\+Slot\+Test\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set required variables 
+
+\mbox{\Hypertarget{class_weapon_slot_test_script_a92dc32fad961668315aa642c3586acee}\label{class_weapon_slot_test_script_a92dc32fad961668315aa642c3586acee}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!Update@{Update}}
+\index{Update@{Update}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Weapon\+Slot\+Test\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_slot_test_script_a92dc32fad961668315aa642c3586acee_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_weapon_slot_test_script_a8922bb10ecc583f8b0528fac8cb73981}\label{class_weapon_slot_test_script_a8922bb10ecc583f8b0528fac8cb73981}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!daggerButtons@{daggerButtons}}
+\index{daggerButtons@{daggerButtons}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{daggerButtons}{daggerButtons}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Weapon\+Slot\+Test\+Script.\+dagger\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_weapon_slot_test_script_a74c6cef9d37eb840e24692796de8bdb9}\label{class_weapon_slot_test_script_a74c6cef9d37eb840e24692796de8bdb9}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!room@{room}}
+\index{room@{room}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{room}{room}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Weapon\+Slot\+Test\+Script.\+room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_weapon_slot_test_script_abc3955d860ecaa11c114fa00d23fa1e6}\label{class_weapon_slot_test_script_abc3955d860ecaa11c114fa00d23fa1e6}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!weapons@{weapons}}
+\index{weapons@{weapons}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{weapons}{weapons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_weapon_token_script}{Weapon\+Token\+Script}} \mbox{[}$\,$\mbox{]} Weapon\+Slot\+Test\+Script.\+weapons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_weapon_slot_test_script_af7f9704473001b3cdbe8a658520c922e}\label{class_weapon_slot_test_script_af7f9704473001b3cdbe8a658520c922e}} 
+\index{WeaponSlotTestScript@{WeaponSlotTestScript}!weaponsInRoom@{weaponsInRoom}}
+\index{weaponsInRoom@{weaponsInRoom}!WeaponSlotTestScript@{WeaponSlotTestScript}}
+\doxysubsubsection{\texorpdfstring{weaponsInRoom}{weaponsInRoom}}
+{\footnotesize\ttfamily Text Weapon\+Slot\+Test\+Script.\+weapons\+In\+Room\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.SetCurrentRoom" name="PlayerMasterController.SetCurrentRoom">
+<area shape="rect" id="node1" title=" " alt="" coords="373,5,676,35"/>
+<area shape="rect" id="node2" href="$class_room_entry_board_tile_script.html#a89563c1c09bdf5bb73347dd676a10f2d" title="Move player to exit point, open door, exit player, close door, set player moving to target tile." alt="" coords="5,5,325,35"/>
+</map>

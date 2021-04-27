@@ -1,9 +1,21 @@
 \hypertarget{class_weapon_card}{}\doxysection{Weapon\+Card Class Reference}
 \label{class_weapon_card}\index{WeaponCard@{WeaponCard}}
-Inheritance diagram for Weapon\+Card\+:\begin{figure}[H]
+
+
+Inheritance diagram for Weapon\+Card\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_weapon_card}
+\includegraphics[width=191pt]{class_weapon_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_weapon_card__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -12,19 +24,39 @@ Inheritance diagram for Weapon\+Card\+:\begin{figure}[H]
 override bool \mbox{\hyperlink{class_weapon_card_a1ae44f8a0584c83bc019eef55fcd9034}{Equals}} (object obj)
 \item 
 override Enum \mbox{\hyperlink{class_weapon_card_af3c92c9857cb9d637f36dcf6cda1282d}{Get\+Card\+Type}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the enum of the card \end{DoxyCompactList}\item 
 override int \mbox{\hyperlink{class_weapon_card_ad404815e50dcef857911c0a084226c5e}{Get\+Hash\+Code}} ()
 \item 
 override Sprite \mbox{\hyperlink{class_weapon_card_a7e71a3ab846292c340b49f6862942924}{Get\+Card\+Image}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} \mbox{\hyperlink{class_weapon_card_a21ebf214f10e2317660c68185ad311e6}{weapon\+Enum}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_weapon_card_ab13a8cf936a39a2e145bea59a6594d8e}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Sets the correct path for cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sprite \mbox{\hyperlink{class_weapon_card_a5d52157c5eda471e1725876eda3027ba}{card\+Image}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_weapon_card_ab13a8cf936a39a2e145bea59a6594d8e}\label{class_weapon_card_ab13a8cf936a39a2e145bea59a6594d8e}} 
+\index{WeaponCard@{WeaponCard}!Awake@{Awake}}
+\index{Awake@{Awake}!WeaponCard@{WeaponCard}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Weapon\+Card.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the correct path for cards image 
+
 \mbox{\Hypertarget{class_weapon_card_a1ae44f8a0584c83bc019eef55fcd9034}\label{class_weapon_card_a1ae44f8a0584c83bc019eef55fcd9034}} 
 \index{WeaponCard@{WeaponCard}!Equals@{Equals}}
 \index{Equals@{Equals}!WeaponCard@{WeaponCard}}
@@ -39,6 +71,13 @@ override Sprite \mbox{\hyperlink{class_weapon_card_a7e71a3ab846292c340b49f686294
 
 
 
+Returns cards image 
+
+\begin{DoxyReturn}{Returns}
+Cards image
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}.
 
 \mbox{\Hypertarget{class_weapon_card_af3c92c9857cb9d637f36dcf6cda1282d}\label{class_weapon_card_af3c92c9857cb9d637f36dcf6cda1282d}} 
@@ -49,8 +88,22 @@ Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}
 
 
 
+Returns the enum of the card 
+
+\begin{DoxyReturn}{Returns}
+Enum of the card
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a094a5e7ea98cc156ac64e578a987be85}{Card}}.
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_weapon_card_af3c92c9857cb9d637f36dcf6cda1282d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_weapon_card_ad404815e50dcef857911c0a084226c5e}\label{class_weapon_card_ad404815e50dcef857911c0a084226c5e}} 
 \index{WeaponCard@{WeaponCard}!GetHashCode@{GetHashCode}}
 \index{GetHashCode@{GetHashCode}!WeaponCard@{WeaponCard}}
@@ -60,6 +113,12 @@ Implements \mbox{\hyperlink{class_card_a094a5e7ea98cc156ac64e578a987be85}{Card}}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_weapon_card_a5d52157c5eda471e1725876eda3027ba}\label{class_weapon_card_a5d52157c5eda471e1725876eda3027ba}} 
+\index{WeaponCard@{WeaponCard}!cardImage@{cardImage}}
+\index{cardImage@{cardImage}!WeaponCard@{WeaponCard}}
+\doxysubsubsection{\texorpdfstring{cardImage}{cardImage}}
+{\footnotesize\ttfamily Sprite Weapon\+Card.\+card\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_weapon_card_a21ebf214f10e2317660c68185ad311e6}\label{class_weapon_card_a21ebf214f10e2317660c68185ad311e6}} 
 \index{WeaponCard@{WeaponCard}!weaponEnum@{weaponEnum}}
 \index{weaponEnum@{weaponEnum}!WeaponCard@{WeaponCard}}

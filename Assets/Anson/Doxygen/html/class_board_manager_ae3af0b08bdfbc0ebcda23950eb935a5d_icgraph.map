@@ -1,0 +1,19 @@
+<map id="BoardManager.GetTileNeighbours" name="BoardManager.GetTileNeighbours">
+<area shape="rect" id="node1" title="Return array of all neighbours of given tile" alt="" coords="1688,165,1949,195"/>
+<area shape="rect" id="node2" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="Perform bfs search for the tiles" alt="" coords="1464,139,1616,168"/>
+<area shape="rect" id="node17" href="$class_board_manager.html#a11591587bdea96f6792097007c4f6e6f" title="Print Array for Testing" alt="" coords="1440,192,1640,221"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="1145,59,1392,88"/>
+<area shape="rect" id="node9" href="$class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0" title="Mark and show which tile the player can move to" alt="" coords="1154,219,1383,248"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a1ce7b540b58b1e6fde74e064107ae954" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="782,5,1041,35"/>
+<area shape="rect" id="node8" href="$class_board_builder.html#aeeca1094dc5e50c5612bba9336efd9d3" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="756,59,1067,88"/>
+<area shape="rect" id="node5" href="$class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,32,677,61"/>
+<area shape="rect" id="node6" href="$class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" id="node7" href="$class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+<area shape="rect" id="node10" href="$class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="793,112,1029,141"/>
+<area shape="rect" id="node12" href="$class_player_master_controller.html#ac150dd296b7ff1b7b5a856cbdf5af8bf" title="calls the boardManager to display all the tiles that it can move to according to the range of it&#39;s mo..." alt="" coords="725,165,1097,195"/>
+<area shape="rect" id="node13" href="$class_anson_test_script.html#a445d27a921ade2f0e76054a3b7cc4245" title=" " alt="" coords="796,219,1027,248"/>
+<area shape="rect" id="node14" href="$class_player_movement_test_script.html#a1c247cfdee35d3a1c1d3a81fd579b426" title=" " alt="" coords="760,272,1063,301"/>
+<area shape="rect" id="node15" href="$class_testing___movement_script.html#a8bd90f3857ba3610ef23e0a5d7e4879a" title="give a select value for the player roll" alt="" coords="783,325,1040,355"/>
+<area shape="rect" id="node16" href="$class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25" title="Show movable tiles" alt="" coords="797,379,1026,408"/>
+<area shape="rect" id="node11" href="$class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="449,112,671,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="RoomEntryExitTestScript.ExitRoom1" name="RoomEntryExitTestScript.ExitRoom1">
+<area shape="rect" id="node1" title="Player exit room at entry point 1" alt="" coords="5,5,283,35"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="331,5,609,35"/>
+</map>

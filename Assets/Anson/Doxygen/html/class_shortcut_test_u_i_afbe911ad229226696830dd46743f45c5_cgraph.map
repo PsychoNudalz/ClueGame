@@ -1,0 +1,6 @@
+<map id="ShortcutTestUI.Update" name="ShortcutTestUI.Update">
+<area shape="rect" id="node1" title="Set button interactables" alt="" coords="5,5,184,35"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a281d37e414bc17c9441964104f039b4a" title="check if the player can take a short cut" alt="" coords="232,5,539,35"/>
+<area shape="rect" id="node3" href="$class_player_token_script.html#a15c0d40c8748ae3e8f51b12082cf2431" title=" " alt="" coords="587,5,861,35"/>
+<area shape="rect" id="node4" href="$class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5" title="Does the room have a shortcut tile" alt="" coords="909,5,1104,35"/>
+</map>

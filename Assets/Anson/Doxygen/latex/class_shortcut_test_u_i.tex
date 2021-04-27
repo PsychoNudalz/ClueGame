@@ -1,20 +1,66 @@
 \hypertarget{class_shortcut_test_u_i}{}\doxysection{Shortcut\+Test\+UI Class Reference}
 \label{class_shortcut_test_u_i}\index{ShortcutTestUI@{ShortcutTestUI}}
-Inheritance diagram for Shortcut\+Test\+UI\+:\begin{figure}[H]
+
+
+Class to run the shortcut test scene  
+
+
+
+
+Inheritance diagram for Shortcut\+Test\+UI\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_shortcut_test_u_i}
+\includegraphics[width=214pt]{class_shortcut_test_u_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shortcut\+Test\+UI\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_shortcut_test_u_i__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_shortcut_test_u_i_a3012692eeb4658dc688e82b431cc10f6}{Enter\+Room}} (string room\+To\+Enter)
-\item 
+\begin{DoxyCompactList}\small\item\em Enter a room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_shortcut_test_u_i_aae422f5ff6340185fb9f7017b214957b}{Take\+Shortcut}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Trigger take shortcut \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_shortcut_test_u_i_ada4b889c0948d9fc4895b9c581b530b7}{Exit\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Trigger player to exit room \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shortcut_test_u_i_a348c3a480e18ee735a31915ef7956bc0}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Assign required variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shortcut_test_u_i_afbe911ad229226696830dd46743f45c5}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Set button interactables \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{class_shortcut_test_u_i_afffb11f29d06e8b5b73cee74dac0e8a6}{entry\+Button\+Transform}}
+\item 
+Button \mbox{\hyperlink{class_shortcut_test_u_i_a56d47c7b46a40e20587a37de361c42b8}{exit\+Button}}
+\item 
+Button \mbox{\hyperlink{class_shortcut_test_u_i_a53673adfdac29dd6901f02f69d922312}{shortcut\+Button}}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_shortcut_test_u_i_a96a353099a365223f9597f607c54fcc8}{player}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_shortcut_test_u_i_a24fd7c9f89237c5459f3aaf777ab569e}{board\+Manager}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_shortcut_test_u_i_a1034dbf446245e7b9765b4178be58e14}{entry\+Buttons}}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{\hyperlink{class_shortcut_test_u_i_a4cedca65ffdf3fef521e7ef1c8e029b3}{exit\+Tile}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to run the shortcut test scene 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -24,17 +70,127 @@ void \mbox{\hyperlink{class_shortcut_test_u_i_ada4b889c0948d9fc4895b9c581b530b7}
 \doxysubsubsection{\texorpdfstring{EnterRoom()}{EnterRoom()}}
 {\footnotesize\ttfamily void Shortcut\+Test\+UI.\+Enter\+Room (\begin{DoxyParamCaption}\item[{string}]{room\+To\+Enter }\end{DoxyParamCaption})}
 
+
+
+Enter a room 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room\+To\+Enter} & Room to enter\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_test_u_i_a3012692eeb4658dc688e82b431cc10f6_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_shortcut_test_u_i_ada4b889c0948d9fc4895b9c581b530b7}\label{class_shortcut_test_u_i_ada4b889c0948d9fc4895b9c581b530b7}} 
 \index{ShortcutTestUI@{ShortcutTestUI}!ExitRoom@{ExitRoom}}
 \index{ExitRoom@{ExitRoom}!ShortcutTestUI@{ShortcutTestUI}}
 \doxysubsubsection{\texorpdfstring{ExitRoom()}{ExitRoom()}}
 {\footnotesize\ttfamily void Shortcut\+Test\+UI.\+Exit\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Trigger player to exit room 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_test_u_i_ada4b889c0948d9fc4895b9c581b530b7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shortcut_test_u_i_a348c3a480e18ee735a31915ef7956bc0}\label{class_shortcut_test_u_i_a348c3a480e18ee735a31915ef7956bc0}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!Start@{Start}}
+\index{Start@{Start}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Shortcut\+Test\+UI.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Assign required variables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_test_u_i_a348c3a480e18ee735a31915ef7956bc0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_shortcut_test_u_i_aae422f5ff6340185fb9f7017b214957b}\label{class_shortcut_test_u_i_aae422f5ff6340185fb9f7017b214957b}} 
 \index{ShortcutTestUI@{ShortcutTestUI}!TakeShortcut@{TakeShortcut}}
 \index{TakeShortcut@{TakeShortcut}!ShortcutTestUI@{ShortcutTestUI}}
 \doxysubsubsection{\texorpdfstring{TakeShortcut()}{TakeShortcut()}}
 {\footnotesize\ttfamily void Shortcut\+Test\+UI.\+Take\+Shortcut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Trigger take shortcut 
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_afbe911ad229226696830dd46743f45c5}\label{class_shortcut_test_u_i_afbe911ad229226696830dd46743f45c5}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!Update@{Update}}
+\index{Update@{Update}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Shortcut\+Test\+UI.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set button interactables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shortcut_test_u_i_afbe911ad229226696830dd46743f45c5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_shortcut_test_u_i_a24fd7c9f89237c5459f3aaf777ab569e}\label{class_shortcut_test_u_i_a24fd7c9f89237c5459f3aaf777ab569e}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Shortcut\+Test\+UI.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_a1034dbf446245e7b9765b4178be58e14}\label{class_shortcut_test_u_i_a1034dbf446245e7b9765b4178be58e14}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!entryButtons@{entryButtons}}
+\index{entryButtons@{entryButtons}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{entryButtons}{entryButtons}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Shortcut\+Test\+UI.\+entry\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_afffb11f29d06e8b5b73cee74dac0e8a6}\label{class_shortcut_test_u_i_afffb11f29d06e8b5b73cee74dac0e8a6}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!entryButtonTransform@{entryButtonTransform}}
+\index{entryButtonTransform@{entryButtonTransform}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{entryButtonTransform}{entryButtonTransform}}
+{\footnotesize\ttfamily Transform Shortcut\+Test\+UI.\+entry\+Button\+Transform\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_a56d47c7b46a40e20587a37de361c42b8}\label{class_shortcut_test_u_i_a56d47c7b46a40e20587a37de361c42b8}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!exitButton@{exitButton}}
+\index{exitButton@{exitButton}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{exitButton}{exitButton}}
+{\footnotesize\ttfamily Button Shortcut\+Test\+UI.\+exit\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_a4cedca65ffdf3fef521e7ef1c8e029b3}\label{class_shortcut_test_u_i_a4cedca65ffdf3fef521e7ef1c8e029b3}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!exitTile@{exitTile}}
+\index{exitTile@{exitTile}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{exitTile}{exitTile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} Shortcut\+Test\+UI.\+exit\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_a96a353099a365223f9597f607c54fcc8}\label{class_shortcut_test_u_i_a96a353099a365223f9597f607c54fcc8}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!player@{player}}
+\index{player@{player}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Shortcut\+Test\+UI.\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_shortcut_test_u_i_a53673adfdac29dd6901f02f69d922312}\label{class_shortcut_test_u_i_a53673adfdac29dd6901f02f69d922312}} 
+\index{ShortcutTestUI@{ShortcutTestUI}!shortcutButton@{shortcutButton}}
+\index{shortcutButton@{shortcutButton}!ShortcutTestUI@{ShortcutTestUI}}
+\doxysubsubsection{\texorpdfstring{shortcutButton}{shortcutButton}}
+{\footnotesize\ttfamily Button Shortcut\+Test\+UI.\+shortcut\+Button\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

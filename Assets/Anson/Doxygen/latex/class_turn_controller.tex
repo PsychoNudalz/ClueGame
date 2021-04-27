@@ -5,10 +5,22 @@
 This handles the turn between the players  
 
 
-Inheritance diagram for Turn\+Controller\+:\begin{figure}[H]
+
+
+Inheritance diagram for Turn\+Controller\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_turn_controller}
+\includegraphics[width=246pt]{class_turn_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Turn\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_turn_controller__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -38,6 +50,20 @@ int \mbox{\hyperlink{class_turn_controller_a470a7ac5a4ebbcfaf0ccf586017b7421}{cu
 \item 
 List$<$ \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} $>$ \mbox{\hyperlink{class_turn_controller_a51de6784e9a76b2520af89da954daad2}{Current\+Players}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_turn_controller_ae4bf774a5995f8415d01d8298ce5b3ec}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_turn_controller_a92c12f353afcc5a314409b21bd07641c}{Initialise\+Players}} ()
+\begin{DoxyCompactList}\small\item\em Initialises the list with all the players from the gameobject, adding them in order \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} $>$ \mbox{\hyperlink{class_turn_controller_a485d8bc40c6fcaf7fe3f23279f142d30}{current\+Players}}
+\item 
+List$<$ \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} $>$ \mbox{\hyperlink{class_turn_controller_aae47b40e08a6c7dc50f2a3503b2d4cba}{initialise\+Players}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -46,12 +72,25 @@ This handles the turn between the players
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_turn_controller_ae4bf774a5995f8415d01d8298ce5b3ec}\label{class_turn_controller_ae4bf774a5995f8415d01d8298ce5b3ec}} 
+\index{TurnController@{TurnController}!Awake@{Awake}}
+\index{Awake@{Awake}!TurnController@{TurnController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Turn\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_turn_controller_af16e42b7e61c5a999291327e2e556caa}\label{class_turn_controller_af16e42b7e61c5a999291327e2e556caa}} 
 \index{TurnController@{TurnController}!GetCurrentPlayer@{GetCurrentPlayer}}
 \index{GetCurrentPlayer@{GetCurrentPlayer}!TurnController@{TurnController}}
 \doxysubsubsection{\texorpdfstring{GetCurrentPlayer()}{GetCurrentPlayer()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Turn\+Controller.\+Get\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_af16e42b7e61c5a999291327e2e556caa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_turn_controller_a902735e27b4b2167cd8c1020ed0bd557}\label{class_turn_controller_a902735e27b4b2167cd8c1020ed0bd557}} 
 \index{TurnController@{TurnController}!GetNextPlayer@{GetNextPlayer}}
 \index{GetNextPlayer@{GetNextPlayer}!TurnController@{TurnController}}
@@ -64,6 +103,30 @@ This handles the turn between the players
 \doxysubsubsection{\texorpdfstring{GetRestOfPlayersInOrder()}{GetRestOfPlayersInOrder()}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}$>$ Turn\+Controller.\+Get\+Rest\+Of\+Players\+In\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_a1eddf50c785325b5e873312d1fcd6380_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_turn_controller_a92c12f353afcc5a314409b21bd07641c}\label{class_turn_controller_a92c12f353afcc5a314409b21bd07641c}} 
+\index{TurnController@{TurnController}!InitialisePlayers@{InitialisePlayers}}
+\index{InitialisePlayers@{InitialisePlayers}!TurnController@{TurnController}}
+\doxysubsubsection{\texorpdfstring{InitialisePlayers()}{InitialisePlayers()}}
+{\footnotesize\ttfamily void Turn\+Controller.\+Initialise\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialises the list with all the players from the gameobject, adding them in order 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_a92c12f353afcc5a314409b21bd07641c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_turn_controller_ace3cc011f74890894a110168177ac199}\label{class_turn_controller_ace3cc011f74890894a110168177ac199}} 
 \index{TurnController@{TurnController}!RemovePlayer@{RemovePlayer}}
 \index{RemovePlayer@{RemovePlayer}!TurnController@{TurnController}}
@@ -76,12 +139,33 @@ This handles the turn between the players
 \doxysubsubsection{\texorpdfstring{SetCurrentPlayerToNext()}{SetCurrentPlayerToNext()}}
 {\footnotesize\ttfamily bool Turn\+Controller.\+Set\+Current\+Player\+To\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_ade13993ccd7681d71cec356829df0f18_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_turn_controller_ac6d83ee01dcb5de555b28407374b3de8}\label{class_turn_controller_ac6d83ee01dcb5de555b28407374b3de8}} 
 \index{TurnController@{TurnController}!StartGame@{StartGame}}
 \index{StartGame@{StartGame}!TurnController@{TurnController}}
 \doxysubsubsection{\texorpdfstring{StartGame()}{StartGame()}}
 {\footnotesize\ttfamily void Turn\+Controller.\+Start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_ac6d83ee01dcb5de555b28407374b3de8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_turn_controller_ac6d83ee01dcb5de555b28407374b3de8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_turn_controller_af6d32d0e4e282fd71501459e93984ac6}\label{class_turn_controller_af6d32d0e4e282fd71501459e93984ac6}} 
 \index{TurnController@{TurnController}!Win@{Win}}
 \index{Win@{Win}!TurnController@{TurnController}}
@@ -96,6 +180,18 @@ This handles the turn between the players
 \index{currentPlayerIndex@{currentPlayerIndex}!TurnController@{TurnController}}
 \doxysubsubsection{\texorpdfstring{currentPlayerIndex}{currentPlayerIndex}}
 {\footnotesize\ttfamily int Turn\+Controller.\+current\+Player\+Index}
+
+\mbox{\Hypertarget{class_turn_controller_a485d8bc40c6fcaf7fe3f23279f142d30}\label{class_turn_controller_a485d8bc40c6fcaf7fe3f23279f142d30}} 
+\index{TurnController@{TurnController}!currentPlayers@{currentPlayers}}
+\index{currentPlayers@{currentPlayers}!TurnController@{TurnController}}
+\doxysubsubsection{\texorpdfstring{currentPlayers}{currentPlayers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}$>$ Turn\+Controller.\+current\+Players\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_turn_controller_aae47b40e08a6c7dc50f2a3503b2d4cba}\label{class_turn_controller_aae47b40e08a6c7dc50f2a3503b2d4cba}} 
+\index{TurnController@{TurnController}!initialisePlayers@{initialisePlayers}}
+\index{initialisePlayers@{initialisePlayers}!TurnController@{TurnController}}
+\doxysubsubsection{\texorpdfstring{initialisePlayers}{initialisePlayers}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}$>$ Turn\+Controller.\+initialise\+Players\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

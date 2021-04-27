@@ -1,22 +1,94 @@
 \hypertarget{class_room_entry_exit_test_script}{}\doxysection{Room\+Entry\+Exit\+Test\+Script Class Reference}
 \label{class_room_entry_exit_test_script}\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}}
-Inheritance diagram for Room\+Entry\+Exit\+Test\+Script\+:\begin{figure}[H]
+
+
+Class for player control in the room test scene  
+
+
+
+
+Inheritance diagram for Room\+Entry\+Exit\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_room_entry_exit_test_script}
+\includegraphics[height=550pt]{class_room_entry_exit_test_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Room\+Entry\+Exit\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_room_entry_exit_test_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_room_entry_exit_test_script_acef5d54ed15d851447350fd66a63adad}{Enter\+Room1}} (string character)
-\item 
+\begin{DoxyCompactList}\small\item\em Player enter room at entry point 1 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_room_entry_exit_test_script_a94091c962445d710eb5851b0eb538b3b}{Enter\+Room2}} (string character)
-\item 
+\begin{DoxyCompactList}\small\item\em Player enter room at entry point 2 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_room_entry_exit_test_script_ae421f4c452e2ad1617ea98958045e8de}{Exit\+Room1}} (string character)
-\item 
+\begin{DoxyCompactList}\small\item\em Player exit room at entry point 1 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_room_entry_exit_test_script_a25f805d4eea55ff282a3a2680f281f32}{Exit\+Room2}} (string character)
+\begin{DoxyCompactList}\small\item\em Player exit room at entry point 2 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_room_entry_exit_test_script_aebe9c0f76f701546bf6041f9d971cc08}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Set required variables \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_entry_exit_test_script_a08bf84fd6cd888cdca5837f227e31fd1}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Update players in room text and buttons interacable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_entry_exit_test_script_a0c8b4f14f38fe1d1ab046735fafcd546}{Set\+Buttons\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Set buttons interacable \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_entry_exit_test_script_a10ae072487c9377bd319cc46bca43700}{Set\+Players\+In\+Room\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Set players in room text \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a87adf155bce5613a3e09a3f730d4e218}{players}}
+\item 
+\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a55b742f0bdedbed6d3dc177647b10ef3}{player\+Tokens}}
+\item 
+\mbox{\hyperlink{class_room_script}{Room\+Script}} \mbox{\hyperlink{class_room_entry_exit_test_script_ad129390d895eb754281a9f2683217a95}{room}}
+\item 
+\mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_ae6424355e395334d99942c4afb149594}{entries}}
+\item 
+\mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a4fe7058b6b0127bd863d47413a326bd6}{target\+Tiles}}
+\item 
+Text \mbox{\hyperlink{class_room_entry_exit_test_script_ade54fc7830c8d6b6d39824ea903f8bd1}{players\+In\+Room}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a9a572f47615cff196b1433e9c5208e32}{miss\+Scarlett\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a974de60570ecac01d507ca33c8401e3e}{miss\+Scarlett\+Exit}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a2504ffb1f400344c516f8956f236f809}{prof\+Plum\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_ae97827c7d6c66334fc14cc972c1aa136}{prof\+Plum\+Exit}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_adaf8ccfcd78aaeef4643d48079703072}{col\+Mustard\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a88b824049f69f434fd9741d1f921805c}{col\+Mustard\+Exit}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a4604ae801df172b0499ab99a0110bcdc}{mrs\+Peacock\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a63802b547a4780e9db2c199adeaf0deb}{mrs\+Peacock\+Exit}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a6df7f9feb89ab427425afbc8f3f1e28d}{rev\+Green\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a6e1dd30d8ef5dc130dff888397bb654d}{rev\+Green\+Exit}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_aed19bee89f75e52cf75891fdd0be7af8}{mrs\+White\+Entry}}
+\item 
+Button\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_room_entry_exit_test_script_a71190809705e9fbec159ec279be85be9}{mrs\+White\+Exit}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for player control in the room test scene 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -26,23 +98,273 @@ void \mbox{\hyperlink{class_room_entry_exit_test_script_a25f805d4eea55ff282a3a26
 \doxysubsubsection{\texorpdfstring{EnterRoom1()}{EnterRoom1()}}
 {\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Enter\+Room1 (\begin{DoxyParamCaption}\item[{string}]{character }\end{DoxyParamCaption})}
 
+
+
+Player enter room at entry point 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Player to enter\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_acef5d54ed15d851447350fd66a63adad_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_entry_exit_test_script_a94091c962445d710eb5851b0eb538b3b}\label{class_room_entry_exit_test_script_a94091c962445d710eb5851b0eb538b3b}} 
 \index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!EnterRoom2@{EnterRoom2}}
 \index{EnterRoom2@{EnterRoom2}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
 \doxysubsubsection{\texorpdfstring{EnterRoom2()}{EnterRoom2()}}
 {\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Enter\+Room2 (\begin{DoxyParamCaption}\item[{string}]{character }\end{DoxyParamCaption})}
 
+
+
+Player enter room at entry point 2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Player to enter\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a94091c962445d710eb5851b0eb538b3b_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_entry_exit_test_script_ae421f4c452e2ad1617ea98958045e8de}\label{class_room_entry_exit_test_script_ae421f4c452e2ad1617ea98958045e8de}} 
 \index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!ExitRoom1@{ExitRoom1}}
 \index{ExitRoom1@{ExitRoom1}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
 \doxysubsubsection{\texorpdfstring{ExitRoom1()}{ExitRoom1()}}
 {\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Exit\+Room1 (\begin{DoxyParamCaption}\item[{string}]{character }\end{DoxyParamCaption})}
 
+
+
+Player exit room at entry point 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Player to exit\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_ae421f4c452e2ad1617ea98958045e8de_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_room_entry_exit_test_script_a25f805d4eea55ff282a3a2680f281f32}\label{class_room_entry_exit_test_script_a25f805d4eea55ff282a3a2680f281f32}} 
 \index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!ExitRoom2@{ExitRoom2}}
 \index{ExitRoom2@{ExitRoom2}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
 \doxysubsubsection{\texorpdfstring{ExitRoom2()}{ExitRoom2()}}
 {\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Exit\+Room2 (\begin{DoxyParamCaption}\item[{string}]{character }\end{DoxyParamCaption})}
+
+
+
+Player exit room at entry point 2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em character} & Player to exit\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a25f805d4eea55ff282a3a2680f281f32_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a0c8b4f14f38fe1d1ab046735fafcd546}\label{class_room_entry_exit_test_script_a0c8b4f14f38fe1d1ab046735fafcd546}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!SetButtonsEnabled@{SetButtonsEnabled}}
+\index{SetButtonsEnabled@{SetButtonsEnabled}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{SetButtonsEnabled()}{SetButtonsEnabled()}}
+{\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Set\+Buttons\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set buttons interacable 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a0c8b4f14f38fe1d1ab046735fafcd546_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a10ae072487c9377bd319cc46bca43700}\label{class_room_entry_exit_test_script_a10ae072487c9377bd319cc46bca43700}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!SetPlayersInRoomText@{SetPlayersInRoomText}}
+\index{SetPlayersInRoomText@{SetPlayersInRoomText}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{SetPlayersInRoomText()}{SetPlayersInRoomText()}}
+{\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Set\+Players\+In\+Room\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set players in room text 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a10ae072487c9377bd319cc46bca43700_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a10ae072487c9377bd319cc46bca43700_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_room_entry_exit_test_script_aebe9c0f76f701546bf6041f9d971cc08}\label{class_room_entry_exit_test_script_aebe9c0f76f701546bf6041f9d971cc08}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!Start@{Start}}
+\index{Start@{Start}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set required variables 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_aebe9c0f76f701546bf6041f9d971cc08_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a08bf84fd6cd888cdca5837f227e31fd1}\label{class_room_entry_exit_test_script_a08bf84fd6cd888cdca5837f227e31fd1}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!Update@{Update}}
+\index{Update@{Update}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Room\+Entry\+Exit\+Test\+Script.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update players in room text and buttons interacable 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_room_entry_exit_test_script_a08bf84fd6cd888cdca5837f227e31fd1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_entry_exit_test_script_adaf8ccfcd78aaeef4643d48079703072}\label{class_room_entry_exit_test_script_adaf8ccfcd78aaeef4643d48079703072}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!colMustardEntry@{colMustardEntry}}
+\index{colMustardEntry@{colMustardEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{colMustardEntry}{colMustardEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+col\+Mustard\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a88b824049f69f434fd9741d1f921805c}\label{class_room_entry_exit_test_script_a88b824049f69f434fd9741d1f921805c}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!colMustardExit@{colMustardExit}}
+\index{colMustardExit@{colMustardExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{colMustardExit}{colMustardExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+col\+Mustard\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_ae6424355e395334d99942c4afb149594}\label{class_room_entry_exit_test_script_ae6424355e395334d99942c4afb149594}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!entries@{entries}}
+\index{entries@{entries}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{entries}{entries}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+entries\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a9a572f47615cff196b1433e9c5208e32}\label{class_room_entry_exit_test_script_a9a572f47615cff196b1433e9c5208e32}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!missScarlettEntry@{missScarlettEntry}}
+\index{missScarlettEntry@{missScarlettEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{missScarlettEntry}{missScarlettEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+miss\+Scarlett\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a974de60570ecac01d507ca33c8401e3e}\label{class_room_entry_exit_test_script_a974de60570ecac01d507ca33c8401e3e}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!missScarlettExit@{missScarlettExit}}
+\index{missScarlettExit@{missScarlettExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{missScarlettExit}{missScarlettExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+miss\+Scarlett\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a4604ae801df172b0499ab99a0110bcdc}\label{class_room_entry_exit_test_script_a4604ae801df172b0499ab99a0110bcdc}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!mrsPeacockEntry@{mrsPeacockEntry}}
+\index{mrsPeacockEntry@{mrsPeacockEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{mrsPeacockEntry}{mrsPeacockEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+mrs\+Peacock\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a63802b547a4780e9db2c199adeaf0deb}\label{class_room_entry_exit_test_script_a63802b547a4780e9db2c199adeaf0deb}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!mrsPeacockExit@{mrsPeacockExit}}
+\index{mrsPeacockExit@{mrsPeacockExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{mrsPeacockExit}{mrsPeacockExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+mrs\+Peacock\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_aed19bee89f75e52cf75891fdd0be7af8}\label{class_room_entry_exit_test_script_aed19bee89f75e52cf75891fdd0be7af8}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!mrsWhiteEntry@{mrsWhiteEntry}}
+\index{mrsWhiteEntry@{mrsWhiteEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{mrsWhiteEntry}{mrsWhiteEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+mrs\+White\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a71190809705e9fbec159ec279be85be9}\label{class_room_entry_exit_test_script_a71190809705e9fbec159ec279be85be9}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!mrsWhiteExit@{mrsWhiteExit}}
+\index{mrsWhiteExit@{mrsWhiteExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{mrsWhiteExit}{mrsWhiteExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+mrs\+White\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a87adf155bce5613a3e09a3f730d4e218}\label{class_room_entry_exit_test_script_a87adf155bce5613a3e09a3f730d4e218}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!players@{players}}
+\index{players@{players}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{players}{players}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+players\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_ade54fc7830c8d6b6d39824ea903f8bd1}\label{class_room_entry_exit_test_script_ade54fc7830c8d6b6d39824ea903f8bd1}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!playersInRoom@{playersInRoom}}
+\index{playersInRoom@{playersInRoom}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{playersInRoom}{playersInRoom}}
+{\footnotesize\ttfamily Text Room\+Entry\+Exit\+Test\+Script.\+players\+In\+Room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a55b742f0bdedbed6d3dc177647b10ef3}\label{class_room_entry_exit_test_script_a55b742f0bdedbed6d3dc177647b10ef3}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!playerTokens@{playerTokens}}
+\index{playerTokens@{playerTokens}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{playerTokens}{playerTokens}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+player\+Tokens\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a2504ffb1f400344c516f8956f236f809}\label{class_room_entry_exit_test_script_a2504ffb1f400344c516f8956f236f809}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!profPlumEntry@{profPlumEntry}}
+\index{profPlumEntry@{profPlumEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{profPlumEntry}{profPlumEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+prof\+Plum\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_ae97827c7d6c66334fc14cc972c1aa136}\label{class_room_entry_exit_test_script_ae97827c7d6c66334fc14cc972c1aa136}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!profPlumExit@{profPlumExit}}
+\index{profPlumExit@{profPlumExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{profPlumExit}{profPlumExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+prof\+Plum\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a6df7f9feb89ab427425afbc8f3f1e28d}\label{class_room_entry_exit_test_script_a6df7f9feb89ab427425afbc8f3f1e28d}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!revGreenEntry@{revGreenEntry}}
+\index{revGreenEntry@{revGreenEntry}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{revGreenEntry}{revGreenEntry}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+rev\+Green\+Entry\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a6e1dd30d8ef5dc130dff888397bb654d}\label{class_room_entry_exit_test_script_a6e1dd30d8ef5dc130dff888397bb654d}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!revGreenExit@{revGreenExit}}
+\index{revGreenExit@{revGreenExit}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{revGreenExit}{revGreenExit}}
+{\footnotesize\ttfamily Button \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+rev\+Green\+Exit\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_ad129390d895eb754281a9f2683217a95}\label{class_room_entry_exit_test_script_ad129390d895eb754281a9f2683217a95}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!room@{room}}
+\index{room@{room}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{room}{room}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Room\+Entry\+Exit\+Test\+Script.\+room\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_room_entry_exit_test_script_a4fe7058b6b0127bd863d47413a326bd6}\label{class_room_entry_exit_test_script_a4fe7058b6b0127bd863d47413a326bd6}} 
+\index{RoomEntryExitTestScript@{RoomEntryExitTestScript}!targetTiles@{targetTiles}}
+\index{targetTiles@{targetTiles}!RoomEntryExitTestScript@{RoomEntryExitTestScript}}
+\doxysubsubsection{\texorpdfstring{targetTiles}{targetTiles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_script}{Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Room\+Entry\+Exit\+Test\+Script.\+target\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

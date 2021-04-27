@@ -1,0 +1,6 @@
+<map id="RoomEntryBoardTileScript.ExitRoomDelay" name="RoomEntryBoardTileScript.ExitRoomDelay">
+<area shape="rect" id="node1" title="Move player to exit point, open door, exit player, close door, set player moving to target tile." alt="" coords="5,59,325,88"/>
+<area shape="rect" id="node2" href="$class_door_script.html#adcc7e56a969266eee3abbbc6cca692da" title="Close the door" alt="" coords="435,5,614,35"/>
+<area shape="rect" id="node3" href="$class_door_script.html#a2d8c537d4f48ea0e2b4c09eb9ef58d87" title="Open the door" alt="" coords="437,59,612,88"/>
+<area shape="rect" id="node4" href="$class_player_master_controller.html#a31af976c4da1ec6cab348dce10be98f7" title=" " alt="" coords="373,112,676,141"/>
+</map>
