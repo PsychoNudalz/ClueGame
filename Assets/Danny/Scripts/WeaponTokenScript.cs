@@ -2,14 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/// <summary>
-/// Enum for weapon type
-/// </summary>
-public enum WeaponEnum {Dagger, CandleStick, Revolver, Rope, LeadPipe, Spanner}
 
-/// <summary>
-/// Class to manage the weapon tokens
-/// </summary>
 public class WeaponTokenScript : MonoBehaviour
 {
     [SerializeField] private WeaponEnum weaponType;
