@@ -64,50 +64,68 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_board_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">BoardManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Script to manage the board items  
+ <a href="class_board_manager.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for BoardManager:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_board_manager.png" alt=""/>
- </div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for BoardManager:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3af0b08bdfbc0ebcda23950eb935a5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d">GetTileNeighbours</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> tilescript)</td></tr>
+<tr class="memdesc:ae3af0b08bdfbc0ebcda23950eb935a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return array of all neighbours of given tile  <a href="class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d">More...</a><br /></td></tr>
 <tr class="separator:ae3af0b08bdfbc0ebcda23950eb935a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad208908578ffda25d87122a34e264b44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#ad208908578ffda25d87122a34e264b44">CreateBoardArray</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a>[] tiles, int boardHeight, int boardWidth)</td></tr>
+<tr class="memdesc:ad208908578ffda25d87122a34e264b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create 2d array of all board tiles  <a href="class_board_manager.html#ad208908578ffda25d87122a34e264b44">More...</a><br /></td></tr>
 <tr class="separator:ad208908578ffda25d87122a34e264b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b2b89b5ce622bf45676e6993f8ec216"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216">GetTileFromGrid</a> (int XPos, int YPos)</td></tr>
+<tr class="memdesc:a6b2b89b5ce622bf45676e6993f8ec216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a tile from the array using a grid reference.  <a href="class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216">More...</a><br /></td></tr>
 <tr class="separator:a6b2b89b5ce622bf45676e6993f8ec216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea52b667d1dd7ca6b4fa956a19ee26d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_board_tile_script.html">BoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d">bfs</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> currentTile, int range, List&lt; <a class="el" href="class_board_tile_script.html">BoardTileScript</a> &gt; queue=null)</td></tr>
-<tr class="memdesc:a1ea52b667d1dd7ca6b4fa956a19ee26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">perform bfs search for the tiles  <a href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d">More...</a><br /></td></tr>
+<tr class="memdesc:a1ea52b667d1dd7ca6b4fa956a19ee26d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform bfs search for the tiles  <a href="class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d">More...</a><br /></td></tr>
 <tr class="separator:a1ea52b667d1dd7ca6b4fa956a19ee26d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6679de327b4f4b736f06d0d549b72a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0">ShowMovable</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> currentTile, int range)</td></tr>
-<tr class="memdesc:ad6679de327b4f4b736f06d0d549b72a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">mark and showwhich tile the player can move to  <a href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0">More...</a><br /></td></tr>
+<tr class="memdesc:ad6679de327b4f4b736f06d0d549b72a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark and show which tile the player can move to  <a href="class_board_manager.html#ad6679de327b4f4b736f06d0d549b72a0">More...</a><br /></td></tr>
 <tr class="separator:ad6679de327b4f4b736f06d0d549b72a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7607382dac3371733cee2f30a8ba6f25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25">ShowMovable</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a>[] boardTileScripts, int range)</td></tr>
+<tr class="memdesc:a7607382dac3371733cee2f30a8ba6f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show movable tiles  <a href="class_board_manager.html#a7607382dac3371733cee2f30a8ba6f25">More...</a><br /></td></tr>
 <tr class="separator:a7607382dac3371733cee2f30a8ba6f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e14ab6cda8d33b4a1a79c0505400609"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a0e14ab6cda8d33b4a1a79c0505400609">ShowMovable</a> (<a class="el" href="class_room_script.html">RoomScript</a> roomScript, int range)</td></tr>
+<tr class="memdesc:a0e14ab6cda8d33b4a1a79c0505400609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show movable tiles from room  <a href="class_board_manager.html#a0e14ab6cda8d33b4a1a79c0505400609">More...</a><br /></td></tr>
 <tr class="separator:a0e14ab6cda8d33b4a1a79c0505400609"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a653d38723d03f890d38a1b68a855c569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a653d38723d03f890d38a1b68a855c569">ClearMovable</a> ()</td></tr>
+<tr class="memdesc:a653d38723d03f890d38a1b68a855c569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all movable tiles  <a href="class_board_manager.html#a653d38723d03f890d38a1b68a855c569">More...</a><br /></td></tr>
 <tr class="separator:a653d38723d03f890d38a1b68a855c569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5697839fa7daf9c40e75bdebc8bf82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82">CanMove</a> (<a class="el" href="class_board_tile_script.html">BoardTileScript</a> currentTile)</td></tr>
 <tr class="separator:a9d5697839fa7daf9c40e75bdebc8bf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc089b30dd732a7e8109c14143b01146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146">SetObjectArrays</a> (<a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[] players, <a class="el" href="class_room_script.html">RoomScript</a>[] rooms, <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[] roomEntries, <a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[] shortcuts, <a class="el" href="class_start_tile_script.html">StartTileScript</a>[] startTiles, <a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[] weaponTokens, <a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[] freeRollTiles, <a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[] freeSuggestionTiles)</td></tr>
+<tr class="memitem:adc089b30dd732a7e8109c14143b01146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146">SetObjectArrays</a> (<a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[] <a class="el" href="class_board_manager.html#a662a91f8d9b8e1034896534d8b931824">players</a>, <a class="el" href="class_room_script.html">RoomScript</a>[] <a class="el" href="class_board_manager.html#a54aa170dcd6571d525ad0ae91d4fc2e0">rooms</a>, <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[] <a class="el" href="class_board_manager.html#affb23a5e9a11cf0d422d2f6fdb907802">roomEntries</a>, <a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[] <a class="el" href="class_board_manager.html#abe911c436d25d8e9b9d89d9b6a8a7cc3">shortcuts</a>, <a class="el" href="class_start_tile_script.html">StartTileScript</a>[] <a class="el" href="class_board_manager.html#aa6b74bfd157803f2e434cea0569e87d7">startTiles</a>, <a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[] <a class="el" href="class_board_manager.html#ad5044039f19b34c6599b25f65c8178f4">weaponTokens</a>, <a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[] <a class="el" href="class_board_manager.html#a3113f325c18e05d15e4bb983850addf5">freeRollTiles</a>, <a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[] <a class="el" href="class_board_manager.html#a9882f73296780a6f39b0afd51f1cb261">freeSuggestionTiles</a>)</td></tr>
+<tr class="memdesc:adc089b30dd732a7e8109c14143b01146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set all object arrays once board is built  <a href="class_board_manager.html#adc089b30dd732a7e8109c14143b01146">More...</a><br /></td></tr>
 <tr class="separator:adc089b30dd732a7e8109c14143b01146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb67ec83794138860f40af509e4820c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a5eb67ec83794138860f40af509e4820c">GetRandomEntryTileInMovable</a> ()</td></tr>
 <tr class="memdesc:a5eb67ec83794138860f40af509e4820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a random list of entry tile from Movable list return null if none found  <a href="class_board_manager.html#a5eb67ec83794138860f40af509e4820c">More...</a><br /></td></tr>
 <tr class="separator:a5eb67ec83794138860f40af509e4820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a093d89d0ff0fce055b78ba2aa83ed837"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a093d89d0ff0fce055b78ba2aa83ed837">GetFreeRollTileInMovable</a> ()</td></tr>
-<tr class="memdesc:a093d89d0ff0fce055b78ba2aa83ed837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an free roll tile from Movable list return null if none found  <a href="class_board_manager.html#a093d89d0ff0fce055b78ba2aa83ed837">More...</a><br /></td></tr>
+<tr class="memdesc:a093d89d0ff0fce055b78ba2aa83ed837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a free roll tile from movable tiles  <a href="class_board_manager.html#a093d89d0ff0fce055b78ba2aa83ed837">More...</a><br /></td></tr>
 <tr class="separator:a093d89d0ff0fce055b78ba2aa83ed837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b62ba5630ce7fa0b424024065ef4823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a2b62ba5630ce7fa0b424024065ef4823">GetFreeSuggesTileInMovable</a> ()</td></tr>
-<tr class="memdesc:a2b62ba5630ce7fa0b424024065ef4823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an free suggestion tile from Movable list return null if none found  <a href="class_board_manager.html#a2b62ba5630ce7fa0b424024065ef4823">More...</a><br /></td></tr>
+<tr class="memdesc:a2b62ba5630ce7fa0b424024065ef4823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an free suggestion tile from Movable list  <a href="class_board_manager.html#a2b62ba5630ce7fa0b424024065ef4823">More...</a><br /></td></tr>
 <tr class="separator:a2b62ba5630ce7fa0b424024065ef4823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -130,8 +148,42 @@ Properties</h2></td></tr>
 <tr class="separator:a22ca64210457ab959125dad5083de977"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c48dee7faeb9d726831a77c8e29cf7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a3c48dee7faeb9d726831a77c8e29cf7c">FreeSuggestionTiles</a><code> [get, set]</code></td></tr>
 <tr class="separator:a3c48dee7faeb9d726831a77c8e29cf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a83a5b3680205d298cfcc9552a75ed1a1"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a83a5b3680205d298cfcc9552a75ed1a1">PlaceWeaponsDelay</a> ()</td></tr>
+<tr class="memdesc:a83a5b3680205d298cfcc9552a75ed1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coroutine to randomly place weapon tokens in rooms with no more than 1 per room  <a href="class_board_manager.html#a83a5b3680205d298cfcc9552a75ed1a1">More...</a><br /></td></tr>
+<tr class="separator:a83a5b3680205d298cfcc9552a75ed1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11591587bdea96f6792097007c4f6e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a11591587bdea96f6792097007c4f6e6f">PrintArray</a> ()</td></tr>
+<tr class="memdesc:a11591587bdea96f6792097007c4f6e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print Array for Testing  <a href="class_board_manager.html#a11591587bdea96f6792097007c4f6e6f">More...</a><br /></td></tr>
+<tr class="separator:a11591587bdea96f6792097007c4f6e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a63f83aa9d97fa187d7fc05846ae0b2cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_tile_script.html">BoardTileScript</a>[][]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a63f83aa9d97fa187d7fc05846ae0b2cb">boardTiles</a></td></tr>
+<tr class="separator:a63f83aa9d97fa187d7fc05846ae0b2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662a91f8d9b8e1034896534d8b931824"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a662a91f8d9b8e1034896534d8b931824">players</a></td></tr>
+<tr class="separator:a662a91f8d9b8e1034896534d8b931824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aa170dcd6571d525ad0ae91d4fc2e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_script.html">RoomScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a54aa170dcd6571d525ad0ae91d4fc2e0">rooms</a></td></tr>
+<tr class="separator:a54aa170dcd6571d525ad0ae91d4fc2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b74bfd157803f2e434cea0569e87d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_start_tile_script.html">StartTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#aa6b74bfd157803f2e434cea0569e87d7">startTiles</a></td></tr>
+<tr class="separator:aa6b74bfd157803f2e434cea0569e87d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe911c436d25d8e9b9d89d9b6a8a7cc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#abe911c436d25d8e9b9d89d9b6a8a7cc3">shortcuts</a></td></tr>
+<tr class="separator:abe911c436d25d8e9b9d89d9b6a8a7cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb23a5e9a11cf0d422d2f6fdb907802"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#affb23a5e9a11cf0d422d2f6fdb907802">roomEntries</a></td></tr>
+<tr class="separator:affb23a5e9a11cf0d422d2f6fdb907802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3113f325c18e05d15e4bb983850addf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a3113f325c18e05d15e4bb983850addf5">freeRollTiles</a></td></tr>
+<tr class="separator:a3113f325c18e05d15e4bb983850addf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9882f73296780a6f39b0afd51f1cb261"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9882f73296780a6f39b0afd51f1cb261">freeSuggestionTiles</a></td></tr>
+<tr class="separator:a9882f73296780a6f39b0afd51f1cb261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5044039f19b34c6599b25f65c8178f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#ad5044039f19b34c6599b25f65c8178f4">weaponTokens</a></td></tr>
+<tr class="separator:ad5044039f19b34c6599b25f65c8178f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e08af11795ad615b8d7458c1d12d7a0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_board_tile_script.html">BoardTileScript</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_manager.html#a9e08af11795ad615b8d7458c1d12d7a0">movableTile</a></td></tr>
+<tr class="separator:a9e08af11795ad615b8d7458c1d12d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Script to manage the board items </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1ea52b667d1dd7ca6b4fa956a19ee26d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ea52b667d1dd7ca6b4fa956a19ee26d">&#9670;&nbsp;</a></span>bfs()</h2>
 
@@ -164,16 +216,28 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>perform bfs search for the tiles </p>
+<p>Perform bfs search for the tiles </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentTile</td><td></td></tr>
-    <tr><td class="paramname">range</td><td></td></tr>
+    <tr><td class="paramname">currentTile</td><td>Tile to search from</td></tr>
+    <tr><td class="paramname">range</td><td>Distance to search</td></tr>
     <tr><td class="paramname">queue</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of board tiles in range</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a1ea52b667d1dd7ca6b4fa956a19ee26d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -192,6 +256,12 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a9d5697839fa7daf9c40e75bdebc8bf82_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -209,6 +279,20 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Clear all movable tiles </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a653d38723d03f890d38a1b68a855c569_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a653d38723d03f890d38a1b68a855c569_icgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -244,6 +328,22 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Create 2d array of all board tiles </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tiles</td><td>All board tiles</td></tr>
+    <tr><td class="paramname">boardHeight</td><td>Height of the board</td></tr>
+    <tr><td class="paramname">boardWidth</td><td>Width of the board</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_ad208908578ffda25d87122a34e264b44_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
 </div>
 </div>
 <a id="a093d89d0ff0fce055b78ba2aa83ed837"></a>
@@ -261,8 +361,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets an free roll tile from Movable list return null if none found </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Get a free roll tile from movable tiles </p>
+<dl class="section return"><dt>Returns</dt><dd>free roll tile from Movable list, null if none found</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a093d89d0ff0fce055b78ba2aa83ed837_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -281,8 +387,14 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets an free suggestion tile from Movable list return null if none found </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>Gets an free suggestion tile from Movable list </p>
+<dl class="section return"><dt>Returns</dt><dd>Free suggestion tile null if none found</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a2b62ba5630ce7fa0b424024065ef4823_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -302,7 +414,13 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets a random list of entry tile from Movable list return null if none found </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>List of random entry tiles</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a5eb67ec83794138860f40af509e4820c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -332,6 +450,22 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get a tile from the array using a grid reference. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">XPos</td><td>X position</td></tr>
+    <tr><td class="paramname">YPos</td><td>Y position</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Board tile at location, null if no tile exists at location.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a6b2b89b5ce622bf45676e6993f8ec216_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ae3af0b08bdfbc0ebcda23950eb935a5d"></a>
@@ -349,6 +483,93 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return array of all neighbours of given tile </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tilescript</td><td>Tile to check from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Array of all neighbouring tiles</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_cgraph.svg" width="568" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_ae3af0b08bdfbc0ebcda23950eb935a5d_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a83a5b3680205d298cfcc9552a75ed1a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83a5b3680205d298cfcc9552a75ed1a1">&#9670;&nbsp;</a></span>PlaceWeaponsDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator BoardManager.PlaceWeaponsDelay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coroutine to randomly place weapon tokens in rooms with no more than 1 per room </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a83a5b3680205d298cfcc9552a75ed1a1_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a11591587bdea96f6792097007c4f6e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11591587bdea96f6792097007c4f6e6f">&#9670;&nbsp;</a></span>PrintArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardManager.PrintArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print Array for Testing </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a11591587bdea96f6792097007c4f6e6f_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -414,6 +635,27 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set all object arrays once board is built </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">players</td><td>Array of player scripts</td></tr>
+    <tr><td class="paramname">rooms</td><td>Array of room scripts</td></tr>
+    <tr><td class="paramname">roomEntries</td><td>Array of room entry scripts</td></tr>
+    <tr><td class="paramname">shortcuts</td><td>Array of shortcut scripts</td></tr>
+    <tr><td class="paramname">startTiles</td><td>Array of start tile scripts</td></tr>
+    <tr><td class="paramname">weaponTokens</td><td>Array of weapon token scripts</td></tr>
+    <tr><td class="paramname">freeRollTiles</td><td>Array of free roll tile scripts</td></tr>
+    <tr><td class="paramname">freeSuggestionTiles</td><td>Array of free suggestion tile scripts</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_adc089b30dd732a7e8109c14143b01146_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
 </div>
 </div>
 <a id="ad6679de327b4f4b736f06d0d549b72a0"></a>
@@ -442,15 +684,27 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>mark and showwhich tile the player can move to </p>
+<p>Mark and show which tile the player can move to </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentTile</td><td></td></tr>
-    <tr><td class="paramname">range</td><td></td></tr>
+    <tr><td class="paramname">currentTile</td><td>Tile to search from</td></tr>
+    <tr><td class="paramname">range</td><td>Distance to search</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false if invalid tile</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_ad6679de327b4f4b736f06d0d549b72a0_icgraph.svg" width="100%" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -480,6 +734,22 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Show movable tiles </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">boardTileScripts</td><td>Array of tiles to search from</td></tr>
+    <tr><td class="paramname">range</td><td>Distance to search</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a7607382dac3371733cee2f30a8ba6f25_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
 </div>
 </div>
 <a id="a0e14ab6cda8d33b4a1a79c0505400609"></a>
@@ -506,6 +776,243 @@ Properties</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+<p>Show movable tiles from room </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomScript</td><td>Room to check from</td></tr>
+    <tr><td class="paramname">range</td><td>Distance to search</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false if room is invalid</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_manager_a0e14ab6cda8d33b4a1a79c0505400609_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a63f83aa9d97fa187d7fc05846ae0b2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f83aa9d97fa187d7fc05846ae0b2cb">&#9670;&nbsp;</a></span>boardTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_tile_script.html">BoardTileScript</a> [][] BoardManager.boardTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3113f325c18e05d15e4bb983850addf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3113f325c18e05d15e4bb983850addf5">&#9670;&nbsp;</a></span>freeRollTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_free_roll_board_tile_script.html">FreeRollBoardTileScript</a> [] BoardManager.freeRollTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9882f73296780a6f39b0afd51f1cb261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9882f73296780a6f39b0afd51f1cb261">&#9670;&nbsp;</a></span>freeSuggestionTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_free_suggestion_tile_script.html">FreeSuggestionTileScript</a> [] BoardManager.freeSuggestionTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e08af11795ad615b8d7458c1d12d7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e08af11795ad615b8d7458c1d12d7a0">&#9670;&nbsp;</a></span>movableTile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_board_tile_script.html">BoardTileScript</a>&gt; BoardManager.movableTile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a662a91f8d9b8e1034896534d8b931824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662a91f8d9b8e1034896534d8b931824">&#9670;&nbsp;</a></span>players</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_token_script.html">PlayerTokenScript</a> [] BoardManager.players</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affb23a5e9a11cf0d422d2f6fdb907802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb23a5e9a11cf0d422d2f6fdb907802">&#9670;&nbsp;</a></span>roomEntries</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_entry_board_tile_script.html">RoomEntryBoardTileScript</a> [] BoardManager.roomEntries</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54aa170dcd6571d525ad0ae91d4fc2e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54aa170dcd6571d525ad0ae91d4fc2e0">&#9670;&nbsp;</a></span>rooms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_room_script.html">RoomScript</a> [] BoardManager.rooms</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe911c436d25d8e9b9d89d9b6a8a7cc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe911c436d25d8e9b9d89d9b6a8a7cc3">&#9670;&nbsp;</a></span>shortcuts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_shortcut_board_tile_script.html">ShortcutBoardTileScript</a> [] BoardManager.shortcuts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6b74bfd157803f2e434cea0569e87d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b74bfd157803f2e434cea0569e87d7">&#9670;&nbsp;</a></span>startTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_start_tile_script.html">StartTileScript</a> [] BoardManager.startTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5044039f19b34c6599b25f65c8178f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5044039f19b34c6599b25f65c8178f4">&#9670;&nbsp;</a></span>weaponTokens</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_weapon_token_script.html">WeaponTokenScript</a> [] BoardManager.weaponTokens</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

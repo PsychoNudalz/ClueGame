@@ -1,0 +1,9 @@
+<map id="RoomScript.GetRoomFromString" name="RoomScript.GetRoomFromString">
+<area shape="rect" id="node1" title="Get Room Enum from string" alt="" coords="1037,59,1292,88"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a03451888fabe0fefe9bb547dd510ac1d" title="Instantiate a roomEntrance tile and set its parameters" alt="" coords="691,5,985,35"/>
+<area shape="rect" id="node6" href="$class_board_builder.html#aa03504edb607b14737199d2e66b4ce07" title="Instantiate a shortcut tile and set its parameters" alt="" coords="714,59,962,88"/>
+<area shape="rect" id="node7" href="$class_move_tokens_test_script.html#ad7e6dce3665f334d61eaad8371ca84b8" title="Set the current room to move tokens to" alt="" coords="687,112,989,141"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a3a24e59815a2273a921875c2cb7781f2" title="Build the board using various helper methods" alt="" coords="443,32,639,61"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,32,395,61"/>
+<area shape="rect" id="node5" href="$class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,32,172,61"/>
+</map>

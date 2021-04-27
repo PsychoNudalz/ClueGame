@@ -1,0 +1,4 @@
+<map id="ShortcutBoardTileScript.GetRoomScript" name="ShortcutBoardTileScript.GetRoomScript">
+<area shape="rect" id="node1" title="Set this tiles Roomscript based upon room located in." alt="" coords="279,5,579,35"/>
+<area shape="rect" id="node2" href="$class_shortcut_board_tile_script.html#a2ee44f600a0c407def49973b90416132" title="Assign required variables" alt="" coords="5,5,231,35"/>
+</map>

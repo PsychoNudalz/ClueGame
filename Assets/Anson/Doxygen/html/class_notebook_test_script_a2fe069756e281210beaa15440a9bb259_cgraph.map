@@ -1,0 +1,7 @@
+<map id="NotebookTestScript.SetOutputStrings" name="NotebookTestScript.SetOutputStrings">
+<area shape="rect" id="node1" title="Update player reference then update all text strings" alt="" coords="5,59,288,88"/>
+<area shape="rect" id="node2" href="$class_notebook_test_script.html#a9b8ec4a7586c8516aba4d8f684a3f19d" title="Get character notebook text" alt="" coords="336,5,636,35"/>
+<area shape="rect" id="node4" href="$class_notebook_test_script.html#a932234219a6c879897ab5b20fb6574fc" title="Get Room notebook text" alt="" coords="349,59,623,88"/>
+<area shape="rect" id="node5" href="$class_notebook_test_script.html#adb07ae16fb57bee560aae3aab7f3bcbf" title="Get weapon notebook text" alt="" coords="347,112,625,141"/>
+<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="684,59,952,88"/>
+</map>

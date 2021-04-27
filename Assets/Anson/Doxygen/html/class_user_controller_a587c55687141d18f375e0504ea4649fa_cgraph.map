@@ -1,0 +1,5 @@
+<map id="UserController.GetCurrentPlayer" name="UserController.GetCurrentPlayer">
+<area shape="rect" id="node1" title="Gets the player controller for the current player" alt="" coords="5,5,252,35"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="300,5,553,35"/>
+<area shape="rect" id="node3" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="601,5,844,35"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="UIHandler.InitialiseTurn" name="UIHandler.InitialiseTurn">
+<area shape="rect" id="node1" title="Resets UI for the next player" alt="" coords="5,139,185,168"/>
+<area shape="rect" id="node2" href="$class_u_i_handler.html#abe1c78d110b0a4374daed98df71fcff1" title="Displays the notepad" alt="" coords="269,5,477,35"/>
+<area shape="rect" id="node3" href="$class_u_i_handler.html#a2db6b92acd51a72b431b3eacb3884ddd" title="Displays a screen when a player is eliminated" alt="" coords="241,59,505,88"/>
+<area shape="rect" id="node4" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="233,112,512,141"/>
+<area shape="rect" id="node5" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="249,165,496,195"/>
+<area shape="rect" id="node8" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="239,219,507,248"/>
+<area shape="rect" id="node9" href="$class_u_i_handler.html#a33d33813339ed163ad4ab8708226f911" title="Updates the current turn text" alt="" coords="245,272,500,301"/>
+<area shape="rect" id="node6" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="560,165,813,195"/>
+<area shape="rect" id="node7" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="861,165,1104,195"/>
+</map>

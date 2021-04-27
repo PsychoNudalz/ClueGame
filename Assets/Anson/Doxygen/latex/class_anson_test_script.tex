@@ -1,9 +1,21 @@
 \hypertarget{class_anson_test_script}{}\doxysection{Anson\+Test\+Script Class Reference}
 \label{class_anson_test_script}\index{AnsonTestScript@{AnsonTestScript}}
-Inheritance diagram for Anson\+Test\+Script\+:\begin{figure}[H]
+
+
+Inheritance diagram for Anson\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_anson_test_script}
+\includegraphics[width=229pt]{class_anson_test_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Anson\+Test\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_anson_test_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -19,6 +31,30 @@ void \mbox{\hyperlink{class_anson_test_script_a2048b81df83ae3e211e0c2fc2e9b4c84}
 \item 
 void \mbox{\hyperlink{class_anson_test_script_ae4361c8467c54fedd780c0844ee48d37}{Assign\+All\+Components}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_anson_test_script_a84cedd5c48d5a222e54a2383bff669ba}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_anson_test_script_a445d27a921ade2f0e76054a3b7cc4245}{Fixed\+Update}} ()
+\item 
+IEnumerator \mbox{\hyperlink{class_anson_test_script_a2e10fa1d66e999b57d36fd2525ad03e5}{Delay\+Reset\+Dice}} (float t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} \mbox{\hyperlink{class_anson_test_script_a755df382f3af7865c1c69bf1dfb5eabd}{player\+Master\+Controller}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_anson_test_script_a7f91c3b5a1b216715d82c30186a4ab8d}{board\+Manager}}
+\item 
+\mbox{\hyperlink{class_dice}{Dice}} \mbox{\hyperlink{class_anson_test_script_a7a4c43fb046586cadcde7a09250c8597}{dice}}
+\item 
+\mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} \mbox{\hyperlink{class_anson_test_script_a33d1f0e716605bc39fad564fe5506d3d}{turn\+Controller}}
+\item 
+\mbox{\hyperlink{class_card_manager}{Card\+Manager}} \mbox{\hyperlink{class_anson_test_script_ab29ed031c68d1c38d75896715a61bfb7}{card\+Manager}}
+\item 
+bool \mbox{\hyperlink{class_anson_test_script_ae2a8291a7e59ab81f976b629bbb774eb}{dice\+Rolled}} = false
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -28,29 +64,156 @@ void \mbox{\hyperlink{class_anson_test_script_ae4361c8467c54fedd780c0844ee48d37}
 \doxysubsubsection{\texorpdfstring{AssignAllComponents()}{AssignAllComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Anson\+Test\+Script.\+Assign\+All\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_ae4361c8467c54fedd780c0844ee48d37_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_anson_test_script_a2048b81df83ae3e211e0c2fc2e9b4c84}\label{class_anson_test_script_a2048b81df83ae3e211e0c2fc2e9b4c84}} 
 \index{AnsonTestScript@{AnsonTestScript}!AssignAllComponents@{AssignAllComponents}}
 \index{AssignAllComponents@{AssignAllComponents}!AnsonTestScript@{AnsonTestScript}}
 \doxysubsubsection{\texorpdfstring{AssignAllComponents()}{AssignAllComponents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Anson\+Test\+Script.\+Assign\+All\+Components (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{callback\+Context }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a2048b81df83ae3e211e0c2fc2e9b4c84_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_anson_test_script_a84cedd5c48d5a222e54a2383bff669ba}\label{class_anson_test_script_a84cedd5c48d5a222e54a2383bff669ba}} 
+\index{AnsonTestScript@{AnsonTestScript}!Awake@{Awake}}
+\index{Awake@{Awake}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Anson\+Test\+Script.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a84cedd5c48d5a222e54a2383bff669ba_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_anson_test_script_a2e10fa1d66e999b57d36fd2525ad03e5}\label{class_anson_test_script_a2e10fa1d66e999b57d36fd2525ad03e5}} 
+\index{AnsonTestScript@{AnsonTestScript}!DelayResetDice@{DelayResetDice}}
+\index{DelayResetDice@{DelayResetDice}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{DelayResetDice()}{DelayResetDice()}}
+{\footnotesize\ttfamily IEnumerator Anson\+Test\+Script.\+Delay\+Reset\+Dice (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a2e10fa1d66e999b57d36fd2525ad03e5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a2e10fa1d66e999b57d36fd2525ad03e5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_anson_test_script_a5aa5459561a7c1f7cb500dd10193bae2}\label{class_anson_test_script_a5aa5459561a7c1f7cb500dd10193bae2}} 
 \index{AnsonTestScript@{AnsonTestScript}!FindCards@{FindCards}}
 \index{FindCards@{FindCards}!AnsonTestScript@{AnsonTestScript}}
 \doxysubsubsection{\texorpdfstring{FindCards()}{FindCards()}}
 {\footnotesize\ttfamily void Anson\+Test\+Script.\+Find\+Cards (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{callback\+Context }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a5aa5459561a7c1f7cb500dd10193bae2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_anson_test_script_a445d27a921ade2f0e76054a3b7cc4245}\label{class_anson_test_script_a445d27a921ade2f0e76054a3b7cc4245}} 
+\index{AnsonTestScript@{AnsonTestScript}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily void Anson\+Test\+Script.\+Fixed\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a445d27a921ade2f0e76054a3b7cc4245_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_anson_test_script_a88d84c041cb91d2f739270581d59d7e9}\label{class_anson_test_script_a88d84c041cb91d2f739270581d59d7e9}} 
 \index{AnsonTestScript@{AnsonTestScript}!RollDie@{RollDie}}
 \index{RollDie@{RollDie}!AnsonTestScript@{AnsonTestScript}}
 \doxysubsubsection{\texorpdfstring{RollDie()}{RollDie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Anson\+Test\+Script.\+Roll\+Die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a88d84c041cb91d2f739270581d59d7e9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a88d84c041cb91d2f739270581d59d7e9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_anson_test_script_a89ed8bb63ce2a8c4631e2dc3d9301e38}\label{class_anson_test_script_a89ed8bb63ce2a8c4631e2dc3d9301e38}} 
 \index{AnsonTestScript@{AnsonTestScript}!RollDie@{RollDie}}
 \index{RollDie@{RollDie}!AnsonTestScript@{AnsonTestScript}}
 \doxysubsubsection{\texorpdfstring{RollDie()}{RollDie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Anson\+Test\+Script.\+Roll\+Die (\begin{DoxyParamCaption}\item[{Input\+Action.\+Callback\+Context}]{callback\+Context }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_anson_test_script_a89ed8bb63ce2a8c4631e2dc3d9301e38_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_anson_test_script_a7f91c3b5a1b216715d82c30186a4ab8d}\label{class_anson_test_script_a7f91c3b5a1b216715d82c30186a4ab8d}} 
+\index{AnsonTestScript@{AnsonTestScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Anson\+Test\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anson_test_script_ab29ed031c68d1c38d75896715a61bfb7}\label{class_anson_test_script_ab29ed031c68d1c38d75896715a61bfb7}} 
+\index{AnsonTestScript@{AnsonTestScript}!cardManager@{cardManager}}
+\index{cardManager@{cardManager}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{cardManager}{cardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_manager}{Card\+Manager}} Anson\+Test\+Script.\+card\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anson_test_script_a7a4c43fb046586cadcde7a09250c8597}\label{class_anson_test_script_a7a4c43fb046586cadcde7a09250c8597}} 
+\index{AnsonTestScript@{AnsonTestScript}!dice@{dice}}
+\index{dice@{dice}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_dice}{Dice}} Anson\+Test\+Script.\+dice\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anson_test_script_ae2a8291a7e59ab81f976b629bbb774eb}\label{class_anson_test_script_ae2a8291a7e59ab81f976b629bbb774eb}} 
+\index{AnsonTestScript@{AnsonTestScript}!diceRolled@{diceRolled}}
+\index{diceRolled@{diceRolled}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{diceRolled}{diceRolled}}
+{\footnotesize\ttfamily bool Anson\+Test\+Script.\+dice\+Rolled = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anson_test_script_a755df382f3af7865c1c69bf1dfb5eabd}\label{class_anson_test_script_a755df382f3af7865c1c69bf1dfb5eabd}} 
+\index{AnsonTestScript@{AnsonTestScript}!playerMasterController@{playerMasterController}}
+\index{playerMasterController@{playerMasterController}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{playerMasterController}{playerMasterController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Anson\+Test\+Script.\+player\+Master\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_anson_test_script_a33d1f0e716605bc39fad564fe5506d3d}\label{class_anson_test_script_a33d1f0e716605bc39fad564fe5506d3d}} 
+\index{AnsonTestScript@{AnsonTestScript}!turnController@{turnController}}
+\index{turnController@{turnController}!AnsonTestScript@{AnsonTestScript}}
+\doxysubsubsection{\texorpdfstring{turnController}{turnController}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_turn_controller}{Turn\+Controller}} Anson\+Test\+Script.\+turn\+Controller\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

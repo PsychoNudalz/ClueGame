@@ -1,9 +1,21 @@
 \hypertarget{class_character_card}{}\doxysection{Character\+Card Class Reference}
 \label{class_character_card}\index{CharacterCard@{CharacterCard}}
-Inheritance diagram for Character\+Card\+:\begin{figure}[H]
+
+
+Inheritance diagram for Character\+Card\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_character_card}
+\includegraphics[width=191pt]{class_character_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Character\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{class_character_card__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -12,19 +24,39 @@ Inheritance diagram for Character\+Card\+:\begin{figure}[H]
 override bool \mbox{\hyperlink{class_character_card_a73bfe62ae142164dc70d2c695990fbb7}{Equals}} (object obj)
 \item 
 override Enum \mbox{\hyperlink{class_character_card_a700a59f812d71708bb772b7df07f08bc}{Get\+Card\+Type}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the enum of the card \end{DoxyCompactList}\item 
 override int \mbox{\hyperlink{class_character_card_a21ffd68610988a51de07626170d9395b}{Get\+Hash\+Code}} ()
 \item 
 override Sprite \mbox{\hyperlink{class_character_card_a37b9831f9a7b6411670ce14913c19616}{Get\+Card\+Image}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} \mbox{\hyperlink{class_character_card_aa06c807ca741753fa3e6fc02fdcbd251}{character\+Enum}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_character_card_a95daf0952f20b4892db6763592966837}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Sets the correct path for cards image \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Sprite \mbox{\hyperlink{class_character_card_a222f0f15db22f724b143becf7f61fa03}{card\+Image}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_character_card_a95daf0952f20b4892db6763592966837}\label{class_character_card_a95daf0952f20b4892db6763592966837}} 
+\index{CharacterCard@{CharacterCard}!Awake@{Awake}}
+\index{Awake@{Awake}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Character\+Card.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the correct path for cards image 
+
 \mbox{\Hypertarget{class_character_card_a73bfe62ae142164dc70d2c695990fbb7}\label{class_character_card_a73bfe62ae142164dc70d2c695990fbb7}} 
 \index{CharacterCard@{CharacterCard}!Equals@{Equals}}
 \index{Equals@{Equals}!CharacterCard@{CharacterCard}}
@@ -39,6 +71,13 @@ override Sprite \mbox{\hyperlink{class_character_card_a37b9831f9a7b6411670ce1491
 
 
 
+Returns cards image 
+
+\begin{DoxyReturn}{Returns}
+Cards image
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}.
 
 \mbox{\Hypertarget{class_character_card_a700a59f812d71708bb772b7df07f08bc}\label{class_character_card_a700a59f812d71708bb772b7df07f08bc}} 
@@ -49,8 +88,22 @@ Implements \mbox{\hyperlink{class_card_a25e8366933b176fae41e4d2373be7815}{Card}}
 
 
 
+Returns the enum of the card 
+
+\begin{DoxyReturn}{Returns}
+Enum of the card
+\end{DoxyReturn}
+
+
 Implements \mbox{\hyperlink{class_card_a094a5e7ea98cc156ac64e578a987be85}{Card}}.
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_character_card_a700a59f812d71708bb772b7df07f08bc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_character_card_a21ffd68610988a51de07626170d9395b}\label{class_character_card_a21ffd68610988a51de07626170d9395b}} 
 \index{CharacterCard@{CharacterCard}!GetHashCode@{GetHashCode}}
 \index{GetHashCode@{GetHashCode}!CharacterCard@{CharacterCard}}
@@ -60,6 +113,12 @@ Implements \mbox{\hyperlink{class_card_a094a5e7ea98cc156ac64e578a987be85}{Card}}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_character_card_a222f0f15db22f724b143becf7f61fa03}\label{class_character_card_a222f0f15db22f724b143becf7f61fa03}} 
+\index{CharacterCard@{CharacterCard}!cardImage@{cardImage}}
+\index{cardImage@{cardImage}!CharacterCard@{CharacterCard}}
+\doxysubsubsection{\texorpdfstring{cardImage}{cardImage}}
+{\footnotesize\ttfamily Sprite Character\+Card.\+card\+Image\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_character_card_aa06c807ca741753fa3e6fc02fdcbd251}\label{class_character_card_aa06c807ca741753fa3e6fc02fdcbd251}} 
 \index{CharacterCard@{CharacterCard}!characterEnum@{characterEnum}}
 \index{characterEnum@{characterEnum}!CharacterCard@{CharacterCard}}

@@ -5,10 +5,22 @@
 Master controller for the player (character) it acts as a wrapper for the player to communicate with other controllers or managers and vis versa to avoid super spaghetii code  
 
 
-Inheritance diagram for Player\+Master\+Controller\+:\begin{figure}[H]
+
+
+Inheritance diagram for Player\+Master\+Controller\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_player_master_controller}
+\includegraphics[height=550pt]{class_player_master_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+Master\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_player_master_controller__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -68,6 +80,20 @@ bool \mbox{\hyperlink{class_player_master_controller_a49c264905eb27bac2e66121d4e
 \item 
 \mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} \mbox{\hyperlink{class_player_master_controller_a995e3e74643b78b78aeeebba4a27aa82}{Player\+Token\+Script}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_master_controller_a9532f73327d32aedf700fd3c2af2243a}{Awake}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} \mbox{\hyperlink{class_player_master_controller_a609753c224c7c2dc65d1c84bf9ad066d}{player\+Token\+Script}}
+\item 
+\mbox{\hyperlink{class_player_stats_script}{Player\+Stats\+Script}} \mbox{\hyperlink{class_player_master_controller_a5af38dac9fb901d199bed01e2818bed0}{player\+Stats\+Script}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_player_master_controller_ab339d031f0f6bb0ac2f902dafcfda3ee}{board\+Manager}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -94,6 +120,19 @@ Add a list of card to the player\textquotesingle{}s deck
 \begin{DoxyReturn}{Returns}
 if a card from cs is in the deck already
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_master_controller_a9532f73327d32aedf700fd3c2af2243a}\label{class_player_master_controller_a9532f73327d32aedf700fd3c2af2243a}} 
+\index{PlayerMasterController@{PlayerMasterController}!Awake@{Awake}}
+\index{Awake@{Awake}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Player\+Master\+Controller.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4}\label{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4}} 
 \index{PlayerMasterController@{PlayerMasterController}!CanMove@{CanMove}}
 \index{CanMove@{CanMove}!PlayerMasterController@{PlayerMasterController}}
@@ -112,6 +151,13 @@ check if the player can move to a certain tile
 \begin{DoxyReturn}{Returns}
 if the player can move
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a281d37e414bc17c9441964104f039b4a}\label{class_player_master_controller_a281d37e414bc17c9441964104f039b4a}} 
 \index{PlayerMasterController@{PlayerMasterController}!CanTakeShortcut@{CanTakeShortcut}}
 \index{CanTakeShortcut@{CanTakeShortcut}!PlayerMasterController@{PlayerMasterController}}
@@ -125,6 +171,20 @@ check if the player can take a short cut
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb}\label{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb}} 
 \index{PlayerMasterController@{PlayerMasterController}!ClearTokenTile@{ClearTokenTile}}
 \index{ClearTokenTile@{ClearTokenTile}!PlayerMasterController@{PlayerMasterController}}
@@ -135,6 +195,13 @@ check if the player can take a short cut
 
 clear the tile the token was on 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf}\label{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf}} 
 \index{PlayerMasterController@{PlayerMasterController}!DisplayBoardMovableTiles@{DisplayBoardMovableTiles}}
 \index{DisplayBoardMovableTiles@{DisplayBoardMovableTiles}!PlayerMasterController@{PlayerMasterController}}
@@ -150,6 +217,13 @@ calls the board\+Manager to display all the tiles that it can move to according 
 {\em range} & how far can the player move (normally the dice roll)\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836}\label{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836}} 
 \index{PlayerMasterController@{PlayerMasterController}!EliminatePlayer@{EliminatePlayer}}
 \index{EliminatePlayer@{EliminatePlayer}!PlayerMasterController@{PlayerMasterController}}
@@ -160,6 +234,13 @@ calls the board\+Manager to display all the tiles that it can move to according 
 
 eliminate player 
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c}\label{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c}} 
 \index{PlayerMasterController@{PlayerMasterController}!FindCard@{FindCard}}
 \index{FindCard@{FindCard}!PlayerMasterController@{PlayerMasterController}}
@@ -178,24 +259,59 @@ check if the player has a card in his deck from the given list of cards it will 
 \begin{DoxyReturn}{Returns}
 The current player controller and a list of cards that matched the cards to be found
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0}\label{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetCharacter@{GetCharacter}}
 \index{GetCharacter@{GetCharacter}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{GetCharacter()}{GetCharacter()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} Player\+Master\+Controller.\+Get\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830}\label{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetCurrentRoom@{GetCurrentRoom}}
 \index{GetCurrentRoom@{GetCurrentRoom}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{GetCurrentRoom()}{GetCurrentRoom()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_script}{Room\+Script}} Player\+Master\+Controller.\+Get\+Current\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6}\label{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetDeck@{GetDeck}}
 \index{GetDeck@{GetDeck}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{GetDeck()}{GetDeck()}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Player\+Master\+Controller.\+Get\+Deck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_aa139354307a94ed318c4cbe947434e52}\label{class_player_master_controller_aa139354307a94ed318c4cbe947434e52}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetGridPosition@{GetGridPosition}}
 \index{GetGridPosition@{GetGridPosition}!PlayerMasterController@{PlayerMasterController}}
@@ -209,6 +325,13 @@ Get current grip position
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde}\label{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetTile@{GetTile}}
 \index{GetTile@{GetTile}!PlayerMasterController@{PlayerMasterController}}
@@ -222,12 +345,26 @@ Get the current tile the token is on
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75}\label{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75}} 
 \index{PlayerMasterController@{PlayerMasterController}!GetToGuessCards@{GetToGuessCards}}
 \index{GetToGuessCards@{GetToGuessCards}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{GetToGuessCards()}{GetToGuessCards()}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Player\+Master\+Controller.\+Get\+To\+Guess\+Cards (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_acc21ebcf08452a6e52b180718ab26a9f}\label{class_player_master_controller_acc21ebcf08452a6e52b180718ab26a9f}} 
 \index{PlayerMasterController@{PlayerMasterController}!IsEliminated@{IsEliminated}}
 \index{IsEliminated@{IsEliminated}!PlayerMasterController@{PlayerMasterController}}
@@ -254,6 +391,20 @@ check if the player token is still moving. returns true if the token is moving t
 \begin{DoxyReturn}{Returns}
 true if it the token is moving
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce}\label{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce}} 
 \index{PlayerMasterController@{PlayerMasterController}!MovePlayer@{MovePlayer}}
 \index{MovePlayer@{MovePlayer}!PlayerMasterController@{PlayerMasterController}}
@@ -269,6 +420,20 @@ moving the player to a certain tile
 {\em b} & if the player can move to that tile\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede}\label{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede}} 
 \index{PlayerMasterController@{PlayerMasterController}!MovePlayer@{MovePlayer}}
 \index{MovePlayer@{MovePlayer}!PlayerMasterController@{PlayerMasterController}}
@@ -284,6 +449,13 @@ moving the player to a certain position instead of tile
 {\em v} & vector3 position\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99}\label{class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99}} 
 \index{PlayerMasterController@{PlayerMasterController}!RemoveToGuessCard@{RemoveToGuessCard}}
 \index{RemoveToGuessCard@{RemoveToGuessCard}!PlayerMasterController@{PlayerMasterController}}
@@ -302,6 +474,20 @@ Remove a card from To\+Guess\+Card
 \begin{DoxyReturn}{Returns}
 if the list contains the card to be removed
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79}\label{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79}} 
 \index{PlayerMasterController@{PlayerMasterController}!SetCharacter@{SetCharacter}}
 \index{SetCharacter@{SetCharacter}!PlayerMasterController@{PlayerMasterController}}
@@ -317,12 +503,26 @@ Set the player\textquotesingle{}s character
 {\em ce} & Character Enum\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7}\label{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7}} 
 \index{PlayerMasterController@{PlayerMasterController}!SetCurrentRoom@{SetCurrentRoom}}
 \index{SetCurrentRoom@{SetCurrentRoom}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{SetCurrentRoom()}{SetCurrentRoom()}}
 {\footnotesize\ttfamily void Player\+Master\+Controller.\+Set\+Current\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room_script}{Room\+Script}}}]{room }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e}\label{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e}} 
 \index{PlayerMasterController@{PlayerMasterController}!StartBehaviour@{StartBehaviour}}
 \index{StartBehaviour@{StartBehaviour}!PlayerMasterController@{PlayerMasterController}}
@@ -333,20 +533,59 @@ Set the player\textquotesingle{}s character
 
 for initialising the player 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6}\label{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6}} 
 \index{PlayerMasterController@{PlayerMasterController}!ToString@{ToString}}
 \index{ToString@{ToString}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
 {\footnotesize\ttfamily override string Player\+Master\+Controller.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_master_controller_ab339d031f0f6bb0ac2f902dafcfda3ee}\label{class_player_master_controller_ab339d031f0f6bb0ac2f902dafcfda3ee}} 
+\index{PlayerMasterController@{PlayerMasterController}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Player\+Master\+Controller.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_player_master_controller_a49c264905eb27bac2e66121d4ec487eb}\label{class_player_master_controller_a49c264905eb27bac2e66121d4ec487eb}} 
 \index{PlayerMasterController@{PlayerMasterController}!isAI@{isAI}}
 \index{isAI@{isAI}!PlayerMasterController@{PlayerMasterController}}
 \doxysubsubsection{\texorpdfstring{isAI}{isAI}}
 {\footnotesize\ttfamily bool Player\+Master\+Controller.\+is\+AI = false}
+
+\mbox{\Hypertarget{class_player_master_controller_a5af38dac9fb901d199bed01e2818bed0}\label{class_player_master_controller_a5af38dac9fb901d199bed01e2818bed0}} 
+\index{PlayerMasterController@{PlayerMasterController}!playerStatsScript@{playerStatsScript}}
+\index{playerStatsScript@{playerStatsScript}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{playerStatsScript}{playerStatsScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_stats_script}{Player\+Stats\+Script}} Player\+Master\+Controller.\+player\+Stats\+Script\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_master_controller_a609753c224c7c2dc65d1c84bf9ad066d}\label{class_player_master_controller_a609753c224c7c2dc65d1c84bf9ad066d}} 
+\index{PlayerMasterController@{PlayerMasterController}!playerTokenScript@{playerTokenScript}}
+\index{playerTokenScript@{playerTokenScript}!PlayerMasterController@{PlayerMasterController}}
+\doxysubsubsection{\texorpdfstring{playerTokenScript}{playerTokenScript}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_token_script}{Player\+Token\+Script}} Player\+Master\+Controller.\+player\+Token\+Script\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

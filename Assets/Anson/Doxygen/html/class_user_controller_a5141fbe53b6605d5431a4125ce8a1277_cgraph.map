@@ -1,0 +1,6 @@
+<map id="UserController.TakeShortcut" name="UserController.TakeShortcut">
+<area shape="rect" id="node1" title="Takes the shortcut" alt="" coords="5,5,224,35"/>
+<area shape="rect" id="node2" href="$class_user_controller.html#a587c55687141d18f375e0504ea4649fa" title="Gets the player controller for the current player" alt="" coords="272,5,519,35"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="567,5,820,35"/>
+<area shape="rect" id="node4" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="868,5,1111,35"/>
+</map>

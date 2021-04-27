@@ -1,0 +1,4 @@
+<map id="RoundManager.DiceBehaviour" name="RoundManager.DiceBehaviour">
+<area shape="rect" id="node1" title="for waiting the dice to be rolled, get it&#39;s results and display where the player can move to" alt="" coords="276,5,512,35"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22" title=" " alt="" coords="5,5,228,35"/>
+</map>

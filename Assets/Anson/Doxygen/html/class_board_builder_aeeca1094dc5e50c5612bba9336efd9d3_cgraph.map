@@ -1,0 +1,9 @@
+<map id="BoardBuilder.CreateFreeSuggestionTiles" name="BoardBuilder.CreateFreeSuggestionTiles">
+<area shape="rect" id="node1" title="Randomly replace required number of general tiles with FreeAccusation Tiles" alt="" coords="5,59,316,88"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a3e79e20c71a20b8e2feb24d83106ebdb" title="Check for nearby bonus / start tiles in order to space out around the board" alt="" coords="370,32,617,61"/>
+<area shape="rect" id="node7" href="$class_board_manager.html#ad208908578ffda25d87122a34e264b44" title="Create 2d array of all board tiles" alt="" coords="364,85,623,115"/>
+<area shape="rect" id="node3" href="$class_board_manager.html#a1ea52b667d1dd7ca6b4fa956a19ee26d" title="Perform bfs search for the tiles" alt="" coords="671,32,823,61"/>
+<area shape="rect" id="node4" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title="Return array of all neighbours of given tile" alt="" coords="871,5,1132,35"/>
+<area shape="rect" id="node6" href="$class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="906,59,1097,88"/>
+<area shape="rect" id="node5" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title="Get a tile from the array using a grid reference." alt="" coords="1180,5,1428,35"/>
+</map>

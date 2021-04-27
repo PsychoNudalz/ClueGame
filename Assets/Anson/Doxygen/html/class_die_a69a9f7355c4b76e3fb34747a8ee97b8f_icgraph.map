@@ -1,0 +1,4 @@
+<map id="Die.CheckValueDie" name="Die.CheckValueDie">
+<area shape="rect" id="node1" title="Set the current value of the die if on ground 0 if not." alt="" coords="156,5,317,35"/>
+<area shape="rect" id="node2" href="$class_die.html#a1720b01fed5d5276f3761c944baa8126" title="If die has been thrown, landed and stopped moving then update die value. If die stops on edge then ro..." alt="" coords="5,5,108,35"/>
+</map>

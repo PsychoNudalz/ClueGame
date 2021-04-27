@@ -1,0 +1,5 @@
+<map id="NotebookScript.CreateCharacterButtons" name="NotebookScript.CreateCharacterButtons">
+<area shape="rect" id="node1" title="Create the character buttons" alt="" coords="5,5,309,35"/>
+<area shape="rect" id="node2" href="$class_notebook_button.html#a1767bf6c449e0517fa11a1ced89f6d0d" title="Set the button type" alt="" coords="357,5,597,35"/>
+<area shape="rect" id="node3" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="645,5,913,35"/>
+</map>

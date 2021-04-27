@@ -1,0 +1,4 @@
+<map id="PlayerTokenScript.SetCharacter" name="PlayerTokenScript.SetCharacter">
+<area shape="rect" id="node1" title="Setting the character this token will be and the tile it will start from" alt="" coords="287,5,533,35"/>
+<area shape="rect" id="node2" href="$class_room_entry_exit_test_script.html#aebe9c0f76f701546bf6041f9d971cc08" title="Set required variables" alt="" coords="5,5,239,35"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="WinScreenScript.OnEnable" name="WinScreenScript.OnEnable">
+<area shape="rect" id="node1" title="Update the win screen when enabled" alt="" coords="5,85,219,115"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a12c91851433777ae557a71d9f9a855f0" title=" " alt="" coords="267,5,545,35"/>
+<area shape="rect" id="node3" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="279,59,533,88"/>
+<area shape="rect" id="node5" href="$class_enum_to_string.html#a078a1fb16a0030544fac1b96a90b6b83" title="Get a string value from a valid enum" alt="" coords="884,109,1152,139"/>
+<area shape="rect" id="node6" href="$class_card_slot.html#a9049dedcebbbc4b2185a2a01d76d4ed5" title=" " alt="" coords="333,163,479,192"/>
+<area shape="rect" id="node4" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="593,59,836,88"/>
+<area shape="rect" id="node7" href="$class_card_slot.html#a4690c0753db45ada6b02681269ecfbb1" title=" " alt="" coords="617,163,813,192"/>
+<area shape="rect" id="node8" href="$class_card.html#a25e8366933b176fae41e4d2373be7815" title=" " alt="" coords="936,163,1100,192"/>
+<area shape="rect" id="node9" href="$class_card.html#a094a5e7ea98cc156ac64e578a987be85" title=" " alt="" coords="941,216,1095,245"/>
+</map>

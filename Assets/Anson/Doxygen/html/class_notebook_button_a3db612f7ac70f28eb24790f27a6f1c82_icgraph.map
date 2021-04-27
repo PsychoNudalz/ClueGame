@@ -1,0 +1,8 @@
+<map id="NotebookButton.setCrossedOut" name="NotebookButton.setCrossedOut">
+<area shape="rect" id="node1" title="Set button graphic to crossed through" alt="" coords="877,59,1120,88"/>
+<area shape="rect" id="node2" href="$class_notebook_script.html#a4d3a7148faf9db0faae9b942f01e84b6" title="Refresh all character button status." alt="" coords="563,5,829,35"/>
+<area shape="rect" id="node5" href="$class_notebook_script.html#a1ad8770915bffe616f448f1b3cff339f" title="Refresh all room button status." alt="" coords="577,59,815,88"/>
+<area shape="rect" id="node6" href="$class_notebook_script.html#a4d45da2c213d4711991232101154510e" title="Refresh all weapon button status." alt="" coords="568,112,824,141"/>
+<area shape="rect" id="node3" href="$class_notebook_script.html#a3c031d903921e95ac42253bb09f5beec" title="Refresh the notebook UI Object" alt="" coords="257,59,515,88"/>
+<area shape="rect" id="node4" href="$class_notebook_script.html#a68c629fcde9476555ad02cc1e884d85f" title="Refresh notebook on enabling" alt="" coords="5,59,209,88"/>
+</map>

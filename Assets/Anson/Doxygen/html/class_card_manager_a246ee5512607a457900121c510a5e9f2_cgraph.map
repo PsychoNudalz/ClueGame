@@ -1,0 +1,4 @@
+<map id="CardManager.Initialise" name="CardManager.Initialise">
+<area shape="rect" id="node1" title="Selects random answer cards and deal cards to players" alt="" coords="5,5,184,35"/>
+<area shape="rect" id="node2" href="$class_card_manager.html#ad85dcb8e9907900f0e9082e7875ad484" title="shuffles and deal the cards to players" alt="" coords="232,5,501,35"/>
+</map>

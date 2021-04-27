@@ -5,10 +5,22 @@
 Super class for all tiles  
 
 
-Inheritance diagram for Board\+Tile\+Script\+:\begin{figure}[H]
+
+
+Inheritance diagram for Board\+Tile\+Script\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_board_tile_script}
+\includegraphics[width=350pt]{class_board_tile_script__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Board\+Tile\+Script\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_board_tile_script__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -46,6 +58,24 @@ Game\+Object \mbox{\hyperlink{class_board_tile_script_a0d029c8b19fc3db43474354f6
 \item 
 \mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_board_tile_script_adb7cf5ebe723c312d036cf55d9a6fd02}{Board\+Manager}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_board_tile_script_abbea0c7619d65289a240de437b5712a0}{Start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_board_tile_script_abd988f23a6a0e982319816a2daa458c2}{grid\+Position}}
+\item 
+\mbox{\hyperlink{_board_tile_script_8cs_a985187fdbd4b493e0c678d9d97141e56}{Tile\+Type\+Enum}} \mbox{\hyperlink{class_board_tile_script_a1ad513bb8f7f7875d8264f89b385be4d}{tile\+Type}}
+\item 
+\mbox{\hyperlink{class_board_tile_effect_handler_script}{Board\+Tile\+Effect\+Handler\+Script}} \mbox{\hyperlink{class_board_tile_script_a00b8a2155487e7e480ef2d6bdeaa5666}{board\+Tile\+Effect\+Handler}}
+\item 
+Game\+Object \mbox{\hyperlink{class_board_tile_script_ae74e713cd21a6f2588a446cfbd3add6f}{player\+Token}}
+\item 
+\mbox{\hyperlink{class_board_manager}{Board\+Manager}} \mbox{\hyperlink{class_board_tile_script_a9c13fbc2ea4f71f1e1a62220d93f6366}{board\+Manager}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -67,6 +97,20 @@ check if the player can move to this tile
 \begin{DoxyReturn}{Returns}
 if the player can move to this tile
 \end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f}\label{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f}} 
 \index{BoardTileScript@{BoardTileScript}!ClearTile@{ClearTile}}
 \index{ClearTile@{ClearTile}!BoardTileScript@{BoardTileScript}}
@@ -77,6 +121,20 @@ if the player can move to this tile
 
 disable the select effect on the tile 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a166917e233ab3c3c442adc55b7ffc0e3}\label{class_board_tile_script_a166917e233ab3c3c442adc55b7ffc0e3}} 
 \index{BoardTileScript@{BoardTileScript}!GetTileNeighbours@{GetTileNeighbours}}
 \index{GetTileNeighbours@{GetTileNeighbours}!BoardTileScript@{BoardTileScript}}
@@ -102,6 +160,20 @@ setting the glow on the tile
 {\em b} & if the tile should glow\\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a1b7d89743e911864de248e4176266acc}\label{class_board_tile_script_a1b7d89743e911864de248e4176266acc}} 
 \index{BoardTileScript@{BoardTileScript}!Init@{Init}}
 \index{Init@{Init}!BoardTileScript@{BoardTileScript}}
@@ -112,6 +184,13 @@ setting the glow on the tile
 
 initialise and finding the needed componenets for the tile includes board\+Tile\+Effect\+Handler, board\+Manager 
 
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a1b7d89743e911864de248e4176266acc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a}\label{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a}} 
 \index{BoardTileScript@{BoardTileScript}!IsEmpty@{IsEmpty}}
 \index{IsEmpty@{IsEmpty}!BoardTileScript@{BoardTileScript}}
@@ -125,6 +204,13 @@ check if tile is empty
 \begin{DoxyReturn}{Returns}
 return if tile is empty
 \end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7}\label{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7}} 
 \index{BoardTileScript@{BoardTileScript}!SelectTile@{SelectTile}}
 \index{SelectTile@{SelectTile}!BoardTileScript@{BoardTileScript}}
@@ -135,6 +221,20 @@ return if tile is empty
 
 enable the select effect on the tile 
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c}\label{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c}} 
 \index{BoardTileScript@{BoardTileScript}!SetToken@{SetToken}}
 \index{SetToken@{SetToken}!BoardTileScript@{BoardTileScript}}
@@ -150,11 +250,71 @@ setting the player token that is currently on this tile
 {\em token} & player token on this tile\\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_board_tile_script_abbea0c7619d65289a240de437b5712a0}\label{class_board_tile_script_abbea0c7619d65289a240de437b5712a0}} 
+\index{BoardTileScript@{BoardTileScript}!Start@{Start}}
+\index{Start@{Start}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Board\+Tile\+Script.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_abbea0c7619d65289a240de437b5712a0_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136}\label{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136}} 
 \index{BoardTileScript@{BoardTileScript}!ToString@{ToString}}
 \index{ToString@{ToString}!BoardTileScript@{BoardTileScript}}
 \doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
 {\footnotesize\ttfamily override string Board\+Tile\+Script.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_board_tile_script_a9c13fbc2ea4f71f1e1a62220d93f6366}\label{class_board_tile_script_a9c13fbc2ea4f71f1e1a62220d93f6366}} 
+\index{BoardTileScript@{BoardTileScript}!boardManager@{boardManager}}
+\index{boardManager@{boardManager}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{boardManager}{boardManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_manager}{Board\+Manager}} Board\+Tile\+Script.\+board\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_tile_script_a00b8a2155487e7e480ef2d6bdeaa5666}\label{class_board_tile_script_a00b8a2155487e7e480ef2d6bdeaa5666}} 
+\index{BoardTileScript@{BoardTileScript}!boardTileEffectHandler@{boardTileEffectHandler}}
+\index{boardTileEffectHandler@{boardTileEffectHandler}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{boardTileEffectHandler}{boardTileEffectHandler}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board_tile_effect_handler_script}{Board\+Tile\+Effect\+Handler\+Script}} Board\+Tile\+Script.\+board\+Tile\+Effect\+Handler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_tile_script_abd988f23a6a0e982319816a2daa458c2}\label{class_board_tile_script_abd988f23a6a0e982319816a2daa458c2}} 
+\index{BoardTileScript@{BoardTileScript}!gridPosition@{gridPosition}}
+\index{gridPosition@{gridPosition}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{gridPosition}{gridPosition}}
+{\footnotesize\ttfamily Vector2 Board\+Tile\+Script.\+grid\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_tile_script_ae74e713cd21a6f2588a446cfbd3add6f}\label{class_board_tile_script_ae74e713cd21a6f2588a446cfbd3add6f}} 
+\index{BoardTileScript@{BoardTileScript}!playerToken@{playerToken}}
+\index{playerToken@{playerToken}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{playerToken}{playerToken}}
+{\footnotesize\ttfamily Game\+Object Board\+Tile\+Script.\+player\+Token\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_board_tile_script_a1ad513bb8f7f7875d8264f89b385be4d}\label{class_board_tile_script_a1ad513bb8f7f7875d8264f89b385be4d}} 
+\index{BoardTileScript@{BoardTileScript}!tileType@{tileType}}
+\index{tileType@{tileType}!BoardTileScript@{BoardTileScript}}
+\doxysubsubsection{\texorpdfstring{tileType}{tileType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_board_tile_script_8cs_a985187fdbd4b493e0c678d9d97141e56}{Tile\+Type\+Enum}} Board\+Tile\+Script.\+tile\+Type\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

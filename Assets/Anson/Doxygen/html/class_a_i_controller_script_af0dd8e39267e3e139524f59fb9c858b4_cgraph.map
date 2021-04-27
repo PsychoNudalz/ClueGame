@@ -1,0 +1,4 @@
+<map id="AIControllerScript.OutputDebugStatus" name="AIControllerScript.OutputDebugStatus">
+<area shape="rect" id="node1" title="to output the current status and previous status of the AI" alt="" coords="5,5,289,35"/>
+<area shape="rect" id="node2" href="$class_a_i_controller_script.html#ab124aec8211aa7b8f00c6ef5db6bc96a" title="for out putting the debug stack if outputDebugText is true, it will out put the the console as well" alt="" coords="337,5,577,35"/>
+</map>

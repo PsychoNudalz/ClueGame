@@ -1,0 +1,4 @@
+<map id="RoomEntryExitTestScript.SetPlayersInRoomText" name="RoomEntryExitTestScript.SetPlayersInRoomText">
+<area shape="rect" id="node1" title="Set players in room text" alt="" coords="304,5,663,35"/>
+<area shape="rect" id="node2" href="$class_room_entry_exit_test_script.html#a08bf84fd6cd888cdca5837f227e31fd1" title="Update players in room text and buttons interacable" alt="" coords="5,5,256,35"/>
+</map>

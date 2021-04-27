@@ -1,0 +1,4 @@
+<map id="PlayerMasterController.SetCharacter" name="PlayerMasterController.SetCharacter">
+<area shape="rect" id="node1" title="Set the player&#39;s character" alt="" coords="5,5,284,35"/>
+<area shape="rect" id="node2" href="$class_player_stats_script.html#ae71569d6008ef02ad036e3d6de2c4c13" title="Set the player&#39;s character" alt="" coords="332,5,572,35"/>
+</map>

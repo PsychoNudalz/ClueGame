@@ -1,18 +1,54 @@
 \hypertarget{class_die_side}{}\doxysection{Die\+Side Class Reference}
 \label{class_die_side}\index{DieSide@{DieSide}}
-Inheritance diagram for Die\+Side\+:\begin{figure}[H]
+
+
+Script for die side Gameobject  
+
+
+
+
+Inheritance diagram for Die\+Side\+:\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_die_side}
+\includegraphics[width=187pt]{class_die_side__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Die\+Side\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_die_side__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_die_side_a694174e094333dddba56a1fffeb7a00b}{Is\+On\+Ground}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Is the die side in contact with the board \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_die_side_aad0dab76f00ebbd4a4d036be82948752}{Get\+Side\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Get value on the opposite side of the die \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}{On\+Trigger\+Stay}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Set on ground = true if trigger is colliding with board \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_die_side_a11c5323a459391b2e6248b5945d844d9}{On\+Trigger\+Exit}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Set on ground = false if trigger is not colliding with board \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}{value}}
+\item 
+bool \mbox{\hyperlink{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}{is\+On\+Ground}}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Script for die side Gameobject 
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -22,11 +58,84 @@ int \mbox{\hyperlink{class_die_side_aad0dab76f00ebbd4a4d036be82948752}{Get\+Side
 \doxysubsubsection{\texorpdfstring{GetSideValue()}{GetSideValue()}}
 {\footnotesize\ttfamily int Die\+Side.\+Get\+Side\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Get value on the opposite side of the die 
+
+\begin{DoxyReturn}{Returns}
+Value from opposite side of die
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_side_aad0dab76f00ebbd4a4d036be82948752_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_die_side_a694174e094333dddba56a1fffeb7a00b}\label{class_die_side_a694174e094333dddba56a1fffeb7a00b}} 
 \index{DieSide@{DieSide}!IsOnGround@{IsOnGround}}
 \index{IsOnGround@{IsOnGround}!DieSide@{DieSide}}
 \doxysubsubsection{\texorpdfstring{IsOnGround()}{IsOnGround()}}
 {\footnotesize\ttfamily bool Die\+Side.\+Is\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Is the die side in contact with the board 
+
+\begin{DoxyReturn}{Returns}
+true if in contact with board, false if not
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_die_side_a694174e094333dddba56a1fffeb7a00b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_die_side_a11c5323a459391b2e6248b5945d844d9}\label{class_die_side_a11c5323a459391b2e6248b5945d844d9}} 
+\index{DieSide@{DieSide}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void Die\+Side.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set on ground = false if trigger is not colliding with board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other collider to check\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}\label{class_die_side_aff297523ae7ec227e2d83ce6f9ae4340}} 
+\index{DieSide@{DieSide}!OnTriggerStay@{OnTriggerStay}}
+\index{OnTriggerStay@{OnTriggerStay}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{OnTriggerStay()}{OnTriggerStay()}}
+{\footnotesize\ttfamily void Die\+Side.\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{Collider}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set on ground = true if trigger is colliding with board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other collider to check\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}\label{class_die_side_a22f6d596bfe6cab76d93361f6abb9c33}} 
+\index{DieSide@{DieSide}!isOnGround@{isOnGround}}
+\index{isOnGround@{isOnGround}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{isOnGround}{isOnGround}}
+{\footnotesize\ttfamily bool Die\+Side.\+is\+On\+Ground\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}\label{class_die_side_aff82d0cbf7f0e719778efbbf39d2b662}} 
+\index{DieSide@{DieSide}!value@{value}}
+\index{value@{value}!DieSide@{DieSide}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int Die\+Side.\+value\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

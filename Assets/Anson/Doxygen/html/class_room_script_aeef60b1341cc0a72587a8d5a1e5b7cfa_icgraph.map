@@ -1,0 +1,4 @@
+<map id="RoomScript.GetShortcut" name="RoomScript.GetShortcut">
+<area shape="rect" id="node1" title="Set shortcut tile of script" alt="" coords="196,5,387,35"/>
+<area shape="rect" id="node2" href="$class_room_script.html#ac1f4ee4e0bcdd6c8de67ddce44725733" title="Set required variables" alt="" coords="5,5,148,35"/>
+</map>

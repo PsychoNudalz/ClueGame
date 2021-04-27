@@ -1,0 +1,4 @@
+<map id="RoomPlayerSlot.SlotOccupied" name="RoomPlayerSlot.SlotOccupied">
+<area shape="rect" id="node1" title="Is slot occupied" alt="" coords="311,5,544,35"/>
+<area shape="rect" id="node2" href="$class_room_player_slot.html#a235960cf533641c46a760d5700a352a0" title="Add Player to the slot if not occupied" alt="" coords="5,5,263,35"/>
+</map>

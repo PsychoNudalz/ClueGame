@@ -1,0 +1,4 @@
+<map id="WeaponSlotTestScript.SetWeaponsInRoomText" name="WeaponSlotTestScript.SetWeaponsInRoomText">
+<area shape="rect" id="node1" title="Set text to display weapons in room" alt="" coords="5,5,361,35"/>
+<area shape="rect" id="node2" href="$class_room_weapon_slot.html#acf33fb247d9a628940453caf153d53db" title="Return the weapon in the slot" alt="" coords="409,5,685,35"/>
+</map>

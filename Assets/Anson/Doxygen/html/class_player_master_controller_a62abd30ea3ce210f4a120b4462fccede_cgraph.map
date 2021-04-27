@@ -1,0 +1,7 @@
+<map id="PlayerMasterController.MovePlayer" name="PlayerMasterController.MovePlayer">
+<area shape="rect" id="node1" title="moving the player to a certain position instead of tile" alt="" coords="5,32,272,61"/>
+<area shape="rect" id="node2" href="$class_player_token_script.html#af62557bd1edf071efadf23c84f0db1ad" title=" " alt="" coords="320,32,555,61"/>
+<area shape="rect" id="node3" href="$class_camera_close_up.html#aee634e08987ea079413fd67b737b2c5d" title="Set camera close up to character" alt="" coords="603,5,901,35"/>
+<area shape="rect" id="node5" href="$class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="651,59,853,88"/>
+<area shape="rect" id="node4" href="$class_camera_close_up.html#a1d70afa00d6f67abee342c029af88fcf" title="Set close up point" alt="" coords="949,5,1179,35"/>
+</map>

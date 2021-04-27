@@ -1,0 +1,6 @@
+<map id="AIControllerScript.CanAccuse" name="AIControllerScript.CanAccuse">
+<area shape="rect" id="node1" title="check if the AI is comfident enough to accuse this should match the flow chart of the AI" alt="" coords="5,59,235,88"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#a4d2390b678a0d24484551a62a5332c75" title=" " alt="" coords="283,5,599,35"/>
+<area shape="rect" id="node3" href="$class_a_i_controller_script.html#a68e87147ee3eff77870c974edbb2e7ea" title="Load player&#39;s guess list" alt="" coords="305,59,577,88"/>
+<area shape="rect" id="node4" href="$class_a_i_controller_script.html#ab124aec8211aa7b8f00c6ef5db6bc96a" title="for out putting the debug stack if outputDebugText is true, it will out put the the console as well" alt="" coords="321,112,561,141"/>
+</map>

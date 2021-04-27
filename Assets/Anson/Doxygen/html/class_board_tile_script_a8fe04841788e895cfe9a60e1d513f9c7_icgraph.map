@@ -1,0 +1,5 @@
+<map id="BoardTileScript.SelectTile" name="BoardTileScript.SelectTile">
+<area shape="rect" id="node1" title="enable the select effect on the tile" alt="" coords="635,5,839,35"/>
+<area shape="rect" id="node2" href="$class_user_selection_script.html#a79fe134329afe738c1e4fb0d66c99d69" title="Setting the current tile clears the previous tile and set the effect for the new tile" alt="" coords="301,5,587,35"/>
+<area shape="rect" id="node3" href="$class_user_cursor_script.html#a86dacfae5227440b7f8ca3c7042a8892" title=" " alt="" coords="5,5,253,35"/>
+</map>

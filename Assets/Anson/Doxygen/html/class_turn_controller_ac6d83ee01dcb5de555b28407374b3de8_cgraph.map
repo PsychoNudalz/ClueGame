@@ -1,0 +1,4 @@
+<map id="TurnController.StartGame" name="TurnController.StartGame">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,204,35"/>
+<area shape="rect" id="node2" href="$class_turn_controller.html#a92c12f353afcc5a314409b21bd07641c" title="Initialises the list with all the players from the gameobject, adding them in order" alt="" coords="252,5,483,35"/>
+</map>

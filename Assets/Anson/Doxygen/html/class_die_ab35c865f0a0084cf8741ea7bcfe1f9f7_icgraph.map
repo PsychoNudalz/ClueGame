@@ -1,0 +1,4 @@
+<map id="Die.RollAgain" name="Die.RollAgain">
+<area shape="rect" id="node1" title="Roll again in event of die getting stuck on edge" alt="" coords="156,5,275,35"/>
+<area shape="rect" id="node2" href="$class_die.html#a1720b01fed5d5276f3761c944baa8126" title="If die has been thrown, landed and stopped moving then update die value. If die stops on edge then ro..." alt="" coords="5,5,108,35"/>
+</map>

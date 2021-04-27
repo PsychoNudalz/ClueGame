@@ -1,0 +1,9 @@
+<map id="DisplayDiceValue" name="DisplayDiceValue">
+<area shape="rect" id="node1" title="Script for Dice test script" alt="" coords="5,1043,152,1197"/>
+<area shape="rect" id="node2" title=" " alt="" coords="164,5,295,91"/>
+<area shape="rect" id="node3" href="$class_dice.html" title="Script for the Dice Gameobject" alt="" coords="127,736,297,977"/>
+<area shape="rect" id="node4" href="$class_camera_close_up.html" title="Script to control the camera close up shots" alt="" coords="146,360,345,671"/>
+<area shape="rect" id="node5" href="$class_close_up_point_script.html" title="Script for camera close up point Gameobject" alt="" coords="197,157,406,277"/>
+<area shape="rect" id="node6" href="$class_die.html" title="Script for the Die Gameobject" alt="" coords="369,360,519,671"/>
+<area shape="rect" id="node7" href="$class_die_side.html" title="Script for die side Gameobject" alt="" coords="482,140,625,295"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PlayerTokenScript.EnterRoom" name="PlayerTokenScript.EnterRoom">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,239,35"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#a6257d1f00b3732f6d61a4d98b445890c" title="setting the player token that is currently on this tile" alt="" coords="287,5,489,35"/>
+</map>

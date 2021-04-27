@@ -1,0 +1,6 @@
+<map id="BoardBuilder.CreateFreeRollTiles" name="BoardBuilder.CreateFreeRollTiles">
+<area shape="rect" id="node1" title="Randomly replace required number of general tiles with FreeRoll Tiles" alt="" coords="725,5,984,35"/>
+<area shape="rect" id="node2" href="$class_board_builder.html#a7a499abdc0c02d659ea6fee6e7836f15" title="Randomly place Free roll / accusation tiles." alt="" coords="443,5,677,35"/>
+<area shape="rect" id="node3" href="$class_board_builder.html#a82e09ea29b1d031cfe2fa3b444c12c99" title="Method to create the board, initialise and place all items and pass references to board manager" alt="" coords="220,5,395,35"/>
+<area shape="rect" id="node4" href="$class_board_builder.html#a40848d7394ead9e79f4f2dad2d7756b8" title=" " alt="" coords="5,5,172,35"/>
+</map>

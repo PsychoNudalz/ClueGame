@@ -1,0 +1,6 @@
+<map id="UserCursorScript.OnTriggerExit" name="UserCursorScript.OnTriggerExit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,248,35"/>
+<area shape="rect" id="node2" href="$class_user_selection_script.html#a011d55536bb7550a00a7029cb7b6a6b5" title="reset the effects on the current tile" alt="" coords="296,5,575,35"/>
+<area shape="rect" id="node3" href="$class_board_tile_script.html#a58615feb64c22a128cc22b7e0276ad5f" title="disable the select effect on the tile" alt="" coords="623,5,821,35"/>
+<area shape="rect" id="node4" href="$class_board_tile_effect_handler_script.html#a6c3a5ab97fa7a4abb76cd58d8df67964" title="disable the glow box effect for when the cursor hovering on it" alt="" coords="869,5,1185,35"/>
+</map>

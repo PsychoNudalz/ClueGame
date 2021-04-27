@@ -1,0 +1,5 @@
+<map id="CameraCloseUp.GetCameraPosition" name="CameraCloseUp.GetCameraPosition">
+<area shape="rect" id="node1" title="Get the camera location target from point" alt="" coords="5,32,288,61"/>
+<area shape="rect" id="node2" href="$class_close_up_point_script.html#ad04e4644ab071f53a3ddcd5942a748b4" title="Get the camera position (transform position)" alt="" coords="349,5,651,35"/>
+<area shape="rect" id="node3" href="$class_close_up_point_script.html#adadb4a1edcd0b052fb32ef82ece4405e" title="Get the close up point" alt="" coords="336,59,664,88"/>
+</map>

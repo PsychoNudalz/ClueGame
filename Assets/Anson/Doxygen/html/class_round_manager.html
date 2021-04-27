@@ -64,6 +64,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_round_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">RoundManager Class Reference</div>  </div>
@@ -75,9 +77,15 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for RoundManager:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_round_manager.png" alt=""/>
- </div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Collaboration diagram for RoundManager:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -119,6 +127,60 @@ Properties</h2></td></tr>
 <tr class="separator:a9171253c36108372fd638a906f19b20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5081895b0186c09d29f789642ad098db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a5081895b0186c09d29f789642ad098db">CanAcc</a><code> [get]</code></td></tr>
 <tr class="separator:a5081895b0186c09d29f789642ad098db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a1ae4b42e7252a3983bf8121c91a61fa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a1ae4b42e7252a3983bf8121c91a61fa6">Awake</a> ()</td></tr>
+<tr class="separator:a1ae4b42e7252a3983bf8121c91a61fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb654bc0114fc67d455ed6449d5bda22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#abb654bc0114fc67d455ed6449d5bda22">FixedUpdate</a> ()</td></tr>
+<tr class="separator:abb654bc0114fc67d455ed6449d5bda22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf674cdec523de9a0f91ab8a7bfcc2ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef">DiceBehaviour</a> ()</td></tr>
+<tr class="memdesc:acf674cdec523de9a0f91ab8a7bfcc2ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">for waiting the dice to be rolled, get it's results and display where the player can move to  <a href="class_round_manager.html#acf674cdec523de9a0f91ab8a7bfcc2ef">More...</a><br /></td></tr>
+<tr class="separator:acf674cdec523de9a0f91ab8a7bfcc2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfea3b56a7576ad02c82c27bb0c6ba7"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a5cfea3b56a7576ad02c82c27bb0c6ba7">DelayResetDice</a> (float t)</td></tr>
+<tr class="memdesc:a5cfea3b56a7576ad02c82c27bb0c6ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset the dice after a time delay  <a href="class_round_manager.html#a5cfea3b56a7576ad02c82c27bb0c6ba7">More...</a><br /></td></tr>
+<tr class="separator:a5cfea3b56a7576ad02c82c27bb0c6ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d52738f26bc5b5eea98f8e3dd213744"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a8d52738f26bc5b5eea98f8e3dd213744">DelayRoll</a> (float timeDelay)</td></tr>
+<tr class="memdesc:a8d52738f26bc5b5eea98f8e3dd213744"><td class="mdescLeft">&#160;</td><td class="mdescRight">roll dice after a delay time, used for free roll tile  <a href="class_round_manager.html#a8d52738f26bc5b5eea98f8e3dd213744">More...</a><br /></td></tr>
+<tr class="separator:a8d52738f26bc5b5eea98f8e3dd213744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3821e66d79eeb0991f620ced62940a"><td class="memItemLeft" align="right" valign="top">IEnumerator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#afb3821e66d79eeb0991f620ced62940a">DelaySug</a> (float timeDelay)</td></tr>
+<tr class="memdesc:afb3821e66d79eeb0991f620ced62940a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maek suggestion after a delay time, used for free suggestion tile  <a href="class_round_manager.html#afb3821e66d79eeb0991f620ced62940a">More...</a><br /></td></tr>
+<tr class="separator:afb3821e66d79eeb0991f620ced62940a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aafa4876de990bdfb07809c8cb9b738e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_dice.html">Dice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#aafa4876de990bdfb07809c8cb9b738e3">dice</a></td></tr>
+<tr class="separator:aafa4876de990bdfb07809c8cb9b738e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1734c8efc048739fb1eb3b57c79bdbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_turn_controller.html">TurnController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#ad1734c8efc048739fb1eb3b57c79bdbc">turnController</a></td></tr>
+<tr class="separator:ad1734c8efc048739fb1eb3b57c79bdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06567cbb4448d7a1730554283b07920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#aa06567cbb4448d7a1730554283b07920">playerController</a></td></tr>
+<tr class="separator:aa06567cbb4448d7a1730554283b07920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa0596f1bc1859b768ebf7a28253639f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board_manager.html">BoardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#aaa0596f1bc1859b768ebf7a28253639f">boardManager</a></td></tr>
+<tr class="separator:aaa0596f1bc1859b768ebf7a28253639f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c5c1a5b2ba44fabb8e136b36790cba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_card_manager.html">CardManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a02c5c1a5b2ba44fabb8e136b36790cba">gameGenerator</a></td></tr>
+<tr class="separator:a02c5c1a5b2ba44fabb8e136b36790cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0687328cf00a47921858f9eee49d646d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera_close_up.html">CameraCloseUp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a0687328cf00a47921858f9eee49d646d">cameraCloseUp</a></td></tr>
+<tr class="separator:a0687328cf00a47921858f9eee49d646d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9220b79c6b2fc4ed9d6a5a5ad2f58c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_u_i_handler.html">UIHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#ae9220b79c6b2fc4ed9d6a5a5ad2f58c9">uIHandler</a></td></tr>
+<tr class="separator:ae9220b79c6b2fc4ed9d6a5a5ad2f58c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f445f4f1e64a7095027996043e49f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_i_controller_script.html">AIControllerScript</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#af3f445f4f1e64a7095027996043e49f5">aIController</a></td></tr>
+<tr class="separator:af3f445f4f1e64a7095027996043e49f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01060b712760cd5f20076065312abe4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a01060b712760cd5f20076065312abe4e">diceRolled</a> = false</td></tr>
+<tr class="separator:a01060b712760cd5f20076065312abe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48234cda9bc2669d067b6018370d563"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#ab48234cda9bc2669d067b6018370d563">canRoll</a> = true</td></tr>
+<tr class="separator:ab48234cda9bc2669d067b6018370d563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bb560830468165f512cba27a02e7c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a91bb560830468165f512cba27a02e7c7">canSug</a> = true</td></tr>
+<tr class="separator:a91bb560830468165f512cba27a02e7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708b4b2656336816732691309ee7550f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a708b4b2656336816732691309ee7550f">canAcc</a> = true</td></tr>
+<tr class="separator:a708b4b2656336816732691309ee7550f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599add6e0bb30d18355ba7fac566e356"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#a599add6e0bb30d18355ba7fac566e356">isGameOver</a> = false</td></tr>
+<tr class="separator:a599add6e0bb30d18355ba7fac566e356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8fccab8be6a676c2450b009346f7a49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#ae8fccab8be6a676c2450b009346f7a49">isGameWin</a> = false</td></tr>
+<tr class="separator:ae8fccab8be6a676c2450b009346f7a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c3bf3d18015c8920062ac7b93b4a8f"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#af7c3bf3d18015c8920062ac7b93b4a8f">rollCoroutine</a></td></tr>
+<tr class="separator:af7c3bf3d18015c8920062ac7b93b4a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f0976dde8957a2c64445b8fbb521ad"><td class="memItemLeft" align="right" valign="top">Coroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_round_manager.html#aa5f0976dde8957a2c64445b8fbb521ad">sugCoroutine</a></td></tr>
+<tr class="separator:aa5f0976dde8957a2c64445b8fbb521ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Control what each player can do during their round/ turn </p>
@@ -148,6 +210,223 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a780da336fd16dcaee0f00306578f13b4_cgraph.svg" width="100%" height="568"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a780da336fd16dcaee0f00306578f13b4_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1ae4b42e7252a3983bf8121c91a61fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae4b42e7252a3983bf8121c91a61fa6">&#9670;&nbsp;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RoundManager.Awake </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cfea3b56a7576ad02c82c27bb0c6ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cfea3b56a7576ad02c82c27bb0c6ba7">&#9670;&nbsp;</a></span>DelayResetDice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator RoundManager.DelayResetDice </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reset the dice after a time delay </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>amount of time for it to wait</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unity thing</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a5cfea3b56a7576ad02c82c27bb0c6ba7_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a5cfea3b56a7576ad02c82c27bb0c6ba7_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8d52738f26bc5b5eea98f8e3dd213744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d52738f26bc5b5eea98f8e3dd213744">&#9670;&nbsp;</a></span>DelayRoll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator RoundManager.DelayRoll </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeDelay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>roll dice after a delay time, used for free roll tile </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeDelay</td><td>time for delay </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Unity thing</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a8d52738f26bc5b5eea98f8e3dd213744_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a8d52738f26bc5b5eea98f8e3dd213744_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="afb3821e66d79eeb0991f620ced62940a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3821e66d79eeb0991f620ced62940a">&#9670;&nbsp;</a></span>DelaySug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator RoundManager.DelaySug </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>timeDelay</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maek suggestion after a delay time, used for free suggestion tile </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeDelay</td><td>time for delay </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Unity thing</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_afb3821e66d79eeb0991f620ced62940a_cgraph.svg" width="100%" height="468"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_afb3821e66d79eeb0991f620ced62940a_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="acf674cdec523de9a0f91ab8a7bfcc2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf674cdec523de9a0f91ab8a7bfcc2ef">&#9670;&nbsp;</a></span>DiceBehaviour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RoundManager.DiceBehaviour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>for waiting the dice to be rolled, get it's results and display where the player can move to </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_acf674cdec523de9a0f91ab8a7bfcc2ef_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_round_manager_acf674cdec523de9a0f91ab8a7bfcc2ef_icgraph.svg" width="518" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 
 </div>
 </div>
@@ -168,6 +447,49 @@ Properties</h2></td></tr>
 
 <p>Ending the turn. Returns the next player </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a29177f2e27c6c4af55dfa3c48d67cfb0_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<a id="abb654bc0114fc67d455ed6449d5bda22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb654bc0114fc67d455ed6449d5bda22">&#9670;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RoundManager.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_abb654bc0114fc67d455ed6449d5bda22_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -208,6 +530,18 @@ Properties</h2></td></tr>
 
 <p>Gets the player controller for the current player </p>
 <dl class="section return"><dt>Returns</dt><dd>player controller for the current player</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_round_manager_aab3f49a5e05508a8e023a497e763c1c8_cgraph.svg" width="555" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_aab3f49a5e05508a8e023a497e763c1c8_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -234,6 +568,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_ab691cd5cd773e23822b237834b1fcb0a_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_ab691cd5cd773e23822b237834b1fcb0a_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -260,6 +606,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a596fc1c822ebb74dad8d238b15b1ea3a_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a596fc1c822ebb74dad8d238b15b1ea3a_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -286,6 +644,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_adfd4f66436e06c12a25c9236b629f369_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_adfd4f66436e06c12a25c9236b629f369_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -312,6 +682,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8_cgraph.svg" width="100%" height="488"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_a6cf32ad7ffd3cafc902ae5faeb7605f8_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -338,6 +720,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_ab795c17242b95ab2cef508da5daa2593_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_ab795c17242b95ab2cef508da5daa2593_icgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 
 </div>
 </div>
@@ -357,6 +751,371 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Method for starting the turn </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_round_manager_acf644ae21a6f9ebc2a476fc8603e18fc_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af3f445f4f1e64a7095027996043e49f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f445f4f1e64a7095027996043e49f5">&#9670;&nbsp;</a></span>aIController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_a_i_controller_script.html">AIControllerScript</a> RoundManager.aIController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa0596f1bc1859b768ebf7a28253639f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa0596f1bc1859b768ebf7a28253639f">&#9670;&nbsp;</a></span>boardManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board_manager.html">BoardManager</a> RoundManager.boardManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0687328cf00a47921858f9eee49d646d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0687328cf00a47921858f9eee49d646d">&#9670;&nbsp;</a></span>cameraCloseUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_camera_close_up.html">CameraCloseUp</a> RoundManager.cameraCloseUp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a708b4b2656336816732691309ee7550f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708b4b2656336816732691309ee7550f">&#9670;&nbsp;</a></span>canAcc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.canAcc = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab48234cda9bc2669d067b6018370d563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48234cda9bc2669d067b6018370d563">&#9670;&nbsp;</a></span>canRoll</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.canRoll = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91bb560830468165f512cba27a02e7c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91bb560830468165f512cba27a02e7c7">&#9670;&nbsp;</a></span>canSug</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.canSug = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafa4876de990bdfb07809c8cb9b738e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa4876de990bdfb07809c8cb9b738e3">&#9670;&nbsp;</a></span>dice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_dice.html">Dice</a> RoundManager.dice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01060b712760cd5f20076065312abe4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01060b712760cd5f20076065312abe4e">&#9670;&nbsp;</a></span>diceRolled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.diceRolled = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02c5c1a5b2ba44fabb8e136b36790cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c5c1a5b2ba44fabb8e136b36790cba">&#9670;&nbsp;</a></span>gameGenerator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_card_manager.html">CardManager</a> RoundManager.gameGenerator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a599add6e0bb30d18355ba7fac566e356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599add6e0bb30d18355ba7fac566e356">&#9670;&nbsp;</a></span>isGameOver</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.isGameOver = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8fccab8be6a676c2450b009346f7a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8fccab8be6a676c2450b009346f7a49">&#9670;&nbsp;</a></span>isGameWin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RoundManager.isGameWin = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa06567cbb4448d7a1730554283b07920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06567cbb4448d7a1730554283b07920">&#9670;&nbsp;</a></span>playerController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a> RoundManager.playerController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c3bf3d18015c8920062ac7b93b4a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c3bf3d18015c8920062ac7b93b4a8f">&#9670;&nbsp;</a></span>rollCoroutine</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Coroutine RoundManager.rollCoroutine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5f0976dde8957a2c64445b8fbb521ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f0976dde8957a2c64445b8fbb521ad">&#9670;&nbsp;</a></span>sugCoroutine</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Coroutine RoundManager.sugCoroutine</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1734c8efc048739fb1eb3b57c79bdbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1734c8efc048739fb1eb3b57c79bdbc">&#9670;&nbsp;</a></span>turnController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_turn_controller.html">TurnController</a> RoundManager.turnController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9220b79c6b2fc4ed9d6a5a5ad2f58c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9220b79c6b2fc4ed9d6a5a5ad2f58c9">&#9670;&nbsp;</a></span>uIHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_u_i_handler.html">UIHandler</a> RoundManager.uIHandler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

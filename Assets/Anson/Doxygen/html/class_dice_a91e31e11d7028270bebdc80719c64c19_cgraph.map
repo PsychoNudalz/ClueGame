@@ -1,0 +1,5 @@
+<map id="Dice.GetValue" name="Dice.GetValue">
+<area shape="rect" id="node1" title="Get value of all dice" alt="" coords="5,5,129,35"/>
+<area shape="rect" id="node2" href="$class_dice.html#a84cd116dad344495cac8589afc974140" title="Calculate total value of all dice" alt="" coords="177,5,341,35"/>
+<area shape="rect" id="node3" href="$class_die.html#ad1f02edcfdd486ab3da75162daab3570" title="Get the value of the die" alt="" coords="389,5,531,35"/>
+</map>

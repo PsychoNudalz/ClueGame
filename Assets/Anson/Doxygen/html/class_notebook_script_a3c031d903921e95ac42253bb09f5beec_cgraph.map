@@ -1,0 +1,9 @@
+<map id="NotebookScript.RefreshNotebook" name="NotebookScript.RefreshNotebook">
+<area shape="rect" id="node1" title="Refresh the notebook UI Object" alt="" coords="5,85,263,115"/>
+<area shape="rect" id="node2" href="$class_round_manager.html#aab3f49a5e05508a8e023a497e763c1c8" title="Gets the player controller for the current player" alt="" coords="317,5,571,35"/>
+<area shape="rect" id="node4" href="$class_notebook_script.html#a4d3a7148faf9db0faae9b942f01e84b6" title="Refresh all character button status." alt="" coords="311,59,577,88"/>
+<area shape="rect" id="node6" href="$class_notebook_script.html#a1ad8770915bffe616f448f1b3cff339f" title="Refresh all room button status." alt="" coords="325,112,563,141"/>
+<area shape="rect" id="node7" href="$class_notebook_script.html#a4d45da2c213d4711991232101154510e" title="Refresh all weapon button status." alt="" coords="316,165,572,195"/>
+<area shape="rect" id="node3" href="$class_turn_controller.html#af16e42b7e61c5a999291327e2e556caa" title=" " alt="" coords="625,5,868,35"/>
+<area shape="rect" id="node5" href="$class_notebook_button.html#a3db612f7ac70f28eb24790f27a6f1c82" title="Set button graphic to crossed through" alt="" coords="625,112,868,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PlayerTokenScript.ClearTokenTile" name="PlayerTokenScript.ClearTokenTile">
+<area shape="rect" id="node1" title=" " alt="" coords="344,5,604,35"/>
+<area shape="rect" id="node2" href="$class_player_master_controller.html#afa765f55be7e1a4593f5e11ad2abc0fb" title="clear the tile the token was on" alt="" coords="5,5,296,35"/>
+</map>

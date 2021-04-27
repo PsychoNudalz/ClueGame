@@ -1,0 +1,5 @@
+<map id="RoomWeaponSlot.GetWeaponInSlot" name="RoomWeaponSlot.GetWeaponInSlot">
+<area shape="rect" id="node1" title="Return the weapon in the slot" alt="" coords="692,5,968,35"/>
+<area shape="rect" id="node2" href="$class_weapon_slot_test_script.html#abf650efabf59b98429890a3de4b43a28" title="Set text to display weapons in room" alt="" coords="288,5,644,35"/>
+<area shape="rect" id="node3" href="$class_weapon_slot_test_script.html#a92dc32fad961668315aa642c3586acee" title=" " alt="" coords="5,5,240,35"/>
+</map>

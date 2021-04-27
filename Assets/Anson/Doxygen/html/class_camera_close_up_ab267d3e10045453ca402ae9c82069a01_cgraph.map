@@ -1,0 +1,8 @@
+<map id="CameraCloseUp.Update" name="CameraCloseUp.Update">
+<area shape="rect" id="node1" title="If test keys = true &#45; numpad / numbers control close ups lerp camera position towards close up point ..." alt="" coords="5,85,200,115"/>
+<area shape="rect" id="node2" href="$class_camera_close_up.html#a684c25133060e7ff6e1d462b0504c590" title="Get the camera location target from point" alt="" coords="248,59,531,88"/>
+<area shape="rect" id="node5" href="$class_camera_close_up.html#a2a7e3969d2c696d94a6f0f6bf8b3c56a" title="For testing camera close ups" alt="" coords="262,112,517,141"/>
+<area shape="rect" id="node3" href="$class_close_up_point_script.html#ad04e4644ab071f53a3ddcd5942a748b4" title="Get the camera position (transform position)" alt="" coords="591,5,894,35"/>
+<area shape="rect" id="node4" href="$class_close_up_point_script.html#adadb4a1edcd0b052fb32ef82ece4405e" title="Get the close up point" alt="" coords="579,59,907,88"/>
+<area shape="rect" id="node6" href="$class_camera_close_up.html#a1d70afa00d6f67abee342c029af88fcf" title="Set close up point" alt="" coords="628,112,857,141"/>
+</map>

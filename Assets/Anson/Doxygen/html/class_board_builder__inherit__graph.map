@@ -1,0 +1,4 @@
+<map id="BoardBuilder" name="BoardBuilder">
+<area shape="rect" id="node1" title="Method to create the game board from a .csv file" alt="" coords="5,139,263,1021"/>
+<area shape="rect" id="node2" title=" " alt="" coords="69,5,199,91"/>
+</map>

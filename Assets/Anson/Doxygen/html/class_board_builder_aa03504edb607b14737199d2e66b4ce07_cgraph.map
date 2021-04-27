@@ -1,0 +1,5 @@
+<map id="BoardBuilder.CreateShortcutTile" name="BoardBuilder.CreateShortcutTile">
+<area shape="rect" id="node1" title="Instantiate a shortcut tile and set its parameters" alt="" coords="5,32,253,61"/>
+<area shape="rect" id="node2" href="$class_room_script.html#a1747ef3091a32115e7bdbd53f5764a31" title="Get Room Enum from string" alt="" coords="335,5,590,35"/>
+<area shape="rect" id="node3" href="$class_shortcut_board_tile_script.html#a6d476b580271ad3b4ad963c152823d22" title="Set shortcut rooms" alt="" coords="301,59,624,88"/>
+</map>

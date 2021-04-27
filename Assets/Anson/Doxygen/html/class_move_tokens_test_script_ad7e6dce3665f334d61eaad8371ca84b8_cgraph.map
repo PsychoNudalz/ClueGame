@@ -1,0 +1,4 @@
+<map id="MoveTokensTestScript.SetCurrentRoom" name="MoveTokensTestScript.SetCurrentRoom">
+<area shape="rect" id="node1" title="Set the current room to move tokens to" alt="" coords="5,5,308,35"/>
+<area shape="rect" id="node2" href="$class_room_script.html#a1747ef3091a32115e7bdbd53f5764a31" title="Get Room Enum from string" alt="" coords="356,5,611,35"/>
+</map>

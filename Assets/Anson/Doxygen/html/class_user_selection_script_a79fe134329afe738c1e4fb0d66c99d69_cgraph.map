@@ -1,0 +1,10 @@
+<map id="UserSelectionScript.SelectCurrentTile" name="UserSelectionScript.SelectCurrentTile">
+<area shape="rect" id="node1" title="Setting the current tile clears the previous tile and set the effect for the new tile" alt="" coords="5,59,291,88"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#ac2a8e986f44ea316fb5340cdd75e02e4" title="check if the player can move to this tile" alt="" coords="377,5,579,35"/>
+<area shape="rect" id="node4" href="$class_user_selection_script.html#a011d55536bb7550a00a7029cb7b6a6b5" title="reset the effects on the current tile" alt="" coords="339,59,617,88"/>
+<area shape="rect" id="node7" href="$class_board_tile_script.html#a8fe04841788e895cfe9a60e1d513f9c7" title="enable the select effect on the tile" alt="" coords="376,112,580,141"/>
+<area shape="rect" id="node3" href="$class_board_manager.html#a9d5697839fa7daf9c40e75bdebc8bf82" title=" " alt="" coords="715,5,914,35"/>
+<area shape="rect" id="node5" href="$class_board_tile_script.html#a58615feb64c22a128cc22b7e0276ad5f" title="disable the select effect on the tile" alt="" coords="715,59,914,88"/>
+<area shape="rect" id="node6" href="$class_board_tile_effect_handler_script.html#a6c3a5ab97fa7a4abb76cd58d8df67964" title="disable the glow box effect for when the cursor hovering on it" alt="" coords="1012,59,1328,88"/>
+<area shape="rect" id="node8" href="$class_board_tile_effect_handler_script.html#a1ea26493f3277f4bc1f8f16a506cf29f" title="display the glow box effect for when the cursor hovering on it" alt="" coords="665,112,964,141"/>
+</map>

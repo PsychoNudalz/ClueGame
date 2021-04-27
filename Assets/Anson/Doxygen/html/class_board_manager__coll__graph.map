@@ -1,0 +1,38 @@
+<map id="BoardManager" name="BoardManager">
+<area shape="rect" id="node1" title="Script to manage the board items" alt="" coords="1359,140,1617,641"/>
+<area shape="rect" id="node4" href="$class_board_tile_script.html" title="Super class for all tiles" alt="" coords="1123,896,1298,1241"/>
+<area shape="rect" id="node6" href="$class_player_token_script.html" title="For handling the player/ character&#39;s token" alt="" coords="1585,2235,1842,2892"/>
+<area shape="rect" id="node13" href="$class_player_master_controller.html" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="2013,2957,2245,3597"/>
+<area shape="rect" id="node17" href="$class_round_manager.html" title="Control what each player can do during their round/ turn" alt="" coords="2387,4455,2592,4973"/>
+<area shape="rect" id="node34" href="$class_a_i_controller_script.html" title="this class controlls the AI&#39;s behaviour and actions" alt="" coords="2269,3663,2472,4389"/>
+<area shape="rect" id="node2" title=" " alt="" coords="2305,5,2436,91"/>
+<area shape="rect" id="node5" href="$class_board_tile_effect_handler_script.html" title="This handles the effects and shader on the tile" alt="" coords="614,296,839,485"/>
+<area shape="rect" id="node7" href="$class_room_entry_point.html" title="Class for the room entry point Gameobject" alt="" coords="1194,5125,1329,5211"/>
+<area shape="rect" id="node8" href="$class_room_script.html" title="Script for the room Gameobject" alt="" coords="679,4507,985,4921"/>
+<area shape="rect" id="node9" href="$class_room_weapon_slot.html" title="Script for the Room Weapon slot GameObject" alt="" coords="5,5441,232,5578"/>
+<area shape="rect" id="node10" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="251,5039,498,5297"/>
+<area shape="rect" id="node12" href="$class_room_player_slot.html" title="Class for the Room player slot GameObject" alt="" coords="780,3957,991,4095"/>
+<area shape="rect" id="node14" href="$class_player_stats_script.html" title="saves the character the player is and the deck it has" alt="" coords="2245,1831,2438,2211"/>
+<area shape="rect" id="node16" href="$class_door_script.html" title="Script for the door Gameobject" alt="" coords="195,665,402,872"/>
+<area shape="rect" id="node18" href="$class_dice.html" title="Script for the Dice Gameobject" alt="" coords="2580,1565,2751,1807"/>
+<area shape="rect" id="node19" href="$class_camera_close_up.html" title="Script to control the camera close up shots" alt="" coords="2391,913,2590,1224"/>
+<area shape="rect" id="node20" href="$class_close_up_point_script.html" title="Script for camera close up point Gameobject" alt="" coords="2409,331,2618,451"/>
+<area shape="rect" id="node21" href="$class_die.html" title="Script for the Die Gameobject" alt="" coords="2694,913,2845,1224"/>
+<area shape="rect" id="node22" href="$class_die_side.html" title="Script for die side Gameobject" alt="" coords="2694,313,2837,468"/>
+<area shape="rect" id="node23" href="$class_u_i_handler.html" title="Handles the UI" alt="" coords="2481,5721,2703,6777"/>
+<area shape="rect" id="node24" href="$class_user_controller.html" title=" " alt="" coords="2745,5363,2911,5656"/>
+<area shape="rect" id="node25" href="$class_accusation.html" title=" " alt="" coords="3045,5091,3184,5245"/>
+<area shape="rect" id="node27" href="$class_card.html" title=" " alt="" coords="3450,3975,3598,4077"/>
+<area shape="rect" id="node30" href="$class_suggestion.html" title=" " alt="" coords="3458,5082,3625,5254"/>
+<area shape="rect" id="node31" href="$class_card_manager.html" title=" " alt="" coords="2813,3871,3003,4181"/>
+<area shape="rect" id="node32" href="$class_card_slot.html" title=" " alt="" coords="4019,4619,4168,4809"/>
+<area shape="rect" id="node33" href="$class_turn_controller.html" title="This handles the turn between the players" alt="" coords="2747,1265,2968,1541"/>
+<area shape="rect" id="node3" href="$class_free_suggestion_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="849,1643,1049,1729"/>
+<area shape="rect" id="node11" href="$class_shortcut_board_tile_script.html" title="Class for the Shortcut board tile Gameobject" alt="" coords="722,5065,910,5271"/>
+<area shape="rect" id="node15" href="$class_room_entry_board_tile_script.html" title="Script for the room entry board tile GameObject" alt="" coords="1043,5371,1251,5647"/>
+<area shape="rect" id="node35" href="$class_start_tile_script.html" title="Class for the start tile Gameobject" alt="" coords="1626,1591,1766,1781"/>
+<area shape="rect" id="node36" href="$class_free_roll_board_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="1411,1643,1602,1729"/>
+<area shape="rect" id="node26" href="$class_room_card.html" title=" " alt="" coords="3278,4628,3426,4800"/>
+<area shape="rect" id="node28" href="$class_character_card.html" title=" " alt="" coords="3450,4628,3598,4800"/>
+<area shape="rect" id="node29" href="$class_weapon_card.html" title=" " alt="" coords="3622,4628,3770,4800"/>
+</map>

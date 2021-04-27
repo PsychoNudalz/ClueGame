@@ -1,0 +1,6 @@
+<map id="BoardManager.ClearMovable" name="BoardManager.ClearMovable">
+<area shape="rect" id="node1" title="Clear all movable tiles" alt="" coords="5,32,233,61"/>
+<area shape="rect" id="node2" href="$class_board_tile_script.html#a3ff1d3c491fe4d7e421a624ac0b5be6f" title="setting the glow on the tile" alt="" coords="281,32,476,61"/>
+<area shape="rect" id="node3" href="$class_board_tile_effect_handler_script.html#a93e813816ff40b3602de22f87a694766" title="turn off the effect for when player can move to that tile" alt="" coords="524,5,871,35"/>
+<area shape="rect" id="node4" href="$class_board_tile_effect_handler_script.html#a7bf5b2a819cb44463464d5c951bf3143" title="turn on the effect for when player can move to that tile" alt="" coords="524,59,871,88"/>
+</map>

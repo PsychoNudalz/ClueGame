@@ -1,0 +1,6 @@
+<map id="BoardManager.bfs" name="BoardManager.bfs">
+<area shape="rect" id="node1" title="Perform bfs search for the tiles" alt="" coords="5,32,157,61"/>
+<area shape="rect" id="node2" href="$class_board_manager.html#ae3af0b08bdfbc0ebcda23950eb935a5d" title="Return array of all neighbours of given tile" alt="" coords="205,5,467,35"/>
+<area shape="rect" id="node4" href="$class_board_tile_script.html#aeee5122d5e5b79867f6538ec4d597b6a" title="check if tile is empty" alt="" coords="241,59,431,88"/>
+<area shape="rect" id="node3" href="$class_board_manager.html#a6b2b89b5ce622bf45676e6993f8ec216" title="Get a tile from the array using a grid reference." alt="" coords="515,5,763,35"/>
+</map>

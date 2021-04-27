@@ -1,0 +1,8 @@
+<map id="Suggestion" name="Suggestion">
+<area shape="rect" id="node1" title=" " alt="" coords="169,529,335,701"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,136,91"/>
+<area shape="rect" id="node4" href="$class_card.html" title=" " alt="" coords="179,140,327,243"/>
+<area shape="rect" id="node3" href="$class_room_card.html" title=" " alt="" coords="93,292,241,464"/>
+<area shape="rect" id="node5" href="$class_character_card.html" title=" " alt="" coords="265,292,413,464"/>
+<area shape="rect" id="node6" href="$class_weapon_card.html" title=" " alt="" coords="437,292,585,464"/>
+</map>

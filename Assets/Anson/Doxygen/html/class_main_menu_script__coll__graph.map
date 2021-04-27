@@ -1,0 +1,5 @@
+<map id="MainMenuScript" name="MainMenuScript">
+<area shape="rect" id="node1" title="for handling the main menu" alt="" coords="5,360,161,532"/>
+<area shape="rect" id="node2" title=" " alt="" coords="13,5,143,91"/>
+<area shape="rect" id="node3" href="$class_game_set_up_script.html" title="for passing the selection of which player is human or AI from the main menu" alt="" coords="100,140,251,295"/>
+</map>

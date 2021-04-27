@@ -1,0 +1,4 @@
+<map id="RoomEntryBoardTileScript.GetEntryPoint" name="RoomEntryBoardTileScript.GetEntryPoint">
+<area shape="rect" id="node1" title="Set reference to the closest room entry point on the board" alt="" coords="299,5,607,35"/>
+<area shape="rect" id="node2" href="$class_room_entry_board_tile_script.html#a64b614e329f1cac83fbb0947c180f200" title="Set required Variables" alt="" coords="5,5,251,35"/>
+</map>

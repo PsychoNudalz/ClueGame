@@ -1,0 +1,8 @@
+<map id="Dice.ResetDice" name="Dice.ResetDice">
+<area shape="rect" id="node1" title="Reset the dice" alt="" coords="5,59,139,88"/>
+<area shape="rect" id="node2" href="$class_dice.html#ace4c995eb73b784d1076fde140ce85af" title="Can Dice be reset" alt="" coords="243,5,373,35"/>
+<area shape="rect" id="node4" href="$class_camera_close_up.html#ad31062bdf359a453fc85ebdd71fa1bae" title="Clear camera close up" alt="" coords="187,59,429,88"/>
+<area shape="rect" id="node6" href="$class_die.html#abc11c3d2bf0c0fba1555093eb5a8469e" title="Reset Die to original position" alt="" coords="249,112,367,141"/>
+<area shape="rect" id="node3" href="$class_die.html#a390d46459637fd249926cda472255d84" title="Can the die be reset" alt="" coords="545,5,692,35"/>
+<area shape="rect" id="node5" href="$class_camera_close_up.html#ae902d2ccdf969212e0cb84f638f68851" title="Delay then clear close up" alt="" coords="477,59,760,88"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CameraCloseUp" name="CameraCloseUp">
+<area shape="rect" id="node1" title="Script to control the camera close up shots" alt="" coords="5,325,204,636"/>
+<area shape="rect" id="node2" title=" " alt="" coords="34,5,165,91"/>
+<area shape="rect" id="node3" href="$class_close_up_point_script.html" title="Script for camera close up point Gameobject" alt="" coords="121,140,331,260"/>
+</map>
