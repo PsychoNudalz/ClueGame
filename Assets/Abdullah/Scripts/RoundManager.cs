@@ -166,7 +166,7 @@ public class RoundManager : MonoBehaviour
     public Tuple<PlayerMasterController, List<Card>> MakeSuggestion(List<Card> sug)
     { 
 
-        uIHandler.DisplayOutputText(String.Concat(playerController.GetCharacter(), " suggested\n", EnumToString.GetStringFromEnum(sug[0].GetCardType()), " with the\n", 
+        uIHandler.DisplayOutputText(String.Concat(EnumToString.GetStringFromEnum(playerController.GetCharacter()), " suggested\n", EnumToString.GetStringFromEnum(sug[0].GetCardType()), " with the\n", 
                                     EnumToString.GetStringFromEnum(sug[1].GetCardType()), " in the\n", EnumToString.GetStringFromEnum(sug[2].GetCardType())), 5f);
 
         canSug = false;
