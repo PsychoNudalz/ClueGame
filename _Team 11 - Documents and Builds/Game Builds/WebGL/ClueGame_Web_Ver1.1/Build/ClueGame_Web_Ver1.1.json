@@ -1,0 +1,16 @@
+{
+"companyName": "Team 11",
+"productName": "Clue!",
+"productVersion": "1",
+"dataUrl": "ClueGame_Web_Ver1.1.data.unityweb",
+"wasmCodeUrl": "ClueGame_Web_Ver1.1.wasm.code.unityweb",
+"wasmFrameworkUrl": "ClueGame_Web_Ver1.1.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.22f1"
+}
