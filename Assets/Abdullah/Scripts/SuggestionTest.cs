@@ -87,7 +87,7 @@ public class SuggestionTest : TestUIScript
         RoomCard roomCard = cardManager.FindCard((RoomEnum)roomDD.value) as RoomCard;
         WeaponCard weaponCard = cardManager.FindCard((WeaponEnum)weaponDD.value) as WeaponCard;
         CharacterCard characterCard = cardManager.FindCard((CharacterEnum)characterDD.value) as CharacterCard;
-        Card[] sugTest = { roomCard, weaponCard, characterCard };
+        Card[] sugTest = { characterCard, weaponCard, roomCard };
 
         userController.MakeSuggestion();
         try
@@ -95,11 +95,11 @@ public class SuggestionTest : TestUIScript
             Tuple<PlayerMasterController, List<Card>> foundPlayers = roundManager.MakeSuggestion(new List<Card>(sugTest));
 
 
-            string temp = foundPlayers.Item1.ToString();
+            string temp = String.Concat(EnumToString.GetStringFromEnum( foundPlayers.Item1.GetCharacter())," has the card(s):\n"  );
 
             foreach (Card c in foundPlayers.Item2)
             {
-                temp += c.ToString() + ",";
+                temp += EnumToString.GetStringFromEnum(c.GetCardType()) + ",";
             }
             playerFound.SetText(temp);
             Debug.Log(((RoomEnum)roomDD.value).ToString() + ", " + ((WeaponEnum)weaponDD.value).ToString() + ", " + ((CharacterEnum)characterDD.value).ToString());
@@ -131,42 +131,42 @@ public class SuggestionTest : TestUIScript
 
         foreach (Card c in msScarletHand) 
         {
-            msScarletHandString += EnumToString.GetStringFromEnum(c.GetCardType())+"\n";
+            msScarletHandString += "-"+EnumToString.GetStringFromEnum(c.GetCardType())+"\n";
         }
         Debug.Log(msScarletHandString);
         Player1.SetText( "Ms Scarlet\n" + msScarletHandString);
 
         foreach (Card c in profPlumHand)
         {
-            profPlumHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
+            profPlumHandString += "-" + EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(profPlumHandString);
         Player2.SetText("Prof Plum\n" + profPlumHandString);
 
         foreach (Card c in colMustard)
         {
-            colMustardHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
+            colMustardHandString += "-" + EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(colMustardHandString);
         Player3.SetText("Col Mustard\n" + colMustardHandString);
 
         foreach (Card c in mrsPeackcockHand)
         {
-            mrsPeackcockHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
+            mrsPeackcockHandString += "-" + EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(mrsPeackcockHandString);
         Player4.SetText("Mrs Peacock\n" + mrsPeackcockHandString);
 
         foreach (Card c in revGreenHand)
         {
-            revGreenHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
+            revGreenHandString += "-" + EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(revGreenHandString);
         Player5.SetText("Rev Green\n" + revGreenHandString);
 
         foreach (Card c in msWhiteHand)
         {
-            msWhiteHandString += EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
+            msWhiteHandString += "-" + EnumToString.GetStringFromEnum(c.GetCardType()) + "\n";
         }
         Debug.Log(msWhiteHandString);
         Player6.SetText("Ms White\n" + msWhiteHandString);
