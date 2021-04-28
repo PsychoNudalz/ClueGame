@@ -12,7 +12,7 @@
 <area shape="rect" id="node8" href="$class_room_entry_point.html" title="Class for the room entry point Gameobject" alt="" coords="598,5141,733,5227"/>
 <area shape="rect" id="node9" href="$class_room_script.html" title="Script for the room Gameobject" alt="" coords="451,4523,757,4937"/>
 <area shape="rect" id="node10" href="$class_room_weapon_slot.html" title="Script for the Room Weapon slot GameObject" alt="" coords="53,5457,280,5594"/>
-<area shape="rect" id="node11" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="43,5055,290,5313"/>
+<area shape="rect" id="node11" href="$class_weapon_token_script.html" title=" " alt="" coords="43,5055,290,5313"/>
 <area shape="rect" id="node13" href="$class_room_player_slot.html" title="Class for the Room player slot GameObject" alt="" coords="641,3973,852,4111"/>
 <area shape="rect" id="node14" href="$class_player_master_controller.html" title="Master controller for the player (character) it acts as a wrapper for the player to communicate with ..." alt="" coords="1844,2973,2076,3613"/>
 <area shape="rect" id="node15" href="$class_player_stats_script.html" title="saves the character the player is and the deck it has" alt="" coords="1962,1847,2155,2227"/>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_user_controller.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -74,8 +94,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for UserController:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller__inherit__graph.svg" width="176" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller__inherit__graph.svg" width="176" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for UserController:</div>
@@ -101,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16a0eca976cd0f767ab444ba8d96c4a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_controller.html#a16a0eca976cd0f767ab444ba8d96c4a8">SetCharacter</a> (<a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a> c)</td></tr>
 <tr class="memdesc:a16a0eca976cd0f767ab444ba8d96c4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets character for suggestions and accusation  <a href="class_user_controller.html#a16a0eca976cd0f767ab444ba8d96c4a8">More...</a><br /></td></tr>
 <tr class="separator:a16a0eca976cd0f767ab444ba8d96c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea1bd5d7b45854e5113b459a2b11dd35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_controller.html#aea1bd5d7b45854e5113b459a2b11dd35">SetWeapon</a> (<a class="el" href="_weapon_token_script_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a> c)</td></tr>
+<tr class="memitem:aea1bd5d7b45854e5113b459a2b11dd35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_controller.html#aea1bd5d7b45854e5113b459a2b11dd35">SetWeapon</a> (<a class="el" href="_weapon_enum_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a> c)</td></tr>
 <tr class="memdesc:aea1bd5d7b45854e5113b459a2b11dd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets weapon for suggestions and accusation  <a href="class_user_controller.html#aea1bd5d7b45854e5113b459a2b11dd35">More...</a><br /></td></tr>
 <tr class="separator:aea1bd5d7b45854e5113b459a2b11dd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e6950fdc74e232061ab078c36b9069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_controller.html#a75e6950fdc74e232061ab078c36b9069">SetRoom</a> (<a class="el" href="_room_enum_8cs.html#a069dbaf3daeaf12280213d54dcebeca2">RoomEnum</a> c)</td></tr>
@@ -142,7 +161,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a91104df4d881cade9f8deb961646d51f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_accusation.html">Accusation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user_controller.html#a91104df4d881cade9f8deb961646d51f">accusation</a></td></tr>
 <tr class="separator:a91104df4d881cade9f8deb961646d51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00005">5</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0d42e016d1428255def6c3d9b7050523"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d42e016d1428255def6c3d9b7050523">&#9670;&nbsp;</a></span>Awake()</h2>
 
@@ -166,6 +188,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00018">18</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <a id="ab90611f541e20c125133d09b62407f41"></a>
@@ -185,17 +209,17 @@ Private Attributes</h2></td></tr>
 
 <p>Ends turn </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00131">131</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_ab90611f541e20c125133d09b62407f41_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_ab90611f541e20c125133d09b62407f41_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_ab90611f541e20c125133d09b62407f41_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_ab90611f541e20c125133d09b62407f41_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -217,17 +241,17 @@ Here is the caller graph for this function:</div>
 
 <p>Gets the player controller for the current player </p>
 <dl class="section return"><dt>Returns</dt><dd>player controller for the current player</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00140">140</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a587c55687141d18f375e0504ea4649fa_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a587c55687141d18f375e0504ea4649fa_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a587c55687141d18f375e0504ea4649fa_icgraph.svg" width="100%" height="509"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a587c55687141d18f375e0504ea4649fa_icgraph.svg" width="100%" height="509"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -249,17 +273,17 @@ Here is the caller graph for this function:</div>
 
 <p>Makes accusation </p>
 <dl class="section return"><dt>Returns</dt><dd>True if accusation is made</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00113">113</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_cgraph.svg" width="100%" height="490"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aa90e4e2fed6b1d661933450f430b95ba_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -281,17 +305,17 @@ Here is the caller graph for this function:</div>
 
 <p>Makes suggestion </p>
 <dl class="section return"><dt>Returns</dt><dd>True if suggestion is made</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00066">66</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a6230816eec4c8be9bda248a166d7b9bd_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -311,6 +335,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00108">108</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <a id="aee97f82bdda647a5e3761666a3d46552"></a>
@@ -329,17 +355,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Rolls the dice </p>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00042">42</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aee97f82bdda647a5e3761666a3d46552_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aee97f82bdda647a5e3761666a3d46552_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aee97f82bdda647a5e3761666a3d46552_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aee97f82bdda647a5e3761666a3d46552_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -367,17 +393,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00058">58</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_af896aefe0262e0d8f07fa5f18592877d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_af896aefe0262e0d8f07fa5f18592877d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_af896aefe0262e0d8f07fa5f18592877d_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_af896aefe0262e0d8f07fa5f18592877d_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -405,17 +431,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00083">83</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_cgraph.svg" width="504" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_cgraph.svg" width="504" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a16a0eca976cd0f767ab444ba8d96c4a8_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -443,17 +469,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00102">102</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a75e6950fdc74e232061ab078c36b9069_cgraph.svg" width="450" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a75e6950fdc74e232061ab078c36b9069_cgraph.svg" width="450" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a75e6950fdc74e232061ab078c36b9069_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a75e6950fdc74e232061ab078c36b9069_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -467,7 +493,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void UserController.SetWeapon </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_weapon_token_script_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_weapon_enum_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a>&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
@@ -481,17 +507,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00092">92</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_cgraph.svg" width="484" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_cgraph.svg" width="484" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_aea1bd5d7b45854e5113b459a2b11dd35_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -512,17 +538,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Takes the shortcut </p>
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00049">49</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_icgraph.svg" width="508" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_user_controller_a5141fbe53b6605d5431a4125ce8a1277_icgraph.svg" width="508" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -548,6 +574,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00012">12</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <a id="ac0bdbfabd82266c2165b37f788e8b25e"></a>
@@ -569,6 +597,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00009">9</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 
 </div>
 </div>
@@ -592,6 +622,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00008">8</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <a id="ad6cf04c90e9175027de685fb5894f8d6"></a>
@@ -613,6 +645,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00011">11</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
 
 </div>
 </div>
@@ -637,6 +671,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00015">15</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0273ddf3a60d73b91c0e89a0e8264f83"></a>
@@ -659,15 +695,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_user_controller_8cs_source.html#l00016">16</a> of file <a class="el" href="_user_controller_8cs_source.html">UserController.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Tomasz/Scripts/<a class="el" href="_user_controller_8cs.html">UserController.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Tomasz/Scripts/<a class="el" href="_user_controller_8cs_source.html">UserController.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_user_controller.html">UserController</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_dice.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,14 +96,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Dice:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice__inherit__graph.svg" width="182" height="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice__inherit__graph.svg" width="182" height="420"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Dice:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -131,6 +149,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for the <a class="el" href="class_dice.html" title="Script for the Dice Gameobject">Dice</a> Gameobject </p>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00008">8</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a84cd116dad344495cac8589afc974140"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84cd116dad344495cac8589afc974140">&#9670;&nbsp;</a></span>CalculateValue()</h2>
@@ -148,17 +168,17 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculate total value of all dice </p>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00098">98</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a84cd116dad344495cac8589afc974140_cgraph.svg" width="364" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a84cd116dad344495cac8589afc974140_cgraph.svg" width="364" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a84cd116dad344495cac8589afc974140_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a84cd116dad344495cac8589afc974140_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -180,17 +200,17 @@ Here is the caller graph for this function:</div>
 
 <p>Can <a class="el" href="class_dice.html" title="Script for the Dice Gameobject">Dice</a> be reset </p>
 <dl class="section return"><dt>Returns</dt><dd>true if dice can reset, false otherwise</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00080">80</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_ace4c995eb73b784d1076fde140ce85af_cgraph.svg" width="335" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_ace4c995eb73b784d1076fde140ce85af_cgraph.svg" width="335" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ace4c995eb73b784d1076fde140ce85af_icgraph.svg" width="100%" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ace4c995eb73b784d1076fde140ce85af_icgraph.svg" width="100%" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -212,17 +232,17 @@ Here is the caller graph for this function:</div>
 
 <p>Get value of all dice </p>
 <dl class="section return"><dt>Returns</dt><dd>Value of all dice, 0 if invalid</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00130">130</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a91e31e11d7028270bebdc80719c64c19_cgraph.svg" width="536" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a91e31e11d7028270bebdc80719c64c19_cgraph.svg" width="536" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a91e31e11d7028270bebdc80719c64c19_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a91e31e11d7028270bebdc80719c64c19_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -251,11 +271,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Initialise <a class="el" href="class_dice.html" title="Script for the Dice Gameobject">Dice</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00024">24</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a4e3633a353a64777d364070bcda02af8_icgraph.svg" width="266" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a4e3633a353a64777d364070bcda02af8_icgraph.svg" width="266" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -277,17 +298,17 @@ Here is the caller graph for this function:</div>
 
 <p>Are dice ready to roll </p>
 <dl class="section return"><dt>Returns</dt><dd>true if ready to roll, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00144">144</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a9df730d8804e077cacc5efcbda241896_cgraph.svg" width="358" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a9df730d8804e077cacc5efcbda241896_cgraph.svg" width="358" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a9df730d8804e077cacc5efcbda241896_icgraph.svg" width="510" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a9df730d8804e077cacc5efcbda241896_icgraph.svg" width="510" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -315,17 +336,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00058">58</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ade1dc529eeb31f31e668c595c5748e67_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ade1dc529eeb31f31e668c595c5748e67_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ade1dc529eeb31f31e668c595c5748e67_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_ade1dc529eeb31f31e668c595c5748e67_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -346,17 +367,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Roll the <a class="el" href="class_dice.html" title="Script for the Dice Gameobject">Dice</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00045">45</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a333ed52f536c0e7748fafe9422b179b5_cgraph.svg" width="446" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a333ed52f536c0e7748fafe9422b179b5_cgraph.svg" width="446" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a333ed52f536c0e7748fafe9422b179b5_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_dice_a333ed52f536c0e7748fafe9422b179b5_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -383,11 +404,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00016">16</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a7169d2cb750fa0b490be9038a68ca9fb_cgraph.svg" width="266" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_a7169d2cb750fa0b490be9038a68ca9fb_cgraph.svg" width="266" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -416,11 +438,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set close up camera if set close up = true </p>
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00034">34</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126_cgraph.svg" width="399" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_dice_adfddf272c9cd1ec9ea4639bbdb6b8126_cgraph.svg" width="399" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -446,6 +469,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00010">10</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
+
 </div>
 </div>
 <a id="aed5a9d6271c9204752d827d84d715fc7"></a>
@@ -467,6 +492,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00011">11</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
 
 </div>
 </div>
@@ -490,6 +517,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00012">12</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0f074c20118ffabf81ad6d1421a8ec33"></a>
@@ -512,15 +541,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_dice_8cs_source.html#l00013">13</a> of file <a class="el" href="_dice_8cs_source.html">Dice.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_dice_8cs.html">Dice.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_dice_8cs_source.html">Dice.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_dice.html">Dice</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

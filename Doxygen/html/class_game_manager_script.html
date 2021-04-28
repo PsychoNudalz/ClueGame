@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_game_manager_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,8 +96,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for GameManagerScript:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script__inherit__graph.svg" width="210" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script__inherit__graph.svg" width="210" height="403"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for GameManagerScript:</div>
@@ -124,6 +143,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This controls the starting and exiting the game loop </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00009">9</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae40b6e53f9f1fe97a3b12dfb2467b48a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae40b6e53f9f1fe97a3b12dfb2467b48a">&#9670;&nbsp;</a></span>AssignAllComponents()</h2>
@@ -141,11 +162,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>assigning all the components if not linked </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00055">55</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_ae40b6e53f9f1fe97a3b12dfb2467b48a_icgraph.svg" width="591" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_ae40b6e53f9f1fe97a3b12dfb2467b48a_icgraph.svg" width="591" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -166,6 +188,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>returning to main menu </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00047">47</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 
 </div>
 </div>
@@ -191,11 +215,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00020">20</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a51acc0112ff3191f7c22046af6556a1c_cgraph.svg" width="591" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a51acc0112ff3191f7c22046af6556a1c_cgraph.svg" width="591" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -216,17 +241,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>starting and initialing the game and it's components </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00029">29</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31_icgraph.svg" width="475" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_game_manager_script_a12cbaf1ff00804887619c07c7267cf31_icgraph.svg" width="475" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -252,6 +277,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00013">13</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="acbb4c87a56320f54561dce1610b8664e"></a>
@@ -273,6 +300,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00017">17</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 
 </div>
 </div>
@@ -296,6 +325,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00014">14</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae18016cd5d49cf173a935b5dabd710a0"></a>
@@ -317,6 +348,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 
 </div>
 </div>
@@ -340,6 +373,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00016">16</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa4955149874803110db080362a0f9155"></a>
@@ -361,6 +396,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00015">15</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
 
 </div>
 </div>
@@ -384,6 +421,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00019">19</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ac252d887c4da24545a80b08a38cd8d41"></a>
@@ -406,15 +445,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_game_manager_script_8cs_source.html#l00018">18</a> of file <a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Anson/Scripts/<a class="el" href="_game_manager_script_8cs.html">GameManagerScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Anson/Scripts/<a class="el" href="_game_manager_script_8cs_source.html">GameManagerScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_game_manager_script.html">GameManagerScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

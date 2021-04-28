@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_test_u_i_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -75,8 +95,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for TestUIScript:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for TestUIScript:</div>
@@ -125,6 +144,8 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>super class for all testing with connection to UI outputs </p>
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00011">11</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a506ea6fe2de0c00f44518caaecca2f84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a506ea6fe2de0c00f44518caaecca2f84">&#9670;&nbsp;</a></span>AssignAllComponents()</h2>
@@ -140,11 +161,12 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00049">49</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_a506ea6fe2de0c00f44518caaecca2f84_icgraph.svg" width="571" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_a506ea6fe2de0c00f44518caaecca2f84_icgraph.svg" width="571" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -174,6 +196,8 @@ Here is the caller graph for this function:</div>
 
 <p>Reimplemented in <a class="el" href="class_testing___movement_script.html#abaaeb242fee8995f1058fde65fc793ba">Testing_MovementScript</a>, and <a class="el" href="class_a_i_test_script.html#a7bc81e99da3c3f206cf38137f73c3b75">AITestScript</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00044">44</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a4148f02e15a1199cb0a6f29745027896"></a>
@@ -200,6 +224,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00034">34</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a94c0d3e6e72145977da15963e7eb2b4c"></a>
@@ -225,11 +251,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00029">29</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_a94c0d3e6e72145977da15963e7eb2b4c_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_a94c0d3e6e72145977da15963e7eb2b4c_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -257,11 +284,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00039">39</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_ae0319bed835b9019d7e4a1713c49774f_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_test_u_i_script_ae0319bed835b9019d7e4a1713c49774f_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -287,6 +315,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00015">15</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a00a17ef6bbe9bb48b9364b628ab91467"></a>
@@ -308,6 +338,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00019">19</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 
 </div>
 </div>
@@ -331,6 +363,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00027">27</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae54fd499722b77289eef54d5636b1600"></a>
@@ -352,6 +386,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00016">16</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 
 </div>
 </div>
@@ -375,6 +411,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00026">26</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a56753980ec6de695306661f0db0de0c2"></a>
@@ -396,6 +434,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00025">25</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 
 </div>
 </div>
@@ -419,6 +459,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00024">24</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5e6511176673fa73f808b6c35b8ea57d"></a>
@@ -440,6 +482,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00014">14</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 
 </div>
 </div>
@@ -463,6 +507,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00018">18</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae65c2381a03dd1ed06f917020a700c9b"></a>
@@ -484,6 +530,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00017">17</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
 
 </div>
 </div>
@@ -507,15 +555,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_test_u_i_script_8cs_source.html#l00020">20</a> of file <a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Anson/Scripts/<a class="el" href="_test_u_i_script_8cs.html">TestUIScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Anson/Scripts/<a class="el" href="_test_u_i_script_8cs_source.html">TestUIScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_test_u_i_script.html">TestUIScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

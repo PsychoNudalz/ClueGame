@@ -234,7 +234,7 @@ var sectionId = 'dynsection-1';
 <!-- Node5 -->
 <g id="node5" class="node">
 <title>Node5</title>
-<g id="a_node5"><a xlink:href="class_weapon_token_script.html" target="_top" xlink:title="Class to manage the weapon tokens">
+<g id="a_node5"><a xlink:href="class_weapon_token_script.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1043,-1117 1043,-1310 1228,-1310 1228,-1117 1043,-1117"/>
 <text text-anchor="middle" x="1135.5" y="-1296.4" font-family="Helvetica,sans-Serif" font-size="12.00">WeaponTokenScript</text>
 <polyline fill="none" stroke="black" points="1043,-1289 1228,-1289 "/>

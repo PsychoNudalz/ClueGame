@@ -51,7 +51,7 @@
 <area shape="rect" id="node61" href="$class_user_input_control_script.html" title="this is for handling the cursor controls" alt="" coords="272,2565,451,2595"/>
 <area shape="rect" id="node62" href="$class_user_selection_script.html" title="for setting the tile effect the cursor is hovering on" alt="" coords="281,2619,442,2648"/>
 <area shape="rect" id="node63" href="$class_weapon_slot_test_script.html" title="Class to run weapon slot tests in room test scene" alt="" coords="272,2672,451,2701"/>
-<area shape="rect" id="node64" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="279,2725,444,2755"/>
+<area shape="rect" id="node64" href="$class_weapon_token_script.html" title=" " alt="" coords="279,2725,444,2755"/>
 <area shape="rect" id="node65" href="$class_win_screen_script.html" title="Script to create the win screnn" alt="" coords="291,2779,431,2808"/>
 <area shape="rect" id="node10" href="$class_free_roll_board_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="595,219,786,248"/>
 <area shape="rect" id="node11" href="$class_free_suggestion_tile_script.html" title="Script for the free suggestion board tile Gameobject" alt="" coords="591,272,791,301"/>

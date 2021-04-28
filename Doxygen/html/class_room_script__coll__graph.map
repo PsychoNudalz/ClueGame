@@ -1,6 +1,6 @@
 <map id="RoomScript" name="RoomScript">
 <area shape="rect" id="node1" title="Script for the room Gameobject" alt="" coords="1307,140,1614,555"/>
-<area shape="rect" id="node4" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="912,1009,1158,1267"/>
+<area shape="rect" id="node4" href="$class_weapon_token_script.html" title=" " alt="" coords="912,1009,1158,1267"/>
 <area shape="rect" id="node5" href="$class_shortcut_board_tile_script.html" title="Class for the Shortcut board tile Gameobject" alt="" coords="1186,2819,1374,3025"/>
 <area shape="rect" id="node8" href="$class_board_manager.html" title="Script to manage the board items" alt="" coords="1620,1548,1879,2049"/>
 <area shape="rect" id="node10" href="$class_player_token_script.html" title="For handling the player/ character&#39;s token" alt="" coords="1653,3125,1910,3783"/>

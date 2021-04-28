@@ -16,7 +16,8 @@ Inheritance diagram for Room\+Script\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Room\+Script\+:\nopagebreak
+Collaboration diagram for Room\+Script\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -32,7 +33,7 @@ bool \mbox{\hyperlink{class_room_script_a6bf61204f9a96ad3bf5e377b9938809d}{Weapo
 \begin{DoxyCompactList}\small\item\em Are weapon slots empty \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_room_script_ae66d7fcde6ab8dcbb746309fd6550ae5}{Has\+Shortcut}} ()
 \begin{DoxyCompactList}\small\item\em Does the room have a shortcut tile \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_room_script_ae49a5bb396aa0c894fb1686b92f879da}{Move\+Weapon\+To\+Room}} (\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} weapon\+Enum)
+void \mbox{\hyperlink{class_room_script_ae49a5bb396aa0c894fb1686b92f879da}{Move\+Weapon\+To\+Room}} (\mbox{\hyperlink{_weapon_enum_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} weapon\+Enum)
 \begin{DoxyCompactList}\small\item\em Move a weapon to the room \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_room_script_a4a19c52c114612c19ae2580768d94859}{Move\+Player\+To\+Room}} (\mbox{\hyperlink{_character_enum_8cs_abfe12224ce0d85969c19cff2ff86eb92}{Character\+Enum}} character\+Enum)
 \begin{DoxyCompactList}\small\item\em Move a player to the room \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -83,6 +84,10 @@ Script for the room Gameobject
 
 
 
+Definition at line 9 of file Room\+Script.\+cs.
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_room_script_a1895b83af8262f67e7cc5f12963e799f}\label{class_room_script_a1895b83af8262f67e7cc5f12963e799f}} 
 \index{RoomScript@{RoomScript}!FindClosestEntryTile@{FindClosestEntryTile}}
@@ -102,6 +107,10 @@ Returns the closest entry tile to target exit tile
 \begin{DoxyReturn}{Returns}
 Entry tile closest to target tile
 \end{DoxyReturn}
+
+
+Definition at line 270 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_afdf6318e292ff6c9da3002950c5dd498}\label{class_room_script_afdf6318e292ff6c9da3002950c5dd498}} 
 \index{RoomScript@{RoomScript}!GetEntryTiles@{GetEntryTiles}}
 \index{GetEntryTiles@{GetEntryTiles}!RoomScript@{RoomScript}}
@@ -115,6 +124,10 @@ Gets all entry tiles
 \begin{DoxyReturn}{Returns}
 An array of Entry\+Tiles
 \end{DoxyReturn}
+
+
+Definition at line 67 of file Room\+Script.\+cs.
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -140,6 +153,10 @@ Get Room Enum from string
 \begin{DoxyReturn}{Returns}
 Room Enum represented by string entered -\/ throws exception if room not found
 \end{DoxyReturn}
+
+
+Definition at line 86 of file Room\+Script.\+cs.
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -156,6 +173,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 Set shortcut tile of script 
+
+
+
+Definition at line 52 of file Room\+Script.\+cs.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -177,6 +198,10 @@ Does the room have a shortcut tile
 \begin{DoxyReturn}{Returns}
 true if room has shortcut, false if not
 \end{DoxyReturn}
+
+
+Definition at line 290 of file Room\+Script.\+cs.
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -199,6 +224,10 @@ Move a player to the room
 {\em character\+Enum} & Player to move\\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 321 of file Room\+Script.\+cs.
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -217,7 +246,7 @@ Here is the caller graph for this function\+:\nopagebreak
 \index{RoomScript@{RoomScript}!MoveWeaponToRoom@{MoveWeaponToRoom}}
 \index{MoveWeaponToRoom@{MoveWeaponToRoom}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{MoveWeaponToRoom()}{MoveWeaponToRoom()}}
-{\footnotesize\ttfamily void Room\+Script.\+Move\+Weapon\+To\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{weapon\+Enum }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Room\+Script.\+Move\+Weapon\+To\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_enum_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{weapon\+Enum }\end{DoxyParamCaption})}
 
 
 
@@ -228,6 +257,10 @@ Move a weapon to the room
 {\em weapon\+Enum} & Weapon to move\\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 299 of file Room\+Script.\+cs.
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -244,6 +277,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 Set required variables 
+
+
+
+Definition at line 41 of file Room\+Script.\+cs.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -265,6 +302,10 @@ Are weapon slots empty
 \begin{DoxyReturn}{Returns}
 true if slots empty, false if not
 \end{DoxyReturn}
+
+
+Definition at line 252 of file Room\+Script.\+cs.
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -288,11 +329,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{entryTiles}{entryTiles}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_entry_board_tile_script}{Room\+Entry\+Board\+Tile\+Script}} \mbox{[}$\,$\mbox{]} Room\+Script.\+entry\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 12 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_a3c06edea2f04e15a6341bac865d41292}\label{class_room_script_a3c06edea2f04e15a6341bac865d41292}} 
 \index{RoomScript@{RoomScript}!playerSlots@{playerSlots}}
 \index{playerSlots@{playerSlots}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{playerSlots}{playerSlots}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_player_slot}{Room\+Player\+Slot}} \mbox{[}$\,$\mbox{]} Room\+Script.\+player\+Slots\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file Room\+Script.\+cs.
 
 \mbox{\Hypertarget{class_room_script_a454bed36e9e89a448019f1ff728a3843}\label{class_room_script_a454bed36e9e89a448019f1ff728a3843}} 
 \index{RoomScript@{RoomScript}!room@{room}}
@@ -300,17 +349,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{room}{room}}
 {\footnotesize\ttfamily \mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} Room\+Script.\+room\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 11 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_ac08fa602bc56d51925ce8da8bbcfd926}\label{class_room_script_ac08fa602bc56d51925ce8da8bbcfd926}} 
 \index{RoomScript@{RoomScript}!shortcutTile@{shortcutTile}}
 \index{shortcutTile@{shortcutTile}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{shortcutTile}{shortcutTile}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_shortcut_board_tile_script}{Shortcut\+Board\+Tile\+Script}} Room\+Script.\+shortcut\+Tile\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 15 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_a5be47eef483e41f634b329c52201342e}\label{class_room_script_a5be47eef483e41f634b329c52201342e}} 
 \index{RoomScript@{RoomScript}!weaponSlots@{weaponSlots}}
 \index{weaponSlots@{weaponSlots}!RoomScript@{RoomScript}}
 \doxysubsubsection{\texorpdfstring{weaponSlots}{weaponSlots}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room_weapon_slot}{Room\+Weapon\+Slot}} \mbox{[}$\,$\mbox{]} Room\+Script.\+weapon\+Slots\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Room\+Script.\+cs.
 
 
 
@@ -325,6 +386,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Getter for entrytiles 
 
+
+
+Definition at line 35 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_a372d30201f17e8fc556c1c6c56654a8a}\label{class_room_script_a372d30201f17e8fc556c1c6c56654a8a}} 
 \index{RoomScript@{RoomScript}!PlayerSlots@{PlayerSlots}}
 \index{PlayerSlots@{PlayerSlots}!RoomScript@{RoomScript}}
@@ -334,6 +399,10 @@ Getter for entrytiles
 
 
 Getter for Player\+Slots 
+
+
+
+Definition at line 23 of file Room\+Script.\+cs.
 
 \mbox{\Hypertarget{class_room_script_abea0dd20f0404de1e9999513504495ca}\label{class_room_script_abea0dd20f0404de1e9999513504495ca}} 
 \index{RoomScript@{RoomScript}!Room@{Room}}
@@ -345,6 +414,10 @@ Getter for Player\+Slots
 
 Getter and setter for Room Type 
 
+
+
+Definition at line 19 of file Room\+Script.\+cs.
+
 \mbox{\Hypertarget{class_room_script_a6876f9e9985e7250a598a606c8a18239}\label{class_room_script_a6876f9e9985e7250a598a606c8a18239}} 
 \index{RoomScript@{RoomScript}!ShortcutTile@{ShortcutTile}}
 \index{ShortcutTile@{ShortcutTile}!RoomScript@{RoomScript}}
@@ -354,6 +427,10 @@ Getter and setter for Room Type
 
 
 Getter for Shortcut tile 
+
+
+
+Definition at line 27 of file Room\+Script.\+cs.
 
 \mbox{\Hypertarget{class_room_script_a9b0186c5075c99ecb43ed7e4f7f9801d}\label{class_room_script_a9b0186c5075c99ecb43ed7e4f7f9801d}} 
 \index{RoomScript@{RoomScript}!WeaponSlots@{WeaponSlots}}
@@ -367,6 +444,10 @@ Getter for weapon\+Slots
 
 
 
+Definition at line 31 of file Room\+Script.\+cs.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Danny/\+Scripts/\mbox{\hyperlink{_room_script_8cs}{Room\+Script.\+cs}}\end{DoxyCompactItemize}
+D\+:/\+One\+Drive -\/ University of Sussex/\+Programming/\+Unity/\+\_\+\+University/\+Clue\+Game/\+Assets/\+Danny/\+Scripts/\mbox{\hyperlink{_room_script_8cs}{Room\+Script.\+cs}}\end{DoxyCompactItemize}

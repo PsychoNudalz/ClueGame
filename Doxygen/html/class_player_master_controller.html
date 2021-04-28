@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_player_master_controller.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -78,8 +98,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for PlayerMasterController:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for PlayerMasterController:</div>
@@ -177,6 +196,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Master controller for the player (character) it acts as a wrapper for the player to communicate with other controllers or managers and vis versa to avoid super spaghetii code </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00012">12</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab42ac35f631ad5126bed911bbcd8383f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab42ac35f631ad5126bed911bbcd8383f">&#9670;&nbsp;</a></span>AddCard()</h2>
@@ -202,11 +223,12 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if a card from cs is in the deck already</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00131">131</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph.svg" width="519" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_ab42ac35f631ad5126bed911bbcd8383f_cgraph.svg" width="519" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -234,6 +256,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00027">27</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
+
 </div>
 </div>
 <a id="aa777652a6197abe043a097ce3a1201b4"></a>
@@ -260,11 +284,12 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the player can move</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00189">189</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph.svg" width="510" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_aa777652a6197abe043a097ce3a1201b4_cgraph.svg" width="510" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -286,17 +311,17 @@ Here is the call graph for this function:</div>
 
 <p>check if the player can take a short cut </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00074">74</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a281d37e414bc17c9441964104f039b4a_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -317,11 +342,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>clear the tile the token was on </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00246">246</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_afa765f55be7e1a4593f5e11ad2abc0fb_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -349,11 +375,12 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00175">175</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_ac150dd296b7ff1b7b5a856cbdf5af8bf_cgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -374,11 +401,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>eliminate player </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00271">271</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0dae7cbe3c8b1c8bcb5ca694d9815836_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -407,17 +435,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The current player controller and a list of cards that matched the cards to be found</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00157">157</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph.svg" width="523" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_cgraph.svg" width="523" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph.svg" width="524" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a2f3000f8cf5edfbfc03b6a8bce6cf06c_icgraph.svg" width="524" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -436,11 +464,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00089">89</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a12c91851433777ae557a71d9f9a855f0_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -459,11 +488,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00223">223</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0447a8a21b5c0f2c94f9d27e0bcd0830_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -482,11 +512,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00136">136</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a0a7dd34344c455ef5a0d84c2f7c4a4d6_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -508,11 +539,12 @@ Here is the caller graph for this function:</div>
 
 <p>Get current grip position </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00102">102</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph.svg" width="623" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_aa139354307a94ed318c4cbe947434e52_cgraph.svg" width="623" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -534,11 +566,12 @@ Here is the call graph for this function:</div>
 
 <p>Get the current tile the token is on </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00110">110</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph.svg" width="100%" height="570"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a6e9a15dbaf465a0477ab5bab27570bde_icgraph.svg" width="100%" height="570"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -557,11 +590,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00297">297</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph.svg" width="100%" height="409"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4d2390b678a0d24484551a62a5332c75_icgraph.svg" width="100%" height="409"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -584,6 +618,8 @@ Here is the caller graph for this function:</div>
 <p>check if the player is eleminated </p>
 <dl class="section return"><dt>Returns</dt><dd>is the player eliminated</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00264">264</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
+
 </div>
 </div>
 <a id="a4270ffe6f17cefe9bb15c82c74678603"></a>
@@ -603,17 +639,17 @@ Here is the caller graph for this function:</div>
 
 <p>check if the player token is still moving. returns true if the token is moving to a new tile or if the token is moving in to a room </p>
 <dl class="section return"><dt>Returns</dt><dd>true if it the token is moving</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00282">282</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph.svg" width="563" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_cgraph.svg" width="563" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a4270ffe6f17cefe9bb15c82c74678603_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -641,17 +677,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00198">198</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9b23c4d50fabbc44dbba2b0db542efce_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -679,11 +715,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00237">237</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a62abd30ea3ce210f4a120b4462fccede_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -712,17 +749,17 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the list contains the card to be removed</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00292">292</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a16dbaeb841ba29cdc8b7cb3b3bc86d99_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -750,11 +787,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00083">83</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph.svg" width="578" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a9f294b7820f8de277ca1e38d47f73b79_cgraph.svg" width="578" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -774,11 +812,12 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00228">228</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a31af976c4da1ec6cab348dce10be98f7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -799,17 +838,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>for initialising the player </p>
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00045">45</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph.svg" width="642" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_cgraph.svg" width="642" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a292e03d361cb54e21a038cba42902b7e_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -828,11 +867,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00094">94</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_player_master_controller_a59a900c17a29aece6fab552e723e22a6_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -858,6 +898,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00023">23</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
+
 </div>
 </div>
 <a id="a49c264905eb27bac2e66121d4ec487eb"></a>
@@ -871,6 +913,8 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00014">14</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 
 </div>
 </div>
@@ -894,6 +938,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00019">19</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
+
 </div>
 </div>
 <a id="a609753c224c7c2dc65d1c84bf9ad066d"></a>
@@ -915,6 +961,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00018">18</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
 
 </div>
 </div>
@@ -939,15 +987,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_player_master_controller_8cs_source.html#l00025">25</a> of file <a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Anson/Scripts/<a class="el" href="_player_master_controller_8cs.html">PlayerMasterController.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Anson/Scripts/<a class="el" href="_player_master_controller_8cs_source.html">PlayerMasterController.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_player_master_controller.html">PlayerMasterController</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

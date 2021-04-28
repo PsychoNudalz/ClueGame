@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_notebook_test_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -75,8 +95,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for NotebookTestScript:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script__inherit__graph.svg" width="187" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script__inherit__graph.svg" width="187" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for NotebookTestScript:</div>
@@ -116,6 +135,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for the Notebook test scene </p>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00009">9</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9b8ec4a7586c8516aba4d8f684a3f19d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b8ec4a7586c8516aba4d8f684a3f19d">&#9670;&nbsp;</a></span>GetCharacterString()</h2>
@@ -142,17 +163,17 @@ Private Attributes</h2></td></tr>
 
 <p>Get character notebook text </p>
 <dl class="section return"><dt>Returns</dt><dd>Character statuses</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00053">53</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a9b8ec4a7586c8516aba4d8f684a3f19d_cgraph.svg" width="627" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a9b8ec4a7586c8516aba4d8f684a3f19d_cgraph.svg" width="627" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a9b8ec4a7586c8516aba4d8f684a3f19d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a9b8ec4a7586c8516aba4d8f684a3f19d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -182,17 +203,17 @@ Here is the caller graph for this function:</div>
 
 <p>Get Room notebook text </p>
 <dl class="section return"><dt>Returns</dt><dd>Room statuses</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00084">84</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a932234219a6c879897ab5b20fb6574fc_cgraph.svg" width="600" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a932234219a6c879897ab5b20fb6574fc_cgraph.svg" width="600" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a932234219a6c879897ab5b20fb6574fc_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a932234219a6c879897ab5b20fb6574fc_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -222,17 +243,17 @@ Here is the caller graph for this function:</div>
 
 <p>Get weapon notebook text </p>
 <dl class="section return"><dt>Returns</dt><dd>Weapon statuses</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00070">70</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_adb07ae16fb57bee560aae3aab7f3bcbf_cgraph.svg" width="606" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_adb07ae16fb57bee560aae3aab7f3bcbf_cgraph.svg" width="606" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_adb07ae16fb57bee560aae3aab7f3bcbf_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_adb07ae16fb57bee560aae3aab7f3bcbf_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -261,17 +282,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Update player reference then update all text strings </p>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00041">41</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a2fe069756e281210beaa15440a9bb259_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a2fe069756e281210beaa15440a9bb259_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a2fe069756e281210beaa15440a9bb259_icgraph.svg" width="558" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_a2fe069756e281210beaa15440a9bb259_icgraph.svg" width="558" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -300,11 +321,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>If current player is set then update output texts </p>
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00019">19</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_af2e6900a55e51830e7d7297fd5cf3453_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_notebook_test_script_af2e6900a55e51830e7d7297fd5cf3453_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -330,6 +352,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00011">11</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a635bc11f0418592a7671ab4a29e377ba"></a>
@@ -351,6 +375,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00014">14</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
 
 </div>
 </div>
@@ -374,6 +400,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="aeedaa78ed6615ac9360aca5facd908b8"></a>
@@ -396,15 +424,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_notebook_test_script_8cs_source.html#l00013">13</a> of file <a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_notebook_test_script_8cs.html">NotebookTestScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_notebook_test_script_8cs_source.html">NotebookTestScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_notebook_test_script.html">NotebookTestScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -12,7 +12,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="Class to manage the weapon tokens">
+<g id="a_node1"><a xlink:title=" ">
 <polygon fill="#bfbfbf" stroke="black" points="620.93,-5252.5 620.93,-5445.5 805.93,-5445.5 805.93,-5252.5 620.93,-5252.5"/>
 <text text-anchor="middle" x="713.43" y="-5431.9" font-family="Helvetica,sans-Serif" font-size="12.00">WeaponTokenScript</text>
 <polyline fill="none" stroke="black" points="620.93,-5424.5 805.93,-5424.5 "/>

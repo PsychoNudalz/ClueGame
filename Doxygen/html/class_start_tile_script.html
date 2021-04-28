@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_start_tile_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -77,8 +97,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for StartTileScript:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for StartTileScript:</div>
@@ -162,6 +181,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for the start tile Gameobject </p>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00009">9</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adb37aacbbacb3f42f905f9e04792f318"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb37aacbbacb3f42f905f9e04792f318">&#9670;&nbsp;</a></span>Awake()</h2>
@@ -187,6 +208,8 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set required variables </p>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00018">18</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -224,17 +247,17 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00039">39</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a33514048a06840acdadc966c14cef503_cgraph.svg" width="480" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a33514048a06840acdadc966c14cef503_cgraph.svg" width="480" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a33514048a06840acdadc966c14cef503_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a33514048a06840acdadc966c14cef503_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -262,11 +285,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00049">49</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_ad0e187307b7edbb14da5d7bd580f411c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_ad0e187307b7edbb14da5d7bd580f411c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -302,11 +326,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00028">28</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a478e37b4e8befbb49b5729b3362b1f4c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_start_tile_script_a478e37b4e8befbb49b5729b3362b1f4c_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -328,6 +353,8 @@ Here is the caller graph for this function:</div>
 
 <p>Overidden ToString Method </p>
 <dl class="section return"><dt>Returns</dt><dd>Description of the tile</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00059">59</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -352,6 +379,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00011">11</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5ec805181dbf77915453514c85a397a7"></a>
@@ -373,6 +402,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -397,15 +428,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_start_tile_script_8cs_source.html#l00013">13</a> of file <a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_start_tile_script_8cs.html">StartTileScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_start_tile_script_8cs_source.html">StartTileScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_start_tile_script.html">StartTileScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_board_builder.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -75,8 +95,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for BoardBuilder:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for BoardBuilder:</div>
@@ -202,6 +221,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Method to create the game board from a .csv file </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00009">9</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a40848d7394ead9e79f4f2dad2d7756b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40848d7394ead9e79f4f2dad2d7756b8">&#9670;&nbsp;</a></span>Awake()</h2>
@@ -225,11 +246,12 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00059">59</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a40848d7394ead9e79f4f2dad2d7756b8_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -258,17 +280,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Build the board using various helper methods </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00152">152</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph.svg" width="100%" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_cgraph.svg" width="100%" height="530"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph.svg" width="644" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3a24e59815a2273a921875c2cb7781f2_icgraph.svg" width="644" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -305,17 +327,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00502">502</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a3e79e20c71a20b8e2feb24d83106ebdb_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -369,11 +391,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00353">353</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a39010ec9af85bdbe95514a26a2d8aba6_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -402,17 +425,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Randomly replace required number of general tiles with FreeRoll Tiles </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00469">469</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a1ce7b540b58b1e6fde74e064107ae954_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -441,17 +464,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Randomly replace required number of general tiles with FreeAccusation Tiles </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00438">438</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aeeca1094dc5e50c5612bba9336efd9d3_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -505,11 +528,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00369">369</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a491ed54feb27cf486245a500c16ff310_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -577,17 +601,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00265">265</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph.svg" width="608" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_cgraph.svg" width="608" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a03451888fabe0fefe9bb547dd510ac1d_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -648,17 +672,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00235">235</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph.svg" width="630" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_cgraph.svg" width="630" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa03504edb607b14737199d2e66b4ce07_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -719,17 +743,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00289">289</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_aa37fc56697e202c34e1f8a1ee3677ea2_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -758,11 +782,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Instantiate all weapon tokens </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00423">423</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a9935d1e9f5b2286d246e38151ee313eb_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -791,11 +816,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Create a 2d array from the .csv file to build the board from </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00126">126</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_ac94d9474a9d66a0748a402c743a22cf7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -824,17 +850,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Method to create the board, initialise and place all items and pass references to board manager </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00067">67</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph.svg" width="400" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_builder_a82e09ea29b1d031cfe2fa3b444c12c99_icgraph.svg" width="400" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -863,11 +889,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Load all prefabs from resources folder </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00093">93</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_ab340fc9336c3174138bfb6b2f3b31c37_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -896,17 +923,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Randomly place Free roll / accusation tiles. </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00222">222</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_cgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_builder_a7a499abdc0c02d659ea6fee6e7836f15_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -932,6 +959,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00033">33</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a23b769419783556b25837c1e0610ed02"></a>
@@ -953,6 +982,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00034">34</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -976,6 +1007,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00017">17</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1da04c8bd686938f07acb6fdc2b64aa3"></a>
@@ -997,6 +1030,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00057">57</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1020,6 +1055,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00045">45</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a56d1e95b95a03bc8ce9c44af1b711bce"></a>
@@ -1041,6 +1078,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00046">46</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1064,6 +1103,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00056">56</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="ad71602b9fcdd084ccb23ca2becadfa9d"></a>
@@ -1085,6 +1126,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00035">35</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1108,6 +1151,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00036">36</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="afb736cb50a4ececfccc25d5a56421dad"></a>
@@ -1129,6 +1174,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00037">37</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1152,6 +1199,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00028">28</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="abb88577492a8bc4c4c8e40f98d4a2425"></a>
@@ -1173,6 +1222,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00054">54</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1196,6 +1247,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00029">29</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1aadd6db35237dcc81f7f9df8db06490"></a>
@@ -1217,6 +1270,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00055">55</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1240,6 +1295,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00024">24</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a21586d418e74568ab3e95b16b6a8ffa9"></a>
@@ -1261,6 +1318,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00051">51</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1284,6 +1343,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00038">38</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a8cb69d7e535e0900b6200fffb0add11c"></a>
@@ -1305,6 +1366,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00039">39</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1328,6 +1391,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00040">40</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5c00b1eb8c3051833730a273bbf8737f"></a>
@@ -1349,6 +1414,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00041">41</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1372,6 +1439,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00013">13</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0132c58af8523934fa222e061df8762e"></a>
@@ -1393,6 +1462,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00014">14</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1416,6 +1487,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00021">21</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="aea1aba1b6f52feba6c147970c922f2bf"></a>
@@ -1437,6 +1510,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00047">47</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1460,6 +1535,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00026">26</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5a36a45959838b704a88c9c685a4e51c"></a>
@@ -1481,6 +1558,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00049">49</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1504,6 +1583,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00050">50</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a8852142854b010000ad4199eedc77416"></a>
@@ -1525,6 +1606,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00027">27</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1548,6 +1631,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00052">52</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="adc2fe47aa5a4eef20330241cfd789e62"></a>
@@ -1569,6 +1654,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00025">25</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1592,6 +1679,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00048">48</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <a id="a4e959c519e3ad716056c66a994712e78"></a>
@@ -1613,6 +1702,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00042">42</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
 
 </div>
 </div>
@@ -1636,15 +1727,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_builder_8cs_source.html#l00053">53</a> of file <a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_board_builder_8cs.html">BoardBuilder.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_board_builder_8cs_source.html">BoardBuilder.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_board_builder.html">BoardBuilder</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
