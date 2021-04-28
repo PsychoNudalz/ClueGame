@@ -15,7 +15,7 @@
 <area shape="rect" id="node13" href="$class_room_entry_point.html" title="Class for the room entry point Gameobject" alt="" coords="3179,5448,3314,5533"/>
 <area shape="rect" id="node14" href="$class_room_script.html" title="Script for the room Gameobject" alt="" coords="2480,4448,2787,4863"/>
 <area shape="rect" id="node15" href="$class_room_weapon_slot.html" title="Script for the Room Weapon slot GameObject" alt="" coords="2664,6153,2891,6291"/>
-<area shape="rect" id="node16" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="2649,5361,2895,5620"/>
+<area shape="rect" id="node16" href="$class_weapon_token_script.html" title=" " alt="" coords="2649,5361,2895,5620"/>
 <area shape="rect" id="node18" href="$class_board_tile_script.html" title="Super class for all tiles" alt="" coords="2767,7183,2942,7528"/>
 <area shape="rect" id="node19" href="$class_board_tile_effect_handler_script.html" title="This handles the effects and shader on the tile" alt="" coords="3626,2396,3851,2585"/>
 <area shape="rect" id="node20" href="$class_board_manager.html" title="Script to manage the board items" alt="" coords="2232,6425,2491,6927"/>

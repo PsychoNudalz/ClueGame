@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_display_dice_value.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -75,14 +95,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for DisplayDiceValue:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_dice_value__inherit__graph.svg" width="158" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_display_dice_value__inherit__graph.svg" width="158" height="316"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for DisplayDiceValue:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_dice_value__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_dice_value__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
@@ -109,6 +127,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for <a class="el" href="class_dice.html" title="Script for the Dice Gameobject">Dice</a> test script </p>
+
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00008">8</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a703bcd20faf36f4b4e8d15f66b5b40a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a703bcd20faf36f4b4e8d15f66b5b40a9">&#9670;&nbsp;</a></span>Start()</h2>
@@ -134,6 +154,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set required variables </p>
+
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00019">19</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
 
 </div>
 </div>
@@ -161,11 +183,12 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set button interactable and update dice value text </p>
+
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00028">28</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_dice_value_a0f0f2e5d5a2ecc6e8530c82f897f5dba_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_display_dice_value_a0f0f2e5d5a2ecc6e8530c82f897f5dba_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -191,6 +214,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00014">14</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
+
 </div>
 </div>
 <a id="a77e595efac0a633855a44fd96ba79453"></a>
@@ -212,6 +237,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00013">13</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
 
 </div>
 </div>
@@ -235,6 +262,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00015">15</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
+
 </div>
 </div>
 <a id="a001d89f75cd5be30806ed9a990d9de1b"></a>
@@ -256,6 +285,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00012">12</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
 
 </div>
 </div>
@@ -279,15 +310,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_display_dice_value_8cs_source.html#l00011">11</a> of file <a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_display_dice_value_8cs.html">DisplayDiceValue.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_display_dice_value_8cs_source.html">DisplayDiceValue.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_display_dice_value.html">DisplayDiceValue</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

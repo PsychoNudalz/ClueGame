@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_die.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,14 +96,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Die:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die__inherit__graph.svg" width="162" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die__inherit__graph.svg" width="162" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Die:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -138,6 +156,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for the <a class="el" href="class_die.html" title="Script for the Die Gameobject">Die</a> Gameobject </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00009">9</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a390d46459637fd249926cda472255d84"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a390d46459637fd249926cda472255d84">&#9670;&nbsp;</a></span>CanResetDie()</h2>
@@ -156,11 +176,12 @@ Private Attributes</h2></td></tr>
 
 <p>Can the die be reset </p>
 <dl class="section return"><dt>Returns</dt><dd>trueif can be reset, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00097">97</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a390d46459637fd249926cda472255d84_icgraph.svg" width="100%" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a390d46459637fd249926cda472255d84_icgraph.svg" width="100%" height="579"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -189,17 +210,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set the current value of the die if on ground 0 if not. </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00117">117</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_cgraph.svg" width="403" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_cgraph.svg" width="403" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_icgraph.svg" width="323" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a69a9f7355c4b76e3fb34747a8ee97b8f_icgraph.svg" width="323" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -221,11 +242,12 @@ Here is the caller graph for this function:</div>
 
 <p>Get the value of the die </p>
 <dl class="section return"><dt>Returns</dt><dd>Current value of the die, 0 if not valid</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00133">133</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_ad1f02edcfdd486ab3da75162daab3570_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_ad1f02edcfdd486ab3da75162daab3570_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -254,11 +276,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Initialise <a class="el" href="class_die.html" title="Script for the Die Gameobject">Die</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00028">28</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_aa0a20a760742d16532e25f94f5e33395_icgraph.svg" width="250" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_aa0a20a760742d16532e25f94f5e33395_icgraph.svg" width="250" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -280,11 +303,12 @@ Here is the caller graph for this function:</div>
 
 <p>Is die ready to roll </p>
 <dl class="section return"><dt>Returns</dt><dd>true if ready to roll, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00088">88</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_af3f246c8772c932e4ed78d35aed2e8cd_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_af3f246c8772c932e4ed78d35aed2e8cd_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -305,11 +329,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reset <a class="el" href="class_die.html" title="Script for the Die Gameobject">Die</a> to original position </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00105">105</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_abc11c3d2bf0c0fba1555093eb5a8469e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_abc11c3d2bf0c0fba1555093eb5a8469e_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -338,17 +363,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Roll again in event of die getting stuck on edge </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00058">58</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_cgraph.svg" width="446" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_cgraph.svg" width="446" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_icgraph.svg" width="280" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_ab35c865f0a0084cf8741ea7bcfe1f9f7_icgraph.svg" width="280" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -369,17 +394,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Roll the die </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00067">67</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_cgraph.svg" width="279" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_cgraph.svg" width="279" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a4995ecb1a88aa7f1043ae71ba8aa3ef5_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -406,11 +431,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00020">20</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a80010ae1efa380a23ae3eb9596e37b0f_cgraph.svg" width="250" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_die_a80010ae1efa380a23ae3eb9596e37b0f_cgraph.svg" width="250" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -439,11 +465,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>If die has been thrown, landed and stopped moving then update die value. If die stops on edge then roll again </p>
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00041">41</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a1720b01fed5d5276f3761c944baa8126_cgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_die_a1720b01fed5d5276f3761c944baa8126_cgraph.svg" width="100%" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -469,6 +496,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00013">13</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
+
 </div>
 </div>
 <a id="afb744bd140e5da9e18eb78af14554bd8"></a>
@@ -490,6 +519,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00012">12</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 
 </div>
 </div>
@@ -513,6 +544,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00017">17</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
+
 </div>
 </div>
 <a id="afae4916aeba5de85bc01f515340da65f"></a>
@@ -534,6 +567,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00014">14</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
 
 </div>
 </div>
@@ -557,6 +592,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00016">16</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
+
 </div>
 </div>
 <a id="ac61642826101b36f0f03a1f5424d6764"></a>
@@ -579,15 +616,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_die_8cs_source.html#l00015">15</a> of file <a class="el" href="_die_8cs_source.html">Die.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_die_8cs.html">Die.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_die_8cs_source.html">Die.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_die.html">Die</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

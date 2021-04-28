@@ -11,7 +11,8 @@ Inheritance diagram for Card\+Manager\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Card\+Manager\+:\nopagebreak
+Collaboration diagram for Card\+Manager\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -29,7 +30,7 @@ bool \mbox{\hyperlink{class_card_manager_a3aa02d8bc476530b2e8e18019aa8a00e}{Is\+
 \begin{DoxyCompactList}\small\item\em Check if the cards passed matches the answer \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}{Deal\+Cards\+To\+Players}} ()
 \begin{DoxyCompactList}\small\item\em shuffles and deal the cards to players \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}{Find\+Card}} (\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} e)
+\mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}{Find\+Card}} (\mbox{\hyperlink{_weapon_enum_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}} e)
 \begin{DoxyCompactList}\small\item\em Looks for the specified weapon card \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_card}{Card}} \mbox{\hyperlink{class_card_manager_ae35708c4bc6d85edeb973da0a6e6903f}{Find\+Card}} (\mbox{\hyperlink{_room_enum_8cs_a069dbaf3daeaf12280213d54dcebeca2}{Room\+Enum}} e)
 \begin{DoxyCompactList}\small\item\em Looks for the specified room card \end{DoxyCompactList}\item 
@@ -61,6 +62,13 @@ List$<$ \mbox{\hyperlink{class_character_card}{Character\+Card}} $>$ \mbox{\hype
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file Card\+Manager.\+cs.
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}\label{class_card_manager_ad85dcb8e9907900f0e9082e7875ad484}} 
 \index{CardManager@{CardManager}!DealCardsToPlayers@{DealCardsToPlayers}}
@@ -71,6 +79,10 @@ List$<$ \mbox{\hyperlink{class_character_card}{Character\+Card}} $>$ \mbox{\hype
 
 
 shuffles and deal the cards to players 
+
+
+
+Definition at line 92 of file Card\+Manager.\+cs.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -97,6 +109,10 @@ Looks for the specified character card
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_card}{Card}} if exists else null
 \end{DoxyReturn}
+
+
+Definition at line 161 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_ae35708c4bc6d85edeb973da0a6e6903f}\label{class_card_manager_ae35708c4bc6d85edeb973da0a6e6903f}} 
 \index{CardManager@{CardManager}!FindCard@{FindCard}}
 \index{FindCard@{FindCard}!CardManager@{CardManager}}
@@ -115,11 +131,15 @@ Looks for the specified room card
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_card}{Card}} if exists else null
 \end{DoxyReturn}
+
+
+Definition at line 140 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}\label{class_card_manager_a124d7d9ab3a0e7c22ca64c15da76d4b1}} 
 \index{CardManager@{CardManager}!FindCard@{FindCard}}
 \index{FindCard@{FindCard}!CardManager@{CardManager}}
 \doxysubsubsection{\texorpdfstring{FindCard()}{FindCard()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Card\+Manager.\+Find\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_token_script_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{e }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card}{Card}} Card\+Manager.\+Find\+Card (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_weapon_enum_8cs_ab35243b8f31574b7bf08ddeda669451c}{Weapon\+Enum}}}]{e }\end{DoxyParamCaption})}
 
 
 
@@ -133,6 +153,10 @@ Looks for the specified weapon card
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_card}{Card}} if exists else null
 \end{DoxyReturn}
+
+
+Definition at line 120 of file Card\+Manager.\+cs.
+
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -153,6 +177,10 @@ Returns list of all cards
 \begin{DoxyReturn}{Returns}
 List of all cards
 \end{DoxyReturn}
+
+
+Definition at line 180 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_a6fd6b995d49e43483aa85d7b52fd56f9}\label{class_card_manager_a6fd6b995d49e43483aa85d7b52fd56f9}} 
 \index{CardManager@{CardManager}!GetAnswers@{GetAnswers}}
 \index{GetAnswers@{GetAnswers}!CardManager@{CardManager}}
@@ -166,6 +194,10 @@ Returns a list of 3 answer cards in order character, weapon, room;
 \begin{DoxyReturn}{Returns}
 List of answer cards
 \end{DoxyReturn}
+
+
+Definition at line 59 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_a246ee5512607a457900121c510a5e9f2}\label{class_card_manager_a246ee5512607a457900121c510a5e9f2}} 
 \index{CardManager@{CardManager}!Initialise@{Initialise}}
 \index{Initialise@{Initialise}!CardManager@{CardManager}}
@@ -175,6 +207,10 @@ List of answer cards
 
 
 Selects random answer cards and deal cards to players 
+
+
+
+Definition at line 25 of file Card\+Manager.\+cs.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -208,6 +244,10 @@ Check if the cards passed matches the answer
 \begin{DoxyReturn}{Returns}
 True if matches else false
 \end{DoxyReturn}
+
+
+Definition at line 72 of file Card\+Manager.\+cs.
+
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -231,11 +271,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{answers}{answers}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+answers}
 
+
+
+Definition at line 13 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_a31ae9f2e2cfe8acbde30626567a97e9d}\label{class_card_manager_a31ae9f2e2cfe8acbde30626567a97e9d}} 
 \index{CardManager@{CardManager}!characters@{characters}}
 \index{characters@{characters}!CardManager@{CardManager}}
 \doxysubsubsection{\texorpdfstring{characters}{characters}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_character_card}{Character\+Card}}$>$ Card\+Manager.\+characters\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 11 of file Card\+Manager.\+cs.
 
 \mbox{\Hypertarget{class_card_manager_ab5f6874ccc96cb71b81cdd1d46424d44}\label{class_card_manager_ab5f6874ccc96cb71b81cdd1d46424d44}} 
 \index{CardManager@{CardManager}!p@{p}}
@@ -243,11 +291,19 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{p}{p}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_player_master_controller}{Player\+Master\+Controller}} Card\+Manager.\+p}
 
+
+
+Definition at line 18 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_a2a60dd95ebf122d31bd5e0f2c526b21a}\label{class_card_manager_a2a60dd95ebf122d31bd5e0f2c526b21a}} 
 \index{CardManager@{CardManager}!playableCards@{playableCards}}
 \index{playableCards@{playableCards}!CardManager@{CardManager}}
 \doxysubsubsection{\texorpdfstring{playableCards}{playableCards}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+playable\+Cards}
+
+
+
+Definition at line 14 of file Card\+Manager.\+cs.
 
 \mbox{\Hypertarget{class_card_manager_a9978113cbba7789ba2c4efd4f02b1076}\label{class_card_manager_a9978113cbba7789ba2c4efd4f02b1076}} 
 \index{CardManager@{CardManager}!rooms@{rooms}}
@@ -255,17 +311,29 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{rooms}{rooms}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_room_card}{Room\+Card}}$>$ Card\+Manager.\+rooms\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Definition at line 10 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_ab05dfb92b4d5fdcb6c99023b0ccec27a}\label{class_card_manager_ab05dfb92b4d5fdcb6c99023b0ccec27a}} 
 \index{CardManager@{CardManager}!setOfcards@{setOfcards}}
 \index{setOfcards@{setOfcards}!CardManager@{CardManager}}
 \doxysubsubsection{\texorpdfstring{setOfcards}{setOfcards}}
 {\footnotesize\ttfamily List$<$List$<$\mbox{\hyperlink{class_card}{Card}}$>$ $>$ Card\+Manager.\+set\+Ofcards}
 
+
+
+Definition at line 16 of file Card\+Manager.\+cs.
+
 \mbox{\Hypertarget{class_card_manager_afbea4566292c82f137f4ca1ac4611a1d}\label{class_card_manager_afbea4566292c82f137f4ca1ac4611a1d}} 
 \index{CardManager@{CardManager}!test@{test}}
 \index{test@{test}!CardManager@{CardManager}}
 \doxysubsubsection{\texorpdfstring{test}{test}}
 {\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_card}{Card}}$>$ Card\+Manager.\+test}
+
+
+
+Definition at line 17 of file Card\+Manager.\+cs.
 
 \mbox{\Hypertarget{class_card_manager_aa5ca051f990450fa1e77f36d6ade4cf8}\label{class_card_manager_aa5ca051f990450fa1e77f36d6ade4cf8}} 
 \index{CardManager@{CardManager}!weapons@{weapons}}
@@ -275,6 +343,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
+Definition at line 9 of file Card\+Manager.\+cs.
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Nudalz/\+Documents/\+Unity\+Projects\+\_\+\+Fast/\+Clue\+Game/\+Assets/\+Tomasz/\+Scripts/\mbox{\hyperlink{_card_manager_8cs}{Card\+Manager.\+cs}}\end{DoxyCompactItemize}
+D\+:/\+One\+Drive -\/ University of Sussex/\+Programming/\+Unity/\+\_\+\+University/\+Clue\+Game/\+Assets/\+Tomasz/\+Scripts/\mbox{\hyperlink{_card_manager_8cs}{Card\+Manager.\+cs}}\end{DoxyCompactItemize}

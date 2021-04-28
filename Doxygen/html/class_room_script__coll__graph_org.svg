@@ -44,7 +44,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_weapon_token_script.html" target="_top" xlink:title="Class to manage the weapon tokens">
+<g id="a_node4"><a xlink:href="class_weapon_token_script.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="679.87,-4424 679.87,-4617 864.87,-4617 864.87,-4424 679.87,-4424"/>
 <text text-anchor="middle" x="772.37" y="-4603.4" font-family="Helvetica,sans-Serif" font-size="12.00">WeaponTokenScript</text>
 <polyline fill="none" stroke="black" points="679.87,-4596 864.87,-4596 "/>

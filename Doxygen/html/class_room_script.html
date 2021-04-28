@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_room_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -78,8 +98,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for RoomScript:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for RoomScript:</div>
@@ -99,7 +118,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae66d7fcde6ab8dcbb746309fd6550ae5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5">HasShortcut</a> ()</td></tr>
 <tr class="memdesc:ae66d7fcde6ab8dcbb746309fd6550ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the room have a shortcut tile  <a href="class_room_script.html#ae66d7fcde6ab8dcbb746309fd6550ae5">More...</a><br /></td></tr>
 <tr class="separator:ae66d7fcde6ab8dcbb746309fd6550ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49a5bb396aa0c894fb1686b92f879da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_room_script.html#ae49a5bb396aa0c894fb1686b92f879da">MoveWeaponToRoom</a> (<a class="el" href="_weapon_token_script_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a> weaponEnum)</td></tr>
+<tr class="memitem:ae49a5bb396aa0c894fb1686b92f879da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_room_script.html#ae49a5bb396aa0c894fb1686b92f879da">MoveWeaponToRoom</a> (<a class="el" href="_weapon_enum_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a> weaponEnum)</td></tr>
 <tr class="memdesc:ae49a5bb396aa0c894fb1686b92f879da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move a weapon to the room  <a href="class_room_script.html#ae49a5bb396aa0c894fb1686b92f879da">More...</a><br /></td></tr>
 <tr class="separator:ae49a5bb396aa0c894fb1686b92f879da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a19c52c114612c19ae2580768d94859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_room_script.html#a4a19c52c114612c19ae2580768d94859">MovePlayerToRoom</a> (<a class="el" href="_character_enum_8cs.html#abfe12224ce0d85969c19cff2ff86eb92">CharacterEnum</a> characterEnum)</td></tr>
@@ -157,6 +176,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script for the room Gameobject </p>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00009">9</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1895b83af8262f67e7cc5f12963e799f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1895b83af8262f67e7cc5f12963e799f">&#9670;&nbsp;</a></span>FindClosestEntryTile()</h2>
@@ -191,6 +212,8 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Entry tile closest to target tile</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00270">270</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="afdf6318e292ff6c9da3002950c5dd498"></a>
@@ -210,11 +233,12 @@ Private Attributes</h2></td></tr>
 
 <p>Gets all entry tiles </p>
 <dl class="section return"><dt>Returns</dt><dd>An array of EntryTiles</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00067">67</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_afdf6318e292ff6c9da3002950c5dd498_icgraph.svg" width="491" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_afdf6318e292ff6c9da3002950c5dd498_icgraph.svg" width="491" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -251,11 +275,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Room Enum represented by string entered - throws exception if room not found</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00086">86</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_a1747ef3091a32115e7bdbd53f5764a31_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_a1747ef3091a32115e7bdbd53f5764a31_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -284,11 +309,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set shortcut tile of script </p>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00052">52</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_aeef60b1341cc0a72587a8d5a1e5b7cfa_icgraph.svg" width="392" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_aeef60b1341cc0a72587a8d5a1e5b7cfa_icgraph.svg" width="392" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -310,11 +336,12 @@ Here is the caller graph for this function:</div>
 
 <p>Does the room have a shortcut tile </p>
 <dl class="section return"><dt>Returns</dt><dd>true if room has shortcut, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00290">290</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_ae66d7fcde6ab8dcbb746309fd6550ae5_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_ae66d7fcde6ab8dcbb746309fd6550ae5_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -342,17 +369,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00321">321</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a4a19c52c114612c19ae2580768d94859_cgraph.svg" width="612" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a4a19c52c114612c19ae2580768d94859_cgraph.svg" width="612" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_a4a19c52c114612c19ae2580768d94859_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_a4a19c52c114612c19ae2580768d94859_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -366,7 +393,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void RoomScript.MoveWeaponToRoom </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_weapon_token_script_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="_weapon_enum_8cs.html#ab35243b8f31574b7bf08ddeda669451c">WeaponEnum</a>&#160;</td>
           <td class="paramname"><em>weaponEnum</em></td><td>)</td>
           <td></td>
         </tr>
@@ -380,11 +407,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00299">299</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_ae49a5bb396aa0c894fb1686b92f879da_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_room_script_ae49a5bb396aa0c894fb1686b92f879da_icgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -413,11 +441,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set required variables </p>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00041">41</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_ac1f4ee4e0bcdd6c8de67ddce44725733_cgraph.svg" width="404" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_ac1f4ee4e0bcdd6c8de67ddce44725733_cgraph.svg" width="404" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -439,17 +468,17 @@ Here is the call graph for this function:</div>
 
 <p>Are weapon slots empty </p>
 <dl class="section return"><dt>Returns</dt><dd>true if slots empty, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00252">252</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a6bf61204f9a96ad3bf5e377b9938809d_cgraph.svg" width="554" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a6bf61204f9a96ad3bf5e377b9938809d_cgraph.svg" width="554" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a6bf61204f9a96ad3bf5e377b9938809d_icgraph.svg" width="584" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_room_script_a6bf61204f9a96ad3bf5e377b9938809d_icgraph.svg" width="584" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -475,6 +504,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a3c06edea2f04e15a6341bac865d41292"></a>
@@ -496,6 +527,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00013">13</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 
 </div>
 </div>
@@ -519,6 +552,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00011">11</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ac08fa602bc56d51925ce8da8bbcfd926"></a>
@@ -541,6 +576,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00015">15</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5be47eef483e41f634b329c52201342e"></a>
@@ -562,6 +599,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00014">14</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 
 </div>
 </div>
@@ -588,6 +627,8 @@ Here is the caller graph for this function:</div>
 
 <p>Getter for entrytiles </p>
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00035">35</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a372d30201f17e8fc556c1c6c56654a8a"></a>
@@ -611,6 +652,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Getter for PlayerSlots </p>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00023">23</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 
 </div>
 </div>
@@ -636,6 +679,8 @@ Here is the caller graph for this function:</div>
 
 <p>Getter and setter for Room Type </p>
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00019">19</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a6876f9e9985e7250a598a606c8a18239"></a>
@@ -659,6 +704,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Getter for Shortcut tile </p>
+
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00027">27</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
 
 </div>
 </div>
@@ -684,15 +731,21 @@ Here is the caller graph for this function:</div>
 
 <p>Getter for weaponSlots </p>
 
+<p class="definition">Definition at line <a class="el" href="_room_script_8cs_source.html#l00031">31</a> of file <a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_room_script_8cs.html">RoomScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_room_script_8cs_source.html">RoomScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_room_script.html">RoomScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

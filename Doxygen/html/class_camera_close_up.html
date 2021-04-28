@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_camera_close_up.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,14 +96,12 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for CameraCloseUp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up__inherit__graph.svg" width="210" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up__inherit__graph.svg" width="210" height="472"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for CameraCloseUp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -135,6 +153,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Script to control the camera close up shots </p>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00009">9</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5d9269db8992f56ba4929347e2dc6522"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d9269db8992f56ba4929347e2dc6522">&#9670;&nbsp;</a></span>ClearCloseUp() <span class="overload">[1/2]</span></h2>
@@ -152,6 +172,8 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear camera close up </p>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00091">91</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 
 </div>
 </div>
@@ -178,17 +200,17 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00083">83</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ad31062bdf359a453fc85ebdd71fa1bae_cgraph.svg" width="584" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ad31062bdf359a453fc85ebdd71fa1bae_cgraph.svg" width="584" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ad31062bdf359a453fc85ebdd71fa1bae_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ad31062bdf359a453fc85ebdd71fa1bae_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -224,11 +246,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00100">100</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ae902d2ccdf969212e0cb84f638f68851_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ae902d2ccdf969212e0cb84f638f68851_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -265,17 +288,17 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Location of target close up</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00058">58</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a684c25133060e7ff6e1d462b0504c590_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a684c25133060e7ff6e1d462b0504c590_cgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a684c25133060e7ff6e1d462b0504c590_icgraph.svg" width="536" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a684c25133060e7ff6e1d462b0504c590_icgraph.svg" width="536" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -303,17 +326,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00200">200</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_aee634e08987ea079413fd67b737b2c5d_cgraph.svg" width="587" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_aee634e08987ea079413fd67b737b2c5d_cgraph.svg" width="587" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_aee634e08987ea079413fd67b737b2c5d_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_aee634e08987ea079413fd67b737b2c5d_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -341,11 +364,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00074">74</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a1d70afa00d6f67abee342c029af88fcf_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a1d70afa00d6f67abee342c029af88fcf_icgraph.svg" width="100%" height="450"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -373,6 +397,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00019">19</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2a7e3969d2c696d94a6f0f6bf8b3c56a"></a>
@@ -399,17 +425,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>For testing camera close ups </p>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00109">109</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a_cgraph.svg" width="543" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a_cgraph.svg" width="543" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a_icgraph.svg" width="508" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_a2a7e3969d2c696d94a6f0f6bf8b3c56a_icgraph.svg" width="508" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -438,11 +464,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>If test keys = true - numpad / numbers control close ups lerp camera position towards close up point set </p>
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00041">41</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ab267d3e10045453ca402ae9c82069a01_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_camera_close_up_ab267d3e10045453ca402ae9c82069a01_cgraph.svg" width="100%" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -468,6 +495,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00016">16</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae727e93b95f1bfa38bbbc471828e76c4"></a>
@@ -489,6 +518,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00015">15</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 
 </div>
 </div>
@@ -512,6 +543,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00014">14</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
+
 </div>
 </div>
 <a id="a9d82764c57b8d9a0a01bc986cae7894f"></a>
@@ -533,6 +566,8 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00013">13</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
 
 </div>
 </div>
@@ -556,6 +591,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00011">11</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
+
 </div>
 </div>
 <a id="a755eada6a26c2769c7bc54e16036e6dd"></a>
@@ -578,15 +615,21 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_camera_close_up_8cs_source.html#l00012">12</a> of file <a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Danny/Scripts/<a class="el" href="_camera_close_up_8cs.html">CameraCloseUp.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Danny/Scripts/<a class="el" href="_camera_close_up_8cs_source.html">CameraCloseUp.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_camera_close_up.html">CameraCloseUp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

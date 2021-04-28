@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_board_tile_script.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -78,8 +98,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for BoardTileScript:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <div class="dynheader">
 Collaboration diagram for BoardTileScript:</div>
@@ -151,6 +170,8 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Super class for all tiles </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00010">10</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac2a8e986f44ea316fb5340cdd75e02e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2a8e986f44ea316fb5340cdd75e02e4">&#9670;&nbsp;</a></span>CanMove()</h2>
@@ -169,17 +190,17 @@ Private Attributes</h2></td></tr>
 
 <p>check if the player can move to this tile </p>
 <dl class="section return"><dt>Returns</dt><dd>if the player can move to this tile</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00120">120</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_cgraph.svg" width="460" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_cgraph.svg" width="460" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_ac2a8e986f44ea316fb5340cdd75e02e4_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -208,17 +229,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>disable the select effect on the tile </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00043">43</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_cgraph.svg" width="574" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_cgraph.svg" width="574" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a58615feb64c22a128cc22b7e0276ad5f_icgraph.svg" width="100%" height="370"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -239,6 +260,8 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Get neighbouring tiles </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00111">111</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -273,17 +296,17 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00068">68</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_cgraph.svg" width="600" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_cgraph.svg" width="600" height="94"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a3ff1d3c491fe4d7e421a624ac0b5be6f_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -312,11 +335,12 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>initialise and finding the needed componenets for the tile includes boardTileEffectHandler, boardManager </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00034">34</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a1b7d89743e911864de248e4176266acc_icgraph.svg" width="382" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a1b7d89743e911864de248e4176266acc_icgraph.svg" width="382" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -346,11 +370,12 @@ Here is the caller graph for this function:</div>
 
 <p>check if tile is empty </p>
 <dl class="section return"><dt>Returns</dt><dd>return if tile is empty</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00103">103</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_aeee5122d5e5b79867f6538ec4d597b6a_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -379,17 +404,17 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>enable the select effect on the tile </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00054">54</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_cgraph.svg" width="562" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_cgraph.svg" width="562" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a8fe04841788e895cfe9a60e1d513f9c7_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -425,11 +450,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00095">95</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a6257d1f00b3732f6d61a4d98b445890c_icgraph.svg" width="100%" height="470"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -456,11 +482,12 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00024">24</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_abbea0c7619d65289a240de437b5712a0_cgraph.svg" width="382" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_abbea0c7619d65289a240de437b5712a0_cgraph.svg" width="382" height="40"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -479,11 +506,12 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00131">131</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_board_tile_script_a01015e05f9a294256fdd69ab98f3b136_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -509,6 +537,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00016">16</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a00b8a2155487e7e480ef2d6bdeaa5666"></a>
@@ -530,6 +560,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00014">14</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -553,6 +585,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00012">12</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="ae74e713cd21a6f2588a446cfbd3add6f"></a>
@@ -575,6 +609,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00015">15</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1ad513bb8f7f7875d8264f89b385be4d"></a>
@@ -596,6 +632,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00013">13</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -620,6 +658,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00021">21</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0930d5afaf31dc0a769a845db8526c99"></a>
@@ -641,6 +681,8 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00018">18</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
 
 </div>
 </div>
@@ -664,6 +706,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00020">20</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <a id="a92c8ccf4117ebf04fecd7450e95e194f"></a>
@@ -686,15 +730,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_board_tile_script_8cs_source.html#l00019">19</a> of file <a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Nudalz/Documents/UnityProjects_Fast/ClueGame/Assets/Anson/Scripts/<a class="el" href="_board_tile_script_8cs.html">BoardTileScript.cs</a></li>
+<li>D:/OneDrive - University of Sussex/Programming/Unity/_University/ClueGame/Assets/Anson/Scripts/<a class="el" href="_board_tile_script_8cs_source.html">BoardTileScript.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_board_tile_script.html">BoardTileScript</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

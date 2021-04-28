@@ -1,7 +1,7 @@
 <map id="WeaponSlotTestScript" name="WeaponSlotTestScript">
 <area shape="rect" id="node1" title="Class to run weapon slot tests in room test scene" alt="" coords="340,1940,554,2112"/>
 <area shape="rect" id="node2" title=" " alt="" coords="1923,5,2054,91"/>
-<area shape="rect" id="node3" href="$class_weapon_token_script.html" title="Class to manage the weapon tokens" alt="" coords="1005,140,1252,399"/>
+<area shape="rect" id="node3" href="$class_weapon_token_script.html" title=" " alt="" coords="1005,140,1252,399"/>
 <area shape="rect" id="node4" href="$class_room_script.html" title="Script for the room Gameobject" alt="" coords="738,1201,1044,1616"/>
 <area shape="rect" id="node5" href="$class_room_weapon_slot.html" title="Script for the Room Weapon slot GameObject" alt="" coords="1015,723,1242,860"/>
 <area shape="rect" id="node7" href="$class_board_tile_script.html" title="Super class for all tiles" alt="" coords="504,4318,678,4663"/>
